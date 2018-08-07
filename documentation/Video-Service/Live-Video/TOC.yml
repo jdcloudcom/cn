@@ -3,87 +3,86 @@
 - name: 产品简介
   items:
     - name: 产品概述
-      herf: Introduction/What-Is-Live-Video.md
+      href: Introduction/What-Is-Live-Video.md
     - name: 核心概念
-      herf: Introduction/Core-Concepts.md
+      href: Introduction/Core-Concepts.md
     - name: 基础架构
-      herf: Introduction/Basic-Infrastructure.md
+      href: Introduction/Basic-Infrastructure.md
     - name: 产品优势
-      herf: Introduction/Benefits.md
+      href: Introduction/Benefits.md
     - name: 产品功能
-      herf: Introduction/Functions.md
+      href: Introduction/Functions.md
     - name: 限制说明
-      herf: Introduction/Restrictions.md
+      href: Introduction/Restrictions.md
     - name: 应用场景 
-      herf: Introduction/Application-Scenarios.md    
+      href: Introduction/Application-Scenarios.md    
 - name: 产品定价
   items:
     - name: 计费概述
-      herf: Pricing/Billing-Overview.md
+      href: Pricing/Billing-Overview.md
     - name: 计费规则
-      herf: Pricing/Billing-Rules.md
+      href: Pricing/Billing-Rules.md
     - name: 价格总览
-      herf: Pricing/Price-Overview.md
+      href: Pricing/Price-Overview.md
     - name: 购买流程
-      herf: Pricing/Purchase-Process.md 
+      href: Pricing/Purchase-Process.md 
 - name: 入门指南
   items:
     - name: 开通服务
-      herf: Getting-Started/Service-Provisioning.md
+      href: Getting-Started/Service-Provisioning.md
     - name: 创建域名
-      herf: Getting-Started/Create-Domain.md
+      href: Getting-Started/Create-Domain.md
     - name: 绑定CNAME地址
-      herf: Getting-Started/Configuring-CNAME.md
+      href: Getting-Started/Configuring-CNAME.md
     - name: 开始推流
-      herf: Getting-Started/Start-Pushing.md
+      href: Getting-Started/Start-Pushing.md
     - name: 开始播放
-      herf: Getting-Started/Start-Playing.md
+      href: Getting-Started/Start-Playing.md
 - name: 操作指南
   items:
      - name: 域名管理
-     herf: Operation-Guide/Domain-Management.md
+     href: Operation-Guide/Domain-Management.md
      - name: 直播推流
-     herf: Operation-Guide/Live-Streaming.md
+     href: Operation-Guide/Live-Streaming.md
      - name: 直播播放
-     herf: Operation-Guide/Live-Broadcast.md    
+     href: Operation-Guide/Live-Broadcast.md    
      - name: 直播转码
-     herf: Operation-Guide/Live-Transcoding.md
+     href: Operation-Guide/Live-Transcoding.md
      - name: 直播录制
-     herf: Operation-Guide/Live-Recording.md  
+     href: Operation-Guide/Live-Recording.md  
      - name: 直播截图
-     herf: Operation-Guide/Live-Snapshot.md 
+     href: Operation-Guide/Live-Snapshot.md 
      - name: 直播回调
-     herf: Operation-Guide/Live-Callback.md  
+     href: Operation-Guide/Live-Callback.md  
      - name: 直播鉴权
-     herf: Operation-Guide/Live-Authentication.md
+     href: Operation-Guide/Live-Authentication.md
      - name: 流管理
-     herf: Operation-Guide/Streaming-Management.md
+     href: Operation-Guide/Streaming-Management.md
      - name: 统计分析
-     herf: Operation-Guide/Statistical-Analysis.md
+     href: Operation-Guide/Statistical-Analysis.md
 - name: 最佳实践
   items:
   - name: 使用FMLE工具推流
-    herf: Best-Practices/Push with the FMLE tool.md
+    href: Best-Practices/Push with the FMLE tool.md
   - name: 使用Xsplit工具推流
-    herf: Best-Practices/Push with the Xsplit tool.md
+    href: Best-Practices/Push with the Xsplit tool.md
   - name: 使用OBS工具推流
-    herf: Best-Practices/Push with the obs tool.md
+    href: Best-Practices/Push with the obs tool.md
 - name: 教程
   items:
   status: 0
 - name: 问题排查
   items:
   - name: 推流连接失败
-    herf: Troubleshooting/Push connection failed.md  
+    href: Troubleshooting/Push connection failed.md  
 - name: 常见问题
-  herf: FAQ/FAQ.md
+  href: FAQ/FAQ.md
 - name: API参考
-  herf:
+  href:
 - name: SDK参考
-  herf:
+  href:
 - name: 相关资源
   items:
   - name: 文档历史记录
-    herf: Related-Resources/Document-History.md     
-          
+    href: Related-Resources/Document-History.md      
           
