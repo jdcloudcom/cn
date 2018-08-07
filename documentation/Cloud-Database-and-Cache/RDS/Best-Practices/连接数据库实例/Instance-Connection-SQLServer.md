@@ -6,6 +6,6 @@
 设置的具体方法如下：
 1. 创建安全组可以参见下面的链接：https://www.jdcloud.com/help/detail/1486/isCateLog/1
 2. 在需要访问SQL Server的云主机的安全组中，增加一个“出站规则”，在类型中选择【MSSQL】**（注意不是MYSQL）**，策略为【接受】
-![通过云主机连接1](../../../../../image/RDS/Instance-Connection-1.png)
+![通过云主机连接1](../../../../../image/RDS/Instance-Connection-SQLServer-1.png)
 
 
