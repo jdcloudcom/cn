@@ -57,6 +57,7 @@
 
 
 *sed -i 's/.*!= root.*/#&/' /etc/pam.d/gdm*
+
 *dbus-uuidgen >/var/lib/dbus/mechine-id*
 
 ![](https://github.com/jdcloudcom/cn/blob/edit/image/Elastic-Compute/Virtual-Machine/Linux/Centos%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEvncserver09.png)
