@@ -40,41 +40,41 @@
       href: Getting-Started/Start-Playing.md
 - name: 操作指南
   items:
-     - name: 域名管理
-     href: Operation-Guide/Domain-Management.md
-     - name: 直播推流
-     href: Operation-Guide/Live-Streaming.md
-     - name: 直播播放
-     href: Operation-Guide/Live-Broadcast.md    
-     - name: 直播转码
-     href: Operation-Guide/Live-Transcoding.md
-     - name: 直播录制
-     href: Operation-Guide/Live-Recording.md  
-     - name: 直播截图
-     href: Operation-Guide/Live-Snapshot.md 
-     - name: 直播回调
-     href: Operation-Guide/Live-Callback.md  
-     - name: 直播鉴权
-     href: Operation-Guide/Live-Authentication.md
-     - name: 流管理
-     href: Operation-Guide/Streaming-Management.md
-     - name: 统计分析
-     href: Operation-Guide/Statistical-Analysis.md
+    - name: 域名管理
+      href: Operation-Guide/Domain-Management.md
+    - name: 直播推流
+      href: Operation-Guide/Live-Streaming.md
+    - name: 直播播放
+      href: Operation-Guide/Live-Broadcast.md    
+    - name: 直播转码
+      href: Operation-Guide/Live-Transcoding.md
+    - name: 直播录制
+      href: Operation-Guide/Live-Recording.md  
+    - name: 直播截图
+      href: Operation-Guide/Live-Snapshot.md 
+    - name: 直播回调
+      href: Operation-Guide/Live-Callback.md  
+    - name: 直播鉴权
+      href: Operation-Guide/Live-Authentication.md
+    - name: 流管理
+      href: Operation-Guide/Streaming-Management.md
+    - name: 统计分析
+      href: Operation-Guide/Statistical-Analysis.md
 - name: 最佳实践
   items:
-  - name: 使用FMLE工具推流
-    href: Best-Practices/Push with the FMLE tool.md
-  - name: 使用Xsplit工具推流
-    href: Best-Practices/Push with the Xsplit tool.md
-  - name: 使用OBS工具推流
-    href: Best-Practices/Push with the obs tool.md
+    - name: 使用FMLE工具推流
+      href: Best-Practices/Push with the FMLE tool.md
+    - name: 使用Xsplit工具推流
+      href: Best-Practices/Push with the Xsplit tool.md
+    - name: 使用OBS工具推流
+      href: Best-Practices/Push with the obs tool.md
 - name: 教程
   items:
   status: 0
 - name: 问题排查
   items:
-  - name: 推流连接失败
-    href: Troubleshooting/Push connection failed.md  
+    - name: 推流连接失败
+      href: Troubleshooting/Push connection failed.md  
 - name: 常见问题
   href: FAQ/FAQ.md
 - name: API参考
@@ -83,6 +83,6 @@
   href:
 - name: 相关资源
   items:
-  - name: 文档历史记录
-    href: Related-Resources/Document-History.md      
+    - name: 文档历史记录
+      href: Related-Resources/Document-History.md      
           
