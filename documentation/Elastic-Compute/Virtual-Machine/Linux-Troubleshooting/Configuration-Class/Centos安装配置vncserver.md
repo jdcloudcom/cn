@@ -1,7 +1,7 @@
 # Centos安装配置vncserver
 本文中仅讨论VNC的安装，关于图形界面需要您另行安装。
 
-**CentOS 6.5 安装 VNC Server**
+**CentOS6.5 安装 VNC Server**
 
 **安装**
 
