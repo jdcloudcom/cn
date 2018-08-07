@@ -36,6 +36,7 @@
 
 *cat /etc/security/limits.conf*
 
+
 中是否包含类似如下设置：
 
 
