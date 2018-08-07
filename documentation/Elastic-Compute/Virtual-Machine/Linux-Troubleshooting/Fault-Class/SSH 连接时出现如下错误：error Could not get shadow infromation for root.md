@@ -33,7 +33,7 @@
 
 */usr/sbin/sestatus  -v*
 
-执行结果 SELinux status:                 enabled
+执行结果 *SELinux status:                 enabled*
 
 如果 status 值为 enabled，则说明已经启用了 SELinux。
 
