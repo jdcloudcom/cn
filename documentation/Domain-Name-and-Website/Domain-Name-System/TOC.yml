@@ -23,14 +23,7 @@
   items:
     - name: 计费概述
       herf: Pricing/Billing-Overview.md
-    - name: 计费规则
-      herf: Pricing/Billing-Rules.md
-    - name: 价格总览
-      herf: Pricing/Price-Overview.md
-    - name: 购买流程
-      herf: Pricing/Purchase-Process.md 
-    - name: 续费流程
-      herf: Pricing/Renew-Process.md
+
 - name: 入门指南
   items:
     - name: 创建实例
