@@ -1,4 +1,4 @@
-  name: 负载均衡
+  name: 网络负载均衡
   href: 
   items:
   - name: 产品简介
@@ -89,17 +89,16 @@
     href: FAQ/FAQ.md
   - name: API参考
     href:
+    status: 0      
   - name: SDK参考
     href:
+    status: 0      
   - name: 用户协议
-    status: 0
     items:
     - name: 服务条款
-      href: User-Agreements/Product-Terms-of-Service.md           
-      status: 0      
+      href: User-Agreements/Product-Terms-of-Service.md               
     - name: SLA
       href: User-Agreements/SLA.md           
-      status: 0       
   - name: 相关资源
     items:
     - name: 文档历史记录
