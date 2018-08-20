@@ -1,78 +1,92 @@
-  name: 对象存储 Object Storage Service
-	  href: 
-	  items:
-	  - name: 产品简介
-	    items:
-	      - name: OSS概述
-	        href: Introduction/What-Is-OSS.md.md
-	      - name: 核心概念
-	        href: Introduction/Core-Concepts.md
-	      - name: 产品功能
-	        href: Introduction/Functions.md
-	      - name: 限制说明
-	        href: Introduction/Restrictions.md
-	      - name: 应用场景 
-	        href: Introduction/Application-Scenarios.md    
-	  - name: 产品定价
-	    items:
-	      - name: 计费概述
-	        href: Pricing/Billing-Overview.md
-	      - name: 计费规则
-	        href: Pricing/Billing-Rules.md
-	      - name: 价格总览
-	        href: Pricing/Price-Overview.md
-	      - name: 查看账单
-	        href: Pricing/Check-Bill.md
-	  - name: 入门指南
-	    items:
-	      - name: 开通服务
-	        href: Getting-Started/Sign-Up-Service.md
-	      - name: 创建存储空间
-	        href: Getting-Started/Create-Bucket.md
-	      - name: 上传文件
-	        href: Getting-Started/Upload-Object.md
-	      - name: 分享和下载文件
-	        href: Getting-Started/Share-And-Download-Object.md
-	      - name: 删除文件
-	        href: Getting-Started/Delete-Object.md
-        - name: 删除存储空间
-	        href: Getting-Started/Delete-Bucket.md
-	  - name: 操作指南
-	    items:
-        - name:开通服务
-	        href: Operation-Guide/Sign-Up-Service.md
-	      - name:对象存储概览页
-	        href: Operation-Guide/Overview-Pag.md     
-	      - name: 存储空间管理
-	        items:
-	          - name: 空间概览
-	            href: Operation-Guide/Manage-Bucket/Bucket-Overview.md    
-	          - name: 创建存储空间
-	            href: Operation-Guide/Manage-Bucket/Create-Bucket.md
-                  - name: 删除存储空间
-	            href:Operation-Guide/Manage-Bucket/Delete-Bucket.md 
-                  - name:访问权限设置
-	            href:Operation-Guide/Manage-Bucket/Set-Bucket-Policy.md
-                  - name:跨域访问设置
-	            href:Operation-Guide/Manage-Bucket/Set-Bucket-CORS.md 
-                  - name:静态网站托管设置
-	            href:Operation-Guide/Manage-Bucket/Set-Bucket-Website.md
-                  - name:跨区域复制设置
-	            href:Operation-Guide/Manage-Bucket/Set-Bucket-Cross-Region-Replication.md
-		  - name:自定义域名设置
-	            href:Operation-Guide/Manage-Bucket/Set-Custom-Domain-Name.md 
-	     - name:文件管理
-	        items:
-	          - name: 新建文件夹
-	            href:Operation-Guide/Manage-Object/Create-Folder.md
-	          - name: 搜索文件
-	            href:Operation-Guide/Manage-Object/Search-Object.md	   
-	          - name: 获取外链
-	            href:Operation-Guide/Manage-Object/Get-Object-URL.md       
-	          - name: 删除文件
-	            href: Operation-Guide/Manage-Object/Delete-Object.md      
-	          - name: 用量监控
-	            href: Operation-Guide/Manage-Object/Usage-Monitoring.md      
+ name: 对象存储 Object Storage Service
+ href: 
+ items:
+ - name: 产品简介
+   items:
+      - name: OSS概述
+        href:  Introduction/What-Is-OSS.md.md
+      - name: 核心概念
+        href: Introduction/Core-Concepts.md
+      - name: 产品功能
+        href: Introduction/Functions.md
+      - name: 限制说明
+        href: Introduction/Restrictions.md 
+      - name: 应用场景 
+        href: Introduction/Application-Scenarios.md    
+ - name: 产品定价
+   items:
+      - name: 计费概述
+        href: Pricing/Billing-Overview.md
+      - name: 计费规则
+        href: Pricing/Billing-Rules.md
+      - name: 价格总览
+        href: Pricing/Price-Overview.md
+      - name: 查看账单
+        href: Pricing/Check-Bill.md name
+ - name: 产品定价
+   items:
+      - name: 开通服务
+        href: Getting-Started/Sign-Up-Service.md
+      - name: 创建存储空间
+        href: Getting-Started/Create-Bucket.md
+      - name: 上传文件
+        href: Getting-Started/Upload-Object.md
+      - name: 分享和下载文件
+        href: Getting-Started/Share-And-Download-Object.md
+      - name: 删除文件
+        href: Getting-Started/Delete-Object.md
+      - name: 删除存储空间
+        href: Getting-Started/Delete-Bucket.md
+ - name: 入门指南
+   items:
+      - name: 开通服务
+        href: Getting-Started/Sign-Up-Service.md
+      - name: 创建存储空间
+        href: Getting-Started/Create-Bucket.md
+      - name: 上传文件
+        href: Getting-Started/Upload-Object.md
+      - name: 分享和下载文件
+        href: Getting-Started/Share-And-Download-Object.md
+      - name: 删除文件
+        href: Getting-Started/Delete-Object.md
+      - name: 删除存储空间
+        href: Getting-Started/Delete-Bucket.md
+ - name: 操作指南
+   items:
+      - name: 开通服务
+        href: Operation-Guide/Sign-Up-Service.md
+      - name: 对象存储概览页
+        href: Operation-Guide/Overview-Pag.md
+      - name: 存储空间管理
+        items:
+           - name: 空间概览
+             href: Operation-Guide/Manage-Bucket/Bucket-Overview.md
+           - name: 创建存储空间
+             href: Operation-Guide/Manage-Bucket/Create-Bucket.md
+           - name: 删除存储空间
+             href: Operation-Guide/Manage-Bucket/Delete-Bucket.md  
+           - name: 访问权限设置
+             href: Operation-Guide/Manage-Bucket/Set-Bucket-Policy.md  
+           - name: 跨域访问设置
+             href: Operation-Guide/Manage-Bucket/Set-Bucket-CORS.md    
+           - name: 静态网站托管设置
+             href: Operation-Guide/Manage-Bucket/Set-Bucket-Website.md
+           - name: 跨区域复制设置
+             href: Operation-Guide/Manage-Bucket/Set-Bucket-Cross-Region-Replication.md
+           - name: 自定义域名设置
+             href: Operation-Guide/Manage-Bucket/Set-Custom-Domain-Name.md
+           - name: 文件管理
+             items:
+                - name: 新建文件夹
+                  href: Operation-Guide/Manage-Object/Create-Folder.md
+                - name: 搜索文件
+                  href: Operation-Guide/Manage-Object/Search-Object.md	
+                - name: 获取外链
+                  href: Operation-Guide/Manage-Object/Get-Object-URL.md
+                - name: 删除文件
+                  href: Operation-Guide/Manage-Object/Delete-Object.md
+                - name: 用量监控
+                  href: Operation-Guide/Manage-Object/Usage-Monitoring.md       
 	      - name: 图片处理指南
 	        items:
 	          - name: 介绍
