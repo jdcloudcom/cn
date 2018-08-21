@@ -162,5 +162,9 @@
     {
         "name": "价格计算器-缓存",
         "url": "https://www.jdcloud.com/calculator/calCache"
+    },
+    {
+        "name": "定价页",
+        "url": "https://www.jdcloud.com/price"
     }
 ]
