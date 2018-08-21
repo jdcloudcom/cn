@@ -134,5 +134,33 @@
     {
         "name": "每月电子刊物",
         "url": "https://www.jdcloud.com/news/journalMay"
+    },
+    {
+        "name": "jdstack",
+        "url": "https://www.jdcloud.com/products/jdstack"
+    },
+    {
+        "name": "价格计算器-云主机",
+        "url": "https://www.jdcloud.com/calculator/calHost"
+    },
+    {
+        "name": "价格计算器-云硬盘",
+        "url": "https://www.jdcloud.com/calculator/calDisk"
+    },
+    {
+        "name": "价格计算器-负载均衡",
+        "url": "https://www.jdcloud.com/calculator/calLoad"
+    },
+    {
+        "name": "价格计算器-云数据库MySQL",
+        "url": "https://www.jdcloud.com/calculator/calDataBase"
+    },
+    {
+        "name": "价格计算器-云数据库SQLServer",
+        "url": "https://www.jdcloud.com/calculator/calSqlServer"
+    },
+    {
+        "name": "价格计算器-缓存",
+        "url": "https://www.jdcloud.com/calculator/calCache"
     }
 ]
