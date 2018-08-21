@@ -1,5 +1,6 @@
--  name: CLI参考
-  href: 
+name: CLI参考
+href: 
+items:
 - name: CLI简介
   herf: Introduction.md
 - name: 安装

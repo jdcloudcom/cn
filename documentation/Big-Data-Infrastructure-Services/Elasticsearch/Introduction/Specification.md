@@ -1,18 +1,29 @@
 # 产品规格
 
-云数据库 MongoDB 目前支持以下的实例规格。
+Elasticsearch 目前支持以下的实例规格。
 
 ## 实例规格列表
 
-| 规格代码 | 规格 | 最大连接数 | 最大IOPS | 存储空间 |
-| :- | :- | :- | :- | :- |
-| mongo.s1.small     | 1核2G | 	500	 | 1000 |  10G-1000G |
-| mongo.s1.medium	| 2核4G | 	1000	 | 2000 | 10G-1000G |
-| mongo.s1.large	| 4核8G	 |    2000	 | 4000	 | 10G-1000G |
-| mongo.s1.xlarge	| 8核16G | 	4000	 | 8000	 | 10G-1000G |
-| mongo.s2.2xlarge	| 8核32G | 	8000	 | 14000	 | 10G-1000G |
-| mongo.s2.4xlarge	| 16核64G | 	16000	 | 16000 | 10G-1000G |
+规格代码 | 规格  
 
+g.n2.xlarge|4核16g
+g.n2.2xlarge|8核32g
+g.n2.4xlarge|16核64g
+g.n2.8xlarge|32核128g 
+ 
+
+c.n1.xlarge|4核8g
+c.n1.2xlarge_s|8核8g
+c.n1.2xlarge|8核16g
+c.n1.4xlarge_m|16核16g
+c.n1.4xlarge|16核32g
+c.n1.8xlarge|32核64g 
+ 
+
+m.n1.xlarge|4核32g
+m.n1.2xlarge|8核64g
+m.n1.4xlarge|16核128g
+m.n1.14xlarge|56核448g 
 
 ## 相关参考
 
