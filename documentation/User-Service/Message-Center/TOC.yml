@@ -2,8 +2,6 @@
   href: 
   items:
   - name: 消息管理
-    items:
-    href: Introduction/Message-Management.md  
+    href: Message-Management.md  
   - name: 联系人管理
-    items:
-    href: Introduction/Contact-Management.md 	  
+    href: Contact-Management.md 	  

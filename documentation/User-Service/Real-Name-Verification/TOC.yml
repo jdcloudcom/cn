@@ -2,12 +2,12 @@
   href: 
   items:
   - name: 实名认证
-    href: Real-Name-Verification
+    href: Real-Name-Verification.md
   - name: 个人实名认证操作指引
-    href: Personal-Account-Verification
+    href: Personal-Account-Verification.md 
   - name: 企业实名认证操作指引
-    href: Business-Account-Verification
+    href: Business-Account-Verification.md
   - name: 学生实名认证操作指引
-    href: Student-Account-Verification
+    href: Student-Account-Verification.md
   - name: 实名认证常见问题
-    href: FAQs
+    href: FAQs.md
