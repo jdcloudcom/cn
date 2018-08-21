@@ -47,8 +47,6 @@
       herf: Operation-Guide/Upload-SSL-Certification.md
    - name: 管理SSL证书
       herf: Operation-Guide/manage-SSL-Certification.md
-   - name: 删除SSL证书
-      herf: Operation-Guide/Delete-SSL-Certification.md
 - name: 常见问题
   herf: FAQ/FAQ.md
 
