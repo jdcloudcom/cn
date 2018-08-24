@@ -12,12 +12,12 @@ https://monitor.jdcloud-api.com/v1/regions/{regionId}/alarms
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**regionId**|String|True||地域 Id|
+|**regionId**|String|True||待删除规则所属的地域ID|
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**ids**|String|True||待删除的规则id，用"|"间隔|
+|**ids**|String|True||待删除的规则id，多个规则之间用"|"间隔|
 
 
 ## 返回参数

@@ -2,7 +2,7 @@
 
 
 ## 描述
-查询监控规则
+查询监控规则，支持按照规则状态、报警状态、资源ID和产品名称进行查询。
 
 ## 请求方式
 GET
@@ -12,7 +12,7 @@ https://monitor.jdcloud-api.com/v1/regions/{regionId}/alarms
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**regionId**|String|True||地域 Id|
+|**regionId**|String|True||报警规则所属地域Id|
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|

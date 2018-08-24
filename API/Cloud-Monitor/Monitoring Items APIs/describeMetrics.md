@@ -2,7 +2,7 @@
 
 
 ## 描述
-根据产品线查询可用监控项列表
+根据资源类型查询可获取监控数据的的指标列表。
 
 ## 请求方式
 GET
@@ -33,11 +33,11 @@ https://monitor.jdcloud-api.com/v1/metrics
 ### <a name="MetricDetail">MetricDetail</a>
 |名称|类型|描述|
 |---|---|---|
-|**calculateUnit**|String|指标的计算单位，比如bit/s、%、k等|
+|**calculateUnit**|String|指标的计算单位，比如bit/s、%、byte等|
 |**downSample**|String|取样频次|
-|**metric**|String|监控项英文标识|
-|**metricName**|String|监控项名称|
-|**serviceCode**|String|产品线标识|
+|**metric**|String|监控指标英文标识|
+|**metricName**|String|监控指标名称|
+|**serviceCode**|String|资源类型标识|
 
 ## 返回码
 |返回码|描述|

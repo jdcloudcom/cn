@@ -1,0 +1,39 @@
+name: 云监控
+href: 
+items:
+  - name: 接口概览
+    href: overview.md
+  - name: 更新历史
+    href: changelog.md
+  - name: 接口信息
+    items:
+      - name: 监控项自定义监控
+        items:
+          - name: 自定义监控数据上报
+            href: Monitor Item Customized Monitoring APIs/putMetricData.md
+      - name: 云监控规则
+        items:
+          - name: 创建报警规则
+            href: Cloud Monitoring Rules APIs/createAlarm.md
+          - name: 删除报警规则
+            href: Cloud Monitoring Rules APIs/deleteAlarms.md
+          - name: 查询报警历史
+            href: Cloud Monitoring Rules APIs/describeAlarmHistory.md
+          - name: 查询监控规则列表
+            href: Cloud Monitoring Rules APIs/describeAlarms.md
+          - name: 查询监控规则详情
+            href: Cloud Monitoring Rules APIs/describeAlarmsByID.md
+          - name: 禁用报警规则
+            href: Cloud Monitoring Rules APIs/disableAlarm.md
+          - name: 启用报警规则
+            href: Cloud Monitoring Rules APIs/enableAlarm.md
+          - name: 修改报警规则
+            href: Cloud Monitoring Rules APIs/updateAlarm.md
+      - name: 监控项数据
+        items:
+          - name: 查询监控数据
+            href: Monitoring Items APIs/describeMetricData.md
+          - name: 查询可用监控项列表
+            href: Monitoring Items APIs/describeMetrics.md
+          - name: 查询可创建规则的监控项信息
+            href: Monitoring Items APIs/describeMetricsForCreateAlarm.md
