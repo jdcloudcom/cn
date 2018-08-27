@@ -28,10 +28,12 @@
     items:
       - name: createSnapshot
         href: Snapshot APIs/createSnapshot.md
-      - name: createSnapshot
-        href: Snapshot APIs/createSnapshot.md
+      - name: deleteSnapshot 
+        href: Snapshot APIs/deleteSnapshot.md
       - name: modifySnpAttribute
         href: Snapshot APIs/modifySnpAttribute.md
+      - name: modifySnapshotAttribute
+        href: Snapshot APIs/modifySnapshotAttribute.md
       - name: describeSnapshot
         href: Snapshot APIs/describeSnapshot.md
       - name: describeSnapshots

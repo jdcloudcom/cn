@@ -134,5 +134,221 @@
     {
         "name": "每月电子刊物",
         "url": "https://www.jdcloud.com/news/journalMay"
+    },
+    {
+        "name": "jdstack",
+        "url": "https://www.jdcloud.com/products/jdstack"
+    },
+    {
+        "name": "价格计算器-云主机",
+        "url": "https://www.jdcloud.com/calculator/calHost"
+    },
+    {
+        "name": "价格计算器-云硬盘",
+        "url": "https://www.jdcloud.com/calculator/calDisk"
+    },
+    {
+        "name": "价格计算器-负载均衡",
+        "url": "https://www.jdcloud.com/calculator/calLoad"
+    },
+    {
+        "name": "价格计算器-云数据库MySQL",
+        "url": "https://www.jdcloud.com/calculator/calDataBase"
+    },
+    {
+        "name": "价格计算器-云数据库SQLServer",
+        "url": "https://www.jdcloud.com/calculator/calSqlServer"
+    },
+    {
+        "name": "价格计算器-缓存",
+        "url": "https://www.jdcloud.com/calculator/calCache"
+    },
+    {
+        "name": "定价页",
+        "url": "https://www.jdcloud.com/price"
+    },
+    {
+        "name": "关于我们",
+        "url": "https://www.jdcloud.com/aboutus"
+    },
+    {
+        "name": "云端融合解决方案",
+        "url": "https://www.jdcloud.com/solution/resist"
+    },
+    {
+        "name": "intel",
+        "url": "https://www.jdcloud.com/activity/intel"
+    },
+    {
+        "name": "数据中心",
+        "url": "https://www.jdcloud.com/datacenter"
+    },
+    {
+        "name": "合作伙伴index",
+        "url": "https://www.jdcloud.com/partner/index"
+    },
+    {
+        "name": "合作伙伴reg",
+        "url": "https://www.jdcloud.com/partner/reg"
+    },
+    {
+        "name": "京东云刊列表页",
+        "url": "https://www.jdcloud.com/news/journal"
+    },
+    {
+        "name": "京东云刊5月",
+        "url": "https://www.jdcloud.com/news/journalMay"
+    },
+    {
+        "name": "京东云刊6月",
+        "url": "https://www.jdcloud.com/news/journalJun"
+    },
+    {
+        "name": "京东云刊7月",
+        "url": "https://www.jdcloud.com/news/journalJuly"
+    },
+    {
+        "name": "京东云刊订阅申请",
+        "url": "https://www.jdcloud.com/news/subscription"
+    },
+    {
+        "name": "京东云刊订阅申请成功页",
+        "url": "https://www.jdcloud.com/news/subscriptionSuccess"
+    },
+    {
+        "name": "云画",
+        "url": "https://www.jdcloud.com/activity/cloudfuture"
+    },
+    {
+        "name": "云画表单",
+        "url": "https://www.jdcloud.com/activity/form"
+    },
+    {
+        "name": "云画表单成功",
+        "url": "https://www.jdcloud.com/activity/registerOk"
+    },
+    {
+        "name": "京东云贸",
+        "url": "https://www.jdcloud.com/activity/1031"
+    },
+    {
+        "name": "京东一号",
+        "url": "https://www.jdcloud.com/activity/number1host.html"
+    },
+    {
+        "name": "欢乐送",
+        "url": "https://www.jdcloud.com/activity/happygo"
+    },
+    {
+        "name": "全民618",
+        "url": "https://www.jdcloud.com/activity/sixtopic"
+    },
+    {
+        "name": "顶级域名",
+        "url": "https://www.jdcloud.com/activity/topDomain"
+    },
+    {
+        "name": "鹏云swan",
+        "url": "https://www.jdcloud.com/activity/swan"
+    },
+    {
+        "name": "鹏云swan表单",
+        "url": "https://www.jdcloud.com/activity/swanReg"
+    },
+    {
+        "name": "夏日狂欢购",
+        "url": "https://www.jdcloud.com/activity/carnival"
+    },
+    {
+        "name": "云计算的N种freestyle",
+        "url": "https://www.jdcloud.com/activity/enterprise"
+    },
+    {
+        "name": "滨州合作活动",
+        "url": "https://www.jdcloud.com/activity/bzhz"
+    },
+    {
+        "name": "价保活动",
+        "url": "https://www.jdcloud.com/activity/ssr"
+    },
+    {
+        "name": "ip高防活动",
+        "url": "https://www.jdcloud.com/activity/ipanti"
+    },
+    {
+        "name": "上海数据中心全新上线",
+        "url": "https://www.jdcloud.com/activity/shdatacenter"
+    },
+    {
+        "name": "升级企业用户",
+        "url": "https://www.jdcloud.com/activity/upgrade"
+    },
+    {
+        "name": "智慧吉",
+        "url": "https://www.jdcloud.com/activity/zhihuiji"
+    },
+    {
+        "name": "对象存储2.0",
+        "url": "https://www.jdcloud.com/activity/oss_upgrade"
+    },
+    {
+        "name": "soho企业专享",
+        "url": "https://www.jdcloud.com/activity/soho-3Q"
+    },
+    {
+        "name": "金牌服务",
+        "url": "https://www.jdcloud.com/service/bestService"
+    },
+    {
+        "name": "初创扶持",
+        "url": "https://www.jdcloud.com/service/support"
+    },
+    {
+        "name": "推广返佣",
+        "url": "https://www.jdcloud.com/service/promotionRebate"
+    },
+    {
+        "name": "数据报告Forrester",
+        "url": "https://www.jdcloud.com/service/forrester"
+    },
+    {
+        "name": "j-WMS物流系统",
+        "url": "https://www.jdcloud.com/solution/loc"
+    },
+    {
+        "name": "j-WMS物流系统2.0",
+        "url": "https://www.jdcloud.com/solution/locjwms"
+    },
+    {
+        "name": "物流云试用",
+        "url": "https://www.jdcloud.com/solution/wmsForm"
+    },
+    {
+        "name": "电商云解决方案",
+        "url": "https://www.jdcloud.com/solution/dsy"
+    },
+    {
+        "name": "云鼎",
+        "url": "https://www.jdcloud.com/solution/yd"
+    },
+    {
+        "name": "金融云",
+        "url": "https://www.jdcloud.com/solution/financial"
+    },
+    {
+        "name": "JCStore(云店)",
+        "url": "https://www.jdcloud.com/solution/b2c"
+    },
+    {
+        "name": "JCMall(云贸平台)",
+        "url": "https://www.jdcloud.com/solution/b2b"
+    },
+    {
+        "name": "区块链云解决方案",
+        "url": "https://www.jdcloud.com/solution/blockchain"
+    },
+    {
+        "name": "混合云解决方案",
+        "url": "https://www.jdcloud.com/solution/hybridcloud"
     }
 ]
