@@ -1,0 +1,112 @@
+name: 云数据库 RDS OpenAPI
+href:
+items:
+  - name: 账号管理
+    items:
+      - name: 创建账号
+        herf: Account Management/createAccount.md
+      - name: 删除账号
+        herf: Account Management/deleteAccount.md
+      - name: 查询账号列表
+        herf: Account Management/describeAccounts.md
+      - name: 账号授权
+        herf: Account Management/grantPrivilege.md
+      - name: 设置账号密码
+        herf: Account Management/resetPassword.md
+
+  - name: 审计管理
+    items:
+      - name: 开启审计
+        herf: Audit Management/createAudit.md
+      - name: 关闭审计
+        herf: Audit Management/deleteAudit.md
+      - name: 查询审计选项
+        herf: Audit Management/describeAudit.md
+      - name: 查询审计文件链接
+        herf: Audit Management/getAuditDownloadURL.md
+      - name: 查询审计文件列表
+        herf: Audit Management/getAuditFiles.md
+      - name: 查询所有审计选项
+        herf: Audit Management/getAuditOptions.md
+      - name: 编辑审计
+        herf: Audit Management/modifyAudit.md
+
+  - name: 备份管理
+    items:
+      - name: 创建备份
+        herf: Backup Management/createBackup.md
+      - name: 删除备份
+        herf: Backup Management/deleteBackup.md
+      - name: 查询备份下载链接
+        herf: Backup Management/describeBackupDownloadURL.md
+      - name: 查询备份列表
+        herf: Backup Management/describeBackups.md
+
+  - name: 单库上云
+    items:
+      - name: 查询上传文件列表
+        herf: Cloud on Single Database/describeImportFiles.md
+      - name: 获取key
+        herf: Cloud on Single Database/getUploadKey.md
+      - name: 设置文件是否共享
+        herf: Cloud on Single Database/setImportFileShared.md
+
+  - name: 数据库管理
+    items:
+      - name: 创建数据库
+        herf: Database Management/createDatabase.md
+      - name: 删除数据库
+        herf: Database Management/deleteDatabase.md
+      - name: 查询数据库列表
+        herf: Database Management/describeDatabases.md
+      - name: 根据备份恢复
+        herf: Database Management/restoreDatabaseFromBackup.md
+      - name: 根据上传文件恢复
+        herf: Database Management/restoreDatabaseFromFile.md
+      - name: 根据OSS恢复
+        herf: Database Management/restoreDatabaseFromOSS.md
+
+  - name: 错误日志
+    items:
+      - name: 查询错误日志列表
+        herf: Error Logs/describeErrorLogs.md
+
+  - name: 实例管理
+    items:
+      - name: 创建实例
+        herf: Instance Management/createInstance.md
+      - name: 删除实例
+        herf: Instance Management/deleteInstance.md
+      - name: 查看实例详情
+        herf: Instance Management/describeInstanceAttributes.md
+      - name: 查询实例列表
+        herf: Instance Management/describeInstances.md
+      - name: 实例主备切换
+        herf: Instance Management/failoverInstance.md
+      - name: 重启实例
+        herf: Instance Management/rebootInstance.md
+      - name: 设置实例名
+        herf: Instance Management/setInstanceName.md
+
+  - name: 性能统计
+    items:
+      - name: 索引性能统计
+        herf: Performance Statistics/describeIndexPerformance.md
+      - name: 查询性能统计
+        herf: Performance Statistics/describeQueryPerformance.md
+
+  - name: 实例规格
+    items:
+      - name: MySQL 实例规格
+        herf: Instance-Specifications/Instance-Specifications-MySQL.md
+      - name: SQL Server 实例规格
+        herf: Instance-Specifications/Instance-Specifications-SQLServer.md
+
+  - name: 枚举值说明
+    items:
+      - name: 地域和可用区
+        herf: Enum-Definitions/Regions-AZ.md
+      - name: API 版本
+        herf: Enum-Definitions/apiVersion.md
+      - name: API枚举参数
+        herf: Enum-Definitions/Enum-Definitions.md

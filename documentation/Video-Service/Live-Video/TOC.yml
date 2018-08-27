@@ -63,18 +63,18 @@
 - name: 最佳实践
   items:
     - name: 使用FMLE工具推流
-      href: Best-Practices/Push with the FMLE tool.md
+      href: Best-Practices/Push-with-the-FMLE-tool.md
     - name: 使用Xsplit工具推流
-      href: Best-Practices/Push with the Xsplit tool.md
+      href: Best-Practices/Push-with-the-Xsplit-tool.md
     - name: 使用OBS工具推流
-      href: Best-Practices/Push with the obs tool.md
+      href: Best-Practices/Push-with-the-OBS-tool.md
 - name: 教程
   items:
   status: 0
 - name: 问题排查
   items:
     - name: 推流连接失败
-      href: Troubleshooting/Push connection failed.md  
+      href: Troubleshooting/Push-connection-failed.md  
 - name: 常见问题
   href: FAQ/FAQ.md
 - name: API参考

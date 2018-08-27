@@ -4,17 +4,17 @@
 
 首先打开软件下载页面，链接地址为<https://www.xsplit.com/download>，点击页面右上角的登录，在弹出的对话框中选择注册，根据提示注册激活账号。
 
-![](media/d5e91d8d94dd103316bb200bebbfac63.png)
+![](https://github.com/jdcloudcom/cn/blob/cn-live-video/image/live-video/xsplit注册账号.png)
 
 ## 2. 下载软件
 
 注册完成后，在下载页面点击DOWNLOAD链接，下载Xsplit软件，然后安装。
 
-![](media/492ff0fdc6ed6f86bb8605f2dc38a7be.png)
+![](https://github.com/jdcloudcom/cn/blob/cn-live-video/image/live-video/xsplit下载软件.png)
 
 安装完成后，打开软件输入注册时填写的用户名和密码登录，如果提示购买软件，可忽略，稍等几秒钟后点击右下角的Continue继续，如果确实需要更多设置也可以选择购买软件。
 
-![](media/c58d22f4c3199bb8214d4bae98607fe8.png)
+![](https://github.com/jdcloudcom/cn/blob/cn-live-video/image/live-video/xsplit注册软件-2.png)
 
 ## 3.设置直播区域及分辨率
 
@@ -23,9 +23,9 @@
 打开软件，点击“资源”菜单栏——屏幕捕获，然后鼠标点击桌面或者想直播的窗口内部，就选中直播区域了，
 然后用鼠标在角落拉满置全屏，添加时点击桌面就是直播整个桌面的内容，点击一个窗口的内部就只直播这个窗口，如下图：
 
-![](media/3eeab94d613b4a8cf22d692733035f8d.png)
+![](https://github.com/jdcloudcom/cn/blob/cn-live-video/image/live-video/xsplit直播区域设置.png)
 
-![](media/b41f15fd2b59f8da8cab5a4e75c39a8c.png)
+![](https://github.com/jdcloudcom/cn/blob/cn-live-video/image/live-video/xsplit直播区域设置2.png)
 
 ### 3.2 分辨率设置
 
@@ -33,20 +33,20 @@
 
 注：直播桌面分辨率一定要和桌面分辨率比例一致，不然直播画面无法拉到全屏，如果直播窗口，请把分辨率设置为和窗口一样大的比例。
 
-![](media/9eb762b9cbd7171d18753fd84e66cbf9.png)
+![](https://github.com/jdcloudcom/cn/blob/cn-live-video/image/live-video/xsplit分辨率设置.png)
 
 ### 3.3 添加其他资源
 
 点击软件的“资源”菜单，可添加文本，摄像头，媒体文件等，选着需要添加的资源，点击即可。
 
-![](media/3eeab94d613b4a8cf22d692733035f8d.png)
+![](https://github.com/jdcloudcom/cn/blob/cn-live-video/image/live-video/xsplit添加其他资源.png)
 
 ## 4. 添加推流信息
 
 点击“输出”菜单栏中的“”建立新的输出”菜单项，在子菜单中点选“Custom
 RTMP”项，在弹出的窗口中填写相关设置信息，如下图：
 
-![](media/b563d11815c9be3ebc1d35e936a60a3f.png)
+![](https://github.com/jdcloudcom/cn/blob/cn-live-video/image/live-video/xsplit添加推流信息.png)
 
 **Name**：频道名称或者叫APP名称，按照定义规则自定义填写
 

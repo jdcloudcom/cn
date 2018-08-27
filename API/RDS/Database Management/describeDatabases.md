@@ -37,7 +37,7 @@ https://rds.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}/databas
 |**accessPrivilege**|[DBAccessPrivilege[]](##DBAccessPrivilege)|该数据库相关账户权限列表|
 |**characterSetName**|String|字符集名称,mysql字符集包括：utf8；SQL Server字符集包括：Chinese_PRC_CI_AS、Chinese_PRC_CS_AS、SQL_Latin1_General_CP1_CI_AS、SQL_Latin1_General_CP1_CS_AS、Chinese_PRC_BIN|
 |**dbName**|String|数据库名称|
-|**dbStatus**|String|数据库状态 building：创建中， running：运行中|
+|**dbStatus**|String|数据库状态,具体可参考文档 [枚举类型定义](../Enum-Definitions/Enum-Definitions.md)|
 ### <a name="DBAccessPrivilege">DBAccessPrivilege</a>
 |名称|类型|描述|
 |---|---|---|
