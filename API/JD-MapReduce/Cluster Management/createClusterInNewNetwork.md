@@ -8,7 +8,7 @@
 POST
 
 ## 请求地址
-https://jmr.jdcloud-api.com/v1/v1/regions/{regionId}/create
+https://idata-jmr-api.jcloud.com/v1/regions/{regionId}/cluster:create
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
@@ -53,7 +53,7 @@ https://jmr.jdcloud-api.com/v1/v1/regions/{regionId}/create
 |名称|类型|描述|
 |---|---|---|
 |**message**|String||
-|**status**|Boolean||
+|**status**|String||
 
 ## 返回码
 |返回码|描述|

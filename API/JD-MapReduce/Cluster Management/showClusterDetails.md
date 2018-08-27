@@ -2,13 +2,13 @@
 
 
 ## 描述
-查询集群详情
+根据clusterId查询对应集群详情
 
 ## 请求方式
 GET
 
 ## 请求地址
-https://jmr.jdcloud-api.com/v1/v1/regions/{regionId}/detail
+https://idata-jmr-api.jcloud.com/v1/regions/{regionId}/detail
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
@@ -30,9 +30,9 @@ https://jmr.jdcloud-api.com/v1/v1/regions/{regionId}/detail
 ### <a name="Result">Result</a>
 |名称|类型|描述|
 |---|---|---|
-|**data**|[ClusterDetailModel](##ClusterDetailModel)||
+|**data**|[ClusterDetailModel](##ClusterDetailModel)|对应集群的详细信息|
 |**message**|String||
-|**status**|Boolean||
+|**status**|String||
 ### <a name="ClusterDetailModel">ClusterDetailModel</a>
 |名称|类型|描述|
 |---|---|---|
