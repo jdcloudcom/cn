@@ -67,7 +67,7 @@
     - name: 使用Xsplit工具推流
       href: Best-Practices/Push-with-the-Xsplit tool.md
     - name: 使用OBS工具推流
-      href: Best-Practices/Push-with-the-obs-tool.md
+      href: Best-Practices/Push-with-the-OBS-tool.md
 - name: 教程
   items:
   status: 0
