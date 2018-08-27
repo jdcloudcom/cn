@@ -1,0 +1,51 @@
+swagger: "2.0"
+definitions:
+  disk:
+    x-jdcloud-module: disk
+    type: object
+    description: "云硬盘信息详情"
+    properties:
+      diskId:
+        type: string
+        description: 云硬盘ID
+      az:
+        type: string
+        description: 云硬盘所属AZ
+      name:
+        type: string
+        description: 云硬盘名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
+      description:
+        type: string
+        description: 云硬盘描述，允许输入UTF-8编码下的全部字符，不超过256字符。
+      diskType:
+        type: string
+        description: 磁盘类型，取值为 ssd 或 premium-hdd
+      diskSizeGB:
+        type: integer
+        description: 磁盘大小，单位为 GiB
+      status:
+        type: string
+        description: 云硬盘状态，取值为 creating、available、in-use、extending、restoring、deleting、deleted、error_create、error_delete、error_restore、error_extend 之一
+      attachments:
+        type: array
+        items:
+          $ref: "./DiskAttachment.yaml#/definitions/diskAttachment"
+        description: 挂载信息
+      snapshotId:
+        type: string
+        description: 创建该云硬盘的快照ID
+      multiAttachable:
+        type: boolean
+        description: 云盘是否支持多挂载
+      createTime:
+        type: string
+        format: date-time
+        description: 创建云硬盘时间
+      charge:
+        $ref: "../../charge/model/Charge.yaml#/definitions/charge"
+        description: 云硬盘计费配置信息
+      tags:
+        type: array
+        items:
+          $ref: "./Tag.yaml#/definitions/tag"
+        description: Tag信息

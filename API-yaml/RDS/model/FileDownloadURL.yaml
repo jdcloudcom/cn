@@ -1,0 +1,14 @@
+swagger: "2.0"
+definitions:
+  FileDownloadURL:
+    x-jdcloud-module: rds
+    title: FileDownloadURL
+    type: object
+    properties:
+      publicURL:
+        type: string
+        description: 公网下载链接，若当前不可下载，则为空串
+      internalURL:
+        type: string
+        description: 内网下载链接，若当前不可下载，则为空串
+      

@@ -1,0 +1,6 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: JDCLOUD Common Model
+  description: Common Model
+x-jdcloud-revision: "0.3.0"

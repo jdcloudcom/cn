@@ -1,0 +1,161 @@
+swagger: "2.0"                                  # 基于Swagger 2.0版本实现
+info:
+  version: v1
+  title: 审计管理
+  description: 审计管理相关接口
+basePath: /regions/{regionId}
+paths:
+  "/instances/{instanceId}/audit": #审计
+    post:
+      description: 开启SQL Server的数据库审计功能，目前支持实例级的数据库审计。用户可以根据需要开启、关闭审计、自定义审计策略，并下载审计文件。审计文件为原生的SQL Server审计文件，缺省保存6个月。<br>- 仅支持SQL Server
+      operationId: createAudit
+      parameters:
+        - name: createAudit
+          in: body
+          description:
+          schema:
+            type: object
+            required:
+              - enabled
+            properties:
+              enabled:
+                type: string
+                description: 要开启的审计选项，各个选项之间用英文逗号或空格进行分割，例如：DATABASE_OBJECT_ACCESS_GROUP,ACKUP_RESTORE_GROU等<br>各个数据库版本支持的审计选项可以通过接口[getAuditOptions](./getAuditOptions.md)获得，各个审计项的具体含义可以参看微软的官方文档
+      responses:
+        200:
+          description: OK
+    get:
+      description: 查看当前实例已开启的审计选项。如当前实例未开启审计，则返回空<br>- 仅支持SQL Server
+      operationId: describeAudit
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  enabled:
+                    type: array
+                    items:
+                      type: string
+                      description: 当前已开启的审计选项。如当前实例未开启审计，则返回空数组
+    delete:
+      description: 关闭数据库审计。关闭数据库审计后，以前生成的审计结果文件并不会被立即删除。审计结果文件会过期后由系统自动删除，过期时间缺省为6个月<br>- 仅支持SQL Server
+      operationId: deleteAudit
+      responses:
+        200:
+          description: OK
+  "/instances/{instanceId}/audit:getOptions": #审计选项
+    post:
+      description: 获取当前系统所支持的各种数据库版本的审计选项及相应的推荐选项<br>- 仅支持SQL Server
+      operationId: getAuditOptions
+      parameters:
+        - name: name
+          in: body
+          description: 
+          schema:
+            type: object
+            required:
+              - name
+            properties:
+              name:
+                type: string
+                description: 审计选项类别，**大小写敏感**，目前支持两种类型：<br>（1）AuditOptions开头：在disalbed参数中返回SQL Server各个版本支持的所有选项，支持的名称为<br>AuditOptions2008R2<br>AuditOptions2012<br>AuditOptions2014<br>AuditOptions2016<br>例如输入参数为"AuditOptions2016"，则在disabled字段中返回SQL Server 2016 版本所支持的所有的审计选项<br>（2）AuditDefault开头：京东云建议的默认选项,在enabled参数中返回建议开启的选项，在disabled参数中返回不开启的选项，支持的名称为：<br>AuditDefault2008R2<br>AuditDefault2012<br>AuditDefault2014<br>AuditDefault2016<br>例如输入参数为"AuditDefault2016"，则在enabled字段返回SQL Server 2016 版本中京东云建议开启的审计选项，在disabled字段中返回建议不开启的选项
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  enabled:
+                    type: array
+                    items:
+                      type: string
+                      description: AuditDefault类模板：返回建议开启的审计选项。<br> AuditOptions类模板：不返回该参数
+                  disabled:
+                    type: array
+                    items:
+                      type: string
+                      description: AuditDefault类模板：返回未开启的审计选项<br>AuditOptions类模板：返回所有的审计选项
+  "/instances/{instanceId}/audit:modifyAudit": #修改审计
+    post:
+      description: 修改当前的审计选项。当前已有审计选项可以通过describeAudit获得，支持的全部选项可以通过getAuditOptions获得。<br>- 仅支持SQL Server
+      operationId: modifyAudit
+      parameters:
+        - name: modifyAudit
+          in: body
+          description: 
+          schema:
+            type: object
+            properties:
+              add:
+                type: string
+                description: 在原有审计项基础上，增加新的审计项，多个审计项之间用英文逗号，分号或空格分隔，例如DATABASE_OBJECT_ACCESS_GROUP,ACKUP_RESTORE_GROUP
+              drop:
+                type: string
+                description: 删除审计项，多个审计项之间用英文逗号，分号或空格分隔，例如DATABASE_OBJECT_ACCESS_GROUP,ACKUP_RESTORE_GROUP<br>如删除了所有审计项，则审计自动关闭
+      responses:
+        200:
+          description: OK
+  "/instances/{instanceId}/audit:getAuditFiles": #查看审计文件列表
+    post:
+      description: 获取当前实例下的所有审计结果文件的列表<br>- 仅支持SQL Server
+      operationId: getAuditFiles
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  auditFiles:
+                    type: array
+                    items:
+                      $ref: ../model/AuditFile.yaml#/definitions/AuditFile
+  "/instances/{instanceId}/audit:getAuditDownloadURL": #获取某个审计文件的下载链接
+    post:
+      description: 获取某个审计文件的下载链接，同时支持内链和外链，链接的有效时间为24小时<br>- 仅支持SQL Server
+      operationId: getAuditDownloadURL
+      parameters:
+        - name: name
+          in: body
+          description: 
+          schema:
+            type: object
+            required:
+              - fileName
+            properties:
+              fileName:
+                type: string
+                description: 审计文件名
+              #urlExpirationSecond:
+                #type: integer
+                #description: 指定下载链接的过期时间，单位秒,缺省为86400秒，即24小时
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  publicURL:
+                    type: string
+                    description: 公网下载链接，若当前不可下载，则为空串
+                  internalURL:
+                    type: string
+                    description: 内网下载链接，若当前不可下载，则为空串
+#路径通用参数
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
+  instanceId:
+    name: instanceId
+    in: path
+    required: true
+    type: string
+    description: RDS 实例ID，唯一标识一个RDS实例

@@ -1,0 +1,14 @@
+swagger: "2.0"
+definitions:
+  Quota:
+    x-jdcloud-module: mongodb
+    title: Quota
+    type: object
+    properties:
+      total:
+        type: integer
+        description: 总配额
+      use:
+        type: integer
+        description: 已用
+      

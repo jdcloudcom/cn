@@ -1,0 +1,404 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: 实例管理
+  description: API related to MONGODB instances
+
+basePath: /regions/{regionId}
+
+paths:
+  "/instances":
+    ###################### 创建实例  ######################
+    post:
+      description: "创建实例"
+      operationId: createInstance
+      parameters:
+        - name: instanceSpec
+          required: true
+          in: body
+          description: 实例规格
+          schema:
+            $ref: ../model/DBInstanceSpec.yaml#/definitions/DBInstanceSpec
+        - name: chargeSpec
+          in: body
+          description: 付费方式
+          schema:
+            $ref: "../../charge/model/ChargeSpec.yaml#/definitions/chargeSpec"
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  instanceId:
+                    type: string
+                  orderId:
+                    type: string
+              requestId:
+                type: string
+
+    ###################### 查询实例信息 ######################
+    get:
+      description: "查询实例信息"
+      operationId: describeInstances
+      parameters:
+        - name: pageNumber
+          in: query
+          type: integer
+          description: "页码；默认为1，取值范围：[1,∞)"
+        - name: pageSize
+          in: query
+          type: integer
+          description: "分页大小；默认为10；取值范围[1, 100]"
+        - name: filters
+          in: query
+          type: array
+          items:
+            $ref: "../../common/model/Filter.yaml#/definitions/filter"
+          description: | 
+            instanceId - 实例ID, 精确匹配
+            instanceName - 实例名称, 模糊匹配
+            instanceStatus - mongodb状态，精确匹配，支持多个.RUNNING：运行, ERROR：错误 ,BUILDING：创建中, DELETING：删除中, RESTORING：恢复中, RESIZING：变配中
+            chargeMode - 计费类型，精确匹配
+        - name: sorts
+          in: query
+          type: array
+          items:
+            $ref: "../../common/model/Sort.yaml#/definitions/sort"
+          description: |
+            createTime - 创建时间,asc（正序），desc（倒序）
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  dbInstances:
+                    type: array
+                    items:
+                      $ref: "../model/DBInstance.yaml#/definitions/DBInstance"
+                  totalCount:
+                    type: integer
+                  pageNumber:
+                    type: integer
+              requestId:
+                type: string
+
+  "/instances/{instanceId}":
+    ###################### 删除实例 ######################
+    delete:
+      description: "删除实例"
+      operationId: deleteInstance
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              requestId:
+                type: string
+
+  "/instances/{instanceId}:resetPassword":
+    ###################### 重置密码 ######################
+    post:
+      description: "重置密码"
+      operationId: resetPassword 
+      parameters:
+        - name: resetPassword
+          in: body
+          description:
+          schema:
+            type: object
+            required:
+              - accountPassword
+            properties:
+              accountPassword:
+                type: string
+                description: 新密码，必须包含且只支持字母及数字，不少于8字符不超过16字符。
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              requestId:
+                type: string
+
+  "/instances/{instanceId}:modifyInstanceSpec":
+    ###################### 变更实例规格  ######################
+    post:
+      description: "变更实例规格"
+      operationId: modifyInstanceSpec 
+      parameters:
+        - name: modifyInstanceSpec
+          in: body
+          description:
+          schema:
+            type: object
+            required:
+              - instanceClass
+              - instanceStorageGB
+            properties:
+              instanceClass:
+                type: string
+                description: 实例规格，包年包月不允许小于当前规格。
+              instanceStorageGB:
+                type: integer
+                description: 存储空间，包年包月不允许小于当前规格。
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  instanceId:
+                    type: string
+                  orderId:
+                    type: string
+              requestId:
+                type: string
+
+  "/instances/{instanceId}:modifyInstanceName":
+    ###################### 修改实例名称  ######################
+    post:
+      description: "修改实例名称"
+      operationId: modifyInstanceName 
+      parameters:
+        - name: modifyInstanceName
+          in: body
+          description:
+          schema:
+            type: object
+            required:
+              - instanceName
+            properties:
+              instanceName:
+                type: string
+                description: 新的实例名称，只支持数字、字母、英文下划线、中文，且不少于2字符不超过32字符。
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              requestId:
+                type: string
+
+  "/instances/{instanceId}/backupPolicy":
+    get:
+      description: 获取备份策略
+      operationId: describeBackupPolicy
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  preferredBackupPeriod:
+                    type: string
+                  preferredBackupWindow:
+                    type: string
+                  backupRetentionPeriod:
+                    type: string
+            requestId:
+                type: string   
+
+    post:
+      description: 修改备份策略
+      operationId: modifyBackupPolicy
+      parameters:
+        - name: modifyBackupPolicy
+          in: body
+          description:
+          schema:
+            type: object
+            required:
+              - preferredBackupTime
+            properties:
+              preferredBackupTime:
+                type: string
+                description: 备份时间，格式：HH:mmZ- HH:mmZ，只允许间隔时间为1小时的整点.
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  preferredBackupPeriod:
+                    type: string
+                  preferredBackupWindow:
+                    type: string
+                  backupRetentionPeriod:
+                    type: string
+              requestId:
+                type: string
+
+  "/instances/{instanceId}/restoreInstance":
+    post:
+      description: 数据恢复
+      operationId: restoreInstance
+      parameters:
+        - name: restoreInstance
+          in: body
+          description:
+          schema:
+            type: object
+            required:
+              - backupId
+            properties:
+              backupId:
+                type: string
+                description: 备份ID
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              requestId:
+                type: string
+
+  "/flavors":
+    get:
+      description: 获取规格
+      operationId: describeFlavors
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  flavors:
+                    type: array
+                    items:
+                      $ref: "../model/Flavor.yaml#/definitions/Flavor"
+            requestId:
+                type: string
+  
+  "/availableZones":
+    get:
+      description: 获取可用区
+      operationId: describeAvailableZones
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  availableZones:
+                    type: array
+                    items:
+                      $ref: "../model/AvailableZones.yaml#/definitions/AvailableZones"
+            requestId:
+                type: string
+
+  "/instances/deleteInstances":
+    delete:
+      description: 批量删除
+      operationId: deleteMongoDbs
+      x-jdcloud-internal: true
+      parameters:
+        - name: deleteMongoDbs
+          in: body
+          description:
+          schema:
+            type: object
+            required:
+              - instanceIds
+            properties:
+              instanceIds:
+                type: array
+                items:
+                  type: string
+                description: 实例ID
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  mongodbInfos:
+                    type: array
+                    items:
+                      $ref: "../model/MongodbInfos.yaml#/definitions/MongodbInfos"
+              requestId:
+                type: string
+                
+  "/instances/{instanceId}/topology":
+    get:
+      description: 获取topology结构
+      operationId: describeTopology
+      x-jdcloud-internal: true
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                $ref: "../model/Topology.yaml#/definitions/Topology"
+            requestId:
+                type: string
+
+  "/quota":
+    get:
+      description: 获取配额
+      operationId: describeUserQuota
+      x-jdcloud-internal: true
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                $ref: "../model/Quota.yaml#/definitions/Quota"
+            requestId:
+                type: string    
+
+
+  "/instances/{instanceId}:restartInstance":    #重启实例
+    post:
+      description: 重启实例
+      operationId: restartInstance
+      x-jdcloud-internal: true
+      parameters:
+        - name: restartInstance
+          in: body
+          description:
+          schema:
+            type: object
+            required:
+              - instanceId
+            properties:
+              instanceId:
+                type: string
+                description: 实例ID
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  instanceId:
+                    type: string
+              requestId:
+                type: string
+
+#路径通用参数
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: Region ID
+  instance:
+    name: instanceId
+    in: path
+    required: true
+    type: string
+    description: Instance ID

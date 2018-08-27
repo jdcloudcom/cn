@@ -1,0 +1,30 @@
+swagger: "2.0"
+definitions:
+  charge:
+    x-jdcloud-module: charge
+    properties:
+      chargeMode:
+        type: string
+        enum:
+        - prepaid_by_duration
+        - postpaid_by_usage
+        - postpaid_by_duration
+        default: postpaid_by_duration
+        description: 支付模式，取值为：prepaid_by_duration，postpaid_by_usage或postpaid_by_duration，prepaid_by_duration表示预付费，postpaid_by_usage表示按用量后付费，postpaid_by_duration表示按配置后付费，默认为postpaid_by_duration
+      chargeStatus:
+        type: string
+        enum:
+        - normal
+        - overdue
+        - arrear
+        - overdue
+        description: 费用支付状态，取值为：normal、overdue、arrear，normal表示正常，overdue表示已到期，arrear表示欠费
+      chargeStartTime:
+        type: string
+        description: 计费开始时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+      chargeExpiredTime:
+        type: string
+        description: 过期时间，预付费资源的到期时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ，后付费资源此字段内容为空
+      chargeRetireTime:
+        type: string
+        description: 预期释放时间，资源的预期释放时间，预付费/后付费资源均有此值，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ

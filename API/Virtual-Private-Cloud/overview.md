@@ -18,10 +18,12 @@ v1
 |**createElasticIps**|POST|创建一个或者多个弹性Ip|
 |**createNetworkInterface**|POST|创建网卡接口，只能创建辅助网卡|
 |**createNetworkSecurityGroup**|POST|创建安全组|
+|**createVpc**|POST|创建私有网络|
 |**createVpcPeering**|POST|创建VpcPeering接口|
 |**deleteElasticIp**|DELETE|删除弹性Ip|
 |**deleteNetworkInterface**|DELETE|删除弹性网卡接口|
 |**deleteNetworkSecurityGroup**|DELETE|删除安全组|
+|**deleteVpc**|DELETE|删除私有网络|
 |**deleteVpcPeering**|DELETE|删除VpcPeering接口|
 |**describeElasticIp**|GET|ElasticIp资源信息详情|
 |**describeElasticIps**|GET|查询弹性ip列表|

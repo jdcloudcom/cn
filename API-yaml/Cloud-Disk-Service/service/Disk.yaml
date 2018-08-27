@@ -1,0 +1,295 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: 云硬盘相关接口
+  description: 云硬盘相关接口，提供批量创建云硬盘，查询云硬盘，删除云硬盘，对云硬盘进行扩容，修改云硬盘信息以及使用快照恢复云硬盘等功能。
+
+basePath: /regions/{regionId}
+
+schemes:
+  - https
+
+paths:
+  "/disks":
+    ###################### 创建云硬盘接口 ######################
+    post:
+      description: |
+        -   创建一块或多块按配置或者按使用时长付费的云硬盘。
+        -   磁盘类型包括高效云盘和SSD云盘。
+        -   计费方式默认为按配置付费。
+        -   创建完成后，云硬盘状态为 available。
+        -   可选参数快照 ID用于从快照创建新盘。
+        -   批量创建时，云硬盘的命名为 硬盘名称-数字，例如 myDisk-1，myDisk-2。
+        -   maxCount为最大努力，不保证一定能达到maxCount。
+      summary: "创建云硬盘"
+      operationId: createDisks
+      parameters:
+        - name: DiskSpec
+          in: body
+          required: true
+          description: "创建云硬盘规格"
+          schema:
+            $ref: "../model/DiskSpec.yaml#/definitions/diskSpec"
+        - name: maxCount
+          in: query
+          type: integer
+          required: true
+          description: "购买实例数量；取值范围：[1,100]"
+        - name: clientToken
+          in: query
+          type: string
+          required: true
+          description: "幂等性校验参数"
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                description: "结果集"
+                properties:
+                  diskIds:
+                    type: array
+                    description: "创建的云硬盘ID列表"
+                    items:
+                      type: string
+              requestId:
+                type: string
+                description: "请求ID"
+        400:
+          description: "Invalid parameter"
+        401:
+          description: "Authentication failed"
+        404:
+          description: "Not found"
+        429:
+          description: "Quota exceeded"
+        500:
+          description: "Internal server error"
+        503:
+          description: "Service unavailable"
+
+    ###################### 查询云硬盘列表接口 ######################
+    get:
+      operationId: describeDisks
+      summary: "查询云硬盘列表"
+      description: |
+        -   filters多个过滤条件之间是逻辑与(AND)，每个条件内部的多个取值是逻辑或(OR)
+      parameters:
+        - name: pageNumber
+          in: query
+          type: integer
+          default: 1
+          minimum: 1
+          description: "页码, 默认为1, 取值范围：[1,∞)"
+          
+        - name: pageSize
+          in: query
+          type: integer
+          default: 20
+          minimum: 10
+          maximum: 100
+          description: "分页大小，默认为20，取值范围：[10,100]"
+          
+        - name: tags
+          in: query
+          description: Tag筛选条件
+          type: array
+          items:
+            $ref: "../model/TagFilter.yaml#/definitions/tagFilter"
+
+        - name: filters
+          in: query
+          type: array
+          items:
+            $ref: "../../common/model/Filter.yaml#/definitions/filter"
+          description: |
+            diskId - 云硬盘ID，精确匹配，支持多个
+            diskType - 云硬盘类型，精确匹配，支持多个，取值为 ssd 或 premium-hdd
+            instanceId - 云硬盘所挂载主机的ID，精确匹配，支持多个
+            instanceType - 云硬盘所挂载主机的类型，精确匹配，支持多个
+            status - 可用区，精确匹配，支持多个
+            az - 云硬盘状态，精确匹配，支持多个
+            name - 云硬盘名称，模糊匹配，支持单个
+            multiAttach - 云硬盘是否多点挂载，精确匹配，支持单个
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                type: object
+                description: "查询结果集"
+                properties:
+                  disks:
+                    type: array
+                    description: "查询的云硬盘信息详情列表"
+                    items:
+                      $ref: "../model/Disk.yaml#/definitions/disk"
+                  totalCount:
+                    type: integer
+                    description: "查询的云硬盘数目"
+              requestId:
+                type: string
+                description: "请求ID"
+        400:
+          description: "Invalid parameter"
+        401:
+          description: "Authentication failed"
+        500:
+          description: "Internal server error"
+        503:
+          description: "Service unavailable"
+
+    ###################### 查询云硬盘详情接口 ######################
+  "/disks/{diskId}":
+      get:
+        summary: "查询某一块云硬盘的信息详情"
+        description: "查询某一块云硬盘的信息详情"
+        operationId: describeDisk
+        responses:
+          200:
+            description: OK
+            schema:
+              properties:
+                result:
+                  description: "查询的云硬盘信息详情"
+                  properties:
+                    disk:
+                      $ref: "../model/Disk.yaml#/definitions/disk"
+                requestId:
+                  type: string
+                  description: "请求ID"
+          400:
+            description: "Invalid parameter"
+          401:
+            description: "Authentication failed"
+          404:
+            description: "Not found"
+          500:
+            description: "Internal server error"
+          503:
+            description: "Service unavailable"
+
+    ###################### 删除单个云硬盘接口 ######################
+      delete:
+        summary: "删除单个云硬盘"
+        description: |
+          -   删除一块按配置计费的云硬盘，磁盘类型包括高效云盘和SSD云盘。
+          -   硬盘被删除后，云硬盘快照可以被保留。
+          -   释放磁盘时，云盘的状态必须为 待挂载（Available）。
+          -   如果指定 ID 的磁盘不存在，请求将被忽略。
+        operationId: deleteDisk
+        responses:
+          200:
+            description: OK
+          400:
+            description: "Invalid parameter"
+          401:
+            description: "Authentication failed"
+          404:
+            description: "Not found"
+          500:
+            description: "Internal server error"
+          503:
+            description: "Service unavailable"
+
+    ###################### 修改云硬盘属性接口 ######################
+      patch:
+        summary: "修改云硬盘属性"
+        description: "修改云硬盘的名字或描述信息，名字或描述信息至少要指定一个。"
+        operationId: modifyDiskAttribute
+        parameters:
+          - name: name
+            in: query
+            type: string
+            description: "云硬盘名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。"
+          - name: description
+            in: query
+            type: string
+            description: "云硬盘描述，允许输入UTF-8编码下的全部字符，不超过256字符。"
+        responses:
+          200:
+            description: OK
+          400:
+            description: "Invalid parameter"
+          401:
+            description: "Authentication failed"
+          404:
+            description: "Not found"
+          500:
+            description: "Internal server error"
+          503:
+            description: "Service unavailable"
+
+    ###################### 从快照恢复云硬盘接口 ######################
+  "/disks/{diskId}:restore":
+      post:
+        summary: "从快照恢复云硬盘"
+        description: |
+          -   仅可对制作快照的源硬盘进行数据恢复操作。
+          -   仅源硬盘处于可用状态时才能使用快照进行数据恢复操作。
+          -   云硬盘恢复后，当前数据将被清除，请您谨慎操作。
+        operationId: restoreDisk
+        parameters:
+          - name: snapshotId
+            in: query
+            type: string
+            required: true
+            description: "用于恢复云盘的快照ID"
+        responses:
+          200:
+            description: OK
+          400:
+            description: "Invalid parameter"
+          401:
+            description: "Authentication failed"
+          404:
+            description: "Not found"
+          500:
+            description: "Internal server error"
+          503:
+            description: "Service unavailable"
+
+    ###################### 云硬盘扩容接口 ######################
+  "/disks/{diskId}:extend":
+      post:
+        summary: "云硬盘扩容,只能扩容，不能缩小"
+        description: |
+          -   扩容云硬盘到指定大小，云硬盘状态必须为 available。
+          -   当磁盘正在创建快照时，不允许扩容。
+        operationId: extendDisk
+        parameters:
+          - name: diskSizeGB
+            in: query
+            type: integer
+            required: true
+            description: "扩容后的云硬盘大小，单位为GiB"
+        responses:
+          200:
+            description: OK
+          400:
+            description: "Invalid parameter"
+          401:
+            description: "Authentication failed"
+          404:
+            description: "Not found"
+          500:
+            description: "Internal server error"
+          503:
+            description: "Service unavailable"
+
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: 地域ID
+  diskId:
+    name: diskId
+    in: path
+    required: true
+    type: string
+    description: 云硬盘ID

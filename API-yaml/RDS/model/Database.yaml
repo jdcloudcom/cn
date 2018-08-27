@@ -1,0 +1,22 @@
+swagger: "2.0"
+definitions:
+  Database:
+    x-jdcloud-module: rds
+    title: Database
+    type: object
+    properties:
+      dbName:
+        type: string
+        description: 数据库名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
+      dbStatus:
+        type: string
+        description: 数据库状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)<br>- **MySQL：不支持，不返回该字段**<br>- **SQL Server：返回该字段**
+      characterSetName:
+        type: string
+        description: 字符集，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
+      accessPrivilege:
+        type: array
+        items:
+          $ref: "../model/DBAccessPrivilege.yaml#/definitions/DBAccessPrivilege"
+          description: 账户权限
+        description: 该数据库相关账户权限列表

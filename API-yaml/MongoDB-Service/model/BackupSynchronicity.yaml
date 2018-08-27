@@ -1,0 +1,38 @@
+swagger: "2.0"
+definitions:
+  BackupSynchronicity:
+    x-jdcloud-module: mongodb
+    title: BackupSynchronicity
+    type: object
+    properties:
+      serviceId:
+        type: string
+        description: 跨地域备份同步服务ID
+      instanceId:
+        type: string
+        description: MongoDB 实例ID
+      instanceName:
+        type: string
+        description: MongoDB 实例名称
+      serviceStatus:
+        type: string
+        description: 跨地域备份同步服务状态，正常，running；错误，error
+      srcRegion:
+        type: string
+        description: 源实例所在地域
+      dstRegion:
+        type: string
+        description: 跨地域备份同步服务的目的地域
+      engine:
+        type: string
+        description: 数据库类型
+      engineVersion:
+        type: string
+        description: 数据库版本
+      createTime:
+        type: string
+        description: 创建时间
+      newestDataTime:
+        type: string
+        description: 跨地域备份的最新数据时间点
+
