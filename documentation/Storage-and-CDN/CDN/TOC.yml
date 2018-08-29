@@ -44,38 +44,32 @@
           - name:命中率
             href: Operation-Guide/Quality-Monitoring/Hit-Ratio.md        
           - name: 状态码
-            href: Operation-Guide/Quality-Monitoring/Hit-Ratio.md         
-
-        items:
-          - name: 访问控制
-            href: Operation-Guide/Access-control.md  
-          - name: 高级配置
-            href: Operation-Guide/Advanced-configuration.md
-
-          - name: 回源策略
-            href: Operation-Guide/back-to-origin-Strategy.md
-          - name: 业务监控
-            href: Operation-Guide/Business-Monitoring.md        
-          - name: 缓存配置
-            href: Operation-Guide/Cache-configuration.md 
-          - name: 控制台简介
-            href: Operation-Guide/Console-introduction.md  
-        - name: 创建域名
-          href: Operation-Guide/Create-domain.md
-
-        - name: 日志下载
-          href: Operation-Guide/Log-download.md
-        - name: 刷新预热
-          href: Operation-Guide/Refresh-Preheat.md        
-        - name: 共享缓存
-          href: Operation-Guide/Shared-cache.md
-        - name: URL 鉴权
-          href: Operation-Guide/URL-Authentication.md        
-        - name: 视频拖拽
-          href: Operation-Guide/Video-drag.md  
+            href: Operation-Guide/Quality-Monitoring/Status-Code.md         
+      - name: 访问控制
+        href: Operation-Guide/Access-control.md  
+      - name: 高级配置
+        href: Operation-Guide/Advanced-configuration.md
+      - name: 回源策略
+        href: Operation-Guide/back-to-origin-Strategy.md
+      - name: 业务监控
+        href: Operation-Guide/Business-Monitoring.md        
+      - name: 缓存配置
+        href: Operation-Guide/Cache-configuration.md 
+      - name: 控制台简介
+        href: Operation-Guide/Console-introduction.md  
+      - name: 创建域名
+        href: Operation-Guide/Create-domain.md
+      - name: 日志下载
+        href: Operation-Guide/Log-download.md
+      - name: 刷新预热
+        href: Operation-Guide/Refresh-Preheat.md        
+      - name: 共享缓存
+        href: Operation-Guide/Shared-cache.md
+      - name: URL 鉴权
+        href: Operation-Guide/URL-Authentication.md        
+      - name: 视频拖拽
+        href: Operation-Guide/Video-drag.md  
   - name: FAQ
-    items:
-    - name: FAQ
-      href: FAQ/FAQ.md
+    href: FAQ/FAQ.md
 
       

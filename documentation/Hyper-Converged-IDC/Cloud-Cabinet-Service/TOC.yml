@@ -1,0 +1,89 @@
+ name: 云托管服务 Cloud Cabinet Service
+  href: 
+  items:
+  - name: 产品简介
+    items:
+      - name: 产品概述
+        href: Introduction/What-Is-Cloud-Cabinet-Service.md
+      - name: 核心概念
+        href: Introduction/Core-Concepts.md
+      - name: 基础架构
+        href: 
+        status: 0
+      - name: 产品优势
+        href: Introduction/Benefits.md
+      - name: 产品功能
+        href: Introduction/Functions.md
+      - name: 产品规格
+        href: Introduction/Specification.md
+      - name: 限制说明
+        href: 
+        status: 0
+      - name: 应用场景 
+        href: Introduction/Application-Scenarios.md    
+  - name: 产品定价
+    items:
+      - name: 计费概述
+        href: Pricing/Billing-Overview.md
+      - name: 计费规则
+        href: 
+        status: 0
+      - name: 价格总览
+        href: 
+        status: 0
+      - name: 购买流程
+        href:
+        status: 0
+      - name: 续费流程
+        href: 
+        status: 0
+  - name: 入门指南
+    items:
+      - name: 入门指南概述
+        href: Getting-Started/Overview.md
+  - name: 操作指南
+    items:
+      - name: 资源管理
+        items:
+          - name: 机柜
+            href: Operation-Guide/Resources-Management/Cabinet.md
+          - name: 设备
+            href: Operation-Guide/Instance-Management/Device.md
+          - name: 公网IP
+            href: Operation-Guide/Instance-Management/ipAddress.md    
+          - name: 带宽
+            href: Operation-Guide/Instance-Management/Bandwidth.md
+      - name: 工单管理
+        items:
+          - name: 提交工单
+            href: Operation-Guide/Tickets-Management/submitTicket.md
+          - name: 我的工单
+            href: Operation-Guide/Tickets-Management/myTickets.md
+  - name: 最佳实践
+    items:
+    status: 0
+  - name: 教程
+    items:
+    status: 0
+  - name: 问题排查
+    items:
+    status: 0    
+  - name: 常见问题
+    href: FAQ/FAQ.md
+  - name: API参考
+    status: 0
+  - name: SDK参考
+    status: 0
+    items:
+    - name: 服务条款      
+      status: 0      
+    - name: SLA      
+      status: 0       
+  - name: 相关资源
+    items:
+    - name: 文档历史记录
+      href: Related-Resources/Document-History.md   
+    - name: 备案       
+      status: 0        
+    - name: 词汇表      
+      status: 0
