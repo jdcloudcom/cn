@@ -1,0 +1,32 @@
+swagger: "2.0"
+definitions:
+  MissingIndexResult:
+    x-jdcloud-module: rds
+    title: MissingIndexResult
+    type: object
+    properties:
+      db:
+        type: string
+        description: 数据库名
+      table:
+        type: string
+        description: 表名
+      equalityColumns:
+        type: string
+        description: 构成相等谓词的列的逗号分隔列表，谓词的形式如下：<br>table.column =constant_value
+      inequalityColumns:
+        type: string
+        description: 用于查询的涵盖列的逗号分隔列表,即创建索引的SQL语句中，Include后的字段
+      includedColumns:
+        type: string
+        description: 构成不等谓词的列的逗号分隔列表，例如以下形式的谓词：<br>table.column > constant_value<br>“=”之外的任何比较运算符都表示不相等。
+      avgUserImpact:
+        type: number
+        format: float
+        description: 实现此缺失索引后，用户查询可能获得的平均百分比收益。 该值表示如果实现此缺失索引，则查询成本将按此百分比平均下降。
+      userScans:
+        type: integer
+        description: 由可能使用了组中建议索引的用户查询所导致的扫描次数。
+      userSeeks:
+        type: integer
+        description: 由可能使用了组中建议索引的用户查询所导致的搜索次数。

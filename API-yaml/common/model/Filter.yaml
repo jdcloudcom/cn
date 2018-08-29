@@ -1,0 +1,30 @@
+swagger: "2.0"
+definitions:
+  filter:
+    x-jdcloud-module: common
+    type: object
+    required:
+      - name
+      - values
+    properties:
+      name:
+        type: string
+        description: 过滤条件的名称
+      operator:
+        type: string
+        description: 过滤条件的操作符，默认eq
+        enum:
+          - eq
+          - lt
+          - le
+          - gt
+          - ge
+          - ne
+          - in
+          - like
+      values:
+        type: array
+        description: 过滤条件的值
+        items:
+          type: string
+

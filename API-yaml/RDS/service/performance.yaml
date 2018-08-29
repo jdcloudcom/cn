@@ -1,0 +1,118 @@
+swagger: "2.0"                                  # 基于Swagger 2.0版本实现
+info:
+  version: v1
+  title: 性能统计
+  description: 性能统计相关接口
+basePath: /regions/{regionId}
+paths:
+  "/instances/{instanceId}/performance:describeIndexPerformance": #索引性能统计
+    post:
+      description: 根据用户定义的查询条件，获取索引性能的统计信息，并提供缺失索引及索引创建建议。用户可以根据这些信息查找与索引相关的性能瓶颈，并进行优化。<br>- 仅支持SQL Server
+      operationId: describeIndexPerformance
+      parameters:
+        - name: queryType
+          required: true
+          in: query
+          type: string
+          description: 查询类型，不同的查询类型按照相应的字段从高到低返回结果。<br>支持如下类型：<br>Missing：缺失索引<br>Size：索引大小，单位KB<br>Updates：索引更新次数<br>Scans：表扫描次数<br>Used：最少使用<br>
+        - name: db
+          required: false
+          in: query
+          type: string
+          description: 需要查询的数据库名，多个数据库名之间用英文逗号分隔，默认所有数据库
+        - name: pageNumber
+          required: false
+          in: query
+          type: integer
+          description: 显示数据的页码，默认为1，取值范围：[-1,1000)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。
+        - name: pageSize
+          required: false
+          in: query
+          type: integer
+          description: 每页显示的数据条数，默认为50，取值范围：[1,100]，只能为10的倍数，用于查询列表的接口
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  missingIndexResult:
+                    type: array
+                    description: 当queryType为Missing时，返回结果集为MissingIndexResult<br>当queryType为其他值时，该字段为空
+                    items:
+                      $ref: ../model/MissingIndexResult.yaml#/definitions/MissingIndexResult
+                  indexPerformanceResult:
+                    type: array
+                    description: 当queryType为Missing时，该字段为空<br>当queryType为其他值时，返回IndexPerformanceResult
+                    items:
+                      $ref: ../model/IndexPerformanceResult.yaml#/definitions/IndexPerformanceResult
+                  totalCount:
+                    type: integer
+                    description: 总记录条数
+                  pageNumber:
+                    type: integer
+                    description: 当前数据的页码
+                  pageSize:
+                    type: integer
+                    description: 每页显示的数据条数
+  "/instances/{instanceId}/performance:describeQueryPerformance": #查询性能统计
+    post:
+      description: 根据用户定义的查询条件，获取SQL执行的性能统计信息，例如慢SQL等。用户可以根据这些信息查找与SQL执行相关的性能瓶颈，并进行优化。<br>- 仅支持SQL Server
+      operationId: describeQueryPerformance
+      parameters:
+        - name: queryType
+          required: true
+          in: query
+          type: string
+          description: 查询类型，不同的查询类型按照相应的字段从高到低返回结果。<br>支持如下类型：<br>ExecutionCount：执行次数<br>LastRows：上次返回行数<br>ElapsedTime：平均执行时间<br>CPUTime：平均CPU时间<br>LogicalReads：平均逻辑读<br>LogicalWrites：平均逻辑写<br>PhysicalReads：平均物理读<br>
+        - name: threshold
+          required: false
+          in: query
+          type: integer
+          description: 只返回查询条件大于等于threshold的记录，默认为0
+        - name: pageNumber
+          required: false
+          in: query
+          type: integer
+          description: 显示数据的页码，默认为1，取值范围：[-1,1000]。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。
+        - name: pageSize
+          required: false
+          in: query
+          type: integer
+          description: 每页显示的数据条数，默认为50，取值范围：[1,100]，只能为10的倍数，用于查询列表的接口
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  queryPerformanceResult:
+                    type: array
+                    description: 查询性能统计结果集
+                    items:
+                      $ref: ../model/QueryPerformanceResult.yaml#/definitions/QueryPerformanceResult
+                  totalCount:
+                    type: integer
+                    description: 总记录条数
+                  pageNumber:
+                    type: integer
+                    description: 当前数据的页码
+                  pageSize:
+                    type: integer
+                    description: 每页显示的数据条数
+#路径通用参数
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
+  instanceId:
+    name: instanceId
+    in: path
+    required: true
+    type: string
+    description: RDS 实例ID，唯一标识一个RDS实例

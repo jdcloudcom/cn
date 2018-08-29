@@ -1,0 +1,29 @@
+swagger: "2.0"
+definitions:
+  snapshot:
+    x-jdcloud-module: disk
+    type: object
+    description: "快照信息详情"
+    properties:
+      snapshotId:
+        type: string
+        description: 云硬盘快照ID
+      diskId:
+        type: string
+        description: 创建快照的云硬盘ID
+      snapshotSizeGB:
+        type: integer
+        description: 快照大小，单位为GiB
+      name:
+        type: string
+        description: 快照名称
+      description:
+        type: string
+        description: 快照描述
+      status:
+        type: string
+        description: 快照状态，取值为 creating、available、in-use、deleting、error_create、error_delete 之一
+      createTime:
+        type: string
+        format: date-time
+        description: 创建时间

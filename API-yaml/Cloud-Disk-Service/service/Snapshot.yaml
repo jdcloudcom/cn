@@ -1,0 +1,221 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: 快照相关接口
+  description: 快照相关接口，提供创建快照，查询快照信息，删除快照，修改快照信息等功能。
+
+basePath: /regions/{regionId}
+
+schemes:
+  - https
+
+paths:
+  "/snapshots":
+   ###################### 查询云硬盘快照列表接口 ######################
+    get:
+      operationId: describeSnapshots
+      summary: "查询云硬盘快照列表"
+      description: "查询云硬盘快照列表，filters多个过滤条件之间是逻辑与(AND)，每个条件内部的多个取值是逻辑或(OR)"
+      parameters:
+        - name: pageNumber
+          in: query
+          type: integer
+          default: 1
+          minimum: 1
+          description: "页码, 默认为1, 取值范围：[1,∞)"
+ 
+        - name: pageSize
+          in: query
+          type: integer
+          default: 20
+          minimum: 10
+          maximum: 100
+          description: "分页大小，默认为20，取值范围：[10,100]"
+
+        - name: filters
+          in: query
+          type: array
+          items:
+            $ref: "../../common/model/Filter.yaml#/definitions/filter"
+          description: |
+            snapshotId - 云硬盘快照ID，支持多个
+            diskId - 生成快照的云硬盘ID，支持多个
+            status - 快照状态，精确匹配，支持多个,取值为 creating、available、in-use、deleting、error_create、error_delete
+            name - 快照名称，模糊匹配，支持单个
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                type: object
+                description: "查询结果集"
+                properties:
+                  snapshots:
+                    type: array
+                    description: "查询的快照信息详情列表"
+                    items:
+                      $ref: "../model/Snapshot.yaml#/definitions/snapshot"
+                  totalCount:
+                    type: integer
+                    description: "查询的快照数目"
+              requestId:
+                type: string
+                description: "请求ID"
+        400:
+          description: "Invalid parameter"
+        401:
+          description: "Authentication failed"
+        500:
+          description: "Internal server error"
+        503:
+          description: "Service unavailable"
+
+   ###################### 创建云硬盘快照接口 ######################
+    post:
+      summary: "创建云硬盘快照"
+      description: |
+        -   为指定云硬盘创建快照,新生成的快照的状态为creating。
+        -   同一地域下单用户快照的配额为15块。
+        -   为保证数据完整性，请您在创建快照之前，停止对云硬盘进行写入操作，以保证快照数据的完整性。
+        -   在执行创建快照前，建议您对云硬盘进行卸载操作，创建快照后再重新挂载到云主机上。
+        -   手动快照的生命周期独立于云硬盘，请您及时删除不需要的快照。
+        -   创建快照所需时间取决于云硬盘容量的大小，云硬盘容量越大耗时越长。
+      operationId: createSnapshot
+      parameters:
+        - name: SnapshotSpec
+          in: body
+          required: true
+          description: "创建快照规格"
+          schema:
+            $ref: "../model/SnapshotSpec.yaml#/definitions/snapshotSpec"
+        - name: clientToken
+          in: query
+          required: true
+          type: string
+          description: "幂等性校验参数"
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                description: "结果集"
+                properties:
+                  snapshotId:
+                    description: "创建的快照ID"
+                    type: string
+              requestId:
+                type: string
+                description: "请求ID"
+        400:
+          description: "Invalid parameter"
+        401:
+          description: "Authentication failed"
+        404:
+          description: "Not found"
+        429:
+          description: "Quota exceeded"
+        500:
+          description: "Internal server error"
+        503:
+          description: "Service unavailable"
+
+   ###################### 查询云硬盘快照信息详情接口 ######################
+  "/snapshots/{snapshotId}":
+      get:
+        summary: "云硬盘快照信息详情"
+        description: "查询云硬盘快照信息详情"
+        operationId: describeSnapshot
+        responses:
+          200:
+            description: OK
+            schema:
+              properties:
+                result:
+                  description: "查询的快照信息详情"
+                  type: object
+                  properties:
+                    snapshot:
+                      $ref: "../model/Snapshot.yaml#/definitions/snapshot"
+                requestId:
+                  type: string
+                  description: "请求ID"
+          400:
+            description: "Invalid parameter"
+          401:
+            description: "Authentication failed"
+          404:
+            description: "Not found"
+          500:
+            description: "Internal server error"
+          503:
+            description: "Service unavailable"
+
+   ###################### 删除云硬盘快照接口 ######################
+      delete:
+        summary: "删除云硬盘快照"
+        description: |
+          -   删除单个云硬盘快照:快照状态必须为 available 或 error 状态。
+          -   快照独立于云硬盘生命周期，删除快照不会对创建快照的云硬盘有任何影响。
+          -   快照删除后不可恢复，请谨慎操作。
+        operationId: deleteSnapshot
+        responses:
+          200:
+            description: OK
+          400:
+            description: "Invalid parameter"
+          401:
+            description: "Authentication failed"
+          404:
+            description: "Not found"
+          500:
+            description: "Internal server error"
+          503:
+            description: "Service unavailable"
+
+   ###################### 修改快照属性接口 ######################
+      patch:
+        summary: "修改快照属性"
+        description: "修改快照的名字或描述信息"
+        operationId: modifySnpAttribute
+        parameters:
+          - name: name
+            in: query
+            type: string
+            description: "快照名称"
+          - name: description
+            in: query
+            type: string
+            description: "快照描述，name和description必须要指定一个"
+        responses:
+          200:
+            description: OK
+          400:
+            description: "Invalid parameter"
+          401:
+            description: "Authentication failed"
+          404:
+            description: "Not found"
+          500:
+            description: "Internal server error"
+          503:
+            description: "Service unavailable"
+
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: 地域ID
+  snapshotId:
+    name: snapshotId
+    in: path
+    required: true
+    type: string
+    description: 快照ID
+        
+
+    

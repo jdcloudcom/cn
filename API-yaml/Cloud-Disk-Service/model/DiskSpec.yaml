@@ -1,0 +1,37 @@
+swagger: "2.0"
+definitions:
+  diskSpec:
+    x-jdcloud-module: disk
+    required:
+      - az
+      - name
+      - diskType
+      - diskSizeGB
+    properties:
+      az:
+        type: string
+        description: 云硬盘所属的可用区
+      name:
+        type: string
+        description: 云硬盘名称
+      description:
+        type: string
+        description: 云硬盘描述
+      diskType:
+        type: string
+        enum:
+          - "ssd"
+          - "premium-hdd"
+        description: 云硬盘类型，取值为ssd、premium-hdd之一
+      diskSizeGB:
+        type: integer
+        description: 云硬盘大小，单位为 GiB，ssd 类型取值范围[20,1000]GB，步长为10G，premium-hdd 类型取值范围[20,3000]GB，步长为10G
+      snapshotId:
+        type: string
+        description: 用于创建云硬盘的快照ID
+      charge:
+        $ref: "../../charge/model/ChargeSpec.yaml#/definitions/chargeSpec"
+        description: 计费配置；如不指定，默认计费类型是后付费-按使用时常付费
+      multiAttachable:
+        type: boolean
+        description: 云硬盘是否支持一盘多主机挂载，默认为false（不支持）

@@ -1,0 +1,11 @@
+swagger: "2.0"
+definitions:
+  tag:
+    x-jdcloud-module: disk
+    properties:
+      key:
+        type: string
+        description: Tag键
+      value:
+        type: string
+        description: Tag值

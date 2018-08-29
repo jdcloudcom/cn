@@ -1,0 +1,21 @@
+swagger: "2.0"
+definitions:
+  soldout:
+    x-jdcloud-module: disk 
+    required:
+      - AzName 
+      - MediaType
+      - IsSoldOut
+    properties:
+      AzName:
+        type: string
+        description: 云硬盘所属的可用区
+      MediaType:
+        type: string
+        enum:
+          - "ssd"
+          - "premium-hdd"
+        description: 云硬盘类型，取值为ssd、premium-hdd之一
+      IsSoldOut:
+        type: boolean 
+        description: 是否售罄
