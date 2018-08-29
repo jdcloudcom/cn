@@ -1,0 +1,32 @@
+swagger: "2.0"
+definitions:
+  Backup:
+    x-jdcloud-module: mongodb
+    title: Backup
+    type: object
+    properties:
+      backupId:
+        type: string
+        description: 备份ID
+      backupName:
+        type: string
+        description: 备份名称
+      instanceId:
+        type: string
+        description: 备份所属实例ID
+      backupStatus:
+        type: string
+        description: 备份状态，Waiting(等待中)、Running(备份中)、Finished(已完成)、(Failed错误)
+      backupStartTime:
+        type: string
+        description: 备份开始时间
+      backupEndTime:
+        type: string
+        description: 备份结束时间
+      backupMode:
+        type: string
+        description: 备份模式，Automated(系统自动备份)、Manual(手动备份)
+      backupSizeByte:
+        type: integer
+        description: 整个备份集大小，单位：Byte
+      

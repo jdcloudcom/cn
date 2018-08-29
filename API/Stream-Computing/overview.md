@@ -2,7 +2,7 @@
 
 
 ## 简介
-提供流计算job操作的相关接口。
+提供流计算操作的相关接口。
 
 
 ### 版本
@@ -15,8 +15,8 @@ v1
 |**addOrUpdateJob**|POST|添加或者更新job|
 |**addOrUpdateStorage**|POST|创建或者更新storage|
 |**createNamespace**|POST|创建namespace|
-|**deleteJob**|DELETE|删除job|
-|**deleteNamespace**|DELETE|删除namespace|
+|**deleteJob**|DELETE|删除作业|
+|**deleteNamespace**|DELETE|删除namespace,如果旗下关联有其他资源，不允许删除|
 |**deleteStorage**|DELETE|删除指定输入|
 |**describeJob**|GET|查询指定作业详情|
 |**describeStorage**|GET|查询指定输入|

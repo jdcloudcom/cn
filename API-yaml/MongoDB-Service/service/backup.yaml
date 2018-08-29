@@ -1,0 +1,121 @@
+swagger: "2.0"                                 
+info:
+  version: v1
+  title: 备份管理
+  description: API related to Relational MONGODB Service
+
+basePath: /regions/{regionId}
+
+paths:
+  "/backups":    #创建备份
+    post:
+      description: 创建备份
+      operationId: createBackup
+      parameters:
+        - name: createBackup
+          in: body
+          description:
+          schema:
+            type: object
+            required:
+              - instanceId
+            properties:
+              instanceId:
+                type: string
+                description: 实例ID
+              backupName:
+                type: string
+                description: 备份名称
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  backupId:
+                    type: string
+              requestId:
+                type: string
+
+    get:
+      description: 查看备份
+      operationId: describeBackups
+      parameters:
+        - name: pageNumber
+          in: query
+          type: integer
+          description: "页码；默认为1，取值范围：[1,∞)"
+        - name: pageSize
+          in: query
+          type: integer
+          description: "分页大小；默认为10；取值范围[1, 100]"
+        - name: filters
+          in: query
+          type: array
+          items:
+            $ref: "../../common/model/Filter.yaml#/definitions/filter"
+          description: | 
+            instanceId - 实例ID, 精确匹配
+            backupId - 备份ID, 精确匹配
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  backups:
+                    type: array
+                    items:
+                      $ref: ../model/Backup.yaml#/definitions/Backup
+                  totalCount:
+                    type: integer
+                  pageNumber:
+                    type: integer
+              requestId:
+                type: string
+
+  "/backups/{backupId}":
+    delete:
+      description: 删除备份
+      operationId: deleteBackup
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              requestId:
+                type: string
+  
+  "/backups/{backupId}/downloadURL":
+    get:
+      description: 获取备份下载链接
+      operationId: backupDownloadURL
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                $ref: "../model/BackupDownloadURL.yaml#/definitions/BackupDownloadURL"
+              requestId:
+                type: string
+
+#路径通用参数
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: Region ID
+  backupId:
+    name: backupId
+    in: path
+    required: true
+    type: string
+    description: backup ID
+
+
+

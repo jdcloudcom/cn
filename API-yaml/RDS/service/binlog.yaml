@@ -1,0 +1,94 @@
+swagger: "2.0"                                  # 基于Swagger 2.0版本实现
+info:
+  version: v1
+  title: binlog日志
+  description: binlog日志相关接口
+basePath: /regions/{regionId}
+paths:
+  "/instances/{instanceId}/binlogs": #binlog日志
+    get:
+      description: 获取MySQL实例中binlog的详细信息<br>- 仅支持MySQL
+      operationId: describeBinlogs
+      x-jdcloud-internal: true
+      parameters:
+        - name: pageNumber
+          required: true
+          in: query
+          type: integer
+          description: 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。
+        - name: pageSize
+          required: true
+          in: query
+          type: integer
+          description: 每页显示的数据条数，默认为10，取值范围：[1,100]，只能为10的倍数
+        - name: startTime
+          required: false
+          in: query
+          type: string
+          description: 查询开始时间，格式为：YYYY-MM-DD HH:mm:ss
+        - name: endTime
+          required: false
+          in: query
+          type: string
+          description: 查询结束时间，格式为：YYYY-MM-DD HH:mm:ss
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  totalCount:
+                    type: integer
+                    description: 总记录数
+                  binlogs:
+                    type: array
+                    description: 备份集合
+                    items:
+                      $ref: ../model/Binlog.yaml#/definitions/Binlog
+  "/instances/{instanceId}/binlogs/{binlogBackupId}:describeBinlogDownloadURL": #binlog日志
+    get:
+      description: 获取MySQL实例的binlog的下载链接<br>- 仅支持MySQL
+      operationId: describeBinlogDownloadURL
+      x-jdcloud-internal: true
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  publicURL:
+                    type: string
+                    description: 公网下载链接
+                  internalURL:
+                    type: string
+                    description: 内网下载链接
+  "/instances/{instanceId}/binlogs:clearBinlogs": #binlog日志
+    post:
+      description: 清理本地的binlog并释放空间。 系统只会清理已经备份到存储的binlog，不会影响MySQL实例的备份恢复<br>- 仅支持MySQL
+      operationId: clearBinlogs
+      x-jdcloud-internal: true
+      responses:
+        200:
+          description: OK
+#路径通用参数
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
+  instanceId:
+    name: instanceId
+    in: path
+    required: true
+    type: string
+    description: RDS 实例ID，唯一标识一个RDS实例
+  binlogBackupId:
+    name: binlogBackupId
+    in: path
+    required: true
+    type: string
+    description: binlog的备份ID，可以通过describeBinlogs获得

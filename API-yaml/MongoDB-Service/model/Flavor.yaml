@@ -1,0 +1,29 @@
+swagger: "2.0"
+definitions:
+  Flavor:
+    x-jdcloud-module: mongodb
+    title: Flavor
+    type: object
+    properties:
+      cpu:
+        type: integer
+        description: CPU核数
+      memory:
+        type: integer
+        description: 内存 ,单位GB
+      iops:
+        type: integer
+        description: iops
+      maxLink:
+        type: integer
+        description: 最大连接数
+      maxDisk:
+        type: integer
+        description: 最大磁盘数,单位GB
+      minDisk:
+        type: integer
+        description: 最下磁盘数,单位GB
+      diskStep:
+        type: integer
+        description: 磁盘步长
+      

@@ -1,0 +1,116 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: 跨区域备份管理
+  description: API related to Relational MONGODB Service
+
+basePath: /regions/{regionId}
+
+paths:
+  "/backupSynchronicities":  #跨区域备份同步服务
+    post:
+      description: 创建跨区域备份同步服务
+      operationId: createBackupSynchronicity
+      x-jdcloud-internal: true
+      parameters:
+        - name: createBackupSynchronicity
+          in: body
+          description:
+          schema:
+            type: object
+            required:
+              - instanceId
+              - srcRegion
+              - dstRegion
+            properties:
+              instanceId:
+                type: string
+                description: 源实例ID
+              srcRegion:
+                type: string
+                description: 源实例所在地域
+              dstRegion:
+                type: string
+                description: 备份同步的目标地域
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  serviceId:
+                    type: string
+              requestId:
+                type: string
+
+    get:
+      description: 查询跨区域备份同步服务
+      operationId: describeBackupSynchronicities
+      x-jdcloud-internal: true
+      parameters:
+        - name: pageNumber
+          in: query
+          type: integer
+          description: "页码；默认为1，取值范围：[1,∞)"
+        - name: pageSize
+          in: query
+          type: integer
+          description: "分页大小；默认为10；取值范围[1, 100]"
+        - name: filters
+          in: query
+          type: array
+          items:
+            $ref: "../../common/model/Filter.yaml#/definitions/filter"
+          description:
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  backupSynchronicities:
+                    type: array
+                    items:
+                      $ref: "../model/BackupSynchronicity.yaml#/definitions/BackupSynchronicity"
+                  totalCount:
+                    type: integer
+                  pageNumber:
+                    type: integer
+              requestId:
+                type: string
+
+  "/backupSynchronicities/{serviceId}":    #删除一个跨地域备份同步服务
+    delete:
+      description: 删除跨地域备份同步服务
+      operationId: deleteBackupSynchronicities
+      x-jdcloud-internal: true
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  serviceId:
+                    type: string
+              requestId:
+                type: string
+
+#路径通用参数
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: Region ID
+  serviceId:
+    name: serviceId
+    in: path
+    required: true
+    type: string
+    description: service ID
+
+

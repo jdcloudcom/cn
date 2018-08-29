@@ -1,0 +1,8 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: JDCLOUD CHARGE instance API
+  description: API related to VM instances
+host: "charge.jcloud.com"
+x-jdcloud-version: "v1"
+x-jdcloud-revision: "0.3.0"

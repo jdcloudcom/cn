@@ -1,0 +1,17 @@
+swagger: "2.0"
+definitions:
+  snapshotSpec:
+    x-jdcloud-module: disk
+    required:
+      - name
+      - diskId
+    properties:
+      name:
+        type: string
+        description: 快照名称
+      description:
+        type: string
+        description: 快照描述
+      diskId:
+        type: string
+        description: 用于创建快照的云盘ID

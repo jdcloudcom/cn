@@ -1,0 +1,22 @@
+swagger: "2.0"
+definitions:
+  Binlog:
+    x-jdcloud-module: rds
+    title: Binlog
+    type: object
+    properties:
+      binlogBackupId:
+        type: string
+        description: binlog日志备份ID
+      binlogName:
+        type: string
+        description: binlog日志名称
+      binlogSizeKB:
+        type: integer
+        description: binlog日志大小，单位KB
+      binlogStartTime:
+        type: string
+        description: binlog开始时间,格式为：YYYY-MM-DD HH:mm:ss
+      binlogEndTime:
+        type: string
+        description: binlog结束时间,格式为：YYYY-MM-DD HH:mm:ss
