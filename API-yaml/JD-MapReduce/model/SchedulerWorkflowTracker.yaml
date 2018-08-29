@@ -1,0 +1,31 @@
+swagger: "2.0"
+definitions:
+  schedulerWorkflowTracker:
+    x-jdcloud-module: jmr
+    title: schedulerWorkflowTracker
+    type: object
+    properties:
+      id:
+        type: integer
+      workflowId:
+        type: integer
+      workflowName:
+        type: string
+      workflowStartTime:
+        type: string
+        format: date-time
+      workflowEndTime:
+        type: string
+        format: date-time
+      workflowStatus:
+        type: integer
+      isExecuteNotify:
+        type: number
+      userName:
+        type: string
+      runParams:
+        type: string
+      workflowDescription:
+        type: string
+      dataCenter:
+        type: string

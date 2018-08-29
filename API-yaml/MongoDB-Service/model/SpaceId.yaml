@@ -1,0 +1,14 @@
+swagger: "2.0"
+definitions:
+  SpaceId:
+    x-jdcloud-module: mongodb
+    title: SpaceId
+    type: object
+    properties:
+      spaceId:
+        type: string
+        description: 实例ID
+      status:
+        type: string
+        description: 状态描述
+      

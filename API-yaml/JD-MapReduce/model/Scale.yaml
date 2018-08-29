@@ -1,0 +1,13 @@
+swagger: "2.0"
+definitions:
+  scale:
+    x-jdcloud-module: jmr
+    title: scale
+    type: object
+    properties:
+      core:
+        type: integer
+        description: CPU核数
+      memory:
+        type: integer
+        description: 内存大小，单位G

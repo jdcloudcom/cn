@@ -1,0 +1,13 @@
+swagger: "2.0"
+definitions:
+  nodeInfoData:
+    x-jdcloud-module: jmr
+    title: nodeInfoData
+    type: object
+    properties:
+      detail:
+        $ref: "../model/MetricDetail.yaml#/definitions/metricDetail"
+      metrics:
+        type: array
+        items:
+          $ref: "../model/Metrics.yaml#/definitions/metrics"

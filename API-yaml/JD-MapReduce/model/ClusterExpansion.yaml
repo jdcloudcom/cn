@@ -1,0 +1,13 @@
+swagger: "2.0"
+definitions:
+  clusterExpansion:
+    x-jdcloud-module: jmr
+    title: clusterExpansion
+    type: object
+    properties:
+      clusterId:
+        type: string
+        description: 集群Id
+      expansionNum:
+        type: integer
+        description: 扩容数量

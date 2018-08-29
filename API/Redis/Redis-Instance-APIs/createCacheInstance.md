@@ -3,11 +3,6 @@
 
 ## 描述
 创建一个指定配置的缓存Redis实例
-规格性能：创建缓存Redis实例的规格，分为主从版和集群版两种规格。每种规格都有最大连接数，内网带宽上限，CPU处理能力，规格代码等信息，具体可查看：<a href="https://www.jdcloud.com/help/detail/411/isCatalog/1">实例规格代码</a>
-可用区：可用区是指在同一地域下，电力、网络等基础设施互相独立的物理区域。一个地域包含一个或多个可用区，同一地域下的多个可用区可以彼此连通。地域可用区详细信息可查询：<a href="https://www.jdcloud.com/help/detail/2222/isCatalog/1">地域可用区详情</a>
-私有网络：简称VPC，自定义的逻辑隔离网络空间，支持自定义网段划分、路由策略等。具体信息可查询：<a href="https://www.jdcloud.com/help/detail/1509/isCatalog/1">私有网络VPC详情</a>
-子网：子网是所属VPC IP地址范围内的IP地址块，简称subnet，在VPC下创建子网，同一VPC下子网的网段不可以重叠，不同VPC下子网的网段可以重叠。具体信息可查询：<a href="https://www.jdcloud.com/help/detail/1510/isCatalog/1">子网subnet详情</a>
-
 
 ## 请求方式
 POST
@@ -22,19 +17,19 @@ https://redis.jdcloud-api.com/v1/regions/{regionId}/cacheInstance
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**cacheInstance**|[CacheInstanceSpec](##CacheInstanceSpec)|True||创建缓存实例的具体属性，包括所属私有网络ID(vpcId)、子网ID(subnetId)、缓存实例名称、缓存实例规格、缓存实例密码、缓存实例所在区域可用区ID信息和缓存实例描述。|
-|**charge**|[ChargeSpec](##ChargeSpec)|False||计费信息的相关配置。|
+|**cacheInstance**|[CacheInstanceSpec](##CacheInstanceSpec)|True|||
+|**charge**|[ChargeSpec](##ChargeSpec)|False|||
 
 ### <a name="CacheInstanceSpec">CacheInstanceSpec</a>
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
 |**azId**|[AzIdSpec](##AzIdSpec)|True||缓存Redis实例所在区域可用区ID信息|
-|**cacheInstanceClass**|String|True||缓存redis实例规格代码，参见实例规格代码表<a href="https://www.jdcloud.com/help/detail/411/isCatalog/1">实例规格代码</a>。|
-|**cacheInstanceDescription**|String|False||缓存Redis实例描述，不能超过256个字符|
-|**cacheInstanceName**|String|True||缓存redis实例名称，只支持数字、字母、英文下划线、中文，且不少于2字符不超过32字符|
-|**password**|String|False||密码，为空即为免密，包含且只支持字母及数字，不少于8字符不超过16字符|
-|**subnetId**|String|True||缓存redis实例在私有网络下所属的子网ID|
-|**vpcId**|String|True||缓存redis实例所属的私有网络ID|
+|**cacheInstanceClass**|String|True||实例规格代码，参见实例规格代码表。|
+|**cacheInstanceDescription**|String|False||缓存Redis实例描述|
+|**cacheInstanceName**|String|True||实例名称，只支持数字、字母、英文下划线、中文，且不少于2字符不超过32字符|
+|**password**|String|True||密码，必须包含且只支持字母及数字，不少于8字符不超过16字符|
+|**subnetId**|String|True||所属子网的ID|
+|**vpcId**|String|True||所属VPC的ID|
 ### <a name="AzIdSpec">AzIdSpec</a>
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
@@ -50,15 +45,15 @@ https://redis.jdcloud-api.com/v1/regions/{regionId}/cacheInstance
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String|本次查询请求的ID。|
+|**requestId**|String||
 |**result**|[Result](##Result)||
 
 
 ### <a name="Result">Result</a>
 |名称|类型|描述|
 |---|---|---|
-|**cacheInstanceId**|String|创建的缓存实例的ID。|
-|**orderNum**|String|创建缓存实例所生成的订单编号。|
+|**cacheInstanceId**|String||
+|**orderNum**|String||
 
 ## 返回码
 |返回码|描述|

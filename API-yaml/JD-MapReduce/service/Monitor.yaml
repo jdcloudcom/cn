@@ -1,0 +1,83 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: Monitor
+  description: JMR Monitor
+
+basePath: /regions/{regionId}
+paths:
+ ###################### 查询metric数据 ######################
+  "/metricData/{clusterId}:query":
+       post:
+         description: "查询metric数据"
+         operationId: queryMetricData
+         x-jdcloud-internal: true
+         parameters:
+           - name: clusterId
+             in: path
+             required: true
+             type: string
+             description: 集群ID
+           - name: timeInterval
+             in: query
+             required: true
+             type: string
+             description: 查询间隔时长，如1h
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                     data:
+                       type: array
+                       items:
+                         $ref: "../model/Metrics.yaml#/definitions/metrics"
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+ ###################### 查询metric数据 ######################
+  "/{clusterId}/nodeInfo:list":
+       post:
+         description: "查询集群下各节点详情信息"
+         operationId: queryNodeInfoList
+         x-jdcloud-internal: true
+         parameters:
+           - name: clusterId
+             in: path
+             required: true
+             type: string
+             description: 集群ID
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                     data:
+                       type: array
+                       items:
+                         $ref: "../model/NodeInfoData.yaml#/definitions/nodeInfoData"
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+#路径通用参数
+parameters:
+ regionId:
+   name: regionId
+   in: path
+   required: true
+   type: string
+   description: 地域ID

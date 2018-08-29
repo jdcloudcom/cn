@@ -1,0 +1,46 @@
+swagger: "2.0"
+definitions:
+  emrWorkflow:
+    x-jdcloud-module: jmr
+    title: emrWorkflow
+    type: object
+    properties:
+      id:
+        type: number
+      workflowId:
+        type: string
+        description: 工作流ID
+      workflowName:
+        type: string
+        description: 工作流名称
+      status:
+        type: string
+        description: 工作流状态
+      userpin:
+        type: string
+        description: 用户名
+      createTime:
+        type: string
+        format: date-time
+        description: 工作流创建时间
+      dataCenter:
+        type: string
+        description: 数据中心，即regionId
+      modifyTime:
+        type: string
+        format: date-time
+        description: 上一次修改时间
+      isSelfDependence:
+        type: boolean
+        description: |
+                "是否自身依赖"
+                "1：自身依赖(默认)，0：非依赖"
+      taskScheduleType:
+        type: integer
+        description: |
+                "0:即时任务(默认)"
+                "1：周期性任务"
+                "2：定时任务"
+      isSendMsg:
+        type: boolean
+        description: 失败后是否发送通知

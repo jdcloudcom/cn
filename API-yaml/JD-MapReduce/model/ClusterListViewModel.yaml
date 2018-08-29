@@ -1,0 +1,46 @@
+swagger: "2.0"
+definitions:
+  clusterListViewModel:
+    x-jdcloud-module: jmr
+    title: clusterListViewModel
+    type: object
+    properties:
+      userName:
+        type: string
+        description: 用户名
+      masterNodeInfo:
+        type: string
+        description: 主节点信息
+      masterNodeDiskType:
+        type: string
+        description: 主节点磁盘类型
+      masterNodeDiskVolume:
+        type: integer
+        description: 主节点磁盘容量
+      masterNodeNumber:
+        type: integer
+        description: 主节点数量
+      masterInstanceType:
+        type: string
+        description: 主节点实例类型
+      slaveNodeInfo:
+        type: string
+        description: 从节点信息
+      slaveNodeDiskType:
+        type: string
+        description: 从节点磁盘类型
+      slaveNodeDiskVolume:
+        type: integer
+        description: 从节点磁盘容量
+      slaveNodeNumber:
+        type: integer
+        description: 从节点数量
+      coreInstanceType:
+        type: string
+        description: 核心实例类型
+      bandwidthOut:
+        type: integer
+        description: 网络带宽
+      dataCenter:
+        type: string
+        description: 数据中心位置

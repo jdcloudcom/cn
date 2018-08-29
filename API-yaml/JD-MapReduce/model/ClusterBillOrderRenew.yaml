@@ -1,0 +1,18 @@
+swagger: "2.0"
+definitions:
+  cluster:
+    x-jdcloud-module: jmr
+    title: cluster
+    type: object
+    properties:
+      clusterId:
+        type: string
+        description: 集群Id
+      type:
+        type: integer
+        description: |
+                  "必传参数，计费类型："
+                  "按配置<br/>"
+                       "601-609：包年包月1一个月到9个月"
+                       "610:包年包月一年"
+                       "620:包年包月两年"

@@ -1,0 +1,28 @@
+swagger: "2.0"
+definitions:
+  diskAttachment:
+    x-jdcloud-module: disk
+    type: object
+    properties:
+      attachmentId:
+        type: string
+        description: 挂载ID
+      diskId:
+        type: string
+        description: 云硬盘ID
+      instanceType:
+        type: string
+        enum:
+          - "vm"
+          - "nc"
+        description: 挂载实例的类型，取值为 vm、nc
+      instanceId:
+        type: string
+        description: 挂载实例的ID
+      status:
+        type: string
+        description: 挂载状态，取值为 "attaching", "attached", "detaching", "detached"
+      attachTime:
+        type: string
+        format: date-time
+        description: 挂载时间

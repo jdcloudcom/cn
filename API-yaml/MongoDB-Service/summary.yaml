@@ -1,0 +1,8 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: 京东云数据库MongoDB接口
+  description: 数据库MongoDB相关接口
+host: "mongodb.jdcloud-api.com"
+x-jdcloud-version: "v1"
+x-jdcloud-revision: "1.0.2"

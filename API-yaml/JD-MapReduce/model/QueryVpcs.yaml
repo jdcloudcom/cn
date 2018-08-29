@@ -1,0 +1,13 @@
+swagger: "2.0"
+definitions:
+  queryVpcs:
+    x-jdcloud-module: jmr
+    title: queryVpcs
+    type: object
+    properties:
+      vpcId:
+        type: string
+        description: VPC id
+      vpcName:
+        type: string
+        description: VPC 名称

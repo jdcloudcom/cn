@@ -1,0 +1,8 @@
+swagger: "2.0"                                  # 基于Swagger 2.0版本实现
+info:
+  version: "v1"                                 # OpenApi版本号
+  title: JMR API
+  description: 提供大数据基础服务中JMR操作的相关接口
+host: "idata-jmr-api.jcloud.com"                   # 业务线名称作为二级域名
+x-jdcloud-version: "v1"
+x-jdcloud-revision: 1.1.1  #需要和ChangeLog保持一致

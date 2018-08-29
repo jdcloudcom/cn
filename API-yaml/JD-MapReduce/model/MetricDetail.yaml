@@ -1,0 +1,13 @@
+swagger: "2.0"
+definitions:
+  metricDetail:
+    x-jdcloud-module: jmr
+    title: metricDetail
+    type: object
+    properties:
+      code:
+        type: string
+      message:
+        type: string
+      requestId:
+        type: string

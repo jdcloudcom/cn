@@ -2,7 +2,8 @@
 
 
 ## 描述
-删除 secret
+删除单个 secret
+
 
 ## 请求方式
 DELETE

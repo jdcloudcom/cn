@@ -1,0 +1,13 @@
+swagger: "2.0"
+definitions:
+  File:
+    x-jdcloud-module: rds
+    title: File
+    type: object
+    properties:
+      name:
+        type: string
+        description: 文件名
+      sizeByte:
+        type: integer
+        description: 文件大小，单位Byte

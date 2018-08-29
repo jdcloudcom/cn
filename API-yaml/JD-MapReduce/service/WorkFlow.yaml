@@ -1,0 +1,234 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: Workflow Management
+  description: JMR workflow management
+
+basePath: /regions/{regionId}
+paths:
+###################### 获取工作流列表 ###########################
+  "/{workflowName}:list":
+       post:
+         description: "获取工作流列表"
+         operationId: getWorkFlowList
+         parameters:
+           - name: workflowName
+             in: path
+             required: true
+             type: string
+             description: "工作流名称"
+           - name: selectParams
+             in: body
+             required: false
+             schema:
+               $ref: "../model/SelectParams.yaml#/definitions/selectParams"
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                     data:
+                       type: object
+                       properties:
+                         totalNum:
+                           type: integer
+                         workFlowList:
+                           type: array
+                           items:
+                             $ref: "../model/EmrWorkflow.yaml#/definitions/emrWorkflow"
+                         workflowName:
+                           type: string
+                         description:
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+
+###################### 保存工作流 ###########################
+  "/workflow:save":
+       post:
+         description: "保存工作流的信息"
+         operationId: saveWorkFlow
+         parameters:
+           - name: workflow
+             in: body
+             required: true
+             schema:
+               $ref: "../model/EmrWorkflow.yaml#/definitions/emrWorkflow"
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                     data:
+                       $ref: "../model/Message.yaml#/definitions/message"
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+###################### 删除工作流 ###########################
+  "/{workflowId}:delete":
+       post:
+         description: "删除指定工作流"
+         operationId: deleteWorkFlow
+         parameters:
+           - name: workflowId
+             in: path
+             required: true
+             type: string
+             description: 工作流ID
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+###################### 运行工作流 ###########################
+  "/{workflowId}:run":
+       post:
+         description: "运行指定工作流"
+         operationId: runWorkFlow
+         parameters:
+           - name: workflowId
+             in: path
+             required: true
+             type: string
+             description: 工作流ID
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+###################### 查看工作流详情 ###########################
+  "/wfInstance:detail":
+       post:
+         description: "查看指定工作流详情信息"
+         operationId: wfInstanceDetail
+         parameters:
+           - name: body
+             in: body
+             schema:
+               type: object
+               required:
+                 - wfInstanceId
+                 - wfId
+               properties:
+                 wfInstanceId:
+                   type: string
+                 wfId:
+                   type: string
+             description: 工作流ID
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   $ref: "../model/Message.yaml#/definitions/message"
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+
+###################### 获取工作流运行记录列表 ###########################
+  "/workFlowTracker:list":
+       post:
+         description: "获取工作流运行记录列表"
+         operationId: getWorkFlowTrackerList
+         parameters:
+           - name: selectParams
+             in: body
+             required: false
+             schema:
+               $ref: "../model/SelectParams.yaml#/definitions/selectParams"
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                     data:
+                       type: object
+                       properties:
+                         totalNum:
+                           type: integer
+                         workFlowTrackerList:
+                           type: array
+                           items:
+                             $ref: "../model/SchedulerWorkflowTracker.yaml#/definitions/schedulerWorkflowTracker"
+                       description: |
+                                    "包括工作流列表 - workFlowTrackerList"
+                                    "以及列表大小 - totalNum"
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+###################### 删除运行记录 ###########################
+  "/tracker/{trackerId}:delete":
+       post:
+         description: "删除指定工作流对应的运行记录"
+         operationId: deleteWorkFlowTracker
+         parameters:
+           - name: trackerId
+             in: path
+             required: true
+             type: string
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+#路径通用参数
+parameters:
+ regionId:
+   name: regionId
+   in: path
+   required: true
+   type: string
+   description: 地域ID

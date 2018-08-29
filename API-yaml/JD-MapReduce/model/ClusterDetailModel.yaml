@@ -1,0 +1,68 @@
+swagger: "2.0"
+definitions:
+  clusterDetailModel:
+    x-jdcloud-module: jmr
+    title: clusterDetailModel
+    type: object
+    properties:
+      id:
+        type: string
+        description: 集群ID
+      name:
+        type: string
+        description: 集群名称，长度为6到32个字符，支持中文、数字、大小写字母、英文下划线“_”及中划线“-”
+      clusterPrimaryId:
+        type: integer
+        format: int64
+        description: 集群主键ID
+      status:
+        type: string
+        description: 集群状态
+      nodeCount:
+        type: integer
+        description: 节点数量
+      payType:
+        type: string
+        description: 付费类型
+      payPrice:
+        type: string
+        description: 付费价格
+      createTime:
+        type: string
+        format: date-time
+        description: 创建时间
+      duration:
+        type: string
+        description: 运营时长
+      hardware:
+        type: array
+        items:
+          $ref: "./HardwareInfo.yaml#/definitions/hardwareInfo"
+      softwareStack:
+        type: object
+        description: 软件信息
+        properties:
+          version:
+            type: string
+            description: 版本
+          software:
+            type: string
+            description: 软件清单
+      dataCenter:
+        type: string
+        description: 地域，同regionID
+      jssFlag:
+        type: boolean
+        description: 是否关联对象存储
+      haFlag:
+        type: boolean
+        description: 是否为高可用模式
+      vpcName:
+        type: string
+        description: 私有网络名称
+      vpcSubnetName:
+        type: string
+        description: 子网名称
+      bandwidthOut:
+        type: integer
+        description: 网络带宽

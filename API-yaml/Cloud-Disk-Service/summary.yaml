@@ -1,0 +1,8 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: 云硬盘API
+  description: 云硬盘API包含云硬盘相关接口和快照相关接口。可提供批量创建云硬盘，删除云硬盘，制作云硬盘快照等功能。
+host: "disk.jdcloud-api.com"
+x-jdcloud-version: "v1"
+x-jdcloud-revision: "0.7.1"
