@@ -72,9 +72,9 @@
   - name: IP高防结合应用安全网关方案说明
     herf: Best-Practices/Advanced-Anti-DDoS + Application Security Gateway.md
   - name: 教程
-    items:
+    ite
     status: 0    
   - name: 常见问题
   herf: FAQ/FAQ.md
-  - name: 文档历史记录
+  name: 文档历史记录
   href: Related-Resources/Document-History.md

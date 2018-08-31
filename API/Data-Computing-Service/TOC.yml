@@ -9,45 +9,45 @@
     items:
       - name: 数据库相关API
         items:
-          - name: 创建属于用户实例的数据库
+          - name: createDatabase
             href: Database-APIs/createDatabase.md
-          - name: 删除用户实例的指定数据库
+          - name: deleteDatabase
             href: Database-APIs/deleteDatabase.md
-          - name: 查询用户实例的指定数据库信息
+          - name: getDatabaseInfo
             href: Database-APIs/getDatabaseInfo.md
-          - name: 查询用户实例的所有数据库信息
+          - name: listDatabaseInfo
             href: Database-APIs/listDatabaseInfo.md
       - name: 实例相关API
         items:
-          - name: 查询用户所属的实例信息
+          - name: listInstanceInfo
             href: Instance-APIs/listInstanceInfo.md
       - name: 查询相关API
         items:
-          - name: 终止用户PySpark脚本任务
+          - name: cancelPySparkJob
             href: Query-APIs/cancelPySparkJob.md
-          - name: 终止用户Spark SQL脚本查询
+          - name: cancelRasQuery
             href: Query-APIs/cancelRasQuery.md
-          - name: 执行用户编写的PySpark脚本
+          - name: executePySparkQuery
             href: Query-APIs/executePySparkQuery.md
-          - name: 执行用户编写的Spark SQL脚本
+          - name: executeRasQuery
             href: Query-APIs/executeRasQuery.md
-          - name: 获取用户PySpark脚本的执行结果
+          - name: getPySparkExecuteResult
             href: Query-APIs/getPySparkExecuteResult.md
-          - name: 获取用户PySpark脚本的执行状态
+          - name: getPySparkExecuteState
             href: Query-APIs/getPySparkExecuteState.md
-          - name: 获取用户Spark SQL脚本的查询日志
+          - name: getRasQueryLog
             href: Query-APIs/getRasQueryLog.md
-          - name: 获取用户Spark SQL脚本的查询结果
+          - name: getRasQueryResult
             href: Query-APIs/getRasQueryResult.md
-          - name: 获取用户Spark SQL脚本的查询状态
+          - name: getRasQueryState
             href: Query-APIs/getRasQueryState.md       
       - name: 数据表相关API
         items:
-          - name: 创建用户实例的数据表
+          - name: createTable
             href: Table-APIs/createTable.md
-          - name: 删除用户实例的指定数据表
+          - name: deleteTable
             href: Table-APIs/deleteTable.md
-          - name: 查询用户实例的指定数据表信息
+          - name: getTableInfo
             href: Table-APIs/getTableInfo.md
-          - name: 查询用户实例指定数据库下的所有数据表信息
+          - name: listTableInfo
             href: Table-APIs/listTableInfo.md

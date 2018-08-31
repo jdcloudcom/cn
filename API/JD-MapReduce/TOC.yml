@@ -9,129 +9,173 @@
       items:
         - name: JMR集群管理
           items:
-            - name: 创建新集群
-              href: Cluster Management/createClusterInNewNetwork.md
-            - name: 查询集群详细信息
-              href: Cluster Management/showClusterDetails.md
-            - name: 释放指定集群
-              href: Cluster Management/releaseCluster.md
-            - name: 获取用户的AK/SK
-              href: Cluster Management/getKey.md
-            - name: 获取JMR软件配置信息列表
-              href: Cluster Management/getPropertyValue.md
-            - name: 获取JMR硬件配置信息列表
-              href: Cluster Management/getHardwareStack.md
-            - name: 获取过滤后的主机规格列表
-              href: Cluster Management/getInstanceList.md
-            - name: 查询集群列表及相关服务
-              href: Cluster Management/idataCluster.md
-            - name: 获取对应版本的软件清单信息
-              href: Cluster Management/getSoftwareInfo.md
-            - name: 获取指定JMR版本对应软件清单以及版本信息
-              href: Cluster Management/getSoftwareAndVersionInfo.md
-            - name: 返回目前的JMR版本列表
-              href: Cluster Management/getJmrVersionList.md
-            - name: 计算对应规格属性的集群价格
-              href: Cluster Management/calculateClusterPrice.md
-            - name: 获取当前用户剩余可创建资源数
-              href: Cluster Management/getAvaliableNum.md
-            - name: 查询server的剩余配额
-              href: Cluster Management/queryServerQuota.md
-            - name: 获取vpc集合
-              href: Cluster Management/queryVpcs.md
-            - name: 查询Vpc子网集合
-              href: Cluster Management/queryVpcSubnets.md
-            - name: 对指定集群执行逻辑删除
-              href: Cluster Management/deleteCluster.md
-            - name: 查询集群随机码
-              href: Cluster Management/queryFloatingIp.md
-            - name: 对登陆的用户名进行校验
-              href: Cluster Management/validateUser.md
-            - name: 对集群按照指定的续费方式进行续费
-              href: Cluster Management/renewBillingOrder.md
-            - name: 验证输入的集群名称是否重复
-              href: Cluster Management/validateName.md
-            - name: 获取用户的AK
-              href: Cluster Management/getAccessKeys.md
-            - name: 集群扩容指定数量的实例
-              href: Cluster Management/clusterExpansion.md
-            - name: 计算集群扩容数量的价格
-              href: Cluster Management/calculateExpansionPrice.md
-            - name: 扩容时显示集群详情
-              href: Cluster Management/getClusterDetailInfo.md
-            - name: 集群下监控的服务列表
-              href: Cluster Management/monitorServiceList.md
-            - name: 服务存活状态监控明细数据
-              href: Cluster Management/monitorDetails.md
-            - name: 获取远程连接集群主节点的VNC URL
-              href: Cluster Management/getFirstServerVncUrl.md
+            - name: createClusterInNewNetwork
+              href: Cluster-Management/createClusterInNewNetwork.md
+            - name: showClusterDetails
+              href: Cluster-Management/showClusterDetails.md
+            - name: releaseCluster
+              href: Cluster-Management/releaseCluster.md
+            - name: getKey
+              href: Cluster-Management/getKey.md
+              status: 0
+            - name: getPropertyValue
+              href: Cluster-Management/getPropertyValue.md
+              status: 0
+            - name: getHardwareStack
+              href: Cluster-Management/getHardwareStack.md
+              status: 0
+            - name: getInstanceList
+              href: Cluster-Management/getInstanceList.md
+              status: 0
+            - name: idataCluster
+              href: Cluster-Management/idataCluster.md
+            - name: getSoftwareInfo
+              href: Cluster-Management/getSoftwareInfo.md
+            - name: getSoftwareAndVersionInfo
+              href: Cluster-Management/getSoftwareAndVersionInfo.md
+              status: 0
+            - name: getJmrVersionList
+              href: Cluster-Management/getJmrVersionList.md
+            - name: calculateClusterPrice
+              href: Cluster-Management/calculateClusterPrice.md
+              status: 0
+            - name: getAvaliableNum
+              href: Cluster-Management/getAvaliableNum.md
+              status: 0
+            - name: queryServerQuota
+              href: Cluster-Management/queryServerQuota.md
+              status: 0
+            - name: queryVpcs
+              href: Cluster-Management/queryVpcs.md
+              status: 0
+            - name: queryVpcSubnets
+              href: Cluster-Management/queryVpcSubnets.md
+              status: 0
+            - name: deleteCluster
+              href: Cluster-Management/deleteCluster.md
+            - name: queryFloatingIp
+              href: Cluster-Management/queryFloatingIp.md
+              status: 0
+            - name: validateUser
+              href: Cluster-Management/validateUser.md
+              status: 0
+            - name: renewBillingOrder
+              href: Cluster-Management/renewBillingOrder.md
+              status: 0
+            - name: validateName
+              href: Cluster-Management/validateName.md
+              status: 0
+            - name: getAccessKeys
+              href: Cluster-Management/getAccessKeys.md
+              status: 0
+            - name: clusterExpansion
+              href: Cluster-Management/clusterExpansion.md
+            - name: calculateExpansionPrice
+              href: Cluster-Management/calculateExpansionPrice.md
+              status: 0
+            - name: getClusterDetailInfo
+              href: Cluster-Management/getClusterDetailInfo.md
+              status: 0
+            - name: monitorServiceList
+              href: Cluster-Management/monitorServiceList.md
+              status: 0
+            - name: monitorDetails
+              href: Cluster-Management/monitorDetails.md
+              status: 0
+            - name: getFirstServerVncUrl
+              href: Cluster-Management/getFirstServerVncUrl.md
+              status: 0
         - name: JMR作业管理
           items:
-            - name: 获取集群的作业类型列表
-              href: Job Management/getJobTypeList.md
-            - name: 获取集群的作业列表
-              href: Job Management/getJobList.md
-            - name: 校验作业名称是否有效
-              href: Job Management/isValidJobName.md
-            - name: 创建作业
-              href: Job Management/createJob.md
-            - name: 修改作业信息
-              href: Job Management/modifyJob.md
-            - name: 删除作业
-              href: Job Management/deleteJob.md
-            - name: 创建作业并执行
-              href: Job Management/createAndExcuteJob.md
-            - name: 执行指定作业
-              href: Job Management/executeJob.md
-            - name: 查看作业明细
-              href: Job Management/showJobDetails.md
-            - name: 获取某一作业的运行记录
-              href: Job Management/getTaskList.md
-            - name: 删除指定集群的对应路径下的hdfs文件
-              href: Job Management/deleteHdfsFile.md
-            - name: 获取集群的作业数
-              href: Job Management/getClusterJobCount.md
-            - name: 获取集群的部署作业数
-              href: Job Management/getClusterCronJobCount.
-            - name: 获取执行计划列表
-              href: Job Management/getCronJobList.md
-            - name: 校验执行计划名称是否可用
-              href: Job Management/isValidPlanName.md
-            - name: 新建或更新调度配置
-              href: Job Management/createCronJob.md
-            - name: 获取定时任务详情
-              href: Job Management/getCronJobDetail.md
-            - name: 修改部署作业的执行计划
-              href: Job Management/modifyCronJob.md
-            - name: 暂停作业的某一定时任务
-              href: Job Management/pauseCronJob.md
-            - name: 恢复作业的某一定时任务
-              href: Job Management/resumeCronJob.md
-            - name: 删除作业的某一定时任务
-              href: Job Management/deleteCronJob.md
-            - name: 获取作业的某一定时任务的运行记录
-              href: Job Management/getCronJobTaskList.md
-            - name: 查询某一执行计划的某一个job的运行记录
-              href: Job Management/getCronJobTaskListByJobId.md
-            - name: 立即执行某一定时任务
-              href: Job Management/runCronJobOnce.md
-            - name: 获取定时任务的某个作业的最后一次运行记录
-              href: Job Management/getLastCronJobTask.md
-            - name: 获取quartz计划中的任务
-              href: Job Management/queryExecutingJobList.md
+            - name: getJobTypeList
+              href: Job-Management/getJobTypeList.md
+              status: 0
+            - name: getJobList
+              href: Job-Management/getJobList.md
+            - name: isValidJobName
+              href: Job-Management/isValidJobName.md
+              status: 0
+            - name: createJob
+              href: Job-Management/createJob.md
+            - name: modifyJob
+              href: Job-Management/modifyJob.md
+              status: 0
+            - name: deleteJob
+              href: Job-Management/deleteJob.md
+            - name: createAndExcuteJob
+              href: Job-Management/createAndExcuteJob.md
+              status: 0
+            - name: executeJob
+              href: Job-Management/executeJob.md
+            - name: showJobDetails
+              href: Job-Management/showJobDetails.md
+            - name: getTaskList
+              href: Job-Management/getTaskList.md
+              status: 0
+            - name: deleteHdfsFile
+              href: Job-Management/deleteHdfsFile.md
+              status: 0
+            - name: getClusterJobCount
+              href: Job-Management/getClusterJobCount.md
+              status: 0
+            - name: getClusterCronJobCount
+              href: Job-Management/getClusterCronJobCount.
+              status: 0
+            - name: getCronJobList
+              href: Job-Management/getCronJobList.md
+            - name: isValidPlanName
+              href: Job-Management/isValidPlanName.md
+              status: 0
+            - name: createCronJob
+              href: Job-Management/createCronJob.md
+            - name: getCronJobDetail
+              href: Job-Management/getCronJobDetail.md
+            - name: modifyCronJob
+              href: Job-Management/modifyCronJob.md
+              status: 0
+            - name: pauseCronJob
+              href: Job-Management/pauseCronJob.md
+              status: 0
+            - name: resumeCronJob
+              href: Job-Management/resumeCronJob.md
+              status: 0
+            - name: deleteCronJob
+              href: Job-Management/deleteCronJob.md
+            - name: getCronJobTaskList
+              href: Job-Management/getCronJobTaskList.md
+              status: 0
+            - name: getCronJobTaskList
+              href: Job-Management/getCronJobTaskListByJobId.md
+              status: 0
+            - name: runCronJobOnce
+              href: Job-Management/runCronJobOnce.md
+              status: 0
+            - name: getLastCronJobTask
+              href: Job-Management/getLastCronJobTask.md
+              status: 0
+            - name: queryExecutingJobList
+              href: Job-Management/queryExecutingJobList.md
+              status: 0
         - name: JMR工作流管理
           items:
-            - name: 获取工作流列表
-              href: Workflow Management/getWorkFlowList.md
-            - name: 保存工作流
-              href: Workflow Management/saveWorkFlow.md
-            - name: 删除工作流
-              href: Workflow Management/deleteWorkFlow.md
-            - name: 运行工作流
-              href: Workflow Management/runWorkFlow.md
-            - name: 查看指定工作流详情信息
-              href: Workflow Management/wfInstanceDetail.md
-            - name: 获取工作流运行记录列表
-              href: Workflow Management/getWorkFlowTrackerList.md
-            - name: 删除指定工作流对应的运行记录
-              href: Workflow Management/deleteWorkFlowTracker.md
+            - name: getWorkFlowList
+              href: Workflow-Management/getWorkFlowList.md
+              status: 0
+            - name: saveWorkFlow
+              href: Workflow-Management/saveWorkFlow.md
+              status: 0
+            - name: deleteWorkFlow
+              href: Workflow-Management/deleteWorkFlow.md
+              status: 0
+            - name: runWorkFlow
+              href: Workflow-Management/runWorkFlow.md
+              status: 0
+            - name: wfInstanceDetail
+              href: Workflow-Management/wfInstanceDetail.md
+              status: 0
+            - name: getWorkFlowTrackerList
+              href: Workflow-Management/getWorkFlowTrackerList.md
+              status: 0
+            - name: deleteWorkFlowTracker
+              href: Workflow-Management/deleteWorkFlowTracker.md
+              status: 0
