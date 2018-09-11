@@ -1,0 +1,12 @@
+swagger: "2.0"
+definitions:
+  modifySecurityGroupRuleSpec:
+    x-jdcloud-module: vpc
+    required:
+      - modifySecurityGroupRuleSpecs
+    properties:
+      modifySecurityGroupRuleSpecs:
+        type: array
+        items:
+          $ref: "./ModifySecurityGroupRules.yaml#/definitions/modifySecurityGroupRules"
+        description: 安全组规则信息

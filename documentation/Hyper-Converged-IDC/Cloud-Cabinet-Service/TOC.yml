@@ -1,8 +1,8 @@
- name: 云托管服务 Cloud Cabinet Service
-  href: 
+name: 云托管服务
+href: 
+items:
+- name: 产品简介
   items:
-  - name: 产品简介
-    items:
       - name: 产品概述
         href: Introduction/What-Is-Cloud-Cabinet-Service.md
       - name: 核心概念
@@ -21,8 +21,8 @@
         status: 0
       - name: 应用场景 
         href: Introduction/Application-Scenarios.md    
-  - name: 产品定价
-    items:
+- name: 产品定价
+  items:
       - name: 计费概述
         href: Pricing/Billing-Overview.md
       - name: 计费规则
@@ -37,50 +37,54 @@
       - name: 续费流程
         href: 
         status: 0
-  - name: 入门指南
-    items:
+- name: 入门指南
+  items:
       - name: 入门指南概述
         href: Getting-Started/Overview.md
-  - name: 操作指南
-    items:
+- name: 操作指南
+  items:
+      - name: 使用须知
+        items:
+          - name: 使用须知
+            href: Operation-Guide/Operation-Instruction/Operation-Instruction.md
       - name: 资源管理
         items:
-          - name: 机柜
-            href: Operation-Guide/Resources-Management/Cabinet.md
-          - name: 设备
-            href: Operation-Guide/Instance-Management/Device.md
-          - name: 公网IP
-            href: Operation-Guide/Instance-Management/ipAddress.md    
-          - name: 带宽
-            href: Operation-Guide/Instance-Management/Bandwidth.md
+          - name: 查看机柜列表
+            href: Operation-Guide/Resources-Management/View-Cabinet-List.md
+          - name: 查看设备列表
+            href: Operation-Guide/Instance-Management/View-Device-List.md
+          - name: 查看公网IP列表
+            href: Operation-Guide/Instance-Management/View-ipAddress-List.md
+          - name: 查看带宽列表
+            href: Operation-Guide/Instance-Management/View-Bandwidth-List.md
       - name: 工单管理
         items:
           - name: 提交工单
             href: Operation-Guide/Tickets-Management/submitTicket.md
-          - name: 我的工单
-            href: Operation-Guide/Tickets-Management/myTickets.md
-  - name: 最佳实践
-    items:
+          - name: 查看工单列表
+            href: Operation-Guide/Tickets-Management/View-Tickets-List.md
+- name: 最佳实践
+  items:
     status: 0
-  - name: 教程
-    items:
+- name: 教程
+  items:
     status: 0
-  - name: 问题排查
-    items:
+- name: 问题排查
+  items:
     status: 0    
-  - name: 常见问题
-    href: FAQ/FAQ.md
-  - name: API参考
-    status: 0
-  - name: SDK参考
-    status: 0
-    items:
+- name: 常见问题
+  href: FAQ/FAQ.md
+- name: API参考
+  status: 0
+- name: SDK参考
+  status: 0
+  items:
     - name: 服务条款      
       status: 0      
     - name: SLA      
       status: 0       
-  - name: 相关资源
-    items:
+- name: 相关资源
+  items:
     - name: 文档历史记录
       href: Related-Resources/Document-History.md   
     - name: 备案       

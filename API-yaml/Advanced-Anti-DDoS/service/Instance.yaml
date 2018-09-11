@@ -1,0 +1,390 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: Ip高防实例相关接口
+  description: Ip高防实例相关接口，以及转发配置中实例级别的接口等
+
+basePath: /regions/{regionId}
+
+paths:
+  /instances:
+    post:
+      description: "创建实例"
+      operationId: createInstance
+      parameters:
+        - name: instanceSpec
+          in: body
+          description: 实例规格参数
+          required: true
+          schema:
+            $ref: "../model/InstanceSpec.yaml#/definitions/instanceSpec"
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  orderId:
+                    type: string
+              requestId:
+                type: string
+    get:
+      description: "查询实例列表"
+      operationId: describeInstances
+      parameters:
+        - name: pageNumber
+          in: query
+          type: integer
+          required: false
+          description: "页码；默认为1"
+        - name: pageSize
+          in: query
+          type: integer
+          required: false
+          description: "分页大小；默认为20；取值范围[10, 100]"
+        - name: name
+          in: query
+          type: string
+          required: false
+          description: "实例名称，可模糊匹配"
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  dataList:
+                    type: array
+                    items:
+                      $ref: "../model/Instance.yaml#/definitions/instance"
+                  totalCount:
+                    type: integer
+              requestId:
+                type: string
+  /instances/{instanceId}:
+    get:
+      description: "查询实例"
+      operationId: describeInstance
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  data:
+                    $ref: "../model/Instance.yaml#/definitions/instance"
+              requestId:
+                type: string
+        404:
+          description: NOT_FOUND
+
+  /instances/{instanceId}:setCC:
+    post:
+      description: "设置实例CC防护"
+      operationId: modifyInstanceCC
+      parameters:
+        - name: CCSpec
+          in: body
+          description: cc参数
+          required: true
+          schema:
+            $ref: "../model/CcSpec.yaml#/definitions/CCSpec"
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              requestId:
+                type: string
+        404:
+          description: NOT_FOUND
+
+  /instances/{instanceId}:enableCC:
+    post:
+      description: "开启实例CC防护"
+      operationId: enableInstanceCC
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              requestId:
+                type: string
+        404:
+          description: NOT_FOUND
+
+  /instances/{instanceId}:disableCC:
+    post:
+      description: "关闭实例CC防护"
+      operationId: disableInstanceCC
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              requestId:
+                type: string
+        404:
+          description: NOT_FOUND
+
+  /instances/{instanceId}:setUrlWhiteList:
+    post:
+      description: "设置实例url白名单"
+      operationId: modifyInstanceUrlWhiteList
+      parameters:
+        - name: urlWhiteList
+          in: body
+          description: 网站类规则参数
+          required: true
+          schema:
+            type: array
+            items:
+              type: string
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              requestId:
+                type: string
+        404:
+          description: NOT_FOUND
+
+  /instances/{instanceId}:enableUrlWhiteList:
+    post:
+      description: "启用实例url白名单"
+      operationId: enableInstanceUrlWhiteList
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              requestId:
+                type: string
+        404:
+          description: NOT_FOUND
+
+  /instances/{instanceId}:disableUrlWhiteList:
+    post:
+      description: "禁用实例url白名单"
+      operationId: disableInstanceUrlWhiteList
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              requestId:
+                type: string
+        404:
+          description: NOT_FOUND
+
+  /instances/{instanceId}:rename:
+    post:
+      description: "修改实例名称"
+      operationId: modifyInstanceName
+      parameters:
+        - name: name
+          in: query
+          description: 新的实例名称
+          required: true
+          type: string
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              requestId:
+                type: string
+        404:
+          description: NOT_FOUND
+
+  /instances/{instanceId}:setIpBlackList:
+    post:
+      description: "设置实例IP黑名单"
+      operationId: modifyInstanceIpBlackList
+      parameters:
+        - name: IpBlackList
+          in: body
+          description: IP黑名单列表
+          required: true
+          schema:
+            type: array
+            items:
+              type: string
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              requestId:
+                type: string
+        404:
+          description: NOT_FOUND
+  /instances/{instanceId}:enableIpBlackList:
+    post:
+      description: "启用实例IP黑名单"
+      operationId: enableInstanceIpBlackList
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              requestId:
+                type: string
+        404:
+          description: NOT_FOUND
+  /instances/{instanceId}:disableIpBlackList:
+    post:
+      description: "禁用实例IP黑名单"
+      operationId: disableInstanceIpBlackList
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              requestId:
+                type: string
+        404:
+          description: NOT_FOUND
+  /instances/{instanceId}:setIpWhiteList:
+    post:
+      description: "设置实例IP白名单"
+      operationId: modifyInstanceIpWhiteList
+      parameters:
+        - name: IpWhiteList
+          in: body
+          description: IP白名单列表
+          required: true
+          schema:
+            type: array
+            items:
+              type: string
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              requestId:
+                type: string
+        404:
+          description: NOT_FOUND
+  /instances/{instanceId}:enableIpWhiteList:
+    post:
+      description: "启用实例IP白名单"
+      operationId: enableInstanceIpWhiteList
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              requestId:
+                type: string
+        404:
+          description: NOT_FOUND
+  /instances/{instanceId}:disableIpWhiteList:
+    post:
+      description: "禁用实例IP白名单"
+      operationId: disableInstanceIpWhiteList
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              requestId:
+                type: string
+        404:
+          description: NOT_FOUND
+
+  /instances/{instanceId}:enableCcObserverMode:
+    post:
+      description: "开启实例CC防护的观察者模式"
+      operationId: enableCcObserverMode
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              requestId:
+                type: string
+        404:
+          description: NOT_FOUND
+
+  /instances/{instanceId}:disableCcObserverMode:
+    post:
+      description: "关闭实例CC防护的观察者模式"
+      operationId: disableCcObserverMode
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              requestId:
+                type: string
+        404:
+          description: NOT_FOUND
+
+  /instances/{instanceId}:enableCcIpLimit:
+    post:
+      description: "开启CC防护每IP的限速"
+      operationId: enableCcIpLimit
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              requestId:
+                type: string
+        404:
+          description: NOT_FOUND
+
+  /instances/{instanceId}:disableCcIpLimit:
+    post:
+      description: "关闭CC防护每IP的限速"
+      operationId: disableCcIpLimit
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              requestId:
+                type: string
+        404:
+          description: NOT_FOUND
+
+  /instances/{instanceId}:setCcIpLimit:
+    post:
+      description: "设置实例CC防护每IP限速"
+      operationId: setCcIpLimit
+      parameters:
+        - name: CCSpec
+          in: body
+          description: cc参数
+          required: true
+          schema:
+            $ref: "../model/CcIpLimitSpec.yaml#/definitions/CcIpLimitSpec"
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              requestId:
+                type: string
+        404:
+          description: NOT_FOUND
+#路径通用参数
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: 所属地域ID
+  instanceId:
+    name: instanceId
+    in: path
+    required: true
+    type: string
+    description: 实例ID

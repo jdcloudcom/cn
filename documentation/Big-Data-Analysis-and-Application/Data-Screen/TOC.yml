@@ -1,21 +1,22 @@
-- name: 数据大屏
-  href: 
+name: 数据大屏
+href: 
+items:
 - name: 产品简介
   items:
     - name: 产品概述
-      herf: Introduction/What-Is-MongoDB.md
+      href: Introduction/What-Is-Data-Screen.md
     - name: 基础架构
-      herf: Introduction/Basic-Infrastructure.md
+      href: Introduction/Basic-Infrastructure.md
     - name: 产品优势
-      herf: Introduction/Benefits.md
+      href: Introduction/Benefits.md
     - name: 产品功能
-      herf: Introduction/Functions.md
+      href: Introduction/Functions.md
     - name: 应用场景 
-      herf: Introduction/Application-Scenarios.md    
+      href: Introduction/Application-Scenarios.md    
 - name: 产品定价
   items:
     - name: 计费概述
-      herf: Pricing/Billing-Overview.md
+      href: Pricing/Billing-Overview.md
 - name: 操作指南
- herf: Operation-Guide/guide.md
+  href: Operation-Guide/guide.md
           

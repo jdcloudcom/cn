@@ -1,0 +1,166 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: Ip高防报表相关接口
+  description: Ip高防报表相关接口，包括cc防护、ddos防护、转发流量
+
+basePath: /regions/{regionId}
+
+paths:
+  /charts:ddosGraph:
+    get:
+      description: "ddos防护报表"
+      operationId: ddosGraph
+      parameters:
+        - name: startTime
+          in: query
+          type: string
+          required: true
+          description: 开始时间，最多查最近30天，UTC时间，格式：yyyy-MM-dd'T'HH:mm:ssZ
+        - name: endTime
+          in: query
+          type: string
+          required: true
+          description: 查询的结束时间，UTC时间，格式：yyyy-MM-dd'T'HH:mm:ssZ
+        - name: instanceId
+          in: query
+          type: array
+          items:
+            type: string
+          description: 高防实例ID，可以传0个或多个
+          required: false
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  postProtect:
+                    type: array
+                    items:
+                      type: number
+                      format: float
+                  preProtect:
+                    type: array
+                    items:
+                      type: number
+                      format: float
+                  time:
+                    type: array
+                    items:
+                      type: integer
+                      format: int64
+                  unit:
+                    type: string
+                    description: 单位
+              requestId:
+                type: string
+  /charts:fwdGraph:
+    get:
+      description: "转发流量报表"
+      operationId: fwdGraph
+      parameters:
+        - name: startTime
+          in: query
+          type: string
+          required: true
+          description: 开始时间，最多查最近30天，UTC时间，格式：yyyy-MM-dd'T'HH:mm:ssZ
+        - name: endTime
+          in: query
+          type: string
+          required: true
+          description: 查询的结束时间，UTC时间，格式：yyyy-MM-dd'T'HH:mm:ssZ
+        - name: instanceId
+          in: query
+          type: array
+          items:
+            type: string
+          description: 高防实例ID，可以传0个或多个
+          required: false
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  forwardRecord:
+                    type: array
+                    items:
+                      type: number
+                      format: float
+                  time:
+                    type: array
+                    items:
+                      type: integer
+                      format: int64
+                  unit:
+                    type: string
+                    description: 单位
+              requestId:
+                type: string
+  /charts:ccGraph:
+    get:
+      description: "转发流量报表"
+      operationId: ccGraph
+      parameters:
+        - name: startTime
+          in: query
+          type: string
+          required: true
+          description: 开始时间，最多查最近30天，UTC时间，格式：yyyy-MM-dd'T'HH:mm:ssZ
+        - name: endTime
+          in: query
+          type: string
+          required: true
+          description: 查询的结束时间，UTC时间，格式：yyyy-MM-dd'T'HH:mm:ssZ
+        - name: instanceId
+          in: query
+          type: array
+          items:
+            type: string
+          description: 高防实例ID，可以传0个或多个
+          required: false
+        - name: subDomain
+          in: query
+          type: array
+          items:
+            type: string
+          description: 规则域名，可以传0个或多个
+          required: false
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  postProtect:
+                    type: array
+                    items:
+                      type: integer
+                      format: int64
+                  preProtect:
+                    type: array
+                    items:
+                      type: integer
+                      format: int64
+                  time:
+                    type: array
+                    items:
+                      type: integer
+                      format: int64
+                  unit:
+                    type: string
+                    description: 单位
+              requestId:
+                type: string
+#路径通用参数
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: 所属地域ID

@@ -1,0 +1,16 @@
+swagger: "2.0"
+definitions:
+  globalAzMappingVo:
+    x-jdcloud-module: iam
+    properties:
+      alias:
+        type: string
+        description: 别名
+      region:
+        type: string
+        description: 地域
+      mapping:
+        type: array
+        items:
+          $ref: "./AzMappingVo.yaml#/definitions/azMappingVo"
+        description: Az Mapping

@@ -1,0 +1,37 @@
+swagger: "2.0"
+definitions:
+  volumeMountSpec:
+    x-jdcloud-module: nc
+    x-jdcloud-internal: false
+    type: object
+    description: 磁盘分类  cloud： 基于云硬盘的卷  root volume只能是cloud类型
+    required:
+      - category
+    properties:
+      category:
+        type: string  
+        description: 磁盘分类 cloud： 基于云硬盘的卷 root volume只能是cloud类型 
+      autoDelete:
+        type: boolean  
+        description: 自动删除，删除容器时自动删除此volume，默认为True；只支持磁盘是云硬盘的场景
+      mountPath:
+        type:  string  
+        description: 容器内的挂载目录；root volume不需要指定，挂载目录是（/）；data volume必须指定；必须是绝对路径，不能包含(:) 
+      readOnly:
+        type: boolean  
+        description: 只读，默认false；只针对data volume有效；root volume为false，也就是可读可写 
+      cloudDiskSpec:
+        $ref: "../../disk/model/DiskSpec.yaml#/definitions/diskSpec"
+        description: 云硬盘规格；随容器自动创建的云硬盘，不会对磁盘分区，只会格式化文件系统 
+      # localDiskIndex:
+      #   type:   int  
+      #   description: 本地盘索引；实例类型自带的本地盘，不会分区，可以指定文件系统类型 
+      cloudDiskId:
+        type: string  
+        description: 云硬盘ID；如果使用已有的云硬盘，必须指定partion和fsType 
+      fsType:
+        type: string  
+        description: 指定volume文件系统类型，目前支持[xfs, ext4]；如果新创建的盘，不指定文件系统类型默认格式化成xfs 
+      formatVolume:
+        type: boolean 
+        description: 随容器自动创建的新盘，会自动格式化成指定的文件系统类型；挂载已有的盘，默认不会格式化，只会按照指定的fsType去挂载；如果希望格式化，必须设置此字段为true 

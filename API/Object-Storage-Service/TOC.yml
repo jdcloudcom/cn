@@ -8,10 +8,10 @@
  - name: 对象存储API
    items:
       - name: deleteBucket
-        href:  OSS APIs/deleteBucket.md
+        href: OSS-APIs/deleteBucket.md
       - name: headBucket
-        href: OSS APIs/headBucket.md     
+        href: OSS-APIs/headBucket.md     
       - name: listBucket
-        href: OSS APIs/listBucket.md        
+        href: OSS-APIs/listBucket.md        
       - name: putBucket
-        href: OSS APIs/putBucket.md    
+        href: OSS-APIs/putBucket.md    

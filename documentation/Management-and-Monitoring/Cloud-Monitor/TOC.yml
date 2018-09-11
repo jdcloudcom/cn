@@ -1,5 +1,7 @@
-  name: 云监控
-  href: 
+name: 云监控
+href: 
+items:
+- name: 产品简介
   items:
     - name: 产品概述
       href: Introduction/What-Is-CloudMonitor.md
@@ -37,7 +39,7 @@
   items:
     - name: Dashboard
       href: Getting-Started/Dashboard.md
-         items:
+      items:
         - name: 使用须知
           href: Operation-Guide/dashboard/terms-and-conditions.md
         - name: 我关注的面板
@@ -48,7 +50,7 @@
           href: Operation-Guide/dashboard/monitoring-chart-management.md
     - name: 云资源监控
       href: Getting-Started/resource-monitoring.md
-         items:
+      items:
         - name: 资源监控
           href: Operation-Guide/resource-monitoring/resource-monitoring-overview.md
         - name: 查看资源监控图表
@@ -57,7 +59,7 @@
           href: Operation-Guide/resource-monitoring/set-alarm-rules.md     
     - name: 自定义监控
       href: Getting-Started/custom-monitoring.md  
-         items:
+      items:
         - name: 自定义监控概述
           href: Operation-Guide/custom-monitoring/custom-monitoring-overview.md
         - name: 查看监控数据

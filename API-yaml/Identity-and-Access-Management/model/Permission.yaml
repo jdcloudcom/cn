@@ -1,0 +1,31 @@
+swagger: "2.0"
+definitions:
+  permission:
+    x-jdcloud-module: iam
+    properties:
+      id:
+        type: integer
+        description: 权限id
+      account:
+        type: string
+        description: 主账号pin
+      name:
+        type: string
+        description: 权限名称
+      description:
+        type: string
+        description: 描述
+      permissionType:
+        type: string
+        description: 权限类型
+      version:
+        type: string
+        description: 权限版本号
+      content:
+        type: string
+        description: 权限内容
+      permissionDetailList:
+        type: array
+        items:
+          $ref: "./PermissionDetail.yaml#/definitions/permissionDetail"
+        description: 权限详细信息

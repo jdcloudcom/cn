@@ -1,0 +1,104 @@
+swagger: "2.0"
+definitions:
+  container:
+    x-jdcloud-module: nc
+    x-jdcloud-internal: false
+    type: object
+    description: container
+    properties:
+      containerId:
+        type: string  
+        description: 容器ID 
+      status:
+        type: string  
+        description: 容器状态 
+      instanceType:
+        type: string  
+        description: 实例类型 
+      az:
+        type: string  
+        description: 可用区 
+      name:
+        type: string  
+        description: 容器名称 
+      hostAliases:
+        type: array
+        items:
+          $ref: "./HostAlias.yaml#/definitions/hostAlias"  
+        description: 域名和IP映射的信息 
+      hostname:
+        type: string  
+        description: 主机名 
+      command:
+        type: array
+        items: 
+          type: string 
+        description: 容器执行命令 
+      args:
+        type: array
+        items: 
+          type: string
+        description: 容器执行命令的参数 
+      envs:
+        type: array
+        items:
+          $ref: "./EnvVar.yaml#/definitions/envVar"
+        description: 动态指定的容器执行的环境变量 
+      image:
+        type: string  
+        description: 镜像名称 
+      secret:
+        type: string  
+        description: secret引用的名称 
+      tty:
+        type: boolean  
+        description: 容器是否分配tty 
+      workingDir:
+        type: string  
+        description: 容器的工作目录 
+      rootVolume:
+        $ref: "./VolumeMount.yaml#/definitions/volumeMount"
+        description: 根Volume信息 
+      dataVolumes:
+        type: array
+        items:
+          $ref: "./VolumeMount.yaml#/definitions/volumeMount"  
+        description: 挂载的数据Volume信息 
+      vpcId:
+        type: string  
+        description: 主网卡所属VPC的ID 
+      subnetId:
+        type: string  
+        description: 主网卡所属子网的ID 
+      privateIpAddress:
+        type: string  
+        description: 主网卡主IP地址 
+      elasticIpId:
+        type: string  
+        description: 主网卡主IP绑定弹性IP的ID 
+      elasticIpAddress:
+        type: string  
+        description: 主网卡主IP绑定弹性IP的地址 
+      primaryNetworkInterface:
+        $ref: "./InstanceNetworkInterfaceAttachment.yaml#/definitions/instanceNetworkInterfaceAttachment"
+        description: 主网卡信息 
+      secondaryNetworkInterfaces:
+        type: array
+        items:
+          $ref: "./InstanceNetworkInterfaceAttachment.yaml#/definitions/instanceNetworkInterfaceAttachment"
+        description: 弹性网卡信息 
+      logConfiguration:
+        $ref: "./LogConfiguration.yaml#/definitions/logConfiguration" 
+        description: 容器日志配置信息 
+      charge:
+        $ref: "../../charge/model/Charge.yaml#/definitions/charge"
+        description: 计费配置信息 
+      launchTime:
+        type: string  
+        description: 创建时间 
+      reason:
+        type: string  
+        description: 容器终止原因 
+      description:
+        type: string  
+        description: 容器描述 

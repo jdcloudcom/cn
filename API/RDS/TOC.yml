@@ -1,112 +1,131 @@
-name: ÔÆÊı¾İ¿â RDS OpenAPI
-href:
-items:
-  - name: ÕËºÅ¹ÜÀí
+  name: äº‘æ•°æ®åº“ RDS OpenAPI
+  href: 
+  items:
+  - name: æ¥å£æ¦‚è§ˆ
+    href: overview.md
+  - name: æ›´æ–°å†å²
+    href: ChangeLog.md
+  - name: æ¥å£ä¿¡æ¯
     items:
-      - name: ´´½¨ÕËºÅ
-        herf: Account Management/createAccount.md
-      - name: É¾³ıÕËºÅ
-        herf: Account Management/deleteAccount.md
-      - name: ²éÑ¯ÕËºÅÁĞ±í
-        herf: Account Management/describeAccounts.md
-      - name: ÕËºÅÊÚÈ¨
-        herf: Account Management/grantPrivilege.md
-      - name: ÉèÖÃÕËºÅÃÜÂë
-        herf: Account Management/resetPassword.md
+      - name: è´¦å·ç®¡ç†
+        items:
+          - name: createAccount
+            herf: Account-Management/createAccount.md
+          - name: deleteAccount
+            herf: Account-Management/deleteAccount.md
+          - name: describeAccounts
+            herf: Account-Management/describeAccounts.md
+          - name: grantPrivilege
+            herf: Account-Management/grantPrivilege.md
+          - name: resetPassword
+            herf: Account-Management/resetPassword.md
+            
+      - name: å®¡è®¡ç®¡ç†
+        items:
+          - name: createAudit
+            herf: Audit-Management/createAudit.md
+          - name: deleteAudit
+            herf: Audit-Management/deleteAudit.md
+          - name: describeAudit
+            herf: Audit-Management/describeAudit.md
+          - name: getAuditDownloadURL
+            herf: Audit-Management/getAuditDownloadURL.md
+          - name: getAuditFiles
+            herf: Audit-Management/getAuditFiles.md
+          - name: getAuditOptions
+            herf: Audit-Management/getAuditOptions.md
+          - name: modifyAudit
+            herf: Audit-Management/modifyAudit.md
+            
+      - name: å¤‡ä»½ç®¡ç†
+        items:
+          - name: createBackup
+            herf: Backup-Management/createBackup.md
+          - name: deleteBackup
+            herf: Backup-Management/deleteBackup.md
+          - name: describeBackupDownloadURL
+            herf: Backup-Management/describeBackupDownloadURL.md
+          - name: describeBackups
+            herf: Backup-Management/describeBackups.md
 
-  - name: Éó¼Æ¹ÜÀí
-    items:
-      - name: ¿ªÆôÉó¼Æ
-        herf: Audit Management/createAudit.md
-      - name: ¹Ø±ÕÉó¼Æ
-        herf: Audit Management/deleteAudit.md
-      - name: ²éÑ¯Éó¼ÆÑ¡Ïî
-        herf: Audit Management/describeAudit.md
-      - name: ²éÑ¯Éó¼ÆÎÄ¼şÁ´½Ó
-        herf: Audit Management/getAuditDownloadURL.md
-      - name: ²éÑ¯Éó¼ÆÎÄ¼şÁĞ±í
-        herf: Audit Management/getAuditFiles.md
-      - name: ²éÑ¯ËùÓĞÉó¼ÆÑ¡Ïî
-        herf: Audit Management/getAuditOptions.md
-      - name: ±à¼­Éó¼Æ
-        herf: Audit Management/modifyAudit.md
+      - name: å•åº“ä¸Šäº‘
+        items:
+          - name: describeImportFiles
+            herf: Cloud-on-Single-Database/describeImportFiles.md
+          - name: getUploadKey
+            herf: Cloud-on-Single-Database/getUploadKey.md
+          - name: setImportFileShared
+            herf: Cloud-on-Single-Database/setImportFileShared.md
 
-  - name: ±¸·İ¹ÜÀí
-    items:
-      - name: ´´½¨±¸·İ
-        herf: Backup Management/createBackup.md
-      - name: É¾³ı±¸·İ
-        herf: Backup Management/deleteBackup.md
-      - name: ²éÑ¯±¸·İÏÂÔØÁ´½Ó
-        herf: Backup Management/describeBackupDownloadURL.md
-      - name: ²éÑ¯±¸·İÁĞ±í
-        herf: Backup Management/describeBackups.md
+      - name: æ•°æ®åº“ç®¡ç†
+        items:
+          - name: createDatabase
+            herf: Database-Management/createDatabase.md
+          - name: deleteDatabase
+            herf: Database-Management/deleteDatabase.md
+          - name: describeDatabases
+            herf: Database-Management/describeDatabases.md
+          - name: restoreDatabaseFromBackup
+            herf: Database-Management/restoreDatabaseFromBackup.md
+          - name: restoreDatabaseFromFile
+            herf: Database-Management/restoreDatabaseFromFile.md
+          - name: restoreDatabaseFromOSS
+            herf: Database-Management/restoreDatabaseFromOSS.md
+            
+      - name: é”™è¯¯æ—¥å¿—
+        items:
+          - name: describeErrorLogs
+            herf: Error-Logs/describeErrorLogs.md 
 
-  - name: µ¥¿âÉÏÔÆ
+      - name: å®ä¾‹ç®¡ç†
+        items:
+          - name: createInstance
+            herf: Instance-Management/createInstance.md
+          - name: deleteInstance
+            herf: Instance-Management/deleteInstance.md
+          - name: describeInstanceAttributes
+            herf: Instance-Management/describeInstanceAttributes.md
+          - name: describeInstances
+            herf: Instance-Management/describeInstances.md
+          - name: disableInternetAccess
+            href: Instance-Management/disableInternetAccess.md
+          - name: enableInternetAccess
+            href: Instance-Management/enableInternetAccess.md
+          - name: failoverInstance
+            herf: Instance-Management/failoverInstance.md
+          - name: getBackupPolicy
+            herf: Instance-Management/getBackupPolicy.md
+          - name: rebootInstance
+            herf: Instance-Management/rebootInstance.md
+          - name: restoreInstance
+            herf: Instance-Management/restoreInstance.md
+          - name: setInstanceName
+            herf: Instance-Management/setInstanceName.md
+     
+      - name: æ€§èƒ½ç»Ÿè®¡
+        items:
+          - name: describeIndexPerformance
+            herf: Performance-Statistics/describeIndexPerformance.md
+          - name: describeQueryPerformance
+            herf: Performance-Statistics/describeQueryPerformance.md
+            
+      - name: ç™½åå•
+        items:
+          - name: describeWhiteList
+            herf: White-List/describeWhiteList.md
+            
+  - name: å®ä¾‹è§„æ ¼
     items:
-      - name: ²éÑ¯ÉÏ´«ÎÄ¼şÁĞ±í
-        herf: Cloud on Single Database/describeImportFiles.md
-      - name: »ñÈ¡key
-        herf: Cloud on Single Database/getUploadKey.md
-      - name: ÉèÖÃÎÄ¼şÊÇ·ñ¹²Ïí
-        herf: Cloud on Single Database/setImportFileShared.md
+      - name: MySQL å®ä¾‹è§„æ ¼
+        href: Instance-Specifications/Instance-Specifications-MySQL.md
+      - name: SQL Server å®ä¾‹è§„æ ¼
+        href: Instance-Specifications/Instance-Specifications-MySQL.md
 
-  - name: Êı¾İ¿â¹ÜÀí
+  - name: æšä¸¾å‚æ•°è¯´æ˜
     items:
-      - name: ´´½¨Êı¾İ¿â
-        herf: Database Management/createDatabase.md
-      - name: É¾³ıÊı¾İ¿â
-        herf: Database Management/deleteDatabase.md
-      - name: ²éÑ¯Êı¾İ¿âÁĞ±í
-        herf: Database Management/describeDatabases.md
-      - name: ¸ù¾İ±¸·İ»Ö¸´
-        herf: Database Management/restoreDatabaseFromBackup.md
-      - name: ¸ù¾İÉÏ´«ÎÄ¼ş»Ö¸´
-        herf: Database Management/restoreDatabaseFromFile.md
-      - name: ¸ù¾İOSS»Ö¸´
-        herf: Database Management/restoreDatabaseFromOSS.md
-
-  - name: ´íÎóÈÕÖ¾
-    items:
-      - name: ²éÑ¯´íÎóÈÕÖ¾ÁĞ±í
-        herf: Error Logs/describeErrorLogs.md
-
-  - name: ÊµÀı¹ÜÀí
-    items:
-      - name: ´´½¨ÊµÀı
-        herf: Instance Management/createInstance.md
-      - name: É¾³ıÊµÀı
-        herf: Instance Management/deleteInstance.md
-      - name: ²é¿´ÊµÀıÏêÇé
-        herf: Instance Management/describeInstanceAttributes.md
-      - name: ²éÑ¯ÊµÀıÁĞ±í
-        herf: Instance Management/describeInstances.md
-      - name: ÊµÀıÖ÷±¸ÇĞ»»
-        herf: Instance Management/failoverInstance.md
-      - name: ÖØÆôÊµÀı
-        herf: Instance Management/rebootInstance.md
-      - name: ÉèÖÃÊµÀıÃû
-        herf: Instance Management/setInstanceName.md
-
-  - name: ĞÔÄÜÍ³¼Æ
-    items:
-      - name: Ë÷ÒıĞÔÄÜÍ³¼Æ
-        herf: Performance Statistics/describeIndexPerformance.md
-      - name: ²éÑ¯ĞÔÄÜÍ³¼Æ
-        herf: Performance Statistics/describeQueryPerformance.md
-
-  - name: ÊµÀı¹æ¸ñ
-    items:
-      - name: MySQL ÊµÀı¹æ¸ñ
-        herf: Instance-Specifications/Instance-Specifications-MySQL.md
-      - name: SQL Server ÊµÀı¹æ¸ñ
-        herf: Instance-Specifications/Instance-Specifications-SQLServer.md
-
-  - name: Ã¶¾ÙÖµËµÃ÷
-    items:
-      - name: µØÓòºÍ¿ÉÓÃÇø
-        herf: Enum-Definitions/Regions-AZ.md
-      - name: API °æ±¾
-        herf: Enum-Definitions/apiVersion.md
-      - name: APIÃ¶¾Ù²ÎÊı
-        herf: Enum-Definitions/Enum-Definitions.md
+      - name: æšä¸¾ç±»å‹å®šä¹‰
+        href: Enum-Definitions/Enum-Definitions.md
+      - name: åœ°åŸŸåŠå¯ç”¨åŒºåˆ—è¡¨
+        href: Enum-Definitions/Regions-AZ.md
+      - name: ç‰ˆæœ¬å·
+        href: Enum-Definitions/apiVersion.md

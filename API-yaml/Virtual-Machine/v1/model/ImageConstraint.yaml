@@ -7,16 +7,16 @@ definitions:
         type: string
         description: 镜像ID
       imageInstanceTypeConstraint:
-        description: 镜像规格类型限制
+        description: 使用镜像创建实例的规格限制
         $ref: "#/definitions/imageInstanceTypeConstraint"
   imageInstanceTypeConstraint:
     x-jdcloud-module: vm
     properties:
       constraintsType:
-        description: 受限制的规格类型。excludes：排除指定的实例类型；includes：只包含指定的实例类型，暂不支持includes
+        description: 限制类型。取值：excludes：不支持的实例类型；includes：支持的实例类型。
         type: string
       instanceTypes:
-        description: 规格类型列表
+        description: 实例规格列表
         type: array
         items:
           type: string

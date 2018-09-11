@@ -1,0 +1,38 @@
+swagger: '2.0'
+definitions:
+  storage:
+    x-jdcloud-module: streamcomputer
+    title: storage
+    type: object
+    properties:
+      id:
+        type: integer
+      name:
+        type: string
+      uid:
+        type: string
+      type:
+        type: string
+      storageType:
+        type: string
+        description: "这个参数有input和ouput两个可选值，取决于创建输入还是输出"
+      userName:
+        type: string
+      createTime:
+        type: string
+        format: date
+      updateTime:
+        type: string
+        format: date  
+      namespaceId:
+        type: string
+      deleted:
+        type: string
+        format: byte
+      storageParameterList:
+        type: array
+        description: "Storage的具体参数。<br>1、创建源类型为流式数据输入时，则需要传输source，topicName，duration，format，delimiter，schema 。<br> 2、创建输出如果输出位置为流数据总线，需要传topicName，format，delimiter，ossFlag，bucketName，directory，objectName。<br>3、创建输出如果输出位置为数据计算服务，则需要传输database，table，ossFlag，bucketName，directory，objectName。"
+        items:
+            $ref: "../model/StorageParameter.yaml#/definitions/storageParameter"
+            
+ 

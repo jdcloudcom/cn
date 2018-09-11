@@ -142,8 +142,8 @@ PUT /sign.txt   HTTP/1.1
 
 1.如果传入的AccessKey不存在或inactive，返回403 Forbidden。错误码：InvalidAccessKey。
 
-2.传入请求的时间必须在京东云存储服务器当前时间之后的15分钟以内，否则返回403 Forbidden。错误码：RequestTimeTooSkewed。
+2.传入请求的时间必须在京东云对象存储服务器当前时间之后的15分钟以内，否则返回403 Forbidden。错误码：RequestTimeTooSkewed。
 
 3.若用户请求头中Authorization值的格式不对，返回400 Bad Request。错误码：InvalidToken。
 
-京东云存储所有的请求都必须使用HTTP 1.1协议规定的GMT时间格式。其中，日期的格式为：Wed, 22 May 2017 05:29:49 GMT
+京东云对象存储所有的请求都必须使用HTTP 1.1协议规定的GMT时间格式。其中，日期的格式为：Wed, 22 May 2017 05:29:49 GMT

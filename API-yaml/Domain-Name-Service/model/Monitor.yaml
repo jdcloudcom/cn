@@ -1,0 +1,189 @@
+swagger: "2.0"
+definitions:
+  updateMonitor:
+    type: object
+    x-jdcloud-module: clouddnsservice
+    properties:
+      alarmLimit:
+        type: integer
+        required: true
+        description: 连续几次触发报警
+      Id:
+        type: integer
+        required: true
+        description: 监控项ID
+      ipBackup01:
+        type: string
+        required: true
+        description: 备用地址1
+      ipBackup02:
+        type: string
+        required: true
+        description: 备用地址2
+      monitorEnable:
+        type: integer
+        required: true
+        description: 监控状况 开启监控 2，暂停监控 4
+      monitorFreq:
+        type: integer
+        required: true
+        description: 监控频率，单位秒
+      monitorPort:
+        type: integer
+        required: true
+        description: 监控端口
+      monitorRule:
+        type: integer
+        required: true
+        description: 不做任何修改0，强制暂停解析记录1，自动切换到备用地址2
+      monitorUri:
+        type: string
+        required: true
+        description: 监控路径
+      notifyEmailEnable:
+        type: integer
+        required: true
+        description: 不发送邮件0， 发送邮件1
+      notifyMsgBarEnable:
+        type: integer
+        required: true
+        description: 不发送通知栏 0， 发送通知栏 1
+      notifySmsEnable:
+        type: integer
+        required: true
+        description: 不发送短信 0， 发送短信 1
+      protocol:
+        type: integer
+        required: true
+        description: https 0，https 1
+      stopRecoverRule:
+        type: integer
+        required: true
+        description: 0自动恢复 1手动恢复
+      switchRecoverRule:
+        type: integer
+        required: true
+        description: 0自动恢复至主host 1手动恢复至主host
+  monitor:
+    type: object
+    x-jdcloud-module: clouddnsservice
+    properties:
+      alarmLimit:
+        type: integer
+        description: 连续几次触发报警
+      canRecover:
+        type: boolean
+        description: 现在是否可以恢复
+      canSwitch:
+        type: boolean
+        description: 现在是否可以切换
+      clusters:
+        type: string
+        description: 机房探测点的集合
+      domainName:
+        type: string
+        description: 主域名
+      hostStatus:
+        type: integer
+        description: 主机状态，0正常，1异常
+      hostValue:
+        type: string
+        description: 监控对象
+      Id:
+        type: integer
+        description: 监控项ID
+      ipBackup01:
+        type: string
+        description: 备用地址1
+      ipBackup01Status:
+        type: integer
+        description: 备用地址1的状态，0正常，1异常
+      ipBackup01Type:
+        type: integer
+        description: 备用地址1的类型，1为ip 2为域名
+      ipBackup02: 
+        type: string
+        description: 备用地址2
+      ipBackup02Status:
+        type: integer
+        description: 备用地址2的状态，0正常，1异常
+      ipBackup02Type:
+        type: integer
+        description: 备用地址1的类型，1为ip 2为域名
+      manualBackup:
+        type: string
+        description: 手动切换的地址
+      manualBackupStatus:
+        type: integer
+        description: 手动切换的地址的状态，0正常，1异常
+      manualBackupType:
+        type: integer
+        description: 手动切换的地址的类型，1为ip 2为域名
+      monitorEnable:
+        type: integer
+        description: 监控状况 开启监控 2，暂停监控 4
+      monitorFreq:
+        type: integer
+        description: 监控频率，单位s
+      monitorPort:
+        type: integer
+        description: 监控端口
+      monitorRule:
+        type: integer
+        description: 不做任何修改0，强制暂停解析记录1，自动切换到备用地址2
+      monitorUri:
+        type: string
+        description: 监控路径
+      notifyEmail:
+        type: string
+        description: 邮箱地址 
+      notifyEmailEnable:
+        type: integer
+        description: 不发送邮件0， 发送邮件1
+      notifyMsgBarEnable:
+        type: integer
+        description: 不发送通知栏 0， 发送通知栏 1
+      notifySms:
+        type: string
+        description: 手机号码
+      notifySmsEnable:
+        type: integer
+        description: 不发送短信 0， 发送短信 1
+      protocol:
+        type: integer
+        description: https 0，https 1
+      stopRecoverRule:
+        type: integer
+        description: 0自动恢复 1手动恢复
+      subDomainName:
+        type: string
+        description: 子域名
+      switchRecoverRule:
+        type: integer
+        description: 0自动恢复至主host 1手动恢复至主host
+      type:
+        type: integer
+        description: 1为A记录，2为CNAME
+      usedType:
+        type: integer
+        description: 使用记录，host_value 0，ip_backup_01 1，ip_backup_02 2，cname_backup 3
+
+  monitorAlarmInfo:
+    type: object
+    x-jdcloud-module: clouddnsservice
+    properties:
+      domainId:
+        type: integer
+        description: 域名ID
+      subDomainName:
+        type: string
+        description: 子域名
+      host:
+        type: string
+        description: 故障IP/域名
+      id:
+        type: integer
+        description: 
+      startTime:
+        type: integer
+        description: 故障开始时间

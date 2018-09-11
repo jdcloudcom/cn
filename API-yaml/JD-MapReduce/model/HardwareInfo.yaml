@@ -1,0 +1,52 @@
+swagger: "2.0"
+definitions:
+  hardwareInfo:
+    x-jdcloud-module: jmr
+    title: hardwareInfo
+    type: object
+    properties:
+      nodeName:
+        type: string
+        description: 节点名称
+      nodeType:
+        type: string
+        description: 节点类型
+      nodeStatus:
+        type: string
+        description: 节点状态
+      innerIp:
+        type: string
+        description: 内网IP
+      outerIp:
+        type: string
+        description: 外网IP
+      firewall:
+        type: string
+        description: 防火墙
+      nodeCoreNum:
+        type: integer
+        description: 节点核心数
+      nodeMemoryNum:
+        type: integer
+        description: 节点内存数
+      nodeSystemInfo:
+        type: string
+        description: 节点系统信息
+      nodeDiskType:
+        type: string
+        description: 节点硬盘类型
+      nodeDiskVolume:
+        type: integer
+        description: 节点硬盘容量
+      serverId:
+        type: string
+        description: 节点实例ID
+      msg:
+        type: string
+        description: 消息
+      instanceType:
+        type: string
+        description: 节点硬件配置
+      instanceInfo:
+        type: string
+        description: 节点硬件类型

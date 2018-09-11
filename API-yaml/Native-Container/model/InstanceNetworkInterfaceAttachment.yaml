@@ -1,0 +1,23 @@
+swagger: "2.0"
+definitions:
+  instanceNetworkInterfaceAttachment:
+    x-jdcloud-module: nc
+    x-jdcloud-internal: false
+    type: object
+    description: 描述容器网卡的绑定信息
+    properties:
+      autoDelete:
+        type: boolean
+        description: 指明删除实例时是否删除网卡
+      deviceIndex:
+        type: integer
+        description: 设备Index
+      attachStatus:
+        type: string
+        description: 绑定状态
+      attachTime:
+        type: string
+        description: 绑定时间
+      networkInterface:
+        $ref: "./InstanceNetworkInterface.yaml#/definitions/instanceNetworkInterface"
+        description: 弹性网卡信息

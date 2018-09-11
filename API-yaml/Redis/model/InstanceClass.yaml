@@ -1,0 +1,26 @@
+swagger: "2.0"
+definitions:
+  instanceClass:
+    x-jdcloud-module: redis
+    description: 某缓存Redis实例规格信息
+    type: object
+    properties:
+      instanceClass:
+        type: string
+        description: 实例规格代码,参见实例规格代码表
+      cpu:
+        type: integer
+        description: cpu
+      memoryMB:
+        type: integer
+        description: 内存
+      diskGB:
+        type: integer
+        description: 磁盘
+      maxConnetction:
+        type: integer
+        description: 最大链接数
+      bandwidthMbps:
+        type: integer
+        description: 带宽
+      

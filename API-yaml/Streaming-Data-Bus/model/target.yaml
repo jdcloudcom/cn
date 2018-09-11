@@ -1,0 +1,16 @@
+swagger: "2.0"
+definitions:
+  target:
+    x-jdcloud-module: streambus
+    title: target
+    type: object
+    properties:
+      name:
+        type: string
+        description: "需要归档的目的地"
+      recordSize: 
+        type: integer
+        description: "当达到这个数据量时开始归档"
+      cycle:
+        type: integer
+        description: "进行归档任务的时间周期"

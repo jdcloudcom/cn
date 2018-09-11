@@ -1,0 +1,145 @@
+swagger: "2.0"                                  # 基于Swagger 2.0版本实现
+info:
+  version: v1
+  title: 备份管理
+  description: 备份管理相关接口
+
+basePath: /regions/{regionId}
+
+paths:
+  "/backups":    #创建备份
+    post:
+      description: 创建一个RDS实例全量备份，可以对整个实例或者部分数据库（仅SQL Server支持）进行全量备份。同一时间点，只能有一个正在运行的备份任务<br>- 仅支持SQL Server
+      operationId: createBackup
+      parameters:
+        - name: instanceId
+          in: query
+          type: string
+          description: RDS实例ID，唯一标识一个实例
+        - name: backupSpec
+          in: body
+          description: 备份规格
+          schema:
+            $ref: "../model/BackupSpec.yaml#/definitions/backupSpec"
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  backupId:
+                    type: string
+                    description: 备份Id
+    get:
+      description: 查看该RDS实例下所有备份的详细信息，返回的备份列表按照备份开始时间（backupStartTime）降序排列。<br>- 仅支持SQL Server
+      operationId: describeBackups
+      parameters:
+        - name: instanceId
+          required: true
+          in: query
+          type: string
+          description: RDS实例ID，唯一标识一个实例
+        - name: auto
+          required: false
+          in: query
+          type: integer
+          description: 查询备份类型，0为手动备份，1为自动备份，不传表示全部. <br>**- 测试参数，仅支持SQL Server，后续可能被其他参数取代**
+        - name: backupTypeFilter
+          required: false
+          in: query
+          type: string
+          description: 返回backupType等于指定值的备份列表。full为全量备份，diff为增量备份<br>**- 测试参数，仅支持SQL Server，后续可能被其他参数取代**
+        - name: dbNameFilter
+          required: false
+          in: query
+          type: string
+          description: 返回dbName等于指定值的备份列表，不传或为空返回全部<br>**- 测试参数，仅支持SQL Server，后续可能被其他参数取代**
+        - name: backupTimeRangeStartFilter
+          required: false
+          in: query
+          type: string
+          description: 返回备份开始时间大于该时间的备份列表<br>**- 测试参数，仅支持SQL Server，后续可能被其他参数取代**
+        - name: backupTimeRangeEndFilter
+          required: false
+          in: query
+          type: string
+          description: 返回备份开始时间小于等于该时间的备份列表<br>**- 测试参数，仅支持SQL Server，后续可能被其他参数取代**
+        - name: pageNumber
+          required: true
+          in: query
+          type: integer
+          description: 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。
+        - name: pageSize
+          required: true
+          in: query
+          type: integer
+          description: 每页显示的数据条数，默认为10，取值范围：[1,100]，只能为10的倍数
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  backup:
+                    type: array
+                    description: 备份集合
+                    items:
+                      $ref: ../model/Backup.yaml#/definitions/Backup
+                  totalCount:
+                    type: integer
+                    description: 总记录数
+  "/backups/{backupId}":
+    delete:
+      description: 删除RDS实例备份，仅允许删除用户生成的备份，系统自动备份不允许删除。
+      operationId: deleteBackup
+      responses:
+        200:
+          description: OK
+  "/backups/{backupId}/downloadURLs":
+    get:
+      description: 获取整个备份或备份中单个文件的下载链接。<br>- 当输入参数中有文件名时，获取该文件的下载链接。<br>- 输入参数中无文件名时，获取整个备份的下载链接。<br>由于备份机制的差异，使用该接口下载备份时，SQL Server必须输入文件名，每个文件逐一下载，不支持下载整个备份。SQL Server备份中的文件名（不包括后缀）即为备份的数据库名。例如文件名为my_test_db.bak，表示该文件是my_test_db数据库的备份。<br>MySQL可下载整个备份集，但不支持单个文件的下载。<br>- 仅支持SQL Server
+      operationId: describeBackupDownloadURL
+      parameters:
+        - name: fileName
+          required: false
+          type: string
+          in: query
+          description: 文件名称<br>- MySQL：不支持该参数<br>- SQL Server：必须输入该参数，指定该备份中需要获取下载链接的文件名称。备份中的文件名（不包括后缀）即为备份的数据库名。例如文件名为my_test_db.bak，表示该文件是my_test_db数据库的备份
+        - name: urlExpirationSecond
+          required: false
+          type: string
+          in: query
+          description: 指定下载链接的过期时间，单位秒,缺省为86400秒，即24小时。<br>- MySQL：不支持该参数，只能是默认值<br>- SQL Server：支持
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  publicURL:
+                    type: string
+                    description: 公网下载链接，若当前不可下载，则为空串
+                  internalURL:
+                    type: string
+                    description: 内网下载链接，若当前不可下载，则为空串
+
+#路径通用参数
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
+  backupId:
+    name: backupId
+    in: path
+    required: true
+    type: string
+    description: 备份ID
+
+
+

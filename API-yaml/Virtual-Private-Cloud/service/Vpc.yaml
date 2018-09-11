@@ -1,0 +1,203 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: 私有网络
+  description: 私有网络相关接口
+
+basePath: /regions/{regionId}
+
+schemes:
+  - https
+
+paths:
+  "/vpcs/":
+     #describe vpcs
+    get:
+      summary: "查询私有网络列表"
+      description: "查询私有网络列表"
+      operationId: describeVpcs
+    
+      parameters:
+        - name: pageNumber
+          in: query
+          type: integer
+          default: 1
+          minimum: 1
+          description: "页码, 默认为1, 取值范围：[1,∞), 页码超过总页数时, 显示最后一页"
+        - name: pageSize
+          in: query
+          type: integer
+          default: 20
+          minimum: 10
+          maximum: 100
+          description: "分页大小，默认为20，取值范围：[10,100]"
+        - name: filters
+          in: query
+          type: array
+          items:
+            #$ref: "/jcloud-open-api/common/model/Filter.yaml#/definitions/filter"
+            $ref: "../../common/model/Filter.yaml#/definitions/filter"
+          description: |
+                 vpcIds - vpc ID列表，支持多个
+                 vpcNames - vpc名称列表,支持多个
+    
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                description: "返回结果"
+                properties:
+                  vpcs:
+                    description: "Vpc资源信息列表"
+                    type: array
+                    items:
+                      $ref: "../model/Vpc.yaml#/definitions/vpc"
+                  totalCount:
+                    description: "总数量"
+                    type: number
+              requestId:
+                description: "请求ID"
+                type: string
+    
+    post:
+      summary: "创建私有网络"
+      description: "创建私有网络"
+      operationId: createVpc
+      parameters:
+        - name: vpcSpec
+          in: body
+          required: true
+          description: "申请创建vpc请求参数"
+          x-jdcloud-tiered: false
+          schema:
+            $ref: "../model/VpcSpec.yaml#/definitions/vpcSpec"
+      responses:
+        200:
+          description: Successful operation
+          schema:
+            type: object
+            properties:
+              result:
+                 description: "返回结果"
+                 properties:
+                   vpcId:
+                     description: "私有网络ID"
+                     type: string
+              requestId:
+                 description: "请求ID"
+                 type: string
+        400:
+          description: "Invalid parameter"
+        401:
+          description: "Authentication failed"
+        404:
+          description: "Not found"
+        409:
+          description: "Parameter conflict"
+        429:
+          description: "Quota exceeded"
+        500:
+          description: "Internal server error"
+        503:
+          description: "Service unavailable"
+      
+
+  "/vpcs/{vpcId}":
+      #describe vpc
+      get:
+        summary: "查询Vpc信息详情"
+        description: "查询Vpc信息详情"
+        operationId: describeVpc
+        responses:
+          200:
+            description: OK
+            schema:
+              properties:
+                result:
+                  description: "返回结果"
+                  properties:
+                    vpc:
+                      description: "Vpc资源信息"
+                      $ref: "../model/Vpc.yaml#/definitions/vpc"
+                requestId:
+                  description: "请求ID"
+                  type: string
+          400:
+            description: "invalid parameter"
+          401:
+            description: "Authentication failed"
+
+      patch:
+        summary: "修改私有网络"
+        description: "修改私有网络接口"
+        operationId: modifyVpc
+        x-jdcloud-internal: true
+        parameters:
+          - name: modifyVpcSpec
+            in: body
+            required: true
+            description: "修改私有网络"
+            x-jdcloud-tiered: false
+            schema:
+              $ref: "../model/ModifyVpcSpec.yaml#/definitions/modifyVpcSpec"
+
+        responses:
+          200:
+            description: OK
+            schema:
+              properties:
+                requestId:
+                  description: "请求ID"
+                  type: string
+          400:
+            description: "Invalid parameter"
+          404:
+            description: "Not found"
+          409:
+            description: "Parameter conflict" 
+          500:
+            description: "Internal server error"
+          503:
+            description: "Service unavailable"
+          
+
+      delete:
+        summary: "删除私有网络"
+        description: "删除私有网络"
+        operationId: deleteVpc
+        responses:
+          200:
+            description: OK
+            schema:
+              properties:
+                requestId:
+                  description: "请求ID"
+                  type: string
+          400:
+            description: "Invalid parameter"
+          401:
+            description: "Authentication failed"
+          404:
+            description: "Not found"
+          409:
+            description: "Parameter conflict" 
+          500:
+            description: "Internal server error"
+          503:
+            description: "Service unavailable"
+
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: Region ID
+  vpcId:
+    name: vpcId
+    in: path
+    required: true
+    type: string
+    description: Vpc ID

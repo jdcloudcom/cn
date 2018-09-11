@@ -21,7 +21,7 @@
       - name: 使用约束
         href: Introduction/Restrictions.md
         
-  - name: 购买须知
+  - name: 产品定价
     items:
     - name: 计费模式说明
       items:
@@ -40,7 +40,7 @@
           - name: 官网购买
             href: Pricing/Purchase-Channel/Buy-on-Website.md      
         
-  - name: 云硬盘
+  - name: 操作指南
     items:
        - name: 创建云硬盘
          href: Getting-Started/Cloud-Disk/Create-Cloud-Disk.md
@@ -78,7 +78,7 @@
        - name: 云硬盘监控
          href: Getting-Started/Cloud-Disk/CDS-Monitoring.md
           
-  - name: 云硬盘快照
+  - name: 快照操作指南
     items:
        - name: 创建云硬盘快照
          href: Operation-Guide/Cloud-Disk-Snapshot/Create-CloudDisk-SnapShot.md

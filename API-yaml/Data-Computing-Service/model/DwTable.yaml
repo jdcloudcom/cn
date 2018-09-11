@@ -1,0 +1,55 @@
+swagger: "2.0"
+definitions:
+  dwTable:
+    x-jdcloud-module: xdata
+    title: DwTable
+    type: object
+    properties:
+      id:
+        type: integer
+        description: 数据库id
+      userName:
+        type: string
+        description: 用户名
+      dbName:
+        type: string
+        description: 数据库名
+      tableName:
+        type: string
+        description: 表名
+      createTime:
+        type: string
+        description: 创建时间
+      lastUpdateTime:
+        type: string
+        description: 最新更新时间
+      physicalStorageCapacity:
+        type: string
+        description: 物理存储量
+      category:
+        type: string
+        description: 类别
+      source:
+        type: string
+        description: 来源
+      owner:
+        type: string
+        description: 所有者
+      hiveFileFormat:
+        type: string
+        description: 文件存储类型
+      encryption:
+        type: string
+        description: 是否加密
+      location:
+        type: string
+        description: 位置
+      comments:
+        type: string
+        description: 描述信息
+      hiveObjectPrivileges:
+        $ref: "../model/DwHiveObjectPrivileges.yaml#/definitions/dwHiveObjectPrivileges"
+        description: hive表权限信息
+      parameters:
+        description: 参数
+        type: object

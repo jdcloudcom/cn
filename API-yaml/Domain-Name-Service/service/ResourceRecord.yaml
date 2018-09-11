@@ -1,0 +1,185 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: 解析记录
+  description: 云解析OpenAPI解析记录接口
+
+basePath: /regions/{regionId}
+
+paths:          
+  /domain/{domainId}/RR:
+  ###################### 查询主域名的解析记录 ######################
+    get:
+      description: "查询主域名的解析记录"
+      operationId: searchRR
+      parameters:
+        - name: pageNumber
+          in: query
+          type: integer
+          description: 当前页数，起始值为1，默认为1
+          required: false
+        - name: pageSize
+          in: query
+          type: integer
+          description: 分页查询时设置的每页行数, 默认为10
+          required: false
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  dataList:
+                    description: 解析记录列表
+                    type: array
+                    items:
+                      $ref: "../model/RR.yaml#/definitions/RR"
+                  totalCount:
+                    description: 所有解析记录的个数
+                    type: integer
+                  totalPage:
+                    description: 所有解析记录的页数
+                    type: integer
+                  currentCount:
+                    description: 当前页解析记录的个数
+                    type: integer
+              requestId:
+                type: string
+                description: 此次请求的ID
+        400:
+          description: BAD_REQUEST
+          
+  /domain/{domainId}/viewTree:
+  ###################### 查询DNS所有解析线路 ######################
+    get:
+      description: "查询云解析所有的基础解析线路"
+      operationId: getViewTree
+      parameters:
+        - name: loadMode
+          in: query
+          type: integer
+          required: false
+          description: 展示方式
+        - name: packId
+          in: query
+          type: integer
+          required: true
+          description: 套餐ID
+        - name: viewId
+          in: query
+          type: integer
+          required: true
+          description: view ID，默认为0
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  data:
+                    description: 解析线路的树
+                    type: array
+                    items:
+                      $ref: "../model/RR.yaml#/definitions/viewTree"
+              requestId:
+                type: string
+                description: 此次请求的ID
+        400:
+          description: BAD_REQUEST
+          
+  /domain/{domainId}/RRAdd:
+  ###################### 添加域名的解析记录 ######################
+    post:
+      description: "添加域名的解析记录"
+      operationId: addRR
+      parameters:
+        - name: req
+          in: body
+          description: RR参数
+          required: true
+          schema:
+            $ref: "../model/RR.yaml#/definitions/addRR"
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  dataList:
+                    description: 添加成功后的解析记录结果
+                    $ref: "../model/RR.yaml#/definitions/RR"
+              requestId:
+                type: string
+                description: 此次请求的ID
+        400:
+          description: BAD_REQUEST
+          
+  /domain/{domainId}/RRUpdate:
+  ###################### 修改域名的解析记录 ######################
+    post:
+      description: "修改主域名的某个解析记录"
+      operationId: updateRR
+      parameters:
+        - name: req
+          in: body
+          schema:
+            $ref: "../model/RR.yaml#/definitions/updateRR"
+          required: true
+          description: updateRR参数
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              requestId:
+                description: 此次请求的ID
+                type: string
+        400:
+          description: BAD_REQUEST
+          
+  /domain/{domainId}/RROperate:
+  ###################### 域名的解析记录的操作集 ######################
+    post:
+      description: "启用、停用、删除主域名下的解析记录"
+      operationId: operateRR
+      parameters:
+        - name: ids
+          in: query
+          type: array
+          items:
+            type: integer
+          required: true
+          description: 需要操作的解析记录ID
+        - name: action
+          in: query
+          type: string
+          required: true
+          description: 操作类型，on->启用 off->停用 del->删除
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              requestId:
+                type: string
+                description: 此次请求的ID
+        400:
+          description: BAD_REQUEST 
+         
+#路径通用参数
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: 实例所属的地域ID
+  domainId:
+    name: domainId
+    in: path
+    required: true
+    type: string
+    description: 域名ID

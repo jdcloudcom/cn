@@ -10,31 +10,31 @@
   - name: 云硬盘相关接口
     items:
       - name: createDisks
-        href: CDS APIs/createDisks.md
+        href: CDS-APIs/createDisks.md
       - name: deleteDisk
-        href: CDS APIs/deleteDisk.md
+        href: CDS-APIs/deleteDisk.md
       - name: modifyDiskAttribute
-        href: CDS APIs/modifyDiskAttribute.md
+        href: CDS-APIs/modifyDiskAttribute.md
       - name: extendDisk
-        href: CDS APIs/extendDisk.md
+        href: CDS-APIs/extendDisk.md
       - name: describeDisk
-        href: CDS APIs/describeDisk.md
+        href: CDS-APIs/describeDisk.md
       - name: describeDisks
-        href: CDS APIs/describeDisks.md
+        href: CDS-APIs/describeDisks.md
       - name: restoreDisk
-        href: CDS APIs/restoreDisk.md
+        href: CDS-APIs/restoreDisk.md
 
   - name: 快照相关接口
     items:
       - name: createSnapshot
-        href: Snapshot APIs/createSnapshot.md
+        href: Snapshot-APIs/createSnapshot.md
       - name: deleteSnapshot 
-        href: Snapshot APIs/deleteSnapshot.md
+        href: Snapshot-APIs/deleteSnapshot.md
       - name: modifySnpAttribute
-        href: Snapshot APIs/modifySnpAttribute.md
+        href: Snapshot-APIs/modifySnpAttribute.md
       - name: modifySnapshotAttribute
-        href: Snapshot APIs/modifySnapshotAttribute.md
+        href: Snapshot-APIs/modifySnapshotAttribute.md
       - name: describeSnapshot
-        href: Snapshot APIs/describeSnapshot.md
+        href: Snapshot-APIs/describeSnapshot.md
       - name: describeSnapshots
-        href: Snapshot APIs/describeSnapshot.md
+        href: Snapshot-APIs/describeSnapshot.md

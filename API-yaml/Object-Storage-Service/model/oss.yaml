@@ -1,0 +1,41 @@
+swagger: "2.0"
+definitions:
+  ListBucketResult:
+    x-jdcloud-module: oss
+    title: ListBucketResult
+    x-jdcloud-internal: true  
+    type: object
+    required:
+    - owner
+    - buckets
+    properties:
+      owner:
+        $ref: '#/definitions/User'
+      buckets:
+        type: array
+        items:
+          $ref: '#/definitions/Bucket'
+  User:
+    x-jdcloud-module: oss
+    required:
+    - id
+    - displayName
+    properties:
+      id:
+        type: string
+        example: 1234567
+      displayName:
+        type: string
+        example:  jdcloudAdmin
+  Bucket:
+    x-jdcloud-module: oss
+    required:
+    - name
+    - createTime
+    properties:
+      name:
+        type: string
+        example: test-bucket
+      createTime:
+        type: string
+        example:  2006-02-03T16:41:58.000Z

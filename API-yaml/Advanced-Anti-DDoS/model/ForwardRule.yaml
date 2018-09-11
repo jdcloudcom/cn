@@ -1,0 +1,47 @@
+swagger: "2.0"
+definitions:
+  forwardRule:
+    type: object
+    x-jdcloud-module: ipanti
+    properties:
+      id:
+        type: integer
+        format: int64
+        description: 规则ID
+      instanceId:
+        type: integer
+        format: int64
+        description: 实例ID
+      protocol:
+        type: string
+        description: TCP或UDP
+      cname:
+        type: string
+        description: 规则的cname
+      originType:
+        type: string
+        description: 回源类型，ip或者domain
+      port:
+        type: integer
+        description: 端口号
+      algorithm:
+        type: string
+        description: 转发规则，wrr->带权重的轮询 wlc->加权最小连接 rr->不带权重的轮询 sh->源地址hash
+      originAddr:
+        type: array
+        items:
+          $ref: "../model/OriginAddrItem.yaml#/definitions/OriginAddrItem"
+      onlineAddr:
+        type: array
+        description: 线上地址
+        items:
+          type: string
+      originDomain:
+        type: string
+        description: 回源域名
+      originPort:
+        type: integer
+        description: 回源端口号
+      status:
+        type: integer
+        description: 状态，0->防御状态 1->回源状态

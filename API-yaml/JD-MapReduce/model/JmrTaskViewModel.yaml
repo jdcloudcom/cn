@@ -1,0 +1,48 @@
+swagger: "2.0"
+definitions:
+  jmrTaskViewModel:
+    x-jdcloud-module: jmr
+    title: jmrTaskViewModel
+    type: object
+    properties:
+      id:
+        type: integer
+      taskId:
+        type: string
+        description: 作业Id
+      taskName:
+        type: string
+        description: 作业名称
+      taskType:
+        type: string
+        description: 作业类型
+      status:
+        type: string
+        description: 状态
+      startTime:
+        type: string
+        format: date
+        description: 开始时间
+      endTime:
+        type: string
+        format: date
+        description: 结束时间
+      duration:
+        type: string
+        description: 持续时间
+      userpin:
+        type: string
+        description: 用户名
+      dataCenter:
+        type: string
+        description: 数据中心，即regionId
+      jobId:
+        type: string
+      planId:
+        type: string
+      workflowId:
+        type: string
+        description: 工作流Id
+      workflowInstanceId:
+        type: string
+        description: 工作流实例Id

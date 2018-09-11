@@ -146,9 +146,9 @@
           - name: 网络概述
             href: Operation-Guide/Network/Network-Overview.md
           - name: 绑定弹性网卡
-            href: Operation-Guide/Network/Associate-ENI.md
+            href: Operation-Guide/Network/Attach-ENI.md
           - name: 解绑弹性网卡
-            href: Operation-Guide/Network/Disassociate-ENI.md
+            href: Operation-Guide/Network/Detach-ENI.md
           - name: 分配辅助内网IP
             href: Operation-Guide/Network/Assign-Secondary-IPs.md
           - name: 释放辅助内网IP
@@ -182,9 +182,9 @@
           - name: 创建安全组
             href: Operation-Guide/Security-Group/Create-Security-Group.md
           - name: 安全组绑定云主机
-            href: Operation-Guide/Security-Group/Associate-Instance.md
+            href: Operation-Guide/Security-Group/Associate-Security-Group.md
           - name: 安全组解绑云主机
-            href: Operation-Guide/Security-Group/Disassociate-Instance.md
+            href: Operation-Guide/Security-Group/Disassociate-Security-Group.md
           - name: 配置安全组入站规则
             href: Operation-Guide/Security-Group/Configurate-Inbound-Rules.md
           - name: 配置安全组出战规则

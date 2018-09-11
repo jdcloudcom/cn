@@ -11,14 +11,14 @@
 //访问京东云的accessKey  
 String accessKey = "<yourAccessKeyId>";  
 String secreteKey = "<yoursecretKeyId>";    
-//endpoint以华北为例  
-String endpoint = "s-bj.jcloud.com";  
+//endpoint以华北-北京为例  
+String endpoint = "oss.cn-north-1.jcloudcs.com";  
  
 //创建JingdongStorageService实例  
 JingdongStorageService jss= new JingdongStorageService(accessKey,secreteKey);  
 jss.setEndpoint(endpoint);  
  
-//使用云存储  
+//使用对象存储  
   
 //销毁JingdongStorageService实例  
 jss.destroy();

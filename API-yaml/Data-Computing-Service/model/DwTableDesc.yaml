@@ -1,0 +1,45 @@
+swagger: "2.0"
+definitions:
+  dwTableDesc:
+    x-jdcloud-module: xdata
+    title: DwTableDesc
+    type: object
+    properties:
+      dbName:
+        type: string
+        description: 数据库名
+      tableName:
+        type: string
+        description: 表名
+      hiveFileFormat:
+        type: string
+        description: 存储格式
+      fieldsDelimit:
+        type: string
+        description: 字段分隔符
+      linesDelimit:
+        type: string
+        description: 行分隔符
+      otherSerdeProperties:
+        type: object
+        description: 其他serde属性
+      createTime:
+        type: string
+        description: 创建时间（自动生成）
+      owner:
+        type: string
+        description: 所有者（自动生成）
+      comments:
+        type: string
+        description: 描述信息
+      externalLocation:
+        type: string
+        description: 外表位置
+      parameters:
+        type: object
+        description: 参数
+      rows:
+        type: array
+        items:
+          $ref: "../model/DwTableRow.yaml#/definitions/dwTableRow"
+        description: 列信息

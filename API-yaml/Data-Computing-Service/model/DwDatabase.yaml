@@ -1,0 +1,45 @@
+swagger: "2.0"
+definitions:
+  dwDatabase:
+    x-jdcloud-module: xdata
+    title: DwDatabase
+    type: object
+    required:
+      - databaseName
+    properties:
+      id:
+        type: integer
+        description: 数据库id
+      userName:
+        type: string
+        description: 用户名
+      databaseName:
+        type: string
+        description: 数据库名称
+      totalTableQuantity:
+        type: integer
+        description: 总表数量
+      createTime:
+        type: string
+        description: 创建时间
+      lastUpdateTime:
+        type: string
+        description: 最新更新时间
+      physicalStorageCapacity:
+        type: string
+        description: 最新更新时间
+      category:
+        type: string
+        description: 类别
+      source:
+        type: string
+        description: 来源
+      owner:
+        type: string
+        description: 所有者
+      location:
+        type: string
+        description: 位置
+      comments:
+        type: string
+        description: 描述信息

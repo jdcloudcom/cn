@@ -1,0 +1,20 @@
+swagger: "2.0"
+definitions:
+  userAccessKey:
+    x-jdcloud-module: iam
+    properties:
+      accessKey:
+        type: string
+        description: accessKey
+      accessKeySecret:
+        type: string
+        description: accessKeySecret
+      createTime:
+        type: string
+        description: 创建时间
+      state:
+        type: integer
+        description: 禁用/启用状态[0-禁用,1-启用]
+      yn:
+        type: integer
+        description: 删除/有效状态[0-删除,1-有效]

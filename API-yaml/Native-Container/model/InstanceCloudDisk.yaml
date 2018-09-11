@@ -1,0 +1,32 @@
+swagger: "2.0"
+definitions:
+  instanceCloudDisk:
+    x-jdcloud-module: nc
+    x-jdcloud-internal: false
+    type: object
+    description: 描述一个磁盘
+    properties:
+        diskId:
+          type: string
+          description: 云硬盘ID
+        az:
+          type: string
+          description: 所属AZ
+        name:
+          type: string
+          description: 硬盘名称
+        description:
+          type: string
+          description: 硬盘描述
+        diskType:
+          type: string
+          description: 磁盘类型，取值为 ssd, premium-hdd 之一
+        diskSize:
+          type: integer
+          description: 磁盘大小（GiB）
+        status:
+          type: string
+          description: 云硬盘状态，取值为 creating、available、in-use、extending、restoring、deleting、deleted、error_creating、error_deleting、error_restoring、error_extending 之一
+        createTime:
+          type: string
+          description: 创建时间

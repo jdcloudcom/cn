@@ -1,0 +1,285 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: 弹性网卡
+  description: 弹性网卡相关接口
+
+basePath: /regions/{regionId}
+
+schemes:
+  - https
+
+paths:
+  "/networkInterfaces/":
+     get:
+       summary: "查询弹性网卡列表"
+       description: "查询弹性网卡列表"
+       operationId: describeNetworkInterfaces
+
+       parameters:
+          - name: pageNumber
+            in: query
+            type: integer
+            default: 1
+            minimum: 1
+            description: 页码, 默认为1, 取值范围：[1,∞), 页码超过总页数时, 显示最后一页
+          - name: pageSize
+            in: query
+            type: integer
+            default: 20
+            minimum: 10
+            maximum: 100
+            description: 分页大小，默认为20，取值范围：[10,100]
+
+          - name: filters
+            in: query
+            type: array
+            items:
+              #$ref: "/jcloud-open-api/common/model/Filter.yaml#/definitions/filter"
+              $ref: "../../common/model/Filter.yaml#/definitions/filter"
+            description: |
+                   networkInterfaceIds - 弹性网卡ID列表，支持多个
+                   networkInterfaceNames - 弹性网卡名称列表，支持多个
+                   vpcId - 弹性网卡所属vpc Id，支持单个
+                   subnetId	- 弹性网卡所属子网Id，支持单个
+                   role - 网卡角色，取值范围：Primary（主网卡）、Secondary（辅助网卡），支持单个
+
+       responses:
+         200:
+           description: OK
+           schema:
+             properties:
+               result:
+                 description: "返回结果"
+                 properties:
+                   networkInterfaces:
+                     description: "networkInterface资源信息列表"
+                     type: array
+                     items:
+                       $ref: "../model/NetworkInterface.yaml#/definitions/networkInterface"
+                   totalCount:
+                     description: "总数量"
+                     type: number
+               requestId:
+                 description: "请求ID"
+                 type: string
+         400:
+           description: "invalid parameter"
+         401:
+           description: "Authentication failed"
+     post:
+       description: "创建网卡接口，只能创建辅助网卡"
+       operationId: CreateNetworkInterface
+       parameters:
+         - name: networkInterfaceSpec
+           in: body
+           required: true
+           description: "创建网卡请求参数"
+           x-jdcloud-tiered: false
+           schema:
+             $ref: "../model/NetworkInterfaceSpec.yaml#/definitions/networkInterfaceSpec"
+       responses:
+         200:
+           description: Successful operation
+           schema:
+             type: object
+             properties:
+               result:
+                 description: "返回结果"
+                 properties:
+                   networkInterfaceId:
+                     description: "弹性网卡Id"
+                     type: string
+               requestId:
+                 description: "请求ID"
+                 type: string
+         429:
+           description: "NetworkInterface quota limit exceeded"
+         404:
+           description: "Resource 'subnetId' not found"
+         409:
+           description: "Resource 'primaryIp' already be used"
+
+  "/networkInterfaces/{networkInterfaceId}":
+      get:
+        summary: "查询弹性网卡信息详情"
+        description: "查询弹性网卡信息详情"
+        operationId: describeNetworkInterface
+
+        responses:
+          200:
+            description: OK
+            schema:
+              properties:
+                result:
+                  description: "返回结果"
+                  properties:
+                    networkInterface:
+                      description: "networkInterface资源信息"
+                      $ref: "../model/NetworkInterface.yaml#/definitions/networkInterface"
+                requestId:
+                  description: "请求ID"
+                  type: string
+
+          400:
+            description: "invalid parameter"
+          401:
+            description: "Authentication failed"
+
+      delete:
+        summary: "删除弹性网卡"
+        description: "删除弹性网卡接口"
+        operationId: deleteNetworkInterface
+        responses:
+          200:
+            description: OK
+            schema:
+              properties:
+                requestId:
+                  description: "请求ID"
+                  type: string
+          404:
+            description: NOT_FOUND
+   
+      patch:
+        summary: "修改弹性网卡"
+        description: "修改弹性网卡接口"
+        operationId: modifyNetworkInterface
+        parameters:
+          - name: modifyNetworkInterfaceSpec
+            in: body
+            required: true
+            description: "修改弹性网卡"
+            x-jdcloud-tiered: false
+            schema:
+              $ref: "../model/ModifyNetworkInterfaceSpec.yaml#/definitions/modifyNetworkInterfaceSpec"
+
+        responses:
+          200:
+            description: OK
+            schema:
+              properties:
+                requestId:
+                  description: "请求ID"
+                  type: string
+          400:
+            description: Request parameter x.y.z is 'xxx', expected one of [yyy,zzz]
+          404:
+            description: Resource not found
+           
+
+  "/networkInterfaces/{networkInterfaceId}:associateElasticIp":
+     post:
+       description: "给网卡绑定弹性Ip接口"
+       operationId: associateElasticIp
+       parameters:
+         - name: associateElasticIpSpec
+           in: body
+           required: true
+           x-jdcloud-tiered: false
+           schema:
+             $ref: "../model/AssociateElasticIpSpec.yaml#/definitions/associateElasticIpSpec"
+       responses:
+         200:
+           description: Successful operation
+           schema:
+             type: object
+             properties:
+               requestId:
+                 description: "请求ID"
+                 type: string
+         400:
+           description: Request parameter x.y.z is 'xxx', expected one of [yyy,zzz]
+         404:
+           description: Resource not found
+
+  "/networkInterfaces/{networkInterfaceId}:disassociateElasticIp":
+     post:
+       description: "给网卡解绑弹性Ip接口"
+       operationId: disassociateElasticIp
+       parameters:
+         - name: disassociateElasticIpSpec
+           in: body
+           required: true
+           x-jdcloud-tiered: false
+           schema:
+             $ref: "../model/DisassociateElasticIpSpec.yaml#/definitions/disassociateElasticIpSpec"
+       responses:
+         200:
+           description: "Successful operation"
+           schema:
+             type: object
+             properties:
+               requestId:
+                 description: "请求ID"
+                 type: string
+         400:
+           description: Request parameter x.y.z is 'xxx', expected one of [yyy,zzz]
+         404:
+           description: Resource not found
+
+  "/networkInterfaces/{networkInterfaceId}:assignSecondaryIps":
+     post:
+       description: "给网卡分配secondaryIp接口"
+       operationId: assignSecondaryIps
+       parameters:
+         - name: assignSecondaryIpsSpec
+           in: body
+           required: true
+           x-jdcloud-tiered: false
+           schema:
+             $ref: "../model/AssignSecondaryIpsSpec.yaml#/definitions/assignSecondaryIpsSpec"
+       responses:
+         200:
+           description: Successful operation
+           schema:
+             type: object
+             properties:
+               requestId:
+                 description: "请求ID"
+                 type: string
+         400:
+           description: Request parameter x.y.z is 'xxx', expected one of [yyy,zzz]
+         404:
+           description: Resource not found
+
+  "/networkInterfaces/{networkInterfaceId}:unassignSecondaryIps":
+    post:
+      description: "给网卡删除secondaryIp接口"
+      operationId: unassignSecondaryIps
+      parameters:
+        - name: unassignSecondaryIpsSpec
+          in: body
+          required: true
+          x-jdcloud-tiered: false
+          schema:
+            $ref: "../model/UnassignSecondaryIpsSpec.yaml#/definitions/unassignSecondaryIpsSpec"
+      responses:
+        200:
+          description: "Successful operation"
+          schema:
+            type: object
+            properties:
+              requestId:
+                 description: "请求ID"
+                 type: string
+        400:
+           description: Request parameter x.y.z is 'xxx', expected one of [yyy,zzz]
+        404:
+           description: Resource not found
+
+
+
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: Region ID
+  networkInterfaceId:
+    name: networkInterfaceId
+    in: path
+    required: true
+    type: string
+    description: networkInterface ID

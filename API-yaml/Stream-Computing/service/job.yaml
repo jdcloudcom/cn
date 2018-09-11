@@ -1,0 +1,191 @@
+swagger: '2.0'
+info:
+  version: v1
+  title: JOB相关API
+  description: 流计算作业相关信息接口
+basePath: '/regions/{regionId}'
+paths:
+  ###########添加或者更新job#################
+  /job:
+    post:
+      description: "添加或者更新job"
+      operationId: addOrUpdateJob
+      parameters:
+        - name: jobStr
+          in: body
+          description: 创建作业的详情
+          required: true
+          schema:
+            $ref: "../model/jobView.yaml#/definitions/jobStr"
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                properties:
+                  okInfo:
+                    type: object
+                    description: 成功结果对象
+                    $ref: "../model/200.yaml#/definitions/okInfo"
+              requestId:
+                type: string
+        500:
+          description: "INTERNAL_ERROR"
+  #########查询指定作业详情#################
+    get:
+        description: "查询指定作业详情"
+        operationId: describeJob
+        parameters:
+            - name: jobId
+              in: query
+              type: integer
+              required: true
+            - name: namespaceId
+              in: query
+              type: integer
+              required: true
+        responses: 
+            '200':
+              description: OK
+              schema:
+                properties: 
+                   result:
+                      properties:
+                        jobStr:
+                          $ref: "../model/jobView.yaml#/definitions/jobStr"        
+                   requestId:
+                      type: string
+            500:
+              description: "INTERNAL_ERROR"
+
+###############删除作业####################
+    delete:
+        description: 删除作业
+        operationId: deleteJob
+        parameters:
+            - name: namespaceId
+              in: query
+              type: string
+              required: true    
+            - name: jobId
+              in: query
+              type: integer
+              required: true
+        responses: 
+            200:
+              description: OK
+              schema:
+                type: object
+                properties: 
+                   regionId:
+                      type: string
+                   result:
+                      properties:
+                          message: 
+                             type: string
+                             description: 删除job返回信息
+                          status:
+                            type: boolean
+            500:
+              description: "INTERNAL_ERROR"                   
+                                                          
+ 
+###############查询指定应用下的所有job#################################### 
+  /jobList:
+    get:
+        description: 查询指定应用下的所有job
+        operationId: getJobList
+        parameters:
+            - name: namespaceId
+              in: query
+              type: string
+              required: true
+        responses: 
+            200:
+              description: OK
+              schema:
+                type: object
+                properties: 
+                   requestId:
+                      type: string
+                   result:
+                      properties:
+                          data: 
+                             type: array
+                             description: 查询出的job对象
+                             items:
+                                type: object
+                                $ref: "../model/jobView.yaml#/definitions/jobStr" 
+            500:
+              description: "INTERNAL_ERROR"                                
+################运行作业####################
+  /job:start: 
+    get:
+        description: 运行job
+        operationId: startJob
+        parameters:
+            - name: namespaceId
+              in: query
+              type: string
+              required: true    
+            - name: jobId
+              in: query
+              type: integer
+              required: true
+        responses: 
+            200:
+              description: OK
+              schema:
+                type: object
+                properties: 
+                   regionId:
+                      type: string
+                   result:
+                      properties:
+                          message: 
+                             type: string
+                             description: 是否成功提交作业
+                          
+            500:
+              description: "INTERNAL_ERROR"                       
+            
+###############停止作业运行####################
+  /job:stop:
+    get:
+        description: 停止作业运行job
+        operationId: stopJob
+        parameters:
+            - name: namespaceId
+              in: query
+              type: string
+              required: true    
+            - name: jobId
+              in: query
+              type: integer
+              required: true
+        responses: 
+            200:
+              description: OK
+              schema:
+                type: object
+                properties: 
+                   regionId:
+                      type: string
+                   result:
+                      properties:
+                          message: 
+                             type: string
+                             description: 成功启动作业返回信息
+                          
+            500:
+              description: "INTERNAL_ERROR"      
+
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: Region ID

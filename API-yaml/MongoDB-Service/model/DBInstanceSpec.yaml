@@ -1,0 +1,56 @@
+swagger: "2.0"
+definitions:
+  DBInstanceSpec:
+    x-jdcloud-module: mongodb
+    title: DBInstanceSpec
+    type: object
+    required:
+      - instanceClass
+      - instanceStorageGB
+      - multiAZ
+      - azId
+      - vpcId
+      - subnetId
+    properties:
+      instanceName:
+        type: string
+        description: 实例名称，只支持数字、字母、英文下划线、中文，且不少于2字符不超过32字符。
+      engine:
+        type: string
+        description: 数据库类型，MongoDB
+      engineVersion:
+        type: string
+        description: 数据库版本，3.2
+      instanceClass:
+        type: string
+        description: 实例规格代码。mongo.s1.small：1核2G;mongo.s1.medium：2核4G;mongo.s1.large：4核8G;mongo.s1.xlarge：8核16G;mongo.s2.2xlarge：8核32G;mongo.s2.4xlarge：16核64G;
+      instanceStorageGB:
+        type: integer
+        description: 存储空间，单位GB，取值10-1000,10的倍数。
+      multiAZ:
+        type: boolean
+        description: 是否选择多可用区部署
+      azId:
+        type: array
+        items:
+          type: string
+        description: 可用区ID，必填，第一个ID为primary所在可用区ID，第二个为secondary，第三个为hidden。multiAZ选择是，则primary与secondary的可用区ID需相同，且与hidden不同；multiAZ选择否，三个节点写相同的可用区ID。
+      vpcId:
+        type: string
+        description: VPCID
+      subnetId:
+        type: string
+        description: 子网ID
+      password:
+        type: string
+        description: 密码，必须包含且只支持字母及数字，不少于8字符不超过16字符。
+      backupId:
+        type: string
+        description: 按备份创建使用的具体备份ID
+      originDBInstanceId:
+        type: string
+        description: 基于一个实例的备份创建新实例，如填写则restoreTime也需要填写。
+      restoreTime:
+        type: string
+        description: 用户指定备份保留周期内的任意时间点，如2011-06-11T16:00:00Z，非必填，与backupId互斥。
+      

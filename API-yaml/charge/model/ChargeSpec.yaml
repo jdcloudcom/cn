@@ -1,0 +1,22 @@
+swagger: "2.0"
+definitions:
+  chargeSpec:
+    x-jdcloud-module: charge
+    properties:
+      chargeMode:
+        type: string
+        enum:
+          - prepaid_by_duration
+          - postpaid_by_usage
+          - postpaid_by_duration
+        default: postpaid_by_duration
+        description: 计费模式，取值为：prepaid_by_duration，postpaid_by_usage或postpaid_by_duration，prepaid_by_duration表示预付费，postpaid_by_usage表示按用量后付费，postpaid_by_duration表示按配置后付费，默认为postpaid_by_duration.请参阅具体产品线帮助文档确认该产品线支持的计费类型
+      chargeUnit:
+        type: string
+        enum:
+          - month
+          - year
+        description: 预付费计费单位，预付费必填，当chargeMode为prepaid_by_duration时有效，取值为：month、year，默认为month
+      chargeDuration:
+        type: integer
+        description: 预付费计费时长，预付费必填，当chargeMode取值为prepaid_by_duration时有效。当chargeUnit为month时取值为：1~9，当chargeUnit为year时取值为：1、2、3

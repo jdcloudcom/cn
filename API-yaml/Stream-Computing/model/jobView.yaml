@@ -1,0 +1,42 @@
+swagger: "2.0"
+definitions:
+  jobStr:
+    x-jdcloud-module: streamcomputer
+    title: jobStr
+    type: object
+    properties:
+      namespaceId:
+        type: string
+      name:
+        type: string
+      description:
+        type: string
+      resourceConsume:
+        type: integer
+      id: 
+        type: integer
+      uid:
+        type: string
+      status:
+        type: string
+        format: byte
+      duration:
+        type: integer
+      appName:
+        type: string
+      deleted:
+        type: string
+        format: byte
+      createTime:
+        type: string
+        format: date
+      updateTime: 
+        type: string
+        format: date
+      userName:
+        type: string
+      sqlStatement:
+        type: string
+      jobType:
+        type: string 
+        

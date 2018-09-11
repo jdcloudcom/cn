@@ -1,0 +1,123 @@
+swagger: "2.0"                                  # 基于Swagger 2.0版本实现
+info:
+  version: "v1"                                 # OpenApi版本号
+  title: OSS相关接口
+  description: OSS相关接口
+
+basePath: /regions/{regionId}
+
+paths:
+  /buckets/{bucketname}:imgProtected:
+    put:
+      tags:
+      - developers
+      summary: create imgProtected
+      operationId: putImgProtected
+      x-jdcloud-internal: true
+      description: |
+        创建原图保护
+      produces:
+      - application/json
+      parameters:
+      - in: path
+        name: bucketname
+        required: true
+        type: string
+        description: Bucket Name，例如：test
+      - in: query
+        name: condition
+        description: 包含要保护的图片后缀的xml
+        required: true
+        type: string
+        description: 原图保护配置
+      responses:
+        200:
+          description: OK
+        400:
+          description: Invalid Argument
+#          schema:
+#            $ref: '../model/oss.yaml#/definitions/ErrorResponse'
+        403:
+          description: Access Denied
+#          schema:
+#            $ref: '../model/oss.yaml#/definitions/ErrorResponse'
+        409:
+          description: The requested bucket name is not available. The bucket namespace is shared by all users of the system. Please select a different name and try again.
+#          schema:
+#            $ref: '../model/oss.yaml#/definitions/ErrorResponse'
+    get:
+      tags:
+      - developers
+      summary: get imgProtected Condition
+      operationId: getimgProtectedCondition
+      x-jdcloud-internal: true
+      description: |
+        获取当前bucket的原图保护配置
+      produces:
+      - application/json
+      parameters:
+      - in: path
+        name: bucketname
+        required: true
+        type: string
+        description: Bucket Name，例如：test
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  imgProtectedResult:
+                    $ref: '../model/imgProtectedResult.yaml#/definitions/Result'
+              requestId:
+                type: string
+#            properties:
+        400:
+          description: Invalid Argument
+#          schema:
+#            $ref: '../model/oss.yaml#/definitions/ErrorResponse'
+        403:
+          description: Access Denied
+#          schema:
+#            $ref: '../model/oss.yaml#/definitions/ErrorResponse'
+    delete:
+      tags:
+      - developers
+      summary: delete imgProtected
+      operationId: deleteImgProtected
+      x-jdcloud-internal: true
+      description: |
+        关闭原图保护
+      produces:
+      - application/json
+      parameters:
+      - in: path
+        name: bucketname
+        required: true
+        type: string
+        description: Bucket Name，例如：test
+      responses:
+        200:
+          description: OK
+        400:
+          description: Invalid Argument
+#          schema:
+#            $ref: '../model/oss.yaml#/definitions/ErrorResponse'
+        403:
+          description: Access Denied
+#          schema:
+#            $ref: '../model/oss.yaml#/definitions/ErrorResponse'
+        404:
+          description: The specified bucket does not exist.
+#          schema:
+#            $ref: '../model/oss.yaml#/definitions/ErrorResponse'
+#路径通用参数
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: Region ID，例如：cn-north-1
+

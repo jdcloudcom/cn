@@ -14,11 +14,11 @@ OSS Java SDK提供了丰富的文件下载接口，用户可以通过以下方�
 
 在进行大文件下载时，往往不希望一次性处理全部内容，而是希望流式地处理，一次处理一部分内容。
 ```
-//您的AccessKey和SecretKey可以登录到京东云存储的控制台，在【Access Key 管理】中查看。  
+//您的AccessKey和SecretKey可以登录到对象存储的控制台，在【Access Key 管理】中查看。  
 String accessKey =  "<yourAccessKeyId>";  
 String secreteKey = "<yourSecretKey>";       
-// endpoint以华北为例，其它region请按实际情况填写  
-String endPoint = "s-bj.jcloud.com";  
+// endpoint以华北-北京为例，其它region请按实际情况填写  
+String endPoint = "oss.cn-north-1.jcloudcs.com";  
 String bucketName = "<yourBucketName>";  
 String objectName = "<yourObjectName>";  
 //ClientConfig当前为默认配置，用户可根据需要自行配置，如设置连接超时时间等  
@@ -79,8 +79,8 @@ in.close();
 //您的AccessKey和SecretKey可以登录到京东云存储的控制台，在【Access Key 管理】中查看。  
 String accessKey =  "<yourAccessKeyId>";  
 String secreteKey = "<yourSecretKey>";       
-// endpoint以华北为例，其它region请按实际情况填写  
-String endPoint = "s-bj.jcloud.com";  
+// endpoint以华北-北京为例，其它region请按实际情况填写  
+String endPoint = "oss.cn-north-1.jcloudcs.com";  
 String bucketName = "<yourBucketName>";  
 String objectName = "<yourObjectName>";   
 //ClientConfig当前为默认配置，用户可根据需要自行配置，如设置连接超时时间等  

@@ -1,0 +1,16 @@
+swagger: "2.0"
+definitions:
+  envVar:
+    x-jdcloud-module: nc
+    type: object
+    description: 环境变量
+    x-jdcloud-internal: false
+    required:
+      - name
+    properties:
+      name:
+        type: string
+        description: 环境变量名称
+      value:
+        type: string
+        description: 环境变量的值

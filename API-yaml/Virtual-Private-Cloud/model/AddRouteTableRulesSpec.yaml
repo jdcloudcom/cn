@@ -1,0 +1,13 @@
+swagger: "2.0"
+definitions:
+  addRouteTableRulesSpec:
+    x-jdcloud-module: vpc
+    required:
+      - routeTableRuleSpecs
+    properties:
+      routeTableRuleSpecs:
+        type: array
+        items:
+          $ref: "./AddRouteTableRules.yaml#/definitions/addRouteTableRules"
+        description: 安全组规则信息
+        

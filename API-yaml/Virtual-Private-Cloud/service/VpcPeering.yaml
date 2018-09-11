@@ -1,0 +1,179 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: 对等连接
+  description: 对等连接相关接口
+
+basePath: /regions/{regionId}
+
+schemes:
+  - https
+
+paths:
+  "/vpcPeerings/":
+     get:
+       summary: "查询VpcPeering资源列表"
+       description: "查询VpcPeering资源列表"
+       operationId: describeVpcPeerings
+
+       parameters:
+         - name: pageNumber
+           in: query
+           type: integer
+           default: 1
+           minimum: 1
+           description: 页码, 默认为1, 取值范围：[1,∞), 页码超过总页数时, 显示最后一页
+         - name: pageSize
+           in: query
+           type: integer
+           default: 20
+           minimum: 10
+           maximum: 100
+           description: 分页大小，默认为20，取值范围：[10,100]
+
+         - name: filters
+           in: query
+           type: array
+           items:
+             #$ref: "/jcloud-open-api/common/model/Filter.yaml#/definitions/filter"
+             $ref: "../../common/model/Filter.yaml#/definitions/filter"
+           description: |
+                  vpcPeeringIds - vpcPeering ID，支持多个
+                  vpcPeeringNames - vpcPeering名称列表，支持多个
+                  vpcId	- vpcPeering本端Vpc Id，支持单个
+                  remoteVpcId - vpcPeering对端Vpc Id，支持单个
+       responses:
+         200:
+           description: OK
+           schema:
+             properties:
+               result:
+                 description: "返回结果"
+                 properties:
+                   vpcPeerings:
+                     description: "VpcPeering资源信息列表"
+                     type: array
+                     items:
+                       $ref: "../model/VpcPeering.yaml#/definitions/vpcPeering"
+                   totalCount:
+                     description: "总数量"
+                     type: number
+               requestId:
+                 description: "请求ID"
+                 type: string
+
+     post:
+       description: "创建VpcPeering接口"
+       operationId: createVpcPeering
+       parameters:
+         - name: createVpcPeeringSpec
+           in: body
+           required: true
+           description: "创建VpcPeering参数"
+           x-jdcloud-tiered: false
+           schema:
+             $ref: "../model/CreateVpcPeeringSpec.yaml#/definitions/createVpcPeeringSpec"
+       responses:
+         200:
+           description: Successful operation
+           schema:
+             type: object
+             properties:
+               result:
+                 description: "返回结果"
+                 properties:
+                   vpcPeering:
+                     description: "VpcPeering资源信息"
+                     $ref: "../model/VpcPeering.yaml#/definitions/vpcPeering"
+               requestId:
+                 description: "请求ID"
+                 type: string
+         429:
+           description: "VpcPeering quota limit exceeded."
+         404:
+           description: "Resource not found"
+         409:
+           description: "Already has VpcPeering with param"
+         400:
+           description: "Request parameter x.y.z is 'xxx', expected one of [yyy,zzz]"
+
+  "/vpcPeerings/{vpcPeeringId}":
+     get:
+       summary: "查询VpcPeering资源详情"
+       description: "查询VpcPeering资源详情"
+       operationId: describeVpcPeering
+
+       responses:
+         200:
+           description: OK
+           schema:
+             properties:
+               result:
+                  description: "返回结果"
+                  properties:
+                    vpcPeering:
+                      description: "VpcPeering资源信息"
+                      $ref: "../model/VpcPeering.yaml#/definitions/vpcPeering"
+               requestId:
+                 description: "请求ID"
+                 type: string
+
+     #delete VpcPeering
+     delete:
+       summary: "删除VpcPeering接口"
+       description: "删除VpcPeering接口"
+       operationId: deleteVpcPeering
+       responses:
+         200:
+           description: OK
+           schema:
+             properties:
+               requestId:
+                 description: "请求ID"
+                 type: string
+         404:
+           description: NOT_FOUND
+
+     put:
+       summary: "修改VpcPeering接口"
+       description: "修改VpcPeering接口"
+       operationId: modifyVpcPeering
+       parameters:
+         - name: modifyVpcPeeringSpec
+           in: body
+           required: true
+           x-jdcloud-tiered: false
+           schema:
+             $ref: "../model/ModifyVpcPeeringSpec.yaml#/definitions/modifyVpcPeeringSpec"
+       responses:
+        200:
+           description: Successful operation
+           schema:
+             type: object
+             properties:
+                vpcPeering:
+                    description: "VpcPeering资源信息"
+                    $ref: "../model/VpcPeering.yaml#/definitions/vpcPeering"
+                requestId:
+                   description: "请求ID"
+                   type: string
+        429:
+           description: VpcPeering quota limit exceeded.
+        404:
+           description: Resource not found
+        409:
+           description: Already has VpcPeering with param
+
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: Region ID
+  vpcPeeringId:
+    name: vpcPeeringId
+    in: path
+    required: true
+    type: string
+    description: vpcPeeringId ID

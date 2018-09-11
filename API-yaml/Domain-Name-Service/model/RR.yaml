@@ -1,0 +1,148 @@
+swagger: "2.0"
+definitions:
+  RR:
+    type: object
+    x-jdcloud-module: clouddnsservice
+    properties:
+      id:
+        type: integer
+        description: 域名解析的唯一ID
+      hostRecord:
+        type: string
+        description: 主机记录
+      hostValue:
+        type: string
+        description: 解析记录的值
+      jcloudRes:
+        type: boolean
+        description: 是否是京东云资源
+      mxPriority:
+        type: integer
+        description: 优先级，只存在于某些解析记录类型
+      port:
+        type: integer
+        description: 端口，只存在于某些解析记录类型
+      ttl:
+        type: integer
+        description: 解析记录的生存时间
+      type:
+        type: string
+        description: 解析记录的类型
+      weight:
+        type: integer
+        description: 解析记录的权重              
+      viewValue:
+        type: array
+        items:
+            type: integer
+        description: 解析线路的ID
+  updateRR:
+    type: object
+    x-jdcloud-module: clouddnsservice
+    properties:
+      domainName:
+        type: string
+        required: true
+        description: 主域名
+      id:
+        type: integer
+        required: true
+        description: 域名解析的唯一ID
+      hostRecord:
+        type: string
+        required: true
+        description: 主机记录
+      hostValue:
+        type: string
+        required: true
+        description: 解析记录的值
+      jcloudRes:
+        type: boolean
+        required: true
+        description: 是否是京东云资源  
+      mxPriority:
+        type: integer
+        required: true
+        description: 优先级，只存在于某些解析记录类型
+      port:
+        type: integer
+        required: true
+        description: 端口，只存在于某些解析记录类型
+      ttl:
+        type: integer
+        required: true
+        description: 解析记录的生存时间
+      type:
+        type: string
+        required: true
+        description: 解析的类型
+      weight:
+        type: integer
+        required: true
+        description: 解析记录的权重              
+      viewValue:
+        type: integer
+        required: true
+        description: 解析线路的ID
+  addRR:
+    type: object
+    x-jdcloud-module: clouddnsservice
+    properties:
+      hostRecord:
+        type: string
+        description: 主机记录
+        required: true
+      hostValue:
+        type: string
+        description: 解析记录的值
+        required: true
+      jcloudRes:
+        type: boolean
+        description: 是否是京东云资源
+        required: true        
+      mxPriority:
+        type: integer
+        description: 优先级，只存在于某些解析记录类型
+        required: true
+      port:
+        type: integer
+        description: 端口，只存在于某些解析记录类型
+        required: true
+      ttl:
+        type: integer
+        description: 解析记录的生存时间
+        required: true
+      type:
+        type: string
+        description: 解析的类型
+        required: true
+      weight:
+        type: integer
+        description: 解析记录的权重
+        required: true        
+      viewValue:
+        type: integer
+        description: 解析线路的ID
+        required: true        
+  viewTree:
+    type: object
+    x-jdcloud-module: clouddnsservice
+    properties:
+      disabled:
+        type: boolean
+        description: 此解析线路是否禁用
+      label:
+        type: string
+        description: 解析线路的名称
+      leaf:
+        type: boolean
+        description: 此数据是否是叶子节点
+      value:
+        type: integer
+        description: 解析线路ID
+      children:
+        type: array
+        required: false
+        items:
+          $ref: "./RR.yaml#/definitions/viewTree"  
+        

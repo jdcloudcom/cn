@@ -1,0 +1,319 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: 用户管理接口
+  description: 用户管理接口
+
+basePath: /regions/{regionId}
+
+paths:
+  "/subUser":
+    ###################### 创建子账号 ######################
+    post:
+      description: "创建子账号"
+      operationId: createSubuser
+      x-jdcloud-internal: false
+      parameters:
+        - name: createSubUserInfo
+          in: body
+          description: 子账号信息
+          required: true
+          schema:
+            $ref: "../model/CreateSubUserInfo.yaml#/definitions/createSubUserInfo"
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              requestId:
+                type: string
+
+  "/userAccessKeys":
+    ###################### 获取用户所有AccessKey ######################
+    get:
+      description: "查询AccessKey列表"
+      operationId: describeUserAccessKeys
+      x-jdcloud-internal: false
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                properties:
+                  userAccessKeys:
+                   type: array
+                   description: userAccessKey列表
+                   items:
+                     $ref: "../model/UserAccessKey.yaml#/definitions/userAccessKey"
+              requestId:
+                type: string
+
+  "/userAccessKey":
+    ###################### 创建AccessKey ######################
+    post:
+      description: "创建AccessKey"
+      operationId: createUserAccessKey
+      x-jdcloud-internal: false
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              requestId:
+                type: string
+
+
+  "/userAccessKey/{accessKey}:enabled":
+    ###################### 启用AccessKey ######################
+    put:
+      description: "启用AccessKey"
+      operationId: enabledUserAccessKey
+      x-jdcloud-internal: false
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              requestId:
+                type: string
+
+
+  "/userAccessKey/{accessKey}:disabled":
+    ###################### 禁用AccessKey ######################
+    put:
+      description: "禁用AccessKey"
+      operationId: disabledUserAccessKey
+      x-jdcloud-internal: false
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              requestId:
+                type: string
+
+  "/userAccessKey/{accessKey}":
+    ###################### 删除AccessKey ######################
+    delete:
+      description: "删除AccessKey"
+      operationId: deleteUserAccessKey
+      x-jdcloud-internal: false
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              requestId:
+                type: string
+
+
+  "/user:describeUserInfo":
+    ###################### 根据AccessKey或者AccountId获取用户信息 ######################
+    get:
+      description: "根据AccessKey或者AccountId获取用户信息"
+      operationId: describeUserInfo
+      x-jdcloud-internal: true
+      parameters:
+        - name: accessKey
+          in: query
+          type: string
+          description: 用户accessKey
+          required: false
+        - name: accountId
+          in: query
+          type: string
+          description: 用户唯一id
+          required: false
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                properties:
+                  pin:
+                    type: string
+                    description: 用户pin，如果是子账号，则格式为主账号pin @ 子账号pin
+                  enabled:
+                    type: boolean
+                    description: 用户是否可用，true表示可用，false表示不可用，该用户在黑名单中
+                  authStatus:
+                    type: integer
+                    description: 0-未认证，1-已认证（个人），2-已认证（企业），3 已认证（个人和企业）
+                  accountId:
+                    type: integer
+                    format: int64
+                    description: 用户唯一id
+                  accessKey:
+                    type: string
+                    description: accessKey，入参为accountId的时候，为空
+                  accessKeySecret:
+                    type: string
+                    description: accessKeySecret，入参为accountId的时候，为空
+                  state:
+                    type: integer
+                    description: accessKey状态，0-禁用，1-启用，入参为accountId的时候，为空
+                  yn:
+                    type: integer
+                    description: 是否删除，0-删除，1-有效，入参为accountId的时候，为空
+              requestId:
+                type: string
+
+  "/user:describeBaseInfo":
+    ###################### 根据用户pin获取用户基础信息 ######################
+    get:
+      description: "根据用户pin获取用户基础信息"
+      operationId: describeBaseInfo
+      x-jdcloud-internal: true
+      parameters:
+        - name: pin
+          in: query
+          type: string
+          description: 用户pin
+          required: true
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                properties:
+                  pin:
+                    type: string
+                    description: 用户pin
+                  enabled:
+                    type: integer
+                    description: 用户是否可用，1表示可用，0表示不可用，该用户在黑名单中
+                  userType:
+                    type: integer
+                    description: 用户类型 1：个人，2：企业 ,3：个人升级企业
+                  personAuthStatus:
+                    type: integer
+                    description: -1-未认证（个人），1-已认证（个人）
+                  companyaAuthStatus:
+                    type: integer
+                    description: 0-审核中（企业），1-已认证（企业），2-未通过（企业）
+                  accountBalance:
+                    type: number
+                    description: 账户余额
+                  accountId:
+                    type: integer
+                    format: int64
+                    description: 用户唯一id
+                  meta:
+                    type: string
+                    description: 用户的扩展信息
+                  activeStatus:
+                    type: integer
+                    description: 用户的激活状态
+                  cscPhone:
+                    type: string
+                    description: 用户的手机号
+                  cscEmail:
+                    type: string
+                    description: 用户的邮箱
+              requestId:
+                type: string
+
+  "/user:describeUserThreshold":
+    ###################### 根据用户pin获取用户门框值 ######################
+    get:
+      description: "根据用户pin获取用户门槛值"
+      operationId: describeUserThreshold
+      x-jdcloud-internal: true
+      parameters:
+        - name: pin
+          in: query
+          type: string
+          description: 用户pin
+          required: true
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                properties:
+                  pin:
+                    type: string
+                    description: 用户pin
+                  threshold:
+                    type: number
+                    description: 门槛值
+              requestId:
+                type: string
+
+  "/describeGlobalAzSaleStatus":
+      ###################### 获取所有地域下的可用区状态 ######################
+      get:
+        description: "获取所有地域下的可用区状态"
+        operationId: describeGlobalAzSaleStatus
+        x-jdcloud-internal: true
+        responses:
+          200:
+            description: OK
+            schema:
+              type: object
+              properties:
+                result:
+                  properties:
+                    data:
+                      type: array
+                      items:
+                        $ref: "../model/BaseProductRegionVo.yaml#/definitions/baseProductRegionVo"
+                requestId:
+                  type: string
+
+
+  "/describeGlobalAzMapping":
+      ###################### 获取所有地域下的可用区映射关系 ######################
+      get:
+        description: "获取所有地域下的可用区映射关系"
+        operationId: describeGlobalAzMapping
+        x-jdcloud-internal: true
+        parameters:
+         - name: pin
+           in: query
+           type: string
+           description: 用户pin
+           required: true
+        responses:
+          200:
+            description: OK
+            schema:
+              type: object
+              properties:
+                result:
+                  properties:
+                    data:
+                      type: array
+                      items:
+                        $ref: "../model/GlobalAzMappingVo.yaml#/definitions/globalAzMappingVo"
+                requestId:
+                  type: string
+
+
+#路径通用参数
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: Region ID
+  accessKey:
+    name: accessKey
+    in: path
+    required: true
+    type: string
+    description: accessKey

@@ -1,0 +1,12 @@
+swagger: "2.0"
+definitions:
+  addNetworkAclRulesSpec:
+    x-jdcloud-module: vpc
+    required:
+      - networkAclRuleSpecs
+    properties:
+      networkAclRuleSpecs:
+        type: array
+        items:
+          $ref: "./AddNetworkAclRuleSpec.yaml#/definitions/addNetworkAclRuleSpec"
+        description: networkAcl规则列表

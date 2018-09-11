@@ -5,7 +5,7 @@ definitions:
     properties:
       instanceType:
         type: string
-        description: 规格类型
+        description: 实例规格
       vpcId:
         type: string
         description: 主网卡所属VPC的ID

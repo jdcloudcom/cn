@@ -13,14 +13,14 @@ paths:
       description: |
         创建一台或多台指定配置的云主机，创建模式分为三种：1.普通方式、2.使用高可用组、3.使用启动模板。三种方式创建云主机时参数的必传与非必传是不同的，具体请参考<a href="https://www.jdcloud.com/help/detail/3383/isCatalog/1">参数详细说明</a><br>
         - 创建云主机需要通过实名认证
-        - 规格类型
+        - 实例规格
             - 可查询<a href="https://www.jdcloud.com/help/detail/2901/isCatalog/1">DescribeInstanceTypes</a>接口获得指定地域或可用区的规格信息。
             - 不能使用已下线、或已售馨的规格ID
         - 镜像
             - Windows Server 2012 R2标准版 64位 中文版 SQL Server 2014 标准版 SP2内存需大于1GB；
             - Windows Server所有镜像CPU不可选超过64核CPU。
             - 可查询<a href="https://www.jdcloud.com/help/detail/2874/isCatalog/1">DescribeImages</a>接口获得指定地域的镜像信息。
-            - 选择的镜像必须支持选择的规格类型。可查询<a href="https://www.jdcloud.com/help/detail/2872/isCatalog/1">DescribeImageConstraints</a>接口获得指定镜像的规格类型限制信息。<br>
+            - 选择的镜像必须支持选择的实例规格。可查询<a href="https://www.jdcloud.com/help/detail/2872/isCatalog/1">DescribeImageConstraints</a>接口获得指定镜像的实例规格限制信息。<br>
         - 网络配置
             - 指定主网卡配置信息
                 - 必须指定subnetId
@@ -541,7 +541,7 @@ paths:
       description: |
         为云主机创建私有镜像。云主机状态必须为<b>stopped</b>。<br>
         云主机没有正在进行中的任务才可制作镜像。<br>
-        如果云主机中挂载了数据盘，默认会将数据盘创建快照，生成打包镜像。<br>
+        制作镜像以备份系统盘为基础，在此之上可选择全部或部分挂载数据盘制作整机镜像（如不做任何更改将默认制作整机镜像），制作镜像过程会为所挂载云硬盘创建快照并与镜像关联。<br>
         调用接口后，需要等待镜像状态变为<b>ready</b>后，才能正常使用镜像。
       operationId: createImage
       parameters:
@@ -560,7 +560,7 @@ paths:
           type: array
           items:
             $ref: "../model/InstanceDiskAttachmentSpec.yaml#/definitions/instanceDiskAttachmentSpec"
-          description: 数据盘列表，可以在打包镜像的基础上，额外增加新的快照、空盘、或排除云主机中的数据盘。
+          description: 数据盘列表，可以在实例已挂载数据盘的基础上，额外增加新的快照、空盘、或排除云主机中的数据盘。
       responses:
         200:
           description: OK
@@ -767,25 +767,25 @@ paths:
           description: "Service unavailable"
 
   "/instances/{instanceId}:resizeInstance":
-    ###################### 云主机变更规格类型 ######################
+    ###################### 云主机变更实例规格 ######################
     post:
       description: |
-          云主机变更规格类型<br>
+          云主机变更实例规格<br>
           云主机的状态必须为<b>stopped</b>状态。<br>
-          16年创建的云硬盘做系统盘的主机，一代与二代规格类型不允许相互调整。<br>
-          本地盘(local类型)做系统盘的主机，一代与二代规格类型不允许相互调整。<br>
-          使用高可用组(Ag)创建的主机，一代与二代规格类型不允许相互调整。<br>
-          云硬盘(cloud类型)做系统盘的主机，一代与二代规格类型允许相互调整。<br>
-          如果当前主机中的弹性网卡数量，大于规格类型允许的弹性网卡数量，会返回错误。可查询<a href="https://www.jdcloud.com/help/detail/2901/isCatalog/1">DescribeInstanceTypes</a>接口获得指定地域或可用区的规格信息。<br>
-          当前主机所使用的镜像，需要支持要变更的目标规格类型，否则返回错误。可查询<a href="https://www.jdcloud.com/help/detail/2872/isCatalog/1">DescribeImageConstraints</a>接口获得指定镜像的规格类型限制信息。<br>
-          云主机欠费时，无法更改规格类型。
+          16年创建的云硬盘做系统盘的主机，一代与二代实例规格不允许相互调整。<br>
+          本地盘(local类型)做系统盘的主机，一代与二代实例规格不允许相互调整。<br>
+          使用高可用组(Ag)创建的主机，一代与二代实例规格不允许相互调整。<br>
+          云硬盘(cloud类型)做系统盘的主机，一代与二代实例规格允许相互调整。<br>
+          如果当前主机中的弹性网卡数量，大于实例规格允许的弹性网卡数量，会返回错误。可查询<a href="https://www.jdcloud.com/help/detail/2901/isCatalog/1">DescribeInstanceTypes</a>接口获得指定地域或可用区的规格信息。<br>
+          当前主机所使用的镜像，需要支持要变更的目标实例规格，否则返回错误。可查询<a href="https://www.jdcloud.com/help/detail/2872/isCatalog/1">DescribeImageConstraints</a>接口获得指定镜像的实例规格限制信息。<br>
+          云主机欠费时，无法更改实例规格。
       operationId: resizeInstance
       parameters:
         - name: instanceType
           in: query
           type: string
           required: true
-          description: 规格类型，可查询<a href="https://www.jdcloud.com/help/detail/2901/isCatalog/1">DescribeInstanceTypes</a>接口获得指定地域或可用区的规格信息。
+          description: 实例规格，可查询<a href="https://www.jdcloud.com/help/detail/2901/isCatalog/1">DescribeInstanceTypes</a>接口获得指定地域或可用区的规格信息。
       responses:
         200:
           description: OK
@@ -808,7 +808,7 @@ paths:
         云主机的状态必须为<b>stopped</b>状态。<br>
         若当前云主机的系统盘类型为local类型，那么更换的镜像必须为localDisk类型的镜像；同理若当前云主机的系统盘为cloud类型，那么更换的镜像必须为cloudDisk类型的镜像。可查询<a href="https://www.jdcloud.com/help/detail/2874/isCatalog/1">DescribeImages</a>接口获得指定地域的镜像信息。<br>
         若不指定镜像ID，默认使用当前主机的原镜像重置系统。<br>
-        指定的镜像必须能够支持当前主机的规格类型(instanceType)，否则会返回错误。可查询<a href="https://www.jdcloud.com/help/detail/2872/isCatalog/1">DescribeImageConstraints</a>接口获得指定镜像的规格类型限制信息。
+        指定的镜像必须能够支持当前主机的实例规格(instanceType)，否则会返回错误。可查询<a href="https://www.jdcloud.com/help/detail/2872/isCatalog/1">DescribeImageConstraints</a>接口获得指定镜像的实例规格限制信息。
       operationId: rebuildInstance
       parameters:
         - name: password

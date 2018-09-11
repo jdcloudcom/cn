@@ -1,0 +1,33 @@
+swagger: "2.0"
+definitions:
+  createSubUserInfo:
+    x-jdcloud-module: iam
+    required:
+      - name
+      - password
+      - phone
+      - email
+      - passwordConfirm
+      - createAk
+    properties:
+      name:
+        type: string
+        description: 子账号用户名，4~20位数字、字母、中文、下划线、中划线
+      description:
+        type: string
+        description: 描述，0~256个字符
+      password:
+        type: string
+        description: 密码，6~20位，至少包含一个字母，至少包含一个数字或半角符号
+      phone:
+        type: string
+        description: 手机号码，区号-手机号，目前只支持0086-中国手机号码
+      email:
+        type: string
+        description: 邮箱
+      passwordConfirm:
+        type: string
+        description: 确认密码
+      createAk:
+        type: boolean
+        description: 是否创建accessKey

@@ -1,39 +1,39 @@
-name: Á÷Êı¾İ×ÜÏß
-href: 
-items:
-- name: ²úÆ·¼ò½é
+  name: æµæ•°æ®æ€»çº¿
+  href: 
   items:
-    - name: ²úÆ·¸ÅÊö
-      href: https://github.com/jdcloudcom/cn/blob/cn-datahub/documentation/Big-Data-Infrastructure-Services/Streaming-Data-Bus/Introduction/Overview.md
-    - name: »ù´¡¼Ü¹¹
-      href: https://github.com/jdcloudcom/cn/blob/cn-datahub/documentation/Big-Data-Infrastructure-Services/Streaming-Data-Bus/Introduction/Basic-Infrastructure.md
-    - name: ²úÆ·ÓÅÊÆ
-      href: https://github.com/jdcloudcom/cn/blob/cn-datahub/documentation/Big-Data-Infrastructure-Services/Streaming-Data-Bus/Introduction/Benefits.md
-    - name: ²úÆ·¹¦ÄÜ
-      href: https://github.com/jdcloudcom/cn/blob/cn-datahub/documentation/Big-Data-Infrastructure-Services/Streaming-Data-Bus/Introduction/Functions.md
-    - name: Ó¦ÓÃ³¡¾°
-      href: https://github.com/jdcloudcom/cn/blob/cn-datahub/documentation/Big-Data-Infrastructure-Services/Streaming-Data-Bus/Introduction/Application-Scenarios.md
-- name: ÈëÃÅÖ¸ÄÏ
-  items:
-    - name: ÈëÃÅÖ¸ÄÏ
-      href: https://github.com/jdcloudcom/cn/blob/cn-datahub/documentation/Big-Data-Infrastructure-Services/Streaming-Data-Bus/Getting-Started/Getting-Started.md
-- name: ²Ù×÷Ö¸ÄÏ
-  items:
-    - name: ´´½¨Ö÷Ìâ
-      href: https://github.com/jdcloudcom/cn/blob/cn-datahub/documentation/Big-Data-Infrastructure-Services/Streaming-Data-Bus/Operation-Guide/create-topic.md
-    - name: Êı¾İ¹éµµ
-      href: https://github.com/jdcloudcom/cn/blob/cn-datahub/documentation/Big-Data-Infrastructure-Services/Streaming-Data-Bus/Operation-Guide/data-achive.md
-    - name: ·ÃÎÊ¿ØÖÆ
-      href: https://github.com/jdcloudcom/cn/blob/cn-datahub/documentation/Big-Data-Infrastructure-Services/Streaming-Data-Bus/Operation-Guide/control.md
-    - name: SDK½éÉÜ
-      href: https://github.com/jdcloudcom/cn/blob/cn-datahub/documentation/Big-Data-Infrastructure-Services/Streaming-Data-Bus/Operation-Guide/sdk.md
-    - name: Agent½éÉÜ
-      href: https://github.com/jdcloudcom/cn/blob/cn-datahub/documentation/Big-Data-Infrastructure-Services/Streaming-Data-Bus/Operation-Guide/agent.md
-- name: ²úÆ·¶¨¼Û
-  items:
-    - name: ¼Æ·Ñ¸ÅÊö
-      href: https://github.com/jdcloudcom/cn/blob/cn-datahub/documentation/Big-Data-Infrastructure-Services/Streaming-Data-Bus/Pricing/Billing-Overview.md
-    - name: ¼Æ·Ñ¹æÔò
-      href: https://github.com/jdcloudcom/cn/blob/cn-datahub/documentation/Big-Data-Infrastructure-Services/Streaming-Data-Bus/Pricing/Billing-Rules.md
-    - name: ¼Û¸ñ×ÜÀÀ
-      href: https://github.com/jdcloudcom/cn/blob/cn-datahub/documentation/Big-Data-Infrastructure-Services/Streaming-Data-Bus/Pricing/Price-Overview.md        
+  - name: äº§å“ç®€ä»‹
+    items:
+    - name: äº§å“æ¦‚è¿°
+      href: Introduction/Overview.md
+    - name: åŸºç¡€æ¶æ„
+      href: Introduction/Basic-Infrastructure.md
+    - name: äº§å“ä¼˜åŠ¿
+      href: Introduction/Benefits.md
+    - name: äº§å“åŠŸèƒ½
+      href: Introduction/Functions.md
+    - name: åº”ç”¨åœºæ™¯
+      href: Introduction/Application-Scenarios.md
+  - name: å…¥é—¨æŒ‡å—
+    items:
+    - name: å…¥é—¨æŒ‡å—
+      href: Getting-Started/Getting-Started.md
+  - name: æ“ä½œæŒ‡å—
+    items:
+    - name: åˆ›å»ºä¸»é¢˜
+      href: Operation-Guide/create-topic.md
+    - name: æ•°æ®å½’æ¡£
+      href: Operation-Guide/data-achive.md
+    - name: è®¿é—®æ§åˆ¶
+      href: Operation-Guide/control.md
+    - name: SDKä»‹ç»
+      href: Operation-Guide/sdk.md
+    - name: Agentä»‹ç»
+      href: Operation-Guide/agent.md
+  - name: äº§å“å®šä»·
+    items:
+    - name: è®¡è´¹æ¦‚è¿°
+      href: Pricing/Billing-Overview.md
+    - name: è®¡è´¹è§„åˆ™
+      href: Pricing/Billing-Rules.md
+    - name: ä»·æ ¼æ€»è§ˆ
+      href: Pricing/Price-Overview.md

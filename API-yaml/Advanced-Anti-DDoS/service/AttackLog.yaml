@@ -1,0 +1,165 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: Ip高防攻击记录相关接口
+  description: Ip高防攻击记录相关接口
+
+basePath: /regions/{regionId}
+
+paths:
+  /attacklog:ddos:
+    get:
+      description: "查询DDos攻击日志"
+      operationId: describeDDosAttackLogs
+      parameters:
+        - name: pageNumber
+          in: query
+          type: integer
+          required: false
+          description: "页码；默认为1"
+        - name: pageSize
+          in: query
+          type: integer
+          required: false
+          description: "分页大小；默认为10；取值范围[10, 100]"
+        - name: startTime
+          in: query
+          type: string
+          required: true
+          description: 开始时间，最多查最近30天，UTC时间，格式：yyyy-MM-dd'T'HH:mm:ssZ
+        - name: endTime
+          in: query
+          type: string
+          required: true
+          description: 查询的结束时间，UTC时间，格式：yyyy-MM-dd'T'HH:mm:ssZ
+        - name: instanceId
+          in: query
+          type: array
+          items:
+            type: string
+          description: 高防实例ID
+          required: false
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  dataList:
+                    type: array
+                    items:
+                      $ref: "../model/DDosAttackLog.yaml#/definitions/DDosAttackLog"
+                  totalCount:
+                    type: integer
+              requestId:
+                type: string
+  /attacklog:cc:
+    get:
+      description: "查询cc攻击日志"
+      operationId: describeCcAttackLogs
+      parameters:
+        - name: pageNumber
+          in: query
+          type: integer
+          required: false
+          description: "页码；默认为1"
+        - name: pageSize
+          in: query
+          type: integer
+          required: false
+          description: "分页大小；默认为10；取值范围[10, 100]"
+        - name: startTime
+          in: query
+          type: string
+          required: true
+          description: 开始时间，最多查最近30天，UTC时间，格式：yyyy-MM-dd'T'HH:mm:ssZ
+        - name: endTime
+          in: query
+          type: string
+          required: true
+          description: 查询的结束时间，UTC时间，格式：yyyy-MM-dd'T'HH:mm:ssZ
+        - name: instanceId
+          in: query
+          type: array
+          items:
+            type: string
+          description: 高防实例ID
+          required: false
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  dataList:
+                    type: array
+                    items:
+                      $ref: "../model/DDosAttackLog.yaml#/definitions/DDosAttackLog"
+                  totalCount:
+                    type: integer
+              requestId:
+                type: string
+
+  /attacklog:ccDetail:
+    get:
+      description: "查询cc攻击日志详情"
+      operationId: describeCcAttackLogDetails
+      parameters:
+        - name: pageNumber
+          in: query
+          type: integer
+          required: false
+          description: "页码；默认为1"
+        - name: pageSize
+          in: query
+          type: integer
+          required: false
+          description: "分页大小；默认为10；取值范围[10, 100]"
+        - name: startTime
+          in: query
+          type: string
+          required: true
+          description: 开始时间，最多查最近30天，UTC时间，格式：yyyy-MM-dd'T'HH:mm:ssZ
+        - name: endTime
+          in: query
+          type: string
+          required: true
+          description: 查询的结束时间，UTC时间，格式：yyyy-MM-dd'T'HH:mm:ssZ
+        - name: instanceId
+          in: query
+          type: string
+          description: 高防实例ID
+          required: true
+        - name: subDomain
+          in: query
+          type: array
+          items:
+            type: string
+          description: 子域名
+          required: false
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  dataList:
+                    type: array
+                    items:
+                      $ref: "../model/CCAttackLogDetail.yaml#/definitions/CCAttackLogDetail"
+                  totalCount:
+                    type: integer
+              requestId:
+                type: string
+
+#路径通用参数
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: 所属地域ID

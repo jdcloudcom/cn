@@ -16,7 +16,7 @@ definitions:
         description: 云主机所属的可用区。
       instanceType:
         type: string
-        description: 规格类型。可查询<a href="https://www.jdcloud.com/help/detail/2901/isCatalog/1">DescribeInstanceTypes</a>接口获得指定地域或可用区的规格信息。
+        description: 实例规格。可查询<a href="https://www.jdcloud.com/help/detail/2901/isCatalog/1">DescribeInstanceTypes</a>接口获得指定地域或可用区的规格信息。
       imageId:
         type: string
         description: 镜像ID。可查询<a href="https://www.jdcloud.com/help/detail/2874/isCatalog/1">DescribeImages</a>接口获得指定地域的镜像信息。

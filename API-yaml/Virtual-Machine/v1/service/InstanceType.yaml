@@ -1,8 +1,8 @@
 swagger: "2.0"
 info:
   version: "v1"
-  title: 规格类型
-  description: 与规格类型操作相关的接口
+  title: 实例规格
+  description: 与实例规格操作相关的接口
 
 basePath: /regions/{regionId}
 
@@ -11,7 +11,7 @@ paths:
     ###################### 规格列表接口 ######################
     get:
       description: |
-        查询规格类型信息列表
+        查询实例规格信息列表
       operationId: describeInstanceTypes
       parameters:
         - name: filters
@@ -20,7 +20,7 @@ paths:
           items:
             $ref: "../../common/model/Filter.yaml#/definitions/filter"
           description: | 
-            instanceTypes - 规格类型，精确匹配，支持多个
+            instanceTypes - 实例规格，精确匹配，支持多个
             az - 可用区，精确匹配，支持多个
       responses:
         200:
@@ -31,12 +31,12 @@ paths:
               result:
                 properties:
                   instanceTypes:
-                    description: 通用的规格类型
+                    description: 通用的实例规格
                     type: array
                     items:
                       $ref: "../model/InstanceType.yaml#/definitions/instanceType"
                   specificInstanceTypes:
-                    description: 用户特有的规格类型；需要工单申请
+                    description: 用户特有的实例规格；需要工单申请
                     type: array
                     items:
                       $ref: "../model/InstanceType.yaml#/definitions/instanceType"

@@ -1,0 +1,11 @@
+swagger: "2.0"
+definitions:
+  azMappingVo:
+    x-jdcloud-module: iam
+    properties:
+      laz:
+        type: string
+        description: 逻辑 Az
+      paz:
+        type: string
+        description: 物理 Az

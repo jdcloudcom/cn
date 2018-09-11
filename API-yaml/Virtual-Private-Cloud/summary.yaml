@@ -1,0 +1,9 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: 京东云VPC
+  description: VPC相关API
+host: "vpc.jdcloud-api.com"
+#host: "openapi.jvpc.jcloud.com"
+x-jdcloud-version: "v1"
+x-jdcloud-revision: "0.4.1"

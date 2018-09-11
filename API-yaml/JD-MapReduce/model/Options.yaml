@@ -1,0 +1,13 @@
+swagger: "2.0"
+definitions:
+  options:
+    x-jdcloud-module: jmr
+    title: options
+    type: object
+    properties:
+      value:
+        type: string
+        description: 对应机器的规格描述
+      label:
+        type: string
+        description: 机器的CPU和内存大小

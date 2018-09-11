@@ -1,0 +1,38 @@
+swagger: "2.0"
+definitions:
+  userAttachment:
+    x-jdcloud-module: iam
+    properties:
+      remark:
+        type: string
+        description: 公司名称
+      industry:
+        type: string
+        description: 主营行业
+      subIndustry:
+        type: string
+        description: 主营行业子选项
+      business:
+        type: string
+        description: 主营业务
+      website:
+        type: string
+        description: 网站
+      cpState:
+        type: string
+        description: 国家
+      cpProvince:
+        type: string
+        description: 省
+      cpCity:
+        type: string
+        description: 市
+      cpCountry:
+        type: string
+        description: 区县
+      cpAddress:
+        type: string
+        description: 详细地址
+      cpTelphone:
+        type: string
+        description: 联系手机

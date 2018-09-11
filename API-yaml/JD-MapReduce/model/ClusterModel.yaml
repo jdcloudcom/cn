@@ -1,0 +1,120 @@
+swagger: "2.0"
+definitions:
+  clusterModel:
+    x-jdcloud-module: jmr
+    title: clusterModel
+    type: object
+    properties:
+      name:
+        type: string
+        required: true
+        description: 集群名称，长度为6到32个字符，支持中文、数字、大小写字母、英文下划线“_”及中划线“-”
+      password:
+        type: string
+        required: true
+        description: |
+          "集群密码"
+          "1.必须包含大写字母、小写字母、数字及特殊字符中三类，且不能少于8字符不能超过30字符"
+          "2.特殊字符如下!@#$%^*"
+          "3.不能出现的字符或完整单词，如下：jd、JD、360、bug、BUG、com、COM、jcloud、JCLOUD、cloud、CLOUD、password、PASSWORD"
+          "4.不能出现连续数字，例：123、987"
+          "5.不能出现连续或键位连续字母，例：abc、CBA、bcde、qaz、tfc、zaq、qwer"
+          "6.密码中不能出现自己的用户名"
+      version:
+        type: string
+        required: true
+        description: |
+          "软件服务版本，请填写以下列表中的一个："
+          "JMR1.0.0"
+          "JMR1.0.1"
+          "JMR1.0.2"
+          "JMR2.0.0"
+          "JMR_BD-OS-1.0"
+      payType:
+        type: string
+        required: true
+        description: |
+          "付费类型，请填写以下列表中的一个："
+          "按量"
+      #payPrice:
+        #type: string
+        #required: true
+        #description: 计费价格
+      masterNodeNumber:
+        type: integer
+        required: true
+        description: Master节点数量
+      #masterCore:
+        #type: integer
+        #required: true
+        #description: Master节点CPU
+      #masterMemory:
+        #type: integer
+        #required: true
+        #description: Master节点内存（推荐至少8G内存，否则服务可能会部署失败）
+      masterNodeDiskType:
+        type: string
+        description: |
+          "Master节点云盘类型，可传类型为（以下以“/”分割各类型）"
+          "NBD/NBD_SATA"
+          "分别代表：性能型/容量型"
+      masterNodeDiskVolume:
+        type: integer
+        description: Master节点云盘容量，必须是10的整数倍，且大于20小于3000
+      masterInstanceType:
+        type: string
+        required: true
+        description: Master节点规格，比如：g.n1.xlarge，更多规格请参考[文档](https://www.jdcloud.com/help/detail/296/isCatalog/1)
+      slaveNodeNumber:
+        type: integer
+        required: true
+        description: Slave节点数量
+      #slaveCore:
+        #type: integer
+        #required: true
+        #description: Slave节点CPU
+      #slaveMemory:
+        #type: integer
+        #required: true
+        #description: Slave节点内存(推荐至少4G内存，否则服务可能会部署失败)
+      slaveNodeDiskType:
+        type: string
+        description: |
+          "Slave节点云盘类型，可传类型为（以下以“/”分割各类型）"
+          "NBD/NBD_SATA"
+          "分别代表：性能型/容量型"
+      slaveNodeDiskVolume:
+        type: integer
+        description: Slave节点云盘容量，必须是10的整数倍，且大于20小于3000
+      coreInstanceType:
+        type: string
+        required: true
+        description: Core节点规格，比如：g.n1.xlarge，更多规格请参考[文档](https://www.jdcloud.com/help/detail/296/isCatalog/1)
+      dataCenter:
+        type: string
+        default: cn-north-1
+        description: 地域，同regionID
+      softwareList:
+        type: string
+        default: HADOOP,ZOOKEEPER
+        description: 软件清单，不同软件之间以英文逗号(,)分割，参考[文档](https://www.jdcloud.com/help/detail/1323/isCatalog/1)
+      jssFlag:
+        type: boolean
+        default: false
+        description: 是否关联对象存储
+      haFlag:
+        type: boolean
+        default: true
+        description: 集群是否为高可用模式
+      vpcId:
+        type: string
+        default: new
+        description: 私有网络ID
+      vpcSubnetId:
+        type: string
+        default: new
+        description: 子网UUID，可以通过查询子网列表获得
+      bandwidth:
+        type: integer
+        default: 5
+        description: 网络带宽上限

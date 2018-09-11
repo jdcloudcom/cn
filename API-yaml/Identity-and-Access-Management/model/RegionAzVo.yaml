@@ -1,0 +1,19 @@
+swagger: "2.0"
+definitions:
+  regionAzVo:
+    x-jdcloud-module: iam
+    properties:
+      alias:
+        type: string
+        description: 别名
+      region:
+        type: string
+        description: 地域
+      visible:
+        type: integer
+        description: 是否可见(1可见 0不可见)
+      azStatusList:
+        type: array
+        items:
+          $ref: "./AzSaleStatusVo.yaml#/definitions/azSaleStatusVo"
+        description: az状态信息

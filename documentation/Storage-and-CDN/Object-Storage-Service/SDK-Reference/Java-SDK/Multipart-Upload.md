@@ -24,9 +24,9 @@
 
 使用分片上传模式前，必须先初始化一个Multipart Upload事件。该操作会返回一个OSS服务器创建的Upload ID，用于标识本次Multipart Upload事件。用户可以根据这个ID来发起相关的操作，如中止Multipart Upload、查询Multipart Upload等。调用jss.bucket(bucketName).object(key).initiateMultipartUpload初始化一个分片上传事件：
 ```
-// endpoint以华北为例，其它region请按实际情况填写  
-String endpoint = "s-bj.jcloud.com";  
-//您的AccessKey和SecretKey可以登录到京东云存储的控制台，在【Access Key 管理】中查看。  
+// endpoint以华北-北京为例，其它region请按实际情况填写  
+String endpoint = "oss.cn-north-1.jcloudcs.com";  
+//您的AccessKey和SecretKey可以登录到对象存储的控制台，在【Access Key 管理】中查看。  
 String accessKey = "<yourAccessKey>";  
 String SecretKey = "<yourSecretKey>";  
 String bucketName = "<yourBucketName>";  
@@ -128,9 +128,9 @@ jss.destroy();
 
 列举指定的Upload ID所属的所有已经成功上传的分片，注意：如果一个分步上传事件已完成或取消，是无法列举出它的已上传的分片的。
 ```
-// endpoint以华北为例，其它region请按实际情况填写  
-String endpoint = "s-bj.jcloud.com";  
-// 您的AccessKey和SecretKey可以登录到京东云存储的控制台，在【Access Key 管理】中查看。  
+// endpoint以华北-北京为例，其它region请按实际情况填写  
+String endpoint = "oss.cn-north-1.jcloudcs.com";  
+// 您的AccessKey和SecretKey可以登录到对象存储的控制台，在【Access Key 管理】中查看。  
 String accessKey = "<your accessKey>";  
 String secretKey = "<your secretKey>";  
 String bucketName = "<your bucketName>";  
@@ -165,8 +165,8 @@ jss.destroy();
 列举一个Bucket空间下的所有分步上传事件，注意：如果一个分步上传事件已完成或取消，是无法列举出该事件的。
 ```
 // endpoint以华北为例，其它region请按实际情况填写  
-String endpoint = "s-bj.jcloud.com";  
-// 您的AccessKey和SecretKey可以登录到京东云存储的控制台，在【Access Key 管理】中查看。  
+String endpoint = "oss.cn-north-1.jcloudcs.com";  
+// 您的AccessKey和SecretKey可以登录到对象存储的控制台，在【Access Key 管理】中查看。  
 String accessKey = "<your accessKey>";  
 String secretKey = "<your secretKey>";  
 String bucketName = "<your bucketName>";  

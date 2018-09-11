@@ -1,0 +1,127 @@
+name: API网关 API Gateway
+href: 
+items:
+- name: 产品简介
+  items:
+    - name: 产品概述
+      herf: Introduction/What-Is-APIGateway.md
+    - name: 核心概念
+      herf: Introduction/Core-Concepts.md
+    - name: 基础架构
+      herf: Introduction/Basic-Infrastructure.md
+    - name: 产品优势
+      herf: Introduction/Benefits.md
+    - name: 产品功能
+      herf: Introduction/Functions.md
+    - name: 产品规格
+      herf: Introduction/Specification.md
+    - name: 限制说明
+      herf: Introduction/Restrictions.md
+    - name: 应用场景 
+      herf: Introduction/Application-Scenarios.md    
+- name: 产品定价
+  items:
+    - name: 计费概述
+      herf: Pricing/Billing-Overview.md
+    - name: 计费规则
+      herf: Pricing/Billing-Rules.md
+    - name: 价格总览
+      herf: Pricing/Price-Overview.md
+    - name: 购买流程
+      herf: Pricing/Purchase-Process.md 
+    - name: 续费流程
+      herf: Pricing/Renew-Process.md
+      status: 0 
+- name: 入门指南
+  items:
+    - name: 概述
+      herf: Getting-Started/Overview.md
+    - name: 创建API分组
+      herf: Getting-Started/STEP1-Create -APIGroup.md
+    - name: 创建API
+      herf: Getting-Started/STEP2-Create-API.md
+    - name: 发布API分组
+      herf: Getting-Started/STEP3-Create-Publish.md  
+    - name: 自定义域名
+      herf: Getting-Started/STEP4-1-Create-Domain.md
+    - name: 后端签名
+      herf: Getting-Started/STEP4-2-Create-BackSign.md
+    - name: 流控策略
+      herf: Getting-Started/STEP4-3-Create-Stream.md
+    - name: API的访问授权
+      herf: Getting-Started/STEP5-Create-Auth.md
+- name: 操作指南
+  items:
+    - name: 创建API
+      items:
+        - name: 创建API
+          herf: Create-API/Create-API.md
+    - name: 创建API分组
+      items:
+        - name: 创建API分组
+          herf: Create-APIGroup/Create-APIGroup.md
+     - name: 发布API分组
+      items:
+        - name: 发布API分组
+          herf: Create-Publish/Create-Publish.md  
+    - name: 后端签名
+      items:
+        - name: 后端签名
+          herf: Create-BackSign/Create-BackSign.md  
+    - name: 自定义域名
+      items:
+        - name: 自定义域名
+          herf: Create-Domain/Create-Domain.md  
+    - name: 流控策略
+      items:
+        - name: 流控策略
+          herf: Create-Stream/Create-Stream.md  
+    - name: API的访问授权
+      items:
+        - name: API的访问授权
+          herf: Create-Auth/Create-Auth.md  
+- name: 最佳实践
+  items:
+  - name: 最佳实践
+    herf: Best-Practices/BestPractices.md
+ 
+- name: 教程
+  items:
+  status: 0
+- name: 问题排查
+  items:
+  - name: 云主机无法连接MongoDB实例？
+    herf: Troubleshooting/Connect-Failed.md
+    status: 0 
+  - name: 云数据库 MongoDB 不支持哪些命令？
+    herf: Troubleshooting/Command.md
+    status: 0 
+  - name: 账号密码正确，连接提示无权限？
+    herf: Troubleshooting/Authentication.md    
+    status: 0 
+- name: 常见问题
+  herf: FAQ/faq.md
+- name: API参考
+  herf:
+  status: 0 
+- name: SDK参考
+  herf:
+  status: 0 
+- name: 相关资源
+  items:
+  - name: 文档历史记录
+    herf: Related-Resources/Document-History.md     
+  - name: 服务条款
+    herf: Related-Resources/Service-Terms.md           
+    status: 0      
+  - name: SLA
+    herf: Related-Resources/SLA.md           
+    status: 0       
+  - name: 备案
+    herf: Related-Resources/Filing.md           
+    status: 0        
+  - name: 词汇表
+    herf: Related-Resources/Glossary.md           
+    status: 0          
+          
+          

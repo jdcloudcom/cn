@@ -1,0 +1,40 @@
+swagger: "2.0"
+definitions:
+  idataCluster:
+    x-jdcloud-module: jmr
+    title: idataCluster
+    type: object
+    properties:
+      id:
+        type: string
+        description: 集群id
+      name:
+        type: string
+        description: 集群名称
+      status:
+        type: string
+        description: 集群状态
+      createTime:
+        type: string
+        format: date
+        description: 集群创建时间
+      duration:
+        type: string
+        description: 集群的运营时长
+      ip:
+        type: string
+        description: 集群ip
+      port:
+        type: string
+        description: 提供服务的端口号
+      jdbcUrl:
+        type: string
+        description: jdbc数据库的url
+      jdbcSpark:
+        type: string
+        description: 数据库对应spark
+      zepplinUrl:
+        type: string
+        description: zepplin的url
+
+

@@ -1,0 +1,21 @@
+swagger: "2.0"
+definitions:
+  createVpcPeeringSpec:
+    x-jdcloud-module: vpc
+    required:
+      - vpcPeeringName
+      - vpcId
+      - remoteVpcId
+    properties:
+      vpcPeeringName:
+        type: string
+        description: VpcPeering的名字,不为空。名称取值范围：1-32个中文、英文大小写的字母、数字和下划线分隔符
+      vpcId:
+        type: string
+        description: VpcPeering本端Vpc的Id
+      remoteVpcId:
+        type: string
+        description: VpcPeering对端Vpc的Id
+      description:
+        type: string
+        description: VpcPeering 描述，取值范围：0-256个中文、英文大小写的字母、数字和下划线分隔符

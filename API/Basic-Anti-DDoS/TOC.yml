@@ -9,14 +9,14 @@
     items:
       - name:  DDos基础防护相关接口
         items:
-          - name: 查询公网Ip的监控流量
-            href: Basic Anti-DDoS APIs/describeIpResourceFlow.md
-          - name: 查询公网Ip基本信息
-            href: Basic Anti-DDoS APIs/describeIpResourceInfo.md
-          - name: 查询公网Ip的防护明细
-            href: Basic Anti-DDoS APIs/describeIpResourceProtectInfo.md
-          - name: 查询区域下的公网Ip资源列表
-            href: Basic Anti-DDoS APIs/describeIpResources.md
-          - name: 设置公网Ip的清洗阈值
-            href: Basic Anti-DDoS APIs/setCleanThreshold.md 
+          - name: describeIpResourceFlow
+            href: Basic-Anti-DDoS-APIs/describeIpResourceFlow.md
+          - name: describeIpResourceInfo
+            href: Basic-Anti-DDoS-APIs/describeIpResourceInfo.md
+          - name: describeIpResourceProtectInfo
+            href: Basic-Anti-DDoS-APIs/describeIpResourceProtectInfo.md
+          - name: describeIpResources
+            href: Basic-Anti-DDoS-APIs/describeIpResources.md
+          - name: setCleanThreshold
+            href: Basic-Anti-DDoS-APIs/setCleanThreshold.md 
                     

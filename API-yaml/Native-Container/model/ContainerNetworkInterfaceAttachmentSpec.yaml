@@ -1,0 +1,22 @@
+swagger: "2.0"
+definitions:
+  containerNetworkInterfaceAttachmentSpec:
+    x-jdcloud-module: nc
+    x-jdcloud-internal: false
+    type: object
+    description: 在创建容器时指定的网卡信息
+    required:
+      - networkInterface
+    properties:
+      autoDelete:
+        type: boolean
+        description: 指明删除容器时是否删除网卡，默认True；当前只能是True
+      deviceIndex:
+        type: integer
+        description: 设备Index
+      networkInterface:
+        $ref: "./NetworkInterfaceSpec.yaml#/definitions/networkInterfaceSpec"
+        description: 网卡接口规范
+      # networkInterfaceId:
+      #   type: stirng
+      #   description: 网卡接口ID

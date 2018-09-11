@@ -1,0 +1,214 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: 策略管理接口
+  description: 策略管理接口
+
+basePath: /regions/{regionId}
+
+paths:
+  "/permission":
+    ###################### 创建策略 ######################
+    post:
+      description: "创建策略"
+      operationId: createPermission
+      x-jdcloud-internal: false
+      parameters:
+        - name: createPermissionInfo
+          in: body
+          description: 权限信息
+          required: true
+          schema:
+            $ref: "../model/CreatePermissionInfo.yaml#/definitions/createPermissionInfo"
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              requestId:
+                type: string
+
+  "/permission/{permissionId}":
+   ###################### 修改策略 ######################
+    put:
+      description: "修改策略"
+      operationId: updatePermission
+      x-jdcloud-internal: false
+      parameters:
+        - name: updatePermissionInfo
+          in: body
+          description: 权限信息
+          required: true
+          schema:
+            $ref: "../model/UpdatePermissionInfo.yaml#/definitions/updatePermissionInfo"
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              requestId:
+                type: string
+
+   ###################### 查询策略详情 ######################
+    get:
+      description: "查询策略详情"
+      operationId: describePermissionDetail
+      x-jdcloud-internal: false
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                properties:
+                  permission:
+                    $ref: "../model/Permission.yaml#/definitions/permission"
+                    description: 权限信息
+              requestId:
+                type: string
+
+
+  "/permissions":
+   ###################### 查询策略列表 ######################
+    get:
+      description: "查询策略列表"
+      operationId: describePermissions
+      x-jdcloud-internal: false
+      parameters:
+        - name: pageNumber
+          in: query
+          type: integer
+          description: 页码
+          required: true
+        - name: pageSize
+          in: query
+          type: integer
+          description: 每页显示数目
+          required: true
+        - name: keyword
+          in: query
+          type: string
+          description: 关键字
+          required: false
+        - name: queryType
+          in: query
+          type: integer
+          description: 权限类型,0-全部，1-系统权限，2-自定义权限
+          required: true
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                properties:
+                  total:
+                    type: integer
+                    description: 总数
+                  permissions:
+                    type: array
+                    items:
+                      $ref: "../model/Permission.yaml#/definitions/permission"
+                    description: 权限列表信息
+              requestId:
+                type: string
+
+  "/subUser/{subUser}/permisssions":
+   ###################### 为子用户绑定策略 ######################
+    post:
+      description: "为子用户绑定策略"
+      operationId: addPermissionsToSubUser
+      x-jdcloud-internal: false
+      parameters:
+        - name: addPermissionsInfo
+          in: body
+          description: 权限信息
+          required: true
+          schema:
+            $ref: "../model/AddPermissionsInfo.yaml#/definitions/addPermissionsInfo"
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              requestId:
+                type: string
+
+   ###################### 查询子用户策略列表 ######################
+    get:
+      description: "查询子用户策略列表"
+      operationId: describeSubUserPermissions
+      x-jdcloud-internal: false
+      parameters:
+        - name: pageNumber
+          type: integer
+          in: query
+          description: 页码
+          required: true
+        - name: pageSize
+          type: integer
+          in: query
+          description: 每页显示数目
+          required: true
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                properties:
+                  total:
+                    type: integer
+                    description: 总数
+                  permissions:
+                    type: array
+                    items:
+                      $ref: "../model/Permission.yaml#/definitions/permission"
+                    description: 权限列表信息
+              requestId:
+                type: string
+
+
+  "/subUser/{subUser}/permissions/{permissionId}":
+   ###################### 为子用户解绑策略 ######################
+    delete:
+      description: "为子用户解绑策略"
+      operationId: removePermissionOfSubUser
+      x-jdcloud-internal: false
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              requestId:
+                type: string
+
+
+
+#路径通用参数
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: Region ID
+  permissionId:
+    name: permissionId
+    in: path
+    required: true
+    type: integer
+    description: 权限id
+  subUser:
+    name: subUser
+    in: path
+    required: true
+    type: string
+    description: 子用户用户名

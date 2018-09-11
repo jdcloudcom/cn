@@ -1,0 +1,39 @@
+swagger: "2.0"
+definitions:
+  subnet:
+    x-jdcloud-module: vpc
+    properties:
+      subnetId:
+        type: string
+        description: Subnet的Id
+      subnetName:
+        type: string
+        description: 子网名称
+      vpcId:
+        type: string
+        description: 子网所属VPC的Id
+      addressPrefix:
+        type: string
+        description: 子网网段，vpc内子网网段不能重叠，cidr的取值范围：10.0.0.0/8、172.16.0.0/12和192.168.0.0/16及它们包含的子网，且子网掩码长度为16-28之间，如果VPC含有Cidr，则必须为VPC所在Cidr的子网
+      availableIpCount:
+        type: number
+        description: 子网可用ip数量
+      description:
+        type: string
+        description: 子网描述信息
+      routeTableId:
+        type: string
+        description: 子网关联的路由表Id
+      aclId:
+        type: string
+        description: 子网关联的acl Id
+      startIp:
+        type: string
+        description: 子网的起始地址，子网第1个地位为路由器网关保留，第2个地址为dhcp服务保留
+      endIp:
+        type: string
+        description: 子网的结束地址，子网第1个地位为路由器网关保留，第2个地址为dhcp服务保留
+      createdTime:
+        type: string
+        description: 子网创建时间
+

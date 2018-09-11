@@ -1,5 +1,5 @@
- name: 媒体处理服务
- href: 
+name: 媒体处理服务
+href: 
  items:
  - name: 产品简介
    items:
@@ -42,18 +42,10 @@
       - name: 删除视频任务
         href: Video-Transcoding-API/Delete-Video-Task.md   
  - name: 最佳实践
-   href: 
-      status: 0
+   status: 0
  - name: 常见问题
-   href:
-      status: 0
+   status: 0
  - name: API参考
-   href: 
-    status: 0
-    items:
-       - name: 文档历史记录
-         href:
-         status: 0	
- - name: 词汇表
-   href:          
+   status: 0
+ - name: 词汇表         
    status: 0

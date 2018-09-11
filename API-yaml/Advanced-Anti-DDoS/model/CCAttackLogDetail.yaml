@@ -1,0 +1,12 @@
+swagger: "2.0"
+definitions:
+  CCAttackLogDetail:
+    type: object
+    x-jdcloud-module: ipanti
+    properties:
+      key:
+        type: string
+        description: 特征key
+      num:
+        type: integer
+        description: 攻击次数

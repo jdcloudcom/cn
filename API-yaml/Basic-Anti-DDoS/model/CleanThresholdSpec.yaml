@@ -1,0 +1,16 @@
+swagger: "2.0"
+definitions:
+  cleanThresholdSpec:
+    type: object
+    x-jdcloud-module: baseanti
+    properties:
+      cleanThresholdBps:
+        type: integer
+        format: int64
+        description: 触发清洗的流量速率，单位bps，范围是10000000到300000000
+        required: true
+      cleanThresholdPps:
+        type: integer
+        format: int64
+        description: 触发清洗的包速率，单位pps，范围是2000到70000
+        required: true

@@ -1,0 +1,14 @@
+swagger: "2.0"
+definitions:
+  networkInterfacePrivateIp:
+    x-jdcloud-module: vpc
+    properties:
+      privateIpAddress:
+        type: string
+        description: 私有IP的IPV4地址
+      elasticIpId:
+        type: string
+        description: 弹性IP实例ID
+      elasticIpAddress:
+        type: string
+        description: 弹性IP实例地址

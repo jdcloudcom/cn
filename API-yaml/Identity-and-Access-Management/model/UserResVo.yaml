@@ -1,0 +1,43 @@
+swagger: "2.0"
+definitions:
+  userResVo:
+    x-jdcloud-module: iam
+    properties:
+      pin:
+        type: string
+        description: 用户pin
+      cscPhone:
+        type: string
+        description: 用户手机号
+      cscEmail:
+        type: string
+        description: 用户邮箱
+      createTime:
+        type: string
+        format: date-time
+        description: 创建时间
+      userType:
+        type: integer
+        description: 用户类型
+      companyName:
+        type: string
+        description: 公司名
+      userType:
+        type: integer
+        description: 用户类型
+      companyName:
+        type: string
+        description: 公司名
+      name:
+        type: string
+        description: 姓名
+      arrearageTime:
+        type: string
+        format: date-time
+        description: 欠费时间
+      userTagObject:
+        $ref: "./Flags.yaml#/definitions/flags"
+        description: 用户标签：
+      attachment:
+        $ref: "./UserAttachment.yaml#/definitions/userAttachment"
+        description: 用户标签：

@@ -3,27 +3,27 @@
 弹性伸缩AS(Auto Scaling)是一项 Web 服务，可以根据您的业务需求和策略，自动调整云主机计算资源，可帮助确保您拥有适量的云主机实例来处理您的应用程序负载。使用 AS 进行容量调整，您只需事先设置好扩容条件及缩容条件，AS 会在达到条件时自动增加/减少使用的服务器数量以维护性能：
 
 在业务需求增长时无缝地增加主机实例。
-* 
+
 在业务需求下降时自动减少主机实例以节约成本。
 
-![合图.png](https://img1.jcloudcs.com/cms/c0dd56db-1785-4a37-96ce-fa2863ca2b9020171227101245.png)
+![AS概述1.png](https://github.com/jdcloudcom/cn/blob/AutoScaling/image/Elastic-Compute/Autoscaling/AS%E6%A6%82%E8%BF%B01.png)
 
 您可创建云主机实例的集合，即 *Auto Scaling 组 ，*您可以指定每个 Auto Scaling 组中最少的实例数量，Auto Scaling 会确保您的组中的实例永远不会低于这个数量；指定每个 Auto Scaling 组中最大的实例数量，Auto Scaling 会确保您的组中的实例永远不会高于这个数量。如果您在创建组的时候或在创建组之后的任何时候指定了所需容量，Auto Scaling 会确保您的组一直具有此数量的实例。如果您指定了扩展策略，则 Auto Scaling 可以在您的应用程序的需求增加或降低时启动或终止实例。
 
 例如，以下 Auto Scaling 组的最小容量为 1 个实例，所需容量为 3 个实例，最大容量为 5 个实例。您制定的扩展策略是按照您指定的条件，在最大最小实例数范围内调整实例的数量。
 
-![图1.png](https://img1.jcloudcs.com/cms/47099e52-afba-4847-b4ba-97fadc374f1720171227101626.png)
+![图AS概述2.png](https://github.com/jdcloudcom/cn/blob/AutoScaling/image/Elastic-Compute/Autoscaling/AS%E6%A6%82%E8%BF%B02.png)
 
 ## **AS的基本概念**
 
 弹性伸缩产品有以下基本概念：
 
 伸缩组
-* 
+
 启动配置
-* 
+
 伸缩策略
-* 
+
 冷却时间
 
 ### 1. 伸缩组

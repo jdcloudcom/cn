@@ -1,0 +1,30 @@
+swagger: "2.0"
+definitions:
+  networkAcl:
+    x-jdcloud-module: vpc
+    properties:
+      networkAclId:
+        type: string
+        description: networkAcl ID
+      networkAclName:
+        type: string
+        description: networkAcl名称
+      vpcId:
+        type: string
+        description: 私有网络 ID
+      networkAclRules:
+        type: array
+        description: networkAcl规则列表
+        items:
+          $ref: "./NetworkAclRule.yaml#/definitions/networkAclRule"
+      subnetIds:
+        type: array
+        items:
+          type: string
+        description: networkAcl绑定的子网列表
+      description:
+        type: string
+        description: "描述,允许输入UTF-8编码下的全部字符，不超过256字符"
+      createdTime:
+        type: string
+        description: networkAcl创建时间

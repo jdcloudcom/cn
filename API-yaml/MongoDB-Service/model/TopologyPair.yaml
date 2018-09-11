@@ -1,0 +1,17 @@
+swagger: "2.0"
+definitions:
+  TopologyPair:
+    x-jdcloud-module: mongodb
+    title: TopologyPair
+    type: object
+    properties:
+      domain:
+        type: string
+        description: 域名
+      ip:
+        type: string
+        description: ip地址
+      port:
+        type: string
+        description: 端口
+      

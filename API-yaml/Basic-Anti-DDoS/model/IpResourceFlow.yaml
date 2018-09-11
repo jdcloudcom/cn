@@ -1,0 +1,10 @@
+swagger: "2.0"
+definitions:
+  ipResourceFlow:
+    type: object
+    x-jdcloud-module: baseanti
+    properties:
+      bps:
+        $ref: "./IpResourceFlowDetail.yaml#/definitions/ipResourceFlowDetail"
+      pps:
+        $ref: "./IpResourceFlowDetail.yaml#/definitions/ipResourceFlowDetail"

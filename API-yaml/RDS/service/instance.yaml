@@ -1,0 +1,244 @@
+swagger: "2.0"                                  # 基于Swagger 2.0版本实现
+info:
+  version: v1
+  title: 实例管理
+  description: 实例管理相关接口
+
+basePath: /regions/{regionId}
+
+paths:
+  "/instances":    #集群实例
+    post:
+      description: 创建一个RDS实例，用户可以使用相应的数据库客户端或者应用程序通过域名和端口链接到该RDS实例上，进行操作。
+      operationId: createInstance
+      #x-jdcloud-internal: true
+      parameters:
+        - name: instanceSpec
+          required: true
+          in: body
+          description: 新建实例规格
+          schema:
+            $ref: "../model/DBInstanceSpec.yaml#/definitions/DBInstanceSpec"
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  instanceId:
+                    type: string
+    get:
+      description: 获取当前账号下所有RDS实例及MySQL只读实例的概要信息，例如实例类型，版本，计费信息等
+      operationId: describeInstances
+      #x-jdcloud-internal: true
+      parameters:
+        - name: pageNumber
+          required: false
+          in: query
+          type: integer
+          description: 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页;
+        - name: pageSize
+          required: false
+          in: query
+          type: integer
+          description: 每页显示的数据条数，默认为100，取值范围：[10,100]，用于查询列表的接口
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  dbInstances:
+                    type: array
+                    items:
+                      $ref: ../model/DBInstance.yaml#/definitions/DBInstance
+                  totalCount:
+                    type: integer
+  "/instances/{instanceId}":    #集群实例
+    delete:
+      description: 删除一个RDS实例或者MySQL的只读实例。删除MySQL主实例时，会同时将对应的MySQL只读实例也删除
+      operationId: deleteInstance
+      x-jdcloud-mfa: true
+      #x-jdcloud-internal: true
+      responses:
+        200:
+          description: OK
+    get:
+      description: 查询RDS实例（MySQL、SQL Server等）的详细信息以及MySQL只读实例详细信息
+      operationId: describeInstanceAttributes
+      #x-jdcloud-internal: true
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  dbInstanceAttributes:
+                    $ref: ../model/DBInstanceAttribute.yaml#/definitions/DBInstanceAttribute
+  "/instances/{instanceId}:getBackupPolicy":  #备份策略
+    post:
+      description: 查看RDS实例备份策略。根据数据库类型的不同，支持的备份策略也略有差异，具体请看返回参数中的详细说明<br>- 仅支持SQL Server
+      operationId: getBackupPolicy
+      #x-jdcloud-internal: true
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  startWindow:
+                    type: string
+                    description: 自动备份开始时间窗口，范围00:00-23:59，时间范围差不得小于30分钟。<br>例如：00:00-01:00，表示0点到1点开始进行数据库自动备份，备份完成时间则跟实例大小有关，不一定在这个时间范围中
+                  retentionPeriod:
+                    type: integer
+                    description: 自动备份保留周期，单位天,缺省为7天，范围7-730
+                  cycleMode:
+                    type: integer
+                    description: 自动备份循环模式<br>1:表示每天都是全量备份<br>2:表示自动备份按照全量、增量、增量这样的方式进行，例如第1天是全量备份，第2、3天是增量备份；第4天又是全量备份，以此类推.<br>- **SQL Server支持**<br>- **MySQL不支持**
+                  backupBinlog:
+                    type: string
+                    description: 是否备份binlog<br>true:表示备份<br>false:表示不备份<br> - **SQL Server不支持**<br>- **MySQL支持**
+  "/instances/{instanceId}:setBackupPolicy":  #修改备份策略
+    post:
+      description: 修改RDS实例备份策略，目前仅支持用户修改“自动备份开始时间窗口”这个参数，其他参数暂不开放修改
+      operationId: setBackupPolicy
+      x-jdcloud-internal: true
+      parameters:
+        - name: setBackupPolicy
+          in: body
+          description:
+          schema:
+            type: object
+            properties:
+              startWindow:
+                type: string
+                description: 自动备份开始时间窗口，范围00:00-23:59，时间范围差不得小于30分钟。<br>例如：00:00-01:00，表示0点到1点开始进行数据库自动备份，备份完成时间则跟实例大小有关，不一定在这个时间范围中
+      responses:
+        200:
+          description: OK
+  "/instances/{instanceId}:setInstanceName":  #修改实例名称
+    post:
+      description: 修改实例名称，可支持中文，实例名的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)<br>- 仅支持SQL Server
+      operationId: setInstanceName
+      #x-jdcloud-internal: true
+      parameters:
+        - name: setInstanceName
+          in: body
+          schema:
+            type: object
+            required:
+              - instanceName
+            properties:
+              instanceName:
+                type: string
+                description: 实例名称，名称支持中文，实例名的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
+      responses:
+        200:
+          description: OK
+  "/instances/{instanceId}:failoverInstance":  #RDS实例主备切换
+    post:
+      description: 对RDS实例进行主备切换。<br>注意：如果实例正在进行备份，那么主备切换将会终止备份操作。可以查看备份策略中的备份开始时间确认是否有备份正在运行。如果确实需要在实例备份时进行主备切换，建议切换完成 后，手工进行一次实例的全备<br>对于SQL Server，主备切换后30分钟内，不支持按时间点恢复/创建，例如在10:05分用户进行了主备切换，那么10:05 ~ 10:35这个时间段不能进行按时间点恢复/创建。<br>- 仅支持SQL Server
+      operationId: failoverInstance
+      #x-jdcloud-internal: true
+      responses:
+        200:
+          description: OK
+  "/instances/{instanceId}:rebootInstance":  #重启RDS实例
+    post:
+      description: 重启RDS实例，例如修改了一些配置参数后，需要重启实例才能生效。可以结合主备切换的功能，轮流重启备机，降低对业务的影响<br>**注意：如果实例正在进行备份，那么重启主实例将会终止备份操作。** 可以查看备份策略中的备份开始时间确认是否有备份正在运行。如果确实需要在实例备份时重启主实例，建议重启后，手工进行一次实例的全备。
+      operationId: rebootInstance
+      #x-jdcloud-internal: true
+      parameters:
+        - name: rebootInstance
+          in: body
+          schema:
+            type: object
+            properties:
+              rebootMaster:
+                type: boolean
+                description: 是否重启主节点。<br> - 仅SQL Server 支持该参数
+              rebootSlave:
+                type: boolean
+                description: 是否重启备节点。<br> - 仅SQL Server 支持该参数
+      responses:
+        200:
+          description: OK
+  "/instances/{instanceId}:enableInternetAccess":  #开启RDS实例的外网访问
+    post:
+      description: 开启RDS实例的外网访问功能。开启后，用户可以通过internet访问RDS实例
+      operationId: enableInternetAccess
+      responses:
+        200:
+          description: OK
+  "/instances/{instanceId}:disableInternetAccess":  #关闭RDS实例的外网访问
+    post:
+      description: 关闭RDS实例的外网访问功能。关闭后，用户无法通过Internet访问RDS，但可以在京东云内网通过内网域名访问
+      operationId: disableInternetAccess
+      responses:
+        200:
+          description: OK
+  "/instances/{instanceId}:restoreInstance":  #使用实例的全量备份覆盖恢复当前实例
+    post:
+      description: 使用实例的全量备份覆盖恢复当前实例<br>- 仅支持MySQL
+      operationId: restoreInstance
+      parameters:
+        - name: restoreInstance
+          in: body
+          schema:
+            type: object
+            properties:
+              backupId:
+                type: string
+                description: 用于恢复的备份Id，仅限于本实例生成的备份
+      responses:
+        200:
+          description: OK
+  "/instances:createInstanceFromBackup":    #根据源实例全量备份创建一个新实例
+    post:
+      description: 根据源实例全量备份创建一个新实例，新实例的数据跟源实例在创建备份时的数据状态一样。<br>例如根据源实例A的一个全量备份“mybak”新建一个实例B，该备份是在“‘2018-8-18 03:23:54”创建的。那么新建实例B的数据状态跟实例A‘2018-8-18 03:23:54’的状态一致<br>- 仅支持MySQL
+      operationId: createInstanceFromBackup
+      x-jdcloud-internal: true
+      parameters:
+        - name: backupId
+          required: true
+          in: query
+          type: string
+          description: 备份ID
+        - name: engine
+          required: true
+          in: query
+          type: string
+          description: 标识是创建什么类型的实例，例如MySQL，SQL Server等,具体可参见文档[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)<br>**注意：备份来源实例的engine和要创建的实例的engine必须一致**
+        - name: instanceSpec
+          required: true
+          in: body
+          description: 新建实例规格
+          schema:
+            $ref: "../model/RestoredNewDBInstanceSpec.yaml#/definitions/RestoredNewDBInstanceSpec"
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  instanceId:
+                    type: string
+#路径通用参数
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
+  instanceId:
+    name: instanceId
+    in: path
+    required: true
+    type: string
+    description: RDS 实例ID，唯一标识一个RDS实例

@@ -4,7 +4,7 @@
   - name: 产品简介
     items:
     - name: 产品概述
-      herf : Introduction/What-Is-Advanced-Anti-DDoS.md.md
+      herf : Introduction/What-Is-Advanced-Anti-DDoS.md
     - name : 核心概念
       herf: Introduction/Core-Concepts.md
     - name: 基础架构
@@ -55,26 +55,25 @@
           herf: Operation-Guide/CC-Defense-Related.md
         - name: URL白名单配置
           herf: Operation-Guide/URL-Whitelist-Rules-Setting.md
-  - name: 攻击告警设置
-    herf: Operation-Guide/Attack-Alarm-Notification-Settings.md
-  - name: 黑白名单设置
-    herf: Operation-Guide/Blacklist-And-Whitelist-Settings.md
-  - name: 查看安全报表
-    herf: Operation-Guide/View-The-Security-Report.md   
-  - name: 选择合适的转发方式
-    herf: Operation-Guide/Choose-Suitable-Forwarding-Mode.md   
+    - name: 攻击告警设置
+      herf: Operation-Guide/Attack-Alarm-Notification-Settings.md
+    - name: 黑白名单设置
+      herf: Operation-Guide/Blacklist-And-Whitelist-Settings.md
+    - name: 查看安全报表
+      herf: Operation-Guide/View-The-Security-Report.md   
+    - name: 选择合适的转发方式
+      herf: Operation-Guide/Choose-Suitable-Forwarding-Mode.md   
   - name: 最佳实践
     items:
-  - name: IP高防结合Web应用防火墙方案说明
-    herf: Best-Practices/Advanced-Anti-DDoS + WAF.md
-  - name: 本地防护+高防方案说明
-    herf: Best-Practices/Local Basic-Anti-DDoS + Advanced-Anti-DDoS.md
-  - name: IP高防结合应用安全网关方案说明
-    herf: Best-Practices/Advanced-Anti-DDoS + Application Security Gateway.md
+    - name: IP高防结合Web应用防火墙方案说明
+      herf: Best-Practices/Advanced-Anti-DDoS + WAF.md
+    - name: 本地防护+高防方案说明
+      herf: Best-Practices/Local Basic-Anti-DDoS + Advanced-Anti-DDoS.md
+    - name: IP高防结合应用安全网关方案说明
+      herf: Best-Practices/Advanced-Anti-DDoS + Application Security Gateway.md
   - name: 教程
-    items:
     status: 0    
   - name: 常见问题
-  herf: FAQ/FAQ.md
+    herf: FAQ/FAQ.md
   - name: 文档历史记录
-  href: Related-Resources/Document-History.md
+    href: Related-Resources/Document-History.md

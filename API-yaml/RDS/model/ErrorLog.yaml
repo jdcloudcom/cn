@@ -1,0 +1,26 @@
+swagger: "2.0"
+definitions:
+  ErrorLog:
+    x-jdcloud-module: rds
+    title: ErrorLog
+    type: object
+    properties:
+      name:
+        type: string
+        description: 错误日志文件名称
+      sizeByte:
+        type: integer
+        format: int64
+        description: 错误日志文件大小，单位Byte
+      lastUpdateTime:
+        type: string
+        description: 错误日志最后更新时间，格式为：YYYY-MM-DD HH:mm:ss
+      uploadTime:
+        type: string
+        description: 错误日志上传时间，格式为：YYYY-MM-DD HH:mm:ss
+      publicURL:
+        type: string
+        description: 公网下载链接
+      internalURL:
+        type: string
+        description: 内网下载链接

@@ -1,0 +1,13 @@
+swagger: "2.0"
+definitions:
+  appModel:
+    x-jdcloud-module: jmr
+    title: appModel
+    type: object
+    properties:
+      appKey:
+        type: string
+        description: AK
+      appSecret:
+        type: string
+        description: SK

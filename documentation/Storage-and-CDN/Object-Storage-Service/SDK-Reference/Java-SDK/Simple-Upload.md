@@ -4,11 +4,11 @@
 
 ## 流式上传
 ```
-//您的AccessKey和SecretKey可以登录到京东云存储的控制台，在【Access Key 管理】中查看。  
+//您的AccessKey和SecretKey可以登录到对象存储的控制台，在【Access Key 管理】中查看。  
 String accessKey =  "<yourAccessKeyId>";  
 String secreteKey = "<yourSecretKey>";       
-// endpoint以华北为例，其它region请按实际情况填写  
-String endPoint = "s-bj.jcloud.com";  
+// endpoint以华北-北京为例，其它region请按实际情况填写  
+String endPoint = "oss.cn-north-1.jcloudcs.com";  
 File file = new File("<localFile>");   
 String bucketName = "<yourBucketName>";  
 String objectName = "<yourObjectName>";   
@@ -43,11 +43,11 @@ jss.destroy();
 
 ## 本地文件上传
 ```
-//您的AccessKey和SecretKey可以登录到京东云存储的控制台，在【Access Key 管理】中查看。  
+//您的AccessKey和SecretKey可以登录到对象存储的控制台，在【Access Key 管理】中查看。  
 String accessKey =  "<yourAccessKeyId>";  
 String secreteKey = "<yourSecretKey>";       
-// endpoint以华北为例，其它region请按实际情况填写  
-String endPoint = "s-bj.jcloud.com";  
+// endpoint以华北-北京为例，其它region请按实际情况填写  
+String endPoint = "oss.cn-north-1.jcloudcs.com";  
 File file = new File("<localFile>");   
 String bucketName = "<yourBucketName>";  
 String objectName = "<yourObjectName>";    

@@ -1,0 +1,20 @@
+swagger: "2.0"
+definitions:
+  consumerGroup:
+    x-jdcloud-module: streambus
+    title: consumerGroup
+    type: object
+    properties:
+      id:
+        type: integer
+      name:
+        type: string
+      createdTime:
+        type: string
+        format: date
+      delete:
+        type: string
+        format: byte
+      topicId:
+        type: integer 
+        format: int64

@@ -1,0 +1,20 @@
+swagger: "2.0"
+definitions:
+  BackupDownloadURL:
+    x-jdcloud-module: mongodb
+    title: BackupDownloadURL
+    type: object
+    properties:
+      backupName:
+        type: string
+        description: 备份名称
+      backupInternetDownloadURL:
+        type: string
+        description: 公网下载链接的地址
+      backupIntranetDownloadURL:
+        type: string
+        description: 内网下载链接的地址
+      linkExpiredTime:
+        type: string
+        description: 公网和内网的下载链接过期时间
+      

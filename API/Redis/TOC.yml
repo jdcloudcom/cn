@@ -3,29 +3,31 @@
   items:
   - name: 接口预览
     href: overview.md
+  - name: 更新历史
+    href: Changlog.md
   - name: 接口信息
     items:
       - name: Redis实例API
         items:
-          - name: 创建一个指定配置的缓存Redis实例
-            href: Redis Instance APIs/createCacheInstance.md
-          - name: 删除单个缓存Redis实例
-            href: Redis Instance APIs/deleteCacheInstance.md
-          - name: 查询缓存Redis实例详情
-            href: Redis Instance APIs/describeCacheInstance.md
-          - name: 查询缓存Redis实例列表
-            href: Redis Instance APIs/describeCacheInstances.md
-          - name: 修改缓存Redis实例的资源名称、描述，二者至少选一
-            href: Redis Instance APIs/modifyCacheInstanceAttribute.md
-          - name: 变更缓存Redis实例配置
-            href: Redis Instance APIs/modifyCacheInstanceClass.md
-          - name: 重置缓存Redis实例密码
-            href: Redis Instance APIs/resetCacheInstancePassword.md
+          - name: createCacheInstance
+            href: Redis-Instance-APIs/createCacheInstance.md
+          - name: deleteCacheInstance
+            href: Redis-Instance-APIs/deleteCacheInstance.md
+          - name: describeCacheInstance
+            href: Redis-Instance-APIs/describeCacheInstance.md
+          - name: describeCacheInstances
+            href: Redis-Instance-APIs/describeCacheInstances.md
+          - name: modifyCacheInstanceAttribute
+            href: Redis-Instance-APIs/modifyCacheInstanceAttribute.md
+          - name: modifyCacheInstanceClass
+            href: Redis-Instance-APIs/modifyCacheInstanceClass.md
+          - name: resetCacheInstancePassword
+            href: Redis-Instance-APIs/resetCacheInstancePassword.md
       - name: Redis实例类型API
         items:
-          - name: 查询某区域下的实例规格列表
-            href: Redis Instance type APIs/describeInstanceClass.md
+          - name: describeInstanceClass
+            href: Redis-Instance-type-APIs/describeInstanceClass.md
       - name: Redis配额APIs
         items:
-          - name: 查询账户配额信息
-            href: Redis Instance APIs/describeUserQuota.md
+          - name: describeUserQuota
+            href: Redis-Instance-APIs/describeUserQuota.md

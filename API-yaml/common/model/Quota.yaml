@@ -1,0 +1,15 @@
+swagger: "2.0"
+definitions:
+  quota:
+    x-jdcloud-module: common
+    type: object
+    properties:
+      name:
+        type: string
+        description: 配额项的名称
+      max:
+        type: integer
+        description: 配额
+      used:
+        type: integer
+        description: 已使用的数目

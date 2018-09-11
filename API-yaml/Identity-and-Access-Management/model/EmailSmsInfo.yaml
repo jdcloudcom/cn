@@ -1,0 +1,40 @@
+swagger: "2.0"
+definitions:
+  emailSmsInfo:
+    x-jdcloud-module: iam
+    required:
+      - createPin
+      - sendType
+      - receives
+      - templateId
+      - templateParam
+      - smsMessageSource
+    properties:
+      createPin:
+        type: string
+        description: 用户pin
+      title:
+        type: string
+        description: 邮件标题
+      sendType:
+        type: integer
+        description: 发送类型 1 发邮件 2 发短信
+      content:
+        type: string
+        description: 邮件内容
+      receives:
+        type: array
+        items:
+          type: string
+        description: 接收人
+      templateId:
+        type: integer
+        description: 模版code
+      templateParam:
+        type: array
+        items:
+          type: string
+        description: 模版参数
+      smsMessageSource:
+        type: string
+        description: 业务编码(和产品申请)

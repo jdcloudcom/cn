@@ -1,0 +1,38 @@
+swagger: "2.0"
+definitions:
+  networkInterfaceSpec:
+    x-jdcloud-module: vpc
+    required:
+      - subnetId
+    properties:
+      subnetId:
+        type: string
+        description: 子网ID
+      az:
+        type: string
+        description: 可用区，用户的默认可用区
+      networkInterfaceName:
+        type: string
+        description: 网卡名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
+      primaryIpAddress:
+        type: string
+        description: 网卡主IP，如果不指定，会自动从子网中分配
+      secondaryIpAddresses:
+        type: array
+        items:
+          type: string
+        description: SecondaryIp列表
+      secondaryIpCount:
+        type: integer
+        description: 自动分配的SecondaryIp数量
+      securityGroups:
+        type: array
+        items:
+          type: string
+        description: 要绑定的安全组ID列表，最多指定5个安全组
+      sanityCheck:
+        type: integer
+        description: 源和目标IP地址校验，取值为0或者1,默认为1
+      description:
+        type: string
+        description: 描述,​ 允许输入UTF-8编码下的全部字符，不超过256字符

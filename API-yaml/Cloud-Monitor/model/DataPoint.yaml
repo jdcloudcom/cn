@@ -1,0 +1,13 @@
+swagger: "2.0"
+definitions:
+  dataPoint:
+    x-jdcloud-module: monitor
+    type: object
+    properties:
+      timestamp:
+        type: integer
+        format: int64
+        description: 时间戳
+      value:
+        type: string
+        description: 值        

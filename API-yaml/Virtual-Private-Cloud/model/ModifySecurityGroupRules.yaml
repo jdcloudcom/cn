@@ -1,0 +1,25 @@
+swagger: "2.0"
+definitions:
+  modifySecurityGroupRules:
+    x-jdcloud-module: vpc
+    required:
+      - ruleId
+    properties:
+      ruleId:
+        type: string
+        description: 安全组规则的ID。
+      protocol:
+        type: number
+        description: 规则限定协议。300:All; 6:TCP; 17:UDP; 1:ICMP
+      fromPort:
+        type: integer
+        description: 安全组规则的起始端口。取值范围：1-65535
+      toPort:
+        type: integer
+        description: 安全组规则的终端口。取值范围：1-65535
+      addressPrefix:
+        type: string
+        description: 安全组规则前缀，取值范围：正确的CIDR        
+      description:
+        type: string
+        description: 安全组规则的描述，取值范围：0-256个UTF-8编码下的全部字符

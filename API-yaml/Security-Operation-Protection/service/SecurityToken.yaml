@@ -1,0 +1,88 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: 安全令牌
+  description: 操作保护安全令牌管理接口
+
+basePath: /regions/{regionId}
+
+paths:
+  "/securityToken:getSecurityToken":
+    ###################### 获取SecurityToken ######################
+    post:
+      description: "获取Token"
+      operationId: getSecurityToken
+      x-jdcloud-internal: false
+      parameters:
+        - name: getSecurityTokenInfo
+          in: body
+          description: 获取SecurityToken参数
+          required: true
+          schema:
+            $ref: "../model/GetSecurityTokenInfo.yaml#/definitions/getSecurityTokenInfo"
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                properties:
+                  securityToken:
+                    type: string
+                    description: 安全令牌
+              requestId:
+                type: string
+
+  "/securityToken:verifySecurityToken":
+    ###################### 验证SecurityToken有效性 ######################
+    post:
+      description: "验证SecurityToken有效性"
+      operationId: verifySecurityToken
+      x-jdcloud-internal: true
+      parameters:
+        - name: verifySecurityTokenInfo
+          in: body
+          description: 验证securityToken参数
+          required: true
+          schema:
+            $ref: "../model/VerifySecurityTokenInfo.yaml#/definitions/verifySecurityTokenInfo"
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              requestId:
+                type: string
+
+  "/securityToken:sendSopVerificationCode":
+    ###################### 发送sop验证码 ######################
+    post:
+      description: "发送sop验证码"
+      operationId: sendSopVerificationCode
+      x-jdcloud-internal: true
+      parameters:
+        - name: verificationCodeInfo
+          in: body
+          description: 发送验证码参数
+          required: true
+          schema:
+            $ref: "../model/VerificationCodeInfo.yaml#/definitions/verificationCodeInfo"
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              requestId:
+                type: string
+
+#路径通用参数
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: Region ID

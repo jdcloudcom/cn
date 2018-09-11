@@ -1,0 +1,42 @@
+swagger: "2.0"
+definitions:
+  userAccessKey:
+    x-jdcloud-module: jmr
+    title: userAccessKey
+    type: object
+    properties:
+      id:
+        type: integer
+        description: 用户通行id
+      pin:
+        type: string
+        description: 用户名
+      account:
+        type: string
+        description: 用户账号
+      accessKey:
+        type: string
+        description: 访问密钥，AccessKey用于程序方式调用云服务API
+      accessKeySecret:
+        type: string
+        description: AccessKeySecret是用来验证用户的密钥
+      expire:
+        type: string
+        format: date
+        description: 到期时间
+      created:
+        type: string
+        format: date-time
+        description: 创建时间
+      modified:
+        type: string
+        format: date-time
+        description: 更新时间
+      modifier:
+        type: string
+        description: 更新操作人
+      state:
+        type: integer
+        description: 状态
+      yn:
+        type: integer

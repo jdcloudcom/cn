@@ -1,5 +1,5 @@
- name: 对象存储 Object Storage Service
- href: 
+name: 对象存储 Object Storage Service
+href: 
  items:
  - name: 产品简介
    items:
@@ -75,6 +75,8 @@
              href: Operation-Guide/Manage-Bucket/Set-Bucket-Cross-Region-Replication.md
            - name: 自定义域名设置
              href: Operation-Guide/Manage-Bucket/Set-Custom-Domain-Name.md
+           - name: 回调通知
+             href: Operation-Guide/Manage-Bucket/Callback-Notification.md               
            - name: 文件管理
              items:
                 - name: 新建文件夹
@@ -85,6 +87,8 @@
                   href: Operation-Guide/Manage-Object/Get-Object-URL.md
                 - name: 删除文件
                   href: Operation-Guide/Manage-Object/Delete-Object.md
+                - name: 表单上传
+                  href: Operation-Guide/Manage-Object/Post-Object.md                  
                 - name: 用量监控
                   href: Operation-Guide/Manage-Object/Usage-Monitoring.md
            - name: 图片处理指南
@@ -144,7 +148,12 @@
       - name: 兼容公共头
         href:  API-Reference-S3-Compatible/Compatibility-Header.md      
       - name: 兼容接口
-        href: API-Reference-S3-Compatible/Compatibility-API.md            
+        items:
+           - name: 兼容接口概览
+             href: API-Reference-S3-Compatible/Compatibility-API/Compatibility-API-overview.md
+           - name: Post Object
+             href: API-Reference-S3-Compatible/Compatibility-API/Post-Object.md        
+        
       - name: 扩展接口
         items:
            - name:  Compress Object
@@ -172,7 +181,7 @@
  - name: 旧版API
    items:
       - name: 
-        href: Operation-Guide/Overview-Pag.md
+        href: Operation-Guide/Overview-Page.md
       - name:  OSS API 简介
         items:
            - name: 基本概念
@@ -279,6 +288,8 @@
         href: Best-Practices/Data-Migration-Tool.md 
       - name: 使用S3cmd管理OSS
         href: Best-Practices/S3cmd.md
+      - name: 回调服务器设置签名认证
+        href: Best-Practices/Setting-Signature-Authentication-For-Callback-Server.md        
  - name: 常见问题
    href:
     status: 0

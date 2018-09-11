@@ -1,0 +1,14 @@
+swagger: "2.0"
+definitions:
+  idata:
+    x-jdcloud-module: jmr
+    title: idata
+    type: object
+    properties:
+      total:
+        type: integer
+        description: 集群机器总数
+      clusters:
+        type: array
+        items:
+          $ref: "../model/idataCluster.yaml#/definitions/idataCluster"

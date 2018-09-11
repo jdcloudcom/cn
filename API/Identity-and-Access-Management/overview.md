@@ -23,7 +23,5 @@ v1
 |**describeUserAccessKeys**|GET|查询AccessKey列表|
 |**disabledUserAccessKey**|PUT|禁用AccessKey|
 |**enabledUserAccessKey**|PUT|启用AccessKey|
-|**getSessionToken**|POST|获取SessionToken|
 |**removePermissionOfSubUser**|DELETE|为子用户解绑策略|
 |**updatePermission**|PUT|修改策略|
-|**verifySessionToken**|POST|验证SessionToken有效性|

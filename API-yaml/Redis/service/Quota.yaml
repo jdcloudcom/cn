@@ -1,0 +1,58 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: 缓存Redis配额接口
+  description: 缓存Redis配额相关接口
+
+basePath: /regions/{regionId}
+
+paths:
+  "/quota":
+    ###################### 查询配额信息 ######################
+    get:
+      description: "查询账户配额信息"
+      operationId: describeUserQuota
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  quota:
+                    $ref: "../../common/model/Quota.yaml#/definitions/quota"
+              requestId:
+                type: string
+
+    ###################### 修改配额 ######################
+    patch:
+      description: "修改账户配额"
+      operationId: modifyUserQuota
+      x-jdcloud-internal: true
+      parameters:
+        - name: used
+          in: query
+          required: true
+          type: integer
+          description: 账户已使用配额
+        - name: quota
+          in: query
+          required: true
+          type: integer
+          description: 账户上限配额
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              requestId:
+                type: string
+
+#路径通用参数
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: 缓存Redis实例所在区域的Region ID。目前缓存Redis有华北、华南、华东区域，对应Region ID为cn-north-1、cn-south-1、cn-east-2

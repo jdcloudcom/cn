@@ -9,99 +9,99 @@
     items:
       - name: IP高防攻击记录相关接口
         items:
-          - name: 查询cc攻击日志详情
-            href:  Advanced Anti-DDoS Attack Record APIs/describeCcAttackLogDetails.md
-          - name: 查询cc攻击日志
-            href:  Advanced Anti-DDoS Attack Record APIs/describeCcAttackLogs.md
-          - name: 查询DDos攻击日志
-            href:  Advanced Anti-DDoS Attack Record APIs/describeDDosAttackLogs.md
+          - name: describeCcAttackLogDetails
+            href: Advanced-Anti-DDoS-Attack-Record-APIs/describeCcAttackLogDetails.md
+          - name: describeCcAttackLogs
+            href: Advanced-Anti-DDoS-Attack-Record-APIs/describeCcAttackLogs.md
+          - name: describeDDosAttackLogs
+            href: Advanced-Anti-DDoS-Attack-Record-APIs/describeDDosAttackLogs.md
       - name: IP高防实例相关接口
         items:
-          - name: 创建实例
-            href: Advanced Anti-DDoS Instance APIs/createInstance.md
-          - name: 查询实例
-            href: Advanced Anti-DDoS Instance APIs/describeInstance.md
-          - name: 查询实例列表
-            href: Advanced Anti-DDoS Instance APIs/describeInstances.md  
-          - name: 关闭CC防护每ip的限速
-            href: Advanced Anti-DDoS Instance APIs/disableCcIpLimit.md
-          - name: 关闭实例CC防护的观察者模式
-            href: Advanced Anti-DDoS Instance APIs/disableCcObserverMode.md
-          - name: 关闭实例CC防护
-            href: Advanced Anti-DDoS Instance APIs/disableInstanceCC.md
-          - name: 禁用实例ip黑名单
-            href: Advanced Anti-DDoS Instance APIs/disableInstanceIpBlackList.md
-          - name: 禁用实例ip白名单
-            href: Advanced Anti-DDoS Instance APIs/disableInstanceIpWhiteList.md  
-          - name: 禁用实例url白名单
-            href: Advanced Anti-DDoS Instance APIs/disableInstanceUrlWhiteList.md
-          - name: 开启CC防护每ip的限速
-            href: Advanced Anti-DDoS Instance APIs/enableCcIpLimit.md
-          - name: 开启实例CC防护的观察者模式
-            href: Advanced Anti-DDoS Instance APIs/enableCcObserverMode.md
-          - name: 开启实例CC防护
-            href: Advanced Anti-DDoS Instance APIs/enableInstanceCC.md
-          - name: 启用实例ip黑名单
-            href: Advanced Anti-DDoS Instance APIs/enableInstanceIpBlackList.md
-          - name: 启用实例ip白名单
-            href: Advanced Anti-DDoS Instance APIs/enableInstanceIpWhiteList.md  
-          - name: 启用实例url白名单
-            href: Advanced Anti-DDoS Instance APIs/enableInstanceUrlWhiteList.md
-          - name: 设置实例CC防护
-            href: Advanced Anti-DDoS Instance APIs/modifyInstanceCC.md
-          - name: 设置实例ip黑名单
-            href: Advanced Anti-DDoS Instance APIs/modifyInstanceIpBlackList.md
-          - name: 设置实例ip白名单
-            href: Advanced Anti-DDoS Instance APIs/modifyInstanceIpWhiteList.md
-          - name: 修改实例名称
-            href: Advanced Anti-DDoS Instance APIs/modifyInstanceName.md
-          - name: 设置实例url白名单
-            href: Advanced Anti-DDoS Instance APIs/modifyInstanceUrlWhiteList.md
-          - name: 设置实例CC防护每ip限速
-            href: Advanced Anti-DDoS Instance APIs/setCcIpLimit.md
+          - name: createInstance
+            href: Advanced-Anti-DDoS-Instance-APIs/createInstance.md
+          - name: describeInstance
+            href: Advanced-Anti-DDoS-Instance-APIs/describeInstance.md
+          - name: describeInstances
+            href: Advanced-Anti-DDoS-Instance-APIs/describeInstances.md
+          - name: disableCcIpLimit
+            href: Advanced-Anti-DDoS-Instance-APIs/disableCcIpLimit.md
+          - name: disableCcObserverMode
+            href: Advanced-Anti-DDoS-Instance-APIs/disableCcObserverMode.md
+          - name: disableInstanceCC
+            href: Advanced-Anti-DDoS-Instance-APIs/disableInstanceCC.md
+          - name: disableInstanceIpBlackList
+            href: Advanced-Anti-DDoS-Instance-APIs/disableInstanceIpBlackList.md
+          - name: disableInstanceIpWhiteList
+            href: Advanced-Anti-DDoS-Instance-APIs/disableInstanceIpWhiteList.md
+          - name: disableInstanceUrlWhiteList
+            href: Advanced-Anti-DDoS-Instance-APIs/disableInstanceUrlWhiteList.md
+          - name: enableCcIpLimit
+            href: Advanced-Anti-DDoS-Instance-APIs/enableCcIpLimit.md
+          - name: enableCcObserverMode
+            href: Advanced-Anti-DDoS-Instance-APIs/enableCcObserverMode.md
+          - name: enableInstanceCC
+            href: Advanced-Anti-DDoS-Instance-APIs/enableInstanceCC.md
+          - name: enableInstanceIpBlackList
+            href: Advanced-Anti-DDoS-Instance-APIs/enableInstanceIpBlackList.md
+          - name: enableInstanceIpWhiteList
+            href: Advanced-Anti-DDoS-Instance-APIs/enableInstanceIpWhiteList.md
+          - name: enableInstanceUrlWhiteList
+            href: Advanced-Anti-DDoS-Instance-APIs/enableInstanceUrlWhiteList.md
+          - name: modifyInstanceCC
+            href: Advanced-Anti-DDoS-Instance-APIs/modifyInstanceCC.md
+          - name: modifyInstanceIpBlackList
+            href: Advanced-Anti-DDoS-Instance-APIs/modifyInstanceIpBlackList.md
+          - name: modifyInstanceIpWhiteList
+            href: Advanced-Anti-DDoS-Instance-APIs/modifyInstanceIpWhiteList.md
+          - name: modifyInstanceName
+            href: Advanced-Anti-DDoS-Instance-APIs/modifyInstanceName.md
+          - name: modifyInstanceUrlWhiteList
+            href: Advanced-Anti-DDoS-Instance-APIs/modifyInstanceUrlWhiteList.md
+          - name: setCcIpLimit
+            href: Advanced-Anti-DDoS-Instance-APIs/setCcIpLimit.md
       - name:  IP高防报表相关接口
         items:
-          - name: 转发流量报表
-            href: Advanced Anti-DDoS Report APIs/ccGraph.md        
-          - name: ddos防护报表
-            href: Advanced Anti-DDoS Report APIs/ddosGraph.md 
-          - name: 转发流量报表
-            href: Advanced Anti-DDoS Report APIs/fwdGraph.md
+          - name: ccGraph
+            href: Advanced-Anti-DDoS-Report-APIs/ccGraph.md
+          - name: ddosGraph
+            href: Advanced-Anti-DDoS-Report-APIs/ddosGraph.md
+          - name: fwdGraph
+            href: Advanced-Anti-DDoS-Report-APIs/fwdGraph.md
       - name:  非网站转发配置相关接口
         items:
-          - name: 添加非网站类规则
-            href: Non Web Forwarding Configuration APIs/createForwardRule.md        
-          - name: 删除某条非网站规则
-            href: Non Web Forwarding Configuration APIs/deleteForwardRule.md 
-          - name: 查询某条非网站类规则
-            href: Non Web Forwarding Configuration APIs/describeForwardRule.md
-          - name: 查询某个实例下的非网站转发配置
-            href: Non Web Forwarding Configuration APIs/describeForwardRules.md        
-          - name: 更新某条非网站类规则
-            href: Non Web Forwarding Configuration APIs/modifyForwardRule.md 
-          - name: 非网站类规则切换成回源状态
-            href: Non Web Forwarding Configuration APIs/switchForwardRuleOrigin.md
-          - name: 非网站类规则切换成防御状态
-            href: Non Web Forwarding Configuration APIs/switchForwardRuleProtect.md
+          - name: createForwardRule
+            href: Non-Web-Forwarding-Configuration-APIs/createForwardRule.md
+          - name: deleteForwardRule
+            href: Non-Web-Forwarding-Configuration-APIs/deleteForwardRule.md
+          - name: describeForwardRule
+            href: Non-Web-Forwarding-Configuration-APIs/describeForwardRule.md
+          - name: describeForwardRules
+            href: Non-Web-Forwarding-Configuration-APIs/describeForwardRules.md
+          - name: modifyForwardRule
+            href: Non-Web-Forwarding-Configuration-APIs/modifyForwardRule.md
+          - name: switchForwardRuleOrigin
+            href: Non-Web-Forwarding-Configuration-APIs/switchForwardRuleOrigin.md
+          - name: switchForwardRuleProtect
+            href: Non-Web-Forwarding-Configuration-APIs/switchForwardRuleProtect.md
       - name:  网站转发配置相关接口
         items:
-          - name: 添加网站类规则
-            href: Web Forwarding Configuration APIs/createWebRule.md        
-          - name: 删除某条网站规则
-            href: Web Forwarding Configuration APIs/deleteWebRule.md 
-          - name: 查询某条网站类规则
-            href: Web Forwarding Configuration APIs/describeWebRule.md
-          - name: 查询某个实例下的网站类规则
-            href: Web Forwarding Configuration APIs/describeWebRules.md        
-          - name: 网站类规则禁用CC
-            href: Web Forwarding Configuration APIs/disableWebRuleCC.md 
-          - name: 网站类规则开启CC
-            href: Web Forwarding Configuration APIs/enableWebRuleCC.md
-          - name: 更新某条网站类规则
-            href: Web Forwarding Configuration APIs/modifyWebRule.md        
-          - name: 网站类规则切换成回源状态
-            href: Web Forwarding Configuration APIs/switchWebRuleOrigin.md 
-          - name: 网站类规则切换成防御状态
-            href: Web Forwarding Configuration APIs/switchWebRuleProtect.md
+          - name: createWebRule
+            href: Web-Forwarding-Configuration-APIs/createWebRule.md
+          - name: deleteWebRule
+            href: Web-Forwarding-Configuration-APIs/deleteWebRule.md
+          - name: describeWebRule
+            href: Web-Forwarding-Configuration-APIs/describeWebRule.md
+          - name: describeWebRules
+            href: Web-Forwarding-Configuration-APIs/describeWebRules.md
+          - name: disableWebRuleCC
+            href: Web-Forwarding-Configuration-APIs/disableWebRuleCC.md
+          - name: enableWebRuleCC
+            href: Web-Forwarding-Configuration-APIs/enableWebRuleCC.md
+          - name: modifyWebRule
+            href: Web-Forwarding-Configuration-APIs/modifyWebRule.md
+          - name: switchWebRuleOrigin
+            href: Web-Forwarding-Configuration-APIs/switchWebRuleOrigin.md
+          - name: switchWebRuleProtect
+            href: Web-Forwarding-Configuration-APIs/switchWebRuleProtect.md
 
           

@@ -1,0 +1,15 @@
+swagger: "2.0"
+definitions:
+  metric:
+    x-jdcloud-module: monitor
+    type: object
+    properties:
+      calculateUnit:
+        type: string
+        description: 指标的计算单位，比如bit/s、%、k等
+      metric:
+        type: string
+        description: 监控项英文标识
+      metricName:
+        type: string
+        description: 监控项名称

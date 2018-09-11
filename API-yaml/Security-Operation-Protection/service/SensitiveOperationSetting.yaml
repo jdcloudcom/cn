@@ -1,0 +1,49 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: 敏感操作配置
+  description: 操作敏感操作配置接口
+
+basePath: /regions/{regionId}
+
+paths:
+  "/sensitiveOpSetting":
+    ###################### 获取操作保护设置信息 ######################
+    get:
+      description: "获取操作保护设置信息"
+      operationId: getSensitiveOpSetting
+      x-jdcloud-internal: false
+      parameters:
+       - name: action
+         in: query
+         type: string
+         required: true
+         description: 操作action serviceName:actionName
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                properties:
+                  status:
+                    type: integer
+                    description: 操作保护启用状态：0-未启用, 1-已启用
+                  type:
+                    type: integer
+                    description: 操作保护验证方式：0-无, 1-短信, 2-邮箱, 3-MFA
+                  extInfo:
+                    type: string
+                    description: 扩展信息，type=1时为掩码后的手机号码 type=2时为掩码后的邮箱地址
+              requestId:
+                type: string
+
+#路径通用参数
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: Region ID

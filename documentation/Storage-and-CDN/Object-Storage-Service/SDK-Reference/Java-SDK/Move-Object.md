@@ -2,11 +2,11 @@
 
 在同一个区域中，可以将Object从一个Bucket移动到另外一个Bucket。相同的bucket下移动相当于重命名object。该操作不会修改metadata：
 ```
-//您的AccessKey和SecretKey可以登录到京东云存储的控制台，在【Access Key 管理】中查看。  
+//您的AccessKey和SecretKey可以登录到京东对象存储的控制台，在【Access Key 管理】中查看。  
 String accessKey =  "<yourAccessKeyId>";  
 String secreteKey = "<yourSecretKey>";       
-// endpoint以华北为例，其它region请按实际情况填写  
-String endPoint = "s-bj.jcloud.com";  
+// endpoint以华北-北京为例，其它region请按实际情况填写  
+String endPoint = "oss.cn-north-1.jcloudcs.com";  
 String sourceBucketName = "< yourSourceBucketName >";//moveObject的源bucket  
 String sourceKey = "<yourSourceKey>";//moveObject的源object key     
 String destinationBucketName = "<yourDestinationBucketName>";//moveObject的目的bucket  

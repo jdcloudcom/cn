@@ -1,5 +1,5 @@
-- name: 云市场
-  items:
+name: 云市场
+items:
   - name: 服务商
     items:
       - name: 服务商入驻
@@ -42,32 +42,40 @@
           herf: Product-Enter/Notify-Interface-Standard.md
   - name: 服务相关
     items:
-        - name: 订购协议
-          herf: Service-Related/Subscription-Agreement.md
-        - name: 发票申请
-          herf: Service-Related/Invoice.md
-        - name: 镜像帮助文档
-          herf: Service-Related/Image-Help.md
-        - name: 建站帮助文档
-          herf: Service-Related/Website-Help.md
-        - name: 服务商咚咚添加操作指导
-          herf: Service-Related/IM-Operation-Manual.md
-        - name: 短信服务
-          items:
-          - name: 京东云短信优势
-            herf: Messaging-Service/Message-Advantage.md
-          - name: 短信服务FAQ
-            herf: Messaging-Service/Message-FAQ.md
-          - name: 发送流程
-            herf: Messaging-Service/Message-Send.md
-          - name: 短信计价方式
-            herf: Messaging-Service/Message-Charging.md
-          - name: 签名审核规则
-            herf: Messaging-Service/Sign-Rule.md
-          - name: 模板审核规则
-            herf: Messaging-Service/Templet-Rule.md
+      - name: 订购协议
+        herf: Service-Related/Subscription-Agreement.md
+      - name: 发票申请
+        herf: Service-Related/Invoice.md
+      - name: 镜像帮助文档
+        herf: Service-Related/Image-Help.md
+      - name: 建站帮助文档
+        herf: Service-Related/Website-Help.md
+      - name: 京东云PLUS企业云盘帮助文档
+        herf: Service-Related/PLUS-Enterprise-Cloud-Box-Document.md
+      - name: 京东云PLUS企业邮箱帮助文档
+        herf: Service-Related/PLUS-Enterprise-Email-Document.md
+      - name: 京东云PLUS云会议帮助文档
+        herf: Service-Related/PLUS-Meeting-Document.md
+      - name: 京东云PLUS智能短信帮助文档
+        herf: Service-Related/PLUS-Smart-SMS-Document.md 
+      - name: 服务商咚咚添加操作指导
+        herf: Service-Related/IM-Operation-Manual.md
+      - name: 短信服务
+        items:
+        - name: 京东云短信优势
+          herf: Messaging-Service/Message-Advantage.md
+        - name: 短信服务FAQ
+          herf: Messaging-Service/Message-FAQ.md
+        - name: 发送流程
+          herf: Messaging-Service/Message-Send.md
+        - name: 短信计价方式
+          herf: Messaging-Service/Message-Charging.md
+        - name: 签名审核规则
+          herf: Messaging-Service/Sign-Rule.md
+        - name: 模板审核规则
+          herf: Messaging-Service/Templet-Rule.md
   - name: 联系我们
     items:
-        - name: 联系我们
-          herf: Contact-Us/Contact-Us.md
+      - name: 联系我们
+        herf: Contact-Us/Contact-Us.md
           

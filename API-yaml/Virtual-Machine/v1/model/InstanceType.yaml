@@ -5,10 +5,10 @@ definitions:
     properties:
       family:
         type: string
-        description: 实例族
+        description: 实例规格类型
       instanceType:
         type: string
-        description: 规格类型，比如g.b1.2xlarge
+        description: 实例规格，比如g.b1.2xlarge
       cpu:
         type: integer
         description: cpu个数

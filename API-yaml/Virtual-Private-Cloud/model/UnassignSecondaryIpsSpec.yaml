@@ -1,0 +1,10 @@
+swagger: "2.0"
+definitions:
+  unassignSecondaryIpsSpec:
+    x-jdcloud-module: vpc
+    properties:
+      secondaryIps:
+        type: array
+        items:
+          type: string
+        description: 指定删除的secondaryIp地址

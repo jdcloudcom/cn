@@ -1,0 +1,10 @@
+swagger: "2.0"
+definitions:
+  simpleResponses:
+    x-jdcloud-module: common
+    type: object
+    properties:
+      requestId:
+        type: string
+        description: Request ID
+

@@ -16,7 +16,7 @@
 ## 使用云主机
 京东云提供Web操作界面，即控制台，您可以使用京东云账号直接登录[云主机控制台](https://cns-console.jdcloud.com/compute/list)，对您的云主机进行管理及操作。
 
-京东云也提供了API接口方便您管理云主机有关云主机API操作的详细信息，请参见[OpenAPI文档]()。您可以使用SDK（支持 Java/Python/Go/Node.js/PHP/.Net/C++）编程或使用京东云云命令行工具（CLI）调用云主机API，具体请参考：[SDK文档]()及[CLI文档]()。
+京东云也提供了API接口方便您管理云主机，有关云主机API操作的详细信息，请参见[OpenAPI文档]()。您可以使用SDK（支持 Java/Python/Go/Node.js/PHP/.Net/C++）编程或使用京东云云命令行工具（CLI）调用云主机API，具体请参考：[SDK文档]()及[CLI文档]()。
 
 ## 计费说明
 云主机支持包年包月和按配置两种计费模式：

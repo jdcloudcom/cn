@@ -1,0 +1,19 @@
+swagger: "2.0"
+definitions:
+  hostAlias:
+    x-jdcloud-module: nc
+    type: object
+    description: 域名和IP映射的信息
+    x-jdcloud-internal: false
+    required:
+      - hostnames
+      - ip
+    properties:
+      hostnames:
+        type: array
+        items:
+          type: string
+        description: 域名列表
+      ip:
+        type: string
+        description: IP地址

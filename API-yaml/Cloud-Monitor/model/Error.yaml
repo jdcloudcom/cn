@@ -1,0 +1,15 @@
+swagger: "2.0"
+definitions:
+  errorBody:
+    x-jdcloud-module: monitor
+    type: object
+    properties:
+      code:
+        type: integer
+        description: "错误码"
+      message:
+          type: string
+          description: "错误信息" 
+      status:
+          type: string
+          description: "错误状态"   

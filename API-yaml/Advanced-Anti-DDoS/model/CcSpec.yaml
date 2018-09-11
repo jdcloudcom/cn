@@ -1,0 +1,24 @@
+swagger: "2.0"
+definitions:
+  CCSpec:
+    type: object
+    x-jdcloud-module: ipanti
+    properties:
+      ccProtectMode:
+        type: integer
+        description: cc防护模式，0->正常 1->宽松 2->紧急 3->自定义
+      ccThreshold:
+        type: integer
+        description: cc防护阈值大小
+      hostQps:
+        type: integer
+        description: ccProtectMode为自定义模式时，指定每个Host的防护阈值
+      hostUrlQps:
+        type: integer
+        description: ccProtectMode为自定义模式时，指定每个Host+URI的防护阈值
+      ipHostQps:
+        type: integer
+        description: ccProtectMode为自定义模式时，指定每个源IP对Host的防护阈值
+      ipHostUrlQps:
+        type: integer
+        description: ccProtectMode为自定义模式时，指定每个源IP对Host+URI的防护阈值

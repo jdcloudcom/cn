@@ -1,0 +1,8 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: 原生容器
+  description: 原生容器相关接口
+host: "nc.jdcloud-api.com"
+x-jdcloud-version: "v1"
+x-jdcloud-revision: "0.2.4"

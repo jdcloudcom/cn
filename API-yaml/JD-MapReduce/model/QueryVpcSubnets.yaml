@@ -1,0 +1,13 @@
+swagger: "2.0"
+definitions:
+  queryVpcSubnets:
+    x-jdcloud-module: jmr
+    title: queryVpcSubnets
+    type: object
+    properties:
+      vpcSubnetId:
+        type: string
+        description: VPC 子网id
+      vpcSubnetName:
+        type: string
+        description: VPC 子网名称

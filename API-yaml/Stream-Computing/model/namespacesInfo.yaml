@@ -1,0 +1,39 @@
+swagger: '2.0'
+definitions:
+  namespace:
+    x-jdcloud-module: streamcomputer
+    title: namespace
+    type: object
+    properties:
+      id:
+        type: integer
+      name:
+        type: string
+      pods:
+        type: string
+      type:
+        type: string
+        format: byte
+      typeValue:
+        type: string
+      deleted:
+        type: integer
+        format: byte
+      createTime:
+        type: string
+        format: date
+      updateTime:
+        type: string
+        format: date  
+      userName:
+        type: string
+      status:
+        type: string
+      sourceId:
+        type: string
+      resourceId:
+        type: string
+      podsUpdateTime:
+        type: string
+        format: date
+ 

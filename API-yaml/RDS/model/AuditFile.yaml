@@ -1,0 +1,20 @@
+swagger: "2.0"
+definitions:
+  AuditFile:
+    x-jdcloud-module: rds
+    title: AuditFile
+    type: object
+    properties:
+      name:
+        type: string
+        description: 审计日志文件名称
+      sizeByte:
+        type: integer
+        format: int64
+        description: 审计日志文件大小，单位Byte
+      lastUpdateTime:
+        type: string
+        description: 审计日志文件最后更新时间
+      uploadTime:
+        type: string
+        description: 审计日志文件上传时间

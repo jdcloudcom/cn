@@ -1,0 +1,90 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: 配额
+  description: 配额的相关接口
+
+basePath: /regions/{regionId}
+
+schemes:
+  - https
+
+paths:
+  "/quotas/":
+     get:
+       summary: "查询配额信息"
+       description: "查询配额信息"
+       x-jdcloud-internal: true
+       operationId: DescribeQuota
+
+       parameters:
+          - name: type
+            in: query
+            required: true
+            type: string
+            description: 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）
+          - name: parentResourceId
+            in: query
+            type: string
+            description: type为vpc、elastic_ip、network_interface不设置, type为subnet、security_group、vpcpeering设置为vpcId
+
+       responses:
+         200:
+           description: Successful operation
+           schema:
+             type:  object
+             properties:
+               result:
+                 description: "返回结果"
+                 properties:
+                   quota:
+                     type: object
+                     schema:
+                       $ref: "../model/Quota.yaml#/definitions/quota"
+               requestId:
+                 description: "请求ID"
+                 type: string
+         400:
+           description: "invalid parameter"
+         500:
+           description: "Internal server error"
+
+     patch:
+       summary: "修改配额信息"
+       description: "修改配额信息"
+       x-jdcloud-internal: true
+       operationId: ModifyQuota
+
+       parameters:
+          - name: modifyQuotaSpec
+            in: body
+            required: true
+            description: "修改配额"
+            x-jdcloud-tiered: false
+            schema:
+              $ref: "../model/ModifyQuotaSpec.yaml#/definitions/modifyQuotaSpec"
+
+       responses:
+         200:
+           description: Successful operation
+           schema:
+             type:  object
+             properties:
+               requestId:
+                 description: "请求ID"
+                 type: string
+         400:
+           description: "invalid parameter"
+         404:
+           description: "resource not found"
+         500:
+           description: "Internal server error"
+
+
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: Region ID

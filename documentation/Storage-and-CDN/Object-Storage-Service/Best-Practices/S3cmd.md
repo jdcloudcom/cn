@@ -35,7 +35,7 @@ git clone https://github.com/s3tools/s3cmd.git
 
 **S3cmd安装**
 ```
-sudo cp -f s3cmd/ /usr/local/
+sudo cp -rf s3cmd/ /usr/local/
 sudo ln -s /usr/local/s3cmd/s3cmd /usr/bin/s3cmd
 ```
 
@@ -136,197 +136,83 @@ Linux shell环境下输入s3cmd并回车，如下所示即可使用：
 
 Commands：
 
-<body link="#0563C1" vlink="#954F72">
-
-<table border=0 cellpadding=0 cellspacing=0 width=406 style='border-collapse:
- collapse;table-layout:fixed;width:305pt'>
- <col width=69 style='width:152pt'>
- <col width=337 style='mso-width-source:userset;mso-width-alt:10773;width:453pt'>
- <tr height=19 style='height:14.5pt'>
-  <td height=19 class=xl65 width=69 style='height:14.5pt;width:152pt'>功能类型</td>
-  <td class=xl66 width=337 style='width:453pt'>功能命令</td>
- </tr>
- <tr height=19 style='height:14.0pt'>
-  <td rowspan=24 height=588 class=xl67 width=69 style='border-bottom:1.0pt solid black;
-  height:441.0pt;border-top:none;width:152pt'>管理Bucket</td>
-  <td rowspan=2 class=xl70 width=337 style='border-bottom:1.0pt solid black;
-  border-top:none;width:453pt'>Make bucket s3cmd<br>
-    mb s3://BUCKET</td>
- </tr>
- <tr height=19 style='height:14.5pt'>
- </tr>
- <tr height=31 style='mso-height-source:userset;height:23.0pt'>
-  <td rowspan=2 height=50 class=xl70 width=337 style='border-bottom:1.0pt solid black;
-  height:37.5pt;border-top:none;width:453pt'>Remove bucket<br>
-    s3cmd rb s3://BUCKET</td>
- </tr>
- <tr height=19 style='height:14.5pt'>
- </tr>
- <tr height=31 style='mso-height-source:userset;height:23.0pt'>
-  <td rowspan=2 height=50 class=xl70 width=337 style='border-bottom:1.0pt solid black;
-  height:37.5pt;border-top:none;width:453pt'>List objects or buckets<br>
-    s3cmd ls [s3://BUCKET[/PREFIX]]</td>
- </tr>
- <tr height=19 style='height:14.5pt'>
- </tr>
- <tr height=31 style='mso-height-source:userset;height:23.0pt'>
-  <td rowspan=2 height=50 class=xl70 width=337 style='border-bottom:1.0pt solid black;
-  height:37.5pt;border-top:none;width:453pt'>Disk usage by buckets<br>
-    s3cmd du [s3://BUCKET[/PREFIX]]</td>
- </tr>
- <tr height=19 style='height:14.5pt'>
- </tr>
- <tr height=31 style='mso-height-source:userset;height:23.0pt'>
-  <td rowspan=2 height=50 class=xl70 width=337 style='border-bottom:1.0pt solid black;
-  height:37.5pt;border-top:none;width:453pt'>Modify Access control list for
-  Bucket or Files<br>
-    s3cmd setacl s3://BUCKET[/OBJECT]</td>
- </tr>
- <tr height=19 style='height:14.5pt'>
- </tr>
- <tr height=31 style='mso-height-source:userset;height:23.0pt'>
-  <td rowspan=2 height=50 class=xl70 width=337 style='border-bottom:1.0pt solid black;
-  height:37.5pt;border-top:none;width:453pt'>Modify Bucket Policy<br>
-    s3cmd setpolicy FILE s3://BUCKET</td>
- </tr>
- <tr height=19 style='height:14.5pt'>
- </tr>
- <tr height=31 style='mso-height-source:userset;height:23.0pt'>
-  <td rowspan=2 height=50 class=xl70 width=337 style='border-bottom:1.0pt solid black;
-  height:37.5pt;border-top:none;width:453pt'>Delete Bucket Policy<br>
-    s3cmd delpolicy s3://BUCKET</td>
- </tr>
- <tr height=19 style='height:14.5pt'>
- </tr>
- <tr height=31 style='mso-height-source:userset;height:23.0pt'>
-  <td rowspan=2 height=50 class=xl70 width=337 style='border-bottom:1.0pt solid black;
-  height:37.5pt;border-top:none;width:453pt'>Modify Bucket CORS<br>
-    s3cmd setcors FILE s3://BUCKET</td>
- </tr>
- <tr height=19 style='height:14.5pt'>
- </tr>
- <tr height=31 style='mso-height-source:userset;height:23.0pt'>
-  <td rowspan=2 height=50 class=xl70 width=337 style='border-bottom:1.0pt solid black;
-  height:37.5pt;border-top:none;width:453pt'>Delete Bucket CORS<br>
-    s3cmd delcors s3://BUCKET</td>
- </tr>
- <tr height=19 style='height:14.5pt'>
- </tr>
- <tr height=31 style='mso-height-source:userset;height:23.0pt'>
-  <td rowspan=2 height=50 class=xl70 width=337 style='border-bottom:1.0pt solid black;
-  height:37.5pt;border-top:none;width:453pt'>Create Website from bucket<br>
-    s3cmd ws-create s3://BUCKET</td>
- </tr>
- <tr height=19 style='height:14.5pt'>
- </tr>
- <tr height=31 style='mso-height-source:userset;height:23.0pt'>
-  <td rowspan=2 height=50 class=xl70 width=337 style='border-bottom:1.0pt solid black;
-  height:37.5pt;border-top:none;width:453pt'>Delete Website<br>
-    s3cmd ws-delete s3://BUCKET</td>
- </tr>
- <tr height=19 style='height:14.5pt'>
- </tr>
- <tr height=31 style='mso-height-source:userset;height:23.0pt'>
-  <td rowspan=2 height=50 class=xl70 width=337 style='border-bottom:1.0pt solid black;
-  height:37.5pt;border-top:none;width:453pt'>Info about Website<br>
-    s3cmd ws-info s3://BUCKET</td>
- </tr>
- <tr height=19 style='height:14.5pt'>
- </tr>
- <tr height=31 style='mso-height-source:userset;height:23.0pt'>
-  <td rowspan=14 height=350 class=xl70 width=69 style='border-bottom:1.0pt solid black;
-  height:262.5pt;border-top:none;width:152pt'>管理Object</td>
-  <td rowspan=2 class=xl70 width=337 style='border-bottom:1.0pt solid black;
-  border-top:none;width:453pt'>Put file into bucket<br>
-    s3cmd put FILE [FILE...]s3://BUCKET[/PREFIX]</td>
- </tr>
- <tr height=19 style='height:14.5pt'>
- </tr>
- <tr height=31 style='mso-height-source:userset;height:23.0pt'>
-  <td rowspan=2 height=50 class=xl70 width=337 style='border-bottom:1.0pt solid black;
-  height:37.5pt;border-top:none;width:453pt'>Get file from bucket<br>
-    s3cmd get s3://BUCKET/OBJECT LOCAL_FILE</td>
- </tr>
- <tr height=19 style='height:14.5pt'>
- </tr>
- <tr height=31 style='mso-height-source:userset;height:23.0pt'>
-  <td rowspan=2 height=50 class=xl70 width=337 style='border-bottom:1.0pt solid black;
-  height:37.5pt;border-top:none;width:453pt'>Delete file from bucket<br>
-    s3cmd del s3://BUCKET/OBJECT</td>
- </tr>
- <tr height=19 style='height:14.5pt'>
- </tr>
- <tr height=31 style='mso-height-source:userset;height:23.0pt'>
-  <td rowspan=2 height=50 class=xl70 width=337 style='border-bottom:1.0pt solid black;
-  height:37.5pt;border-top:none;width:453pt'>Delete file from bucket (alias for
-  del)<br>
-    s3cmd rm s3://BUCKET/OBJECT</td>
- </tr>
- <tr height=19 style='height:14.5pt'>
- </tr>
- <tr height=31 style='mso-height-source:userset;height:23.0pt'>
-  <td rowspan=2 height=50 class=xl70 width=337 style='border-bottom:1.0pt solid black;
-  height:37.5pt;border-top:none;width:453pt'>Show multipart uploads<br>
-    s3cmd multipart s3://BUCKET [Id]</td>
- </tr>
- <tr height=19 style='height:14.5pt'>
- </tr>
- <tr height=31 style='mso-height-source:userset;height:23.0pt'>
-  <td rowspan=2 height=50 class=xl70 width=337 style='border-bottom:1.0pt solid black;
-  height:37.5pt;border-top:none;width:453pt'>Abort a multipart upload<br>
-    s3cmd abortmp s3://BUCKET/OBJECT Id</td>
- </tr>
- <tr height=19 style='height:14.5pt'>
- </tr>
- <tr height=31 style='mso-height-source:userset;height:23.0pt'>
-  <td rowspan=2 height=50 class=xl70 width=337 style='border-bottom:1.0pt solid black;
-  height:37.5pt;border-top:none;width:453pt'>List parts of a multipart
-  upload<br>
-    s3cmd listmp s3://BUCKET/OBJECT Id</td>
- </tr>
- <tr height=19 style='height:14.5pt'>
- </tr>
- <tr height=31 style='mso-height-source:userset;height:23.0pt'>
-  <td rowspan=10 height=344 class=xl70 width=69 style='border-bottom:1.0pt solid black;
-  height:258.5pt;border-top:none;width:152pt'>其他功能</td>
-  <td rowspan=2 class=xl70 width=337 style='border-bottom:1.0pt solid black;
-  border-top:none;width:453pt'>Sign arbitrary string using the secret &nbsp;
-  key<br>
-    s3cmd sign STRING-TO-SIGN</td>
- </tr>
- <tr height=19 style='height:14.5pt'>
- </tr>
- <tr height=46 style='mso-height-source:userset;height:34.5pt'>
-  <td rowspan=3 height=84 class=xl70 width=337 style='border-bottom:1.0pt solid black;
-  height:63.0pt;border-top:none;width:453pt'>Get various information about
-  Buckets or &nbsp; Files<br>
-    s3cmd info s3://BUCKET[/OBJECT]<br>
-    注：不支持显示bucket的信息，显示object的信息不完全</td>
- </tr>
- <tr height=19 style='height:14.0pt'>
- </tr>
- <tr height=19 style='height:14.5pt'>
- </tr>
- <tr height=107 style='mso-height-source:userset;height:80.5pt'>
-  <td rowspan=3 height=145 class=xl70 width=337 style='border-bottom:1.0pt solid black;
-  height:109.0pt;border-top:none;width:453pt'>Synchronize a directory tree to
-  S3 (checks files freshness using size and md5 checksum, unless overridden by
-  options, see below)<br>
-    s3cmd sync LOCAL_DIR s3://BUCKET[/PREFIX] or s3://BUCKET[/PREFIX]
-  LOCAL_DIR<br>
-    注：不会自动同步，需要自己输入这条命令来同步一个目录。</td>
- </tr>
- <tr height=19 style='height:14.0pt'>
- </tr>
- <tr height=19 style='height:14.5pt'>
- </tr>
- <tr height=46 style='mso-height-source:userset;height:34.5pt'>
-  <td rowspan=2 height=65 class=xl70 width=337 style='border-bottom:1.0pt solid black;
-  height:49.0pt;border-top:none;width:453pt'>Sign an S3 URL to provide limited
-  public access with expiry s3cmd signurl &nbsp;&nbsp;<br>
-    s3://BUCKET/OBJECT &lt;expiry_epoch|+expiry_offset&gt;</td>
- </tr>
- <tr height=19 style='height:14.5pt'>
- </tr>
-
+<table>
+<tr>
+    <td>功能类型</td>
+    <td>功能命令</td>
+</tr>
+<tr>
+    <td rowspan="12"> 管理Bucket</td>
+    <td>Make bucket<br>s3cmd mb s3://BUCKET</td>
+</tr>
+<tr>
+    <td>Remove bucket<br>s3cmd rb s3://BUCKET</td>
+</tr>
+<tr>
+    <td>List objects or buckets<br>s3cmd ls [s3://BUCKET[/PREFIX]]</td>
+</tr>
+<tr>
+    <td>Disk usage by buckets<br>s3cmd du [s3://BUCKET[/PREFIX]]</td>
+</tr>
+<tr>
+    <td>Modify Access control list for Bucket or Files<br>s3cmd setacl s3://BUCKET[/OBJECT]</td>
+</tr>
+<tr>
+    <td>Modify Bucket Policy<br>s3cmd setpolicy FILE s3://BUCKET</td>
+</tr>
+<tr>
+    <td>Delete Bucket Policy<br>s3cmd delpolicy s3://BUCKET</td>
+</tr>
+<tr>
+    <td>Modify Bucket CORS<br>s3cmd setcors FILE s3://BUCKET</td>
+</tr>
+ <tr>
+    <td>Delete Bucket CORS<br>s3cmd delcors s3://BUCKET</td>
+</tr>
+ <tr>
+    <td>Create Website from bucket<br>s3cmd ws-create s3://BUCKET</td>
+</tr>
+ <tr>
+    <td>Delete Website<br>s3cmd ws-delete s3://BUCKET</td>
+</tr>
+ <tr>
+    <td>Info about Website<br>s3cmd ws-info s3://BUCKET</td>
+</tr> 
+<tr>
+    <td rowspan="7"> 管理Object</td>
+    <td>Put file into bucket<br>s3cmd put FILE [FILE...]s3://BUCKET[/PREFIX]</td>
+</tr>
+<tr>
+    <td>Get file from bucket<br>s3cmd get s3://BUCKET/OBJECT LOCAL_FILE</td>
+</tr>
+<tr>
+    <td>Delete file from bucket<br>s3cmd del s3://BUCKET/OBJECT</td>
+</tr>
+<tr>
+    <td>Delete file from bucket (alias for del)<br>s3cmd rm s3://BUCKET/OBJECT</td>
+</tr>
+<tr>
+    <td>Show multipart uploads<br>s3cmd multipart s3://BUCKET [Id]</td>
+</tr>
+<tr>
+    <td>Abort a multipart upload<br>s3cmd abortmp s3://BUCKET/OBJECT Id</td>
+</tr>
+<tr>
+    <td>List parts of a multipart upload<br>s3cmd listmp s3://BUCKET/OBJECT Id</td>
+</tr>
+<tr>
+    <td rowspan="4"> 其他功能</td>
+    <td>Sign arbitrary string using the secret key<br>s3cmd sign STRING-TO-SIGN</td>
+</tr>
+<tr>
+    <td>Get various information about Buckets or Files<br>s3cmd info s3://BUCKET[/OBJECT]<br>注：不支持显示bucket的信息，显示object的信息不完全</td>
+</tr>
+<tr>
+    <td>Synchronize a directory tree to S3 (checks files freshness using size and md5 checksum, unless overridden by options, see below)<br>s3cmd sync LOCAL_DIR s3://BUCKET[/PREFIX] or s3://BUCKET[/PREFIX] LOCAL_DIR<br>注：不会自动同步，需要自己输入这条命令来同步一个目录。</td>
+</tr>
+<tr>
+    <td>Sign an S3 URL to provide limited public access with expiry s3cmd signurl<br>s3://BUCKET/OBJECT <expiry_epoch|+expiry_offset></td>
+</tr>
 </table>
+
+

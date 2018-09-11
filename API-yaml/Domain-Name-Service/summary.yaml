@@ -1,0 +1,8 @@
+﻿swagger: "2.0"
+info:
+  version: "v1"
+  title: 京东云解析OpenAPI接口
+  description: 京东云解析OpenAPI接口
+host: "clouddnsservice.jdcloud-api.com"
+x-jdcloud-version: "v1"
+x-jdcloud-revision: "1.0.3"

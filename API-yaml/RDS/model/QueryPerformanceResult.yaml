@@ -1,0 +1,34 @@
+swagger: "2.0"
+definitions:
+  QueryPerformanceResult:
+    x-jdcloud-module: rds
+    title: QueryPerformanceResult
+    type: object
+    properties:
+      sql:
+        type: string
+        description: sql语句
+      lastExecutionTime:
+        type: string
+        description: 上次执行时间，格式为YYYY-MM-DD hh:mm:ss
+      elapsedTime:
+        type: integer
+        description: 平均执行时长，单位毫秒(ms)
+      executionCount:
+        type: integer
+        description: 执行次数
+      workerTime:
+        type: integer
+        description: 平均CPU使用时间，单位毫秒(ms)
+      logicalReads:
+        type: integer
+        description: 平均逻辑读次数
+      logicalWrites:
+        type: integer
+        description: 平均逻辑写次数
+      physicalReads:
+        type: integer
+        description: 平均物理读次数
+      lastRows:
+        type: integer
+        description: 上次返回记录数

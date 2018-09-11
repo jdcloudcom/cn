@@ -1,0 +1,187 @@
+swagger: "2.0"                                  # 基于Swagger 2.0版本实现
+info:
+  version: "v1"                                 # OpenApi版本号
+  title: OSS相关接口
+  description: OSS相关接口
+
+basePath: /regions/{regionId}
+
+paths:
+  /buckets:
+    get:
+      tags:
+      - developers
+      summary: listbuckets
+      operationId: listBuckets
+      description: |
+        列出当前用户的所有bucket
+      produces:
+      - application/json
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  owner:
+                    $ref: '../model/User.yaml#/definitions/User'
+                  buckets:
+                    type: array
+                    items:
+                      $ref: '../model/Bucket.yaml#/definitions/Bucket'
+              requestId:
+                type: string
+#            properties:
+        400:
+          description: Invalid Argument
+#          schema:
+#            $ref: '../model/oss.yaml#/definitions/ErrorResponse'
+        403:
+          description: Access Denied
+#          schema:
+#            $ref: '../model/oss.yaml#/definitions/ErrorResponse'
+  /buckets/{bucketname}:
+    head:
+      tags:
+      - developers
+      summary: head bucket
+      operationId: headBucket
+      description: |
+        查询bucket是否存在
+      produces:
+      - application/json
+      parameters:
+      - in: path
+        name: bucketname
+        description: bucket名字，例如：test-bucket
+        required: true
+        type: string
+      responses:
+        200:
+          description: OK
+        400:
+          description: Invalid Argument
+        403:
+          description: Access Denied
+        404:
+          description:   The specified bucket does not exist.
+    put:
+      tags:
+      - developers
+      summary: create bucket
+      operationId: putBucket
+      description: |
+        创建bucket
+      produces:
+      - application/json
+      parameters:
+      - in: path
+        name: bucketname
+        description: bucket名字，例如：test-bucket
+        required: true
+        type: string
+      responses:
+        200:
+          description: OK
+        400:
+          description: Invalid Argument
+#          schema:
+#            $ref: '../model/oss.yaml#/definitions/ErrorResponse'
+        403:
+          description: Access Denied
+#          schema:
+#            $ref: '../model/oss.yaml#/definitions/ErrorResponse'
+        409:
+          description: The requested bucket name is not available. The bucket namespace is shared by all users of the system. Please select a different name and try again.
+#          schema:
+#            $ref: '../model/oss.yaml#/definitions/ErrorResponse'
+    delete:
+      tags:
+      - developers
+      summary: delete bucket
+      operationId: deleteBucket
+      description: |
+        删除一个bucket
+      produces:
+      - application/json
+      parameters:
+      - in: path
+        name: bucketname
+        description: bucket名字，例如：test-bucket
+        required: true
+        type: string
+      responses:
+        200:
+          description: OK
+        400:
+          description: Invalid Argument
+#          schema:
+#            $ref: '../model/oss.yaml#/definitions/ErrorResponse'
+        403:
+          description: Access Denied
+#          schema:
+#            $ref: '../model/oss.yaml#/definitions/ErrorResponse'
+        404:
+          description: The specified bucket does not exist.
+#          schema:
+#            $ref: '../model/oss.yaml#/definitions/ErrorResponse'
+  /buckets/{bucketname}/objectkey/{objectkey}:
+    put:
+      tags:
+      - developers
+      summary: moveObject
+      operationId: moveObject
+      x-jdcloud-internal: true
+      description: |
+        moveobject
+      produces:
+      - application/json
+      parameters:
+      - in: path
+        name: bucketname
+        description: bucket名字，例如：test-bucket
+        required: true
+        type: string
+      - in: path
+        name: objectkey
+        description: objectkey，例如：test-object
+        required: true
+        type: string
+      - in: header
+        name: x-jss-move-source
+        description: source Information
+        required: true
+        type: string
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  moveObjectResult:
+                    $ref: '../model/moveObjectResult.yaml#/definitions/Result'
+              requestId:
+                type: string
+        400:
+          description: Invalid Argument
+#          schema:
+#            $ref: '../model/oss.yaml#/definitions/ErrorResponse'
+        403:
+          description: Access Denied
+#          schema:
+#            $ref: '../model/oss.yaml#/definitions/ErrorResponse'
+        404:
+          description: The specified bucket does not exist.
+#          schema:
+#            $ref: '../model/oss.yaml#/definitions/ErrorResponse'
+
+#路径通用参数
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: Region ID，例如：cn-north-1

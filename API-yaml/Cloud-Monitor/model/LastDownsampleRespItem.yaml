@@ -1,0 +1,12 @@
+swagger: "2.0"
+definitions:
+  lastDownsampleRespItem:
+    x-jdcloud-module: monitor  
+    type: object
+    properties:
+      metric:
+        type: string
+      name:
+        type: string
+      value:
+        type: object

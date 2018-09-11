@@ -1,0 +1,15 @@
+swagger: "2.0"
+definitions:
+  backupSpec:
+    x-jdcloud-module: rds
+    title: backupSpec
+    type: object
+    properties:
+      backupName:
+        type: string
+        description: 备份名称，最长支持64个英文字符或等长的中文字符
+      dbNames:
+        type: array
+        items:
+          type: string
+        description: 需要备份的数据库名称列表。如不填，则备份整个实例<br>- **MySQL：不支持该参数**<br>- **SQL Server：支持**

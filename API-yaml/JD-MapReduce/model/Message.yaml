@@ -1,0 +1,47 @@
+swagger: "2.0"
+definitions:
+  message:
+    x-jdcloud-module: jmr
+    title: message
+    type: object
+    properties:
+      code:
+        type: string
+        description: 编码
+      result:
+        type: string
+        description: 结果
+      data:
+        type: object
+        description: 数据
+      rect:
+        type: array
+        items:
+          $ref: "../model/Rect.yaml#/definitions/rect"
+      path:
+        type: array
+        items:
+          $ref: "../model/Path.yaml#/definitions/path"
+      jobId:
+        type: string
+        description: 作业ID
+      instanceId:
+        type: string
+      pipeline:
+        type: string
+      source:
+        type: string
+      sourceParameterList:
+        type: array
+        items:
+          type: string
+      target:
+        type: string
+      targetParameterList:
+        type: array
+        items:
+          type: string
+      taskId:
+        type: string
+      total:
+        type: integer

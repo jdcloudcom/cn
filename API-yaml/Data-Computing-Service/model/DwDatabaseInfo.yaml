@@ -1,0 +1,16 @@
+swagger: "2.0"
+definitions:
+  dwDatabaseInfo:
+    x-jdcloud-module: xdata
+    title: DwDatabaseInfo
+    type: object
+    properties:
+      owner:
+        type: string
+        description: 所有者
+      comments:
+        type: string
+        description: 描述信息
+      databaseName:
+        type: string
+        description: 数据库名称

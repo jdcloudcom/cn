@@ -1,0 +1,37 @@
+swagger: "2.0"
+definitions:
+  dwHiveObjectPrivileges:
+    x-jdcloud-module: xdata
+    title: DwHiveObjectPrivileges
+    type: object
+    properties:
+      status:
+        type: boolean
+        description: 状态
+      message:
+        type: string
+        description: 返回信息
+      select:
+        type: boolean
+        description: select权限
+      insert:
+        type: boolean
+        description: insert权限
+      update:
+        type: boolean
+        description: update权限
+      delete:
+        type: boolean
+        description: delete权限
+      drop:
+        type: boolean
+        description: drop权限
+      create:
+        type: boolean
+        description: create权限
+      alter:
+        type: boolean
+        description: alter权限
+      owner:
+        type: boolean
+        description: 是否为此表所有者

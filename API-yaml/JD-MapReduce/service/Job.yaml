@@ -1,0 +1,979 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: Job Management
+  description: JMR job management
+
+basePath: /regions/{regionId}
+paths:
+#################### 获取作业类型列表 ###########################
+  "/jobType:list":
+       post:
+         description: "获取指定集群下的作业类型列表"
+         operationId: getJobTypeList
+         parameters:
+           - name: clusterId
+             in: query
+             required: true
+             type: string
+             description: "集群Id"
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                     data:
+                       type: array
+                       items:
+                         type: string
+                       description: 返回的作业类型列表
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+#################### 获取作业列表 ###########################
+  "/jobView:list":
+       post:
+         description: "获取指定集群下的作业列表"
+         operationId: getJobList
+         parameters:
+           - name: jmrJobViewModel
+             in: body
+             schema:
+               type: object
+               required:
+                 - jmrJobViewModel
+               properties:
+                 jmrJobViewModel:
+                   $ref: "../model/JmrJobViewModel.yaml#/definitions/jmrJobViewModel"
+                   description: |
+                             "需要传入字段: clusterId、az"
+                             "可选字段: jobName、jobType、clusterName"
+                 selectParams:
+                   $ref: "../model/SelectParams.yaml#/definitions/selectParams"
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                     data:
+                       type: object
+                       schema:
+                         properties:
+                           jmrJobViewModelList:
+                             type: array
+                             items:
+                               $ref: "../model/JmrJobViewModel.yaml#/definitions/jmrJobViewModel"
+                           totalNum:
+                             type: integer
+                       description: |
+                                   "包括JmrJobViewModel列表 - jmrJobViewModelList"
+                                   "以及返回的列表大小 - totalNum"
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+#################### 校验作业名称是否有效 ###########################
+  "/jobName:Validate":
+       post:
+         description: "校验作业名称是否有效"
+         operationId: isValidJobName
+         parameters:
+           - name: body
+             in: body
+             required: true
+             schema:
+               type: object
+               required:
+                 - jobId
+                 - jobName
+               properties:
+                 jobId:
+                   type: string
+                   description: 作为作业名校验依据
+                 jobName:
+                   type: string
+                   description: 待校验的作业名
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+#################### 创建作业 ###########################
+  "/job:create":
+       post:
+         description: "按照传入的参数信息创建作业"
+         operationId: createJob
+         parameters:
+           - name: jmrJobViewModel
+             in: body
+             required: true
+             schema:
+               $ref: "../model/JmrJobViewModel.yaml#/definitions/jmrJobViewModel"
+             description: 需要传入clusterId、jobName、jobType、location、jobArgs、retryTimes、isSendMsg
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+#################### 修改作业信息 ###########################
+  "/job:modify":
+       post:
+         description: "按照传入的参数信息修改对应作业信息"
+         operationId: modifyJob
+         parameters:
+           - name: jmrJobViewModel
+             in: body
+             required: true
+             schema:
+               $ref: "../model/JmrJobViewModel.yaml#/definitions/jmrJobViewModel"
+             description: 需要传入clusterId、jobName、jobType、location、jobArgs、retryTimes、isSendMsg
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+
+#################### 删除作业 ###########################
+  "/job/{jobId}:delete":
+       post:
+         description: "删除jobId指定作业"
+         operationId: deleteJob
+         parameters:
+           - name: jobId
+             in: path
+             type: string
+             required: true
+             description: 需要删除的作业Id
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+
+#################### 创建作业并执行 ###########################
+  "/job:createAndExecute":
+       post:
+         description: "在集群下创建作业并执行"
+         operationId: createAndExcuteJob
+         parameters:
+           - name: jmrJobViewModel
+             in: body
+             required: true
+             schema:
+               $ref: "../model/JmrJobViewModel.yaml#/definitions/jmrJobViewModel"
+             description: 需要传入clusterId、jobName、jobType、location、jobArgs、retryTimes、isSendMsg
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+#################### 执行task ###########################
+  "/job:execute":
+       post:
+         description: "执行指定作业"
+         operationId: executeJob
+         parameters:
+           - name: body
+             in: body
+             required: true
+             schema:
+               type: object
+               required:
+                 - jmrTaskViewModel
+                 - clusterId
+               properties:
+                 jmrTaskViewModel:
+                   $ref: "../model/JmrTaskViewModel.yaml#/definitions/jmrTaskViewModel"
+                   description: |
+                               "需要传入参数: jobId、planId、workflowId、workflowInstanceId"
+                 clusterId:
+                   type: string
+                   description: 集群ID
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                     data:
+                       type: string
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+
+#################### 查看作业明细 ###########################
+  "/{jobId}:detail":
+       post:
+         description: "查看指定jobId对应的作业明细"
+         operationId: showJobDetails
+         parameters:
+           - name: jobId
+             in: path
+             type: string
+             required: true
+             description: 需要查看的作业的Id
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                     data:
+                       $ref: "../model/JmrJobViewModel.yaml#/definitions/jmrJobViewModel"
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+
+#################### 获取某一作业的运行记录 ###########################
+  "/{jobId}/task:list":
+       post:
+         description: "获取某一作业的运行记录"
+         operationId: getTaskList
+         parameters:
+           - name: jobId
+             in: path
+             type: string
+             required: true
+             description: 需要查询的jobId
+           - name: selectParams
+             in: body
+             required: false
+             description: 搜索条件，可选
+             schema:
+               properties:
+                 selectParams:
+                   $ref: "../model/SelectParams.yaml#/definitions/selectParams"
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                     data:
+                       type: object
+                       schema:
+                         properties:
+                           totalNum:
+                             type: integer
+                             description: 查询的列表size
+                           taskList:
+                             type: array
+                             items:
+                               $ref: "../model/JmrTaskViewModel.yaml#/definitions/jmrTaskViewModel"
+                       description: |
+                                     "包括查询的JmrTaskViewModel列表 - taskList"
+                                     "以及返回的列表大小 - totalNum"
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+
+#################### 删除集群的hdfs文件 ###########################
+  "/hdfsFile:delete":
+       post:
+         description: "删除指定集群的对应路径下的hdfs文件"
+         operationId: deleteHdfsFile
+         parameters:
+           - name: body
+             in: body
+             required: true
+             schema:
+               type: object
+               required:
+                 - clusterId
+                 - filePath
+               properties:
+                 clusterId:
+                   type: string
+                   description: 集群ID
+                 filePath:
+                   type: string
+                   description: 要删除的文件路径
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+
+#################### 获取集群的作业数 ###########################
+  "/clusterJob/{clusterId}:count":
+       post:
+         description: "获取集群的作业数"
+         operationId: getClusterJobCount
+         parameters:
+           - name: clusterId
+             in: path
+             type: string
+             required: true
+             description: 集群ID
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                     data:
+                       type: integer
+                       description: 集群作业数量
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+
+#################### 获取集群的部署作业数 ###########################
+  "/clusterCronJob/{clusterId}:count":
+       post:
+         description: "获取集群的部署作业数"
+         operationId: getClusterCronJobCount
+         parameters:
+           - name: clusterId
+             in: path
+             type: string
+             required: true
+             description: 集群的Id
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                     data:
+                       type: object
+                       schema:
+                         properties:
+                           totalNum:
+                             type: integer
+                             description: 集群作业数
+                           cronJobs:
+                             type: array
+                             items:
+                               $ref: "../model/JmrPlanViewModel.yaml#/definitions/jmrPlanViewModel"
+                       description: |
+                                     "包括JmrPlanViewModel列表 - cronJobs"
+                                     "以及返回列表大小 - totalNum"
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+
+#################### 获取执行计划列表 ###########################
+  "/cronJob:list":
+       post:
+         description: "获取执行计划列表"
+         operationId: getCronJobList
+         parameters:
+           - name: body
+             in: body
+             required: false
+             schema:
+               type: object
+               required:
+                 - jmrPlanViewModel
+               properties:
+                 jmrPlanViewModel:
+                   $ref: "../model/JmrPlanViewModel.yaml#/definitions/jmrPlanViewModel"
+                   description: 需要传入的字段： az、planName、planType、planStatus
+                 selectParams:
+                   $ref: "../model/SelectParams.yaml#/definitions/selectParams"
+                   description: 搜索条件的可选参数
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                     data:
+                       type: object
+                       schema:
+                         properties:
+                           totalNum:
+                             type: integer
+                             description: 集群作业数
+                           cronJobs:
+                             type: array
+                             items:
+                               $ref: "../model/JmrPlanViewModel.yaml#/definitions/jmrPlanViewModel"
+                       description: |
+                                     "包括JmrPlanViewModel列表 - cronJobs"
+                                     "以及返回列表大小 - totalNum"
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+
+#################### 校验执行计划名称是否可用 ###########################
+  "/planName:valid":
+       post:
+         description: "校验执行计划名称是否可用"
+         operationId: isValidPlanName
+         parameters:
+           - name: body
+             in: body
+             required: true
+             schema:
+               type: object
+               required:
+                 - planId
+                 - planName
+               properties:
+                 planId:
+                   type: string
+                   description: 作为校验的依据
+                 planName:
+                   type: string
+                   description: 校验的计划名称
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+
+#################### 新建或更新调度配置 ###########################
+  "/cronJob:create":
+       post:
+         description: "新建或更新调度配置"
+         operationId: createCronJob
+         parameters:
+           - name: body
+             in: body
+             schema:
+               type: object
+               required:
+                 - jmrPlanViewModel
+                 - time
+                 - month
+                 - week
+                 - day
+                 - hour
+                 - minute
+               properties:
+                 jmrPlanViewModel:
+                   $ref: "../model/JmrPlanViewModel.yaml#/definitions/jmrPlanViewModel"
+                   description: 需要新建或更新的调度配置
+                 time:
+                   type: string
+                   description: 按照Cron格式的时间参数,占位time
+                 month:
+                   type: string
+                   description: 按照Cron格式的时间参数,占位month
+                 week:
+                   type: string
+                   description: 按照Cron格式的时间参数,占位week
+                 day:
+                   type: string
+                   description: 按照Cron格式的时间参数,占位day
+                 hour:
+                   type: string
+                   default: 0
+                   description: 按照Cron格式的时间参数,占位hour
+                 minute:
+                   type: string
+                   default: 0
+                   description: 按照Cron格式的时间参数,占位minute
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+
+#################### 获取定时任务详情 ###########################
+  "/cronJob/{planId}:detail":
+       post:
+         description: "获取定时任务详情"
+         operationId: getCronJobDetail
+         parameters:
+           - name: planId
+             in: path
+             type: string
+             required: true
+             description: 执行计划的Id
+           - name: body
+             in: body
+             required: false
+             schema:
+               properties:
+                 selectParams:
+                   $ref: "../model/SelectParams.yaml#/definitions/selectParams"
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                     data:
+                       type: object
+                       schema:
+                         properties:
+                           totalNum:
+                             type: integer
+                             description: 查询的列表size
+                           jobList:
+                             type: array
+                             items:
+                               $ref: "../model/JmrJobViewModel.yaml#/definitions/jmrJobViewModel"
+                       description: |
+                                     "包括JmrJobViewModel列表 - jobList"
+                                     "以及返回的列表大小 - totalNum"
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+
+#################### 修改执行计划 ###########################
+  "/cronJob:modify":
+       post:
+         description: "修改部署作业的执行计划"
+         operationId: modifyCronJob
+         parameters:
+           - name: body
+             in: body
+             required: true
+             schema:
+               type: object
+               required:
+                 - jmrPlanViewModel
+                 - time
+                 - month
+                 - week
+                 - day
+                 - hour
+                 - minute
+               properties:
+                 jmrPlanViewModel:
+                   $ref: "../model/JmrPlanViewModel.yaml#/definitions/jmrPlanViewModel"
+                   description: |
+                             "需要传入字段: planId、jobIds、planName、planType、failurePolicy"
+                 time:
+                   type: string
+                   description: 按照Cron格式的时间参数,占位time
+                 month:
+                   type: string
+                   description: 按照Cron格式的时间参数,占位month
+                 week:
+                   type: string
+                   description: 按照Cron格式的时间参数,占位week
+                 day:
+                   type: string
+                   description: 按照Cron格式的时间参数,占位day
+                 hour:
+                   type: string
+                   default: 0
+                   description: 按照Cron格式的时间参数,占位hour
+                 minute:
+                   type: string
+                   default: 0
+                   description: 按照Cron格式的时间参数,占位minute
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+
+#################### 暂停定时任务 ###########################
+  "/cronJob/{planId}:pause":
+       post:
+         description: "暂停作业的某一定时任务"
+         operationId: pauseCronJob
+         parameters:
+           - name: planId
+             in: path
+             type: string
+             required: true
+             description: 暂停的任务ID
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+
+#################### 恢复定时任务 ###########################
+  "/cronJob/{planId}:resume":
+       post:
+         description: "恢复作业的某一定时任务"
+         operationId: resumeCronJob
+         parameters:
+           - name: planId
+             in: path
+             type: string
+             required: true
+             description: 需要恢复的任务ID
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+
+#################### 删除定时任务 ###########################
+  "/cronJob/{planId}:delete":
+       post:
+         description: "删除作业的某一定时任务"
+         operationId: deleteCronJob
+         parameters:
+           - name: planId
+             in: path
+             type: string
+             required: true
+             description: 需要删除的任务ID
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+
+#################### 获取定时任务的运行记录 ###########################
+  "/cronJobTask/plan/{planId}:list":
+       post:
+         description: "获取作业的某一定时任务的运行记录"
+         operationId: getCronJobTaskList
+         parameters:
+           - name: planId
+             in: path
+             type: number
+             format: int64
+             required: true
+             description: long型，任务ID
+           - name: body
+             in: body
+             required: false
+             schema:
+               properties:
+                 selectParams:
+                   $ref: "../model/SelectParams.yaml#/definitions/selectParams"
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                     data:
+                       type: object
+                       properties:
+                         totalNum:
+                           type: integer
+                         taskList:
+                           type: array
+                           items:
+                             $ref: "../model/JmrTaskViewModel.yaml#/definitions/jmrTaskViewModel"
+                       description: |
+                                     "包括JmrTaskViewModel列表 - taskList"
+                                     "以及返回的列表大小 - totalNum"
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+
+#################### 查询某一执行计划的某一个job的运行记录 ###########################
+  "/cronJobTask/job/{jobId}:list":
+       post:
+         description: "查询某一执行计划的某一个job的运行记录"
+         operationId: getCronJobTaskListByJobId
+         parameters:
+           - name: jobId
+             in: path
+             type: string
+             description: 作业ID
+           - name: body
+             in: body
+             schema:
+               required:
+                 - planId
+               properties:
+                 planId:
+                   type: string
+                   description: 定时任务ID
+                 selectParams:
+                   $ref: "../model/SelectParams.yaml#/definitions/selectParams"
+                   description: 搜索条件，可选参数
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                     data:
+                       type: object
+                       schema:
+                         properties:
+                           totalNum:
+                             type: integer
+                             description: 查询的列表size
+                           taskList:
+                             type: array
+                             items:
+                               $ref: "../model/JmrTaskViewModel.yaml#/definitions/jmrTaskViewModel"
+                       description: |
+                                     "包括查询的JmrTaskViewModel列表 - taskList"
+                                     "以及返回的列表大小 - totalNum"
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+
+#################### 立即执行 ###########################
+  "/cronJob/{planId}:runOnce":
+       post:
+         description: "立即执行某一定时任务"
+         operationId: runCronJobOnce
+         parameters:
+           - name: planId
+             in: path
+             type: number
+             format: int64
+             required: true
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+
+#################### 获取定时任务的某个作业的最后一次运行记录 ###########################
+  "/lastCronJobTask/{jobId}":
+       post:
+         description: "获取定时任务的某个作业的最后一次运行记录"
+         operationId: getLastCronJobTask
+         parameters:
+           - name: planId
+             in: query
+             required: true
+             type: string
+             description: 定时任务ID，必传
+           - name: jobId
+             in: path
+             type: string
+             required: true
+             description: 作业ID
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                     data:
+                       type: string
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+
+#################### 获取计划中的任务(已经添加到quartz调度器的任务) ###########################
+  "/executingJob:list":
+       get:
+         description: "获取计划中的任务(已经添加到quartz调度器的任务)"
+         operationId: queryExecutingJobList
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                     data:
+                       type: array
+                       items:
+                         $ref: "../model/JmrPlanViewModel.yaml#/definitions/jmrPlanViewModel"
+                       description: 执行计划列表
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+#路径通用参数
+parameters:
+ regionId:
+   name: regionId
+   in: path
+   required: true
+   type: string
+   description: 地域ID

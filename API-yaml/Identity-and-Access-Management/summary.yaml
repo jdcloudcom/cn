@@ -1,0 +1,8 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: IAM API
+  description: IAM相关接口
+host: "iam.jdcloud-api.com"
+x-jdcloud-version: "v1"
+x-jdcloud-revision: "0.1.5"

@@ -7,39 +7,39 @@
     href: changelog.md
   - name: 接口信息
     items:
-      - name:  Name Space APIs
+      - name:  Storage相关API
         items:
           - name: addOrUpdateStorage
-            href:  Name Space APIs/addOrUpdateStorage.md
+            href:  Storage-Related-APIs/addOrUpdateStorage.md
           - name: deleteStorage
-            href:  Name Space APIs/deleteStorage.md
+            href:  Storage-Related-APIs/deleteStorage.md
           - name: describeStorage
-            href:  Name Space APIs/describeStorage.md
+            href:  Storage-Related-APIs/describeStorage.md
           - name: getStorageList
-            href:  Name Space APIs/getStorageList.md
+            href:  Storage-Related-APIs/getStorageList.md
       - name: JOB相关API  
         items:
           - name: addOrUpdateStorage
-            href: TOPIC APIs/addOrUpdateJob.md
+            href: Job-Related-APIs/addOrUpdateJob.md
           - name: deletejob
-            href: TOPIC APIs/deleteJob.md
+            href: Job-Related-APIs/deleteJob.md
           - name: describeJob
-            href: TOPIC APIs/describeJob.md  
+            href: Job-Related-APIs/describeJob.md  
           - name: getJobList
-            href: TOPIC APIs/getJobList.md
+            href: Job-Related-APIs/getJobList.md
           - name: startJob
-            href: TOPIC APIs/startJob.md
+            href: Job-Related-APIs/startJob.md
           - name: startJob
-            href: TOPIC APIs/startJob.md 
+            href: Job-Related-APIs/startJob.md 
       - name:  NameSpace相关 API
         items:
           - name: createNamespace
-            href: Name Space APIs/createNamespace.md        
+            href: Name-Space-APIs/createNamespace.md        
           - name: deleteNamespace
-            href: Name Space APIs/deleteNamespace.md 
+            href: Name-Space-APIs/deleteNamespace.md 
           - name: queryNamespaceDetail
-            href: Name Space APIs/queryNamespaceDetail.md 
+            href: Name-Space-APIs/queryNamespaceDetail.md 
           - name: queryNamespaces
-            href: Name Space APIs/queryNamespaces.md 
+            href: Name-Space-APIs/queryNamespaces.md 
           - name: updateNamespace
-            href: Name Space APIs/updateNamespace.md
+            href: Name-Space-APIs/updateNamespace.md

@@ -1,0 +1,14 @@
+swagger: "2.0"
+definitions:
+  User:
+    x-jdcloud-module: oss
+    required:
+    - id
+    - displayName
+    properties:
+      id:
+        type: string
+        example: 1234567
+      displayName:
+        type: string
+        example:  jdcloudAdmin

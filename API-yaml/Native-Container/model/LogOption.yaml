@@ -1,0 +1,14 @@
+swagger: "2.0"
+definitions:
+  logOption:
+    x-jdcloud-module: nc
+    x-jdcloud-internal: false
+    type: object
+    description:
+    properties:
+      key:
+        type: string
+        description: 
+      value:
+        type: string
+        description:

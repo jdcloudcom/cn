@@ -1,0 +1,16 @@
+swagger: "2.0"
+definitions:
+  softwareInfoAndVersion:
+    x-jdcloud-module: jmr
+    title: softwareInfoAndVersion
+    type: object
+    properties:
+      name:
+        type: string
+        description: 所用软件名称，如hadoop/spark
+      version:
+        type: string
+        description: 软件当前版本
+      flag:
+        type: boolean
+        description: 表示获取信息是否正常

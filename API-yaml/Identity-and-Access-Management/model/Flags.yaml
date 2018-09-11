@@ -1,0 +1,9 @@
+swagger: "2.0"
+definitions:
+  flags:
+    x-jdcloud-module: iam
+    required:
+      - value
+    properties:
+      value:
+        type: integer

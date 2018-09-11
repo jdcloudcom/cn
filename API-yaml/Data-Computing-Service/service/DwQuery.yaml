@@ -1,0 +1,361 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: query
+  description: API related to XDATA-DW query
+
+basePath: /regions/{regionId}
+
+paths:
+  "/dwQuery:executeRasQuery":
+    ###################### 执行SparkSQL ######################
+        post:
+          description: "执行用户编写的Spark SQL脚本"
+          operationId: executeRasQuery
+          parameters:
+            - name: databaseName
+              in: query
+              type: string
+              required: false
+              description: "数据库名称"
+            - name: sql
+              in: query
+              type: string
+              required: true
+              description: "sql脚本"
+            - name: userName
+              in: query
+              type: string
+              required: true
+              description: "用户名称"
+            - name: queueName
+              in: query
+              type: string
+              required: false
+              description: "队列名称"
+            - name: source
+              in: query
+              type: string
+              required: false
+              description: "资源名称"
+            - name: callBackURL
+              in: query
+              type: string
+              required: false
+              description: "回调地址名称"
+            - name: instanceName
+              in: query
+              type: string
+              required: true
+              description: "实例名称"
+            - name: instanceOwnerName
+              in: query
+              type: string
+              required: false
+              description: "实例拥有者名称"
+            - name: isExplain
+              in: query
+              type: string
+              required: false
+              description: "是否需要解释"
+          responses:
+            200:
+              description: OK
+              schema:
+                properties:
+                  result:
+                    properties:
+                      status:
+                        type: boolean
+                      message:
+                        type: string
+                      data:
+                        type: integer
+                  requestId:
+                    type: string
+            500:
+              description: "Internal server error"
+
+  "/dwQuery:executePySparkQuery":
+    ###################### 执行PySpark脚本 ######################
+        post:
+          description: "执行用户编写的PySpark脚本"
+          operationId: executePySparkQuery
+          parameters:
+            - name: script
+              in: query
+              type: string
+              required: true
+              description: "PySpark脚本"
+            - name: userName
+              in: query
+              type: string
+              required: true
+              description: "用户名称"
+            - name: instanceName
+              in: query
+              type: string
+              required: true
+              description: "实例名称"
+            - name: instanceOwnerName
+              in: query
+              type: string
+              required: false
+              description: "实例拥有者名称"
+            - name: scriptType
+              in: query
+              type: string
+              required: false
+              description: "脚本类型名称"
+          responses:
+            200:
+              description: OK
+              schema:
+                properties:
+                  result:
+                    properties:
+                      status:
+                        type: boolean
+                      message:
+                        type: string
+                      data:
+                        type: integer
+                  requestId:
+                    type: string
+
+  "/dwQuery:getRasQueryState":
+    ###################### 获取查询状态 ######################
+        get:
+          description: "获取用户Spark SQL脚本的查询状态"
+          operationId: getRasQueryState
+          parameters:
+            - name: userName
+              in: query
+              type: string
+              required: true
+              description: "用户名称"
+            - name: queryId
+              in: query
+              type: string
+              required: true
+              description: "查询id名称"
+          responses:
+            200:
+              description: OK
+              schema:
+                properties:
+                  result:
+                    properties:
+                      status:
+                        type: boolean
+                      message:
+                        type: string
+                      data:
+                        type: string
+                  requestId:
+                    type: string
+            500:
+              description: "Internal server error"
+
+  "/dwQuery:getPySparkExecuteState":
+    ###################### 获取PySpark脚本的执行状态 ######################
+        get:
+          description: "获取用户PySpark脚本的执行状态"
+          operationId: getPySparkExecuteState
+          parameters:
+            - name: userName
+              in: query
+              type: string
+              required: true
+              description: "用户名称"
+            - name: queryId
+              in: query
+              type: string
+              required: true
+              description: "查询id"
+          responses:
+            200:
+              description: OK
+              schema:
+                properties:
+                  result:
+                    properties:
+                      status:
+                        type: boolean
+                      message:
+                        type: string
+                      data:
+                        type: string
+                  requestId:
+                    type: string
+            500:
+              description: "Internal server error"
+
+  "/dwQuery:getRasQueryLog":
+    ###################### 获取查询日志 ######################
+        get:
+          description: "获取用户Spark SQL脚本的查询日志"
+          operationId: getRasQueryLog
+          parameters:
+            - name: userName
+              in: query
+              type: string
+              required: true
+              description: "用户名称"
+            - name: queryId
+              in: query
+              type: string
+              required: true
+              description: "查询id"
+          responses:
+            200:
+              description: OK
+              schema:
+                properties:
+                  result:
+                    properties:
+                      status:
+                        type: boolean
+                      message:
+                        type: string
+                  requestId:
+                    type: string
+            500:
+              description: "Internal server error"
+
+  "/dwQuery:getRasQueryResult":
+    ###################### 获取查询的结果 ######################
+        get:
+          description: "获取用户Spark SQL脚本的查询结果"
+          operationId: getRasQueryResult
+          parameters:
+            - name: userName
+              in: query
+              type: string
+              required: true
+              description: "用户名称"
+            - name: queryId
+              in: query
+              type: string
+              required: true
+              description: "查询id"
+          responses:
+            200:
+              description: OK
+              schema:
+                properties:
+                  result:
+                    properties:
+                      status:
+                        type: boolean
+                      message:
+                        type: string
+                  requestId:
+                    type: string
+            500:
+              description: "Internal server error"
+
+  "/dwQuery:getPySparkExecuteResult":
+    ###################### 获取PySpark执行的结果 ######################
+        get:
+          description: "获取用户PySpark脚本的执行结果"
+          operationId: getPySparkExecuteResult
+          parameters:
+            - name: userName
+              in: query
+              type: string
+              required: true
+              description: "用户名称"
+            - name: queryId
+              in: query
+              type: string
+              required: true
+              description: "查询id"
+          responses:
+            200:
+              description: OK
+              schema:
+                properties:
+                  result:
+                    properties:
+                      status:
+                        type: boolean
+                      message:
+                        type: string
+                  requestId:
+                    type: string
+            500:
+              description: "Internal server error"
+
+  "/dwQuery:cancelRasQuery":
+    ###################### 终止查询 ######################
+        post:
+          description: "终止用户Spark SQL脚本查询"
+          operationId: cancelRasQuery
+          parameters:
+            - name: userName
+              in: query
+              type: string
+              required: true
+              description: "用户名称"
+            - name: queryId
+              in: query
+              type: string
+              required: true
+              description: "查询id"
+          responses:
+            200:
+              description: OK
+              schema:
+                properties:
+                  result:
+                    properties:
+                      status:
+                        type: boolean
+                      message:
+                        type: string
+                  requestId:
+                    type: string
+            500:
+              description: "Internal server error"
+
+  "/dwQuery:cancelPySparkQuery":
+    ###################### 终止PySpark任务 ######################
+        post:
+          description: "终止用户PySpark脚本任务"
+          operationId: cancelPySparkJob
+          parameters:
+            - name: userName
+              in: query
+              type: string
+              required: true
+              description: "用户名称"
+            - name: queryId
+              in: query
+              type: string
+              required: true
+              description: "查询id"
+          responses:
+            200:
+              description: OK
+              schema:
+                properties:
+                  result:
+                    properties:
+                      status:
+                        type: boolean
+                      message:
+                        type: string
+                  requestId:
+                    type: string
+            500:
+              description: "Internal server error"
+
+#路径通用参数
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: 地域ID

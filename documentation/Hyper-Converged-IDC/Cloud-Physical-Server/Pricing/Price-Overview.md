@@ -4,25 +4,38 @@
 
 ## 云物理服务器价格
 
+
 <table>
     <tr>
         <td colspan="2"><B>实例规格类型</B></td> 
-        <td><B>实例规格</B></td> 
-		<td><B>包月价格（元）</B></td>	
+        <td ><B>实例规格</B></td> 
+		<td ><B>包月价格（元）</B></td>	
     </tr>
     <tr>   
-        <td >计算</td>
+        <td rowspan="3">计算型</td>
 		<td >标准计算型</td>
 		<td >cps.c.normal</td>
 		<td >6300</td>
     </tr>
-     <tr>   
-        <td >存储</td>
+	<tr>   
+		<td >计算效能型Ⅰ</td>
+		<td >cps.c.perfⅠ</td>
+		<td >7000</td>
+    </tr>
+	<tr>   
+		<td >计算效能型Ⅱ</td>
+		<td >cps.c.perfⅡ</td>
+		<td >9000</td>
+    </tr>
+	<tr>   
+		<td >存储型</td>
 		<td >标准存储型</td>
 		<td >cps.s.normal</td>
 		<td >4500</td>
     </tr>
 </table>
+
+
 
 ## 公网IP价格
 

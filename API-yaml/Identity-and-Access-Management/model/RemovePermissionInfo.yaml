@@ -1,0 +1,11 @@
+swagger: "2.0"
+definitions:
+  removePermissionInfo:
+    x-jdcloud-module: iam
+    required:
+      - permissionId
+    properties:
+      permissionId:
+        type: integer
+        description: 权限id
+

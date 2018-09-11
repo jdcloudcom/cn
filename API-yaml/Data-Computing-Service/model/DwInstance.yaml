@@ -1,0 +1,27 @@
+swagger: "2.0"
+definitions:
+  dwInstance:
+    x-jdcloud-module: xdata
+    title: DwInstance
+    type: object
+    required:
+      - instanceName
+    properties:
+      instanceName:
+        type: string
+        description: 实例名
+      comments:
+        type: string
+        description: 实例描述
+      instanceOwnerName:
+        type: string
+        description: 实例属主
+      area:
+        type: string
+        description: 实例所属区域
+      uname:
+        type: string
+        description: 实例别名（在页面显示）
+      createTime:
+        type: string
+        description: 实例创建时间

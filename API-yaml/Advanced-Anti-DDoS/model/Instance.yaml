@@ -1,0 +1,108 @@
+swagger: "2.0"
+definitions:
+  instance:
+    type: object
+    x-jdcloud-module: ipanti
+    properties:
+      instanceId:
+        type: integer
+        format: int64
+        description: 实例ID
+      name:
+        type: string
+        description: 实例名称
+      carrier:
+        type: string
+        description: 线路，UNICOM、TELECOM
+      elasticTriggerCount:
+        type: integer
+        description: 触发弹性带宽的次数
+      abovePeakCount:
+        type: integer
+        description: 超峰次数
+      inBitslimit:
+        type: integer
+        description: 保底带宽
+      resilientBitslimit:
+        type: integer
+        description: 弹性带宽
+      businessBitslimit:
+        type: integer
+        description: 业务带宽大小
+      ccThreshold:
+        type: integer
+        description: cc阈值大小
+      ruleCount:
+        type: integer
+        description: 非网站类规则数
+      webRuleCount:
+        type: integer
+        description: 网站类规则数
+      chargeStatus:
+        type: string
+        description: 计费状态，PAID->正常 ARREARS->欠费 EXPIRED->过期
+      securityStatus:
+        type: string
+        description: 安全状态，SAFE->安全 CLEANING->清洗中 BLOCKING->封禁中
+      createTime:
+        type: integer
+        format: int64
+        description: 实例的创建的时间
+      expireTime:
+        type: integer
+        format: int64
+        description: 实例的过期时间
+      resourceId:
+        type: string
+        description: 资源ID，升级和续费时使用
+      ccProtectMode:
+        type: integer
+        description: cc防护模式，0->正常 1->紧急 2->宽松 3->自定义
+      ccProtectStatus:
+        type: integer
+        description: cc开关状态，0->关闭 1->开启
+      ccSpeedLimit:
+        type: integer
+        description: cc防护模式为自定义时的限速大小
+      ccSpeedPeriod:
+        type: integer
+        description: cc防护模式为自定义时的限速周期
+      ipBlackList:
+        type: array
+        items:
+          type: string
+        description: IP黑名单列表
+      ipBlackStatus:
+        type: integer
+        description: IP黑名单状态，0->关闭 1->开启
+      ipWhiteList:
+        type: array
+        items:
+          type: string
+        description: IP白名单列表
+      ipWhiteStatus:
+        type: integer
+        description: IP白名单状态，0->关闭 1->开启
+      pin:
+        type: string
+        description: 用户pin
+      urlWhitelist:
+        type: array
+        items:
+          type: string
+        description: url白名单列表
+      urlWhitelistStatus:
+        type: integer
+        description: url白名单状态，0->关闭 1->开启
+      hostQps:
+        type: integer
+        description: ccProtectMode为自定义模式时，每个Host的防护阈值
+      hostUrlQps:
+        type: integer
+        description: ccProtectMode为自定义模式时，每个Host+URI的防护阈值
+      ipHostQps:
+        type: integer
+        description: ccProtectMode为自定义模式时，每个源IP对Host的防护阈值
+      ipHostUrlQps:
+        type: integer
+        description: ccProtectMode为自定义模式时，每个源IP对Host+URI的防护阈值

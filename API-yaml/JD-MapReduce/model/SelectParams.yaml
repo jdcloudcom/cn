@@ -1,0 +1,18 @@
+swagger: "2.0"
+definitions:
+  selectParams:
+    x-jdcloud-module: jmr
+    title: selectParams
+    type: object
+    properties:
+      pageNum:
+        type: integer
+        description: 搜索分页页数，可选条件
+      pageSize:
+        type: integer
+        description: 搜索分页大小，可选条件
+      orderBy:
+        type: string
+        description: 排序条件，可选
+      status:
+        type: string
