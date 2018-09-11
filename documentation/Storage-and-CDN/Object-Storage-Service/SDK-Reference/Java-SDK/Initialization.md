@@ -4,7 +4,7 @@ JingdongStorageService(JSS)是京东云对象存储服务OSS的核心类，它�
 
 ## 确定Endpoint
 
-请先阅读“[基本概念](http://www.jdcloud.com/help/detail/1177/isCateLog/1)-访问域名”部分，理解Endpoint相关的概念。
+请先阅读“[基本概念](../../API-Reference/Introduction/Basic-Concepts.md)-访问域名”部分，理解Endpoint相关的概念。
 
 ## 配置秘钥
 

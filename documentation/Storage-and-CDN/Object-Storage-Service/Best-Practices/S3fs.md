@@ -41,7 +41,7 @@ s3fs bucketname /new -o passwd_file=/home/passwd-s3fs -o url="http://s3.cn-north
 
 mkdir：创建new文件夹作为本地挂载目录
 
-s3fs：手动挂载命令，其中bucketname为bucket名称、/new是本地挂载路径、passwd_file为密码文件位置、url为京东云对象存储兼容S3域名（请输入bucket所在区域的服务域名）
+s3fs：手动挂载命令，其中bucketname为bucket名称、/new是本地挂载路径、passwd_file为密码文件位置、url为[京东云对象存储兼容S3域名](../API-Reference-S3-Compatible/Regions-And-Endpoints.md)（请输入bucket所在区域的服务域名）
 
 **5.查看挂载结果**
 ```

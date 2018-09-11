@@ -27,7 +27,7 @@ git clone https://github.com/s3tools/s3cmd.git
 ```
 **源码修改**
 
-使用V4签名，不使用V2签名，从https://github.com/s3tools/s3cmd.git下载后进入以下目录。
+使用V4签名，不使用V2签名，从https://github.com/s3tools/s3cmd.git 下载后进入以下目录。
 
 文件目录：s3cmd/S3/S3.py，其中第254行修改为：self.endpoint_requires_signature_v4 = True
 
