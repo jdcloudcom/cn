@@ -1,0 +1,12 @@
+swagger: "2.0"
+definitions:
+  InstanceIdName:
+    type: object
+    x-jdcloud-module: ipanti
+    properties:
+      id:
+        type: string
+        description: 实例id
+      name:
+        type: string
+        description: 实例名称

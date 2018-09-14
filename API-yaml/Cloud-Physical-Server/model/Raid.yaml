@@ -1,0 +1,25 @@
+swagger: "2.0"
+definitions:
+  raid:
+    x-jdcloud-module: cps
+    title: raid
+    type: object
+    properties:
+      volumeType:
+        type: string
+        description: 磁盘类型, 如 system/data
+      volumeDetail:
+        type: string
+        description: 设备详情
+      raidTypeId:
+        type: string
+        description: RAID类型ID
+      raidType:
+        type: string
+        description: RAID类型, 如 NORAID, RAID0, RAID1
+      deviceType:
+        type: string
+        description: 云物理服务器类型, 如 cps.c.normal
+      description:
+        type: string
+        description: RAID类型描述

@@ -4,7 +4,7 @@
   - name: 产品简介
     items:
       - name: 产品概述
-        href: Introduction/VPC-Overview.md
+        href: Introduction/Product-Overview.md
       - name: 基础架构
         href: Introduction/Basic-Infrastructure.md
       - name: 核心概念
@@ -14,19 +14,19 @@
       - name: 产品功能
         items:
           - name: VPC
-            href: Introduction/Functions/VPC.md
+            href: Introduction/Features/VPC-Features.md
           - name: 子网
-            href: Introduction/Functions/Subnet.md
+            href: Introduction/Features/Subnet-Features.md
           - name: ACL
-            href: Introduction/Functions/Network-ACL.md
+            href: Introduction/Features/Network-ACL-Features.md
           - name: 安全组
-            href: Introduction/Functions/Security-Group.md
+            href: Introduction/Features/Security-Group-Features.md
           - name: NFV
-            href: Introduction/Functions/NFV.md
+            href: Introduction/Features/NFV-Features.md
           - name: 路由表
-            href: Introduction/Functions/Route-Table.md
+            href: Introduction/Features/Route-Table-Features.md
           - name: VPC对等连接
-            href: Introduction/Functions/VPC-Peering.md
+            href: Introduction/Features/VPC-Peering-Features.md
       - name: 限制说明
         href: Introduction/Restrictions.md
       - name: 应用场景

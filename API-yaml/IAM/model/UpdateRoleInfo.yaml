@@ -1,0 +1,12 @@
+swagger: "2.0"
+definitions:
+  updateRoleInfo:
+    x-jdcloud-module: iam
+    properties:
+      description:
+        type: string
+        description: 描述，0~256个字符
+      maxSessionDuration:
+        type: integer
+        description: 最大会话时长3600~43200秒，默认3600秒
+

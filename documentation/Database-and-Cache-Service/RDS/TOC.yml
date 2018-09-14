@@ -1,0 +1,296 @@
+  name: 云数据库 RDS
+  href: 
+  items:
+  - name: 产品简介
+    items:
+      - name: 产品概述
+        herf: Introduction/Product-Overview.md
+      - name: 核心概念
+        herf: Introduction/Core-Concepts.md
+      - name: 基础架构
+        herf: Introduction/Basic-Infrastructure.md
+      - name: 产品优势
+        herf: Introduction/Benefits.md
+      - name: 产品规格
+        herf: Introduction/Specifications.md
+      - name: 限制说明
+        items:
+        - name: MySQL 限制说明
+          herf: Introduction/Restrictions/MySQL-Restrictions.md
+        - name: Percona 限制说明
+          herf: Introduction/Restrictions/Percona-Restrictions.md
+        - name: SQL Server 限制说明
+          herf: Introduction/Restrictions/SQLServer-Restrictions.md
+      - name: 应用场景
+        herf: Introduction/Application-Scenarios.md
+  - name: 产品定价
+    items:
+      - name: 计费概述
+        herf: Pricing/Billing-Overview.md
+      - name: 计费规则
+        herf: Pricing/Billing-Rules.md
+      - name: 价格总览
+        herf: Pricing/Price-Overview.md
+      - name: 购买流程
+        herf: Pricing/Purchase-Procedure.md
+      - name: 续费流程
+        herf: Pricing/Renewal-Procedure.md
+        
+  - name: 入门指南
+    items:
+      - name: 创建实例
+        herf: Getting-Started/Create-RDS-Instance.md
+      - name: 删除实例
+        herf: Getting-Started/Delete-RDS-Instance.md
+  
+  - name: 操作指南
+    items:
+      - name: 实例管理
+        items:
+          - name: 创建实例
+            herf: Operation-Guide/Instance/Create-Instance.md
+          - name: 查看实例
+            herf: Operation-Guide/Instance/View-Instance.md
+          - name: 删除实例
+            herf: Operation-Guide/Instance/Delete-Instance.md
+          - name: 开启外网访问
+            herf: Operation-Guide/Instance/Internet-Access.md
+          - name: 主备切换
+            herf: Operation-Guide/Instance/Failover-Instance.md
+          - name: 重启实例
+            items:
+            - name: 重启 MySQL
+              herf: Operation-Guide/Instance/Reboot-Instance/MySQL-Restart-Instance.md
+            - name: 重启 Percona
+              herf: Operation-Guide/Instance/Reboot-Instance/Percona-Restart-Instance.md
+            - name: 重启 SQL Server
+              herf: Operation-Guide/Instance/Reboot-Instance/SQLServer-Restart-Instance.md
+  
+      - name: 只读实例管理
+        items:
+        - name: 创建只读实例
+          herf: Operation-Guide/Readonly-Instance-Management/Create-Readonly-Instance.md
+        - name: 重启只读实例
+          herf: Operation-Guide/Readonly-Instance-Management/Restart-Readonly-Instance.md
+  
+      - name: 账户管理
+        items:
+          - name: 创建账号
+            herf: Operation-Guide/Account/Create-Account.md
+          - name: 修改权限
+            herf: Operation-Guide/Account/Modify-Privilege.md
+          - name: 重置密码
+            herf: Operation-Guide/Account/Reset-Password.md
+          - name: 删除账号
+            herf: Operation-Guide/Account/Delete-Account.md
+  
+      - name: 库管理
+        items:
+          - name: 创建库
+            herf: Operation-Guide/Database-Management/Create-Database.md
+          - name: 删除库
+            herf: Operation-Guide/Database-Management/Delete-Database.md
+  
+      - name: 备份管理
+        items:
+          - name: 创建备份
+            items:
+            - name: MySQL 创建备份
+              herf: Operation-Guide/Backup/Create-Backup/MySQL-Create-Backup.md
+            - name: Percona 创建备份
+              herf: Operation-Guide/Backup/Create-Backup/Percona-Create-Backup.md
+            - name: SQL Server 创建备份
+              herf: Operation-Guide/Backup/Create-Backup/SQLServer-Create-Backup.md
+          - name: 备份策略
+            items:
+            - name: MySQL 备份策略
+              herf: Operation-Guide/Backup/Backup-Policy/MySQL-Backup-Policy.md
+            - name: Percona 备份策略
+              herf: Operation-Guide/Backup/Backup-Policy/Percona-Backup-Policy.md
+            - name: SQL Server 备份策略
+              herf: Operation-Guide/Backup/Backup-Policy/SQLServer-Backup-Policy.md
+          - name: 备份下载
+            items:
+            - name: MySQL 备份下载
+              herf: Operation-Guide/Backup/Backup-Download/MySQL-Backup-Download.md
+            - name: Percona 备份下载
+              herf: Operation-Guide/Backup/Backup-Download/Percona-Backup-Download.md
+            - name: SQL Server 备份下载
+              herf: Operation-Guide/Backup/Backup-Download/SQLServer-Backup-Download.md
+            - name: 备份覆盖恢复
+              items:
+              - name: MySQL 备份恢复
+                herf: Operation-Guide/Backup/Restore-Instance/MySQL-Backup-Restore.md
+              - name: Percona 备份恢复
+                herf: Operation-Guide/Backup/Restore-Instance/Percona-Backup-Restore.md
+              - name: SQL Server 备份恢复
+                herf: Operation-Guide/Backup/Restore-Instance/SQLServer-Backup-Restore.md
+          - name: 删除备份
+            herf: Operation-Guide/Backup/Delete-Backup.md
+            
+      - name: Binlog 管理
+        items:
+        - name: 文件管理
+          herf: Operation-Guide/Binlog-Management/Binlog-File-Management.md
+        - name: 文件下载
+          herf: Operation-Guide/Binlog-Management/Binlog-File-Download.md
+  
+        - name: 安全管理
+          items:
+          - name: 设置白名单
+            herf: Operation-Guide/Security/Set-Whitelist.md
+       
+      - name: 单库上云
+        items:
+        - name: 单库上云简介
+          herf: Operation-Guide/Data-To-Cloud/Data-To-Cloud-Introduction.md
+        - name: 步骤一 本地备份
+          herf: Operation-Guide/Data-To-Cloud/Backup-Local-Database.md
+        - name: 步骤二 上传备份
+          herf: Operation-Guide/Data-To-Cloud/Upload-Backup.md
+        - name: 步骤三 备份导入
+          herf: Operation-Guide/Data-To-Cloud/Import-Backup.md
+        - name: 删除上传文件
+          herf: Operation-Guide/Data-To-Cloud/Delete-Import.md
+
+      - name: 参数组 
+        items:
+         - name: 创建参数组
+           herf: Operation-Guide/Parameter-Group/Creat-Parameter-Group.md
+         - name: 修改参数组
+           herf: Operation-Guide/Parameter-Group/Modify-Parameter-Group.md
+         - name: 拷贝参数组
+           herf: Operation-Guide/Parameter-Group/Copy-Parameter-Group.md
+         - name: 删除参数组
+           herf: Operation-Guide/Parameter-Group/Delete-Parameter-Group.md
+          
+      - name: 审计
+        items:
+        - name: MySQL 审计服务
+          herf: Operation-Guide/Audit/MySQL-Audit-Service.md
+        - name: Percona 审计服务
+          herf: Operation-Guide/Audit/Percona-Audit-Service.md
+        - name: SQL Server 审计服务
+          items:
+          - name: SQL Server 审计简介
+            herf: Operation-Guide/Audit/SQL-Server-Audit/Audit-Introduction.md
+          - name: 开启审计
+            herf: Operation-Guide/Audit/SQL-Server-Audit/Enable-Audit.md
+          - name: 编辑审计
+            herf: Operation-Guide/Audit/SQL-Server-Audit/Edit-Audit.md
+          - name: 关闭审计
+            herf: Operation-Guide/Audit/SQL-Server-Audit/Disable-Audit.md  
+          - name: 下载审计结果
+            herf: Operation-Guide/Audit/SQL-Server-Audit/Dowload-Audit.md
+          - name: 查看审计结果
+            herf: Operation-Guide/Audit/SQL-Server-Audit/View-Audit-Result.md    
+ 
+      - name: 性能统计分析
+        items:
+        - name: 性能统计分析简介
+          herf: Operation-Guide/Performance/Performance-Statistics-Introduction.md
+        - name: SQL 性能统计
+          herf: Operation-Guide/Performance/SQL-Performance.md
+        - name: 索引性能优化
+          herf: Operation-Guide/Performance/Index-Performance.md
+
+      - name: 资源标签
+        items:
+        - name: 资源标签简介
+          herf: Operation-Guide/Tag/Tag-Introduction.md
+        - name: 编辑标签
+          herf: Operation-Guide/Tag/Edit-Tag.md
+        - name: 根据资源筛选
+          herf: Operation-Guide/Tag/Search-Tag.md
+        - name: 管理标签
+          herf: Operation-Guide/Tag/Manage-Tag.md       
+          
+      - name: 监控报警
+        items:
+        - name: 查看监控信息
+          herf: Operation-Guide/Monitor-Alarm/View-Monitor-Information.md          
+        - name: 设置报警规则
+          herf: Operation-Guide/Monitor-Alarm/Set-Alarm-Rules.md
+          
+                      
+      - name: 跨地域备份同步
+        items:
+        - name: 新建备份同步服务
+          herf: Operation-Guide/Cross-Region-Synchronization-Service/Create-Cross-Region-Synchronization-Service.md
+        - name: 根据备份创建实例
+          herf: Operation-Guide/Cross-Region-Synchronization-Service/Create-Instance-Based-On-Backup.md
+        - name: 删除备份同步服务
+          herf: Operation-Guide/Cross-Region-Synchronization-Service/Delete-Cross-Region-Synchronization-Service.md
+           
+      - name: 日志管理
+        herf: Operation-Guide/Log-Management.md   
+      - name: 设置访问模式
+        herf: Operation-Guide/Set-Access-Mode.md     
+            
+  - name: 最佳实践
+    items:
+    - name: 数据迁移
+      items:
+      - name: 从MySQL到Percona
+        herf: Best-Practices/Data-Migration/Migrate-From-MySQL-Database-to-Percona-Database.md
+      - name: 导入 MySQL
+        items:
+        - name: 从本地 MySQL 导入
+          herf: Best-Practices/Data-Migration/Import-Data-Into-MySQL-Database-Instance/Migrate-From-Local-MySQL-Database-to-JDCloud-MySQL-Database-Instance.md
+        - name: 从云主机 MySQL 导入
+          herf: Best-Practices/Data-Migration/Import-Data-Into-MySQL-Database-Instance/Migrate-From-JDCloud-VM-MySQL-Database-to-JDCloud-MySQL-Database-Instance.md
+      - name: 导入 Percona
+        items:
+        - name: 从本地 Percona 导入
+          herf: Best-Practices/Data-Migration/Import-Data-Into-Percona-Database-Instance/Migrate-From-Local-Percona-Database-to-JDCloud-Percona-Database-Instance.md
+        - name: 从云主机 Percona 导入
+          herf: Best-Practices/Data-Migration/Import-Data-Into-Percona-Database-Instance/Migrate-From-JDCloud-VM-Percona-Database-to-JDCloud-Percona-Database-Instance.md
+    - name: 将备份文件恢复到自建数据库
+      items:
+      - name: 将备份恢复到自建 MySQL
+        herf: Best-Practices/Restore-Backup-To-Self-Built-Database/Restore-Backup-To-Self-Built-MySQL-Database.md
+      - name: 将备份恢复到自建 Percona
+        herf: Best-Practices/Restore-Backup-To-Self-Built-Percona-Database.md
+    - name: 连接数据库实例
+      items:
+      - name: 连接实例
+        herf: Best-Practices/Connect-Database-Instance/Connect-Instance.md  
+      - name: 从客户端连接 SQL Server
+        herf: Best-Practices/Connect-Database-Instance/Client-Connect-SQLServer.md
+      - name: 从云主机连接 SQL Server
+        herf: Best-Practices/Connect-Database-Instance/Host-Connect-SQLServer.md
+  
+  - name: 常见问题
+    items:
+    - name: FAQ
+      herf: FAQ/FAQ.md
+    - name: 存储引擎 
+      herf: FAQ/Storage-Engine.md
+    - name: 存储空间
+      herf: FAQ/Storage-Space.md
+
+  - name: 问题排查
+    items:
+    - name: 内存使用率
+      herf: Troubleshooting/Memory-Use-Rate.md
+          
+  - name: API参考
+    herf:
+  - name: SDK参考
+    herf:
+  - name: 相关资源
+    items:
+    - name: 文档历史记录
+      herf: Related-Resources/Document-History.md
+    - name: 服务条款
+      herf: Related-Resources/Service-Terms.md
+      status: 0
+    - name: SLA
+      herf: Related-Resources/SLA.md
+      status: 0
+    - name: 备案
+      herf: Related-Resources/Filing.md
+      status: 0
+    - name: 词汇表
+      herf: Related-Resources/Glossary.md
+      status: 0

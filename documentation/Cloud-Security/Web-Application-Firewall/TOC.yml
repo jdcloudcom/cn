@@ -4,11 +4,11 @@
   - name: 产品简介
     items:
       - name: 产品概述
-        href: Introduction/What-Is-WAF.md
+        href: Introduction/Product-Overview.md
       - name: 产品优势
         href: Introduction/Benefits.md
       - name: 产品功能
-        href: Introduction/Functions.md
+        href: Introduction/Features.md
       - name: 应用场景 
         href: Introduction/Application-Scenarios.md    
   - name: 产品定价

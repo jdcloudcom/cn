@@ -4,11 +4,11 @@
   - name: 产品简介
     items:
       - name: 云态势感知定义
-        href: Introduction/Definition.md
+        href: Introduction/Product-Overview.md
       - name: 产品架构
-        href: Introduction/Product-Architecture.md
+        href: Introduction/Basic-Infrastructure.md
       - name: 应用场景
-        href: Application-Scenario.md
+        href: Application-Scenarios.md
   - name: 操作手册
     items:
       - name: 威胁概览

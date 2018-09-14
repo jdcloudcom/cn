@@ -1,0 +1,9 @@
+swagger: "2.0"
+definitions:
+  EPBSpec:
+    type: object
+    x-jdcloud-module: ipanti
+    properties:
+      ePB:
+        type: integer
+        description: "弹性防护带宽"

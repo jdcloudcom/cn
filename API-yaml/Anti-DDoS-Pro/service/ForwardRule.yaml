@@ -1,0 +1,168 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: "非网站转发配置相关接口"
+  description: "非网站转发配置相关接口"
+
+basePath: /regions/{regionId}
+
+paths:
+  /instances/{instanceId}/forwardRules:
+    get:
+      description: "查询某个实例下的非网站转发配置"
+      operationId: describeForwardRules
+      parameters:
+        - name: pageNumber
+          in: query
+          type: integer
+          required: false
+          description: "页码, 默认为1"
+        - name: pageSize
+          in: query
+          type: integer
+          required: false
+          description: "分页大小, 默认为10, 取值范围[10, 100]"
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  dataList:
+                    type: array
+                    items:
+                      $ref: "../model/ForwardRule.yaml#/definitions/forwardRule"
+                  totalCount:
+                    type: integer
+              requestId:
+                type: string
+        404:
+          description: NOT_FOUND
+    post:
+      description: "添加非网站类规则"
+      operationId: createForwardRule
+      parameters:
+        - name: forwardRuleSpec
+          in: body
+          description: "添加非网站类规则请求参数"
+          required: true
+          schema:
+            $ref: "../model/ForwardRuleSpec.yaml#/definitions/forwardRuleSpec"
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              requestId:
+                type: string
+        400:
+          description: BAD_REQUEST
+        404:
+          description: NOT_FOUND
+        500:
+          description: INTERNAL_SERVER_ERROR
+
+  /instances/{instanceId}/forwardRules/{forwardRuleId}:
+    get:
+      description: "查询非网站类规则"
+      operationId: describeForwardRule
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  data:
+                    $ref: "../model/ForwardRule.yaml#/definitions/forwardRule"
+              requestId:
+                type: string
+        404:
+          description: NOT_FOUND
+    patch:
+      description: "更新非网站类规则"
+      operationId: modifyForwardRule
+      parameters:
+        - name: forwardRuleSpec
+          in: body
+          description: "更新非网站类规则请求参数"
+          required: true
+          schema:
+            $ref: "../model/ForwardRuleSpec.yaml#/definitions/forwardRuleSpec"
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              requestId:
+                type: string
+        400:
+          description: BAD_REQUEST
+        404:
+          description: NOT_FOUND
+        500:
+          description: INTERNAL_SERVER_ERROR
+    delete:
+      description: "删除非网站规则"
+      operationId: deleteForwardRule
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              requestId:
+                type: string
+
+  /instances/{instanceId}/forwardRules/{forwardRuleId}:protect:
+    post:
+      description: "非网站类规则切换成防御状态"
+      operationId: switchForwardRuleProtect
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              requestId:
+                type: string
+        404:
+          description: NOT_FOUND
+        500:
+          description: INTERNAL_SERVER_ERROR
+
+  /instances/{instanceId}/forwardRules/{forwardRuleId}:origin:
+    post:
+      description: "非网站类规则切换成回源状态"
+      operationId: switchForwardRuleOrigin
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              requestId:
+                type: string
+        404:
+          description: NOT_FOUND
+        500:
+          description: INTERNAL_SERVER_ERROR
+
+#路径通用参数
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: "Region ID"
+  instanceId:
+    name: instanceId
+    in: path
+    required: true
+    type: string
+    description: "实例 ID"
+  forwardRuleId:
+    name: forwardRuleId
+    in: path
+    required: true
+    type: string
+    description: "转发规则 ID"

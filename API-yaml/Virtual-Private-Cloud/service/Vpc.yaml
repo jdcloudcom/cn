@@ -133,7 +133,6 @@ paths:
         summary: "修改私有网络"
         description: "修改私有网络接口"
         operationId: modifyVpc
-        x-jdcloud-internal: true
         parameters:
           - name: modifyVpcSpec
             in: body

@@ -3,7 +3,7 @@ PostObject使用HTML表单上传文件到指定bucket。
 
 基于浏览器利用HTTP POST直传文件到对象存储的Bucket中，可以降低延迟。Post Object的消息实体通过多重表单格式（multipart/form-data）编码，在Put Object操
 作中参数通过HTTP请求头传递，在Post操作中参数则作为消息实体中的表单域传递。此接口兼容S3,仅支持OSS的兼容S3服务域名（<bucket>.s3.<region>.jcloudcs.com）
-，[参见服务器域名](https://www.jdcloud.com/help/detail/1902/isCatalog/1)。
+，[参见服务器域名](../../API-Reference-S3-Compatible/Regions-And-Endpoints.md)。
 
 请求语法
 ```

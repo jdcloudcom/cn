@@ -22,7 +22,7 @@
 **3、 选取镜像。**
 
 例如，现阶段支持“标准镜像”和“标准镜像+应用”两种镜像类型。
-其中“标准镜像”支持CentOS7.2和6.6，Ubuntu支持16.04和14.04；“标准镜像+应用”支持CentOS7.2和CentOS6.6下的Nginx、MySQL和RabbitMQ三个应用。
+其中“标准镜像”支持CentOS7.1、7.2、7.5和6.6，Ubuntu 16.04和14.04；“标准镜像+应用”支持CentOS7.2和CentOS6.6下的Nginx、MySQL和RabbitMQ三个应用。
 
 ![镜像选择](https://github.com/jdcloudcom/cn/blob/edit/image/Hyper-Converged-IDC/Cloud-Physical-Server/CPS014.png)
 
@@ -50,7 +50,7 @@
 ![配置网络](https://github.com/jdcloudcom/cn/blob/edit/image/Hyper-Converged-IDC/Cloud-Physical-Server/CPS017.png)
 
 **6、 配置服务器基本信息**：
-配置服务器名称、描述、操作系统密码
+配置服务器名称、描述、操作系统密码。
 
 ![配置服务器](https://github.com/jdcloudcom/cn/blob/edit/image/Hyper-Converged-IDC/Cloud-Physical-Server/CPS018.png)
 

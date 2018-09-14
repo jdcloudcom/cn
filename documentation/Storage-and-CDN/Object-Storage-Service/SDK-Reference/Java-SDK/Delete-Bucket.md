@@ -2,9 +2,9 @@
 
 您可以使用JingdongStorageService.deleteBucket删除Bucket。以下代码展示如何删除一个Bucket：
 ```
-// endpoint以华北为例，其它region请按实际情况填写  
-String endpoint = "s-bj.jcloud.com";  
-//您的AccessKey和SecretKey可以登录到京东云存储的控制台，在【Access Key 管理】中查看。  
+// endpoint以华北-北京为例，其它region请按实际情况填写  
+String endpoint = "oss.cn-north-1.jcloudcs.com";  
+//您的AccessKey和SecretKey可以登录到对象存储的控制台，在【Access Key 管理】中查看。  
 String accessKey = "<yourAccessKey>";  
 String SecretKey = "<yourSecretKey>";  
       

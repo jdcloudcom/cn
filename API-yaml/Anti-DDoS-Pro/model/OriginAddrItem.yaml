@@ -1,0 +1,15 @@
+swagger: "2.0"
+definitions:
+  OriginAddrItem:
+    type: object
+    x-jdcloud-module: ipanti
+    properties:
+      ip:
+        type: string
+        description: 回源ip
+      weight:
+        type: integer
+        description: 权重
+      inJdCloud:
+        type: boolean
+        description: 是否为京东云内公网ip

@@ -1,0 +1,48 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: welcome测试接口
+  description: API related to datastar
+
+basePath: /regions/{regionId}
+
+paths:
+  "/welcome":
+    ###################### welcome接口测试 ######################
+        post:
+              description: 接口连通性测试接口
+              operationId: testWelcome
+              x-jdcloud-internal: true
+              parameters:
+                - name: testOpenApiInfo
+                  in: body
+                  required: true
+                  description: testOpenApi入参
+                  schema:
+                      $ref: "../model/TestOpenApiReq.yaml#/definitions/testOpenApiReq"
+              responses:
+                200:
+                  description: OK
+                  schema:
+                    properties:
+                      result:
+                        properties:
+                          status:
+                            type: boolean
+                          message:
+                            type: string
+                          data:
+                            type: string
+                      requestId:
+                        type: string
+                500:
+                  description: "Internal server error"
+
+#路径通用参数
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: 地域ID

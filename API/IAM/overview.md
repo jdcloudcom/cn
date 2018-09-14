@@ -1,0 +1,36 @@
+# IAM API
+
+
+## 简介
+IAM相关接口
+
+
+### 版本
+v1
+
+
+## API
+|接口名称|请求方式|功能描述|
+|---|---|---|
+|**addPermissionsToSubUser**|POST|为子用户绑定策略|
+|**attachRolePolicy**|POST|为角色绑定策略|
+|**createPermission**|POST|创建策略|
+|**createRole**|POST|创建角色|
+|**createSubuser**|POST|创建子账号|
+|**createUserAccessKey**|POST|创建AccessKey|
+|**deleteRole**|DELETE|删除角色|
+|**deleteUserAccessKey**|DELETE|删除AccessKey|
+|**describePermissionDetail**|GET|查询策略详情|
+|**describePermissions**|GET|查询策略列表|
+|**describeRole**|GET|查询角色详情|
+|**describeRolePolicies**|GET|查询角色授权策略列表|
+|**describeRoles**|GET|查询角色列表|
+|**describeSubUserPermissions**|GET|查询子用户策略列表|
+|**describeUserAccessKeys**|GET|查询AccessKey列表|
+|**detachRolePolicy**|POST|为角色绑定策略|
+|**disabledUserAccessKey**|PUT|禁用AccessKey|
+|**enabledUserAccessKey**|PUT|启用AccessKey|
+|**removePermissionOfSubUser**|DELETE|为子用户解绑策略|
+|**updateAssumeRolePolicy**|PUT|修改角色内置policy|
+|**updatePermission**|PUT|修改策略|
+|**updateRole**|PUT|修改角色基本信息|

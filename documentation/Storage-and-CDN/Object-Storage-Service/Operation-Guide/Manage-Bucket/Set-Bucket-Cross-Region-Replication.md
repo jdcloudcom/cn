@@ -18,7 +18,7 @@
 ## 在控制台中设置过程如下：
 
 
-1. 登入控制台->云存储->空间管理->进入某个Bucket->空间设置->跨区域复制
+1. 登入控制台->对象存储->空间管理->进入某个Bucket->空间设置->跨区域复制
 
 ![跨区域复制](https://github.com/jdcloudcom/cn/blob/edit/image/Object-Storage-Service/OSS-041.png)
 

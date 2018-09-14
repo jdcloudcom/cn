@@ -1,0 +1,25 @@
+name: BI 报表
+href: 
+items:
+- name: 产品简介
+  items:
+    - name: 产品概述
+      href: Introduction/Product-Overview.md
+    - name: 产品优势
+      href: Introduction/Benefits.md
+    - name: 产品功能
+      href: Introduction/Features.md
+    - name: 应用场景 
+      href: Introduction/Application-Scenarios.md    
+- name: 产品定价
+  items:
+    - name: 计费概述
+      href: Pricing/Billing-Overview.md
+- name: 操作指南
+  items:
+    - name: 创建数据集    
+      href: Operation-Guide/Create-Dataset.md
+    - name: 创建报告
+      href: Operation-Guide/Create-Report.md
+    - name: 查看报表仪表盘
+      href: Operation-Guide/View-Report-DashBoard.md

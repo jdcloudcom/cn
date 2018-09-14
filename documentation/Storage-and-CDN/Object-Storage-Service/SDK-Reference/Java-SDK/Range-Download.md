@@ -2,11 +2,11 @@
 
 如果OSS文件较大，并且只需要其中一部分数据，可以使用范围下载，下载指定范围的数据。如果指定的下载范围是0-1000，则返回第0到第1000个字节的数据，包括第1000个，共1001字节的数据，即[0, 1000]。如果指定的下载范围是1000-，则返回数据跳过前1000个字节，将其余部分下载：
 ```
-//您的AccessKey和SecretKey可以登录到京东云存储的控制台，在【Access Key 管理】中查看。  
+//您的AccessKey和SecretKey可以登录到对象存储的控制台，在【Access Key 管理】中查看。  
 String accessKey =  "<yourAccessKeyId>";  
 String secreteKey = "<yourSecretKey>";       
 //endpoint以华北为例，其它region请按实际情况填写  
-String endPoint = "s-bj.jcloud.com";  
+String endPoint = "oss.cn-north-1.jcloudcs.com";  
 String bucketName = "<yourBucketName>";  
 String objectName = "<yourObjectName>";    
 //ClientConfig当前为默认配置，用户可根据需要自行配置，如设置连接超时时间等  

@@ -1,8 +1,0 @@
-swagger: "2.0"
-info:
-  version: "v1"
-  title: 京东云IP高防相关接口
-  description: 京东云IP高防相关接口
-host: "ipanti.jdcloud-api.com"
-x-jdcloud-version: "v1"
-x-jdcloud-revision: "1.0.1"

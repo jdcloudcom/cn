@@ -23,10 +23,10 @@
 
 + 未绑定之前：example.oss.cn-north-1.jcloudcs.com /test.jpg
 + 绑定成功后：hello-world.com/test.jpg
-  您可以通过控制台将自定义域名绑定到OSS外网域名上实现自定义域名访问存储空间下的文件，也可同时配置京东云CDN实现加速功能。参见[外网域名- endpoint ](https://www.jdcloud.com/help/detail/1177/isCatalog/1)
+  您可以通过控制台将自定义域名绑定到OSS外网域名上实现自定义域名访问存储空间下的文件，也可同时配置京东云CDN实现加速功能。参见[外网域名- endpoint ](../../API-Reference-S3-Compatible/Regions-And-Endpoints.md)
 
 ## 绑定域名操作步骤
-1.登入控制台->云存储->空间管理->进入某个Bucket->空间设置，点击“自定义域名”。
+1.登入控制台->对象存储->空间管理->进入某个Bucket->空间设置，点击“自定义域名”。
 2.单击添加域名按钮，打开绑定用户域名页面，如下图所示：
 ![图片](https://github.com/jdcloudcom/cn/blob/edit/image/Object-Storage-Service/TimLine%E5%9B%BE%E7%89%8720180731191346.jpg)
  
@@ -48,5 +48,5 @@
 单击添加解析后，打开添加解析页面。
 在记录类型下拉列表中，选择CNAME；在记录值框中，填写对应的存储空间外网域名（即Bucket域名，如BucketName.oss.cn-north-1.jcloudcs.com）。
 单击确认，域名解析完成。
-具体参考[京东云云解析DNS-添加解析记录](https://www.jdcloud.com/help/detail/2167/isCatalog/1)
+具体参考[京东云云解析DNS-添加解析记录](../../../../Domain-Name-and-Website/JD-Cloud-DNS/Introduction/What-Is-DNS.md)
 

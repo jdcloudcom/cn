@@ -1,0 +1,57 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: 云物理服务器
+  description: 云物理服务器子网操作相关的接口
+
+basePath: /regions/{regionId}
+
+paths:
+  "/subnet":
+    ###################### 查询子网 ######################
+    get:
+      description: "查询子网"
+      operationId: describeSubnet
+      parameters:
+        - name: az
+          in: query
+          required: true
+          type: string
+          description: "可用区, 如cn-east-1a；可调用接口（describeRegiones）获取云物理服务器在该地域支持的可用区"
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                properties:
+                  subnet:
+                    type: object
+                    $ref: "../model/Subnet.yaml#/definitions/subnet"
+                    description: 子网详细信息
+              requestId:
+                type: string
+        400:
+          description: "Bad request"
+        404:
+          description: "Not found"
+        500:
+          description: "Internal server error"
+        503:
+          description: "Service unavailable"
+
+#路径通用参数
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: 地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域
+  subnetId:
+    name: subnetId
+    in: path
+    required: true
+    type: string
+    description: 子网ID

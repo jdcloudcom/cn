@@ -1,0 +1,139 @@
+name: 云监控
+href: 
+items:
+- name: 产品简介
+  items:
+    - name: 产品概述
+      href: Introduction/Product-Overview.md
+    - name: 核心概念
+      href: Introduction/Core-Concepts.md
+    - name: 基础架构
+      href: Introduction/Basic-Infrastructure.md
+    - name: 产品优势
+      href: Introduction/Benefits.md
+    - name: 监控指标
+      href: Introduction/Metrics.md
+    - name: 产品规格
+      href: Introduction/Specifications.md
+    - name: 限制说明
+      href: Introduction/Restrictions.md
+    - name: 应用场景 
+      href: Introduction/Application-Scenarios.md    
+- name: 产品定价
+  items:
+    - name: 计费概述
+      href: Pricing/Billing-Overview.md
+- name: 入门指南
+  items:
+    - name: 入门指南概述
+      href: Getting-Started/Getting-Started.md
+    - name: 查看资源监控图表
+      href: Getting-Started/view-resource-monitoring-chart.md
+    - name: 设置报警规则
+      href: Getting-Started/set-alarm-rules.md
+    - name: 使用Dashboard监控面板
+      href: Getting-Started/use-Dashboard.md
+    - name: 使用自定义监控
+      href: Getting-Started/use-custom-monitoring.md
+- name: 操作指南
+  items:
+    - name: Dashboard
+      href: Getting-Started/Dashboard.md
+      items:
+        - name: 使用须知
+          href: Operation-Guide/dashboard/terms-and-conditions.md
+        - name: 我关注的面板
+          href: Operation-Guide/dashboard/focus-page.md
+        - name: 管理监控面板
+          href: Operation-Guide/dashboard/dashboard-management.md      
+        - name: 管理监控图表
+          href: Operation-Guide/dashboard/monitoring-chart-management.md
+    - name: 云资源监控
+      href: Getting-Started/resource-monitoring.md
+      items:
+        - name: 资源监控
+          href: Operation-Guide/resource-monitoring/resource-monitoring-overview.md
+        - name: 查看资源监控图表
+          href: Operation-Guide/resource-monitoring/view-resource-monitoring-chart.md
+        - name: 对资源设置监控报警
+          href: Operation-Guide/resource-monitoring/set-alarm-rules.md     
+    - name: 自定义监控
+      href: Getting-Started/custom-monitoring.md  
+      items:
+        - name: 自定义监控概述
+          href: Operation-Guide/custom-monitoring/custom-monitoring-overview.md
+        - name: 查看监控数据
+          href: Operation-Guide/custom-monitoring/view-monitoring-data.md
+        - name: 删除监控数据
+          href: Operation-Guide/custom-monitoring/delete-monitoring-data.md      
+        - name: 设置报警规则
+          href: Getting-Started/设置报警规则.md
+        - name: 使用Dashboard监控面板
+          href: Getting-Started/使用Dashboard监控面板.md
+        - name: 使用自定义监控
+          href: Getting-Started/使用自定义监控.md
+    - name: 操作指南
+      items:
+        - name: Dashboard
+          href: Getting-Started/Dashboard.md
+          items:
+            - name: 使用须知
+              href: Operation-Guide/dashboard/terms-and-conditions.md
+            - name: 我关注的面板
+              href: Operation-Guide/dashboard/focus-page.md
+            - name: 管理监控面板
+              href: Operation-Guide/dashboard/dashboard-management.md      
+            - name: 管理监控图表
+              href: Operation-Guide/dashboard/monitoring-chart-management.md
+        - name: 云资源监控
+          href: Getting-Started/云资源监控.md
+          items:
+            - name: 资源监控
+              href: Operation-Guide/resource-monitoring/resource-monitoring-overview.md
+            - name: 查看资源监控图表
+              href: Operation-Guide/resource-monitoring/view-resource-monitoring-chart.md
+            - name: 对资源设置监控报警
+              href: Operation-Guide/resource-monitoring/set-alarm-rules.md     
+        - name: 自定义监控
+          href: Getting-Started/自定义监控.md  
+          items:
+            - name: 自定义监控概述
+              href: Operation-Guide/custom-monitoring/custom-monitoring-overview.md
+            - name: 查看监控数据
+              href: Operation-Guide/custom-monitoring/view-monitoring-data.md
+            - name: 删除监控数据
+              href: Operation-Guide/custom-monitoring/delete-monitoring-data.md      
+            - name: 设置报警规则
+              href: Operation-Guide/custom-monitoring/set-alarm-rules.md
+            - name: 查看历史报警
+              href: Operation-Guide/custom-monitoring/view-alarm-history.md
+    - name: 最佳实践
+      items:
+        - name: 批量资源监控xa
+          href: Best-Practices/bulk-resource-monitoring.md
+        - name: 日常业务监控
+          href: Best-Practices/business-monitoring.md
+    - name: 教程
+      items:
+      status: 0
+    - name: 问题排查
+      items:
+      status: 0       
+    - name: 常见问题
+      href: FAQ/FAQ.md
+    - name: API参考
+      href:
+    - name: SDK参考
+      href:
+    - name: 相关资源
+      items:
+      - name: 文档历史记录
+        href: Related-Resources/Document-History.md     
+      - name: 服务条款         
+        status: 0      
+      - name: SLA         
+        status: 0       
+      - name: 备案         
+        status: 0        
+      - name: 词汇表          
+        status: 0

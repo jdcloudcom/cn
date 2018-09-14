@@ -1,0 +1,19 @@
+swagger: "2.0"
+definitions:
+  software:
+    x-jdcloud-module: cps
+    title: software
+    type: object
+    properties:
+      name:
+        type: string
+        description: "软件包名称"
+      version:
+        type: string
+        description: "软件包版本"
+      osTypeId:
+        type: string
+        description: "操作系统系统类型ID"
+      description:
+        type: string
+        description: "软件包描述"

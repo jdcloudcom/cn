@@ -9,7 +9,7 @@ basePath: /regions/{regionId}
 paths:
   "/backups":    #创建备份
     post:
-      description: 创建一个RDS实例全量备份，可以对整个实例或者部分数据库（仅SQL Server支持）进行全量备份。同一时间点，只能有一个正在运行的备份任务<br>- 仅支持SQL Server
+      description: 创建一个RDS实例全量备份，可以对整个实例或者部分数据库（仅SQL Server支持）进行全量备份。同一时间点，只能有一个正在运行的备份任务
       operationId: createBackup
       parameters:
         - name: instanceId
@@ -32,7 +32,7 @@ paths:
                     type: string
                     description: 备份Id
     get:
-      description: 查看该RDS实例下所有备份的详细信息，返回的备份列表按照备份开始时间（backupStartTime）降序排列。<br>- 仅支持SQL Server
+      description: 查看该RDS实例下所有备份的详细信息，返回的备份列表按照备份开始时间（backupStartTime）降序排列。
       operationId: describeBackups
       parameters:
         - name: instanceId
@@ -74,7 +74,7 @@ paths:
           required: true
           in: query
           type: integer
-          description: 每页显示的数据条数，默认为10，取值范围：[1,100]，只能为10的倍数
+          description: 每页显示的数据条数，默认为10，取值范围：10、20、30、50、100
       responses:
         200:
           description: OK

@@ -4,7 +4,7 @@ items:
 - name: 产品简介
   items:
     - name: 产品概述
-      herf: Introduction/What-Is-APIGateway.md
+      herf: Introduction/Product-Overview.md
     - name: 核心概念
       herf: Introduction/Core-Concepts.md
     - name: 基础架构
@@ -12,9 +12,9 @@ items:
     - name: 产品优势
       herf: Introduction/Benefits.md
     - name: 产品功能
-      herf: Introduction/Functions.md
+      herf: Introduction/Features.md
     - name: 产品规格
-      herf: Introduction/Specification.md
+      herf: Introduction/Specifications.md
     - name: 限制说明
       herf: Introduction/Restrictions.md
     - name: 应用场景 
@@ -35,7 +35,7 @@ items:
 - name: 入门指南
   items:
     - name: 概述
-      herf: Getting-Started/Overview.md
+      herf: Getting-Started/Getting-Started.md
     - name: 创建API分组
       herf: Getting-Started/STEP1-Create -APIGroup.md
     - name: 创建API

@@ -1,0 +1,22 @@
+swagger: "2.0"
+definitions:
+  subnet:
+    x-jdcloud-module: cps
+    title: subnet
+    type: object
+    properties:
+      region:
+        type: string
+        description: 地域代码, 如cn-east-1
+      az:
+        type: string
+        description: 可用区, 如cn-east-1a
+      cidr:
+        type: string
+        description: 子网CIDR
+      subnetId:
+        type: string
+        description: 子网ID
+      networkType:
+        type: string
+        description: 网络类型

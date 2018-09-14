@@ -93,7 +93,7 @@ function loadXMLDoc() {
 
 4.设置CORS
 
-登入控制台->云存储->空间管理->进入存储桶test-cors->空间设置->跨域访问设置，点击CORS规则配置进入配置页面。
+登入控制台->对象存储->空间管理->进入存储桶test-cors->空间设置->跨域访问设置，点击CORS规则配置进入配置页面。
 
 ![](https://github.com/jdcloudcom/cn/blob/edit/image/Object-Storage-Service/OSS-087.jpg)
 

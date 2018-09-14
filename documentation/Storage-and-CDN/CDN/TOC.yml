@@ -4,7 +4,7 @@
   - name: 产品简介
     items:
       - name: 产品概述
-        href: Introduction/What-Is-CDN.md
+        href: Introduction/Product-Overview.md
       - name: 核心概念
         href: Introduction/Core-Concepts.md
       - name: 基础架构
@@ -12,7 +12,7 @@
       - name: 产品优势
         href: Introduction/Benefits.md
       - name: 产品功能
-        href: Introduction/Functions.md
+        href: Introduction/Features.md
       - name: 应用场景 
         href: Introduction/Application-Scenarios.md    
   - name: 产品定价
@@ -24,9 +24,7 @@
       - name: 欠费说明
         href: Pricing/Arrears.md
   - name: 入门指南
-    items:
-      - name: 入门指南
-        href: Getting-Started/Getting-started-guide.md
+    href: Getting-Started/Getting-Started.md
   - name: 操作指南
     items:
       - name: 视频直播
@@ -38,10 +36,10 @@
       - name: 运营分析
         items:
           - name: 热点分析
-            href: Operation-Guide/Operating-Analysis/Hot-spot-Analysis .md
+            href: Operation-Guide/Operating-Analysis/Hot-spot-Analysis.md
       - name: 质量分析
         items:
-          - name:命中率
+          - name: 命中率
             href: Operation-Guide/Quality-Monitoring/Hit-Ratio.md        
           - name: 状态码
             href: Operation-Guide/Quality-Monitoring/Status-Code.md         
@@ -69,7 +67,93 @@
         href: Operation-Guide/URL-Authentication.md        
       - name: 视频拖拽
         href: Operation-Guide/Video-drag.md  
+  - name: API Reference
+    items:
+      - name: CDN OPEN API
+        items:
+          - name: 创建域名
+            href: API-Refererce/CDN-Open-API/Creat-domain.md
+          - name: 分区域运营商详细数据统计
+            href: API-Refererce/CDN-Open-API/Area-isp-detail-statistics.md
+          - name: 回源带宽统计
+            href: API-Refererce/CDN-Open-API/Back-to-source-bandwidth.md
+          - name: 回源策略变更
+            href: API-Refererce/CDN-Open-API/Change-back-to-source.md
+          - name: 缓存策略变更
+            href: API-Refererce/CDN-Open-API/Change-Cache-policy.md
+          - name: 服务状态变更
+            href: API-Refererce/CDN-Open-API/Change-domain-status.md
+          - name: 状态码详情
+            href: API-Refererce/CDN-Open-API/Code-status.md
+          - name: 获取所有运营商区域信息
+            href: API-Refererce/CDN-Open-API/Get-all-area-isp.md
+          - name: 日志下载
+            href: API-Refererce/CDN-Open-API/Log-download.md
+          - name: 开通OPEN API业务
+            href: API-Refererce/CDN-Open-API/Open-api-business.md
+          - name: 预热
+            href: API-Refererce/CDN-Open-API/Prefetch.md
+          - name: 查询带宽
+            href: API-Refererce/CDN-Open-API/Query-bandwidth.md
+          - name: 计费数据查询
+            href: API-Refererce/CDN-Open-API/Query-billing.md
+          - name: 查询缓存策略
+            href: API-Refererce/CDN-Open-API/Query-Cache-policy.md
+          - name: 查询加速域名
+            href: API-Refererce/CDN-Open-API/Query-domain.md
+          - name: 查询域名配置
+            href: API-Refererce/CDN-Open-API/Query-domain-config.md
+          - name: 查询域名详情
+            href: API-Refererce/CDN-Open-API/Query-domain-detail.md
+          - name: 查询流量
+            href: API-Refererce/CDN-Open-API/Query-flow.md
+          - name: 查询节点IP
+            href: API-Refererce/CDN-Open-API/Query-node-ip.md
+          - name: 查询预热任务
+            href: API-Refererce/CDN-Open-API/Query-prefetch.md
+          - name: 查询PV和命中PV
+            href: API-Refererce/CDN-Open-API/Query-pv.md
+          - name: 查询刷新任务
+            href: API-Refererce/CDN-Open-API/Query-refresh.md
+          - name: 实时调度覆盖关系
+            href: API-Refererce/CDN-Open-API/Query-scheduling-relationship.md
+          - name: 查询TOP IP
+            href: API-Refererce/CDN-Open-API/Query-top-ip.md
+          - name: 查询TOP URL
+            href: API-Refererce/CDN-Open-API/Query-top-url.md
+          - name: 查询总数据
+            href: API-Refererce/CDN-Open-API/Query-total-data.md
+          - name: 查询UV
+            href: API-Refererce/CDN-Open-API/Query-uv.md
+          - name: 刷新
+            href: API-Refererce/CDN-Open-API/Refresh.md
+          - name: 设置回源host
+            href: API-Refererce/CDN-Open-API/Set-back-to-source-host.md
+          - name: 设置通信协议
+            href: API-Refererce/CDN-Open-API/Set-http-type.md
+          - name: 设置忽略参数
+            href: API-Refererce/CDN-Open-API/Set-IgnoreArgs.md
+          - name: 设置rang参数
+            href: API-Refererce/CDN-Open-API/Set-range.md
+          - name: 设置referer黑白名单
+            href: API-Refererce/CDN-Open-API/Set-referer.md
+          - name: 附：提示信息状态码参照表
+            href: API-Refererce/CDN-Open-API/Status-code-reference-table.md
+      - name: 直播 OPEN API
+        items:
+          - name: 分区域运营商详细数据统计
+            href: API-Refererce/Live-Video-Open-Api/Area-isp-detail-statistics.md
+          - name: 直播CDN OPEN API
+            href: API-Refererce/Live-Video-Open-Api/Live-Video-Open-Api.md
+          - name: 解除禁播
+            href: API-Refererce/Live-Video-Open-Api/Permit-stream.md
+          - name: 查询域名带宽流量
+            href: API-Refererce/Live-Video-Open-Api/Query-bandwidth-flow.md
+          - name: 查询禁播流列表
+            href: API-Refererce/Live-Video-Open-Api/Query-forbidden.md
+          - name: 查询推流实时帧率码率
+            href: API-Refererce/Live-Video-Open-Api/Query-stream-data.md
+          - name: 设置禁播
+            href: API-Refererce/Live-Video-Open-Api/Set-forbid-stream.md
   - name: FAQ
     href: FAQ/FAQ.md
-
-      

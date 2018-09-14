@@ -1,0 +1,9 @@
+swagger: "2.0"
+definitions:
+  updateAssumeRolePolicyInfo:
+    x-jdcloud-module: iam
+    properties:
+      assumeRolePolicyDocument:
+        type: string
+        description: 角色代入policy
+

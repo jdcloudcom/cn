@@ -69,7 +69,6 @@ paths:
        summary: "创建子网"
        description: "创建子网"
        operationId: createSubnet
-       x-jdcloud-internal: true
        parameters:
          - name: subnetSpec
            in: body
@@ -134,7 +133,6 @@ paths:
         summary: "修改子网"
         description: "修改子网接口"
         operationId: modifySubnet
-        x-jdcloud-internal: true
         parameters:
           - name: modifySubnetSpec
             in: body
@@ -161,7 +159,6 @@ paths:
         summary: "删除子网"
         description: "删除子网"
         operationId: deleteSubnet
-        x-jdcloud-internal: true
         responses:
           200:
             description: OK

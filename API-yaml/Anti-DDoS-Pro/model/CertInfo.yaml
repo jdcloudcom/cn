@@ -1,0 +1,24 @@
+swagger: "2.0"
+definitions:
+  CertInfo:
+    type: object
+    x-jdcloud-module: ipanti
+    properties:
+      domain:
+        type: string
+        description: "通用名称"
+      from:
+        type: string
+        description: "证书生效时间"
+      to:
+        type: string
+        description: "证书到期时间"
+      user:
+        type: string
+        description: "证书组织"
+      sigAlgName:
+        type: string
+        description: "加密算法"
+      issuer:
+        type: string
+        description: "颁发者"

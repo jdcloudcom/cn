@@ -1,0 +1,58 @@
+swagger: "2.0"
+definitions:
+  deviceType:
+    x-jdcloud-module: cps
+    title: deviceType
+    type: object
+    properties:
+      nameEN:
+        type: string
+        description: "实例类型英文名称, 如 cps.c.normal"
+      nameZH:
+        type: string
+        description: "实例类型中文名称, 如 计算型"
+      useTypeEN:
+        type: string
+        description: "镜像类型英文描述, 如 standard"
+      useTypeZH:
+        type: string
+        description: "镜像类型中文描述, 如 标准型"
+      region:
+        type: string
+        description: "区域代码, 如 cn-east-1"
+      cpuConcise:
+        type: string
+        description: "CPU概要描述"
+      cpuDetail:
+        type: string
+        description: "CPU详细信息"
+      memConcise:
+        type: string
+        description: "内存概要信息"
+      memDetail:
+        type: string
+        description: "内存详细信息"
+      ifConcise:
+        type: string
+        description: "网口概要信息"
+      ifDetail:
+        type: string
+        description: "网口详细信息"
+      systemDiskConcise:
+        type: string
+        description: "系统磁盘概要信息"
+      systemDiskDetail:
+        type: string
+        description: "系统磁盘详细信息"
+      dataDiskConcise:
+        type: string
+        description: "数据磁盘概要信息"
+      dataDiskDetail:
+        type: string
+        description: "数据磁盘详细信息"
+      gpuConcise:
+        type: string
+        description: "GPU概要信息"
+      gpuDetail:
+        type: string
+        description: "GPU详细信息"

@@ -8,20 +8,6 @@ API网关提供基于 API分组的域名绑定。API网关通过域名来定位�
 - 自定义域名仅支持线上环境，其它环境（测试、预发）暂不支持。
 
 
-## 应用场景
-通过自定义域名用户可以解决以下问题：
-
-1.用户A拥有一个域名为abc.com的网站，此时需要将对网站中图片的请求迁移到OSS，并且不想修改任何网页的代码，即对外链接不变。此时可使用CNAME功能。
-
-2.避免业务中可能涉及的跨域或者安全问题。
-
-3.用户不希望展示oss域名，希望使用自己的域名。
-
-
-
-## 前提条件 
-开通京东云对象存储并且未欠费用户
-
 
 ## 新增自定义域名过程
 ### 操作步骤：
@@ -35,13 +21,4 @@ API网关提供基于 API分组的域名绑定。API网关通过域名来定位�
 
 
 
-## 绑定过程 
-### 操作步骤：
-#### STEP1:找到需要进行绑定域名的分组：
-![APIgroup列表页](https://github.com/jdcloudcom/cn/blob/edit/image/Internet-Middleware/API-Gateway/apigroup-rp-apigroup-list.png)
-
-#### STEP2:绑定域名
-点击该分组行的操作 **绑定域名**，选择需要映射的域名并进行绑定。如果没有可用域名，可在自定义域名页面中新增自定义域名，然后再来绑定域名。
-
-![绑定域名](https://github.com/jdcloudcom/cn/blob/edit/image/Internet-Middleware/API-Gateway/apigroup-bdym.png)
 

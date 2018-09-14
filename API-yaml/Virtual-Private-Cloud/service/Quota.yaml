@@ -14,7 +14,6 @@ paths:
      get:
        summary: "查询配额信息"
        description: "查询配额信息"
-       x-jdcloud-internal: true
        operationId: DescribeQuota
 
        parameters:

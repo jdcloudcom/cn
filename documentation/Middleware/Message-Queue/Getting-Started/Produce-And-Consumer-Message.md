@@ -48,7 +48,7 @@
    <version>1.0.1</version>
 </dependency>
 ```
-2. 发送代码部分请参考demo示例：jcq-sdk-demo.zip。
+2. 发送代码部分请参考demo示例：[jcq-sdk-demo.zip](https://github.com/jdcloudcom/cn/blob/MessageQueue/image/Internet-Middleware/Message-Queue/jcq-sdk-demo.zip)。
 
 ### 说明：
 
@@ -56,5 +56,5 @@
 
 2. 服务端在尝试推送消息16次均失败后，消息会进入死信队列，在死信队列保存时间为消息的生命周期3天，超过消息生命周期消息不可恢复、重发。
 
-3. Spring框架下集成消息队列 JCQ，请参考demo示例：jcq-spring-demo.zip。
+3. Spring框架下集成消息队列 JCQ，请参考demo示例：[jcq-spring-demo.zip](https://github.com/jdcloudcom/cn/blob/MessageQueue/image/Internet-Middleware/Message-Queue/jcq-spring-demo.zip)。
 

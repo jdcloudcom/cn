@@ -7,7 +7,7 @@ definitions:
     properties:
       backupName:
         type: string
-        description: 备份名称，最长支持64个英文字符或等长的中文字符
+        description: 备份名称<br>SQL Server：最长支持64个英文字符或等长的中文字符<br>MySQL：只允许数字、小写字母及英文下划线“_”,不超过32字符
       dbNames:
         type: array
         items:

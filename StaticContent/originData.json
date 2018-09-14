@@ -92,14 +92,6 @@
         "url": "https://www.jdcloud.com/service/trustedCenter"
     },
     {
-        "name": "表单页",
-        "url": "https://www.jdcloud.com/news/subscription"
-    },
-    {
-        "name": "成功页",
-        "url": "https://www.jdcloud.com/news/subscriptionSuccess"
-    },
-    {
         "name": "京东云刊",
         "url": "https://www.jdcloud.com/news/journal"
     },
@@ -182,5 +174,13 @@
     {
         "name": "数据报告Forrester",
         "url": "https://www.jdcloud.com/service/forrester"
+    },
+    {
+        "name": "京东云刊8月",
+        "url": "https://www.jdcloud.com/news/journalAugust"
+    },
+    {
+        "name": "优享礼遇成功页",
+        "url": "https://www.jdcloud.com/news/treatmentSuccess"
     }
 ]

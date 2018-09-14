@@ -15,7 +15,6 @@ paths:
       summary: "查询Acl列表"
       description: "查询Acl列表"
       operationId: describeNetworkAcls
-      x-jdcloud-internal: true
       parameters:
         - name: pageNumber
           in: query
@@ -74,7 +73,6 @@ paths:
     post:
       description: "创建networkAcl接口"
       operationId: CreateNetworkAcl
-      x-jdcloud-internal: true
       parameters:
         - name: networkAclSpec
           in: body
@@ -113,7 +111,6 @@ paths:
       summary: "查询networkAcl信息详情"
       description: "查询networkAcl资源详情"
       operationId: describeNetworkAcl
-      x-jdcloud-internal: true
     
       responses:
         200:
@@ -144,7 +141,6 @@ paths:
       summary: "删除networkAcl"
       description: "删除networkAcl接口"
       operationId: deleteNetworkAcl
-      x-jdcloud-internal: true
       responses:
         200:
           description: OK
@@ -163,7 +159,6 @@ paths:
       summary: "修改networkAcl"
       description: "修改networkAcl接口"
       operationId: modifyNetworkAcl
-      x-jdcloud-internal: true
       parameters:
         - name: modifyNetworkAclSpec
           in: body
@@ -193,7 +188,6 @@ paths:
     post:
       description: "给子网绑定networkAcl接口"
       operationId: associateNetworkAcl
-      x-jdcloud-internal: true
       parameters:
         - name: subnetIds
           in: body
@@ -225,7 +219,6 @@ paths:
     post:
       description: "给子网解绑NetworkAcl接口"
       operationId: disassociateNetworkAcl
-      x-jdcloud-internal: true
       parameters:
         - name: subnetId
           in: query
@@ -254,7 +247,6 @@ paths:
     post:
       description: "添加networkAcl规则接口"
       operationId: addNetworkAclRules
-      x-jdcloud-internal: true
       parameters:
         - name: addNetworkAclRulesSpec
           in: body
@@ -286,7 +278,6 @@ paths:
     post:
       description: "移除networkAcl规则"
       operationId: removeNetworkAclRules
-      x-jdcloud-internal: true
       parameters:
         - name: ruleIds
           in: body
@@ -318,7 +309,6 @@ paths:
     post:
       description: "修改networkAcl接口"
       operationId: modifyNetworkAclRules
-      x-jdcloud-internal: true
       parameters:
         - name: modifyNetworkAclRulesSpec
           in: body

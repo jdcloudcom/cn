@@ -1,0 +1,10 @@
+swagger: "2.0"
+definitions:
+  testOpenApiReq:
+    x-jdcloud-module: datastar
+    x-jdcloud-internal: false
+    type: object
+    properties:
+      name:
+        type: string
+        description: 名字

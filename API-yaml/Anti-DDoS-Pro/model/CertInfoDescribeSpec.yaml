@@ -1,0 +1,12 @@
+swagger: "2.0"
+definitions:
+  CertInfoDescribeSpec:
+    type: object
+    x-jdcloud-module: ipanti
+    properties:
+      domain:
+        type: string
+        description: "域名"
+      httpsCertContent:
+        type: string
+        description: "证书内容"

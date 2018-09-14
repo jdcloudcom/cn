@@ -1,14 +1,14 @@
-name: 对象存储 Object Storage Service
+name: 对象存储
 href: 
- items:
+items:
  - name: 产品简介
    items:
       - name: OSS概述
-        href:  Introduction/What-Is-OSS.md.md
+        href: Introduction/Product-Overview.md
       - name: 核心概念
         href: Introduction/Core-Concepts.md
       - name: 产品功能
-        href: Introduction/Functions.md
+        href: Introduction/Features.md
       - name: 限制说明
         href: Introduction/Restrictions.md 
       - name: 应用场景 
@@ -22,21 +22,7 @@ href:
       - name: 价格总览
         href: Pricing/Price-Overview.md
       - name: 查看账单
-        href: Pricing/Check-Bill.md name
- - name: 产品定价
-   items:
-      - name: 开通服务
-        href: Getting-Started/Sign-Up-Service.md
-      - name: 创建存储空间
-        href: Getting-Started/Create-Bucket.md
-      - name: 上传文件
-        href: Getting-Started/Upload-Object.md
-      - name: 分享和下载文件
-        href: Getting-Started/Share-And-Download-Object.md
-      - name: 删除文件
-        href: Getting-Started/Delete-Object.md
-      - name: 删除存储空间
-        href: Getting-Started/Delete-Bucket.md
+        href: Pricing/Check-Bill.md
  - name: 入门指南
    items:
       - name: 开通服务
@@ -112,7 +98,7 @@ href:
                 - name: 文字水印
                   href: Operation-Guide/Image-Service-Guide/Add-Text-Watermarks.md 
                 - name: 获取图片信息
-                  href: Operation-Guide/Image-Service-Guide/Obtein-Image-Information.md
+                  href: Operation-Guide/Image-Service-Guide/Obtain-Image-Information.md
                 - name: 人脸检测
                   href: Operation-Guide/Image-Service-Guide/Face-Recognition.md	
                 - name: 图片鉴黄
@@ -291,5 +277,4 @@ href:
       - name: 回调服务器设置签名认证
         href: Best-Practices/Setting-Signature-Authentication-For-Callback-Server.md        
  - name: 常见问题
-   href:
-    status: 0
+   status: 0

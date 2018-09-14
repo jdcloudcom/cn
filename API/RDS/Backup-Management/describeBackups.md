@@ -2,7 +2,7 @@
 
 
 ## 描述
-查看该RDS实例下所有备份的详细信息，返回的备份列表按照备份开始时间（backupStartTime）降序排列。<br>- 仅支持SQL Server
+查看该RDS实例下所有备份的详细信息，返回的备份列表按照备份开始时间（backupStartTime）降序排列。
 
 ## 请求方式
 GET
@@ -24,7 +24,7 @@ https://rds.jdcloud-api.com/v1/regions/{regionId}/backups
 |**dbNameFilter**|String|False||返回dbName等于指定值的备份列表，不传或为空返回全部<br>**- 测试参数，仅支持SQL Server，后续可能被其他参数取代**|
 |**instanceId**|String|True||RDS实例ID，唯一标识一个实例|
 |**pageNumber**|Integer|True||显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。|
-|**pageSize**|Integer|True||每页显示的数据条数，默认为10，取值范围：[1,100]，只能为10的倍数|
+|**pageSize**|Integer|True||每页显示的数据条数，默认为10，取值范围：10、20、30、50、100|
 
 
 ## 返回参数
@@ -41,7 +41,7 @@ https://rds.jdcloud-api.com/v1/regions/{regionId}/backups
 ### <a name="Backup">Backup</a>
 |名称|类型|描述|
 |---|---|---|
-|**backupEndTime**|String|备份结束时间，格式为：YYYY-MM-DD HH:mm:ss|
+|**backupEndTime**|String|备份结束时间，格式为：YYYY-MM-DD HH:mm:ss<br>- **SQL Server支持**<br>- **MySQL不支持**|
 |**backupFiles**|String[]|备份文件列表<br>- **SQL Server支持**,备份可以有多个文件，文件名的命名规则为:<br>（1）全备：数据库名+.bak<br>（2）增量：数据库名+.diff<br>- **MySQL不支持**|
 |**backupId**|String|备份ID|
 |**backupMode**|String|备份模式，系统自动备份或手动备份，请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)|

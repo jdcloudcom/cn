@@ -1,0 +1,20 @@
+swagger: "2.0"
+definitions:
+  rolePolicy:
+    x-jdcloud-module: iam
+    properties:
+      policyName:
+        type: string
+        description: 权限名称
+      description:
+        type: string
+        description: 描述
+      type:
+        type: string
+        description: 权限类型
+      policyJrn:
+        type: string
+        description: 权限资源描
+
+
+

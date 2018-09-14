@@ -5,4 +5,4 @@ info:
   description: 目前RDS OpenAPI支持云数据库SQL Server，可以通过OpenAPI实现数据库管理，账号管理，备份管理，单库上云等功能，后续将支持云数据库MySQL
 host: "rds.jdcloud-api.com"
 x-jdcloud-version: "v1"
-x-jdcloud-revision: "0.2.9"
+x-jdcloud-revision: "0.3.0"

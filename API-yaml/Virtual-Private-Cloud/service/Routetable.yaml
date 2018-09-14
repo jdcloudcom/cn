@@ -15,7 +15,6 @@ paths:
        summary: "查询路由表列表"
        description: "查询路由表列表"
        operationId: describeRouteTables
-       x-jdcloud-internal: true
        parameters:
          - name: pageNumber
            in: query
@@ -69,7 +68,6 @@ paths:
        summary: "创建路由表"
        description: "创建路由表"
        operationId: createRouteTable
-       x-jdcloud-internal: true
        parameters:
          - name: routeTableSpec
            in: body
@@ -107,7 +105,6 @@ paths:
        summary: 查询路由表信息详情
        description: 查询路由表信息详情
        operationId: describeRouteTable
-       x-jdcloud-internal: true
        responses:
          200:
            description: OK
@@ -132,7 +129,6 @@ paths:
        summary: 修改路由表属性
        description: 修改路由表属性
        operationId: modifyRouteTable
-       x-jdcloud-internal: true
        parameters:
          - name: modifyRouteTableSpec
            in: body
@@ -159,7 +155,6 @@ paths:
          summary: 删除路由表
          description: 删除路由表
          operationId: deleteRouteTable
-         x-jdcloud-internal: true
          responses:
            200:
              description: OK
@@ -181,7 +176,6 @@ paths:
       summary: "添加路由表规则"
       description: "添加路由表规则"
       operationId: addRouteTableRules
-      x-jdcloud-internal: true
       parameters:
         - name: addRouteTableRulesSpec
           in: body
@@ -213,7 +207,6 @@ paths:
       summary: "移除路由表规则"
       description: "移除路由表规则"
       operationId: removeRouteTableRules
-      x-jdcloud-internal: true
       parameters:
         - in: body
           name: ruleIds
@@ -246,7 +239,6 @@ paths:
       summary: "修改路由表规则"
       description: "修改路由表规则"
       operationId: modifyRouteTableRules
-      x-jdcloud-internal: true
       parameters:
         - name: modifyRouteTableRulesSpec
           in: body
@@ -274,7 +266,6 @@ paths:
      post:
        description: "路由表绑定子网接口"
        operationId: associateRouteTable
-       x-jdcloud-internal: true
        parameters:
          - name: associateRouteTableSpec
            in: body
@@ -300,7 +291,6 @@ paths:
      post:
        description: "给路由表解绑子网接口"
        operationId: disassociateRouteTable
-       x-jdcloud-internal: true
        parameters:
          - name: disassociateRouteTableSpec
            in: body

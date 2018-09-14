@@ -6,4 +6,4 @@ info:
 host: "vpc.jdcloud-api.com"
 #host: "openapi.jvpc.jcloud.com"
 x-jdcloud-version: "v1"
-x-jdcloud-revision: "0.4.1"
+x-jdcloud-revision: "0.5.0"

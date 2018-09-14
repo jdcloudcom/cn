@@ -1,0 +1,274 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: 角色管理接口
+  description: 角色管理接口
+
+paths:
+  "/role":
+    ###################### 创建角色 ######################
+    post:
+      description: "创建角色"
+      operationId: createRole
+      x-jdcloud-internal: false
+      parameters:
+        - name: createRoleInfo
+          in: body
+          description: 角色信息
+          required: true
+          schema:
+            $ref: "../model/CreateRoleInfo.yaml#/definitions/createRoleInfo"
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              requestId:
+                type: string
+              roleInfo:
+                 $ref: "../model/RoleInfo.yaml#/definitions/roleInfo"
+                 description: 角色信息
+
+  "/role/{roleName}":
+   ###################### 修改角色 ######################
+    put:
+      description: "修改角色基本信息"
+      operationId: updateRole
+      x-jdcloud-internal: false
+      parameters:
+        - name: updateRoleInfo
+          in: body
+          description: 角色信息
+          required: true
+          schema:
+            $ref: "../model/UpdateRoleInfo.yaml#/definitions/updateRoleInfo"
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              requestId:
+                type: string
+
+   ###################### 查询角色详情 ######################
+    get:
+      description: "查询角色详情"
+      operationId: describeRole
+      x-jdcloud-internal: false
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                properties:
+                  roleInfo:
+                    $ref: "../model/RoleInfo.yaml#/definitions/roleInfo"
+                    description: 角色信息
+              requestId:
+                type: string
+
+    ###################### 删除角色 ######################
+    delete:
+      description: "删除角色"
+      operationId: deleteRole
+      x-jdcloud-internal: false
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              requestId:
+                type: string
+
+  "/role/{roleName}/assumeRolePolicy":
+   ###################### 修改角色内置policy ######################
+    put:
+      description: "修改角色内置policy"
+      operationId: updateAssumeRolePolicy
+      x-jdcloud-internal: false
+      parameters:
+        - name: updateAssumeRolePolicyInfo
+          in: body
+          description: 角色权限信息
+          required: true
+          schema:
+            $ref: "../model/UpdateAssumeRolePolicyInfo.yaml#/definitions/updateAssumeRolePolicyInfo"
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              requestId:
+                type: string
+
+  "/roles":
+   ###################### 查询角色列表 ######################
+    get:
+      description: "查询角色列表"
+      operationId: describeRoles
+      x-jdcloud-internal: false
+      parameters:
+        - name: pageNumber
+          in: query
+          type: integer
+          description: 页码
+          required: true
+        - name: pageSize
+          in: query
+          type: integer
+          description: 每页显示数目
+          required: true
+        - name: pathPrefix
+          in: query
+          type: string
+          description: path前缀
+          required: false
+        - name: roleNamePrefix
+          in: query
+          type: string
+          description: 角色名称前缀
+          required: false
+        - name: sort
+          in: query
+          type: integer
+          description: 排序策略,0-按创建时间顺序排序  1-按创建时间倒序
+          required: true
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                properties:
+                  total:
+                    type: integer
+                    description: 总数
+                  roles:
+                    type: array
+                    items:
+                      $ref: "../model/ListRoleInfo.yaml#/definitions/listRoleInfo"
+                    description: 角色列表
+              requestId:
+                type: string
+
+  "/role/{roleName}/policy:attachRolePolicy":
+   ###################### 为角色绑定策略 ######################
+    post:
+      description: "为角色绑定策略"
+      operationId: attachRolePolicy
+      x-jdcloud-internal: false
+      parameters:
+        - name: attachRolePolicyInfo
+          in: body
+          description: 角色绑定策略信息
+          required: true
+          schema:
+            properties:
+              policyJrn:
+                type: string
+                description: 策略jrn
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              requestId:
+                type: string
+
+  "/role/{roleName}/policies":
+   ###################### 查询角色授权策略列表 ######################
+    get:
+      description: "查询角色授权策略列表"
+      operationId: describeRolePolicies
+      x-jdcloud-internal: false
+      parameters:
+        - name: pageNumber
+          type: integer
+          in: query
+          description: 页码
+          required: true
+        - name: pageSize
+          type: integer
+          in: query
+          description: 每页显示数目
+          required: true
+        - name: keyword
+          type: string
+          in: query
+          description: 关键字
+          required: false
+        - name: sort
+          type: integer
+          in: query
+          description: 排序策略,0-按创建时间顺序排序  1-按创建时间倒序
+          required: true
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                properties:
+                  total:
+                    type: integer
+                    description: 总数
+                  policies:
+                    type: array
+                    items:
+                      $ref: "../model/RolePolicy.yaml#/definitions/rolePolicy"
+                    description: 角色授权列表
+
+              requestId:
+                type: string
+
+
+  "/role/{roleName}/policy:detachRolePolicy":
+   ###################### 为角色解绑策略 ######################
+    post:
+      description: "为角色绑定策略"
+      operationId: detachRolePolicy
+      x-jdcloud-internal: false
+      parameters:
+        - name: detachRolePolicyInfo
+          in: body
+          description: 角色绑定策略信息
+          required: true
+          schema:
+            properties:
+              policyJrn:
+                type: string
+                description: 策略jrn
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              requestId:
+                type: string
+
+
+
+#路径通用参数
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: Region ID
+  roleName:
+    name: roleName
+    in: path
+    required: true
+    type: string
+    description: 角色名称

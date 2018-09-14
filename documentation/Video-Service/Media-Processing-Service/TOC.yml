@@ -4,9 +4,9 @@ href:
  - name: 产品简介
    items:
       - name: 产品概述
-        href: Introduction/Overview.md
+        href: Introduction/Product-Overview.md
       - name: 功能概览
-        href: Introduction/Functions.md  
+        href: Introduction/Features.md  
  - name: 快速入门
    items:
       - name: 使用限制
@@ -22,9 +22,9 @@ href:
       - name:  视频转码
         items:
            - name: 转码基本规则
-             href: Operation-Guide/Video-Transcoding/Create-Video-Transcoding.md
+             href: Operation-Guide/Video-Transcoding/Transcoding-Rules.md
            - name: 创建视频转码工作流
-             href: Operation-Guide/Video-Transcoding/Transcoding-Rules.md 	  
+             href: Operation-Guide/Video-Transcoding/Create-Video-Transcoding.md 	  
       - name: 视频截图
         href:  Operation-Guide/Video-Snapshot.md
       - name: 回调设置

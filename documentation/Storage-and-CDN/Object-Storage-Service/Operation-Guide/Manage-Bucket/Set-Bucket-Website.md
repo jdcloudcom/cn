@@ -20,7 +20,7 @@
 
 ## 控制台相关操作：
 
-1. 登入控制台->云存储->空间管理->进入某个Bucket->空间设置，点击“静态网站托管”：
+1. 登入控制台->对象存储->空间管理->进入某个Bucket->空间设置，点击“静态网站托管”：
 
 ![静态网站托管](https://github.com/jdcloudcom/cn/blob/edit/image/Object-Storage-Service/OSS-040.png)
 

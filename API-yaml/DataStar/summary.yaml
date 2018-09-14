@@ -1,0 +1,8 @@
+swagger: "2.0"                                  # 基于Swagger 2.0版本实现
+info:
+  version: "v1"                                 # OpenApi版本号
+  title: 知客相关API
+  description: 知客相关API
+host: "datastar.cn-south-1.jdcloud-api.com"     # 业务线名称作为二级域名
+x-jdcloud-version: "v1"
+x-jdcloud-revision: 1.0.1  #需要和ChangeLog保持一致

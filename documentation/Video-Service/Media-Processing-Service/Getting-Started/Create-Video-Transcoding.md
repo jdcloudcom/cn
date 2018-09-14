@@ -12,7 +12,7 @@
 
 ![](https://github.com/jdcloudcom/cn/blob/edit/image/Media-Processing-Service/MPS-003.png)
 
-注：目前支持的视频转码处理规则，参见 [视频处理服务帮助中心 >> 视频转码  >> 视频处理规则](http://www.jdcloud.com/help/detail/3041/isCatalog/1)
+注：目前支持的视频转码处理规则，参见 [视频处理服务帮助中心 >> 视频转码  >> 视频处理规则](../Operation-Guide/Video-Transcoding/Transcoding-Rules.md)
 
 4.查看转码任务及状态
 

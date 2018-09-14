@@ -19,12 +19,12 @@
     </tr>
 	<tr>   
 		<td >计算效能型Ⅰ</td>
-		<td >cps.c.perfⅠ</td>
+		<td >cps.c.perf1</td>
 		<td >7000</td>
     </tr>
 	<tr>   
 		<td >计算效能型Ⅱ</td>
-		<td >cps.c.perfⅡ</td>
+		<td >cps.c.perf2</td>
 		<td >9000</td>
     </tr>
 	<tr>   

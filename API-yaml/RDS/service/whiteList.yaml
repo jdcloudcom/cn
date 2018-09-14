@@ -9,7 +9,7 @@ paths:
     put:
       description: 修改允许访问实例的IP白名单。白名单是允许访问当前实例的IP/IP段列表，缺省情况下，白名单对本VPC开放。如果用户开启了外网访问的功能，还需要对外网的IP配置白名单。
       operationId: modifyWhiteList
-      x-jdcloud-internal: true
+      #x-jdcloud-internal: true
       parameters:
         - name: ips
           required: true

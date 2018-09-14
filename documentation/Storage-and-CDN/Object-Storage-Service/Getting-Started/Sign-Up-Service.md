@@ -12,10 +12,9 @@
 
 3.点击去实名认证，完成认证后将出现开通对象存储服务界面。如下图：
 
-![开通对象存储服务](https://github.com/jdcloudcom/cn/blob/edit/image/Object-Storage-Service/OSS-007.png)
-
-4. 勾选上“我已阅读并同意《云存储服务条款》”并点击确认开通，则开通对象存储服务成功，开通成功后会直接进入对象存储控制台的概览页。
+4. 勾选上“我已阅读并同意《对象存储服务条款》”并点击确认开通，则开通对象存储服务成功，开通成功后会直接进入对象存储控制台的概览页。
 
 ![开通成功](https://github.com/jdcloudcom/cn/blob/edit/image/Object-Storage-Service/OSS-008.png)
 
 注意：在对象存储服务开通成功后，系统不会为用户自动创建AccessKey和AccessKeySecret，需要用户到个人中心的AccessKey管理处手动创建。
+![开通成功](https://github.com/jdcloudcom/cn/blob/edit/image/Object-Storage-Service/OSS-024.png)

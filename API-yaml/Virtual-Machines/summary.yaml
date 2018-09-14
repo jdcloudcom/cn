@@ -1,0 +1,8 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: 云主机
+  description: 云主机实例、镜像、实例规格、实例模板、配额相关的接口
+host: "vm.jdcloud-api.com"
+x-jdcloud-version: "v1"
+x-jdcloud-revision: "1.0.4"

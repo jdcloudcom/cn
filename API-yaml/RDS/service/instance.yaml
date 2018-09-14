@@ -80,7 +80,7 @@ paths:
                     $ref: ../model/DBInstanceAttribute.yaml#/definitions/DBInstanceAttribute
   "/instances/{instanceId}:getBackupPolicy":  #备份策略
     post:
-      description: 查看RDS实例备份策略。根据数据库类型的不同，支持的备份策略也略有差异，具体请看返回参数中的详细说明<br>- 仅支持SQL Server
+      description: 查看RDS实例备份策略。根据数据库类型的不同，支持的备份策略也略有差异，具体请看返回参数中的详细说明
       operationId: getBackupPolicy
       #x-jdcloud-internal: true
       responses:
@@ -106,7 +106,7 @@ paths:
     post:
       description: 修改RDS实例备份策略，目前仅支持用户修改“自动备份开始时间窗口”这个参数，其他参数暂不开放修改
       operationId: setBackupPolicy
-      x-jdcloud-internal: true
+      #x-jdcloud-internal: true
       parameters:
         - name: setBackupPolicy
           in: body
@@ -116,7 +116,7 @@ paths:
             properties:
               startWindow:
                 type: string
-                description: 自动备份开始时间窗口，范围00:00-23:59，时间范围差不得小于30分钟。<br>例如：00:00-01:00，表示0点到1点开始进行数据库自动备份，备份完成时间则跟实例大小有关，不一定在这个时间范围中
+                description: 自动备份开始时间窗口,例如：00:00-01:00，表示0点到1点开始进行数据库自动备份，备份完成时间则跟实例大小有关，不一定在这个时间范围中<br>SQL Server:范围00:00-23:59，时间范围差不得小于30分钟。<br>MySQL,只能是以下取值:<br>00:00-01:00<br>01:00-02:00<br>......<br>23:00-24:00
       responses:
         200:
           description: OK
@@ -201,7 +201,6 @@ paths:
     post:
       description: 根据源实例全量备份创建一个新实例，新实例的数据跟源实例在创建备份时的数据状态一样。<br>例如根据源实例A的一个全量备份“mybak”新建一个实例B，该备份是在“‘2018-8-18 03:23:54”创建的。那么新建实例B的数据状态跟实例A‘2018-8-18 03:23:54’的状态一致<br>- 仅支持MySQL
       operationId: createInstanceFromBackup
-      x-jdcloud-internal: true
       parameters:
         - name: backupId
           required: true
@@ -228,6 +227,99 @@ paths:
                 properties:
                   instanceId:
                     type: string
+  "/instances/{instanceId}:modifyInstanceSpec":    #修改实例配置
+    post:
+      description: 实例扩容，支持升级实例的CPU，内存及磁盘。目前暂不支持实例降配<br>- 仅支持MySQL
+      operationId: modifyInstanceSpec
+      parameters:
+        - name: newInstanceClass
+          required: true
+          in: query
+          type: string
+          description: 扩容后实例规格
+        - name: newInstanceStorageGB
+          required: true
+          in: query
+          type: integer
+          description: 扩容后实例磁盘大小
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  orderId:
+                    type: string
+                    description: 生成的订单号
+  "/instances/{instanceId}:createInstanceByTime":    #根据时间点创建实例
+    post:
+      description: 根据源实例备份创建一个新实例，并通过追加日志的方式，将新实例的数据恢复到跟源实例指定时间点的数据状态一样。<br>例如根据实例A在“2018-06-18 23:00:00”时间点创建一个实例B，就是新建一个实例B，该实例B的数据跟实例A在“2018-06-18 23:00:00”这个时间点的数据完全一致。<br>对于SQL Server，主备切换后30分钟内，不支持按时间点恢复/创建，例如在10:05分用户进行了主备切换，那么10:05 ~ 10:35这个时间段不能进行按时间点恢复/创建。<br>- 仅支持MySQL
+      operationId: createInstanceByTime
+      parameters:
+        - name: restoreTime
+          required: true
+          in: query
+          type: string
+          description: 根据源实例的哪个时间点创建新实例
+        - name: instanceSpec
+          required: true
+          in: body
+          description: 新建实例规格
+          schema:
+            $ref: "../model/RestoredNewDBInstanceSpec.yaml#/definitions/RestoredNewDBInstanceSpec"
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  instanceId:
+                    type: string
+                    description: 新创建的实例ID
+  "/instances/{instanceId}:createROInstance":    #创建只读实例
+    post:
+      description: 创建MySQL的只读实例<br>- 仅支持MySQL
+      operationId: createROInstance
+      x-jdcloud-internal: true
+      parameters:
+        - name: azId
+          required: true
+          in: query
+          type: string
+          description: 可用区ID
+        - name: instanceClass
+          required: true
+          in: query
+          type: string
+          description: 只读实例规格FlavorId
+        - name: instanceStorageGB
+          required: true
+          in: query
+          type: integer
+          description: 磁盘空间
+        - name: count
+          required: false
+          in: query
+          type: integer
+          description: 创建只读实例的数目,缺省为1
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  roInstanceId:
+                    type: array
+                    description: 新创建的只读实例ID的列表
+                    items:
+                      type: string
+                      description: 新创建的只读实例ID
+                  orderId:
+                    type: string
+                    description: 订单ID
 #路径通用参数
 parameters:
   regionId:

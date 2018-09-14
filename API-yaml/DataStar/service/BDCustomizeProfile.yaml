@@ -1,0 +1,61 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: 画像单标签输出接口
+  description: 画像单标签输出接口
+
+basePath: /regions/{regionId}/profile
+
+paths:
+  "/getProfile":
+    ###################### 画像单标签输出接口 根据deviceId查询对应用户的画像信息######################
+        get:
+              description: 根据deviceId查询对应用户的画像信息
+              operationId: getProfile
+              x-jdcloud-internal: false
+              parameters:
+                - name: id
+                  in: query
+                  required: true
+                  type: string
+                  description: deviceId，mobile等,多个id英文逗号分隔
+                - name: type
+                  in: query
+                  required: true
+                  type: string
+                  description: 数据类型,只能查询一种类型，支持类型：mobile、idfa、imei、md5_idfa、md5_imei
+                - name: labelCode
+                  in: query
+                  required: true
+                  type: string
+                  description: 画像标签编号,多个画像标签英文逗号分隔
+              responses:
+                200:
+                  description: OK
+                  schema:
+                    properties:
+                      result:
+                        properties:
+                          status:
+                            type: boolean
+                            description: true为成功，false为失败
+                          message:
+                            type: string
+                            description: 描述信息
+                          data:
+                            type: string
+                            description: Map<String, Map<String,String>>序列化后的字符串，需要再次转换并使用。Key为对应的deviceId，value为对应的画像标签内容,value内map的key为画像的标签code，value为画像对应的值
+                      requestId:
+                        type: string
+                        description: 请求ID，每次请求都不一样
+                500:
+                  description: "Internal server error"
+
+#路径通用参数
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: 地域ID

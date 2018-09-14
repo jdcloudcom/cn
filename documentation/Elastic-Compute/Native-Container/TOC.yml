@@ -4,27 +4,27 @@
   - name: 产品简介
     items:
       - name: 原生容器概述
-        href: Introduction/What-Is-NativeContainer.md
+        href: Introduction/Product-Overview.md
       - name: 核心概念
         href: Introduction/Core-Concepts.md
       - name: 产品优势
-        href: Introduction/Advantages.md
+        href: Introduction/Benefits.md
       - name: 产品功能
-        href: Introduction/Functions.md
+        href: Introduction/Features.md
       - name: 限制说明
-        href: Introduction/Limits.md
+        href: Introduction/Restrictions.md
       - name: 应用场景 
-        href: Introduction/Scenarios.md
+        href: Introduction/Application-Scenarios.md
       - name: 与云主机对比
         href: Introduction/Comparison.md
   - name: 产品定价
     items:
       - name: 计费概述
-        href: Pricing/Overview.md
+        href: Pricing/Billing-Overview.md
       - name: 计费规则
         href: Pricing/Billing-Rules.md
       - name: 价格总览
-        href: Pricing/Pricing.md
+        href: Pricing/Price-Overview.md
       - name: 购买流程
         href: Pricing/Purchase-Process.md
       - name: 续费流程
@@ -32,7 +32,7 @@
   - name: 入门指南
     items:
       - name: 入门指南概述
-        href: Getting-Started/Overview.md
+        href: Getting-Started/Guide-Overview.md
       - name: 制作容器镜像
         href: Getting-Started/Create-Images.md
       - name: 创建容器实例
@@ -42,7 +42,7 @@
       - name: 容器实例
         items:
           - name: 容器实例概述
-            href: Operation-Guide/Instance/Overview.md
+            href: Operation-Guide/Instance/Container-Instance-Overview.md
           - name: 实例配置推荐
             href: Operation-Guide/Instance/Recommend-Instance.md
           - name: 实例生命周期

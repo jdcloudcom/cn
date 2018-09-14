@@ -22,7 +22,7 @@ definitions:
         description: 备份开始时间，格式为：YYYY-MM-DD HH:mm:ss
       backupEndTime:
         type: string
-        description: 备份结束时间，格式为：YYYY-MM-DD HH:mm:ss
+        description: 备份结束时间，格式为：YYYY-MM-DD HH:mm:ss<br>- **SQL Server支持**<br>- **MySQL不支持**
       backupType:
         type: string
         description: 备份类型，全量备份或增量备份，请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)<br>- **SQL Server支持**<br>- **MySQL不支持**

@@ -1,0 +1,94 @@
+  name: 分布式数据库 TiDB
+  href:
+  items:
+  - name: 产品简介
+    items:
+    - name: 产品概述
+      herf: Introduction/Product-Overview.md
+    - name: 核心概念
+      herf: Introduction/Core-Concepts.md
+    - name: 基础架构
+      herf: Introduction/Basic-Infrastructure.md
+    - name: 产品优势
+      herf: Introduction/Benefits.md
+    - name: 产品功能
+      herf: Introduction/Features.md
+    - name: 产品规格
+      herf: Introduction/Specifications.md
+    - name: 限制说明
+      herf: Introduction/Restrictions.md
+    - name: 应用场景
+      herf: Introduction/Application-Scenarios.md
+
+  - name: 入门指南
+    items:
+    - name: 创建实例
+      herf: Getting-Started/Product-Introduction/
+    - name: 连接实例
+      herf: Getting-Started/Connect-Instance.md
+    - name: 监控实例
+      herf: Getting-Started/Monitor.md
+
+  - name: 操作指南
+    items:
+    - name: 实例管理
+      items:
+      - name: 创建实例
+        herf: Operation-Guide/Instance/Create-Instance.md
+      - name: 删除实例
+        herf: Operation-Guide/Instance/Delete-Instance.md
+      - name: 连接实例
+        herf: Operation-Guide/Instance/Connect-Instance.md
+
+    - name: 节点管理
+      herf: Operation-Guide/Node-Management.md
+    - name: 重置密码
+      herf: Operation-Guide/Reset-Password.md
+    - name: 监控实例
+      herf: Operation-Guide/Monitor.md
+
+  - name: SQL 语法
+    items:
+    - name: 数据处理相关SQL
+      herf: SQL-Syntax/Data-SQL.md
+    - name: 数据库相关SQL
+      herf: SQL-Syntax/Database-SQL.md
+    - name: 表相关SQL
+      herf: SQL-Syntax/Table-SQL.md
+    - name: 索引相关SQL
+      herf: SQL-Syntax/Index-SQL.md
+    - name: 用户相关SQL
+      herf: SQL-Syntax/User-SQL.md
+
+  - name: 最佳实践
+    items:
+    - name: 大数据量处理
+      herf: Best-Practices/Data-Operation.md
+    - name: 参数优化
+      herf: Best-Practices/Parameters-Optimization.md
+    - name: 高效使用 Secondary Index
+      herf: Best-Practices/Secondary-Index.md
+
+  - name: 常见问题
+    herf: FAQ/FAQ.md
+
+  - name: API参考
+    herf:
+  - name: SDK参考
+    herf:
+  - name: 相关资源
+    items:
+    - name: 文档历史记录
+      herf: Related-Resources/Document-History.md
+    - name: 服务条款
+      herf: Related-Resources/Service-Terms.md
+      status: 0
+    - name: SLA
+      herf: Related-Resources/SLA.md
+      status: 0
+    - name: 备案
+      herf: Related-Resources/Filing.md
+      status: 0
+    - name: 词汇表
+      herf: Related-Resources/Glossary.md
+      status: 0
