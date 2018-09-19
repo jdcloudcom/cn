@@ -75,10 +75,10 @@ items:
           href: Operation-Guide/custom-monitoring/view-alarm-history-CustomMetric.md
 - name: 最佳实践
   items:
-      - name: 批量资源监控
-        href: Best-Practices/bulk-resource-monitoring.md
-      - name: 日常业务监控
-        href: Best-Practices/business-monitoring.md
+    - name: 批量资源监控
+      href: Best-Practices/bulk-resource-monitoring.md
+    - name: 日常业务监控
+      href: Best-Practices/daily-business-monitoring.md
 - name: 教程
   items:
   status: 0
