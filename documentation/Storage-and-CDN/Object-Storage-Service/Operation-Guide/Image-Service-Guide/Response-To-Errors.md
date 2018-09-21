@@ -29,12 +29,12 @@ requestId：用以标识错误请求的唯一UUID，在无法解决问题时候�
 |AccessDenied|Access Denied|服务器拒绝请求|403|
 |MethodNotAllowed|The specified method is not allowed against this resource.|MethodNotAllowed|405|
 |InternalError|We encountered an internal error. Please try again.|服务器内部错误|500|
-||unknown error|未知错误|400|
-||wrong request para|请求参数错误|400|
-||wong rocessing mode|处理模式错误|400|
-||can't decode image|无法解码图片|400|
-||processing error|理解错误|400|
-||can't get response json|无法得到结果json|400|
-||can't encode image|无法编码图片|400|
-||can't copy image|无法复制图片|400|
-||release error|清除资源错误|400|
+| — |unknown error|未知错误|400|
+| — |wrong request para|请求参数错误|400|
+| — |wong rocessing mode|处理模式错误|400|
+| — |can't decode image|无法解码图片|400|
+| — |processing error|理解错误|400|
+| — |can't get response json|无法得到结果json|400|
+| — |can't encode image|无法编码图片|400|
+| — |can't copy image|无法复制图片|400|
+| — |release error|清除资源错误|400|

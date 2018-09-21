@@ -1,0 +1,56 @@
+# 命令支持
+## 文本命令
+
+支持的文本命令项|
+---|
+get|
+set|
+add|
+replace|
+delete|
+incr|
+decr|
+quit|
+flush_all|
+version|
+append |
+prepend|
+touch|
+cas|
+gat|
+gats|
+## 二进制
+
+操作命令|操作码
+---|:--
+Get|0x00
+Set|0x01
+Add|0x02
+Replace|0x03
+Delete|0x04
+Incr|0x05
+Decr|0x06
+Quit|0x07
+flush_all|0x08
+GetQ|0x09
+No-op|0x0a
+Version|0x0b
+GetK|0x0c
+GetKQ|0x0ed
+Append|0x0e
+Prepend|0x0f
+SetQ|0x11
+AddQ|0x12
+ReplaceQ|0x13
+DeleteQ|0x14
+IncrementQ|0x15
+DecrementQ|0x16
+QuitQ|0x17
+FlushQ|0x18
+AppendQ|0x19
+PrependQ|0x1a
+Touch|0x1c
+SASL list mechs|0x20
+SASL Auth|0x21
+SASL Step|0x22
+

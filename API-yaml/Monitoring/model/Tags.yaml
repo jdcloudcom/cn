@@ -1,0 +1,17 @@
+swagger: "2.0"
+definitions:
+  tagFilter:
+    type: object
+    x-jdcloud-module: monitor
+    required:
+      - key
+      - values
+    properties:
+      key:
+        description: Tag键
+        type: string
+      values:
+        description: Tag值
+        type: array
+        items:
+          type: string

@@ -1,0 +1,13 @@
+swagger: "2.0"
+definitions:
+  baseProductRegionVo:
+    x-jdcloud-module: iam
+    properties:
+      serviceCode:
+        type: string
+        description: 产品编码
+      regionAzVos:
+        type: array
+        items:
+          $ref: "./RegionAzVo.yaml#/definitions/regionAzVo"
+        description: az信息

@@ -1,0 +1,36 @@
+swagger: "2.0"
+definitions:
+  roleInfo:
+    x-jdcloud-module: iam
+    properties:
+      path:
+        type: string
+        description: 角色路径
+      roleId:
+        type: string
+        description: 角色ID
+      roleName:
+        type: string
+        description: 角色名称
+      assumeRolePolicyDocument:
+        type: string
+        description: 角色代入policy
+      description:
+        type: string
+        description: 描述，0~256个字符
+      maxSessionDuration:
+        type: integer
+        description: 最大会话时长3600~43200秒，默认3600秒
+      jrn:
+        type: string
+        description: 资源描述
+      createTime:
+        type: string
+        description: 创建角色的时间
+      account:
+        type: string
+        description: 角色所属主账号
+
+
+
+

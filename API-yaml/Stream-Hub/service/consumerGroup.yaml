@@ -1,0 +1,109 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: ConsumerGroup相关 API
+  description: 流数据总线ConsumerGroup相关信息接口
+basePath: '/regions/{regionId}'
+paths:
+#######查看指定主题的所有消费组################
+  /consumerGroupList:
+    get:
+      description: 查看指定主题的所有消费组
+      operationId: getConsumerGroupList
+      parameters:
+        - name: topicId
+          type: integer
+          in: query
+          description: 主题id
+          required: true
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              requestId:
+                type: string
+              result:
+                properties:
+                  consumerGroup:
+                    type: array
+                    items:
+                      type: object
+                      $ref: "../model/consumerGroupList.yaml#/definitions/consumerGroup"
+        400:
+            description: UNAUTHENTICATED   
+###################创建consumerGroupName##############################
+  /consumerGroup:
+    post:
+      description: 创建consumerGroupName
+      operationId: createConsumerGroup
+      parameters:
+        - name: consumerGroupStr
+          in: body
+          description: 消费组对象
+          schema:
+            $ref: "../model/consumerGroupList.yaml#/definitions/consumerGroup"
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                properties:
+                  message:
+                    type: string
+                  status:
+                    type: boolean
+              requestId:
+                type: string
+        '400':
+          description: UNAUTHENTICATED
+        '401':
+          description: STREAMHUB_UNAUTHENTICATED
+###################删除consumerGroupName##############################
+    delete:
+      description: 删除consumerGroupName
+      operationId: deleteConsumerGroup
+      parameters:
+        - name: topicId
+          type: integer
+          format: int64
+          in: query
+          description: 主题ID
+          required: true
+        - name: consumerGroupId
+          in: query
+          type: integer
+          format: int64
+          description: 消费组ID
+          required: true
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                properties:
+                  message:
+                    type: string
+                  status:
+                    type: boolean
+              requestId:
+                type: string
+        '400':
+          description: UNAUTHENTICATED
+        '401':
+          description: STREAMHUB_UNAUTHENTICATED
+
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: Region ID
+
+

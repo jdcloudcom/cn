@@ -1,0 +1,14 @@
+swagger: "2.0"
+definitions:
+  azSaleStatusVo:
+    x-jdcloud-module: iam
+    properties:
+      az:
+        type: string
+        description:
+      canSale:
+        type: integer
+        description: 是否售罄 (0未售罄 1售罄)
+      visible:
+        type: integer
+        description: 是否可见(1可见 0不可见)

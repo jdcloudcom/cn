@@ -1,0 +1,132 @@
+swagger: '2.0'
+info:
+  version: v1
+  title: storage相关 API
+  description: 流计算storage相关信息接口
+basePath: '/regions/{regionId}'
+paths:
+#######创建或者更新storage################
+  /storage:
+    post:
+      description: 创建或者更新storage
+      operationId: addOrUpdateStorage
+      parameters:
+        - name: storageStr
+          in: body
+          description: 创建或者更新storage的详情
+          required: true
+          schema:
+            $ref: "../model/storageInfo.yaml#/definitions/storage"
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                properties:
+                  message:
+                    type: string
+                  status:
+                    type: boolean
+              requestId:
+                type: string
+        '400':
+          description: UNAUTHENTICATED
+        '404':
+          description: NOT_FOUND
+        '500':
+          description: INTERNAL_ERROR
+#######删除指定输入################
+    delete:
+      description: 删除指定输入
+      operationId: deleteStorage
+      parameters:
+        - name: storageId
+          in: query
+          description: storageId
+          required: true
+          type: integer  
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                properties:
+                  message:
+                    type: string
+              requestId:
+                type: string
+        '401':
+          description: UNAUTHENTICATED
+        '500':
+          description: internal error
+#######删除指定输入################
+    get:
+      description: 查询指定输入
+      operationId: describeStorage
+      parameters:
+        - name: storageId
+          in: query
+          description: storageId
+          required: true
+          type: integer  
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                properties:
+                  data:
+                    type: object
+                    $ref: "../model/storageInfo.yaml#/definitions/storage"
+              requestId:
+                type: string
+        '401':
+          description: UNAUTHENTICATED
+        '500':
+          description: internal error
+#######查看指定应用下所有的输入################
+  /storageList:
+    get:
+      description: 创建或者更新storage
+      operationId: getStorageList
+      parameters:
+        - name: storageType
+          in: query
+          description: storage类型
+          required: true
+          type: string
+        - name: namespaceId
+          in: query
+          description: namespaceId
+          required: true
+          type: string  
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                properties:
+                  storageList:
+                    type: array
+                    items:
+                      type: object
+                      $ref: "../model/storageInfo.yaml#/definitions/storage"
+              requestId:
+                type: string
+        '401':
+          description: UNAUTHENTICATED
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: Region ID

@@ -1,0 +1,12 @@
+swagger: "2.0"
+definitions:
+  metricData:
+    x-jdcloud-module: monitor
+    type: object
+    properties:
+      data:
+        type: array
+        items:
+          $ref: './DataPoint.yaml#/definitions/dataPoint'
+      metric:
+        $ref: './Metric.yaml#/definitions/metric'

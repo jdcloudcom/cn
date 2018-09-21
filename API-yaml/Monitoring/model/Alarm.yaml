@@ -1,0 +1,268 @@
+swagger: "2.0"
+definitions:
+  createAlarmBody:
+    ###################### 创建报警 ######################
+    x-jdcloud-module: monitor
+    type: object
+    required:
+    - clientToken
+    - createAlarmSpec
+    properties:
+      clientToken:
+        description: 幂等性校验参数，最长32位，值不变则返回值不会变
+        type: string
+      createAlarmSpec:
+          $ref: '#/definitions/CreateAlarmSpec'
+  CreateAlarmSpec:
+    x-jdcloud-module: monitor
+    description: 创建监控规则
+    type: object
+    required:
+      - serviceCode
+      - metric
+      - resourceIds
+      - period
+      - calculation
+      - operation
+      - threshold
+      - times
+    properties:
+      calculation:
+        description: 统计方法，必须与定义的metric一致，可选值列表：avg,max,sum,min
+        type: string
+      contactGroups:
+        description: 报警规则通知的联系组，必须在控制台上已创建，例如" ['联系组1','联系组2']"
+        type: array
+        items:
+          type: string
+      contactPersons:
+        description: 报警规则通知的联系人，必须在控制台上已创建，例如 [“联系人1”,”联系人2”]
+        type: array
+        items:
+          type: string
+      downSample:
+        description: 取样频次，某些metric支持设置downSample，通过 <a href="https://www.jdcloud.com/help/detail/2791/isCatalog/1">[查询可用创建监控规则的指标列表]</a> 接口可查看。
+        type: string
+      metric:
+        description: 取值请查看 <a href="https://www.jdcloud.com/help/detail/2791/isCatalog/1">[查询可用创建监控规则的指标列表]</a> 接口 的metric字段
+        type: string
+      noticePeriod:
+        description: 通知周期 单位：小时
+        type: integer
+      operation:
+        description: 报警比较符，只能为以下几种<=,<,>,>=,==,!=
+        type: string
+      period:
+        description: 统计周期，单位为分钟,目前支持的取值：2，5，15，30，60
+        type: integer
+      resourceIds:
+        description: 报警规则对应实例列表，每次最多100个，例如"['resourceId1','resourceId2']"
+        type: array
+        items:
+          type: string
+      serviceCode:
+        description: 产品名称，取值请查看 <a href="https://www.jdcloud.com/help/detail/2791/isCatalog/1">[查询可用创建监控规则的指标列表]</a> 接口 的serviceCode字段
+        type: string
+      threshold:
+        description: 报警阈值，目前只开放数值类型功能
+        type: number
+        format: double
+      times:
+        description: 持续周期，连续探测几个统计周期都满足阈值条件时报警，可选值:1,2,3,5
+        type: integer
+
+  updateAlarmBody:
+    ###################### 修改报警 ######################  
+    x-jdcloud-module: monitor
+    type: object
+    required:
+      - serviceCode
+      - metric
+      - period
+      - calculation
+      - operation
+      - threshold
+      - times
+    properties:
+      calculation:
+        description: 统计方法：平均值=avg、最大值=max、最小值=min、总和=sum
+        type: string
+      contactGroups:
+        description: 通知的联系组，如 [“联系组1”,”联系组2”]
+        type: array
+        items:
+          type: string
+      contactPersons:
+        description: 通知的联系人，如 [“联系人1”,”联系人2”]
+        type: array
+        items:
+          type: string
+      downSample:
+        description: 取样频次
+        type: string
+      metric:
+        description: 根据产品线查询可用监控项列表 接口 返回的Metric字段
+        type: string
+      noticePeriod:
+        description: 通知周期 单位：小时
+        type: integer
+      operation:
+        description: '>=、>、<、<=、==、!='
+        type: string
+      period:
+        description: 统计周期（单位：分钟），可选值：2,5,15,30,60
+        type: integer
+      serviceCode:
+        description: 产品名称
+        type: string
+      threshold:
+        description: 阈值
+        type: number
+        format: double
+      times:
+        description: 连续多少次后报警，可选值:1,2,3,5
+        type: integer
+
+  alarmHistory:
+    ###################### 报警历史 ######################  
+    x-jdcloud-module: monitor
+    type: object
+    properties:
+      calculation:
+        description: 统计方法：平均值=avg、最大值=max、最小值=min
+        type: string
+      contactGroups:
+        description: 通知的联系组，如 [“联系组1”,”联系组2”]
+        type: array
+        items:
+          type: string
+      contactPersons:
+        description: 通知的联系人，如 [“联系人1”,”联系人2”]
+        type: array
+        items:
+          type: string
+      deleted:
+        description: 该规则是否已经被删除，1表示已经被删除，0表示未删除，被删除的规则，在使用查询规则的接口时，将不会被检索到
+        type: integer
+      enabled:
+        description: 启用禁用 1启用，0禁用
+        type: integer
+      id:
+        description: 规则id
+        type: string
+      metric:
+        description: 监控项
+        type: string
+      metricName:
+        description: 规则id监控项名称
+        type: string
+      noticePeriod:
+        description: 通知周期 单位：小时
+        type: integer
+      noticeTime:
+        description: 报警的时间
+        type: string
+        format: date-time
+      operation:
+        description: '>=、>、<、<=、==、！='
+        type: string
+      period:
+        description: 统计周期（单位：分钟）
+        type: integer
+      region:
+        description: 地域信息
+        type: string
+      resourceId:
+        description: 此规则所应用的资源id
+        type: string
+      serviceCode:
+        description: 报警规则对应的产品
+        type: string
+      tag:
+        description: 监控项附属信息
+        type: string
+      threshold:
+        description: 阈值
+        type: number
+        format: double
+      times:
+        description: 连续多少次后报警
+        type: integer
+      value:
+        description: 报警值
+        type: number
+        format: double
+  
+  alarm:
+    ###################### 报警信息 ######################  
+    x-jdcloud-module: monitor
+    type: object
+    properties:
+      calculation:
+        description: 统计方法：平均值=avg、最大值=max、最小值=min
+        type: string
+      contactGroups:
+        description: 通知的联系组，如 [“联系组1”,”联系组2”]
+        type: array
+        items:
+          type: string
+      contactPersons:
+        description: 通知的联系人，如 [“联系人1”,”联系人2”]
+        type: array
+        items:
+          type: string
+      createTime:
+        description: 创建时间
+        type: string
+        format: date-time
+      enabled:
+        description: 启用禁用 1启用，0禁用
+        type: integer
+      id:
+        description: 规则id
+        type: string
+      metric:
+        description: 监控项
+        type: string
+      metricName:
+        description: 规则id监控项名称
+        type: string
+      noticePeriod:
+        description: 通知周期 单位：小时
+        type: integer
+      noticeTime:
+        description: 报警的时间  , 查询正在报警规则时该字段有效
+        type: string
+        format: date-time
+      operation:
+        description: '>=、>、<、<=、==、！='
+        type: string
+      period:
+        description: 统计周期（单位：分钟）
+        type: integer
+      region:
+        description: 地域信息
+        type: string
+      resourceId:
+        description: 此规则所应用的资源id
+        type: string
+      serviceCode:
+        description: 报警规则对应的产品
+        type: string
+      status:
+        description: 监控项状态:1正常，2告警，4数据不足
+        type: integer
+      tag:
+        description: 监控项附属信息
+        type: string
+      threshold:
+        description: 阈值
+        type: number
+        format: double
+      times:
+        description: 连续多少次后报警
+        type: integer
+      value:
+        description: 报警值 , 查询正在报警规则时该字段有效
+        type: number
+        format: double

@@ -1,0 +1,79 @@
+  name: IP 高防
+  href:
+  items:
+  - name: 产品简介
+    items:
+    - name: 产品概述
+      herf : Introduction/Product-Overview.md
+    - name : 核心概念
+      herf: Introduction/Core-Concepts.md
+    - name: 基础架构
+      herf: Introduction/Basic-Infrastructure.md
+    - name: 产品优势
+      herf: Introduction/Benefits.md
+    - name: 产品功能
+      herf: Introduction/Features.md
+    - name: 产品规格
+      herf: Introduction/Specifications.md
+    - name: 限制说明
+      herf: Introduction/Restrictions.md
+    - name: 应用场景 
+      herf: Introduction/Application-Scenarios.md    
+  - name: 产品定价
+    items:
+    - name: 计费概述
+      herf: Pricing/Billing-Overview.md
+    - name: 计费规则
+      herf: Pricing/Billing-Rules.md
+    - name: 价格总览
+      herf: Pricing/Price-Overview.md
+    - name: 购买流程
+      herf: Pricing/Purchase-Process.md 
+    - name: 续费流程
+      herf: Pricing/Renew-Process.md
+  - name: 入门指南
+    items:
+    - name: 产品概述
+      herf: Getting-Started/Overview.md
+    - name: 创建实例
+      herf: Getting-Started/Create-Instance.md
+    - name: 非网站类转发规则
+      herf: Getting-Started/Non-Web-Service-Forwarding-Rule.md
+    - name: 网站类转发规则
+      herf: Getting-Started/Web-Service-Forwarding-Rule.md
+    - name: 放行回源IP
+      herf: Getting-Started/Whitelist-local-IP-subnet.md
+    - name: 验证配置生效
+      herf: Getting-Started/Verify-Local-Settings.md
+    - name: 更新DNS解析
+      herf: Getting-Started/Update-DNS-Settings.md
+  - name: 操作指南
+    items:
+    - name: 网站类规则设置
+      items:
+        - name: CC防护规则相关配置
+          herf: Operation-Guide/CC-Defense-Related.md
+        - name: URL白名单配置
+          herf: Operation-Guide/URL-Whitelist-Rules-Setting.md
+    - name: 攻击告警设置
+      herf: Operation-Guide/Attack-Alarm-Notification-Settings.md
+    - name: 黑白名单设置
+      herf: Operation-Guide/Blacklist-And-Whitelist-Settings.md
+    - name: 查看安全报表
+      herf: Operation-Guide/View-The-Security-Report.md   
+    - name: 选择合适的转发方式
+      herf: Operation-Guide/Choose-Suitable-Forwarding-Mode.md   
+  - name: 最佳实践
+    items:
+    - name: IP高防结合Web应用防火墙方案说明
+      herf: Best-Practices/Anti-DDoS-Pro-and-WAF.md
+    - name: 本地防护+高防方案说明
+      herf: Best-Practices/Local-Anti-Basic-DDoS-and-Anti-DDoS.md
+    - name: IP高防结合应用安全网关方案说明
+      herf: Best-Practices/Scheme-Instructions.md 
+  - name: 教程
+    status: 0    
+  - name: 常见问题
+    herf: FAQ/FAQ.md
+  - name: 文档历史记录
+    href: Related-Resources/Document-History.md

@@ -1,0 +1,63 @@
+  name: 私有网络
+  href: 
+  items:
+  - name: 接口概览
+    href: overview.md
+  - name: 更新历史
+    href: ChangeLog.md
+  - name: 接口信息
+    items:
+      - name: 弹性公网IP
+        items:
+          - name: createElasticIps
+            href: Elastic-IP/createElasticIps.md
+          - name: deleteElasticIp
+            href: Elastic-IP/deleteElasticIp.md
+          - name: describeElasticIp
+            href: Elastic-IP/describeElasticIp.md
+          - name: describeElasticIps
+            href: Elastic-IP/describeElasticIps.md
+      - name: 弹性网卡
+        items:
+          - name: assignSecondaryIps
+            href: Elastic-Network-Interface/assignSecondaryIps.md
+          - name: associateElasticIp
+            href: Elastic-Network-Interface/associateElasticIp.md
+          - name: disassociateElasticIp
+            href: Elastic-Network-Interface/disassociateElasticIp.md
+          - name: unassignSecondaryIps
+            href: Elastic-Network-Interface/unassignSecondaryIps.md
+          - name: createNetworkInterface
+            href: Elastic-Network-Interface/createNetworkInterface.md
+          - name: deleteNetworkInterface
+            href: Elastic-Network-Interface/deleteNetworkInterface.md
+          - name: describeNetworkInterface
+            href: Elastic-Network-Interface/describeNetworkInterface.md
+          - name: describeNetworkInterfaces
+            href: Elastic-Network-Interface/describeNetworkInterfaces.md
+          - name: modifyNetworkInterface
+            href: Elastic-Network-Interface/modifyNetworkInterface.md
+      - name: 子网
+        items:
+          - name: describeSubnet
+            href: Subnet/describeSubnet.md
+          - name: describeSubnets
+            href: Subnet/describeSubnets.md
+      - name: 私有网络
+        items:
+          - name: describeVpcs
+            href: Virtual-Private-Cloud/describeVpcs.md
+          - name: describeVpc
+            href: Virtual-Private-Cloud/describeVpc.md
+      - name: 对等连接
+        items:
+          - name: createVpcPeering
+            href: Peering-Connection/createVpcPeering.md
+          - name: deleteVpcPeering
+            href: Peering-Connection/deleteVpcPeering.md
+          - name: describeVpcPeering
+            href: Peering-Connection/describeVpcPeering.md
+          - name: describeVpcPeerings
+            href: Peering-Connection/describeVpcPeerings.md
+          - name: modifyVpcPeering
+            href: Peering-Connection/modifyVpcPeering.md

@@ -12,11 +12,13 @@ Authorization: signatureValue
 **响应元素**
 
 |名称|描述|
+|-|-|
 |Effect|黑白名单设置<br>类型：枚举字符串<br>有效值：DENIED或ALLOW<br>ALLOW：白名单，DENIED：黑名单|
 |Value|保存名单容器<br>类型：List<String>容器|
 |AllowNull|指定是否允许referer字段为空的请求访问。<br>有效值：TRUE(可以为空)，FALSE(不可以为空)<br>类型：枚举字符串|
 
 细节分析
+
 1.如果Bucket不存在，返回404错误。错误码：NoSuchBucket。
 
 2.只有Bucket的拥有者才能查看Bucket的Referer配置信息，否则返回403 Forbidden错误,错误码：AccessDenied。

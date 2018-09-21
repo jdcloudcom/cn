@@ -1,0 +1,17 @@
+ name: 对象存储
+ href: 
+ items:
+ - name: API概览
+   href: Overview.md
+ - name: 更新历史
+   href: ChangeLog.md
+ - name: 对象存储API
+   items:
+      - name: deleteBucket
+        href: OSS-APIs/deleteBucket.md
+      - name: headBucket
+        href: OSS-APIs/headBucket.md     
+      - name: listBuckets
+        href: OSS-APIs/listBuckets.md        
+      - name: putBucket
+        href: OSS-APIs/putBucket.md    

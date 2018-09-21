@@ -1,0 +1,158 @@
+name: JMR
+href:
+items:
+  - name: 接口概览
+    href: overview.md
+  - name: 更新历史
+    href: ChangeLog.md
+  - name: 接口信息
+    items:
+      - name: JMR集群管理
+        items:
+          - name: createClusterInNewNetwork
+            href: Cluster-Management/createClusterInNewNetwork.md
+          - name: showClusterDetails
+            href: Cluster-Management/showClusterDetails.md
+          - name: releaseCluster
+            href: Cluster-Management/releaseCluster.md
+          - name: getKey
+            href: Cluster-Management/getKey.md
+            status: 0
+          - name: getPropertyValue
+            href: Cluster-Management/getPropertyValue.md
+            status: 0
+          - name: getHardwareStack
+            href: Cluster-Management/getHardwareStack.md
+            status: 0
+          - name: getInstanceList
+            href: Cluster-Management/getInstanceList.md
+            status: 0
+          - name: idataCluster
+            href: Cluster-Management/idataCluster.md
+          - name: getSoftwareInfo
+            href: Cluster-Management/getSoftwareInfo.md
+          - name: getSoftwareAndVersionInfo
+            href: Cluster-Management/getSoftwareAndVersionInfo.md
+            status: 0
+          - name: getJmrVersionList
+            href: Cluster-Management/getJmrVersionList.md
+          - name: calculateClusterPrice
+            href: Cluster-Management/calculateClusterPrice.md
+            status: 0
+          - name: getAvaliableNum
+            href: Cluster-Management/getAvaliableNum.md
+            status: 0
+          - name: queryServerQuota
+            href: Cluster-Management/queryServerQuota.md
+            status: 0
+          - name: queryVpcs
+            href: Cluster-Management/queryVpcs.md
+            status: 0
+          - name: queryVpcSubnets
+            href: Cluster-Management/queryVpcSubnets.md
+            status: 0
+          - name: deleteCluster
+            href: Cluster-Management/deleteCluster.md
+          - name: queryFloatingIp
+            href: Cluster-Management/queryFloatingIp.md
+            status: 0
+          - name: validateUser
+            href: Cluster-Management/validateUser.md
+            status: 0
+          - name: renewBillingOrder
+            href: Cluster-Management/renewBillingOrder.md
+            status: 0
+          - name: validateName
+            href: Cluster-Management/validateName.md
+            status: 0
+          - name: getAccessKeys
+            href: Cluster-Management/getAccessKeys.md
+            status: 0
+          - name: clusterExpansion
+            href: Cluster-Management/clusterExpansion.md
+          - name: calculateExpansionPrice
+            href: Cluster-Management/calculateExpansionPrice.md
+            status: 0
+          - name: getClusterDetailInfo
+            href: Cluster-Management/getClusterDetailInfo.md
+            status: 0
+          - name: monitorServiceList
+            href: Cluster-Management/monitorServiceList.md
+            status: 0
+          - name: monitorDetails
+            href: Cluster-Management/monitorDetails.md
+            status: 0
+          - name: getFirstServerVncUrl
+            href: Cluster-Management/getFirstServerVncUrl.md
+            status: 0
+      - name: JMR作业管理
+        items:
+          - name: getJobTypeList
+            href: Job-Management/getJobTypeList.md
+            status: 0
+          - name: getJobList
+            href: Job-Management/getJobList.md
+          - name: isValidJobName
+            href: Job-Management/isValidJobName.md
+            status: 0
+          - name: createJob
+            href: Job-Management/createJob.md
+          - name: modifyJob
+            href: Job-Management/modifyJob.md
+            status: 0
+          - name: deleteJob
+            href: Job-Management/deleteJob.md
+          - name: createAndExcuteJob
+            href: Job-Management/createAndExcuteJob.md
+            status: 0
+          - name: executeJob
+            href: Job-Management/executeJob.md
+          - name: showJobDetails
+            href: Job-Management/showJobDetails.md
+          - name: getTaskList
+            href: Job-Management/getTaskList.md
+            status: 0
+          - name: deleteHdfsFile
+            href: Job-Management/deleteHdfsFile.md
+            status: 0
+          - name: getClusterJobCount
+            href: Job-Management/getClusterJobCount.md
+            status: 0
+          - name: getClusterCronJobCount
+            href: Job-Management/getClusterCronJobCount.
+            status: 0
+          - name: getCronJobList
+            href: Job-Management/getCronJobList.md
+          - name: isValidPlanName
+            href: Job-Management/isValidPlanName.md
+            status: 0
+          - name: createCronJob
+            href: Job-Management/createCronJob.md
+          - name: getCronJobDetail
+            href: Job-Management/getCronJobDetail.md
+          - name: modifyCronJob
+            href: Job-Management/modifyCronJob.md
+            status: 0
+          - name: pauseCronJob
+            href: Job-Management/pauseCronJob.md
+            status: 0
+          - name: resumeCronJob
+            href: Job-Management/resumeCronJob.md
+            status: 0
+          - name: deleteCronJob
+            href: Job-Management/deleteCronJob.md
+          - name: getCronJobTaskList
+            href: Job-Management/getCronJobTaskList.md
+            status: 0
+          - name: getCronJobTaskList
+            href: Job-Management/getCronJobTaskListByJobId.md
+            status: 0
+          - name: runCronJobOnce
+            href: Job-Management/runCronJobOnce.md
+            status: 0
+          - name: getLastCronJobTask
+            href: Job-Management/getLastCronJobTask.md
+            status: 0
+          - name: queryExecutingJobList
+            href: Job-Management/queryExecutingJobList.md
+            status: 0

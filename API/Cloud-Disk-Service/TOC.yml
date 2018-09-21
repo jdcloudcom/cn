@@ -1,0 +1,39 @@
+  name: 云硬盘
+  href:
+  items:
+  - name: 接口概览
+    href: overview.md
+  - name: 更新历史
+    herf: ChangeLog.md
+  - name: 云硬盘相关接口
+    items:
+      - name: createDisks
+        href: CDS-APIs/createDisks.md
+      - name: deleteDisk
+        href: CDS-APIs/deleteDisk.md
+      - name: modifyDiskAttribute
+        href: CDS-APIs/modifyDiskAttribute.md
+      - name: extendDisk
+        href: CDS-APIs/extendDisk.md
+      - name: describeDisk
+        href: CDS-APIs/describeDisk.md
+      - name: describeDisks
+        href: CDS-APIs/describeDisks.md
+      - name: restoreDisk
+        href: CDS-APIs/restoreDisk.md
+
+  - name: 快照相关接口
+    items:
+      - name: createSnapshot
+        href: Snapshot-APIs/createSnapshot.md
+      - name: deleteSnapshot 
+        href: Snapshot-APIs/deleteSnapshot.md
+      - name: modifySnpAttribute
+        href: Snapshot-APIs/modifySnpAttribute.md
+      - name: modifySnapshotAttribute
+        href: Snapshot-APIs/modifySnapshotAttribute.md
+        status: 0
+      - name: describeSnapshot
+        href: Snapshot-APIs/describeSnapshot.md
+      - name: describeSnapshots
+        href: Snapshot-APIs/describeSnapshots.md

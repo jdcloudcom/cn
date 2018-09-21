@@ -1,0 +1,321 @@
+swagger: "2.0"
+info:
+  description: 云监控规则相关接口，提供创建、查询、修改、删除监控规则等功能
+  title: 云监控规则相关接口
+  version: "v1"
+consumes:
+- application/json
+produces:
+- application/json
+
+basePath: /regions/{regionId}
+
+paths:
+  /alarms:
+    ###################### 查询监控规则 ######################
+    get:
+      description: 查询监控规则，支持按照规则状态、报警状态、资源ID和产品名称进行查询。
+      summary: 查询监控规则
+      operationId: describeAlarms
+      x-jdcloud-internal: false
+      parameters:
+        - type: string
+          description: 产品名称
+          name: serviceCode
+          in: query
+        - type: string
+          description: 资源Id
+          name: resourceId
+          in: query
+        - type: integer
+          description: 规则报警状态, 1：正常, 2：报警，4：数据不足
+          name: status
+          in: query
+        - type: integer
+          description: 是否为正在报警的规则，0为忽略，1为是，与 status 同时只能生效一个,isAlarming 优先生效
+          name: isAlarming
+          in: query
+        - type: integer
+          description: 规则状态：1为启用，0为禁用
+          name: enabled
+          in: query
+        - type: integer
+          description: 页码, 默认为1, 取值范围：[1,∞)
+          name: pageNumber
+          in: query
+        - type: integer
+          description: 分页大小，默认为20，取值范围：[10,100]
+          name: pageSize
+          in: query
+      responses:
+        200:
+          description:  OK
+          schema:
+            properties:
+              result:
+                properties:
+                  alarmList:
+                    description: 规则列表
+                    type: array
+                    items:
+                      $ref: "../model/Alarm.yaml#/definitions/alarm"
+                  pageNumber:
+                    type: number
+                    description: 页码
+                  numberPages:
+                    type: number
+                    description: 总页数
+                  numberRecords:
+                    type: number
+                    description: 总记录数
+                  pageSize:
+                    type: number
+                    description: 分页大小
+              requestId:
+                type: string
+                description: 请求的标识id
+        400:
+          description: "invalid parameter"
+        500:
+          description: "internal server error"
+
+    ###################### 创建规则 ######################
+    post:
+      description: 创建报警规则，可以为某一个实例创建报警规则，也可以为多个实例同时创建报警规则。
+      summary: 创建规则
+      operationId: createAlarm
+      x-jdcloud-internal: false
+      parameters:
+        - name: Body
+          in: body
+          description: "规则参数"
+          x-jdcloud-tiered: false
+          schema:
+            $ref: "../model/Alarm.yaml#/definitions/createAlarmBody"
+      responses:
+        200:
+          description:  OK
+          schema:
+            properties:
+              result:
+                type: object
+                properties:
+                  alarmIdList:
+                    type: array
+                    description: 创建成功的规则id列表                    
+                    items:
+                      type: string 
+              requestId:
+                type: string
+                description: 请求的标识id
+        400:
+          description: "invalid parameter"
+        500:
+          description: "internal server error"
+          
+    ###################### 批量删除规则 ######################
+    delete:
+      description: 批量删除已创建的报警规则
+      summary: 批量删除已创建的报警规则
+      operationId: deleteAlarms
+      x-jdcloud-internal: false
+      parameters:
+        - type: string
+          description: 待删除的规则id，多个规则之间用"|"间隔
+          name: ids
+          in: query
+          required: true
+      responses:
+        200:
+          description:  OK
+          schema:
+            properties:
+              requestId:
+                type: string
+                description: 请求的标识id
+        400:
+          description: "invalid parameter"
+        500:
+          description: "internal server error"
+          
+  /alarms/{alarmId}:
+    ###################### 查询规则详情 ######################
+    get:
+      description: 查询规则详情
+      summary: 查询规则详情
+      operationId: describeAlarmsByID
+      x-jdcloud-internal: false
+      responses:
+        200:
+          description:  OK
+          schema:
+            properties:
+              result:
+                type: object
+                properties:
+                  alarm:
+                    $ref: "../model/Alarm.yaml#/definitions/alarm"    
+              requestId:
+                type: string
+                description: 请求的标识id
+        400:
+          description: "invalid parameter"
+        500:
+          description: "internal server error"
+          
+    ###################### 修改规则 ######################
+    patch:
+      description: 修改已创建的报警规则，支持修改报警规则及通知的联系人信息。当报警规则处于“已启用”状态时，允许修改报警规则。
+      summary: 修改规则
+      operationId: updateAlarm
+      x-jdcloud-internal: false
+      parameters:
+        - name: Body
+          in: body
+          description: 规则参数"
+          x-jdcloud-tiered: false
+          schema:
+            $ref: "../model/Alarm.yaml#/definitions/updateAlarmBody"
+      responses:
+        200:
+          description:  OK
+          schema:
+            properties:
+              requestId:
+                type: string
+                description: 请求的标识id
+              result:
+                type: object
+                properties:
+                  alarmId:
+                    description: 规则id
+                    type: string
+        400:
+          description: "invalid parameter"
+        500:
+          description: "internal server error"
+         
+  "/alarms/{alarmId}:enable":
+    ###################### 启用规则 ######################
+    post:
+      description: 启用报警规则，当报警规则处于已禁用状态时，可以使用此接口启用报警规则。
+      summary: 启用规则
+      operationId: enableAlarm
+      x-jdcloud-internal: false
+      responses:
+        200:
+          description:  OK
+          schema:
+            properties:
+              requestId:
+                type: string
+                description: 请求的标识id
+        400:
+          description: "invalid parameter"
+        500:
+          description: "internal server error"
+          
+  "/alarms/{alarmId}:disable":
+    ###################### 禁用规则 ######################
+    post:
+      description: 禁用报警规则。报警规则禁用后，将停止探测实例的监控项数据。
+      summary: 禁用规则
+      operationId: disableAlarm
+      x-jdcloud-internal: false
+      responses:
+        200:
+          description:  OK
+          schema:
+            properties:
+              requestId:
+                type: string
+                description: 请求的标识id
+        400:
+          description: "invalid parameter"
+        500:
+          description: "internal server error"
+          
+  /alarmHistory:
+    ###################### 查询报警历史 ######################
+    get:
+      description: 查询报警历史，支持按照报警规则ID、资源ID、产品名称进行查询。
+      summary: 查询报警历史
+      operationId: describeAlarmHistory
+      x-jdcloud-internal: false      
+      parameters:
+      - type: string
+        description: 报警规则的Id
+        name: id
+        in: query
+      - type: string
+        description: 产品名称
+        name: serviceCode
+        in: query
+      - type: string
+        description: 资源Id
+        name: resourceId
+        in: query
+      - type: string
+        description: 查询数据开始时间，默认24小时前，可以输入long型时间，也可以输入yyyy-MM-dd'T'HH:mm:ssZ类型时间
+        name: startTime
+        in: query
+        required: true
+      - type: string
+        description: 查询数据结束时间，默认当前时间，可以输入long型时间，也可以输入yyyy-MM-dd'T'HH:mm:ssZ类型时间
+        name: endTime
+        in: query
+        required: true
+      - type: integer
+        description: 页码, 默认为1, 取值范围：[1,∞)
+        name: pageNumber
+        in: query
+      - type: integer
+        description: 分页大小，默认为20，取值范围：[10,100]
+        name: pageSize
+        in: query
+      responses:
+        200:
+          description:  OK
+          schema:
+            properties:
+              result:
+                properties:
+                  alarmHistoryList:
+                    description: 报警历史列表
+                    type: array
+                    items:
+                      $ref: "../model/Alarm.yaml#/definitions/alarmHistory"
+                  pageNumber:
+                    type: number
+                    description: 页码
+                  numberPages:
+                    type: number
+                    description: 总页数
+                  numberRecords:
+                    type: number
+                    description: 总记录数
+                  pageSize:
+                    type: number
+                    description: 分页大小
+              requestId:
+                type: string
+                description: 请求的标识id
+        400:
+          description: "invalid parameter"
+        500:
+          description: "internal server error"
+          
+#路径通用参数
+parameters:
+  regionId:
+    type: string
+    description: 地域ID
+    name: regionId
+    in: path
+    required: true
+  alarmId:
+    type: string
+    description: 规则id
+    name: alarmId
+    in: path
+    required: true

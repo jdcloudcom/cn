@@ -2,16 +2,16 @@
 您可以通过京东金融完成个人实名认证。详情见 我的京东（http://home.jd.com） > 账户设置 > 账户安全 > 实名认证 > 立即认证。
 
 您也可以在京东云账户管理 > 实名认证 里选择个人实名认证，进行"立即认证"。
-<div align=center><img src=https://github.com/jdcloudcom/cn/blob/edit/image/User/Real%20name%20verification/%E4%B8%AA%E4%BA%BA%E8%AE%A4%E8%AF%81-%E7%AB%8B%E5%8D%B3%E8%AE%A4%E8%AF%81.png></div>
+![](../../../image/User/Real%20name%20verification/%E4%B8%AA%E4%BA%BA%E8%AE%A4%E8%AF%81-%E7%AB%8B%E5%8D%B3%E8%AE%A4%E8%AF%81.png)
 
 ## 新用户认证
 
 如果您从未在京东集团旗下网站进行过个人实名认证，请选择新认证用户。在填写银行卡号时，请选择所支持银行的储蓄卡或信用卡。所支持的银行请查看【支持银行】。
-<div align=center><img src=https://github.com/jdcloudcom/cn/blob/edit/image/User/Real%20name%20verification/%E4%B8%AA%E4%BA%BA%E8%AE%A4%E8%AF%81-%E6%96%B0%E7%94%A8%E6%88%B7%E8%AE%A4%E8%AF%81.png></div>
+![](../../../image/User/Real%20name%20verification/%E4%B8%AA%E4%BA%BA%E8%AE%A4%E8%AF%81-%E6%96%B0%E7%94%A8%E6%88%B7%E8%AE%A4%E8%AF%81.png)
 
 
 如果您在实名认证的过程中，收到如下提示信息，表明您在京东集团可能有其他的账号，并且已用同一个身份证件进行过实名认证。
-<div align=center><img src=https://github.com/jdcloudcom/cn/blob/edit/image/User/Real%20name%20verification/%E4%B8%AA%E4%BA%BA%E8%AE%A4%E8%AF%81-%E5%AE%9E%E5%90%8D%E8%BA%AB%E4%BB%BD%E5%B7%B2%E8%A2%AB%E5%8D%A0%E7%94%A8.png></div>
+![](../../../image/User/Real%20name%20verification/%E4%B8%AA%E4%BA%BA%E8%AE%A4%E8%AF%81-%E5%AE%9E%E5%90%8D%E8%BA%AB%E4%BB%BD%E5%B7%B2%E8%A2%AB%E5%8D%A0%E7%94%A8.png)
 
 遇到这种情况，
 
@@ -23,38 +23,35 @@
 
 ## 认证账号绑定
 进行认证账号绑定时，需要提供已用本人身份证件进行过个人实名认证的京东账号用户名。您可以用已认证的账号登录我的京东（http://home.jd.com），在个人信息页面中查看。
-<div align=center><img src=https://github.com/jdcloudcom/cn/blob/edit/image/User/Real%20name%20verification/%E4%B8%AA%E4%BA%BA%E8%AE%A4%E8%AF%81-%E8%AE%A4%E8%AF%81%E8%B4%A6%E5%8F%B7%E7%BB%91%E5%AE%9A1.png></div>
+![](../../../image/User/Real%20name%20verification/%E4%B8%AA%E4%BA%BA%E8%AE%A4%E8%AF%81-%E8%AE%A4%E8%AF%81%E8%B4%A6%E5%8F%B7%E7%BB%91%E5%AE%9A1.png)
 
 
 将已经实名的用户名填入已认证的京东账号，点击 “立即绑定”：
-<div align=center><img src=https://github.com/jdcloudcom/cn/blob/edit/image/User/Real%20name%20verification/%E4%B8%AA%E4%BA%BA%E8%AE%A4%E8%AF%81-%E8%AE%A4%E8%AF%81%E8%B4%A6%E5%8F%B7%E7%BB%91%E5%AE%9A2.png></div>
+![](../../../image/User/Real%20name%20verification/%E4%B8%AA%E4%BA%BA%E8%AE%A4%E8%AF%81-%E8%AE%A4%E8%AF%81%E8%B4%A6%E5%8F%B7%E7%BB%91%E5%AE%9A2.png)
 
 为保证您是已认证的账号的所有者，需要验证已认证账号的手机号码。验证通过后，即可完成个人实名认证。您的个人实名信息将与已认证的账号相同：
-<div align=center><img src=https://github.com/jdcloudcom/cn/blob/edit/image/User/Real%20name%20verification/%E4%B8%AA%E4%BA%BA%E8%AE%A4%E8%AF%81-%E8%AE%A4%E8%AF%81%E8%B4%A6%E5%8F%B7%E7%BB%91%E5%AE%9A3.png></div>
+![](../../../image/User/Real%20name%20verification/%E4%B8%AA%E4%BA%BA%E8%AE%A4%E8%AF%81-%E8%AE%A4%E8%AF%81%E8%B4%A6%E5%8F%B7%E7%BB%91%E5%AE%9A3.png)
 
 
 【异常情况处理】
  - 如果在绑定已认证账号时，弹出如下提示，说明您已认证的账号当前没有在我的京东绑定手机。
-<div align=center><img src=https://github.com/jdcloudcom/cn/blob/edit/image/User/Real%20name%20verification/%E4%B8%AA%E4%BA%BA%E8%AE%A4%E8%AF%81-%E8%AE%A4%E8%AF%81%E8%B4%A6%E5%8F%B7%E7%BB%91%E5%AE%9A-%E5%BC%82%E5%B8%B8%E6%83%85%E5%86%B51.png></div>
+![](../../../image/User/Real%20name%20verification/%E4%B8%AA%E4%BA%BA%E8%AE%A4%E8%AF%81-%E8%AE%A4%E8%AF%81%E8%B4%A6%E5%8F%B7%E7%BB%91%E5%AE%9A-%E5%BC%82%E5%B8%B8%E6%83%85%E5%86%B51.png)
 
 
 您需要先在我的京东为该已认证账号设置手机号码：
-<div align=center><img src=https://github.com/jdcloudcom/cn/blob/edit/image/User/Real%20name%20verification/%E4%B8%AA%E4%BA%BA%E8%AE%A4%E8%AF%81-%E8%AE%A4%E8%AF%81%E8%B4%A6%E5%8F%B7%E7%BB%91%E5%AE%9A-%E5%BC%82%E5%B8%B8%E6%83%85%E5%86%B52.png></div>
+![](../../../image/User/Real%20name%20verification/%E4%B8%AA%E4%BA%BA%E8%AE%A4%E8%AF%81-%E8%AE%A4%E8%AF%81%E8%B4%A6%E5%8F%B7%E7%BB%91%E5%AE%9A-%E5%BC%82%E5%B8%B8%E6%83%85%E5%86%B52.png)
 
 
  - 如果在绑定已认证账号时，弹出如下提示，说明您尝试绑定的实名认证账号，并未进行实名认证。请您再次确认使用您的身份进行个人实名认证的账号信息后，进行重试。
-<div align=center><img src=https://github.com/jdcloudcom/cn/blob/edit/image/User/Real%20name%20verification/%E4%B8%AA%E4%BA%BA%E8%AE%A4%E8%AF%81-%E8%AE%A4%E8%AF%81%E8%B4%A6%E5%8F%B7%E7%BB%91%E5%AE%9A-%E5%BC%82%E5%B8%B8%E6%83%85%E5%86%B53.png
-></div>
+![](../../../image/User/Real%20name%20verification/%E4%B8%AA%E4%BA%BA%E8%AE%A4%E8%AF%81-%E8%AE%A4%E8%AF%81%E8%B4%A6%E5%8F%B7%E7%BB%91%E5%AE%9A-%E5%BC%82%E5%B8%B8%E6%83%85%E5%86%B53.png)
 
 
  - 如果进行认证账号绑定时，认证失败，弹出如下提示，说明您已经在京东云对另一个账号（即括号所示账号）进行过个人实名认证。每个个人身份信息，在京东云只能认证一个账号，不可以重复认证或绑定。
-<div align=center><img src=https://github.com/jdcloudcom/cn/blob/edit/image/User/Real%20name%20verification/%E4%B8%AA%E4%BA%BA%E8%AE%A4%E8%AF%81-%E8%AE%A4%E8%AF%81%E8%B4%A6%E5%8F%B7%E7%BB%91%E5%AE%9A-%E5%BC%82%E5%B8%B8%E6%83%85%E5%86%B54.png
-></div>
+![](../../../image/User/Real%20name%20verification/%E4%B8%AA%E4%BA%BA%E8%AE%A4%E8%AF%81-%E8%AE%A4%E8%AF%81%E8%B4%A6%E5%8F%B7%E7%BB%91%E5%AE%9A-%E5%BC%82%E5%B8%B8%E6%83%85%E5%86%B54.png)
 
 假如不是您本人操作，请联系京东云客服 4006151212 或提交工单进行咨询，同时需要提供您的实名认证账号归属证明。
 
 ## 个人认证升级企业认证
 在个人认证通过之后，您可以在如下页面升级成为企业用户。
-<div align=center><img src=https://github.com/jdcloudcom/cn/blob/edit/image/User/Real%20name%20verification/%E4%B8%AA%E4%BA%BA%E8%AE%A4%E8%AF%81%E5%8D%87%E7%BA%A7%E4%BC%81%E4%B8%9A%E8%AE%A4%E8%AF%81.jpg
-></div>
+![](../../../image/User/Real%20name%20verification/%E4%B8%AA%E4%BA%BA%E8%AE%A4%E8%AF%81%E5%8D%87%E7%BA%A7%E4%BC%81%E4%B8%9A%E8%AE%A4%E8%AF%81.jpg)
 

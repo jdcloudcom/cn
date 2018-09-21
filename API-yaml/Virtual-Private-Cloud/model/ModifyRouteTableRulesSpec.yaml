@@ -1,0 +1,12 @@
+swagger: "2.0"
+definitions:
+  modifyRouteTableRulesSpec:
+    x-jdcloud-module: vpc
+    required:
+      - modifyRouteTableRuleSpecs
+    properties:
+      modifyRouteTableRuleSpecs:
+        type: array
+        items:
+          $ref: "./ModifyRouteTableRules.yaml#/definitions/modifyRouteTableRules"
+        description: 路由表规则信息

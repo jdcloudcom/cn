@@ -1,0 +1,12 @@
+swagger: "2.0"
+definitions:
+  metricDataList:
+    x-jdcloud-module: monitor
+    type: object
+    properties:
+      errMetricData:
+        type: string
+        description: 错误数据
+      errDetail:
+        type: string
+        description: 错误数据描述

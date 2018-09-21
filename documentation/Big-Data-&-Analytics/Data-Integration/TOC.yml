@@ -1,0 +1,61 @@
+name: 数据集成
+href: 
+items:
+- name: 产品简介
+  items:
+    - name: 产品概述
+      href: Introduction/Product-Overview.md
+    - name: 核心概念
+      href: Introduction/Core-Concepts.md
+    - name: 核心功能
+      href: Introduction/Features.md
+- name: 产品定价
+  items:
+    - name: 计费概述
+      href: Pricing/Billing-Overview.md
+- name: 入门指南
+  items:
+    - name: 使用说明
+      href: Getting-Started/Guide-description.md
+    - name: 步骤一：创建数据源连接
+      href: Getting-Started/create-datasource.md
+    - name: 步骤二：创建同步任务
+      href: Getting-Started/Data-sync-guide.md
+    - name: 步骤三：设置同步任务周期
+      href: Getting-Started/Scheduling-and-dependence-settings.md
+- name: 操作指南
+  items:
+    - name: 登陆控制台
+      href: Operation-Guide/Console-guide.md
+    - name: 数据源管理
+      items:
+        - name: 本地文件接入
+          href: Operation-Guide/Data-source-config/local-file-data-source-config.md
+        - name: 配置云数据库数据源
+          href: Operation-Guide/Data-source-config/RDS-data-source-config.md
+        - name: 配置对象存储(OSS)数据源
+          href: Operation-Guide/Data-source-config/OSS-data-source-config.md
+        - name: 配置MYSQL数据源
+          href: Operation-Guide/Data-source-config/MySQL-data-source-config.md
+        - name: 配置SQLServer数据源
+          href: Operation-Guide/Data-source-config/SQLServer-data-source-config.md
+        - name: 配置FTP数据源
+          href: Operation-Guide/Data-source-config/FTP-data-source-config.md
+        - name: 配置Oracle数据源
+          href: Operation-Guide/Data-source-config/Oracle-data-source-config.md
+        - name: 配置DB2数据源
+          href: Operation-Guide/Data-source-config/DB2-data-source-config.md
+        - name: 配置Elasticsearch数据源
+          href: Operation-Guide/Data-source-config/Elasticsearch-data-source-config.md
+    - name: 数据同步
+      items:
+        - name: 新建同步任务
+          href: Operation-Guide/Data-sync-guide/Create-a-sync-task.md
+        - name: 同步任务运维
+          href: Operation-Guide/Data-sync-guide/Task-operation.md
+- name: 问题排查
+  items:
+    - name: 多表搬运问题
+      href: Troubleshooting/Multi-table-sync.md
+- name: 常见问题
+  href: FAQ/FAQ.md

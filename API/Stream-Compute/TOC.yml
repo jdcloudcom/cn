@@ -1,0 +1,45 @@
+  name: 流计算
+  href: 
+  items:
+  - name: 接口概览
+    href: overview.md
+  - name: 更新历史
+    href: changelog.md
+  - name: 接口信息
+    items:
+      - name:  Storage相关API
+        items:
+          - name: addOrUpdateStorage
+            href:  Storage-Related-APIs/addOrUpdateStorage.md
+          - name: deleteStorage
+            href:  Storage-Related-APIs/deleteStorage.md
+          - name: describeStorage
+            href:  Storage-Related-APIs/describeStorage.md
+          - name: getStorageList
+            href:  Storage-Related-APIs/getStorageList.md
+      - name: JOB相关API  
+        items:
+          - name: addOrUpdateStorage
+            href: Job-Related-APIs/addOrUpdateJob.md
+          - name: deletejob
+            href: Job-Related-APIs/deleteJob.md
+          - name: describeJob
+            href: Job-Related-APIs/describeJob.md  
+          - name: getJobList
+            href: Job-Related-APIs/getJobList.md
+          - name: startJob
+            href: Job-Related-APIs/startJob.md
+          - name: startJob
+            href: Job-Related-APIs/startJob.md 
+      - name:  NameSpace相关 API
+        items:
+          - name: createNamespace
+            href: Name-Space-APIs/createNamespace.md        
+          - name: deleteNamespace
+            href: Name-Space-APIs/deleteNamespace.md 
+          - name: queryNamespaceDetail
+            href: Name-Space-APIs/queryNamespaceDetail.md 
+          - name: queryNamespaces
+            href: Name-Space-APIs/queryNamespaces.md 
+          - name: updateNamespace
+            href: Name-Space-APIs/updateNamespace.md

@@ -1,0 +1,31 @@
+swagger: "2.0"
+definitions:
+  segment:
+    x-jdcloud-module: vpc
+    properties:
+      segmentId:
+        type: string
+        description: 网段的Id
+      segmentName:
+        type: string
+        description: 网段名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
+      description:
+        type: string
+        description: 网段描述，允许输入UTF-8编码下的全部字符，不超过256字符。
+      addressPrefix:
+        type: string
+        description: 网络地址段
+      availableIpCount:
+        type: integer
+        description: 网段可用ip数量
+      provider:
+        type: string
+        description: IP服务商，取值为bgp或no_bgp，cn-north-1：bgp；cn-south-1：[bgp，no_bgp]；cn-east-1：[bgp，no_bgp]；cn-east-2：bgp
+      startIp:
+        type: string
+        description: 网段的起始地址
+      endIp:
+        type: string
+        description: 网段的结束地址
+
+

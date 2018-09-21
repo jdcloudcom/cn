@@ -1,0 +1,150 @@
+swagger: '2.0'
+info:
+  version: v1
+  title: NameSpace相关 API
+  description: 流计算NameSpace相关信息接口
+basePath: '/regions/{regionId}'
+paths:
+#######查询租户下的应用列表################
+  /namespaces:
+    get:
+      description: 查询租户下的应用列表
+      operationId: queryNamespaces
+      parameters:
+        - name: keyword
+          in: query
+          type: string
+          required: false
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                properties:
+                  namespaces:
+                    type: array
+                    description: namespaces信息
+                    items:
+                      type: object
+                      $ref: "../model/namespacesInfo.yaml#/definitions/namespace"
+              requestId:
+                type: string
+        '500':
+          description: INTERNAL_ERROR
+ #######查询某个应用详情################ 
+  /namespaceDetail:
+    get:
+      description: 查询某个应用详情
+      operationId: queryNamespaceDetail
+      parameters:
+        - name: namespaceId
+          in: query
+          type: integer
+          required: true
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                properties:
+                  namespace:
+                    type: object
+                    description: 查询出的namespace对象
+                    $ref: "../model/namespacesInfo.yaml#/definitions/namespace"
+              requestId:
+                type: string
+        '500':
+          description: INTERNAL_ERROR 
+ #######更新namespace################ 
+  /namespace:
+    put:
+      description: 更新namespace
+      operationId: updateNamespace
+      parameters:
+        - name: namespaceStr
+          in: body
+          required: true
+          schema:
+            $ref: "../model/namespacesInfo.yaml#/definitions/namespace"
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                properties:
+                  status:
+                    type: boolean
+                    description: 更新成功标志
+              requestId:
+                type: string
+        '500':
+          description: INTERNAL_ERROR  
+ #######创建namespace################ 
+    post:
+      description: 创建namespace
+      operationId: createNamespace
+      parameters:
+        - name: namespaceStr
+          in: body
+          required: true
+          schema:
+            $ref: "../model/namespacesInfo.yaml#/definitions/namespace"
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                properties:
+                  status:
+                    type: boolean
+                    description: 创建成功标志
+              requestId:
+                type: string
+        '500':
+          description: INTERNAL_ERROR   
+
+ #######删除namespace################ 
+    delete:
+      description: 删除namespace,如果旗下关联有其他资源，不允许删除
+      operationId: deleteNamespace
+      parameters:
+        - name: namespaceId
+          in: query
+          required: true
+          type: integer
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                properties:
+                  status:
+                    type: boolean
+                    description: 删除namespace成功标志
+              requestId:
+                type: string
+        '500':
+          description: INTERNAL_ERROR  
+        '400':
+          description: INTERNAL_ERROR   
+  
+ 
+ 
+ 
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: Region ID

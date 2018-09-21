@@ -1,0 +1,62 @@
+		if (LangUtils.EN.equals(lang)) {
+			sb.append("实例描述:");
+		}
+
+		if (LangUtils.EN.equals(lang)) {
+			columnsTitle.add(new String[] { "count", "购买数量" });
+			columnsTitle.add(new String[] { "price", "价格（元）" });
+		}
+
+        if (LangUtils.EN.equals(lang)) {
+            totalCell.setCellValue("参考合计(元):"+totalInfo);
+        }
+
+            } else if (s.equals("cpu")) {
+                returnString = "CPU 个数";//
+            } else if (s.equals("memory")) {
+                returnString = 内存 大小(单位G)";//
+            } else if (s.equals("disk")) {
+                returnString = "硬盘 大小 (单位G)";//
+            } else if (s.equals("master")) {
+                returnString = "主从版";
+            } else if (s.equals("cluster")) {
+                returnString = "集群版";
+            } else if (s.equals("bootVolumeType")) {
+                returnString = "系统盘类型";
+            } else if (s.equals("nbd_sata")) {
+                returnString = "容量型SATA";
+            } else if (s.equals("provider")) {
+                returnString = "服务提供商";
+            } else if (s.equals("rate")) {
+                returnString = "带宽速率(单位Mbps)";
+            } else if (s.equals("ipFeeType")) {
+                returnString = "宽带计费类型";
+            } else if (s.equals("volumeType")) {
+                returnString = "云硬盘类型";
+            } else if (s.equals("capacity")) {
+                returnString = "云硬盘容量大小 (单位G)";
+            } else {
+                returnString = "";
+            }
+		}
+
+
+
+				if (s.equals("type")) {
+                returnString = "存储类型";
+            } else if (s.equals("standard")) {
+                returnString = "标准存储";
+            } else if (s.equals("low")) {
+                returnString = "低频存储";
+            } else if (s.equals("storageAmount")) {
+                returnString = "预计存储量";
+            } else if (s.equals("downloadAmount")) {
+                returnString = "公网下载流量";
+				else if (s.equals("CDNAmount")) {
+                returnString = "CDN回源流量";
+			}
+
+
+		else if (number.equals(2)) {
+                returnString = "按带宽";
+            } 

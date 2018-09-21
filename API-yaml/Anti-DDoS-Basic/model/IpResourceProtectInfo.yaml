@@ -1,0 +1,19 @@
+swagger: "2.0"
+definitions:
+  ipResourceProtectInfo:
+    type: object
+    x-jdcloud-module: baseanti
+    properties:
+      startTime:
+        type: string
+        description: 攻击开始时间
+      endTime:
+        type: string
+        description: 攻击结束时间
+      status:
+        type: integer
+        description: 状态，0->完成 1->清洗 2->黑洞
+      cause:
+        type: integer
+        description: 触发原因，0->未知 1->四层 2->七层 3->四和7层
+

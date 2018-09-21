@@ -1,0 +1,8 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: 敏感操作保护
+  description: 敏感操作保护(SOP)相关接口
+host: "sop.jdcloud-api.com"
+x-jdcloud-version: "v1"
+x-jdcloud-revision: "0.1.0"

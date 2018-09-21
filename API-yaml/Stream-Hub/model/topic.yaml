@@ -1,0 +1,28 @@
+swagger: "2.0"
+definitions:
+  topic:
+    x-jdcloud-module: streambus
+    title: topic
+    type: object
+    properties:
+      id: 
+        type: integer
+        description: "主题id"
+      archived: 
+        type: integer
+        description: "是否归档（0：未归档，1：已归档）"
+      lifecycle:
+        type: integer
+        description: "数据写入后的保留时间"
+      partitionNum:
+        type: integer
+        description: "分区"
+      name:
+        type: string
+        description: "流数据总线中topic的名字"
+      shardNum:
+        type: integer
+        description: "流数据总线shard的数量"
+      remark:
+        type: string
+        description: "备注"

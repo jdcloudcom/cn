@@ -1,0 +1,11 @@
+swagger: "2.0"
+definitions:
+  modifyElasticIpSpec:
+    x-jdcloud-module: vpc
+    required:
+      - bandwidthMbps
+    properties:
+      bandwidthMbps:
+        type: integer
+        description: "弹性公网IP的限速（单位：Mbps），取值范围为[1-200]"
+

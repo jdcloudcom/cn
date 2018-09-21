@@ -1,0 +1,39 @@
+swagger: "2.0"
+definitions:
+  networkInterfaceSpec:
+    x-jdcloud-module: nc
+    x-jdcloud-internal: false
+    type: object
+    description: 创建网卡请求模板
+    required:
+      - subnetId
+      - az
+    properties:
+      subnetId:
+        type: string  
+        description: 子网ID
+      az:
+        type: string  
+        description: 可用区，用户的默认可用区
+      primaryIpAddress:
+        type: string  
+        description: 网卡主IP
+      secondaryIpAddresses:
+        type: array
+        items: 
+          type: string
+        description: SecondaryIp列表
+      secondaryIpCount:
+        type: integer     
+        description: 自动分配的SecondaryIp数量
+      securityGroups:
+        type: array
+        items:
+          type: string
+        description: 安全组ID列表 
+      sanityCheck:
+        type: boolean    
+        description: PortSecurity，取值为0或者1，默认为1
+      description:
+        type: string   
+        description: 描述 

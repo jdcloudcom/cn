@@ -1,0 +1,39 @@
+name: 访问控制
+href: 
+items:
+  - name: 接口概览
+    href: overview.md
+  - name: 更新历史
+    href: ChangeLog.md
+  - name: 接口信息
+    items:
+      - name: 策略管理接口
+        items:
+          - name: addPermissionsToSubUser
+            href: Policy-Management-APIs/addPermissionsToSubUser.md
+          - name: createPermission
+            href: Policy-Management-APIs/createPermission.md
+          - name: describePermissionDetail
+            href: Policy-Management-APIs/describePermissionDetail.md
+          - name: describePermissions
+            href: Policy-Management-APIs/describePermissions.md
+          - name: describeSubUserPermissions
+            href: Policy-Management-APIs/describeSubUserPermissions.md
+          - name: removePermissionOfSubUser
+            href: Policy-Management-APIs/removePermissionOfSubUser.md
+          - name: updatePermission
+            href: Policy-Management-APIs/updatePermission.md
+      - name: 用户管理接口
+        items:
+          - name: createSubuser
+            href: User-Management-APIs/createSubuser.md
+          - name: createUserAccessKey
+            href: User-Management-APIs/createUserAccessKey.md
+          - name: deleteUserAccessKey
+            href: User-Management-APIs/deleteUserAccessKey.md
+          - name: describeUserAccessKeys
+            href: User-Management-APIs/describeUserAccessKeys.md
+          - name: disabledUserAccessKey
+            href: User-Management-APIs/disabledUserAccessKey.md
+          - name: enabledUserAccessKey
+            href: User-Management-APIs/enabledUserAccessKey.md

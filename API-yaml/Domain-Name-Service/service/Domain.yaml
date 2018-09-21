@@ -1,0 +1,273 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: 域名
+  description: 云解析OpenAPI域名接口
+
+basePath: /regions/{regionId}
+
+paths:
+  /domain:
+  ###################### 查询主域名 ######################
+    get:
+      description: "查询用户名下的主域名列表"
+      operationId: getDomains
+      parameters:
+        - name: pageNumber
+          in: query
+          type: integer
+          description: 分页查询时查询的每页的序号，起始值为1，默认为1
+          required: true
+        - name: pageSize
+          in: query
+          type: integer
+          description: 分页查询时设置的每页行数，默认为10
+          required: true
+        - name: domainName
+          in: query
+          type: string
+          description: 关键字，按照”%domainName%”模式匹配主域名
+          required: false
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  dataList:
+                    type: array
+                    items:
+                      $ref: "../model/Domain.yaml#/definitions/domain"
+                    description: 域名列表
+                  currentCount:
+                    type: integer
+                    description: 当前页的域名列表里域名的个数
+                  totalCount:
+                    type: integer
+                    description: 所有匹配的域名列表的个数
+                  totalPage:
+                    type: integer
+                    description: 所有匹配的域名列表按照分页参数一共的页数                    
+              requestId:
+                type: string
+                description: 此次请求的ID
+        400:
+          description: BAD_REQUEST
+  /domainAdd:
+  ###################### 添加主域名 ######################
+    post:
+      description: "添加主域名"
+      operationId: addDomain
+      parameters:
+        - name: packId
+          in: query
+          type: integer
+          description: 域名的套餐类型, 0->免费 ,1->企业版, 2->高级版
+          required: true
+        - name: domainName
+          in: query
+          type: string
+          description: 要添加的域名
+          required: true
+        - name: domainId
+          in: query
+          type: integer
+          required: false
+          description: 域名ID，升级高级版必填       
+        - name: buyType
+          in: query
+          required: false 
+          type: integer
+          description: 1->新购买、2->升级，收费套餐的域名必填
+        - name: timeSpan
+          in: query
+          type: integer
+          description: 1，2，3 ，时长，收费套餐的域名必填
+          required: false
+        - name: timeUnit
+          in: query
+          type: integer
+          description: 时间单位，收费套餐的域名必填
+          required: false
+        - name: billingType
+          in: query
+          type: integer
+          description: 计费类型，收费套餐的域名必填
+          required: false
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  data:
+                    $ref: "../model/Domain.yaml#/definitions/domain"
+                    description: 新添加的的域名结构
+                  order:
+                    type: string
+                    description: 添加收费版域名的订单号
+              requestId:
+                type: string
+                description: 此次请求的ID
+        400:
+          description: BAD_REQUEST
+  /domainDel:
+  ###################### 删除主域名 ######################
+    delete:
+      description: "删除主域名"
+      operationId: delDomain
+      parameters:
+        - name: domainId
+          in: query
+          type: integer
+          required: true
+          description: 需要删除的域名ID
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              requestId:
+                type: string
+                description: 此次请求的ID
+        400:
+          description: BAD_REQUEST
+  /domainUpdate:
+  ###################### 修改主域名 ######################
+    post:
+      description: "修改主域名"
+      operationId: updateDomain
+      parameters:
+        - name: domainName
+          in: query
+          type: string
+          description: 需要修改的域名
+          required: true  
+        - name: id
+          in: query
+          type: integer
+          description: 需要修改的域名ID
+          required: true
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  updateDomain:
+                    $ref: "../model/Domain.yaml#/definitions/domain"
+                    description: 修改后的域名结构
+              requestId:
+                type: string
+                description: 此次请求的ID
+        400:
+          description: BAD_REQUEST
+          
+  /domain/{domainId}/queryCount:
+  ###################### 查看域名的解析次数 ######################
+    get:
+      description: "查看域名的解析次数"
+      operationId: getDomainQueryCount
+      parameters:
+        - name: domainName
+          in: query
+          type: string
+          required: true
+          description: 查询的域名
+        - name: start
+          in: query
+          type: string
+          required: true
+          description: 起始时间, UTC时间例如2017-11-10T23:00:00Z
+        - name: end
+          in: query
+          type: string
+          required: true
+          description: 终止时间, UTC时间例如2017-11-10T23:00:00Z
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  time:
+                    description: 时间序列
+                    type: array
+                    items:
+                      type: integer
+                  traffic:
+                    description: 数据序列
+                    type: array
+                    items:
+                      type: integer
+              requestId:
+                type: string
+                description: 此次请求的ID
+        400:
+          description: NOT_FOUND
+
+  /domain/{domainId}/queryTraffic:
+  ###################### 查看域名的统计信息 ######################
+    get:
+      description: "查看域名的查询流量"
+      operationId: getDomainQueryTraffic
+      parameters:
+        - name: domainName
+          in: query
+          type: string
+          required: true
+          description: 域名
+        - name: start
+          in: query
+          type: string
+          required: true
+          description: 起始时间, UTC时间例如2017-11-10T23:00:00Z
+        - name: end
+          in: query
+          type: string
+          required: true
+          description: 终止时间, UTC时间例如2017-11-10T23:00:00Z
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  time:
+                    description: 时间序列
+                    type: array
+                    items:
+                      type: integer
+                  unit:
+                    description: 数据的单位
+                    type: string
+                  traffic:
+                    description: 数据序列
+                    type: array
+                    items:
+                      type: number
+                      format: double                   
+              requestId:
+                type: string
+        400:
+          description: NOT_FOUND
+
+#路径通用参数
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: 实例所属的地域ID
+  domainId:
+    name: domainId
+    in: path
+    required: true
+    type: string
+    description: 域名ID

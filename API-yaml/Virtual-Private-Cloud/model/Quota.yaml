@@ -1,0 +1,18 @@
+swagger: "2.0"
+definitions:
+  quota:
+    x-jdcloud-module: vpc
+
+    properties:
+      type:
+        type: string
+        description: 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）
+      parentResourceId:
+        type: string
+        description: vpc、elastic_ip、network_interface为空, subnet、security_group、vpcpeering为vpcId
+      maxLimit:
+        type: number
+        description: 配额大小
+      count:
+        type: number
+        description: 已存在的资源数量

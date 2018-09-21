@@ -1,0 +1,51 @@
+swagger: "2.0"
+definitions:
+  cacheInstance:
+    x-jdcloud-module: redis
+    title: CacheInstance
+    type: object
+    properties:
+      cacheInstanceId:
+        type: string
+        description: 实例ID
+      cacheInstanceName:
+        type: string
+        description: 实例名称
+      cacheInstanceClass:
+        type: string
+        description: 实例规格代码，参见<a href="https://www.jdcloud.com/help/detail/411/isCatalog/1">实例规格代码</a>
+      cacheInstanceMemoryMB:
+        type: integer
+        description: 容量，单位MB
+      cacheInstanceStatus:
+        type: string
+        description: 实例状态，running：运行，error：错误，creating：创建中，changing：变配中，deleting：删除中
+      cacheInstanceDescription:
+        type: string
+        description: 实例描述
+      createTime:
+        type: string
+        format: date-time
+        description: 创建时间
+      azId:
+        $ref: "./AzId.yaml#/definitions/azId"
+        description: az信息
+      vpcId:
+        type: string
+        description: 所属VPC的ID
+      subnetId:
+        type: string
+        description: 所属子网的ID
+      connectionDomain:
+        type: string
+        description: 访问域名
+      port:
+        type: integer
+        description: 端口
+      charge:
+        $ref: "../../charge/model/Charge.yaml#/definitions/charge"
+        description: 计费信息
+      instanceVersion:
+        type: string
+        description: 实例版本
+

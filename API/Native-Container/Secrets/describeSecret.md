@@ -2,7 +2,8 @@
 
 
 ## 描述
-查询 secret 详情
+查询单个 secret 详情
+
 
 ## 请求方式
 GET
@@ -23,21 +24,21 @@ https://nc.jdcloud-api.com/v1/regions/{regionId}/secrets/{name}
 |名称|类型|描述|
 |---|---|---|
 |**requestId**|String||
-|**result**|[Result](##Result)||
+|**result**|Result||
 
 
-### <a name="Result">Result</a>
+### Result
 |名称|类型|描述|
 |---|---|---|
-|**secret**|[Secret](##Secret)||
-### <a name="Secret">Secret</a>
+|**secret**|Secret||
+### Secret
 |名称|类型|描述|
 |---|---|---|
 |**createdAt**|String|创建时间|
-|**data**|[DockerRegistryData](##DockerRegistryData)|机密的数据|
+|**data**|DockerRegistryData|机密的数据|
 |**name**|String|机密数据名称|
 |**type**|String|私密数据的类型，目前仅支持如下类型：docker-registry：用来和docker registry认证的类型|
-### <a name="DockerRegistryData">DockerRegistryData</a>
+### DockerRegistryData
 |名称|类型|描述|
 |---|---|---|
 |**email**|String|邮件地址|

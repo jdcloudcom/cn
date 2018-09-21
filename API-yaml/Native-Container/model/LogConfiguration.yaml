@@ -1,0 +1,14 @@
+swagger: "2.0"
+definitions:
+  logConfiguration:
+    x-jdcloud-module: nc
+    x-jdcloud-internal: false
+    type: object
+    description: 容器日志配置信息
+    properties:
+      logDriver:
+        type: string
+        description: 日志Driver名称  default：默认在本地分配10MB的存储空间，自动rotate
+      options:
+        $ref: "./LogOption.yaml#/definitions/logOption"
+        description: 日志Driver的配置选项

@@ -1,0 +1,13 @@
+swagger: "2.0"
+definitions:
+  disk:
+    x-jdcloud-module: jmr
+    title: disk
+    type: object
+    properties:
+      volumeType:
+        type: string
+        description: 磁盘容量类型
+      limit:
+        type: string
+        description: 最大磁盘容量

@@ -13,6 +13,7 @@ Authorization: signatureValue
 **请求参数**
 
 |名称|描述|
+|-|-|
 |prefix|限定返回的object key必须以prefix作为前缀。注意使用prefix查询时，返回的key中仍会包含prefix。<br>类型：字符串|
 
 **响应元素**
@@ -33,6 +34,7 @@ Authorization: signatureValue
 2.返回的结果按照Key和UploadId的字典序排序。  
 
 **请求示例**
+
 ```
 GET   /?uploads HTTP/1.1
 Date:   Wed, 12 Jul 2017 13:58:14 GMT
@@ -40,7 +42,9 @@ Authorization:   jingdong   298718BEDE59FF1B2E96A3152937D37B:YVbn+CqITQzQNRWzVKc
 Host: oss-test.s-bj.jcloud.com
 Connection:   Keep-Alive
 ```
+
 **返回示例**
+
 ```
 HTTP/1.1 200 OK
 Server: nginx

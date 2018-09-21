@@ -1,0 +1,33 @@
+swagger: "2.0"
+definitions:
+  rect:
+    x-jdcloud-module: jmr
+    title: rect
+    type: object
+    properties:
+      jobId:
+        type: integer
+      taskId:
+        type: string
+      taskType:
+        type: string
+      taskName:
+        type: string
+      taskDesc:
+        type: string
+      retryTimes:
+        type: integer
+        description: 任务失败重试次数
+      intervalTimes:
+        type: integer
+        description: 失败任务再次运行间隔
+      x:
+        type: number
+        format: double
+      y:
+        type: number
+        format: double
+      instanceStatus:
+        type: integer
+      instanceId:
+        type: integer

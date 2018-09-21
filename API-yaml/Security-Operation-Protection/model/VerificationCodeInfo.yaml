@@ -1,0 +1,14 @@
+swagger: "2.0"
+definitions:
+  verificationCodeInfo:
+    x-jdcloud-module: sop
+    required:
+      - action
+      - type
+    properties:
+      action:
+        type: string
+        description: 操作action serviceName:actionName
+      type:
+        type: integer
+        description: 验证dcd 方式：mobile-1  email-2

@@ -1,0 +1,58 @@
+swagger: "2.0"
+info:
+  description: 自定义监控项相关接口，提供自定义监控数据上报功能
+  title: 监控项自定义监控相关接口
+  version: "v1"
+consumes:
+- application/json
+produces:
+- application/json
+############################自定义监控接口、对应cm-put数据上报服务##############################
+###########################内部域名：cm-put.openapi.cn-north-1.jdcloud.com 网关地址：monitor.cn-north-1.jdcloud-api.com##############################
+###########################内部域名：cm-put.openapi.cn-south-1.jdcloud.com 网关地址：monitor.cn-south-1.jdcloud-api.com##############################
+########################## 内部域名：cm-put.openapi.cn-east-1.jdcloud.com 网关地址：monitor.cn-east-1.jdcloud-api.com##############################
+########################## 内部域名：cm-put.openapi.cn-east-2.jdcloud.com 网关地址：monitor.cn-east-2.jdcloud-api.com##############################
+paths:
+  /customMetrics:
+    ###################### 上报用户自定义监控数据 ######################
+    post:
+      description: 该接口为自定义监控数据上报的接口，方便您将自己采集的时序数据上报到云监控。可上报原始数据和已聚合的统计数据。支持批量上报方式。单次请求最多包含 50 个数据点；数据大小不超过 256k。
+      summary: 上报用户的监控数据
+      operationId: putMetricData
+      x-jdcloud-internal: false
+      parameters:
+      - name: metricDataList
+        in: body
+        description: "数据参数"
+        schema:
+          type: array
+          items:
+            $ref: "../model/MetricDataCm.yaml#/definitions/metricDataCm"
+      responses:
+        200:
+          description:  OK
+          schema:
+            properties:
+              requestId:
+                type: string
+                description: 请求的标识id
+              error:
+                type: object
+                description: 错误信息
+                items:
+                  $ref: '../model/ErrorCm.yaml#/definitions/error'
+              result:
+                properties:
+                  success:
+                    type: boolean
+                    description: 全部写入成功为true，否则为false
+                  errMetricDataList:
+                    type: array
+                    items:
+                      $ref: '../model/ErrMetricDataCm.yaml#/definitions/metricDataList'
+        400:
+          description: "invalid parameter"
+        429:
+          description: "quota exceed"
+        500:
+          description: "internal server error"

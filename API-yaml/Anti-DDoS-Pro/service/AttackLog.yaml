@@ -1,0 +1,349 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: "IP 高防攻击记录相关接口"
+  description: "IP 高防攻击记录相关接口"
+
+basePath: /regions/{regionId}
+
+paths:
+  /attacklog:ddos:
+    get:
+      description: "查询 DDos 攻击日志"
+      operationId: describeDDosAttackLogs
+      parameters:
+        - name: pageNumber
+          in: query
+          type: integer
+          required: false
+          description: "页码, 默认为1"
+        - name: pageSize
+          in: query
+          type: integer
+          required: false
+          description: "分页大小, 默认为10, 取值范围[10, 100]"
+        - name: startTime
+          in: query
+          type: string
+          required: true
+          description: "开始时间, 只能查询最近 60 天以内的数据, UTC 时间, 格式：yyyy-MM-dd'T'HH:mm:ssZ"
+        - name: endTime
+          in: query
+          type: string
+          required: true
+          description: "查询的结束时间, UTC 时间, 格式：yyyy-MM-dd'T'HH:mm:ssZ"
+        - name: instanceId
+          in: query
+          type: array
+          items:
+            type: string
+          description: "高防实例 ID"
+          required: false
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  dataList:
+                    type: array
+                    items:
+                      $ref: "../model/DDosAttackLog.yaml#/definitions/DDosAttackLog"
+                  currentCount:
+                    type: integer
+                    description: "当前页数量"
+                  totalCount:
+                    type: integer
+                    description: "实例总数"
+                  totalPage:
+                    type: integer
+                    description: "总页数"
+              requestId:
+                type: string
+  /attacklog:cc:
+    get:
+      description: "查询 CC 攻击日志"
+      operationId: describeCcAttackLogs
+      parameters:
+        - name: pageNumber
+          in: query
+          type: integer
+          required: false
+          description: "页码, 默认为1"
+        - name: pageSize
+          in: query
+          type: integer
+          required: false
+          description: "分页大小, 默认为10, 取值范围[10, 100]"
+        - name: startTime
+          in: query
+          type: string
+          required: true
+          description: "开始时间, 只能查询最近 60 天以内的数据, UTC 时间, 格式：yyyy-MM-dd'T'HH:mm:ssZ"
+        - name: endTime
+          in: query
+          type: string
+          required: true
+          description: "查询的结束时间, UTC 时间, 格式：yyyy-MM-dd'T'HH:mm:ssZ"
+        - name: instanceId
+          in: query
+          type: array
+          items:
+            type: string
+          description: "高防实例 ID"
+          required: false
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  dataList:
+                    type: array
+                    items:
+                      $ref: "../model/DDosAttackLog.yaml#/definitions/DDosAttackLog"
+                  currentCount:
+                    type: integer
+                    description: "当前页数量"
+                  totalCount:
+                    type: integer
+                    description: "实例总数"
+                  totalPage:
+                    type: integer
+                    description: "总页数"
+              requestId:
+                type: string
+
+  /attacklog:ccDetail:
+    get:
+      description: "查询 CC 攻击日志详情"
+      operationId: describeCcAttackLogDetails
+      parameters:
+        - name: pageNumber
+          in: query
+          type: integer
+          required: false
+          description: "页码, 默认为1"
+        - name: pageSize
+          in: query
+          type: integer
+          required: false
+          description: "分页大小, 默认为10, 取值范围[10, 100]"
+        - name: startTime
+          in: query
+          type: string
+          required: true
+          description: "开始时间, 只能查询最近 60 天以内的数据, UTC 时间, 格式：yyyy-MM-dd'T'HH:mm:ssZ"
+        - name: endTime
+          in: query
+          type: string
+          required: true
+          description: "查询的结束时间, UTC 时间, 格式：yyyy-MM-dd'T'HH:mm:ssZ"
+        - name: instanceId
+          in: query
+          type: string
+          description: "高防实例 ID"
+          required: true
+        - name: subDomain
+          in: query
+          type: array
+          items:
+            type: string
+          description: "子域名"
+          required: false
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  dataList:
+                    type: array
+                    items:
+                      $ref: "../model/CCAttackLogDetail.yaml#/definitions/CCAttackLogDetail"
+                  currentCount:
+                    type: integer
+                    description: "当前页数量"
+                  totalCount:
+                    type: integer
+                    description: "实例总数"
+                  totalPage:
+                    type: integer
+                    description: "总页数"
+              requestId:
+                type: string
+
+  /attacklog:ddos/download:
+    get:
+      description: "下载 DDos 攻击日志"
+      operationId: downloadDDosAttackLogs
+      parameters:
+        - name: startTime
+          in: query
+          type: string
+          required: true
+          description: "开始时间, 只能下载最近 60 天以内的数据, UTC 时间, 格式：yyyy-MM-dd'T'HH:mm:ssZ"
+        - name: endTime
+          in: query
+          type: string
+          required: true
+          description: "查询的结束时间, UTC 时间, 格式：yyyy-MM-dd'T'HH:mm:ssZ"
+        - name: instanceId
+          in: query
+          type: array
+          items:
+            type: string
+          description: "高防实例 ID"
+          required: false
+      responses:
+        200:
+          description: OK
+
+  /attacklog:cc/download:
+    get:
+      description: "下载 CC 攻击日志"
+      operationId: downloadCcAttackLogs
+      parameters:
+        - name: startTime
+          in: query
+          type: string
+          required: true
+          description: "开始时间, 只能下载最近 60 天以内的数据, UTC 时间, 格式：yyyy-MM-dd'T'HH:mm:ssZ"
+        - name: endTime
+          in: query
+          type: string
+          required: true
+          description: "查询的结束时间, UTC 时间, 格式：yyyy-MM-dd'T'HH:mm:ssZ"
+        - name: instanceId
+          in: query
+          type: array
+          items:
+            type: string
+          description: "高防实例 ID"
+          required: false
+      responses:
+        200:
+          description: OK
+
+  /attacklog:ccDetail/download:
+    get:
+      description: "下载 CC 攻击日志详情"
+      operationId: downloadCcAttackLogDetails
+      parameters:
+        - name: startTime
+          in: query
+          type: string
+          required: true
+          description: "开始时间, 只能下载最近 60 天以内的数据, UTC 时间, 格式：yyyy-MM-dd'T'HH:mm:ssZ"
+        - name: endTime
+          in: query
+          type: string
+          required: true
+          description: "查询的结束时间, UTC 时间, 格式：yyyy-MM-dd'T'HH:mm:ssZ"
+        - name: instanceId
+          in: query
+          type: string
+          description: "高防实例 ID"
+          required: true
+        - name: subDomain
+          in: query
+          type: array
+          items:
+            type: string
+          description: "子域名"
+          required: false
+      responses:
+        200:
+          description: OK
+
+  /attacklog/describeAttackStatistics:
+    get:
+      description: "查询攻击次数及流量峰值"
+      operationId: describeAttackStatistics
+      parameters:
+        - name: startTime
+          in: query
+          type: string
+          required: true
+          description: "开始时间, 只能查询最近 60 天以内的数据, UTC 时间, 格式：yyyy-MM-dd'T'HH:mm:ssZ"
+        - name: endTime
+          in: query
+          type: string
+          required: true
+          description: "查询的结束时间, UTC 时间, 格式：yyyy-MM-dd'T'HH:mm:ssZ"
+        - name: instanceId
+          in: query
+          type: array
+          items:
+            type: string
+          description: "高防实例 ID"
+          required: false
+        - name: type
+          in: query
+          type: integer
+          required: true
+          description: "攻击类型, 0 为 DDos, 1 为 CC"
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  flow:
+                    type: number
+                    format: float
+                    description: "攻击流量峰值"
+                  count:
+                    type: integer
+                    description: "攻击次数"
+                  unit:
+                    type: string
+                    description: "流量单位, bps、Kbps、Mbps、Gbps"
+              requestId:
+                type: string
+
+  /attacklog/describeAttackTypeCount:
+    get:
+      description: "查询各类型攻击次数"
+      operationId: describeAttackTypeCount
+      parameters:
+        - name: startTime
+          in: query
+          type: string
+          required: true
+          description: "开始时间, 只能查询最近 60 天以内的数据, UTC 时间, 格式：yyyy-MM-dd'T'HH:mm:ssZ"
+        - name: endTime
+          in: query
+          type: string
+          required: true
+          description: "查询的结束时间, UTC 时间, 格式：yyyy-MM-dd'T'HH:mm:ssZ"
+        - name: instanceId
+          in: query
+          type: array
+          items:
+            type: string
+          description: "高防实例 ID"
+          required: false
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                type: array
+                items:
+                  $ref: "../model/AttackTypeCount.yaml#/definitions/AttackTypeCount"
+              requestId:
+                type: string
+#路径通用参数
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: "Region ID"

@@ -1,0 +1,18 @@
+swagger: "2.0"
+definitions:
+  CCDefaultThresholds:
+    type: object
+    x-jdcloud-module: ipanti
+    properties:
+      hostQps:
+        type: integer
+        description: "每个 Host 的防护阈值"
+      hostUrlQps:
+        type: integer
+        description: "每个 Host + URL 的防护阈值"
+      ipHostQps:
+        type: integer
+        description: "每个源 IP 对 Host 的防护阈值"
+      ipHostUrlQps:
+        type: integer
+        description: "每个源 IP 对 Host + URI 的防护阈值"

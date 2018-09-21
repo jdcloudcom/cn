@@ -56,6 +56,7 @@ Authorization:   signatureValue#请参照“访问控制”
 4.OSS处理Complete Multipart Upload请求成功后，该Upload ID就会变成无效。
 
 **请求示例**
+
 ```
 POST   /multipart.data?uploadId=9FFFFF35C1535F7B HTTP/1.1
 Host: oss-example.s-bj.jcloud.com
@@ -80,7 +81,9 @@ Authorization: jingdong qbS5QXpLORrvdrmb:/Qq9QFSIEzaPPL5YgAkbHoXkTKc=
     ]
 }       
 ```
+
 **返回示例**
+
 ```
 HTTP/1.1 200 OK
 Server: nginx

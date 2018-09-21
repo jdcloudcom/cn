@@ -1,0 +1,39 @@
+swagger: "2.0"
+definitions:
+  metricDataCm:
+    x-jdcloud-module: monitor
+    required:
+      - namespace
+      - metric
+      - dimensions
+      - timestamp
+      - type
+      - values
+    type: object
+    properties:
+      namespace:
+        type: string
+        description: 命名空间 ，长度不超过255字节，只允许英文、数字、下划线_、点., [0-9][a-z] [A-Z] [. _ ]，  其它会返回err
+      metric:
+        description: 监控指标名称，长度不超过255字节，只允许英文、数字、下划线_、点.,  [0-9][a-z] [A-Z] [. _ ]， 其它会返回err
+        type: string
+      dimensions:
+        type: object
+        description: 数据维度，数据类型为map类型，支持最少一个，最多五个标签，总长度不大于255字节，只允许英文、数字、下划线_、点., [0-9][a-z] [A-Z] [. _ ]，  其它会返回err
+        additionalProperties:
+          type: string
+      timestamp:
+        type: integer
+        required: true
+        format: int64
+        description: 上报数据点的时间戳,只支持10位，秒级时间戳，不能写入过去30天的时间
+        required: true
+      type:
+        type: integer
+        required: true
+        description: 数据上报类型，1为原始值，2为聚合数据。当上报聚合数据时，建议为60s的周期时行上报、否则无法正常查询
+      values:
+        type: object
+        description: 指标值集合，数据类型必须为map类型，key为数据类型，value为数据值，当type=1时，key只能为”value”，上报的是原始值，当type=2时，K的值可以为"avg","sum","last","max","min","count"，只支持以上类型，否则会报错，value内容为整型或浮点型数字，最大值为9223372036854775807，count只支持>=0的数
+        additionalProperties:
+          type: string

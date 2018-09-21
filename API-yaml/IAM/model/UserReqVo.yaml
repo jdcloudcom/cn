@@ -1,0 +1,52 @@
+swagger: "2.0"
+definitions:
+  userReqVo:
+    x-jdcloud-module: iam
+    properties:
+      pin:
+        type: string
+        description: 用户pin
+      cscPhone:
+        type: string
+        description: 用户手机号
+      cscEmail:
+        type: string
+        description: 用户邮箱
+      name:
+        type: string
+        description: 用户名
+      userType:
+        type: integer
+        description: 用户类型
+      companyName:
+        type: string
+        description: 公司名
+      createTimeStart:
+        type: string
+        format: date-time
+        description: 起始时间
+      createTimeEnd:
+        type: string
+        format: date-time
+        description: 结束时间
+      arrearageStatus:
+        type: integer
+        description: 欠费状态：
+      groups:
+        type: string
+        description: 用户分组，多个逗号分隔:1-自然流量，2-内部测试，3-内部重点，4-渠道用户
+      group:
+        type: integer
+        description: 用户分组:1-自然流量，2-内部测试，3-内部重点，4-渠道用户
+      billingWhite:
+        type: integer
+        description: 计费白名单：1、在白名单  2、不在白名单
+      tag:
+        type: integer
+        description: 渠道等级;1普通用户2测试用户4VIP用户8其他VIP用户16boss迁移账户
+      pageSize:
+        type: integer
+        description: 页大小
+      currentPage:
+        type: integer
+        description: 当前页

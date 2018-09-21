@@ -1,0 +1,19 @@
+name: 媒体处理服务
+items:
+  - name: 接口概览
+    href: overview.md
+  - name: 更新历史
+    href: ChangeLog.md
+  - name: 媒体处理相关接口
+    items:
+      - name: createThumbnailTask
+        href: Media-Processing-APIs/createThumbnailTask.md
+      - name: getNotification
+        href: Media-Processing-APIs/getNotification.md
+      - name: getThumbnailTask
+        href: Media-Processing-APIs/getThumbnailTask.md
+      - name: listThumbnailTask
+        href: Media-Processing-APIs/listThumbnailTask.md
+      - name: setNotification
+        href: Media-Processing-APIs/setNotification.md
+  

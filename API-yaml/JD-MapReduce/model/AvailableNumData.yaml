@@ -1,0 +1,10 @@
+swagger: "2.0"
+definitions:
+  availableNumData:
+    x-jdcloud-module: jmr
+    title: availableNumData
+    type: object
+    properties:
+      serverNum:
+        type: integer
+        description: 可用服务数

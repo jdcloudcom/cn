@@ -1,0 +1,11 @@
+swagger: "2.0"
+definitions:
+  parameterList:
+    x-jdcloud-module: streambus
+    title: parameterList
+    type: object
+    properties:
+      pKey:
+        type: string
+      pValue:
+        type: string

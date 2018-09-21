@@ -1,0 +1,432 @@
+---
+swagger: '2.0'
+info:
+  description: "多媒体处理服务API，包括截图、转码、媒体处理消息通知等操作。本文档详细说明了媒体处理API及用法，适合开发人员阅读。"
+  version: "v1"
+  title: "媒体处理相关接口"
+basePath: "/regions/{regionId}"
+host: "mps.jdcloud.com"
+tags:
+- name: "thumbnail"
+  description: "截图"
+- name: "transcode"
+  description: "转码"
+- name: "notification"
+  description: "消息通知"
+parameters:
+  regionId:
+    name: "regionId"
+    in: "path"
+    required: true
+    type: "string"
+    description: "region id"
+paths:
+  /thumbnail:
+    post:
+      tags:
+      - "thumbnail"
+      summary: "Create MPS thumbnail task"
+      description: "创建截图任务，创建成功时返回任务ID。本接口用于截取指定时间点的画面。"
+      operationId: "createThumbnailTask"
+      parameters:
+      - name: "body"
+        in: "body"
+        x-jdcloud-tiered: false
+        schema:
+          $ref: "#/definitions/ThumbnailTask"
+      responses:
+        200:
+          x-jdcloud-tiered: false
+          description: "成功"
+          schema:
+            properties:
+              requestId:
+                type: "string"
+              result:
+                $ref: "#/definitions/ThumbnailTaskID"
+    get:
+      tags:
+      - "thumbnail"
+      summary: "List MPS thumbnail task"
+      description: "查询截图任务，返回满足查询条件的任务列表。"
+      operationId: "listThumbnailTask"
+      parameters:
+      - name: "status"
+        in: "query"
+        type: "string"
+        description: "task 状态 (PENDING, RUNNING, SUCCESS, FAILED)"
+        required: false
+        enum: 
+        - PENDING
+        - RUNNING
+        - SUCCESS
+        - FAILED
+      - name: "begin"
+        in: "query"
+        type: "string"
+        description: "开始时间 时间格式(GMT): yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        required: false
+      - name: "end"
+        in: "query"
+        type: "string"
+        description: "结束时间 时间格式(GMT): yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        required: false
+      - name: "marker"
+        in: "query"
+        type: "string"
+        description: "查询标记"
+        required: false
+      - name: "limit"
+        in: "query"
+        description: "查询记录数 [1, 1000]"
+        type: "integer"
+        default: 1000
+        required: false
+      responses:
+        200:
+          description: "成功"
+          x-jdcloud-tiered: false
+          schema:
+            properties:
+              requestId:
+                type: "string"
+              result:
+                $ref: "#/definitions/ThumbnailQuery"
+  /thumbnail/{taskId}:
+    parameters:
+    - name: "taskId"
+      in: "path"
+      description: "task id"
+      required: true
+      type: "string"
+    get:
+      tags:
+      - "thumbnail"
+      summary: "Get MPS thumbnail task"
+      description: "根据任务ID获取截图任务。"
+      operationId: "getThumbnailTask"
+      responses:
+        200:
+          description: "OK"
+          x-jdcloud-tiered: false
+          schema:
+            properties:
+              requestId:
+                type: "string"
+              result:
+                $ref: "#/definitions/ThumbnailTask"
+#   /thumbnail/{taskId}/status:
+#     parameters:
+#     - name: "taskId"
+#       in: "path"
+#       description: "task id"
+#       required: true
+#       type: "string"
+#     put:
+#       tags: 
+#       - "thumbnail"
+#       summary: "Update thumbnail task status"
+#       description: "更新 thumbnail task 状态"
+#       operationId: "putThumbnailTaskStatus"
+#       parameters: 
+#       - name: "body"
+#         in: "body"
+#         x-jdcloud-tiered: false
+#         schema:
+#           $ref: "#/definitions/ThumbnailStatus"
+#       responses:
+#         200:
+#           description: "OK"
+    
+  /notification:
+    put:
+      tags:
+      - "notification"
+      summary: "Set MPS Notification"
+      description: "设置媒体处理通知, 在设置Notification时会对endpoint进行校验, 设置时会对endpoint发一条SubscriptionConfirmation(x-jdcloud-message-type头)的通知, 要求把Message内容进行base64编码返回给系统(body)进行校验"
+      operationId: "setNotification"
+      parameters:
+      - name: "body"
+        in: "body"
+        x-jdcloud-tiered: false
+        schema:
+          $ref: "#/definitions/Notification"
+      responses:
+        200:
+          description: "成功"
+          x-jdcloud-tiered: false
+          schema:
+            properties:
+              requestId:
+                type: "string"
+    get:
+      tags:
+      - "notification"
+      summary: "Get MPS Notification"
+      description: "获取截图通知"
+      operationId: "getNotification"
+      responses:
+        200:
+          description: "成功"
+          x-jdcloud-tiered: false
+          schema:
+            properties:
+              requestId:
+                type: "string"
+              result: 
+                $ref: "#/definitions/Notification"
+#   /transcode/{taskId}/status:
+#     parameters:
+#     - name: "taskId"
+#       in: "path"
+#       required: true
+#       description: "任务Id"
+#       type: "string"
+#     put:
+#       tags:
+#       - "transcode"
+#       summary: "PUT MPS Transcode Status"
+#       description: "更新转码任务状态"
+#       operationId: "putMpsTranscodeStatus"
+#       parameters:
+#       - name: "body"
+#         in: "body"
+#         x-jdcloud-tiered: false
+#         schema:
+#           $ref: "#/definitions/TranscodeStatus"
+#       responses:
+#         200:
+#           description: "成功"
+
+definitions:
+  Notification:
+    x-jdcloud-module: mps
+    type: "object"
+    required:
+    - "enabled"
+    properties:
+      enabled:
+        type: "boolean"
+        example: true
+        description: "是否启用通知"
+      endpoint:
+        type: "string"
+        example: "http://xxx.yyy.com/notifications"
+        description: "通知endpoint, 当前支持http://和https://"
+      events:
+        type: "array"
+        description: "触发通知的事件集合 (mpsTranscodeComplete, mpsThumbnailComplete)"
+        items:
+          type: "string"
+          enum:
+          - "mpsTranscodeComplete"
+          - "mpsThumbnailComplete"
+        example: [mpsTranscodeComplete, mpsThumbnailComplete]
+      notifyStrategy:
+        type: "string"
+        description: "重试策略, BACKOFF_RETRY: 退避重试策略, 重试 3 次, 每次重试的间隔时间是 10秒 到 20秒 之间的随机值; EXPONENTIAL_DECAY_RETRY: 指数衰减重试, 重试 176 次, 每次重试的间隔时间指数递增至 512秒, 总计重试时间为1天; 每次重试的具体间隔为: 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 512 ... 512 秒(共167个512)"
+        enum: 
+        - "BACKOFF_RETRY"
+        - "EXPONENTIAL_DECAY_RETRY"
+        default: "BACKOFF_RETRY"
+      notifyContentFormat:
+        type: "string"
+        description: "描述了向 Endpoint 推送的消息格式, JSON: 包含消息正文和消息属性, SIMPLIFIED: 消息体即用户发布的消息, 不包含任何属性信息"
+        enum:
+        - "JSON"
+        - "SIMPLIFIED"
+        default: "SIMPLIFIED"
+  ThumbnailTask:
+    x-jdcloud-module: mps
+    type: "object"
+    required:
+    - "source"
+    - "target"
+    properties:
+      taskID:
+        type: "string"
+        description: "任务ID (readonly)"
+        readOnly: true
+      status:
+        type: "string"
+        description: "状态 (SUCCESS, ERROR, PENDDING, RUNNING) (readonly)"
+        readOnly: true
+        enum:
+        - "SUCCESS"
+        - "ERROR"
+        - "PENDDING"
+        - "RUNNING"
+      errorCode:
+        type: "integer"
+        description: "错误码 (readonly)"
+        readOnly: true
+      createdTime:
+        type: "string"
+        description: "任务创建时间 时间格式(GMT): yyyy-MM-dd’T’HH:mm:ss.SSS’Z’  (readonly)"
+        readOnly: true
+      lastUpdatedTime:
+        type: "string"
+        description: "任务创建时间 时间格式(GMT): yyyy-MM-dd’T’HH:mm:ss.SSS’Z’  (readonly)"
+        readOnly: true
+      source:
+        $ref: "#/definitions/ThumbnailTaskSource"
+      target:
+        $ref: "#/definitions/ThumbnailTaskTarget"
+      rule:
+        $ref: "#/definitions/ThumbnailTaskRule"
+  ThumbnailTaskSource:
+    x-jdcloud-module: mps
+    type: "object"
+    description: "视频截图源文件参数"
+    required:
+    - "bucket"
+    - "key"
+    properties:
+      bucket:
+        type: "string"
+        description: "输入视频信息的 bucket"
+      key:
+        type: "string"
+        description: "输入视频信息的 Key"
+  ThumbnailTaskTarget:
+    x-jdcloud-module: mps
+    type: "object"
+    description: "视频截图目标文件参数"
+    required:
+    - "destBucket"
+    properties:
+      destBucket:
+        type: "string"
+        description: "输入存放目标文件的 bucket"
+      destKeyPrefix:
+        type: "string"
+        description: "目标截图的Key的前缀, '前缀-taskID-%04d(num).(format)', 默认: sourceKey"
+      format:
+        type: "string"
+        description: "目标截图的格式 default: jpg"
+        enum:
+        - "jpg"
+        - "png"
+        - "webp"
+      widthInPixel:
+        type: "integer"
+        description: "目标截图的宽, 如果视频实际分辨率低于目标分辨率则按照实际分辨率输出 default: 0 代表源视频高 其他[8, 4096]"
+      heightInPixel:
+        type: "integer"
+        description: "目标截图的高, 如果视频实际分辨率低于目标分辨率则按照实际分辨率输出 default: 0 代表源视频高 其他[8, 4096]"
+      keys:
+        type: "array"
+        description: "目标截图的Key的集合 (readonly)"
+        readOnly: true
+        items:
+          type: "string"
+  ThumbnailTaskRule:
+    x-jdcloud-module: mps
+    type: "object"
+    description: "视频截图规则参数"
+    properties:
+      mode: 
+        type: "string"
+        description: "截图模式 单张: single 多张: multi 平均: average default: single"
+        enum:
+        - "single"
+        - "multi"
+        - "average"
+      keyFrame:
+        type: "boolean"
+        description: "是否开启关键帧截图 default: true"
+      startTimeInSecond:
+        type: "integer"
+        description: "生成截图的开始时间, mode=average 时不可选. default:0"
+      endTimeInSecond:
+        type: "integer"
+        description: "生成截图的结束时间, mode=single/average时不可选, 且不得小于startTimeInSecond. default:-1(代表视频时长)"
+      count:
+        type: "integer"
+        description: "截图数量, mode=single时不可选. default:1"
+  ThumbnailTaskID:
+    x-jdcloud-module: mps
+    type: "object"
+    properties:
+      taskID:
+        type: "string"
+  ThumbnailQuery:
+    x-jdcloud-module: mps
+    type: "object"
+    properties:
+      status:
+        type: "string"
+        description: "状态 (SUCCESS, ERROR, PENDDING, RUNNING)"
+        enum:
+        - "SUCCESS"
+        - "ERROR"
+        - "PENDDING"
+        - "RUNNING"
+      begin:
+        type: "string"
+        description: "查询开始时间 时间格式(GMT): yyyy-MM-dd’T’HH:mm:ss.SSS’Z’"
+      end:
+        type: "string"
+        description: "查询结束时间 时间格式(GMT): yyyy-MM-dd’T’HH:mm:ss.SSS’Z’"
+      marker:
+        type: "string"
+        description: "本次请求的marker, 标记查询的起始位置, 此处为taskID"
+      limit:
+        type: "integer"
+        description: "本次请求返回的任务列表的最大元素个数, 有效值: [1-1000]，默认值: 1000"
+      nextMarker:
+        type: "string"
+        description: "获取下一页所需要传递的marker值(此处为taskID), 仅当isTruncated为true时(数据未全部返回)出现 (readonly)"
+        readOnly: true
+      truncated:
+        type: "boolean"
+        description: "指明返回数据是否被截断. true表示本页后面还有数据, 即数据未全部返回; false表示已是最后一页, 即数据已全部返回 (readonly)"
+        readOnly: true
+      taskList:
+        type: "array"
+        description: "返回的task列表 (readonly)"
+        readOnly: true
+        items:
+          $ref: "#/definitions/ThumbnailTask"
+  ThumbnailStatus:
+    x-jdcloud-module: mps
+    type: "object"
+    required: 
+    - "status"
+    properties:
+      status:
+        type: "string"
+        description: "状态 (SUCESS, ERROR, PENDDING, RUNNING)"
+        enum: 
+        - "SUCESS"
+        - "ERROR"
+        - "PENDDING"
+        - "RUNNING"
+      errorCode:
+        type: "integer"
+        description: "错误码"
+      count:
+        type: "integer"
+        description: "成功时生成的截图文件个数"
+  TranscodeStatus:
+    x-jdcloud-module: mps
+    type: "object"
+    required: 
+    - "status"
+    properties:
+      status:
+        type: "string"
+        description: "状态 (SUCESS, ERROR, PENDDING, RUNNING)"
+        enum: 
+        - "SUCESS"
+        - "ERROR"
+        - "PENDDING"
+        - "RUNNING"
+      errorCode:
+        type: "integer"
+        description: "错误码"
+      notifyMessage:
+        type: "string"
+        description: "通知消息, 由work调用, 暂时方案"
+schemes:
+ - http

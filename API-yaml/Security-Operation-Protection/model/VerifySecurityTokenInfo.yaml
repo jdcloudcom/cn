@@ -1,0 +1,10 @@
+swagger: "2.0"
+definitions:
+  verifySecurityTokenInfo:
+    x-jdcloud-module: sop
+    required:
+      - action
+    properties:
+      action:
+        type: string
+        description: 操作action serviceName:actionName

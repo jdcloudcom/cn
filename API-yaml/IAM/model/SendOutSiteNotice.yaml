@@ -1,0 +1,34 @@
+swagger: "2.0"
+definitions:
+  sendOutSiteNotice:
+    x-jdcloud-module: iam
+    required:
+      - pin
+      - notifyBusinessTypeEnum
+      - templateId
+      - templateParam
+      - smsMessageSource
+    properties:
+      pin:
+        type: string
+        description: 用户pin
+      emailSubject:
+        type: string
+        description: 邮件标题
+      emailContent:
+        type: string
+        description: 邮件内容
+      notifyBusinessTypeEnum:
+        type: string
+        description: 消息类型
+      templateId:
+        type: integer
+        description: 模版code
+      templateParam:
+        type: array
+        items:
+          type: string
+        description: 模版参数
+      smsMessageSource:
+        type: string
+        description: 业务编码(和产品申请)

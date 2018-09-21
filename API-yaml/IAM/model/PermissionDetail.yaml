@@ -1,0 +1,16 @@
+swagger: "2.0"
+definitions:
+  permissionDetail:
+    x-jdcloud-module: iam
+    required:
+      - permission
+      - resource
+    properties:
+      permission:
+        type: string
+        description: 权限类型，只读-R、删除-D、修改-M
+      resource:
+        type: array
+        items:
+          $ref: "./Resource.yaml#/definitions/resource"
+        description: 资源信息

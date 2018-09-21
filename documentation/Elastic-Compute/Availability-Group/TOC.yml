@@ -1,0 +1,73 @@
+  name: 高可用组
+  href: 
+  items:
+  - name: 产品简介
+    items:
+    - name: 产品概述
+      href: Introduction/Product-Overview.md
+    - name: 核心概念
+      href: Introduction/Core-Concepts.md
+    - name: 产品优势
+      href: Introduction/Benefits.md
+    - name: 产品功能
+      href: Introduction/Features.md
+    - name: 限制说明 
+      href: Introduction/Restrictions.md
+    - name: 应用场景 
+      href: Introduction/Scenarios.md    
+  - name: 产品定价
+    items:
+    - name: 计费概述
+      href: Pricing/Billing-Overview.md
+  - name: 入门指南
+    href: Getting-Start.md
+  - name: 操作指南
+    items:
+    - name: 创建高可用组
+      href: /Operation-Guide/Create-AG.md
+    - name: 修改实例模板
+      href: /Operation-Guide/Modify-Instance-Template.md
+    - name: 自动伸缩
+      items:
+      - name: 自动伸缩概述
+        href: /Operation-Guide/Auto-Scaling/Auto-Scaling-Overview.md
+      - name: 开启自动伸缩
+        href: /Operation-Guide/Auto-Scaling/Enable-AS.md
+      - name: 关闭自动伸缩
+        href: /Operation-Guide/Auto-Scaling/Disable-AS.md
+      - name: 修改自动伸缩
+        href: /Operation-Guide/Auto-Scaling/Modify-AS-Attributes.md
+      - name: 创建自动伸缩策略
+        href: /Operation-Guide/Auto-Scaling/Create-AS-Strategy.md
+      - name: 启用自动伸缩策略
+        href: /Operation-Guide/Auto-Scaling/Enable-AS-Strategy.md
+      - name: 禁用自动伸缩策略
+        href: /Operation-Guide/Auto-Scaling/Disable-AS-Strategy.md
+      - name: 手动添加实例
+        href: /Operation-Guide/Add-Instance-Manually.md
+      - name: 手动移除实例
+        href: /Operation-Guide/Remove-Instance-Manually.md
+      - name: 删除高可用组
+        href: /Operation-Guide/Delete-AG.md
+  - name: 最佳实践
+    items:
+    - name: 最佳配置
+      href: Best-Practices/Best-configuration-recommendation.md
+    - name: 配置开机自启动
+      href: Best-Practices/Auto-Enable-Services-on-Startup.md
+    - name: 设置固定出口IP
+      href: Best-Practices/Set-Static-Outbound-IP.md
+  - name: 教程
+    status: 0
+    items:     
+  - name: API参考
+    status: 0
+    href:
+  - name: SDK参考
+    status: 0
+    href:
+  - name: FAQ
+    status: 0
+    href: 
+  - name: 相关资源
+    status: 0

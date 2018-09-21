@@ -1,0 +1,33 @@
+swagger: "2.0"
+definitions:
+  InstanceSpec:
+    type: object
+    x-jdcloud-module: ipanti
+    properties:
+      name:
+        type: string
+        description: 实例名称
+      buyType:
+        type: integer
+        description: 购买类型：1新购 3升级
+      timeUnit:
+        type: integer
+        description: 购买时长单位：3月 4年
+      timeSpan:
+        type: integer
+        description: 购买时长跨度
+      carrier:
+        type: string
+        description: 线路：TELECOM为电信线路，UNICOM为联通线路，CMCC为移动线路
+      bp:
+        type: integer
+        description: 保底带宽：单位Gbps
+      ep:
+        type: integer
+        description: 弹性带宽：单位Gbps
+      bw:
+        type: integer
+        description: 业务带宽：单位Mbps
+      returnUrl:
+        type: string
+        description: 支付成功后跳转的页面，控制台交互模式传该字段

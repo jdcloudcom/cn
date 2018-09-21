@@ -1,0 +1,13 @@
+swagger: "2.0"
+definitions:
+  addNetworkSecurityGroupRulesSpec:
+    x-jdcloud-module: vpc
+    required:
+      - networkSecurityGroupRuleSpecs
+    properties:
+      networkSecurityGroupRuleSpecs:
+        type: array
+        items:
+          $ref: "./AddSecurityGroupRules.yaml#/definitions/addSecurityGroupRules"
+        description: 安全组规则信息
+        

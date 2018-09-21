@@ -1,0 +1,75 @@
+swagger: "2.0"
+definitions:
+  instanceSpec:
+    x-jdcloud-module: cps
+    title: instanceSpec
+    type: object
+    required:
+      - az
+      - deviceType
+      - imageType
+      - osTypeId
+      - sysRaidTypeId
+      - dataRaidTypeId
+      - networkType
+      - name
+      - password
+      - count
+      - charge
+    properties:
+      az:
+        type: string
+        description: "可用区, 如 cn-east-1"
+      deviceType:
+        type: string
+        description: "实例类型, 如 cps.c.normal"
+      imageType:
+        type: string
+        description: "镜像类型, 取值范围：standard、standard_app"
+      osTypeId:
+        type: string
+        description: "操作系统类型ID"
+      sysRaidTypeId:
+        type: string
+        description: "系统盘RAID类型ID"
+      dataRaidTypeId:
+        type: string
+        description: "数据盘RAID类型ID"
+      subnetId:
+        type: string
+        description: "子网编号"
+      enableInternet:
+        type: string
+        default: "yes"
+        description: "是否启用外网，取值范围：yes、no"
+      networkType:
+        type: string
+        description: "网络类型，目前只支持basic"
+      cidr:
+        type: string
+        description: "网络CIDR"
+      lineType:
+        type: string
+        description: "外网链路类型, 目前只支持bgp"
+      bandwidth:
+        type: integer
+        description: "外网带宽, 范围[1,200] 单位Mbps"
+      name:
+        type: string
+        description: "云物理服务器名称"
+      description:
+        type: string
+        description: "云物理服务器描述"
+      password:
+        type: string
+        description: "密码"
+      count:
+        type: integer
+        description: "购买数量"
+      charge:
+        $ref: "../../charge/model/ChargeSpec.yaml#/definitions/chargeSpec"
+        description: 计费配置
+      softwares:
+        type: array
+        items:
+          $ref: "../model/Software.yaml#/definitions/software"

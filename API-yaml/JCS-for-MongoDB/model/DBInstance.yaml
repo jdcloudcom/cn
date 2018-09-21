@@ -1,0 +1,78 @@
+swagger: "2.0"
+definitions:
+  DBInstance:
+    x-jdcloud-module: mongodb
+    title: DBInstance
+    type: object
+    properties:
+      instanceId:
+        type: string
+        description: 实例ID
+      instanceName:
+        type: string
+        description: 实例名称
+      engine:
+        type: string
+        description: 数据库类型
+      engineVersion:
+        type: string
+        description: 数据库版本
+      instanceClass:
+        type: string
+        description: 实例规格代码
+      instanceStorageGB:
+        type: integer
+        description: 存储空间
+      instanceCPU:
+        type: integer
+        description: CPU核数
+      instanceMemoryGB:
+        type: integer
+        description: 内存，单位GB
+      azId:
+        type: array
+        items:
+          type: string
+        description: 可取区ID，依次为主、从、隐藏节点所在可用区
+      vpcId:
+        type: string
+        description: VPCID
+      subnetId:
+        type: string
+        description: 子网ID
+      replicaSetName:
+        type: string
+        description: 副本集名称
+      instanceDomain:
+        type: string
+        description: 域名
+      DBName:
+        type: string
+        description: 默认库名
+      accountName:
+        type: string
+        description: 默认用户名
+      instancePort:
+        type: string
+        description: 应用访问端口
+      instanceStatus:
+        type: string
+        description: 实例状态.RUNNING：运行, ERROR：错误 ,BUILDING：创建中, DELETING：删除中, RESTORING：恢复中, RESIZING：变配中
+      backupRetentionPeriod:
+        type: integer
+        description: 自动备份保留时间
+      createTime:
+        type: string
+        description: 创建时间
+      preferredBackupWindow:
+        type: string
+        description: 自动备份时间，如：00:00-02:00，表示0点到2点进行数据库自动备份
+      preferredmaintenanceWindow:
+        type: string
+        description: 系统维护时间，如：00:00-02:00，表示0点到2点进行系统维护
+      charge:
+        $ref: "../../charge/model/Charge.yaml#/definitions/charge"
+        description: 计费信息
+      isSetSecurityIps:
+        type: boolean
+        description: 是否设置白名单，true：已设置，false：未设置

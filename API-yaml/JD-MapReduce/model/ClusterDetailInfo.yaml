@@ -1,0 +1,62 @@
+swagger: "2.0"
+definitions:
+  clusterDetailInfo:
+    x-jdcloud-module: jmr
+    title: clusterDetailInfo
+    type: object
+    properties:
+      materNum:
+        type: integer
+        description: Master节点数量
+      masterCore:
+        type: integer
+        required: true
+        description: Master节点CPU
+      masterMemory:
+        type: integer
+        required: true
+        description: Master节点内存（推荐至少8G内存，否则服务可能会部署失败）
+      masterDiskType:
+        type: string
+        description: |
+                  "Master节点云盘类型，可传类型为（以下以“/”分割各类型）"
+                  "NBD/NBD_SATA"
+                  "分别代表：性能型/容量型"
+      masterDiskVolume:
+        type: integer
+        description: Master节点云盘容量，必须是10的整数倍，且大于20小于3000
+      masterInstanceType:
+        type: string
+        required: true
+        description: Master节点规格，比如：g.n1.xlarge，更多规格请参考[文档](https://www.jdcloud.com/help/detail/296/isCatalog/1)
+      masterInstanceInfo:
+        type: string
+        description: master节点实例信息
+      slaveNum:
+        type: integer
+        required: true
+        description: Slave节点数量
+      slaveCore:
+        type: integer
+        required: true
+        description: Slave节点CPU
+      slaveMemory:
+        type: integer
+        required: true
+        description: Slave节点内存(推荐至少4G内存，否则服务可能会部署失败)
+      slaveDiskType:
+        type: string
+        description: |
+            "Slave节点云盘类型，可传类型为（以下以“/”分割各类型）"
+            "NBD/NBD_SATA"
+            "分别代表：性能型/容量型"
+      slaveDiskVolume:
+        type: integer
+        description: Slave节点云盘容量，必须是10的整数倍，且大于20小于3000
+      slaveInstanceType:
+        type: string
+        required: true
+        description: Slave节点规格，比如：g.n1.xlarge，更多规格请参考[文档](https://www.jdcloud.com/help/detail/296/isCatalog/1)
+      slaveInstanceInfo:
+        type: string
+        description: Slave节点实例信息

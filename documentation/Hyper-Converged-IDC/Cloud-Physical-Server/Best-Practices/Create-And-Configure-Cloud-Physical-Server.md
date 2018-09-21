@@ -22,7 +22,7 @@
 **3、 选取镜像。**
 
 例如，现阶段支持“标准镜像”和“标准镜像+应用”两种镜像类型。
-其中“标准镜像”支持CentOS7.2和6.6，Ubuntu支持16.04和14.04；“标准镜像+应用”支持CentOS7.2和CentOS6.6下的Nginx、MySQL和RabbitMQ三个应用。
+其中“标准镜像”支持CentOS7.1、7.2、7.5和6.6，Ubuntu 16.04和14.04；“标准镜像+应用”支持CentOS7.2和CentOS6.6下的Nginx、MySQL和RabbitMQ三个应用。
 
 ![镜像选择](https://github.com/jdcloudcom/cn/blob/edit/image/Hyper-Converged-IDC/Cloud-Physical-Server/CPS014.png)
 
@@ -37,7 +37,7 @@
 
 内网网卡和公网网卡均为万兆网卡。京东云数据中心底层数据网络为万兆，保证内网通信质量。京东云提供高质量的BGP网络，可享受极速带宽体验。用户可调节公网IP带宽。
 
-**公网**：主机必须且只能绑定一个公网IP。公网IP由系统自动分配。用户不可以修改公网IP。创建时不展示公网IP地址。创建后在列表页和详情页展示公网IP地址。公网1-200Mbps，具体操作步骤参见调整公网带宽章节。
+**公网**：主机必须且只能绑定一个公网IP。公网IP由系统自动分配。用户不可以修改公网IP。创建时不展示公网IP地址。创建后在列表页和详情页展示公网IP地址。公网1-200Mbps，具体操作步骤参见[调整公网带宽](../Operation-Guide/Adjust-Public-Network-Bandwidth/Description.md)章节。
 
 **内部网络**：基础网络模式下，用户只有第一次配置网络的时候可以选择内网CIDR地址段。后续创建的云物理服务器将使用第一次配置的内网CIDR地址段。
 
@@ -50,7 +50,7 @@
 ![配置网络](https://github.com/jdcloudcom/cn/blob/edit/image/Hyper-Converged-IDC/Cloud-Physical-Server/CPS017.png)
 
 **6、 配置服务器基本信息**：
-配置服务器名称、描述、操作系统密码
+配置服务器名称、描述、操作系统密码。
 
 ![配置服务器](https://github.com/jdcloudcom/cn/blob/edit/image/Hyper-Converged-IDC/Cloud-Physical-Server/CPS018.png)
 

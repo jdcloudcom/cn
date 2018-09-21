@@ -4,10 +4,10 @@
 每个主账号可拥有 5 组有效访问密钥，每个 IAM 用户可拥有 2 组有效的访问密钥，这在您必须轮换用户的访问密钥时非常有用。您可以禁用用户的访问密钥，这意味着该密钥不能用于 API  调用，在轮换密钥或取消用户对 API 的访问时，可以执行此操作。您可以随时删除访问密钥，不过，当您删除访问密钥时，意味着永久删除且无法恢复。
 
 主账户的 Access Key 管理
-<div align=center><img src=https://github.com/jdcloudcom/cn/blob/edit/image/User/Account%20Management/AccessKey%20Management/%E4%B8%BB%E8%B4%A6%E6%88%B7%E7%9A%84Accesskey%E7%AE%A1%E7%90%86.png></div>
+![](../../../image/User/Account%20Management/AccessKey%20Management/%E4%B8%BB%E8%B4%A6%E6%88%B7%E7%9A%84Accesskey%E7%AE%A1%E7%90%86.png)
 
 主账号为子账号管理 Access Key
-<div align=center><img src=https://github.com/jdcloudcom/cn/blob/edit/image/User/Account%20Management/AccessKey%20Management/%E4%B8%BB%E8%B4%A6%E6%88%B7%E7%9A%84Accesskey%E7%AE%A1%E7%90%86.png></div>
+![](../../../image/User/Account%20Management/AccessKey%20Management/%E4%B8%BB%E8%B4%A6%E6%88%B7%E7%9A%84Accesskey%E7%AE%A1%E7%90%86.png)
 
 子账号的 Access Key管理
-<div align=center><img src=https://github.com/jdcloudcom/cn/blob/edit/image/User/Account%20Management/AccessKey%20Management/%E5%AD%90%E8%B4%A6%E5%8F%B7%E7%9A%84Accesskey%E7%AE%A1%E7%90%86.png></div>
+![](../../../image/User/Account%20Management/AccessKey%20Management/%E5%AD%90%E8%B4%A6%E5%8F%B7%E7%9A%84Accesskey%E7%AE%A1%E7%90%86.png)

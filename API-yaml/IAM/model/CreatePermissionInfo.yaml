@@ -1,0 +1,20 @@
+swagger: "2.0"
+definitions:
+  createPermissionInfo:
+    x-jdcloud-module: iam
+    required:
+      - name
+      - version
+      - content
+    properties:
+      name:
+        type: string
+        description: 权限名称，1~32位数字、字母、中文、下划线、下划线、中划线
+      description:
+        type: string
+        description: 描述，0~256个字符
+      content:
+        type: array
+        items:
+          $ref: "./PermissionDetail.yaml#/definitions/permissionDetail"
+        description: 权限详细信息

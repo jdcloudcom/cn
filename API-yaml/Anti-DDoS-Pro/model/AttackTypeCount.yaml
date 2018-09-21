@@ -1,0 +1,12 @@
+swagger: "2.0"
+definitions:
+  AttackTypeCount:
+    type: object
+    x-jdcloud-module: ipanti
+    properties:
+      type:
+        type: string
+        description: "攻击类型"
+      count:
+        type: integer
+        description: "攻击次数"

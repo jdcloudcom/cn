@@ -1,0 +1,26 @@
+swagger: "2.0"
+definitions:
+  orderStatus:
+    x-jdcloud-module: redis
+    description: 订单状态
+    type: object
+    properties:
+      total:
+        type: integer
+        description: 订单总数
+      success:
+        type: integer
+        description: 成功数
+      fail:
+        type: integer
+        description: 失败数
+      inProcess:
+        type: integer
+        description: 正在处理数
+      resourceIds:
+        type: array
+        description: 成功的资源Id
+        items:
+          type: string
+            
+      

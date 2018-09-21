@@ -1,0 +1,62 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: 缓存Redis实例规格接口
+  description: 缓存Redis实例规格相关接口
+
+basePath: /regions/{regionId}
+
+paths:
+  "/instanceClass":
+    ###################### 查询规格列表 ######################
+    get:
+      description: "查询某区域下的实例规格列表"
+      operationId: describeInstanceClass
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  instanceClasses:
+                    type: array
+                    items:
+                      $ref: "../model/InstanceClass.yaml#/definitions/instanceClass"
+                  totalCount:
+                    type: integer
+              requestId:
+                type: string
+
+    ###################### 修改规格 ######################
+    patch:
+      description: "修改规格"
+      operationId: modifyInstanceClass
+      x-jdcloud-internal: true
+      parameters:
+        - name: instanceClass
+          in: query
+          required: true
+          type: string
+          description: 规格代码
+        - name: actionType
+          in: query
+          required: true
+          type: integer
+          description: 操作，1可见，0无效，-1不可见
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              requestId:
+                type: string
+
+#路径通用参数
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: Region ID

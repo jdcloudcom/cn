@@ -1,0 +1,14 @@
+swagger: "2.0"
+definitions:
+  associateElasticIpSpec:
+    x-jdcloud-module: vpc
+    properties:
+      elasticIpId:
+        type: string
+        description: 绑定的弹性Ip Id
+      privateIpAddress:
+        type: string
+        description: 绑定弹性Ip到指定的privateIp
+      elasticIpAddress:
+        type: string
+        description: 绑定的弹性Ip地址

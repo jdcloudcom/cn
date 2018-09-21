@@ -1,0 +1,36 @@
+swagger: "2.0"
+definitions:
+  instanceNetworkInterface:
+    x-jdcloud-module: nc
+    x-jdcloud-internal: false
+    type: object
+    description: 描述实例的网卡信息
+    properties:
+      networkInterfaceId:
+        type: string
+        description: 弹性网卡ID
+      macAddress:
+        type: string
+        description: 以太网地址
+      vpcId:
+        type: string
+        description: 虚拟网络ID
+      description:
+        type: string
+        description: 描述
+      securityGroups:
+        type: array
+        items:
+          $ref: "./SecurityGroupSimple.yaml#/definitions/securityGroupSimple"
+        description: 安全组列表
+      sanityCheck:
+        type: boolean
+        description: 源和目标IP地址校验，取值为0或者1
+      primaryIp:
+        $ref: "./NetworkInterfacePrivateIp.yaml#/definitions/networkInterfacePrivateIp"
+        description: 网卡主IP
+      secondaryIps:
+        type: array
+        items:
+          $ref: "./NetworkInterfacePrivateIp.yaml#/definitions/networkInterfacePrivateIp"
+        description: 

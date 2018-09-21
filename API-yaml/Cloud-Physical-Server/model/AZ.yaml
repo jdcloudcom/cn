@@ -1,0 +1,16 @@
+swagger: "2.0"
+definitions:
+  az:
+    x-jdcloud-module: cps
+    title: az
+    type: object
+    properties:
+      region:
+        type: string
+        description: "地域代码，如 cn-east-1"
+      az:
+        type: string
+        description: "可用区代码，如 cn-east-1a"
+      azName:
+        type: string
+        description: "可用区名称"

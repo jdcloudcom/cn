@@ -1,0 +1,22 @@
+swagger: "2.0"
+definitions:
+  elasticIpSpec:
+    x-jdcloud-module: vpc
+    required:
+      - bandwidthMbps
+      - provider
+    properties:
+      bandwidthMbps:
+        type: integer
+        description: 弹性公网IP的限速（单位：Mbps），取值范围为[1-200]
+      provider:
+        type: string
+        #todo: define common enums for referrence
+        enum:
+          - "BGP"
+          - "NO_BGP"
+        description: IP服务商，取值为bgp或no_bgp，cn-north-1：bgp；cn-south-1：[bgp，no_bgp]；cn-east-1：[bgp，no_bgp]；cn-east-2：bgp
+      chargeSpec:
+        #$ref: "/jcloud-open-api/charge/model/ChargeSpec.yaml#/definitions/chargeSpec"
+        $ref: "../../charge/model/ChargeSpec.yaml#/definitions/chargeSpec"
+        description: 计费配置

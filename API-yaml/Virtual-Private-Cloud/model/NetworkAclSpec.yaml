@@ -1,0 +1,17 @@
+swagger: "2.0"
+definitions:
+  networkAclSpec:
+    x-jdcloud-module: vpc
+    required:
+      - vpcId
+      - networkAclName
+    properties:
+      vpcId:
+        type: string
+        description: 私有网络id
+      networkAclName:
+        type: string
+        description: networkAcl名称
+      description:
+        type: string
+        description: "描述,允许输入UTF-8编码下的全部字符，不超过256字符"

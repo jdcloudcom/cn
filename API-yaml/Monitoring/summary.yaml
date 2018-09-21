@@ -1,0 +1,8 @@
+swagger: "2.0"
+info:
+  description: 云监控相关接口，主要包含监控规则的增删改查，以及监控项数据的查询
+  title: 云监控
+  version: "v1"
+host: monitor.jdcloud-api.com
+x-jdcloud-version: v1
+x-jdcloud-revision: "1.1.1"

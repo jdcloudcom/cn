@@ -1,0 +1,14 @@
+swagger: "2.0"
+definitions:
+  jobViewListData:
+    x-jdcloud-module: jmr
+    title: jobViewListData
+    type: object
+    properties:
+      totalNum:
+        type: integer
+        description: 查询的列表size
+      jobList:
+        type: array
+        items:
+          $ref: "../model/JmrJobViewModel.yaml#/definitions/jmrJobViewModel"

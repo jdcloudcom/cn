@@ -1,0 +1,15 @@
+  name: 安全说明
+  href: 
+  items:
+  - name: 安全漏洞说明
+    items:
+      - name: Intel处理器Meltdown和Spectre安全漏洞建议修复方案
+        href: Security-Vulnerability-Instruction/Intel-Meltdown-Spectre-Solution.md
+      - name: NTP服务和Monlist漏洞
+        href: Security-Vulnerability-Instruction/NTP-Monlist-Vulnerability.md
+  - name: 安全最佳实践
+    items:
+      - name: 僵尸主机的隔离防护和安全建议
+        href: Security-Best-Practice/Isolation-Protection-And-Security-Recommendations-For-Botnets.md
+      - name: 云主机公网TCP 25 端口出方向被限制？
+        href: Security-Best-Practice/Why-Is-Port-25-Of-SMTP-Service-Unavailable.md

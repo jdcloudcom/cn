@@ -1,1 +1,9 @@
-
+  name: 平台协议
+  href: 
+  items:
+  - name: 用户注册协议
+    href: Registration-Agreement.md
+  - name: 用户服务协议
+    href: Service-Agreement.md
+  - name: 京东云隐私策略
+    href: Privacy-Policy.md

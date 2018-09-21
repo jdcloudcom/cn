@@ -1,9 +1,10 @@
-- name: 视频直播 Live-Video
-  href: 
+name: 视频直播
+href:
+items:
 - name: 产品简介
   items:
     - name: 产品概述
-      href: Introduction/What-Is-Live-Video.md
+      href: Introduction/Product-Overview.md
     - name: 核心概念
       href: Introduction/Core-Concepts.md
     - name: 基础架构
@@ -11,7 +12,7 @@
     - name: 产品优势
       href: Introduction/Benefits.md
     - name: 产品功能
-      href: Introduction/Functions.md
+      href: Introduction/Features.md
     - name: 限制说明
       href: Introduction/Restrictions.md
     - name: 应用场景 
@@ -63,24 +64,20 @@
 - name: 最佳实践
   items:
     - name: 使用FMLE工具推流
-      href: Best-Practices/Push with the FMLE tool.md
+      href: Best-Practices/Push-with-the-FMLE-tool.md
     - name: 使用Xsplit工具推流
-      href: Best-Practices/Push with the Xsplit tool.md
+      href: Best-Practices/Push-with-the-Xsplit-tool.md
     - name: 使用OBS工具推流
-      href: Best-Practices/Push with the obs tool.md
+      href: Best-Practices/Push-with-the-OBS-tool.md
 - name: 教程
   items:
   status: 0
 - name: 问题排查
   items:
     - name: 推流连接失败
-      href: Troubleshooting/Push connection failed.md  
+      href: Troubleshooting/Push-connection-failed.md  
 - name: 常见问题
   href: FAQ/FAQ.md
-- name: API参考
-  href:
-- name: SDK参考
-  href:
 - name: 相关资源
   items:
     - name: 文档历史记录

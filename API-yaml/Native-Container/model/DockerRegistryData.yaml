@@ -1,0 +1,24 @@
+swagger: "2.0"
+definitions:
+  dockerRegistryData:
+    x-jdcloud-module: nc
+    x-jdcloud-internal: false
+    type: object
+    description: secret 的数据
+    required:
+      - server
+      - username
+      - password
+    properties:
+      server:
+        type: string
+        description: registry服务器地址
+      username:
+        type: string
+        description: 用户名
+      password:
+        type: string
+        description: 密码 
+      email:
+        type: string
+        description: 邮件地址

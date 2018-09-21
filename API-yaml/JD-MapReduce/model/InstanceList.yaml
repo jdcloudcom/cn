@@ -1,0 +1,14 @@
+swagger: "2.0"
+definitions:
+  instanceList:
+    x-jdcloud-module: jmr
+    title: instanceList
+    type: object
+    properties:
+      options:
+        type: array
+        items:
+          $ref: "../model/Options.yaml#/definitions/options"
+      label:
+        type: string
+        description: 机器型号的分类

@@ -1,0 +1,17 @@
+swagger: "2.0"
+definitions:
+  resource:
+    x-jdcloud-module: iam
+    required:
+      - ids
+      - type
+    properties:
+      ids:
+        type: array
+        items:
+          type: string
+        description: 资源id集合，传*表示对所有id生效
+      type:
+        type: string
+        description: 资源类型，云主机-server、镜像-image、云硬盘-volume、vpc-vpc、公网Ip-floatingIp、负载均衡-loadbalance、云数据库(mysql)-database、云缓存-cache
+

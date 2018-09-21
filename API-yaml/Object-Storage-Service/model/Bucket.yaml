@@ -1,0 +1,14 @@
+swagger: "2.0"
+definitions:
+  Bucket:
+    x-jdcloud-module: oss
+    required:
+    - name
+    - CreationDate
+    properties:
+      name:
+        type: string
+        example: test-bucket
+      creationDate:
+        type: string
+        example:  2006-02-03T16:41:58.000Z

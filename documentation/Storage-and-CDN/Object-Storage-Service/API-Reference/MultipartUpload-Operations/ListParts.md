@@ -3,6 +3,7 @@
 该操作用来列出一个Multipart Upload中已经上传的Part。
 
 **请求语法**
+
 ```
 GET   /ObjectName?uploadId=UploadId HTTP/1.1
 Host: BucketName. s.jcloud.com
@@ -22,8 +23,7 @@ Authorization:   signatureValue#请参照“访问控制”
 |Bucket|Bucket名称<br>类型：字符串
 |Key|Object名称<br>类型：字符串|
 |UploadId|Upload事件ID<br>类型：字符串|
-|StorageClass|Object的存储类型，默认值是"STANDARD"（标准存储）。<br>支持"STANDARD"（标准存储）和"REDUCED_REDUNDANCY"（低频访问型）两种存储类型
-注意：目前"REDUCED_REDUNDANCY"（低频访问型）仅华北机房支持<br>类型：字符串<br>默认值："STANDARD"（标准存储）|
+|StorageClass|Object的存储类型，默认值是"STANDARD"（标准存储）。<br>支持"STANDARD"（标准存储）和"REDUCED_REDUNDANCY"（低频访问型）两种存储类型类型：字符串默认值："STANDARD"（标准存储）|
 |Part|保存Part信息的集合。<br>类型：List|
 |PartNumber|标示Part的数字。<br>类型：Ingeter|
 |LastModified|Part上传的时间。<br>类型：字符串|
@@ -39,13 +39,16 @@ Authorization:   signatureValue#请参照“访问控制”
 3.由于网络传输可能出错，所以不推荐用List Part出来的结果（Part Number和ETag值）来生成最后Complete Multipart的Part列表。
 
 **请求实例**
+
 ```
 GET   /multipart.data?uploadId=9E417328F6B89F0B HTTP/1.1
 Host: oss-example.s-bj.jcloud.com
 Date: Tue, 11 Jul 2017   12:40:40 GMT    
 Authorization: jingdong   qbS5QXpLORrvdrmb:Ihjb1BaIk2pNGk11OCqBogLLL4c= 
 ```
+
 **返回示例**
+
 ```
 HTTP/1.1 200 OK
 Server: nginx

@@ -1,0 +1,95 @@
+  name: 云主机
+  href: 
+  items:
+  - name: 接口概览
+    href: overview.md
+  - name: 更新历史
+    href: ChangeLog.md
+  - name: 接口信息
+    items:
+      - name: 云主机
+        items:
+          - name: associateElasticIp
+            href: Virtual-Machine/associateElasticIp.md
+          - name: attachDisk
+            href: Virtual-Machine/attachDisk.md
+          - name: attachNetworkInterface
+            href: Virtual-Machine/attachNetworkInterface.md
+          - name: createImage
+            href: Virtual-Machine/createImage.md
+          - name: createInstances
+            href: Virtual-Machine/createInstances.md
+          - name: deleteInstance
+            href: Virtual-Machine/deleteInstance.md
+          - name: describeInstance
+            href: Virtual-Machine/describeInstance.md
+          - name: describeInstanceStatus
+            href: Virtual-Machine/describeInstanceStatus.md
+          - name: describeInstanceVncUrl
+            href: Virtual-Machine/describeInstanceVncUrl.md
+          - name: describeInstances
+            href: Virtual-Machine/describeInstances.md
+          - name: detachDisk
+            href: Virtual-Machine/detachDisk.md
+          - name: detachNetworkInterface
+            href: Virtual-Machine/detachNetworkInterface.md
+          - name: disassociateElasticIp
+            href: Virtual-Machine/disassociateElasticIp.md
+          - name: modifyInstanceAttribute
+            href: Virtual-Machine/modifyInstanceAttribute.md
+          - name: modifyInstanceDiskAttribute
+            href: Virtual-Machine/modifyInstanceDiskAttribute.md
+          - name: modifyInstanceNetworkAttribute
+            href: Virtual-Machine/modifyInstanceNetworkAttribute.md
+          - name: modifyInstancePassword
+            href: Virtual-Machine/modifyInstancePassword.md
+          - name: rebootInstance
+            href: Virtual-Machine/rebootInstance.md
+          - name: rebuildInstance
+            href: Virtual-Machine/rebuildInstance.md
+          - name: resizeInstance
+            href: Virtual-Machine/resizeInstance.md
+          - name: startInstance
+            href: Virtual-Machine/startInstance.md
+          - name: stopInstance
+            href: Virtual-Machine/stopInstance.md
+      - name: 镜像
+        items:
+          - name: copyImages
+            href: Image/copyImages.md
+          - name: deleteImage
+            href: Image/deleteImage.md
+          - name: describeImage
+            href: Image/describeImage.md
+          - name: describeImageConstraints
+            href: Image/describeImageConstraints.md
+          - name: describeImageConstraintsBatch
+            href: Image/describeImageConstraintsBatch.md
+          - name: describeImageMembers
+            href: Image/describeImageMembers.md
+          - name: describeImages
+            href: Image/describeImages.md
+          - name: modifyImageAttribute
+            href: Image/modifyImageAttribute.md
+          - name: shareImage
+            href: Image/shareImage.md
+          - name: unShareImage
+            href: Image/unShareImage.md
+      - name: 规格类型
+        items:
+          - name: describeInstanceTypes
+            href: Specification-Type/describeInstanceTypes.md
+      - name: 配额
+        items:
+          - name: describeQuotas
+            href: Quota/describeQuotas.md
+  - name: 使用帮助
+    items:
+      - name: 云主机创建示例
+        href: Help/Create_Vm_Sample.md
+      - name: 公共参数规范说明
+        href: Help/General_Parameters.md
+      - name: 镜像状态说明
+        href: Help/Image_Status.md
+      - name: 云主机状态说明
+        href: Help/Vm_Status.md

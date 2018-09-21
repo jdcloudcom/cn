@@ -1,0 +1,89 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: 配额
+  description: 容器配额
+
+basePath: /regions/{regionId}
+
+paths:
+  "/quotas":
+    ###################### 查询配额 ######################
+    get:
+      description: |
+        查询资源的配额，支持：原生容器 和 secret.
+      operationId: describeQuota
+      parameters:
+        - name: resourceType
+          in: query
+          type: string
+          required: true
+          description: |
+            resourceType - 资源类型，支持多个[container, secret]
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                properties:
+                  quota:
+                    $ref: "../model/Quota.yaml#/definitions/quota"
+              requestId:
+                type: string
+        400:
+          description: "Invalid parameter"
+        401:
+          description: "Authentication failed"
+        404:
+          description: "Not found"
+        500:
+          description: "Internal server error"
+        503:
+          description: "Service unavailable"
+    ###################### 修改配额 ######################
+    patch:
+      description: |
+        修改资源的配额，支持：原生容器 和 secret.
+      operationId: modifyQuota
+      x-jdcloud-internal: true
+      parameters:
+        - name: resourceType
+          in: query
+          type: string
+          required: true
+          description: |
+            resourceType - 资源类型，支持多个[container, secret]
+        - name: limit
+          in: query
+          type: integer
+          required: true
+          description: 上限
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              requestId:
+                type: string
+        400:
+          description: "Invalid parameter"
+        401:
+          description: "Authentication failed"
+        404:
+          description: "Not found"
+        500:
+          description: "Internal server error"
+        503:
+          description: "Service unavailable"
+
+#路径通用参数
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: Region ID

@@ -1,0 +1,81 @@
+swagger: "2.0"
+definitions:
+  containerSpec:
+    x-jdcloud-module: nc
+    x-jdcloud-internal: false
+    type: object
+    description: 指定挂载的Volume
+    required:
+      - instanceType
+      - az
+      - name
+      - rootVolume
+      - primaryNetworkInterface
+    properties:
+      instanceType:
+        type: string   
+        description: 实例类型；参考[文档](https://www.jdcloud.com/help/detail/1992/isCatalog/1)
+      az:
+        type: string   
+        description: 容器所属可用区 
+      name:
+        type: string   
+        description: 容器名称
+      hostAliases:
+        type: array
+        items:
+          $ref: "./HostAlias.yaml#/definitions/hostAlias"
+        description: 域名和IP映射的信息；</br> 最大10个alias 
+      hostname:
+        type: string   
+        description: 主机名，规范请参考说明文档；默认容器ID 
+      command:
+        type: array
+        items:
+          type: string   
+        description: 容器执行命令，如果不指定默认是docker镜像的ENTRYPOINT 
+      args:
+        type: array
+        items:
+          type: string    
+        description: 容器执行命令的参数，如果不指定默认是docker镜像的CMD 
+      envs:
+        type: array
+        items:
+          $ref: "./EnvVar.yaml#/definitions/envVar"  
+        description: 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值；</br> 最大10对 
+      image:
+        type: string   
+        description: 镜像名称 </br> 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 </br> </br> repository长度最大256个字符，tag最大128个字符，registry最大255个字符 </br> 下载镜像超时时间：10分钟
+      secret:
+        type: string   
+        description: secret引用名称；使用Docker Hub和京东云CR的镜像不需要secret 
+      tty:
+        type: boolean   
+        description: 容器是否分配tty。默认不分配 
+      workingDir:
+        type: string   
+        description: 容器的工作目录。如果不指定，默认是根目录（/）；必须是绝对路径 
+      rootVolume:
+        $ref: "./VolumeMountSpec.yaml#/definitions/volumeMountSpec"
+        description: 根Volume信息 
+      dataVolumes:
+        type: array
+        items:
+          $ref: "./VolumeMountSpec.yaml#/definitions/volumeMountSpec"  
+        description: 挂载的数据Volume信息；最多7个 
+      elasticIp:
+        $ref: "./ElasticIpSpec.yaml#/definitions/elasticIpSpec"  
+        description: 主网卡主IP关联的弹性IP规格 
+      primaryNetworkInterface:
+        $ref: "./ContainerNetworkInterfaceAttachmentSpec.yaml#/definitions/containerNetworkInterfaceAttachmentSpec"  
+        description: 主网卡配置信息 
+      logConfiguration:
+        $ref: "./LogConfiguration.yaml#/definitions/logConfiguration"  
+        description: 容器日志配置信息；默认会在本地分配10MB的存储空间 
+      description:
+        type: string   
+        description: 容器描述
+      charge:
+        $ref: "../../charge/model/ChargeSpec.yaml#/definitions/chargeSpec"
+        description: 计费配置；如不指定，默认计费类型是后付费-按使用时常付费 

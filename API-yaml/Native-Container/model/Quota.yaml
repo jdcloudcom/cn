@@ -1,0 +1,13 @@
+swagger: "2.0"
+definitions:
+  quota:
+    x-jdcloud-module: nc
+    x-jdcloud-internal: false
+    type: object
+    properties:
+      limit:
+        type: integer
+        description: 配额
+      used:
+        type: integer
+        description: 已使用的数目

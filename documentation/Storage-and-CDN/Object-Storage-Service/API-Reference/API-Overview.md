@@ -23,6 +23,7 @@
 
 ## 关于Multipart Upload的操作
 |API|描述|
+|-|-|
 |Initiate Multipart Uploade|初始化MultipartUpload事件|
 |Upload Part|分块上传文件|
 |Complete Multipart Upload|完成整个文件的Multipart  Upload上传|

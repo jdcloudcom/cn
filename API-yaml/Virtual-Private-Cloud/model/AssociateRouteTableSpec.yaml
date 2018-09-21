@@ -1,0 +1,12 @@
+swagger: "2.0"
+definitions:
+  associateRouteTableSpec:
+    x-jdcloud-module: vpc
+    required:
+      - subnetIds
+    properties:
+      subnetIds:
+        type: array
+        items: 
+          type: string
+        description: 路由表要绑定的子网ID列表, subnet已被其他路由表绑定时，自动解绑。

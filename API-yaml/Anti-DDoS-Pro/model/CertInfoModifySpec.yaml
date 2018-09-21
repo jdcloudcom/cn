@@ -1,0 +1,12 @@
+swagger: "2.0"
+definitions:
+  CertInfoModifySpec:
+    type: object
+    x-jdcloud-module: ipanti
+    properties:
+      httpsCertContent:
+        type: string
+        description: "证书内容"
+      httpsRsaKey:
+        type: string
+        description: "私钥"

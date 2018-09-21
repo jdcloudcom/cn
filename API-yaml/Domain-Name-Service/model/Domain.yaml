@@ -1,0 +1,21 @@
+swagger: "2.0"
+definitions:
+  domain:
+    type: object
+    x-jdcloud-module: clouddnsservice
+    properties:
+      id:
+        type: integer
+        description: 域名的唯一ID
+      domainName:
+        type: string
+        description: 域名字符串
+      createTime:
+        type: integer
+        description: 创建时间，格式Unix timestamp 
+      expirationDate:
+        type: integer
+        description:  过期时间，格式Unix timestamp
+      packId:
+        type: integer
+        description: 套餐类型，0->免费 1->企业版 2->高级版

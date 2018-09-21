@@ -1,0 +1,14 @@
+swagger: "2.0"
+definitions:
+  cronJobData:
+    x-jdcloud-module: jmr
+    title: cronJobData
+    type: object
+    properties:
+      totalNum:
+        type: integer
+        description: 集群作业数
+      cronJobs:
+        type: array
+        items:
+          $ref: "../model/JmrPlanViewModel.yaml#/definitions/jmrPlanViewModel"

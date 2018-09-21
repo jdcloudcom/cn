@@ -1,0 +1,17 @@
+  name: 数据之星
+  href: 
+  items:
+  - name: 接口概览
+    href: overview.md
+  - name: 更新历史
+    href: changelog.md
+  - name: 接口信息
+    items:
+      - name: 数据管理相关API
+        items:
+          - name: getPackageId
+            href: DMP-APIs/getPackageId.md
+      - name: 画像单标签输出相关API
+        items:
+          - name: getProfile
+            href: Profile-Single-Lable-Output-APIs/getProfile.md

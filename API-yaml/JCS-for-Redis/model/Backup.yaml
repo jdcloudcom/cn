@@ -1,0 +1,45 @@
+swagger: "2.0"
+definitions:
+  backup:
+    x-jdcloud-module: redis
+    title: backup
+    required:
+      - baseId
+      - backupFileName
+      - spaceId
+      - backupStartTime
+      - backupEndTime
+      - backupType
+      - backupSize
+      - backupStatus
+      - backupDownloadURL
+    properties:
+      baseId:
+        type: string
+        description: "备份操作ID"
+      backupFileName:
+        type: string
+        description: "备份文件的名称"
+      spaceId:
+        type: string
+        description: "备份实例ID"
+      backupStartTime:
+        type: string
+        format: date-time
+        description: "备份开始时间"
+      backupEndTime:
+        type: string
+        format: date-time
+        description: "备份结束时间"             
+      backupType:
+        type: integer
+        description: "备份类型，1表示手动备份，0表示自动备份"
+      backupSize:
+        type: integer
+        description: "备份文件大小，如果实例是集群版，则表示每个分片备份文件大小的总和"
+      backupStatus:
+        type: integer
+        description: "备份任务状态状态，1表示失败，2表示成功"
+      backupDownloadURL:
+        type: string
+        description: "备份文件下载的URL地址，集群版有多个URL地址"

@@ -1,0 +1,26 @@
+swagger: "2.0"
+definitions:
+  volumeMount:
+    x-jdcloud-module: nc
+    x-jdcloud-internal: false
+    type: object
+    description: 挂载的Volume
+    properties:
+      category:
+        type: string
+        description: 环境变量名称
+      autoDelete:
+        type: boolean
+        description: 自动删除，删除容器时自动删除此volume
+      mountPath:
+        type: string
+        description: 容器内的挂载目录
+      readOnly:
+        type: boolean
+        description: 只读，默认false；只针对data volume有效，root volume为false
+      cloudDisk:
+        $ref: "./InstanceCloudDisk.yaml#/definitions/instanceCloudDisk"
+        description: 云硬盘规格
+      fsType:
+        type: string
+        description: 指定volume文件系统类型，目前支持[xfs, ext4]

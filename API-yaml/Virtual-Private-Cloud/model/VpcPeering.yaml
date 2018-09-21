@@ -1,0 +1,27 @@
+swagger: "2.0"
+definitions:
+  vpcPeering:
+    x-jdcloud-module: vpc
+    properties:
+      vpcPeeringId:
+        type: string
+        description: VpcPeering的Id
+      vpcPeeringName:
+        type: string
+        description: VpcPeering名称，同账号下不允许重名，取值范围：1-32个中文、英文大小写的字母、数字和下划线分隔符
+      vpcPeeringState:
+        type: string
+        description: 状态，取值为Connected，Disconnected，Initiated
+      description:
+        type: string
+        description: VpcPeering 描述，可为空值，取值范围：0-256个中文、英文大小写的字母、数字和下划线分隔符
+      vpcInfo:
+        $ref: "./VpcPeeringVpcInfo.yaml#/definitions/vpcPeeringVpcInfo"
+        description: 发起VpcPeering的Vpc信息
+      remoteVpcInfo:
+        $ref: "./VpcPeeringVpcInfo.yaml#/definitions/vpcPeeringVpcInfo"
+        description: 对端的Vpc信息
+      createdTime:
+        type: string
+        description: VpcPeering创建时间
+

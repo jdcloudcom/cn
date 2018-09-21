@@ -1,0 +1,32 @@
+swagger: "2.0"
+definitions:
+  AlarmConfigSpec:
+    type: object
+    x-jdcloud-module: ipanti
+    properties:
+      blackHoleAlarmEmailStatus:
+        type: integer
+        description: "黑洞告警邮件开关 0 关闭 1 开启"
+      blackHoleAlarmSmsStatus:
+        type: integer
+        description: "黑洞告警短信开关 0 关闭 1 开启"
+      blackHoleAlarmStatus:
+        type: integer
+        description: "黑洞告警总开关  0 关闭 1 开启"
+      ddosAlarmEmailStatus:
+        type: integer
+        description: "DDos 攻击告警邮件开关  0 关闭 1 开启"
+      ddosAlarmSmsStatus:
+        type: integer
+        description: "DDos 攻击告警短信开关  0 关闭 1 开启"
+      ddosAlarmStatus:
+        type: integer
+        description: "DDos 告警总开关 0 关闭 1 开启"
+      errorCodeAlarmStatus:
+        type: integer
+        description: "错误码告警总开关"
+      errorCodeDomain:
+        type: array
+        items:
+          type: string
+        description: "错误码告警域名列表"

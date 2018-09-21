@@ -1,0 +1,36 @@
+swagger: "2.0"
+definitions:
+  elasticIp:
+    x-jdcloud-module: vpc
+    properties:
+      elasticIpId:
+        type: string
+        description: 弹性IP的Id
+      elasticIpAddress:
+        type: string
+        description: 弹性IP地址
+      bandwidthMbps:
+        type: integer
+        description: 弹性ip的限速（单位：Mbps)
+      provider:
+        type: string
+        description: IP服务商，取值为bgp或no_bgp
+      privateIpAddress:
+        type: string
+        description: 私有IP的IPV4地址
+      networkInterfaceId:
+        type: string
+        description: 配置弹性网卡Id
+      instanceId:
+        type: string
+        description: 实例Id
+      instanceType:
+        type: string
+        description: 实例类型
+      charge:
+        $ref: "../../charge/model/Charge.yaml#/definitions/charge"
+        description: 计费配置
+      createdTime:
+        type: string
+        description: 弹性ip创建时间
+

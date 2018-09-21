@@ -1,0 +1,33 @@
+name: 云缓存 Redis
+href: 
+items:
+  - name: 接口预览
+    href: overview.md
+  - name: 更新历史
+    href: Changlog.md
+  - name: 接口信息
+    items:
+      - name: Redis实例API
+        items:
+          - name: createCacheInstance
+            href: JCS-for-Redis-Instance-APIs/createCacheInstance.md
+          - name: deleteCacheInstance
+            href: JCS-for-Redis-Instance-APIs/deleteCacheInstance.md
+          - name: describeCacheInstance
+            href: JCS-for-Redis-Instance-APIs/describeCacheInstance.md
+          - name: describeCacheInstances
+            href: JCS-for-Redis-Instance-APIs/describeCacheInstances.md
+          - name: modifyCacheInstanceAttribute
+            href: JCS-for-Redis-Instance-APIs/modifyCacheInstanceAttribute.md
+          - name: modifyCacheInstanceClass
+            href: JCS-for-Redis-Instance-APIs/modifyCacheInstanceClass.md
+          - name: resetCacheInstancePassword
+            href: JCS-for-Redis-Instance-APIs/resetCacheInstancePassword.md
+      - name: Redis实例类型API
+        items:
+          - name: describeInstanceClass
+            href: JCS-for-Redis-Instance-type-APIs/describeInstanceClass.md
+      - name: Redis配额APIs
+        items:
+          - name: describeUserQuota
+            href: JCS-for-Redis-Quota-APIs/describeUserQuota.md

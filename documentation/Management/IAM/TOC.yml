@@ -1,0 +1,34 @@
+  name: 访问控制
+  href: 
+  items:
+  - name: 概述
+    items:
+      - name: 概述
+        href: Product-Overview.md
+  - name: 身份管理
+    items:
+      - name: 子用户
+        href: Identity-Management/Sub-User.md
+      - name: 群组
+        href: Identity-Management/Group.md
+  - name: 策略管理
+    items:
+      - name: 授权策略管理
+        href: Policy-Managemenent/Policy-Management.md
+      - name: 授权策略语法
+        href: Policy-Managemenent/Policy-Grammar.md
+  - name: 虚拟 MFA 设备
+    items:
+      - name: 概述
+        href: Virtual-MFA-Management/MFA-Overview.md
+      - name: MFA 设置
+        href: Virtual-MFA-Management/MFA-Settings.md
+      - name: 登录验证
+        href: Virtual-MFA-Management/Sign-up-Verification.md
+      - name: 操作保护
+        href: Virtual-MFA-Management/Operation-Protection.md
+      - name: 第三方应用程序安装及使用指导
+        href: Virtual-MFA-Management/Third-Party-Apps.md
+      - name: MFA 登录验证常见问题
+        href: Virtual-MFA-Management/MFA-FAQs.md
+        

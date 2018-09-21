@@ -1,0 +1,13 @@
+swagger: "2.0"
+definitions:
+  WhiteList:
+    x-jdcloud-module: rds
+    title: WhiteList
+    type: object
+    properties:
+      name:
+        type: string
+        description: 白名单名称
+      ips:
+        type: string
+        description: IP或IP段，不同的IP/IP段之间用英文逗号分隔，例如0.0.0.0/0,192.168.0.10

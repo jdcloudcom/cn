@@ -1,0 +1,72 @@
+﻿  name: 专线服务
+  href:
+  items:
+  - name: 产品简介
+    items:
+      - name: 产品概述
+        href: Introduction/Product-Overview.md
+      - name: 基础架构
+        href: Introduction/Basic-Infrastructure.md
+      - name: 核心概念
+        href: Introduction/Core-Concepts.md
+      - name: 产品优势
+        href: Introduction/Benefits.md
+      - name: 产品功能
+        items:
+          - name: 专线连接
+            href: Introduction/Features/Direct-Connect-Features.md
+          - name: 托管连接
+            href: Introduction/Features/Hosted-Connect-Features.md
+          - name: 边界网关
+            href: Introduction/Features/Border-Gateway-Features.md
+      - name: 限制说明
+        href: Introduction/Restrictions.md
+      - name: 应用场景
+        items:
+          - name: 扩展企业现有数据中心
+            href: Introduction/Application-Scenarios/Extension-On-Premises.md
+          - name: 多地容灾的高可用架构
+            href: Introduction/Application-Scenarios/High-Availability-Architecture-For-Multiple-Place.md
+          - name: 监管要求下的混合云部署
+            href: Introduction/Application-Scenarios/Hybrid-Cloud-Deployments-Under-Regulatory-Requirements.md
+  - name: 产品定价
+    items:
+      - name: 计费规则
+        href: Pricing/Billing-Overview.md
+  - name: 入门指南
+    items:
+       - name: 同账号同地域专线连接
+         href: Getting-Started/Connect-To-The-Same-Account-Or-Region-Direct-Connetct.md
+       - name: 同账号同地域托管连接
+         href: Getting-Started/Connect-To-The-Same-Account-Or-Region-Hosted-Connetct.md
+  - name: 操作指南
+    items:
+       - name: 专线连接
+         href: Operation-Guide/Direct-Connect.md
+       - name: 托管连接
+         href: Operation-Guide/Hosted-Connect.md
+  - name: 最佳实践
+    items:
+    status: 0
+  - name: 问题排查
+    items:
+    status: 0
+  - name: 常见问题
+    href: FAQ/FAQ.md
+  - name: API参考
+    href:
+    status: 0
+  - name: SDK参考
+    href:
+    status: 0
+  - name: 用户协议
+    items:
+    - name: 服务条款
+      href:
+      status: 0
+  - name: 相关资源
+    items:
+    - name: 文档历史记录
+      href:
+      status: 0
+

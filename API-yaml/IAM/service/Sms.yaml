@@ -1,0 +1,149 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: 短信发送接口
+  description: 短信发送接口
+
+
+paths:
+  "/sms:sendSingleSmsMessage":
+    ###################### 发送单条短信 ######################
+    post:
+      description: "单条短信发送"
+      operationId: sendSingleSmsMessage
+      x-jdcloud-internal: true
+      parameters:
+        - name: sendSingleMsgReqVo
+          in: body
+          description: 单条短信信息
+          required: true
+          schema:
+            $ref: "../model/SendSingleMsg.yaml#/definitions/sendSingleMsg"
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              requestId:
+                type: string
+
+  "/sms:sendBatchSmsMessage":
+    ###################### 发送批量短信 ######################
+    post:
+      description: "批量短信发送"
+      operationId: sendBatchSmsMessage
+      x-jdcloud-internal: true
+      parameters:
+        - name: sendBatchMsgReqVo
+          in: body
+          description: 批量短信信息
+          required: true
+          schema:
+            $ref: "../model/SendBatchMsg.yaml#/definitions/sendBatchMsg"
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                properties:
+                  successMap:
+                    type: object
+                    description: 成功的结果
+                  failedMap:
+                    type: object
+                    description: 失败的结果
+              requestId:
+                type: string
+
+  "/sms:sendOutSiteNotice":
+      ###################### 站外信发送接口 ######################
+      post:
+        description: "站外信接口"
+        operationId: sendOutSiteNotice
+        x-jdcloud-internal: true
+        parameters:
+          - name: sendOutSiteNoticeReqVo
+            in: body
+            description: 站外信接口
+            required: true
+            schema:
+              $ref: "../model/SendOutSiteNotice.yaml#/definitions/sendOutSiteNotice"
+        responses:
+          200:
+            description: OK
+            schema:
+              type: object
+              properties:
+                result:
+                  properties:
+                    data:
+                      type: boolean
+                      description: 发送结果信息
+                requestId:
+                  type: string
+                
+  "/sms:asyncSendEmailSms":
+     ###################### 指定消息接收人的异步发送 ######################
+     post:
+       description: "指定消息接收人的异步发送"
+       operationId: asyncSendEmailSms
+       x-jdcloud-internal: true
+       parameters:
+         - name: emailSmsInfoReqVo
+           in: body
+           description: 指定消息接收人的异步发送
+           required: true
+           schema:
+             $ref: "../model/EmailSmsInfo.yaml#/definitions/emailSmsInfo"
+       responses:
+         200:
+           description: OK
+           schema:
+             type: object
+             properties:
+               result:
+                 properties:
+                   data:
+                     type: boolean
+                     description: 发送结果信息
+               requestId:
+                 type: string
+
+  "/sms:sendWithoutLimit":
+     ###################### 指定消息接收人的同步发送接口######################
+     post:
+       description: "指定消息接收人的同步发送接口"
+       operationId: sendWithoutLimit
+       x-jdcloud-internal: true
+       parameters:
+         - name: emailSmsInfoReqVo
+           in: body
+           description: 指定消息接收人的同步发送
+           required: true
+           schema:
+             $ref: "../model/EmailSmsInfo.yaml#/definitions/emailSmsInfo"
+       responses:
+         200:
+           description: OK
+           schema:
+             type: object
+             properties:
+               result:
+                 properties:
+                   data:
+                     type: boolean
+                     description: 发送结果信息
+               requestId:
+                 type: string
+
+#路径通用参数
+parameters:
+  accessKey:
+    name: accessKey
+    in: path
+    required: true
+    type: string
+    description: accessKey

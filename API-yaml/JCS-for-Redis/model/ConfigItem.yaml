@@ -1,0 +1,39 @@
+swagger: "2.0"
+definitions:
+  configItem:
+    x-jdcloud-module: redis
+    title: configItem
+    type: object
+    required: 
+      - configName
+      - configValue
+    properties:
+      configName:
+        type: string
+        description: |
+          configName目前只支持以下参数：
+          maxmemory-policy：内存剔除策略的最大使用内存限制
+          hash-max-ziplist-entries：用ziplist编码实现的哈希对象，ziplist中最多能存放entry个数的阈值
+          hash-max-ziplist-value：用ziplist编码实现的哈希对象，ziplist中能存放的value长度的最大值
+          list-max-ziplist-entries：用ziplist编码实现的列表对象，ziplist中最多能存放entry个数的阈值
+          list-max-ziplist-value：用ziplist编码实现的列表对象，ziplist中能存放的value长度的最大值
+          set-max-intset-entries：用intset编码实现的集合对象，intset中最多能存放entry个数的阈值
+          zset-max-ziplist-entries：用ziplist编码实现的有序集合对象，ziplist中最多能存放entry个数的阈值
+          zset-max-ziplist-value：用ziplist编码实现的有序集合对象，ziplist中能存放的value长度的最大值
+          slowlog-log-slower-than：慢查询日志超时时间，单位微秒，负数表示不开启
+          notify-keyspace-events：事件通知
+      configValue:
+        type: string
+        description: |
+          参数的配置值，参考值如下：
+          maxmemory-policy：[volatile-lru , allkeys-lru , volatile-random , allkeys-random , volatile-ttl , noeviction]
+          hash-max-ziplist-entries：[1-10000]
+          hash-max-ziplist-value：[1-10000]
+          list-max-ziplist-entries：[1-10000]
+          list-max-ziplist-value：[1-10000]
+          set-max-intset-entries：[1-10000]
+          zset-max-ziplist-entries：[1-10000]
+          zset-max-ziplist-value：[1-10000]
+          slowlog-log-slower-than：[1-10000]
+          notify-keyspace-events：[K , E , g , $ , l , s , h , z , x , e , A]
+

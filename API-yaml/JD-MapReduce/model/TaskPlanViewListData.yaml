@@ -1,0 +1,14 @@
+swagger: "2.0"
+definitions:
+  taskPlanViewListData:
+    x-jdcloud-module: jmr
+    title: taskPlanViewListData
+    type: object
+    properties:
+      totalNum:
+        type: integer
+        description: 查询的列表size
+      taskList:
+        type: array
+        items:
+          $ref: "../model/JmrPlanViewModel.yaml#/definitions/jmrPlanViewModel"

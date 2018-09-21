@@ -3,6 +3,7 @@
 此操作用于获取指定的Object内容
 
 **请求语法**
+
 ```
 GET /ObjectName   HTTP/1.1
 Host: BucketName. s.jcloud.com
@@ -11,6 +12,7 @@ Authorization:   signatureValue#请参照“访问控制”
 Range: bytes=ByteRange(可选)
 ```
 **请求Header**
+
 
 Range 指定获取的Object数据内容，如设定   bytes=0-9，表示传送第0到第9这10个字符，更多的信息可以参看《RFC2616》
 
@@ -24,6 +26,7 @@ Range 指定获取的Object数据内容，如设定   bytes=0-9，表示传送�
 4.若该Object为进行服务器加密存储的，则在GET请求时会自动解密返回给用户。
 
 **请求示例**
+
 ```
 GET /example.jpg HTTP/1.1
 Host: oss-example.s-bj.jcloud.com
@@ -31,6 +34,7 @@ Date: Tue, 11 Jul 2017   07:28:01 GMT
 Authorization: jingdong qbS5QXpLORrvdrmb:Ctm+uA40JmY3T3LvCZ6CkKkANXs=
 ```
 **返回示例**
+
 ```
 HTTP/1.1 200 OK
 Server: nginx
@@ -48,6 +52,7 @@ x-jss-storage-class: STANDARD
 X-Trace: 200-1499758081049-0-0-19-45-45
 ```
 **Range请求示例**
+
 ```
 GET example.jpg HTTP/1.1
 Host: oss-example.s-bj.jcloud.com
@@ -56,6 +61,7 @@ Date: Tue, 11 Jul 2017 07:34:11   GMT
 Authorization: jingdong qbS5QXpLORrvdrmb:/Aaawoo0xVq4XVMei/yK1UqhoFc=
 ```
 **Range返回示例**
+
 ```
 HTTP/1.1 206   Partial Content
 Server: nginx

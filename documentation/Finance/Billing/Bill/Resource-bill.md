@@ -1,7 +1,9 @@
 # 资源账单
 ## 什么是资源账单？
 资源账单是按资源的维度汇总展示月消费情况，按付费方式，分为2类：
+
 1、预付费：展示每笔交易成功的资源消费情况；
+
 2、后付费：展示后付费资源，在当月的消费情况，包括消费总额、现金支付、代金券支付、欠费金额； 其中：日结的资源为上月最后一天至本月倒数第二天使用，小时结的资源为上月最后一小时至本月倒数第二小时使用。
 
 示例：
@@ -17,16 +19,16 @@
 当后付费资源发生结算延迟时，上述时间可能不完全准确。
 >- 假设8月31日22:00后的小时结算资源延迟到9月结算，8月的资源账单中，后付费资源展示的是7月31日23:00-8月31日22:00的后付费小时结资源。
 
-##如何查看资源账单？
+## 如何查看资源账单？
 在京东云控制台，点击【费用】-【消费记录】-【资源账单】可查看；
 ![file-list](https://github.com/jdcloudcom/cn/blob/edit/image/billing/%E8%B5%84%E6%BA%90%E8%B4%A6%E5%8D%951.png)
 ![file-list](https://github.com/jdcloudcom/cn/blob/edit/image/billing/%E8%B5%84%E6%BA%90%E8%B4%A6%E5%8D%956.png)
 
-###如何查看后付费资源账单？
+## 如何查看后付费资源账单？
 您可以在条件中选择后付费及需要查看的账期；
 ![file-list](https://github.com/jdcloudcom/cn/blob/edit/image/billing/%E8%B5%84%E6%BA%90%E8%B4%A6%E5%8D%957.png)
 点击详情按钮，您可以查看资源在该账期的明细消费情况；
 ![file-list](https://github.com/jdcloudcom/cn/blob/edit/image/billing/%E8%B5%84%E6%BA%90%E8%B4%A6%E5%8D%954.png)
-###如何查看预付费资源账单
+## 如何查看预付费资源账单
 您可以在条件中选择预付费及需要查看的账期；
 ![file-list](https://github.com/jdcloudcom/cn/blob/edit/image/billing/%E8%B5%84%E6%BA%90%E8%B4%A6%E5%8D%955.png)

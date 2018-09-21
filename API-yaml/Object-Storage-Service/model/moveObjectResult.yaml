@@ -1,0 +1,14 @@
+swagger: "2.0"
+definitions:
+  Result:
+    x-jdcloud-module: oss
+    required:
+    - etag
+    - lastModified
+    properties:
+      etag:
+        type: string
+        example: VUwpTMLv7xBe9UR1s74GqQ==
+      lastModified:
+        type: string
+        example:  2006-02-03T16:41:58.000Z

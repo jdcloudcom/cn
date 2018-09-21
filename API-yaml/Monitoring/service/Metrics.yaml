@@ -1,0 +1,231 @@
+swagger: "2.0"
+info:
+  description: 监控项相关接口，提供可用监控项列表查询和监控数据查询等功能
+  title: 监控项相关接口
+  version: "v1"
+consumes:
+- application/json
+produces:
+- application/json
+
+paths:
+  /metrics:
+    ###################### 根据产品线查询可用监控项列表 ######################    
+    get:
+      description: 根据资源类型查询可获取监控数据的的指标列表。
+      summary: 根据产品线查询可用监控项列表
+      operationId: describeMetrics
+      x-jdcloud-internal: false
+      parameters:
+      - type: string
+        description: |
+          资源的类型 ： 
+          vm-->云主机
+          disk-->云硬盘
+          ip-->公网ip
+          balance-->负载均衡
+          database-->云数据库mysql版本
+          cdn-->京东CDN
+          redis-->redis云缓存
+          mongodb-->mongoDB云缓存
+          storage-->云存储
+          sqlserver-->云数据库sqlserver版 
+          nativecontainer-->容器
+        name: serviceCode
+        in: query
+        required: true
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              requestId:
+                type: string
+                description: 请求的标识id
+              result:
+                properties:
+                  metrics:
+                    type: array
+                    items:
+                      $ref: '../model/MetricDatail.yaml#/definitions/metricDetail'
+        400:
+          description: "invalid parameter"
+        500:
+          description: "internal server error"
+
+  /metricsForCreateAlarm:
+    get:
+      description: 根据资源类型查询可用于创建监控规则的指标列表
+      summary: 查询可用创建监控规则的指标列表
+      operationId: describeMetricsForCreateAlarm
+      x-jdcloud-internal: false      
+      parameters:
+      - type: string
+        description: |
+          资源的类型，默认为空，展示所有项目
+          vm-->云主机
+          disk-->云硬盘
+          ip-->公网ip
+          balance-->负载均衡
+          database-->云数据库mysql版本
+          cdn-->京东CDN
+          redis-->redis云缓存
+          mongodb-->mongoDB云缓存
+          storage-->云存储
+          sqlserver-->云数据库sqlserver版 
+          nativecontainer-->容器
+        name: serviceCode
+        in: query
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              requestId:
+                type: string
+                description: 请求的标识id
+              result:
+                properties:
+                  serviceCodeList:
+                    type: array
+                    items:
+                      $ref: '../model/MetricDatail.yaml#/definitions/ServiceCodeMetrics'
+        400:
+          description: 'invalid parameter'
+        500:
+          description: 'internal server error'
+          
+  /regions/{regionId}/metrics/{metric}/metricData:
+    ###################### 查看某资源的监控数据 ######################  
+    get:
+      description: 查看某资源监控数据，需指定监控指标和时间范围。
+      summary: 查看某资源的监控数据
+      operationId: describeMetricData
+      x-jdcloud-internal: false      
+      parameters:
+      - type: string
+        description: 地域 Id
+        name: regionId
+        in: path
+        required: true
+      - type: string
+        description: 监控项英文标识(id)
+        name: metric
+        in: path
+        required: true
+      - type: string
+        description: 资源的类型，取值vm, lb, ip, database 等
+        name: serviceCode
+        in: query
+        required: true
+      - type: string
+        description: 资源的uuid
+        name: resourceId
+        in: query
+        required: true
+      - type: string
+        description: 查询时间范围的开始时间， UTC时间，格式：yyyy-MM-dd'T'HH:mm:ssZ（默认为当前时间，早于30d时，将被重置为30d）
+        name: startTime
+        in: query
+      - type: string
+        description: 查询时间范围的结束时间， UTC时间，格式：2016-12- yyyy-MM-dd'T'HH:mm:ssZ（为空时，将由startTime与timeInterval计算得出）
+        name: endTime
+        in: query
+      - type: string
+        description: 时间间隔：1h，6h，12h，1d，3d，7d，14d，固定时间间隔，timeInterval 与 endTime 至少填一项
+        name: timeInterval
+        in: query
+      - name: tags
+        in: query
+        type: array
+        items:
+          $ref: "../model/Tags.yaml#/definitions/tagFilter"
+        description: 自定义标签
+      responses:
+        200:
+          description:  OK
+          schema:
+            properties:
+              requestId:
+                type: string
+                description: 请求的标识id
+              result:
+                properties:
+                  metricDatas:
+                    type: array
+                    items:
+                      $ref: '../model/MetricData.yaml#/definitions/metricData'
+        400:
+          description: "invalid parameter"
+        500:
+          description: "internal server error"
+  /regions/{regionId}/metrics/{metric}/lastDownsample:
+    get:
+      description: 查看某资源的最后一个点
+      summary: 查看某资源的最后一个点
+      operationId: lastDownsample
+      x-jdcloud-internal: true      
+      parameters:
+      - type: string
+        description: 地域 Id
+        name: regionId
+        in: path
+        required: true
+      - type: string
+        description: 监控项英文标识(id)
+        name: metric
+        in: path
+        required: true
+      - type: string
+        description: 资源的类型，取值vm, lb, ip, database 等
+        name: serviceCode
+        in: query
+        required: true
+      - type: string
+        description: 资源的uuid
+        name: resourceId
+        in: query
+        required: true
+      - name: tags
+        in: query
+        type: array
+        description: 自定义标签
+        items:
+          $ref: "../model/Tags.yaml#/definitions/tagFilter"
+      - type: string
+        description: 查询时间范围的开始时间， UTC时间，格式：yyyy-MM-dd'T'HH:mm:ssZ（默认为当前时间，早于30d时，将被重置为30d）
+        name: startTime
+        in: query
+      - type: string
+        description: 查询时间范围的结束时间， UTC时间，格式：2016-12- yyyy-MM-dd'T'HH:mm:ssZ（为空时，将由startTime与timeInterval计算得出）
+        name: endTime
+        in: query
+      - type: string
+        description: 查询的时间间隔，仅支持分钟级别，例如：1m
+        name: timeInterval
+        in: query
+      - type: string
+        description: 聚合方式：max avg min等
+        name: aggrType
+        in: query
+      responses:
+        200:
+          description: 查看某资源的最后一个点
+          schema:
+            type: object
+            required:
+            - requestId
+            properties:
+              requestId:
+                description: 请求的标识id
+                type: string
+              result:
+                properties:
+                  items:
+                    type: array
+                    items:
+                      $ref: '../model/LastDownsampleRespItem.yaml#/definitions/lastDownsampleRespItem'
+        400:
+          description: "invalid parameter"
+        500:
+          description: "internal server error"

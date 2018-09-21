@@ -1,0 +1,37 @@
+swagger: "2.0"                                  # 基于Swagger 2.0版本实现
+info:
+  version: v1
+  title: 错误日志
+  description: 错误日志相关接口
+basePath: /regions/{regionId}
+paths:
+  "/instances/{instanceId}/errorLogs": #错误日志
+    get:
+      description: 获取SQL Server 错误日志及下载信息<br>- 仅支持SQL Server
+      operationId: describeErrorLogs
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  errorLogs:
+                    type: array
+                    description: 错误日志文件的集合
+                    items:
+                      $ref: ../model/ErrorLog.yaml#/definitions/ErrorLog
+#路径通用参数
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
+  instanceId:
+    name: instanceId
+    in: path
+    required: true
+    type: string
+    description: RDS 实例ID，唯一标识一个RDS实例

@@ -1,0 +1,17 @@
+swagger: "2.0"
+definitions:
+  listRoleInfo:
+    x-jdcloud-module: iam
+    properties:
+      roleName:
+        type: string
+        description: 角色名称
+      description:
+        type: string
+        description: 描述，0~1000个字符
+      createTime:
+        type: string
+        description: 创建角色的时间
+
+
+

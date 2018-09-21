@@ -1,0 +1,26 @@
+swagger: '2.0'
+definitions:
+  storageParameter:
+    x-jdcloud-module: streamcomputer
+    title: storageParameter
+    type: object
+    properties:
+        id:
+          type: integer
+        uid:
+          type: string
+        pKey:
+          type: string
+        pValue:
+          type: string
+        storageId:
+          type: integer
+        deleted:
+          type: string
+          format: byte
+        createTime:
+          type: string
+          format: date 
+        updateTime:
+          type: string
+          format: date 

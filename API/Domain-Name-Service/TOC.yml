@@ -1,0 +1,51 @@
+  name: 云解析
+  href: 
+  items:
+  - name: 接口概览
+    href: overview.md
+  - name: 更新历史
+    href: ChangeLog.md
+  - name: 接口信息
+    items:
+      - name:  域名相关的接口
+        items:
+          - name: getDomains
+            href:  Domain-Name/getDomains.md
+          - name: delDomain
+            href:  Domain-Name/delDomain.md
+          - name: updateDomain
+            href:  Domain-Name/updateDomain.md
+          - name: addDomain
+            href:  Domain-Name/addDomain.md
+          - name: getDomainQueryCount
+            href:  Domain-Name/getDomainQueryCount.md
+          - name: getDomainQueryTraffic
+            href:  Domain-Name/getDomainQueryTraffic.md
+      - name: 解析记录相关的接口  
+        items:
+          - name: addRR
+            href: Resolution-Record/addRR.md
+          - name: getViewTree
+            href: Resolution-Record/getViewTree.md
+          - name: operateRR
+            href: Resolution-Record/operateRR.md  
+          - name: searchRR
+            href: Resolution-Record/searchRR.md
+          - name: updateRR
+            href: Resolution-Record/updateRR.md
+      - name:  网站监控相关的接口
+        items:
+          - name: addMonitor
+            href: Website-Monitoring/addMonitor.md        
+          - name: addMonitorTarget
+            href: Website-Monitoring/addMonitorTarget.md 
+          - name: getMonitor
+            href: Website-Monitoring/getMonitor.md 
+          - name: getMonitorAlarmInfo
+            href: Website-Monitoring/getMonitorAlarmInfo.md 
+          - name: getTargets
+            href: Website-Monitoring/getTargets.md
+          - name: operateMonitor
+            href: Website-Monitoring/operateMonitor.md
+          - name: updateMonitor
+            href: Website-Monitoring/updateMonitor.md            

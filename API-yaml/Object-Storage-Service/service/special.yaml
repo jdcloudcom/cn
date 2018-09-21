@@ -1,0 +1,50 @@
+swagger: "2.0"                                  # 基于Swagger 2.0版本实现
+info:
+  version: "v1"                                 # OpenApi版本号
+  title: SpecialUser相关接口
+  description: SpecialUser相关接口
+
+basePath: /regions/{regionId}
+
+paths:
+  /:
+    post:
+      tags:
+      - developers
+      summary: update bucket max count
+      operationId: updateBucketMaxCount
+      x-jdcloud-internal: true
+      description: |
+        更新bucket最大数量
+      produces:
+      - application/json
+      parameters:
+      - in: header
+        name: bucketmaxcount
+        description: bucket最大数量，例如：50，最低20
+        required: true
+        type: integer
+      - in: header
+        name: userpin
+        description: 指定user的pin
+        required: true
+        type: string
+      responses:
+        200:
+          description: OK
+        400:
+          description: Invalid Argument
+#          schema:
+#            $ref: '../model/oss.yaml#/definitions/ErrorResponse'
+        403:
+          description: Access Denied
+#          schema:
+#            $ref: '../model/oss.yaml#/definitions/ErrorResponse'
+#路径通用参数
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: Region ID，例如：cn-north-1

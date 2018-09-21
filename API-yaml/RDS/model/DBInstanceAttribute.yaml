@@ -1,0 +1,79 @@
+swagger: "2.0"
+definitions:
+  DBInstanceAttribute:
+    x-jdcloud-module: rds
+    title: DBInstanceAttribute
+    type: object
+    properties:
+      instanceId:
+        type: string
+        description: 实例ID
+      instanceName:
+        type: string
+        description: 实例名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
+      instanceType:
+        type: string
+        description: 实例类型，例如主实例，只读实例等，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
+      engine:
+        type: string
+        description: 实例引擎类型，如MySQL或SQL Server等，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
+      engineVersion:
+        type: string
+        description: 实例引擎版本，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
+      instanceClass:
+        type: string
+        description: 实例规格代码
+      instanceStorageGB:
+        type: integer
+        description: 磁盘，单位GB
+      instanceCPU:
+        type: integer
+        description: CPU核数
+      instanceMemoryMB:
+        type: integer
+        description: 内存大小，单位MB
+      regionId:
+        type: string
+        description: 地域ID，参见[地域及可用区对照表](../Enum-Definitions/Regions-AZ.md)
+      azId:
+        type: array
+        items:
+          type: string
+          description: 可用区ID
+        description: 可用区ID，第一个为主实例在的可用区，参见[地域及可用区对照表](../Enum-Definitions/Regions-AZ.md)
+      vpcId:
+        type: string
+        description: VPC的ID
+      subnetId:
+        type: string
+        description: 子网的ID
+      internalDomainName:
+        type: string
+        description: 实例公网域名
+      publicDomainName:
+        type: string
+        description: 实例内网域名
+      instancePort:
+        type: string
+        description: 应用访问端口
+      connectionMode:
+        type: string
+        description: 访问模式，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
+      auditStatus:
+        type: string
+        description: 审计状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
+      instanceStatus:
+        type: string
+        description: 实例状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
+      createTime:
+        type: string
+        description: 实例创建时间
+      charge:
+        $ref: "../../charge/model/Charge.yaml#/definitions/charge"
+        description: 计费配置
+      #ROInstanceIds:
+        #type: array
+        #items:
+          #type: string
+          #description: 只读实例ID
+        #description: 只读实例ID列表

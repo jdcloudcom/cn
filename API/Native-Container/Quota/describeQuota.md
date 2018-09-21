@@ -2,7 +2,8 @@
 
 
 ## 描述
-查询资源的配额
+查询资源的配额，支持：原生容器 和 secret.
+
 
 ## 请求方式
 GET
@@ -17,21 +18,21 @@ https://nc.jdcloud-api.com/v1/regions/{regionId}/quotas
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**resourceType**|String|True||资源类型  container：用户能创建的容器的配额  secret：用户能创建的secret的配额|
+|**resourceType**|String|True||resourceType - 资源类型，支持多个[container, secret]<br>|
 
 
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
 |**requestId**|String||
-|**result**|[Result](##Result)||
+|**result**|Result||
 
 
-### <a name="Result">Result</a>
+### Result
 |名称|类型|描述|
 |---|---|---|
-|**quota**|[Quota](##Quota)||
-### <a name="Quota">Quota</a>
+|**quota**|Quota||
+### Quota
 |名称|类型|描述|
 |---|---|---|
 |**limit**|Integer|配额|

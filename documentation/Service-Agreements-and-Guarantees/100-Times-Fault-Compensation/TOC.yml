@@ -1,1 +1,9 @@
-
+  name: 100倍故障赔偿
+  href: 
+  items:
+  - name: 赔偿范围
+    href: Scope-Of-Compensation.md
+  - name: 支持产品
+    href: Support-Products.md
+  - name: 赔偿标准
+    href: Compensation-Standard.md

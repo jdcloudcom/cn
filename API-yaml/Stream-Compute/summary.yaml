@@ -1,0 +1,8 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: JDCLOUD流计算API
+  description: 提供流计算操作的相关接口。
+host: "streamcompute.jdcloud-api.com"
+x-jdcloud-version: "v1"
+x-jdcloud-revision: "1.0.1"

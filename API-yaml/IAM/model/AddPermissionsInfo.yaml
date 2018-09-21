@@ -1,0 +1,14 @@
+swagger: "2.0"
+definitions:
+  addPermissionsInfo:
+    x-jdcloud-module: iam
+    required:
+      - permissionIds
+    properties:
+      permissionIds:
+        type: array
+        items:
+          type: integer
+        description: 权限id集合
+
+

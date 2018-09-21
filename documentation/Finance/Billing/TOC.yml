@@ -1,4 +1,4 @@
-  name: 计费相关
+  name: 计费
   href: 
   items:
   - name: 计费方式
@@ -9,9 +9,9 @@
          herf: Billing-method/Postpay.md
   - name: 计费规则
     items:
-       - name: 订阅计费
+       - name: 包年包月计费
          herf: Billing-rule/Subscription.md
-       - name: 按需计费
+       - name: 按量计费
          herf: Billing-rule/Pay-As-You-Go.md
   - name: 账单
     items:

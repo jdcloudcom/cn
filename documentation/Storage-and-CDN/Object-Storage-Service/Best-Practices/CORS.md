@@ -47,6 +47,7 @@ curl http://test-cors.oss.cn-east-1.jcloudcs.com/cors.html
 使用AJAX技术来直接访问该cors.html文件
 
 首先写一个简单的HTML文件，将以下代码复制到本地保存成HTML文件，并将该网页托管在云主机上，云主机的IP地址为47.104.98.151，所以该网页地址为http://47.104.98.151/cors-test.html （测试地址不支持访问，如需访问，请自行配置）
+
 ```
 <!DOCTYPE html>
 <html>
@@ -81,6 +82,7 @@ function loadXMLDoc() {
 </body>
 </html>
 ```
+
 3.访问网页
 
 在Chrome浏览器中输入“http://47.104.98.151/cors-test.html ”进入测试网页，点击“请求数据”按钮，出现以下错误。错误提示：无权限访问，原因是没有找到 Access-Control-Allow-Origin 这个 Header。
@@ -93,7 +95,7 @@ function loadXMLDoc() {
 
 4.设置CORS
 
-登入控制台->云存储->空间管理->进入存储桶test-cors->空间设置->跨域访问设置，点击CORS规则配置进入配置页面。
+登入控制台->对象存储->空间管理->进入存储桶test-cors->空间设置->跨域访问设置，点击CORS规则配置进入配置页面。
 
 ![](https://github.com/jdcloudcom/cn/blob/edit/image/Object-Storage-Service/OSS-087.jpg)
 

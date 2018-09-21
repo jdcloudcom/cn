@@ -1,0 +1,21 @@
+swagger: "2.0"
+definitions:
+  getSecurityTokenInfo:
+    x-jdcloud-module: sop
+    required:
+      - type
+      - code
+      - action
+    properties:
+      type:
+        type: integer
+        description: 操作保护验证方式：1-短信,2-邮箱,3-MFA
+      code:
+        type: string
+        description: 验证码
+      action:
+        type: string
+        description: 操作action serviceName:actionName
+      durationSeconds:
+        type: integer
+        description: 令牌有效期，单位秒，OpenAPI第三方MFA方式验证有效，默认短信、邮箱token有效期300秒，MFA有效期30秒

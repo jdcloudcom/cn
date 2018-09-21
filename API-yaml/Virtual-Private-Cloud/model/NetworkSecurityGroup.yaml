@@ -1,0 +1,29 @@
+swagger: "2.0"
+definitions:
+  networkSecurityGroup:
+    x-jdcloud-module: vpc
+
+    properties:
+      networkSecurityGroupId:
+        type: string
+        description: 安全组ID
+      networkSecurityGroupName:
+        type: string
+        description: 安全组名称
+      description:
+        type: string
+        description: 安全组描述信息
+      vpcId:
+        type: string
+        description: 安全组所在vpc的Id
+
+      securityGroupRules:
+        type: array
+        items:
+         $ref: "./SecurityGroupRule.yaml#/definitions/securityGroupRule"
+        description: 安全组规则信息
+
+      createdTime:
+        type: string
+        description: 安全组创建时间
+

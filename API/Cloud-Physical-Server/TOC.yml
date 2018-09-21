@@ -1,0 +1,53 @@
+  name: 云物理服务器
+  href:
+  items:
+  - name: 接口概览
+    href: overview.md
+
+  - name: 更新历史
+    herf: ChangeLog.md
+
+  - name: 云物理服务器相关接口
+    items:
+      - name: describeOS
+        href: Cloud-Physical-Server/describeOS.md
+      - name: describeSoftware
+        href: Cloud-Physical-Server/describeSoftware.md
+      - name: describeInstanceName
+        href: Cloud-Physical-Server/describeInstanceName.md
+      - name: createInstances
+        href: Cloud-Physical-Server/createInstances.md
+      - name: modifyInstance
+        href: Cloud-Physical-Server/modifyInstance.md
+      - name: describeDeviceTypes
+        href: Cloud-Physical-Server/describeDeviceTypes.md  
+      - name: describeDeviceRaids
+        href: Cloud-Physical-Server/describeDeviceRaids.md
+      - name: describeInstanceRaid
+        href: Cloud-Physical-Server/describeInstanceRaid.md
+      - name: describeInstanceStatus
+        href: Cloud-Physical-Server/describeInstanceStatus.md
+      - name: restartInstance
+        href: Cloud-Physical-Server/restartInstance.md  
+      - name: stopInstance
+        href: Cloud-Physical-Server/stopInstance.md
+      - name: startInstance
+        href: Cloud-Physical-Server/startInstance.md
+      - name: reinstallInstance
+        href: Cloud-Physical-Server/reinstallInstance.md
+      - name: describeInstance
+        href: Cloud-Physical-Server/describeInstance.md
+      - name: modifyBandwidth
+        href: Cloud-Physical-Server/modifyBandwidth.md
+      - name: describeInstances
+        href: Cloud-Physical-Server/describeInstances.md
+      - name: describeRegiones
+        href: Cloud-Physical-Server/describeRegiones.md
+      - name: describeSubnet
+        href: Cloud-Physical-Server/describeSubnet.md
+      
+      
+      
+      
+      
+        

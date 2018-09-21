@@ -1,0 +1,672 @@
+﻿swagger: "2.0"
+info:
+  version: "v1"
+  title: 云物理服务器
+  description: 云物理服务器操作相关的接口
+
+basePath: /regions/{regionId}
+
+paths:
+  "/os":
+    ###################### 查询云物理服务器支持的操作系统 ######################
+    get:
+      description: "查询云物理服务器支持的操作系统"
+      operationId: "describeOS"
+      parameters:
+        - name: deviceType
+          in: query
+          required: true
+          type: string
+          description: "实例类型，可调用接口（describeDeviceTypes）获取指定地域的实例类型，例如：cps.c.normal"
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                properties:
+                    oss:
+                      type: array
+                      items:
+                        $ref: "../model/OS.yaml#/definitions/os"
+              requestId:
+                type: string
+        400:
+          description: "Bad request"
+        404:
+          description: "Not found"
+        500:
+          description: "Internal server error"
+        503:
+          description: "Service unavailable"  
+  
+  "/os/{osTypeId}/softwares":
+    ###################### 查询物理服务器可预装的软件列表 ######################
+    get:
+      description: |
+        查询物理服务器可预装的软件列表<br/>
+        可调用接口（describeOS）获取云物理服务器支持的操作系统列表，根据不同的操作系统类型得到支持的可预装的软件列表<br/>
+      operationId: "describeSoftware"
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  softwares:
+                    type: array
+                    items:
+                      $ref: "../model/Software.yaml#/definitions/software"
+              requestId:
+                type: string
+        400:
+          description: "Bad request"
+        404:
+          description: "Not found"
+        500:
+          description: "Internal server error"
+        503:
+          description: "Service unavailable"             
+
+  "/instances/{instanceId}:describeInstanceName":
+    ###################### 查询云物理服务器名称 ######################
+    get:
+      description: "查询云物理服务器名称"
+      operationId: "describeInstanceName"
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  name:
+                    type: string
+                    description: "云物理服务器名称"
+              requestId:
+                type: string
+        400:
+          description: "Bad request"
+        404:
+          description: "Not found"
+        500:
+          description: "Internal server error"
+        503:
+          description: "Service unavailable"  
+
+  "/instances/{instanceId}:modifyInstance":
+    ###################### 修改云物理服务器信息 ######################
+    post:
+      description: "修改云物理服务器部分信息，包括名称、描述"
+      operationId: "modifyInstance"
+      parameters:
+        - name: name
+          in: query
+          type: string
+          description: "云物理服务器名称"
+        - name: description
+          in: query
+          type: string
+          description: "云物理服务器描述"
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  name:
+                    type: string
+                    description: "云物理服务器名称"
+                  description:
+                    type: string
+                    description: "云物理服务器描述"
+              requestId:
+                type: string
+        400:
+          description: "Bad request"
+        404:
+          description: "Not found"
+        500:
+          description: "Internal server error"
+        503:
+          description: "Service unavailable"  
+
+  "/deviceTypes":
+    ###################### 查询云物理服务器实例类型 ######################
+    get:
+      description: "查询云物理服务器实例类型"
+      operationId: "describeDeviceTypes"
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                type: object
+                properties:
+                  deviceTypes:
+                    type: array
+                    items:
+                      $ref: "../model/DeviceType.yaml#/definitions/deviceType"
+              requestId:
+                type: string
+        400:
+          description: "Bad request"
+        404:
+          description: "Not found"
+        500:
+          description: "Internal server error"
+        503:
+          description: "Service unavailable"  
+
+  "/raids":
+    ###################### 查询云物理服务器支持的RAID类型 ######################
+    get:
+      description: "查询某种实例类型的云物理服务器支持的RAID类型，可查询系统盘RAID类型和数据盘RAID类型"
+      operationId: "describeDeviceRaids"
+      parameters:
+        - name: deviceType
+          in: query
+          required: true
+          type: string
+          description: "实例类型，可调用（describeDeviceTypes）接口获取指定地域的实例类型，例如：cps.c.normal"
+        - name: volumeType
+          in: query
+          type: string
+          description: "磁盘类型，取值范围：system、data"
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                type: object
+                properties:
+                  raids:
+                    type: array
+                    items:
+                      $ref: "../model/Raid.yaml#/definitions/raid"
+              requestId:
+                type: string
+        400:
+          description: "Bad request"
+        404:
+          description: "Not found"
+        500:
+          description: "Internal server error"
+        503:
+          description: "Service unavailable"
+
+  "/instances/{instanceId}:describeInstanceRaid":
+    ###################### 查询云物理服务器RAID信息 ######################
+    get:
+      description: "查询单个云物理服务器已安装的RAID信息，包括系统盘RAID信息和数据盘RAID信息"
+      operationId: "describeInstanceRaid"
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  sysRaidTypeId:
+                    type: string
+                    description: "系统盘RAID类型ID"
+                  sysRaidType:
+                    type: string
+                    description: "系统盘RAID类型"
+                  dataRaidTypeId:
+                    type: string
+                    description: "数据盘RAID类型ID"
+                  dataRaidType:
+                    type: string
+                    description: "数据盘RAID类型"
+              requestId:
+                type: string
+        400:
+          description: "Bad request"
+        404:
+          description: "Not found"
+        500:
+          description: "Internal server error"
+        503:
+          description: "Service unavailable"
+
+  "/instances/{instanceId}:describeInstanceStatus":
+    ###################### 查询单个云物理服务器硬件监控信息 ######################
+    get:
+      description: "查询单个云物理服务器硬件监控信息"
+      operationId: "describeInstanceStatus"
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  cpus:
+                    type: boolean
+                    description: "CPU状态是否正常"
+                  mems:
+                    type: boolean
+                    description: "内存状态是否正常"
+                  disks:
+                    type: boolean
+                    description: "硬盘状态是否正常"
+                  nics:
+                    type: boolean
+                    description: "网卡状态是否正常"
+              requestId:
+                type: string
+        400:
+          description: "Bad request"
+        404:
+          description: "Not found"
+        500:
+          description: "Internal server error"
+        503:
+          description: "Service unavailable"
+
+  "/instances/{instanceId}:restartInstance":
+    ###################### 重启云物理服务器 ######################
+    put:
+      description: "重启单个云物理服务器，只能重启running状态的服务器"
+      operationId: "restartInstance"
+      parameters:
+        - name: clientToken
+          type: string
+          in: query
+          description: |
+            由客户端生成，用于保证请求的幂等性，长度不能超过36个字符；<br/>
+            如果多个请求使用了相同的clientToken，只会执行第一个请求，之后的请求直接返回第一个请求的结果<br/>
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  success:
+                    type: boolean
+                    description: "重启操作是否成功"
+              requestId:
+                type: string
+        400:
+          description: "Bad request"
+        404:
+          description: "Not found"
+        500:
+          description: "Internal server error"
+        503:
+          description: "Service unavailable"
+
+  "/instances/{instanceId}:stopInstance":
+    ###################### 云物理服务器关机 ######################
+    put:
+      description: "对单个云物理服务器执行关机操作，只能停止running状态的服务器"
+      operationId: "stopInstance"
+      parameters:
+        - name: clientToken
+          type: string
+          in: query
+          description: |
+            由客户端生成，用于保证请求的幂等性，长度不能超过36个字符；<br/>
+            如果多个请求使用了相同的clientToken，只会执行第一个请求，之后的请求直接返回第一个请求的结果<br/>
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  success:
+                    type: boolean
+                    description: "关机操作是否成功"
+              requestId:
+                type: string
+        400:
+          description: "Bad request"
+        404:
+          description: "Not found"
+        500:
+          description: "Internal server error"
+        503:
+          description: "Service unavailable"
+
+  "/instances/{instanceId}:startInstance":
+    ###################### 云物理服务器开机 ######################
+    put:
+      description: "对单个云物理服务器执行开机操作，只能启动stopped状态的服务器"
+      operationId: "startInstance"
+      parameters:
+        - name: clientToken
+          type: string
+          in: query
+          description: |
+            由客户端生成，用于保证请求的幂等性，长度不能超过36个字符；<br/>
+            如果多个请求使用了相同的clientToken，只会执行第一个请求，之后的请求直接返回第一个请求的结果<br/>
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  success:
+                    type: boolean
+                    description: "开机操作是否成功"
+              requestId:
+                type: string
+        400:
+          description: "Bad request"
+        404:
+          description: "Not found"
+        500:
+          description: "Internal server error"
+        503:
+          description: "Service unavailable"
+
+  "/instances/{instanceId}:reinstallInstance":
+    ###################### 重装云物理服务器 ######################
+    put:
+      description: |
+        重装云物理服务器，只能重装stopped状态的服务器<br/>
+        - 可调用接口（describeOS）获取云物理服务器支持的操作系统列表
+        - 可调用接口（describeSoftware）获取云物理服务器支持的软件列表，也可以不预装软件
+      operationId: "reinstallInstance"
+      parameters:
+        - name: clientToken
+          type: string
+          in: query
+          description: |
+            由客户端生成，用于保证请求的幂等性，长度不能超过36个字符；<br/>
+            如果多个请求使用了相同的clientToken，只会执行第一个请求，之后的请求直接返回第一个请求的结果<br/>
+        - name: instanceSpec
+          in: body
+          required: true
+          description: "云物理服务器配置"
+          schema:
+            $ref: "../model/ReinstallInstanceSpec.yaml#/definitions/reinstallInstanceSpec"
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  success:
+                    type: boolean
+                    description: "重装操作是否成功"
+              requestId:
+                type: string
+        400:
+          description: "Bad request"
+        404:
+          description: "Not found"
+        500:
+          description: "Internal server error"
+        503:
+          description: "Service unavailable"
+
+  "/instances/{instanceId}:modifyBandwidth":
+    ###################### 升级云物理服务器外网带宽 ######################
+    put:
+      description: |
+        升级云物理服务器外网带宽，只能操作running或者stopped状态的服务器<br/>
+        - 不支持未启用外网的服务器升级带宽
+        - 外网带宽不支持降级
+      operationId: "modifyBandwidth"
+      parameters:
+        - name: clientToken
+          in: query
+          type: string
+          description: |
+            由客户端生成，用于保证请求的幂等性，长度不能超过36个字符；<br/>
+            如果多个请求使用了相同的clientToken，只会执行第一个请求，之后的请求直接返回第一个请求的结果<br/>
+        - name: bandwidth
+          in: query
+          required: true
+          type: integer
+          description: "外网带宽，单位Mbps，取值范围[1,200]"
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  success:
+                    type: boolean
+                    description: "升级带宽是否成功"
+              requestId:
+                type: string
+        400:
+          description: "Bad request"
+        404:
+          description: "Not found"
+        500:
+          description: "Internal server error"
+        503:
+          description: "Service unavailable"
+
+  "/instances/{instanceId}":
+    ###################### 查询云物理服务器详情 ######################
+    get:
+      description: "查询单台云物理服务器详细信息"
+      operationId: "describeInstance"
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                type: object
+                properties:
+                  instance:
+                    type: object
+                    $ref: "../model/Instance.yaml#/definitions/instance"
+              requestId:
+                type: string
+        400:
+          description: "Bad request"
+        404:
+          description: "Not found"
+        500:
+          description: "Internal server error"
+        503:
+          description: "Service unavailable"                
+
+    ###################### 删除云物理服务器 ######################
+    delete:
+      description: |
+        删除单台云物理物理服务器，只能删除运行running、停止stopped、错误error状态的服务器<br/>
+        不能删除没有计费信息的服务器<br/>
+      operationId: "deleteInstance"
+      x-jdcloud-internal: true
+      parameters:
+        - name: clientToken
+          type: string
+          in: query
+          description: |
+            由客户端生成，用于保证请求的幂等性，长度不能超过36个字符；<br/>
+            如果多个请求使用了相同的clientToken，只会执行第一个请求，之后的请求直接返回第一个请求的结果<br/>
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  success:
+                    type: boolean
+                    description: "删除操作是否成功"
+              requestId:
+                type: string
+        400:
+          description: "Bad request"
+        404:
+          description: "Not found"
+        500:
+          description: "Internal server error"
+        503:
+          description: "Service unavailable"
+
+  "/instances":
+    ###################### 查询云物理服务器列表 ######################
+    get:
+      description: |
+        批量查询云物理服务器详细信息<br/>
+        支持分页查询，默认每页10条<br/>
+      operationId: "describeInstances"
+      parameters:
+        - name: pageNumber
+          in: query
+          type: integer
+          default: 1
+          description: "页码；默认为1"
+        - name: pageSize
+          in: query
+          type: integer
+          default: 10
+          description: "分页大小；默认为10；取值范围[10, 100]"
+        - name: az
+          in: query
+          type: string
+          description: "可用区，精确匹配"
+        - name: name
+          in: query
+          type: string
+          description: "云物理服务器名称，支持模糊匹配"
+        - name: networkType
+          in: query
+          type: string
+          description: "网络类型，精确匹配，目前只支持basic"
+        - name: deviceType
+          in: query
+          type: string
+          description: "实例类型，精确匹配，调用接口（describeDeviceTypes）获取实例类型"
+        - name: status
+          in: query
+          type: string
+          description: "云物理服务器状态，参考云物理服务器状态"
+        - name: filters
+          in: query
+          type: array
+          items:
+            $ref: "../../common/model/Filter.yaml#/definitions/filter"
+          description: | 
+            instanceId - 云物理服务器ID，精确匹配，支持多个
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                type: object
+                properties:
+                  instances:
+                    type: array
+                    items:
+                      $ref: "../model/Instance.yaml#/definitions/instance"
+                  pageNumber:
+                    type: integer
+                    description: "页码；默认为1"
+                  pageSize:
+                    type: integer
+                    description: "分页大小；默认为10；取值范围[10, 100]"
+                  totalCount:
+                    type: integer
+                    description: "查询结果总数"
+              requestId:
+                type: string
+        400:
+          description: "Bad request"
+        404:
+          description: "Not found"
+        500:
+          description: "Internal server error"
+        503:
+          description: "Service unavailable"
+
+    ###################### 创建云物理服务器 ######################
+    put:
+      description: |
+        创建一台或多台指定配置的云物理服务器<br/>
+        - 地域与可用区<br/>
+          - 调用接口（describeRegiones）获取云物理服务器支持的地域与可用区<br/>
+        - 实例类型<br/>
+          - 调用接口（describeDeviceTypes）获取物理实例类型列表<br/>
+          - 不能使用已下线、或已售馨的实例类型<br/>
+        - 操作系统和预装软件<br/>
+          - 可调用接口（describeOS）获取云物理服务器支持的操作系统列表<br/>
+          - 可调用接口（describeSoftware）获取云物理服务器支持的软件列表，也可以不预装软件<br/>
+        - 存储<br/>
+          - 数据盘多种RAID可选，可调用接口（describeDeviceRaids）获取服务器支持的RAID列表<br/>
+        - 网络<br/>
+          - 网络类型目前只支持basic<br/>
+          - 线路目前只支持bgp<br/>
+          - 支持不启用外网，如果启用外网，带宽范围[1,200] 单位Mbps<br/>
+        - 其他<br/>
+          - 购买时长，可按年或月购买，最少购买时长1个月，最长36个月（3年）<br/>
+          - 密码设置参考公共参数规范<br/>
+      operationId: "createInstances"
+      parameters:
+        - name: clientToken
+          in: query
+          type: string
+          description: |
+            由客户端生成，用于保证请求的幂等性，长度不能超过36个字符；<br/>
+            如果多个请求使用了相同的clientToken，只会执行第一个请求，之后的请求直接返回第一个请求的结果<br/>
+        - name: instanceSpec
+          in: body
+          required: true
+          description: "描述云物理服务器配置"
+          schema:
+            $ref: "../model/InstanceSpec.yaml#/definitions/instanceSpec"
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                type: object
+                properties:
+                  instanceIds:
+                    type: array
+                    items:
+                      type: string
+              requestId:
+                type: string
+        400:
+          description: "Bad request"
+        404:
+          description: "Not found"
+        500:
+          description: "Internal server error"
+        503:
+          description: "Service unavailable"
+
+#路径通用参数
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: 地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域
+  instanceId:
+    name: instanceId
+    in: path
+    required: true
+    type: string
+    description: 云物理服务器ID
+  osTypeId:
+    name: osTypeId
+    in: path
+    required: true
+    type: string
+    description: 操作系统系统类型ID，调用接口（describeOS）获取云物理服务器支持的操作系统
+

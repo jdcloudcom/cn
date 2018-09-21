@@ -1,0 +1,37 @@
+swagger: "2.0"
+definitions:
+  IndexPerformanceResult:
+    x-jdcloud-module: rds
+    title: IndexPerformanceResult
+    type: object
+    properties:
+      db:
+        type: string
+        description: 数据库名
+      table:
+        type: string
+        description: 表名
+      index:
+        type: string
+        description: 索引名
+      sizeKB:
+        type: integer
+        description: 索引大小，单位KB
+      userSeeks:
+        type: integer
+        description: 服务器启动以来，累计索引搜索次数
+      userScans:
+        type: integer
+        description: 服务器启动以来，累计表扫描次数
+      userUpdates:
+        type: integer
+        description: 服务器启动以来，累计索引更新次数
+      lastUserSeek:
+        type: string
+        description: 最近索引搜索时间，格式为YYYY-MM-DD hh:mm:ss
+      lastUserScan:
+        type: string
+        description: 最近表扫描时间，格式为YYYY-MM-DD hh:mm:ss
+      lastUserUpdate:
+        type: string
+        description: 最近索引更新时间，格式为YYYY-MM-DD hh:mm:ss

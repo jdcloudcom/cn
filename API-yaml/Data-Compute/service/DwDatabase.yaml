@@ -1,0 +1,140 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: database
+  description: API related to XDATA-DW database
+
+basePath: /regions/{regionId}
+
+paths:
+  "/dwDatabase":
+    ###################### 获取DW数据库列表 ######################
+        get:
+          description: "查询用户实例的所有数据库信息"
+          operationId: listDatabaseInfo
+          parameters:
+            - name: instanceName
+              in: query
+              type: string
+              required: true
+              description: "实例名称"
+          responses:
+            200:
+              description: OK
+              schema:
+                properties:
+                  result:
+                    properties:
+                      status:
+                        type: boolean
+                      message:
+                        type: string
+                      data:
+                        type: array
+                        items:
+                          $ref: "../model/DwDatabaseInfo.yaml#/definitions/dwDatabaseInfo"
+                  requestId:
+                    type: string
+            500:
+              description: "Internal server error"
+
+  "/dwDatabase/{databaseName}":
+    ###################### 创建DW数据库 ######################
+        post:
+          description: "创建属于用户实例的数据库"
+          operationId: createDatabase
+          parameters:
+            - name: instanceName
+              in: query
+              type: string
+              required: true
+              description: "实例名称"
+            - name: description
+              in: query
+              type: string
+              required: false
+              description: "数据库描述信息"
+          responses:
+            200:
+              description: OK
+              schema:
+                properties:
+                  result:
+                    properties:
+                      status:
+                        type: boolean
+                      message:
+                        type: string
+                  requestId:
+                    type: string
+            500:
+              description: "Internal server error"
+
+    ###################### 获取DW数据库详情 ######################
+        get:
+          description: "查询用户实例的指定数据库信息"
+          operationId: getDatabaseInfo
+          parameters:
+            - name: instanceName
+              in: query
+              type: string
+              required: true
+              description: "实例名称"
+          responses:
+            200:
+              description: OK
+              schema:
+                properties:
+                  result:
+                    properties:
+                      status:
+                        type: boolean
+                      message:
+                        type: string
+                      data:
+                        $ref: "../model/DwDatabase.yaml#/definitions/dwDatabase"
+                  requestId:
+                    type: string
+            500:
+              description: "Internal server error"
+
+    ###################### 删除DW数据库 ######################
+        delete:
+          description: "删除用户实例的指定数据库"
+          operationId: deleteDatabase
+          parameters:
+            - name: instanceName
+              in: query
+              type: string
+              required: true
+              description: "实例名称"
+          responses:
+            200:
+              description: OK
+              schema:
+                properties:
+                  result:
+                    properties:
+                      status:
+                        type: boolean
+                      message:
+                        type: string
+                  requestId:
+                    type: string
+            500:
+              description: "Internal server error"
+
+#路径通用参数
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: 地域ID
+  databaseName:
+    name: databaseName
+    in: path
+    required: true
+    type: string
+    description: 数据库名

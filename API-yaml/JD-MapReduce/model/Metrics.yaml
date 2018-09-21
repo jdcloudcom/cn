@@ -1,0 +1,24 @@
+swagger: "2.0"
+definitions:
+  metrics:
+    x-jdcloud-module: jmr
+    title: metrics
+    type: object
+    properties:
+      metric:
+        type: string
+      aggrPeriod:
+        type: integer
+      metricShow:
+        type: string
+      unit:
+        type: string
+        description: 计量单位
+      aggrType:
+        type: string
+      dps:
+        type: array
+        items:
+          type: string
+      tags:
+        type: string

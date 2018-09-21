@@ -1,0 +1,72 @@
+swagger: "2.0"
+definitions:
+  jmrJobViewModel:
+    x-jdcloud-module: jmr
+    title: jmrJobViewModel
+    type: object
+    properties:
+      id:
+        type: integer
+        description:
+      jobId:
+        type: string
+        description: 作业ID
+      jobName:
+        type: string
+        description: 作业名称
+      jobType:
+        type: string
+        description: 作业类型
+      jobStatus:
+        type: string
+        description: 作业状态
+      jobGroup:
+        type: string
+        description: 作业组
+      jobTrigger:
+        type: string
+        description: 作业触发器
+      cronExpression:
+        type: string
+        description: 定时任务的时间
+      orderBy:
+        type: string
+        description: 额外字段，可选
+      isSelfDependence:
+        type: integer
+      isVirtualTask:
+        type: integer
+      taskScheduleType:
+        type: integer
+      retryTimes:
+        type: integer
+        description: 作业重试次数
+      isSendMsg:
+        type: boolean
+        description: 作业失败后是否发送短信通知
+      userpin:
+        type: string
+        description: 用户名
+      createTime:
+        type: string
+        format: date
+        description: 创建时间
+      location:
+        type: string
+        description: 位置
+      params:
+        type: string
+        description: 所需参数
+      dataCenter:
+        type: string
+        description: 数据中心
+      clusterId:
+        type: string
+        description: 集群ID
+      clusterName:
+        type: string
+        description: 集群名称
+      clusterStatus:
+        type: string
+        description: 额外字段
+

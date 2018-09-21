@@ -1,0 +1,18 @@
+swagger: "2.0"
+definitions:
+  region:
+    x-jdcloud-module: cps
+    title: region
+    type: object
+    properties:
+      region:
+        type: string
+        description: 地域代码, 如 cn-east-1
+      regionName:
+        type: string
+        description: 地域名称，如 华东一区
+      azs:
+        type: array
+        items:
+          $ref: "./AZ.yaml#/definitions/az"
+        description: 可用区列表

@@ -1,0 +1,147 @@
+swagger: "2.0"                                  # 基于Swagger 2.0版本实现
+info:
+  version: v1
+  title: 数据库管理
+  description: 数据库管理相关接口
+
+basePath: /regions/{regionId}
+
+paths:
+  "/instances/{instanceId}/databases":    #数据库
+    post:
+      description: 创建一个数据库。 为了实例的管理和数据恢复，RDS对用户权限进行了限制，用户仅能通过控制台或本接口创建数据库
+      operationId: createDatabase
+      parameters:
+        - name: createDatabase
+          in: body
+          description:
+          schema:
+            type: object
+            required:
+              - dbName
+              - characterSetName
+            properties:
+              dbName:
+                type: string
+                description: 数据库名，数据库名称的限制请参考[帮助中心文档](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
+              characterSetName:
+                type: string
+                description: 数据库的字符集名，当前支持的字符集请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
+      responses:
+        200:
+          description: OK
+    get:
+      description: 获取当前实例的所有数据库详细信息的列表
+      operationId: describeDatabases
+      parameters:
+        - name: dbName
+          required: false
+          in: query
+          type: string
+          description: 数据库名。如果不指定数据库名，则返回所有数据库列表<br>- **MySQL：不支持该字段**<br>- **SQL Server：支持该字段**
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  databases:
+                    type: array
+                    items:
+                      $ref: ../model/Database.yaml#/definitions/Database
+  "/instances/{instanceId}/databases/{dbName}":    #数据库
+    delete:
+      description: 从RDS实例中删除数据库。为便于管理和数据恢复，RDS对用户权限进行了控制，用户仅能通过控制台或本接口删除数据库
+      operationId: deleteDatabase
+      x-jdcloud-mfa: true
+      responses:
+        200:
+          description: OK
+  "/instances/{instanceId}/databases/{dbName}:restoreDatabaseFromBackup":    #恢复单个数据库
+    post:
+      description: 从备份中恢复单个数据库，支持从其他实例（但必须是同一个账号下的实例）备份中恢复。例如可以从生产环境的数据库实例的备份恢复到测试环境的数据库中。<br>- 仅支持SQL Server
+      operationId: restoreDatabaseFromBackup
+      parameters:
+        - name: restoreDatabaseFromBackup
+          in: body
+          description:
+          schema:
+            type: object
+            required:
+              - backupId
+              - backupFileName
+            properties:
+              backupId:
+                type: string
+                description: 备份ID，可从备份查询接口describeBackups获取
+              backupFileName:
+                type: string
+                description: 指定该备份中用于恢复数据库的文件名称。通常情况下文件名（不包括后缀）即为备份的数据库名。例如文件名为my_test_db.bak，表示该文件是my_test_db数据库的备份
+      responses:
+        200:
+          description: OK
+  "/instances/{instanceId}/databases/{dbName}:restoreDatabaseFromFile":    #从用户上传的备份文件中恢复SQL Server数据库
+    post:
+      description: 从用户通过单库上云工具上传到云上的备份文件中恢复单个数据库<br>- 仅支持SQL Server
+      operationId: restoreDatabaseFromFile
+      parameters:
+        - name: restoreDatabaseFromFile
+          in: body
+          description:
+          schema:
+            type: object
+            required:
+              - fileName
+            properties:
+              sharedFileGid:
+                type: string
+                description: 共享文件的全局ID，可从上传文件查询接口[describeImportFiles](../import/describeImportFiles.md)获取；如果该文件不是共享文件，则不用输入该参数
+              fileName:
+                type: string
+                description: 用户上传的备份文件名称（包括文件后缀名），例如mydb1.bak
+      responses:
+        200:
+          description: OK
+  "/instances/{instanceId}/databases/{dbName}:restoreDatabaseFromOSS":    #从OSS恢复SQL Server数据库
+    post:
+      description: 从上传到OSS的备份文件中恢复单个数据库<br>- 仅支持SQL Server
+      operationId: restoreDatabaseFromOSS
+      parameters:
+        - name: restoreDatabaseFromOSS
+          in: body
+          description:
+          schema:
+            type: object
+            required:
+              - ossURL
+            properties:
+              ossURL:
+                type: string
+                description: 用户上传到对象存储OSS上的备份文件的内链
+      responses:
+        200:
+          description: OK
+#路径通用参数
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
+  instanceId:
+    name: instanceId
+    in: path
+    required: true
+    type: string
+    description: RDS 实例ID，唯一标识一个RDS实例
+  dbName:
+    name: dbName
+    in: path
+    required: true
+    type: string
+    description: 库名称
+
+
+

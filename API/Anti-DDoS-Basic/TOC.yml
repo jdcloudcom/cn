@@ -1,0 +1,22 @@
+  name: DDos 基础防护
+  href: 
+  items:
+  - name: 接口概览
+    href: overview.md
+  - name: 更新历史
+    href: ChangeLog.md
+  - name: 接口信息
+    items:
+      - name:  DDos基础防护相关接口
+        items:
+          - name: describeIpResourceFlow
+            href: Basic-Anti-DDoS-APIs/describeIpResourceFlow.md
+          - name: describeIpResourceInfo
+            href: Basic-Anti-DDoS-APIs/describeIpResourceInfo.md
+          - name: describeIpResourceProtectInfo
+            href: Basic-Anti-DDoS-APIs/describeIpResourceProtectInfo.md
+          - name: describeIpResources
+            href: Basic-Anti-DDoS-APIs/describeIpResources.md
+          - name: setCleanThreshold
+            href: Basic-Anti-DDoS-APIs/setCleanThreshold.md 
+                    

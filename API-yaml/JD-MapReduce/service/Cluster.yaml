@@ -1,0 +1,809 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: Cluster Management
+  description: JMR cluster management
+
+basePath: /regions/{regionId}
+paths:
+ ###################### 创建新集群 ######################
+  "/cluster:create":
+       post:
+         description: "创建新集群"
+         operationId: createClusterInNewNetwork
+         parameters:
+           - name: clusterModel
+             in: body
+             required: true
+             schema:
+               $ref: "../model/ClusterModel.yaml#/definitions/clusterModel"
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+
+ ###################### 查询 ######################
+  "/detail":
+       get:
+         description: "根据clusterId查询对应集群详情"
+         operationId: showClusterDetails
+         parameters:
+           - name: id
+             in: query
+             type: string
+             required: true
+             description: "集群ID；由八位字符组成"
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                     data:
+                       $ref: "../model/ClusterDetailModel.yaml#/definitions/clusterDetailModel"
+                       description: 对应集群的详细信息
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+
+ ###################### 释放 ######################
+  "/cluster/{id}:release":
+       post:
+         description: "释放指定clusterId对应集群"
+         operationId: releaseCluster
+         parameters:
+           - name: id
+             in: path
+             type: string
+             required: true
+             description: "集群ID；由八位字符组成"
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+##############获取用户appkey和SecretKey###########
+  "/key":
+       get:
+         description: "获取用户appKey和secretKey"
+         operationId: getKey
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                     data:
+                       $ref: "../model/AppModel.yaml#/definitions/appModel"
+                       description: 查询的AK/SK
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+##############软件配置信息列表###########
+  "/softwareStack":
+       get:
+         description: "软件配置信息列表"
+         operationId: getPropertyValue
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                     data:
+                       $ref: "../model/SoftStack.yaml#/definitions/softStack"
+                       description: 软件配置信息
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+##############硬件配置信息列表###########
+  "/hardwareStack":
+       get:
+         description: "硬件配置信息列表"
+         operationId: getHardwareStack
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                     data:
+                       $ref: "../model/HardWareStackData.yaml#/definitions/hardWareStackData"
+                       description: 查询的硬件信息
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+##########获取主机规格列表(过滤掉低内存的规格, 低于4核全部去掉。)######
+  "/instances":
+       get:
+         description: "获取主机规格列表(过滤掉低内存的规格, 低于4核全部去掉。)"
+         operationId: getInstanceList
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                     data:
+                       type: array
+                       items:
+                         $ref: "../model/InstanceList.yaml#/definitions/instanceList"
+                       description: 主机规格列表
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+##########查询用户指定clusterId对应的集群列表及相关服务的一些信息######
+  "/idata":
+       get:
+         description: "查询用户指定clusterId对应的集群列表及相关服务的一些信息"
+         operationId: idataCluster
+         parameters:
+           - name: id
+             in: path
+             type: string
+             required: true
+             description: "集群ID；由八位字符组成"
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                     data:
+                       type: object
+                       schema:
+                         properties:
+                           total:
+                             type: integer
+                             description: 集群机器总数
+                           clusters:
+                             type: array
+                             items:
+                               $ref: "../model/idataCluster.yaml#/definitions/idataCluster"
+                       description: |
+                                     "包括集群信息列表 - clusters"
+                                     "集群机器总数 - total"
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+###################### 获取软件清单信息 ######################
+  "/softwareInfo":
+       post:
+         description: "获取对应版本的软件清单信息"
+         operationId: getSoftwareInfo
+         parameters:
+           - name: ver
+             in: query
+             required: true
+             type: string
+             description: "JMR软件版本号"
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                     data:
+                       type: string
+                       description: 对应的软件清单信息
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+###################### 获取指定JMR版本对应软件清单以及版本信息 ######################
+  "/softwareInfo/v2":
+       post:
+         description: "获取指定JMR版本对应软件清单以及版本信息"
+         operationId: getSoftwareAndVersionInfo
+         parameters:
+           - name: ver
+             in: query
+             required: true
+             type: string
+             description: "JMR软件版本号"
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                     data:
+                       type: array
+                       items:
+                         $ref: "../model/SoftwareInfoAndVersion#/definitions/softwareInfoAndVersion"
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+ ##########返回jmr版本列表######
+  "/jmrVersions":
+       get:
+          description: "返回目前的JMR版本列表"
+          operationId: getJmrVersionList
+          responses:
+            200:
+              description: OK
+              schema:
+                properties:
+                  result:
+                    properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                     data:
+                       type: array
+                       items:
+                         type: string
+                       description: 目前的JMR版本列表
+                  requestId:
+                    type: string
+            500:
+              description: "Internal server error"
+###################### 计算集群价格 ######################
+  "/cluster:calculate":
+       post:
+         description: "计算对应规格属性的集群价格"
+         operationId: calculateClusterPrice
+         parameters:
+           - name: clusterListViewModel
+             in: body
+             required: true
+             description: "集群信息视图，除userName、dataCenter外均需要传入"
+             schema:
+               $ref: "../model/ClusterListViewModel.yaml#/definitions/clusterListViewModel"
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                     data:
+                       type: integer
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+###################### 获取剩余可创建资源数 ######################
+  "/avaliableNum":
+       get:
+         description: "获取当前用户剩余可创建资源数"
+         operationId: getAvaliableNum
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                     data:
+                       $ref: "../model/AvailableNumData.yaml#/definitions/availableNumData"
+                       description: 剩余可创建资源数
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+###################### 查询server的剩余配额 ######################
+  "/serverQuota:query":
+       get:
+         description: "查询server的剩余配额"
+         operationId: queryServerQuota
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                     data:
+                       $ref: "../model/AvailableNumData.yaml#/definitions/availableNumData"
+                       description: 服务的剩余配额
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+###################### 获取vpc集合 ######################
+  "/vpcs:query":
+       post:
+         description: "获取vpc集合"
+         operationId: queryVpcs
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                     data:
+                       type: array
+                       items:
+                         $ref: "../model/QueryVpcs.yaml#/definitions/queryVpcs"
+                       description: VPC集合
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+###################### 查询VpcSubnet集合 ######################
+  "/vpcSubnets/{vpcId}:query":
+       post:
+         description: "查询Vpc子网集合"
+         operationId: queryVpcSubnets
+         parameters:
+           - name: vpcId
+             in: path
+             type: string
+             required: true
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                     data:
+                       type: array
+                       items:
+                         $ref: "../model/QueryVpcSubnets.yaml#/definitions/queryVpcSubnets"
+                       description: VPC子网信息集合
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+###################### 逻辑删除 ######################
+  "/cluster/{recordId}:delete":
+       post:
+         description: "对指定集群执行逻辑删除"
+         operationId: deleteCluster
+         parameters:
+           - name: recordId
+             in: path
+             type: string
+             required: true
+             description: 删除集群在数据库中的主键ID
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+###################### 查询集群随机码 ######################
+  "/floatingIp:query":
+       post:
+         description: "查询集群随机码（八位）"
+         operationId: queryFloatingIp
+         parameters:
+           - name: recordId
+             in: query
+             required: true
+             type: string
+             description: 即集群的clusterId
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                     data:
+                       type: string
+                       description: "集群的8位随机码"
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+###################### 用户名校验 ######################
+  "/userName:validate":
+       get:
+         description: "对登陆的用户名进行校验"
+         operationId: validateUser
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+###################### 续费 ######################
+  "/BillingOrder:renew":
+       post:
+         description: "对指定集群按照指定的续费方式进行续费"
+         operationId: renewBillingOrder
+         parameters:
+           - name: body
+             in: body
+             required: true
+             schema:
+               required:
+                 - clusterId
+                 - type
+               properties:
+                 clusterId:
+                   type: string
+                   description: 续费集群clusterId
+                 type:
+                   type: integer
+                   description: |
+                        "必传参数，计费类型"
+                              "* 1:按配置"
+                              "* 601-609：包年包月1一个月到9个月"
+                              "* 610:包年包月一年"
+                              "* 620:包年包月两年"
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+###################### 验证输入的集群名称是否重复 ######################
+  "/cluster/{name}:validate":
+       post:
+         description: "验证输入的集群名称是否重复"
+         operationId: validateName
+         parameters:
+           - name: name
+             in: path
+             type: string
+             required: true
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+###################### 根据userpin获取accessKey和accessKeySecret ######################
+  "/accessKeys":
+       get:
+         description: "根据userpin获取accessKey和accessKeySecret"
+         operationId: getAccessKeys
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                     data:
+                       $ref: "../model/UserAccessKey.yaml#/definitions/userAccessKey"
+                       description: 用户的AK/SK
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+###################### 集群扩容 ######################
+  "/cluster:expansion":
+       post:
+         description: "对指定集群扩容指定数量的实例"
+         operationId: clusterExpansion
+         parameters:
+           - name: body
+             in: body
+             schema:
+               required:
+                 - clusterId
+                 - expansionNum
+               properties:
+                 clusterId:
+                   type: string
+                   description: 需要扩容的集群ID
+                 expansionNum:
+                   type: integer
+                   description: 扩容的数量
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+###################### 计算集群扩容的价格 ######################
+  "/cluster/expansionPrice:calculate":
+       post:
+         description: "计算集群扩容数量的价格"
+         operationId: calculateExpansionPrice
+         parameters:
+           - name: clusterExpansion
+             in: body
+             schema:
+               type: object
+               required:
+                 - clusterId
+                 - expansionNum
+               properties:
+                 clusterId:
+                   type: string
+                 expansionNum:
+                   type: integer
+             description: 包括扩容集群Id-clusterId，扩容数量-expansionNum
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                     data:
+                       type: number
+                       format: float
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+###################### 集群扩容时，显示集群details ######################
+  "/clusterInfo/{clusterId}:detail":
+       post:
+         description: "集群扩容时，显示集群详情"
+         operationId: getClusterDetailInfo
+         parameters:
+           - name: clusterId
+             in: path
+             required: true
+             type: string
+             description: 需要扩容的集群ID
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                     data:
+                       $ref: "../model/ClusterDetailInfo.yaml#/definitions/clusterDetailInfo"
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+###################### 当前监控的服务列表 ######################
+  "/monitorServices":
+       post:
+         description: "当前监控的集群下对应的所有服务列表"
+         operationId: monitorServiceList
+         parameters:
+           - name: clusterId
+             in: query
+             required: true
+             type: string
+             description: 集群Id
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                     data:
+                       type: array
+                       items:
+                         type: string
+                       description: 对应集群下的服务列表
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+###################### 服务存活状态监控明细数据 ######################
+  "/monitorDetails":
+       post:
+         description: "服务存活状态监控明细数据"
+         operationId: monitorDetails
+         parameters:
+           - name: body
+             in: body
+             schema:
+               type: object
+               required:
+                 - clusterId
+                 - service
+               properties:
+                 clusterId:
+                   type: string
+                   description: "集群ID"
+                 service:
+                   type: string
+                   description: "服务名称，如HADOOP"
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                     data:
+                       type: array
+                       items:
+                         type: string
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+###################### 通过clusterId得到远程连接集群主节点的VNC URL ######################
+  "/firstServerVncUrl":
+       get:
+         description: "通过clusterId得到远程连接集群主节点的VNC URL"
+         operationId: getFirstServerVncUrl
+         parameters:
+           - name: clusterId
+             in: query
+             required: true
+             type: string
+             description: 集群Id
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                     data:
+                       type: string
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+
+
+#路径通用参数
+parameters:
+ regionId:
+   name: regionId
+   in: path
+   required: true
+   type: string
+   description: 地域ID

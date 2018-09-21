@@ -1,0 +1,415 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: 缓存Redis实例接口
+  description: 缓存Redis实例相关接口
+
+basePath: /regions/{regionId}
+
+paths:
+  "/cacheInstance":
+    ###################### 创建缓存redis接口 ######################
+    post:
+      description: |
+        创建一个指定配置的缓存Redis实例
+        规格性能：创建缓存Redis实例的规格，分为主从版和集群版两种规格。每种规格都有最大连接数，内网带宽上限，CPU处理能力，规格代码等信息，具体可查看：<a href="https://www.jdcloud.com/help/detail/411/isCatalog/1">实例规格代码</a>
+        可用区：可用区是指在同一地域下，电力、网络等基础设施互相独立的物理区域。一个地域包含一个或多个可用区，同一地域下的多个可用区可以彼此连通。地域可用区详细信息可查询：<a href="https://www.jdcloud.com/help/detail/2222/isCatalog/1">地域可用区详情</a>
+        私有网络：简称VPC，自定义的逻辑隔离网络空间，支持自定义网段划分、路由策略等。具体信息可查询：<a href="https://www.jdcloud.com/help/detail/1509/isCatalog/1">私有网络VPC详情</a>
+        子网：子网是所属VPC IP地址范围内的IP地址块，简称subnet，在VPC下创建子网，同一VPC下子网的网段不可以重叠，不同VPC下子网的网段可以重叠。具体信息可查询：<a href="https://www.jdcloud.com/help/detail/1510/isCatalog/1">子网subnet详情</a>
+      operationId: createCacheInstance
+      parameters:
+        - name: cacheInstance
+          in: body
+          required: true
+          schema:
+            $ref: "../model/CacheInstanceSpec.yaml#/definitions/cacheInstanceSpec"
+          description: 创建缓存实例的具体属性，包括所属私有网络ID(vpcId)、子网ID(subnetId)、缓存实例名称、缓存实例规格、缓存实例密码、缓存实例所在区域可用区ID信息和缓存实例描述。
+        - name: charge
+          in: body
+          schema:
+            $ref: "../../charge/model/ChargeSpec.yaml#/definitions/chargeSpec"
+          description: 计费信息的相关配置。
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  cacheInstanceId:
+                    type: string
+                    description: 创建的缓存实例的ID。
+                  orderNum:
+                    type: string
+                    description: 创建缓存实例所生成的订单编号。
+              requestId:
+                type: string
+                description: 本次查询请求的ID。
+
+    ###################### redis列表接口 ######################
+    get:
+      description: "查询缓存Redis实例列表及其实例信息，可分页查询，查询指定页码，指定分页大小和指定过滤条件"
+      operationId: describeCacheInstances
+      parameters:
+        - name: pageNumber
+          in: query
+          type: integer
+          description: "请求查询缓存实例的页码；默认为1"
+        - name: pageSize
+          in: query
+          type: integer
+          description: "请求查询缓存实例的分页大小；默认为20；取值范围[10, 100]"
+        - name: filters
+          in: query
+          type: array
+          items:
+            $ref: "../../common/model/Filter.yaml#/definitions/filter"
+          description: |
+            cacheInstanceId -缓存实例Id，精确匹配，支持多个
+            cacheInstanceName - 缓存实例名称，模糊匹配，支持单个
+            cacheInstanceStatus - 缓存你实例状态，精确匹配，支持多个(running：运行，error：错误，creating：创建中，changing：变配中，deleting：删除中)
+        - name: sorts
+          in: query
+          type: array
+          items:
+            $ref: "../../common/model/Sort.yaml#/definitions/sort"
+          description: |
+            createTime - 创建时间(asc：正序，desc：倒序)
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                description: 查询缓存实例列表信息的结果
+                properties:
+                  cacheInstances:
+                    type: array
+                    items:
+                      $ref: "../model/CacheInstance.yaml#/definitions/cacheInstance"
+                    description: 要查询目标缓存实例的信息。
+                  totalCount:
+                    type: integer
+                    description: 查询到的缓存实例总个数。
+              requestId:
+                type: string
+                description: 本次查询请求的ID
+
+  "/cacheInstance/{cacheInstanceId}":
+    ###################### redis详情接口 ######################
+    get:
+      description: "查询单个缓存Redis实例详情"
+      operationId: describeCacheInstance
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                description: 查询缓存实例列表信息的结果
+                properties:
+                  cacheInstance:
+                    description: 要查询目标缓存实例的信息
+                    $ref: "../model/CacheInstance.yaml#/definitions/cacheInstance"
+              requestId:
+                type: string
+                description: 本次查询请求的ID
+        404:
+          description: NOT_FOUND
+
+    ###################### 修改redis的资源名称和描述 ######################
+    patch:
+      description: "修改缓存Redis实例的资源名称、描述，二者至少选一"
+      operationId: modifyCacheInstanceAttribute
+      parameters:
+        - name: cacheInstanceName
+          in: query
+          type: string
+          description: "缓存Redis实例资源名称，名称只支持数字、字母、英文下划线、中文，且不少于2字符不超过32字符"
+        - name: cacheInstanceDescription
+          in: query
+          type: string
+          description: "缓存Redis实例资源描述，不能超过256个字符"
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              requestId:
+                type: string
+                description: 本次修改请求的ID
+    
+    ###################### 删除redis接口 ######################
+    delete:
+      description: |
+        删除按配置计费、或包年包月已到期的单个缓存Redis实例，包年包月未到期不可删除
+        只有处于运行<b>running</b>或者错误<b>error</b>状态的可以删除，其余状态不可以删除
+        白名单用户不能删除包年包月已到期的云主机
+      operationId: deleteCacheInstance
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              requestId:
+                type: string
+                description: 本次删除请求的ID
+
+  "/cacheInstance/{cacheInstanceId}:modifyCacheInstanceClass":
+    ###################### 变更redis配置 ######################
+    post:
+      description: |
+        变更缓存Redis实例配置，只能变更运行状态的实例配置，变更配置的规格不能与之前的相同
+        预付费用户，从集群版变配到主从版，新规格的内存大小要大于老规格的内存大小，从主从版到集群版，新规格的内存大小要不小于老规格的内存大小
+      operationId: modifyCacheInstanceClass
+      parameters:
+        - name: cacheInstanceClass
+          in: query
+          required: true
+          type: string
+          description: 变更后的缓存Redis规格，详细参见：<a href="https://www.jdcloud.com/help/detail/411/isCatalog/1">实例规格代码</a>
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                description: 本次请求的结果信息。
+                properties:
+                  orderNum:
+                    type: string
+                    description: 本次变更请求的订单编号。
+              requestId:
+                type: string
+                description: 本次变更请求的ID
+
+  "/cacheInstance/{cacheInstanceId}:resetCacheInstancePassword":
+    ###################### 重置redis密码 ######################
+    post:
+      description: "重置缓存Redis实例密码，支持免密操作"
+      operationId: resetCacheInstancePassword
+      parameters:
+        - name: password
+          in: query
+          type: string
+          description: 密码，为空即为免密，包含且只支持字母及数字，不少于8字符不超过16字符
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              requestId:
+                type: string
+                description: 本次重置请求的ID
+
+  "/cacheInstance/{cacheInstanceId}/instanceConfig":
+    ###################### 修改redis参数配置 ######################
+    post:
+      description: "修改缓存redis实例参数配置，支持部分参数修改"
+      operationId: "modifyInstanceConfig"
+      x-jdcloud-internal: true
+      parameters:
+        - name: instanceConfig
+          in: body
+          required: true
+          description: 缓存实例参数配置信息
+          schema:
+            type: array
+            items:
+              $ref: "../model/ConfigItem.yaml#/definitions/configItem"
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              requestId:
+                type: string
+                description: 本次修改请求的ID
+
+    ###################### 查看redis参数配置 ######################
+    get:
+      description: "查看缓存redis实例当前的配置参数"
+      operationId: "describeInstanceConfig"
+      x-jdcloud-internal: true
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                properties:
+                  instanceConfig:
+                    type: array
+                    items:
+                      $ref: "../model/ConfigItem.yaml#/definitions/configItem"
+              requestId:
+                type: string
+                description: 本次查看请求的ID
+        404:
+          description: NOT_FOUND
+
+  "/cacheInstance/{cacheInstanceId}/backup":
+    ###################### 创建redis备份 ######################
+    post:
+      description: "创建redis实例备份，备份类型为手动备份，可设置备份文件名称"
+      operationId: "createBackup"
+      x-jdcloud-internal: true
+      parameters:
+        - name: fileName
+          in: query
+          required: true
+          type: string
+          description: "备份文件名称，只支持英文数字和下划线的组合，长度不超过32个字符"
+        - name: backupType
+          in: query
+          required: true
+          type: integer
+          description: "备份类型，手动备份为1"
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  baseId:
+                    type: string
+                    description: 本次创建备份操作的ID，可以用于查询本次实例手动备份信息
+              requestId:
+                type: string
+                description: 本次创建请求的ID
+
+    ###################### 查询redis备份列表 ######################
+    get:
+      description: "查询redis备份列表，支持分页查询，支持查询某次备份的信息"
+      operationId: "describeBackups"
+      x-jdcloud-internal: true
+      parameters:
+        - name: pageNumber
+          in: query
+          required: true
+          type: integer
+          description: "页码；默认为1"
+        - name: pageSize
+          in: query
+          required: true
+          type: integer
+          description: "分页大小；默认为20；取值范围[10, 100]"
+        - name: baseId
+          in: query
+          required: false
+          type: string
+          description: "备份操作ID，可查询某次手动备份的列表信息"
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  backups:
+                    type: array
+                    description: 备份的接口集合
+                    items:
+                      $ref: "../model/Backup.yaml#/definitions/backup"
+                  totalCount:
+                    type: integer
+                    description: "备份总个数"
+              requestId:
+                type: string
+                description: 本次查询请求的ID
+        404:
+          description: NOT_FOUND
+
+  "/cacheInstance/{cacheInstanceId}/backupPolicy":
+    ###################### 查询redis备份策略 ######################  
+    get:
+      description: "查询redis备份策略"
+      operationId: "describeBackupPolicy"
+      x-jdcloud-internal: true
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              backupPeriod:
+                type: string
+                description: "备份周期：包括：Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday"
+              backupTime:
+                type: string
+                description: "备份时间，格式：HH:mmZ-HH:mmZ"
+              nextBackupTime: 
+                type: string
+                format: date-time
+                description: "下次自动备份时间段，格式：YYYY-MM-DD HH:mm-HH:mm"
+              requestId:
+                type: string
+                description: "本次查询请求的ID"
+        404:
+          description: NOT_FOUND
+
+    ###################### 修改redis备份策略 ######################
+    patch:
+      description: "修改redis自动备份策略，可修改备份周期和备份的时间段"
+      operationId: "modifyBackupPolicy"
+      x-jdcloud-internal: true
+      parameters:
+        - name: backupTime
+          in: query
+          required: true
+          type: string
+          description: "备份时间，格式：HH:mmZ-HH:mmZ"
+        - name: backupPeriod
+          in: query
+          required: true
+          type: string
+          description: |
+            备份周期：包括：
+            Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              requestId:
+                type: string 
+                description: 本次查询请求的ID
+
+  "/cacheInstance/{cacheInstanceId}/restore":
+    ###################### 备份恢复redis实例 ######################
+    post:
+      description: "备份恢复redis实例，根据某次备份操作来恢复redis实例"
+      operationId: "restoreInstance"
+      x-jdcloud-internal: true
+      parameters:
+        - name: baseId
+          in: query
+          required: true
+          type: string
+          description: "备份操作ID，根据此次备份操作来恢复redis实例"
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              requestId:
+                type: string 
+                description: 本次请求的ID
+
+
+#路径通用参数
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: 缓存Redis实例所在区域的Region ID。目前缓存Redis有华北、华南、华东区域，对应Region ID为cn-north-1、cn-south-1、cn-east-2
+  cacheInstance:
+    name: cacheInstanceId
+    in: path
+    required: true
+    type: string
+    description: 缓存Redis实例ID，是访问实例的唯一标识。

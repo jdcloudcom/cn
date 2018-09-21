@@ -1,0 +1,13 @@
+swagger: "2.0"
+definitions:
+  getJobListData:
+    x-jdcloud-module: jmr
+    title: getJobListData
+    type: object
+    properties:
+      jmrJobViewModelList:
+        type: array
+        items:
+          $ref: "../model/JmrJobViewModel.yaml#/definitions/jmrJobViewModel"
+      totalNum:
+        type: integer

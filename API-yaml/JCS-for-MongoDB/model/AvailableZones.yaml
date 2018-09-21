@@ -1,0 +1,14 @@
+swagger: "2.0"
+definitions:
+  AvailableZones:
+    x-jdcloud-module: mongodb
+    title: AvailableZones
+    type: object
+    properties:
+      az:
+        type: string
+        description: 可用区
+      canSale:
+        type: boolean
+        description: 是否可售
+      

@@ -1,0 +1,19 @@
+swagger: "2.0"
+definitions:
+  dwTableRow:
+    x-jdcloud-module: xdata
+    title: DwTableRow
+    type: object
+    properties:
+      columnName:
+        type: string
+        description: 字段名称
+      columnType:
+        type: string
+        description: 字段类型
+      isPartition:
+        type: boolean
+        description: 是否分区字段
+      comments:
+        type: string
+        description: 描述信息

@@ -121,13 +121,16 @@ master的运行信息可以通过osstransfer/logs目录下的log-master.txt查�
 为了能够获取master和worker的运行状态，我们开发了一个单独的程序，该程序目录为：osstransfer/src/probe/probe.py，我们介绍该程序的使用：
 
 （1）显示帮助文档
+
 ```
 python probe.py -h
 ```
+
 （2）查看某个worker或master
 ```
 python probe.py -ip_port ip:port
 ```
+
 （3）查看所有的worker和master的状态
 ```
 python probe.py -f config-master

@@ -1,0 +1,67 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: 安全管理
+  description: API related to MONGODB security
+
+basePath: /regions/{regionId}
+
+paths:
+  "/instances/{instanceId}/securityIps":
+    ###################### 修改实例访问白名单 ######################
+    post:
+      description: "修改实例访问白名单"
+      operationId: modifySecurityIps 
+      parameters:
+        - name: modifySecurityIps
+          in: body
+          description:
+          schema:
+            type: object
+            required:
+              - modifyMode
+              - securityIps
+            properties:
+              modifyMode:
+                type: string
+                description: 修改方式,Add 增加白名单,Delete 删除白名单.
+              securityIps:
+                type: string
+                description: IP白名单分组下的IP列表，最多45个以逗号隔开，格式如下：0.0.0.0/0，10.23.12.24（IP），或者10.23.12.24/24（CIDR模式，无类域间路由，/24表示了地址中前缀的长度，范围[1，32]）。
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              requestId:
+                type: string
+
+    get:
+      description: 查询实例访问白名单
+      operationId: describeSecurityIps 
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  securityIps:
+                    type: string
+            requestId:
+                type: string
+  
+#路径通用参数
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: Region ID
+  instance:
+    name: instanceId
+    in: path
+    required: true
+    type: string
+    description: Instance ID

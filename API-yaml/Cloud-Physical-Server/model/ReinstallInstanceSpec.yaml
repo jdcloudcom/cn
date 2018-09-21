@@ -1,0 +1,41 @@
+swagger: "2.0"
+definitions:
+  reinstallInstanceSpec:
+    x-jdcloud-module: cps
+    title: reinstallInstanceSpec
+    type: object
+    required:
+      - az
+      - imageType
+      - osTypeId
+      - keepData
+      - sysRaidTypeId
+      - dataRaidTypeId
+      - password
+    properties:
+      az:
+        type: string
+        description: "可用区, 如cn-east-1a"
+      imageType:
+        type: string
+        description: "镜像类型, 取值范围：standard、standard_app"
+      osTypeId:
+        type: string
+        description: "操作系统类型ID"
+      sysRaidTypeId:
+        type: string
+        description: "系统盘RAID类型ID"
+      keepData:
+        type: string
+        description: "是否保留数据盘数据, 取值为：yes、no"
+      dataRaidTypeId:
+        type: string
+        description: "数据盘RAID类型ID"
+      password:
+        type: string
+        description: "密码"
+      softwares:
+        type: array
+        items:
+          $ref: "../model/Software.yaml#/definitions/software"
+

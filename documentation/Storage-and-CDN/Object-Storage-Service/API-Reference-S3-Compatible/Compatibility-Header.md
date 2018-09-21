@@ -9,10 +9,10 @@
 |Content-Type|兼容|
 |Content-MD5|兼容|
 |Date|兼容|
-|Expect|未兼容|
+|Expect|兼容|
 |Host|兼容|
 |x-amz-content-sha256|未兼容|
-|x-amz-date|未兼容|
+|x-amz-date|兼容|
 |x-amz-security-token|未兼容|
 
 ## 公共响应头

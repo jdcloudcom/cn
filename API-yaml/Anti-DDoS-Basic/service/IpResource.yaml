@@ -1,0 +1,142 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: DDoS基础防护相关接口
+  description: DDoS基础防护相关接口
+
+basePath: /regions/{regionId}
+
+paths:
+  /ipResources:
+    get:
+      description: "查询区域下的公网IP资源列表"
+      operationId: describeIpResources
+      parameters:
+        - name: ip
+          in: query
+          type: string
+          required: false
+          description: IP模糊匹配
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  dataList:
+                    type: array
+                    items:
+                      $ref: "../model/IpResource.yaml#/definitions/ipResource"
+                  totalCount:
+                    type: integer
+              requestId:
+                type: string
+  /ipResources/{ip}:
+    get:
+      description: "查询公网IP基本信息"
+      operationId: describeIpResourceInfo
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  data:
+                    $ref: "../model/IpResourceInfo.yaml#/definitions/ipResourceInfo"
+              requestId:
+                type: string
+        404:
+          description: NOT_FOUND
+
+  /ipResources/{ip}:setCleanThreshold:
+    post:
+      description: "设置公网IP的清洗阈值"
+      operationId: setCleanThreshold
+      parameters:
+        - name: cleanThresholdSpec
+          in: body
+          description: cc参数
+          required: true
+          schema:
+            $ref: "../model/CleanThresholdSpec.yaml#/definitions/cleanThresholdSpec"
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              requestId:
+                type: string
+        404:
+          description: NOT_FOUND
+
+  /ipResources/{ip}/protectInfo:
+    get:
+      description: "查询公网IP的防护明细"
+      operationId: describeIpResourceProtectInfo
+      parameters:
+        - name: start
+          in: query
+          type: integer
+          required: false
+          description: 限制查询的开始范围
+        - name: limit
+          in: query
+          type: integer
+          required: false
+          description: 限制查询的记录数
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  dataList:
+                    type: array
+                    items:
+                      $ref: "../model/IpResourceProtectInfo.yaml#/definitions/ipResourceProtectInfo"
+              requestId:
+                type: string
+        404:
+          description: NOT_FOUND
+
+  /ipResources/{ip}/monitorFlow:
+    get:
+      description: "查询公网IP的监控流量"
+      operationId: describeIpResourceFlow
+      parameters:
+        - name: endTime
+          in: query
+          type: string
+          required: false
+          description: 查询的结束时间，UTC时间，格式：yyyy-MM-dd'T'HH:mm:ssZ
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  data:
+                    $ref: "../model/IpResourceFlow.yaml#/definitions/ipResourceFlow"
+              requestId:
+                type: string
+        404:
+          description: NOT_FOUND
+
+#路径通用参数
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: 所属地域ID
+  ip:
+    name: ip
+    in: path
+    required: true
+    type: string
+    description: 公网IP地址

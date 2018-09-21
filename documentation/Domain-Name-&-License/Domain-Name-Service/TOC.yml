@@ -1,0 +1,65 @@
+  name: 域名服务
+  href: 
+  items:
+  - name: 产品简介
+    items:
+      - name: 产品概述
+        herf: Introduction/Product-Overview.md
+      - name: 核心概念
+        herf: Introduction/Core-Concepts.md
+      - name: 产品优势
+        herf: Introduction/Benefits.md
+      - name: 产品功能
+        herf: Introduction/Features.md
+      - name: 产品规格
+        herf: Introduction/Specifications.md
+      - name: 应用场景
+        herf: Introduction/Application-Scenario.md 
+  - name: 入门指南
+    items:
+      - name: 创建信息模版
+        herf: Getting-Started/Create-Information-Template.md
+      - name: 注册域名
+        herf: Getting-Started/Register-Domain-Name.md
+      - name: 信息模板
+        herf: Getting-Started/Information-Template.md
+        
+  - name: 操作指南
+    items:
+      - name: 域名管理
+        items:
+          - name: 域名状态
+            herf: Operation-Guide/Domain-Management/Domain-Name-Status.md
+          - name: 域名转出
+            herf: Operation-Guide/Domain-Management/Domain-Name-Transfer-out.md
+          - name: 安全设置
+            herf: Operation-Guide/Domain-Management/Security-Setting.md      
+          - name: 解析域名
+            herf: Operation-Guide/Domain-Management/Domain-Name-Resolution.md
+          - name: 过户域名
+            herf: Operation-Guide/Domain-Management/Ownership-Transfer-of-Domain-Name.md
+      - name: 信息模板
+        items:
+          - name: 创建信息模版
+            herf: Operation-Guide/Information-Template/Create-Information-Template.md
+      - name: 域名转入
+        items:
+          - name: 转入域名
+            herf: Operation-Guide/Domain-Transfer/Domain-Name-Transfer.md    
+  - name: 问题排查
+    items:
+    - name: 域名与反向解析
+      herf: Troubleshooting/Domain-Name-and-Reverse-Resolution.md
+    - name: 如何将不带www的根域名跳转到带www的主域名上
+      herf: Troubleshooting/How-to-Skip-Root-Domain-Name-Without-www-to-Main-Domain-Name-With-www.md
+  - name: 常见问题
+    herf: FAQ/FAQ.md
+  - name: 用户协议
+    items:
+    - name: 域名在线服务条款
+      herf: User-Agreements/Donline-Terms-of-Service-of-Domain-Name.md      
+    - name: 国际域名在线转移协议
+      herf: User-Agreements/IDN-Online-Transfer-Agreement.md      
+
+          
+          

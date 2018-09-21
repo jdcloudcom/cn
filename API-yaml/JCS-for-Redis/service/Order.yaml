@@ -1,0 +1,43 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: 缓存Redis订单接口
+  description: 缓存Redis订单相关接口
+
+basePath: /regions/{regionId}
+
+paths:
+  "/orderStatus/{orderRequest}":
+    ###################### 查询订单状态 ######################
+    get:
+      description: "查询订单状态"
+      operationId: describeOrderStatus
+      x-jdcloud-internal: true
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  orderStatus:
+                    $ref: "../model/OrderStatus.yaml#/definitions/orderStatus"
+              requestId:
+                type: string
+
+    
+
+#路径通用参数
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+    description: 缓存Redis实例所在区域的Region ID。目前缓存Redis有华北、华南、华东区域，对应Region ID为cn-north-1、cn-south-1、cn-east-2
+  orderRequest:
+    name: orderRequest
+    in: path
+    required: true
+    type: string
+    description: 请求requestId

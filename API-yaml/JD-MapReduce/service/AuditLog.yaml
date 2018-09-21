@@ -1,0 +1,62 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: AuditLog Request
+  description: JMR audit log,including cluster executing history etc. Fron end request interface
+
+basePath: /regions/{regionId}
+paths:
+ ###################### 查询metric数据 ######################
+  "/{clusterId}/history:list":
+       post:
+         description: "查看集群历史"
+         operationId: listClusterHistory
+         x-jdcloud-internal: true
+         parameters:
+           - name: clusterId
+             in: path
+             required: true
+             type: string
+             description: 集群ID
+           - name: selectParams
+             in: body
+             required: false
+             schema:
+               $ref: "../model/SelectParams.yaml#/definitions/selectParams"
+         responses:
+           200:
+             description: OK
+             schema:
+               properties:
+                 result:
+                   properties:
+                     status:
+                       type: string
+                     message:
+                       type: string
+                     data:
+                       type: object
+                       schema:
+                         properties:
+                           totalNum:
+                             type: integer
+                             description: 返回的审计日志列表数量
+                           auditLogList:
+                             type: array
+                             items:
+                               $ref: "../model/AuditLog.yaml#/definitions/auditLog"
+                       description: |
+                                    "包括日志列表 - auditLogList"
+                                    "以及返回的列表大小 - totalNum"
+                 requestId:
+                   type: string
+           500:
+             description: "Internal server error"
+#路径通用参数
+parameters:
+ regionId:
+   name: regionId
+   in: path
+   required: true
+   type: string
+   description: 地域ID

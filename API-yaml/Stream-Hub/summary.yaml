@@ -1,0 +1,8 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: JDCLOUD 流数据总线 API
+  description: 提供流数据总线topic操作的相关接口。
+host: "streambus.jdcloud-api.com"
+x-jdcloud-version: "v1"
+x-jdcloud-revision: "1.0.1"

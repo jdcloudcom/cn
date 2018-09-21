@@ -45,9 +45,9 @@ StringToSign =HTTP-Verb + "\n"
 
 如x-jss-server-side-encryption:  false转换成：x-jss-server-side-encryption:false
 
-1.将每一个头和内容用\n分隔符分隔拼成最后的CanonicalizedHeaders。
+4.将每一个头和内容用\n分隔符分隔拼成最后的CanonicalizedHeaders。
 
-2.如果没有以x-jss-为前缀的HTTP请求头，则CanonicalizedHeaders为空字符串""。
+5.如果没有以x-jss-为前缀的HTTP请求头，则CanonicalizedHeaders为空字符串""。
 
 注意:
 

@@ -1,0 +1,54 @@
+swagger: "2.0"
+definitions:
+  topicListInfo:
+    x-jdcloud-module: streambus
+    title: topicListInfo
+    type: object
+    properties:
+      archived: 
+        type: integer
+        description: "是否归档（0：未归档，1：已归档）"
+      createdTime:
+        type: string
+        format: date
+        description: "创建topic的时间戳" 
+      deleted:
+        type: integer
+        description: "topic是否已删除（0：未删除，1：删除）"
+      id:
+        type: integer
+        description: "topic的id值"
+      lifecycle:
+        type: integer
+        description: "数据写入后的保留时间"
+      name:
+        type: string
+        description: "流数据总线中topic的名字"
+      partitionNum:
+        type: string
+        description: "对应kafka中的分区数"
+      remark:
+        type: string
+        description: "备注"
+      shardNum:
+        type: string
+        description: "流数据总线shard的数量"
+      status:
+        type: integer
+        description: "0: 已创建, 1: 创建中"
+      topicName:
+        type: string
+        description: "对应kafka中的topic名字"
+      uid:
+        type: string
+        description: "对应kafka中的uid"
+      updatedTime:
+        type: string
+        format: date
+        description: "更新topic的时间戳" 
+      userPin:
+        type: string
+        description: "用户的userPin"
+      dataSize:
+        type: string
+      

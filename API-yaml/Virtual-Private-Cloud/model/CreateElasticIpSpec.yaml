@@ -1,0 +1,17 @@
+swagger: "2.0"
+definitions:
+  createElasticIpSpec:
+    x-jdcloud-module: vpc
+    required:
+      - maxCount
+      - elasticIpSpec
+    properties:
+      maxCount:
+        type: integer
+        description: 购买弹性ip数量；取值范围：[1,100]
+      elasticIpAddress:
+        type: string
+        description: 指定弹性ip地址进行创建，当申请创建多个弹性ip时，必须为空
+      elasticIpSpec:
+        $ref: "./ElasticIpSpec.yaml#/definitions/elasticIpSpec"
+        description: 弹性ip规格

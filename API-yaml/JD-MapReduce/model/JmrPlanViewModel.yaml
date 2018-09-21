@@ -1,0 +1,52 @@
+swagger: "2.0"
+definitions:
+  jmrPlanViewModel:
+    x-jdcloud-module: jmr
+    title: jmrPlanViewModel
+    type: object
+    properties:
+      planId:
+        type: number
+        description: 任务调度id
+      planName:
+        type: string
+      planType:
+        type: string
+      planStatus:
+        type: string
+      failurePolicy:
+        type: string
+        description: 任务调度失败时采用的策略
+      createTime:
+        type: string
+        format: date
+        description: 创建时间
+      modifyTime:
+        type: string
+        format: date
+        description: 修改时间
+      dataCenter:
+        type: string
+        description: 数据中心，即regionId
+      az:
+        type: string
+      jobGroup:
+        type: string
+      jobTrigger:
+        type: string
+        description: 触发器
+      cronExpression:
+        type: string
+        description: formatt后的时间
+      isSync:
+        type: boolean
+      description:
+        type: string
+      jobIds:
+        type: string
+      clusterId:
+        type: string
+      clusterName:
+        type: string
+      orderBy:
+        type: string

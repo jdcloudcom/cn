@@ -1,0 +1,81 @@
+name: 云市场
+items:
+  - name: 服务商
+    items:
+      - name: 服务商入驻
+        items:
+        - name: 云市场简介
+          herf: ISV/ISV-Enter/MarketPlace-Introduction.md
+        - name: 入驻条件及类目介绍
+          herf: ISV/ISV-Enter/Enter-condition.md
+        - name: 入驻流程
+          herf: ISV/ISV-Enter/Enter-Flow.md
+        - name: 入驻协议
+          herf: ISV/ISV-Enter/Enter-Agreement.md
+        - name: 管理规范
+          herf: ISV/ISV-Enter/Management-Practices.md
+        - name: 市场活动合作规范
+          herf: ISV/ISV-Enter/Norms-Of-Cooperation.md
+      - name: 管理后台
+        items:
+        - name: 修改服务价格
+          herf: Management-Backstage/Revise-The-Price.md
+        - name: 镜像类商品发布介绍
+          herf: Management-Backstage/Image-Release.md
+        - name: 软件类商品发布介绍
+          herf: Management-Backstage/Software-Release.md
+        - name: 下载类商品发布介绍
+          herf: Management-Backstage/Download-Release.md
+        - name: 线下服务类商品发布介绍
+          herf: Management-Backstage/Offline-Service-Release.md
+        - name: 选择发布商品的类型（交付方式）
+          herf: Management-Backstage/Delivery-Method.md
+        - name: 服务商结算
+          herf: Management-Backstage/ISV-Balance.md
+      - name: 商品接入
+        items:
+        - name: 第三方镜像安全规范
+          herf: Product-Enter/Image-Safe-Standard.md
+        - name: 第三方镜像制作规范
+          herf: Product-Enter/Image-Make-Standard.md
+        - name: 京东云市场主动通知生成方式帮助文档
+          herf: Product-Enter/Notify-Interface-Standard.md
+  - name: 服务相关
+    items:
+      - name: 订购协议
+        herf: Service-Related/Subscription-Agreement.md
+      - name: 发票申请
+        herf: Service-Related/Invoice.md
+      - name: 镜像帮助文档
+        herf: Service-Related/Image-Help.md
+      - name: 建站帮助文档
+        herf: Service-Related/Website-Help.md
+      - name: 京东云PLUS企业云盘帮助文档
+        herf: Service-Related/PLUS-Enterprise-Cloud-Box-Document.md
+      - name: 京东云PLUS企业邮箱帮助文档
+        herf: Service-Related/PLUS-Enterprise-Email-Document.md
+      - name: 京东云PLUS云会议帮助文档
+        herf: Service-Related/PLUS-Meeting-Document.md
+      - name: 京东云PLUS智能短信帮助文档
+        herf: Service-Related/PLUS-Smart-SMS-Document.md 
+      - name: 服务商咚咚添加操作指导
+        herf: Service-Related/IM-Operation-Manual.md
+      - name: 短信服务
+        items:
+        - name: 京东云短信优势
+          herf: Messaging-Service/Message-Advantage.md
+        - name: 短信服务FAQ
+          herf: Messaging-Service/Message-FAQ.md
+        - name: 发送流程
+          herf: Messaging-Service/Message-Send.md
+        - name: 短信计价方式
+          herf: Messaging-Service/Message-Charging.md
+        - name: 签名审核规则
+          herf: Messaging-Service/Sign-Rule.md
+        - name: 模板审核规则
+          herf: Messaging-Service/Templet-Rule.md
+  - name: 联系我们
+    items:
+      - name: 联系我们
+        herf: Contact-Us/Contact-Us.md
+          

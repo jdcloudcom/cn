@@ -1,0 +1,79 @@
+swagger: "2.0"
+definitions:
+  instance:
+    x-jdcloud-module: cps
+    title: instance
+    type: object
+    properties:
+      instanceId:
+        type: string
+        description: "云物理服务器实例ID"
+      region:
+        type: string
+        description: "区域代码, 如 cn-east-1"
+      az:
+        type: string
+        description: "可用区, 如 cn-east-1a"
+      deviceType:
+        type: string
+        description: "实例类型, 如 cps.c.normal"
+      name:
+        type: string
+        description: "云物理服务器名称"
+      description:
+        type: string
+        description: "云物理服务器描述"
+      status:
+        type: string
+        description: "云物理服务器生命周期状态"
+      enableInternet:
+        type: string
+        description: "是否启用外网, 如 yes/no"
+      bandwidth:
+        type: integer
+        description: "带宽, 单位Mbps"
+      imageType:
+        type: string
+        description: "镜像类型, 如 standard/standard_app"
+      osTypeId:
+        type: string
+        description: "操作系统类型ID"
+      osName:
+        type: string
+        description: "操作系统名称"
+      osType:
+        type: string
+        description: "操作系统类型, 如 ubuntu/centos"
+      osVersion:
+        type: string
+        description: "操作系统版本, 如 16.04"
+      sysRaidTypeId:
+        type: string
+        description: "系统盘RAID类型ID"
+      sysRaidType:
+        type: string
+        description: "系统盘RAID类型, 如 NORAID, RAID0, RAID1"
+      dataRaidTypeId:
+        type: string
+        description: "数据盘RAID类型ID"
+      dataRaidType:
+        type: string
+        description: "数据盘RAID类型, 如 NORAID, RAID0, RAID1"
+      networkType:
+        type: string
+        description: "网络类型, 如 basic"
+      lineType:
+        type: string
+        description: "外网链路类型, 如 bgp"
+      subnetId:
+        type: string
+        description: "子网编号"
+      privateIp:
+        type: string
+        description: "内网IP"
+      publicIp:
+        type: string
+        description: "公网IP"
+      charge:
+        $ref: "../../charge/model/Charge.yaml#/definitions/charge"
+        description: "计费信息"

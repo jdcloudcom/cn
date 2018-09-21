@@ -1,0 +1,14 @@
+swagger: "2.0"
+definitions:
+  azIdSpec:
+    x-jdcloud-module: redis
+    description: 缓存Redis实例所在区域可用区ID信息
+    type: object
+    properties:
+      master:
+        type: string
+        description: 缓存Redis主实例所在区域可用区ID
+      slave:
+        type: string
+        description: 缓存Redis从实例所在区域可用区ID
+      

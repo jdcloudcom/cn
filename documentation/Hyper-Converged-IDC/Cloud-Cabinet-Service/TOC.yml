@@ -4,7 +4,7 @@ items:
 - name: 产品简介
   items:
       - name: 产品概述
-        href: Introduction/What-Is-Cloud-Cabinet-Service.md
+        href: Introduction/Product-Overview.md
       - name: 核心概念
         href: Introduction/Core-Concepts.md
       - name: 基础架构
@@ -13,9 +13,9 @@ items:
       - name: 产品优势
         href: Introduction/Benefits.md
       - name: 产品功能
-        href: Introduction/Functions.md
+        href: Introduction/Features.md
       - name: 产品规格
-        href: Introduction/Specification.md
+        href: Introduction/Specifications.md
       - name: 限制说明
         href: 
         status: 0
@@ -44,9 +44,7 @@ items:
 - name: 操作指南
   items:
       - name: 使用须知
-        items:
-          - name: 使用须知
-            href: Operation-Guide/Operation-Instruction/Operation-Instruction.md
+        href: Operation-Guide/Operation-Instruction/Operation-Instruction.md
       - name: 资源管理
         items:
           - name: 查看机柜列表
@@ -65,29 +63,15 @@ items:
             href: Operation-Guide/Tickets-Management/View-Tickets-List.md
 - name: 最佳实践
   items:
-    status: 0
+  status: 0
 - name: 教程
-  items:
-    status: 0
+  status: 0
 - name: 问题排查
-  items:
-    status: 0    
+  status: 0    
 - name: 常见问题
   href: FAQ/FAQ.md
-- name: API参考
-  status: 0
-- name: SDK参考
-  status: 0
-  items:
-    - name: 服务条款      
-      status: 0      
-    - name: SLA      
-      status: 0       
+  status: 0 
 - name: 相关资源
   items:
     - name: 文档历史记录
-      href: Related-Resources/Document-History.md   
-    - name: 备案       
-      status: 0        
-    - name: 词汇表      
-      status: 0
+      href: Related-Resources/Document-History.md

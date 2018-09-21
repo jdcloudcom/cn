@@ -1,0 +1,17 @@
+swagger: "2.0"
+definitions:
+  vpcPeeringVpcInfo:
+    x-jdcloud-module: vpc
+    properties:
+      vpcId:
+        type: string
+        description: 子网所属VPC的Id
+      vpcName:
+        type: string
+        description: 私有网络名称，取值范围：1-60个中文、英文大小写的字母、数字和下划线分隔符
+      addressPrefix:
+        type: array
+        items:
+          type: string
+        description: 如果为空，则不限制网段，如果不为空，10.0.0.0/8、172.16.0.0/12和192.168.0.0/16及它们包含的子网，且子网掩码长度为16-28之间
+

@@ -8,10 +8,6 @@
         "url": "https://www.jdcloud.com/solution/xiaoyi"
     },
     {
-        "name": "物理资源托管",
-        "url": "https://www.jdcloud.com/solution/tgy"
-    },
-    {
         "name": "中小企业办公",
         "url": "https://www.jdcloud.com/solution/enterprisecloud"
     },
@@ -37,19 +33,11 @@
     },
     {
         "name": "混合部署方案",
-        "url": "https://www.jdcloud.com/solution/hybrnamecloud"
+        "url": "https://www.jdcloud.com/solution/hybridcloud"
     },
     {
         "name": "私有云托管方案",
         "url": "https://www.jdcloud.com/solution/tgy"
-    },
-    {
-        "name": "大数据私有化部署方案",
-        "url": "https://www.jdcloud.com/solution/xdata/JDP"
-    },
-    {
-        "name": "混合云数据共享交换方案",
-        "url": "https://www.jdcloud.com/solution/xdata/oneDXP"
     },
     {
         "name": "大宗商品电商解决方案",
@@ -88,24 +76,12 @@
         "url": "https://www.jdcloud.com/activity/dreamPartner"
     },
     {
-        "name": "合作伙伴",
-        "url": "https://www.jdcloud.com/partner/index"
-    },
-    {
-        "name": "合作伙伴表单",
-        "url": "https://www.jdcloud.com/partner/reg"
-    },
-    {
         "name": "合作伙伴列表",
         "url": "https://www.jdcloud.com/partner/basic"
     },
     {
         "name": "专尊倍赔",
         "url": "https://www.jdcloud.com/service/service"
-    },
-    {
-        "name": "了解京东云",
-        "url": "https://www.jdcloud.com/aboutus"
     },
     {
         "name": "免费试用",
@@ -116,23 +92,95 @@
         "url": "https://www.jdcloud.com/service/trustedCenter"
     },
     {
-        "name": "京喜云计算",
-        "url": "https://www.jdcloud.com/activity/jd1"
-    },
-    {
-        "name": "表单页",
-        "url": "https://www.jdcloud.com/news/subscription"
-    },
-    {
-        "name": "成功页",
-        "url": "https://www.jdcloud.com/news/subscriptionSuccess"
-    },
-    {
         "name": "京东云刊",
         "url": "https://www.jdcloud.com/news/journal"
     },
     {
         "name": "每月电子刊物",
         "url": "https://www.jdcloud.com/news/journalMay"
+    },
+    {
+        "name": "jdstack",
+        "url": "https://www.jdcloud.com/products/jdstack"
+    },
+    {
+        "name": "价格计算器-云主机",
+        "url": "https://www.jdcloud.com/calculator/calHost"
+    },
+    {
+        "name": "价格计算器-云硬盘",
+        "url": "https://www.jdcloud.com/calculator/calDisk"
+    },
+    {
+        "name": "价格计算器-负载均衡",
+        "url": "https://www.jdcloud.com/calculator/calLoad"
+    },
+    {
+        "name": "价格计算器-云数据库MySQL",
+        "url": "https://www.jdcloud.com/calculator/calDataBase"
+    },
+    {
+        "name": "价格计算器-云数据库SQLServer",
+        "url": "https://www.jdcloud.com/calculator/calSqlServer"
+    },
+    {
+        "name": "价格计算器-缓存",
+        "url": "https://www.jdcloud.com/calculator/calCache"
+    },
+    {
+        "name": "定价页",
+        "url": "https://www.jdcloud.com/price"
+    },
+    {
+        "name": "关于我们",
+        "url": "https://www.jdcloud.com/aboutus"
+    },
+    {
+        "name": "云端融合解决方案",
+        "url": "https://www.jdcloud.com/solution/resist"
+    },
+    {
+        "name": "intel",
+        "url": "https://www.jdcloud.com/activity/intel"
+    },
+    {
+        "name": "合作伙伴index",
+        "url": "https://www.jdcloud.com/partner/index"
+    },
+    {
+        "name": "合作伙伴reg",
+        "url": "https://www.jdcloud.com/partner/reg"
+    },
+    {
+        "name": "京东云刊6月",
+        "url": "https://www.jdcloud.com/news/journalJun"
+    },
+    {
+        "name": "京东云刊7月",
+        "url": "https://www.jdcloud.com/news/journalJuly"
+    },
+    {
+        "name": "京东云刊订阅申请",
+        "url": "https://www.jdcloud.com/news/subscription"
+    },
+    {
+        "name": "京东云刊订阅申请成功页",
+        "url": "https://www.jdcloud.com/news/subscriptionSuccess"
+    },
+    {
+        "name": "金牌服务",
+        "url": "https://www.jdcloud.com/service/bestService"
+    },
+    {
+        "name": "数据报告Forrester",
+        "url": "https://www.jdcloud.com/service/forrester"
+    },
+    {
+        "name": "京东云刊8月",
+        "url": "https://www.jdcloud.com/news/journalAugust"
+    },
+    {
+        "name": "优享礼遇成功页",
+        "url": "https://www.jdcloud.com/news/treatmentSuccess"
     }
 ]

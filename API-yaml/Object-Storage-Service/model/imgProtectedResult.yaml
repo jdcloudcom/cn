@@ -1,0 +1,10 @@
+swagger: "2.0"
+definitions:
+  Result:
+    x-jdcloud-module: oss
+    required:
+    - condition
+    properties:
+      codition:
+        type: string
+        example: <?xml version=\"1.0\" encoding=\"UTF-8\"?> <condition></condition>

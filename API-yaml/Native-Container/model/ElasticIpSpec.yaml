@@ -1,0 +1,19 @@
+swagger: "2.0"
+definitions:
+  elasticIpSpec:
+    x-jdcloud-module: nc
+    x-jdcloud-internal: false
+    type: object
+    description: 
+    required:
+      - bandwidth
+    properties:
+      bandwidthMbps:
+        type: integer
+        description: 弹性公网IP的限速 单位：MB  
+      provider:
+        type: string    
+        description: IP服务商，取值为bgp或no_bg    
+      chargeSpec:
+        $ref: "../../charge/model/ChargeSpec.yaml#/definitions/chargeSpec"
+        description: 计费配置 
