@@ -23,7 +23,7 @@ www.jdcloud.com
 选择离您的用户最近的数据中心，能获得更小的访问时延和较高的访问速度。云物理服务器已开放售卖或正在建设的数据中心所在地域及可用区，请参考[核心概念](../Introduction/Core-Concepts.md)章节。
 
 **选择服务器配置** 
-服务器配置介绍，请参考[产品规格](../Introduction/Specification.md)章节。
+服务器配置介绍，请参考[产品规格](../Introduction/Specifications.md)章节。
 
 **计费** 
 采用包月包年计费方式。与计费有的详细信息，请参考[计费规则](../Pricing/Billing-Rules.md)章节。

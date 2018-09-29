@@ -1,8 +1,0 @@
-swagger: "2.0"
-info:
-  version: "v1"
-  title: jke
-  description: k8s 集群服务相关接口
-host: "openapi.jks.jcloud.com"
-x-jdcloud-version: "v1"
-x-jdcloud-revision: "0.1.0"

@@ -1,18 +1,18 @@
-﻿# 创建实例
+# 创建实例
 
 您可以在Redis控制台或者API新建Redis实例，关于实例的计费说明请参见“[价格总览](../Pricing/Price-Overview.md)”、“[计费规则](../Pricing/Billing-Rules.md)”。
 
 本文介绍通过Redis控制台新建Redis实例。
 
 ## 前提条件
-- 已注册京东云账号，并完成实名认证。如果还没有账号请 [注册](https://accounts.jdcloud.com/p/regPage?source=jdcloud&ReturnUrl=%2f%2fuc.jdcloud.com%2fpassport%2fcomplete%3freturnUrl%3dhttp%3A%2F%2Fuc.jdcloud.com%2Fredirect%2FloginRouter%3FreturnUrl%3Dhttps%253A%252F%252Fwww.jdcloud.com%252Fhelp%252Fdetail%252F734%252FisCatalog%252F1)，或 [实名认证](https://uc.jdcloud.com/account/certify)。
+- 已注册京东云账号，并完成实名认证。如果还没有账号请 [注册](https://accounts.jdcloud.com/p/regPage?source=jdcloud&ReturnUrl=https%3a%2f%2fuc.jdcloud.com%2fpassport%2fcomplete%3freturnUrl%3dhttps%3a%2f%2fwww.jdcloud.com)，或 [实名认证](https://uc.jdcloud.com/account/certify)。
 - 如计费类型选择按配置计费，请确认您的账户余额（包括代金券）不小于50元。
 
 ## 操作步骤
 1. 登录 [Redis 控制台](https://redis-console.jdcloud.com/redis)。
 
 2. 在“实例列表”页面，点击“创建”按钮，跳转到新建实例页。
-   ![创建实例](https://github.com/jdcloudcom/cn/tree/edit/image/Redis/create-redis-instance.PNG)
+   ![创建实例](https://github.com/jdcloudcom/cn/blob/master/image/Redis/create-redis-instance.PNG)
 
 3. 在新建实例页选择付费方式、地域、规格、网络、部署方案、基本信息、购买量等信息
 

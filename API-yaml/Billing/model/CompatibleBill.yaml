@@ -1,0 +1,95 @@
+swagger: "2.0"
+definitions:
+  CompatibleBill:
+    x-jdcloud-module: billing
+    title: CompatibleBill
+    type: object
+    properties:
+      billId:
+        type: number
+        description: 账单ID
+      pin:
+        type: string
+        description: 用户pin
+      site:
+        type: integer
+        description: 站点
+      region:
+        type: string
+        description: 区域
+      appCode:
+        type: string
+        description: appCode
+      appCodeName:
+        type: string
+        description: appCodeName
+      serviceCode:
+        type: string
+        description: serviceCode
+      serviceCodeName:
+        type: string
+        description: serviceCodeName
+      resourceId:
+        type: string
+        description: 资源id
+      billingType:
+        type: integer
+        description: 计费类型
+      billingTypeName:
+        type: string
+        description: 计费类型描述
+      formula:
+        type: string
+        description: 规格
+      formulaStr:
+        type: string
+        description: 规格
+      startTime:
+        type: string
+        description: 开始时间
+      endTime:
+        type: string
+        description: 结束时间
+      createTime:
+        type: string
+        description: 创建时间
+      billFee:
+        type: number
+        description: 账单金额
+      billFee2:
+        type: number
+        description: 账单金额（保留小数点后2位）
+      discountFee:
+        type: number
+        description: 折扣金额
+      couponId:
+        type: string
+        description: 代金券id
+      couponFee:
+        type: number
+        description: 优惠券金额
+      actualFee:
+        type: number
+        description: 优惠后金额
+      cashCouponFee:
+        type: number
+        description: 代金券金额
+      balancePayFee:
+        type: number
+        description: 余额支付金额
+      cashPayFee:
+        type: number
+        description: 现金支付金额
+      arrearFee:
+        type: number
+        description: 欠费金额
+      paySate:
+        type: integer
+        description: 支付状态
+      systemType:
+        type: integer
+        description: 1:老计费   2：新计费
+      resourceName:
+        type: string
+        description: 资源名称
+        

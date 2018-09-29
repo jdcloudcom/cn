@@ -1,9 +1,11 @@
 # Python连接
 - step1：下载redis python客户端
 
- git clone https://github.com/andymccurdy/redis-py
+ ```git clone https://github.com/andymccurdy/redis-py```
+ 
 - step2：编写测试用例
-```xml
+
+```
 #!/usr/bin/env python
 #-*- coding: utf-8 -*-
 import redis

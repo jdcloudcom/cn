@@ -16,4 +16,4 @@
 
 - 优先级（1-10）（冲突时按顺序排优先级，1表示优先级最高）
 
-- 最多可配置10条缓存规则，配置缓存规则后，请前往[刷新缓存](https://www.jdcloud.com/help/detail/2124/isCatalog/1)页面，对文件或路径的缓存进行更新
+- 最多可配置10条缓存规则，配置缓存规则后，请前往[刷新页面](https://docs.jdcloud.com/cn/cdn/refresh-preheat)页面，对文件或路径的缓存进行更新

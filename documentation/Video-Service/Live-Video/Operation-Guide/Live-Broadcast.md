@@ -16,11 +16,11 @@
 
 播放地址由域名（Domain）、应用名（APPName）、流名（StreamName）三部分组成，其中域名为客户添加的播放域名，应用名和流名为变量，应用名（APPName）、流名（StreamName）目前仅支持英文、数字、“-”、"_",长度需要在1-50字符之间，在推流时自定义，客户想要观看某一路对应的流可根据需要拼接播放地址。
 
-rtmp://播放域名/应用名/流名
+rtmp:// 播放域名/应用名/流名
 
-http://播放域名/应用名/流名.flv
+http:// 播放域名/应用名/流名.flv
 
-http://播放域名/应用名/流名.m3u8
+http:// 播放域名/应用名/流名.m3u8
 
 **示例**
 
@@ -37,11 +37,11 @@ http:// ccc.ddd.com/app3/1.m3u8
 
 当客户设置了转码模板，开启转码功能后，转码流的播放地址是由原画地址加上转码模板id组成，不同的转码模板id拼接后对应转码后的播放地址，拼接规则如下
 
-rtmp://播放域名/应用名/流名_模板id
+rtmp:// 播放域名/应用名/流名_模板id
 
-http://播放域名/应用名/流名_模板id.flv
+http:// 播放域名/应用名/流名_模板id.flv
 
-[http://播放域名/应用名/流名_模板id.m3u8](http://播放域名/应用名/流名_模板id.m3u8)
+http:// 播放域名/应用名/流名_模板id.m3u8
 
 **支持的转码模板参数**
 
@@ -63,8 +63,8 @@ http:// ccc.ddd.com/app1/1.m3u8
 
 对应的rtmp、hls、hdl三种协议的转码后播放地址为：
 
-rtmp://ccc.ddd.com /app1/1_lld
+rtmp:// ccc.ddd.com /app1/1_lld
 
-http://ccc.ddd.com /app1/1_lld.flv
+http:// ccc.ddd.com /app1/1_lld.flv
 
-http://ccc.ddd.com /app1/1_lld.m3u8
+http:// ccc.ddd.com /app1/1_lld.m3u8

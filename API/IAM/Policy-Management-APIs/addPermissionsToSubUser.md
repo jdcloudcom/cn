@@ -12,24 +12,23 @@ https://iam.jdcloud-api.com/v1/regions/{regionId}/subUser/{subUser}/permisssions
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**regionId**|String|True||Region ID|
-|**subUser**|String|True||子用户用户名|
+|**regionId**|String|True| |Region ID|
+|**subUser**|String|True| |子用户用户名|
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**addPermissionsInfo**|[AddPermissionsInfo](##AddPermissionsInfo)|True||权限信息|
+|**addPermissionsInfo**|AddPermissionsInfo|True| |权限信息|
 
-### <a name="AddPermissionsInfo">AddPermissionsInfo</a>
+### AddPermissionsInfo
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**permissionIds**|Integer[]|True||权限id集合|
+|**permissionIds**|Integer[]|True| |权限id集合|
 
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String||
-
+|**requestId**|String| |
 
 
 ## 返回码

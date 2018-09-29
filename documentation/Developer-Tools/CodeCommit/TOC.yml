@@ -1,0 +1,44 @@
+  name: 代码托管
+  href: 
+  items:
+  - name: 产品简介
+    items:
+      - name: 产品概述
+        href: Introduction/Product-Overview.md
+      - name: 核心概念
+        href: Introduction/Core-Concepts.md
+      - name: 产品优势
+        href: Introduction/Benefits.md
+      - name: 产品功能
+        href: Introduction/Features.md
+      - name: 限制说明 
+        href: Introduction/Restrictions.md
+  - name: 产品定价
+    items:
+      - name: 计费概述
+        href: Pricing/Billing-Overview.md
+  - name: 入门指南
+    items:
+      - name: 登录京东云-代码托管
+        href: Getting-Started/Getting-started.md
+      - name: 新建Group
+        href: Getting-Started/Create-Group.md
+      - name: 新建Project
+        href: Getting-Started/Create-Project.md
+  - name: 操作指南
+    items:
+       - name: 管理Group
+         href: Operation-Guide/Group-Management.md
+       - name: 管理Project
+         href: Operation-Guide/Project-Management.md
+       - name: 权限说明
+         href: Operation-Guide/Auth.md      
+       - name: 设置SSH Key
+         href: Operation-Guide/SSH-Key.md
+       - name: 设置用户信息
+         href: Operation-Guide/User-Management.md
+  - name: 相关资源
+    items:
+       - name: 文档历史记录
+         href: Related-Resources/Document-History.md  
+    

@@ -1,0 +1,31 @@
+swagger: "2.0"
+definitions:
+  policy:
+    x-jdcloud-module: iam
+    properties:
+      policyId:
+        type: string
+        description: 策略id
+      name:
+        type: string
+        description: 策略名称
+      jrn:
+        type: string
+        description: jrn描述
+      description:
+        type: string
+        description: 描述
+      policyType:
+        type: string
+        description: 策略类型
+      version:
+        type: string
+        description: 策略版本号
+      createTime:
+        type: string
+        format: date-time
+        description: 策略创建时间
+      updateTime:
+        type: string
+        format: date-time
+        description: 策略更新时间

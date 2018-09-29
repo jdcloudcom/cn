@@ -12,20 +12,19 @@ https://idata-jmr-api.jcloud.com/v1/regions/{regionId}/hdfsFile:delete
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**regionId**|String|True||地域ID|
+|**regionId**|String|True| |地域ID|
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**clusterId**|String|True||集群ID|
-|**filePath**|String|True||要删除的文件路径|
+|**clusterId**|String|True| |集群ID|
+|**filePath**|String|True| |要删除的文件路径|
 
 
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String||
-
+|**requestId**|String| |
 
 
 ## 返回码

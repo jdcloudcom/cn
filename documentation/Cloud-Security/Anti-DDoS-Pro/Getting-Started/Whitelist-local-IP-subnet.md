@@ -9,13 +9,13 @@
 ## 操作步骤
 1. 登录 [IP高防 控制台](https://ip-anti-console.jdcloud.com/instancelist)。
 2. 在“实例列表”页面，选择目标实例，点击 **实例名称** 或**转发配置**，进入实例详情页面。
-![网站类实例](https://github.com/jdcloudcom/cn/blob/edit/image/Advanced%20Anti-DDoS/web-rule%2001.png)。
+![网站类实例](https://github.com/jdcloudcom/cn/blob/edit/image/Advanced%20Anti-DDoS/web-rule%2001.png)
 3. 请在下图红框处所示，获取需要加入白名单的IP高防回源IP段。
-![高防回源](https://github.com/jdcloudcom/cn/blob/edit/image/Advanced%20Anti-DDoS/instance03.png)。
+![高防回源](https://github.com/jdcloudcom/cn/blob/edit/image/Advanced%20Anti-DDoS/instance03.png)
 ## 相关参考
 
 - [入门概述](Overview.md)
 - [创建实例](Create-Instance.md)
 - [非网站类规则](Non-Web-Service-Forwarding-Rule.md)
 - [网站类规则](Web-Service-Forwarding-Rule.md)
-- [计费规则](../../Pricing/Billing-Rules.md)
+- [计费规则](../Pricing/Billing-Rules.md)

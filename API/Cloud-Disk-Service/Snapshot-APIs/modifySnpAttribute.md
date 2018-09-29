@@ -12,20 +12,18 @@ https://disk.jdcloud-api.com/v1/regions/{regionId}/snapshots/{snapshotId}
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**regionId**|String|True||地域ID|
-|**snapshotId**|String|True||快照ID|
+|**regionId**|String|True| |地域ID|
+|**snapshotId**|String|True| |快照ID|
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**description**|String|False||快照描述，name和description必须要指定一个|
-|**name**|String|False||快照名称|
+|**description**|String|False| |快照描述，name和description必须要指定一个|
+|**name**|String|False| |快照名称|
 
 
 ## 返回参数
-|名称|类型|描述|
-|---|---|---|
-
+无
 
 
 ## 返回码

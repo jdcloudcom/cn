@@ -12,7 +12,7 @@
 
 ## 操作步骤
 
-1. 访问[镜像控制台][2]，或访问[京东云控制台][3]点击左侧导航栏【弹性计算】-【云主机】-【镜像】进入镜像列表页。
+1. 访问[镜像控制台][2]，或访问[京东云控制台](https://console.jdcloud.com/overview)点击左侧导航栏【弹性计算】-【云主机】-【镜像】进入镜像列表页。
 
 2. 选择【私有】TAB，在列表中选定您要共享的私有镜像。
 
@@ -30,5 +30,4 @@
 
   [1]: ./images/Operation-Guide-Image-share1.png "Operation-Guide-Image-share1.png"
   [2]: https://cns-console.jdcloud.com/host/image/list
-  [3]: ./images/Operation-Guide-Image-share2.png "Operation-Guide-Image-share2.png"
-  [4]: ./images/Operation-Guide-Image-share2.png "Operation-Guide-Image-share2.png"
+ 

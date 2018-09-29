@@ -29,6 +29,7 @@
         href: Instance-Management/resetPassword.md
       - name: restartInstance.md
         href: Instance-Management/restartInstance.md
+        status: 0
       - name: restoreInstance
         status: 0
         href: Instance-Management/restoreInstance.md

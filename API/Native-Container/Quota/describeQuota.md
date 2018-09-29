@@ -13,26 +13,25 @@ https://nc.jdcloud-api.com/v1/regions/{regionId}/quotas
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**regionId**|String|True||Region ID|
+|**regionId**|String|True| |Region ID|
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**resourceType**|String|True||resourceType - 资源类型，支持多个[container, secret]<br>|
+|**resourceType**|String|True| |resourceType - 资源类型，支持多个[container, secret]<br>|
 
 
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String||
-|**result**|[Result](##Result)||
+|**requestId**|String| |
+|**result**|Result| |
 
-
-### <a name="Result">Result</a>
+### Result
 |名称|类型|描述|
 |---|---|---|
-|**quota**|[Quota](##Quota)||
-### <a name="Quota">Quota</a>
+|**quota**|Quota| |
+### Quota
 |名称|类型|描述|
 |---|---|---|
 |**limit**|Integer|配额|

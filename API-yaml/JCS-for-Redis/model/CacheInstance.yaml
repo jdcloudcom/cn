@@ -48,4 +48,7 @@ definitions:
       instanceVersion:
         type: string
         description: 实例版本
+      auth:
+        type: boolean
+        description: 是否免密
 

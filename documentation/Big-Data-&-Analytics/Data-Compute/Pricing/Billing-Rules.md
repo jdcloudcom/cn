@@ -10,10 +10,10 @@
 
 <table>
   <tr>
-    <th width=10%, bgcolor=yellow >计费类型</th>
-    <th width=35%, bgcolor=yellow>价格</th>
-    <th width="30%", bgcolor=yellow>说明</th>
-    <th width="25%", bgcolor=yellow>辅助举例</th>
+    <th width=10%>计费类型</th>
+    <th width=35%>价格</th>
+    <th width="30%">说明</th>
+    <th width="25%">辅助举例</th>
   </tr>
   <tr>
     <td bgcolor=#eeeeee> 按实际存储量及时间周期付费 </td>

@@ -46,6 +46,7 @@ http://opencdn.jcloud.com/api/live/queryForbidden
 - ### 请求示例
 
 http://opencdn.jcloud.com/api/live/queryForbidden
+```
 {
     "username" :"jd_cdntest",
     "signature" :"5fdd933ad652298f9f0fd4c87883e283",
@@ -57,11 +58,11 @@ http://opencdn.jcloud.com/api/live/queryForbidden
     "start_time" :"2018-05-31 00:05",
     "end_time" :"2018-06-01 21:49"
  }
-
+```
 - ### 返回示例
 
-•        json格式
-
+* json格式
+```
 {
     "status": 0,
     "msg": "成功",
@@ -80,3 +81,4 @@ http://opencdn.jcloud.com/api/live/queryForbidden
         ]
     }
 }
+```

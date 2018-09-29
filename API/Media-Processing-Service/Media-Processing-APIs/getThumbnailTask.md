@@ -12,8 +12,8 @@ https://mps.jdcloud-api.com/v1/regions/{regionId}/thumbnail/{taskId}
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**regionId**|String|True||region id|
-|**taskId**|String|True||task id|
+|**regionId**|String|True| |region id|
+|**taskId**|String|True| |task id|
 
 ## 请求参数
 无
@@ -22,26 +22,25 @@ https://mps.jdcloud-api.com/v1/regions/{regionId}/thumbnail/{taskId}
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String||
-|**result**|[Result](##Result)||
+|**requestId**|String| |
+|**result**|Result| |
 
-
-### <a name="Result">Result</a>
+### Result
 |名称|类型|描述|
 |---|---|---|
-|**thumbnailTask**|[ThumbnailTask](##ThumbnailTask)||
-### <a name="ThumbnailTask">ThumbnailTask</a>
+|**thumbnailTask**|ThumbnailTask| |
+### ThumbnailTask
 |名称|类型|描述|
 |---|---|---|
 |**createdTime**|String|任务创建时间 时间格式(GMT): yyyy-MM-dd’T’HH:mm:ss.SSS’Z’  (readonly)|
 |**errorCode**|Integer|错误码 (readonly)|
 |**lastUpdatedTime**|String|任务创建时间 时间格式(GMT): yyyy-MM-dd’T’HH:mm:ss.SSS’Z’  (readonly)|
-|**rule**|[ThumbnailTaskRule](##ThumbnailTaskRule)||
-|**source**|[ThumbnailTaskSource](##ThumbnailTaskSource)||
+|**rule**|ThumbnailTaskRule| |
+|**source**|ThumbnailTaskSource| |
 |**status**|String|状态 (SUCCESS, ERROR, PENDDING, RUNNING) (readonly)|
-|**target**|[ThumbnailTaskTarget](##ThumbnailTaskTarget)||
+|**target**|ThumbnailTaskTarget| |
 |**taskID**|String|任务ID (readonly)|
-### <a name="ThumbnailTaskRule">ThumbnailTaskRule</a>
+### ThumbnailTaskRule
 |名称|类型|描述|
 |---|---|---|
 |**count**|Integer|截图数量, mode=single时不可选. default:1|
@@ -49,12 +48,12 @@ https://mps.jdcloud-api.com/v1/regions/{regionId}/thumbnail/{taskId}
 |**keyFrame**|Boolean|是否开启关键帧截图 default: true|
 |**mode**|String|截图模式 单张: single 多张: multi 平均: average default: single|
 |**startTimeInSecond**|Integer|生成截图的开始时间, mode=average 时不可选. default:0|
-### <a name="ThumbnailTaskSource">ThumbnailTaskSource</a>
+### ThumbnailTaskSource
 |名称|类型|描述|
 |---|---|---|
 |**bucket**|String|输入视频信息的 bucket|
 |**key**|String|输入视频信息的 Key|
-### <a name="ThumbnailTaskTarget">ThumbnailTaskTarget</a>
+### ThumbnailTaskTarget
 |名称|类型|描述|
 |---|---|---|
 |**destBucket**|String|输入存放目标文件的 bucket|

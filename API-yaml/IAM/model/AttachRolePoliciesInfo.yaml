@@ -1,0 +1,10 @@
+swagger: "2.0"
+definitions:
+  attachRolePoliciesInfo:
+    x-jdcloud-module: iam
+    properties:
+      policyNameList:
+        type: array
+        items:
+          type: string
+

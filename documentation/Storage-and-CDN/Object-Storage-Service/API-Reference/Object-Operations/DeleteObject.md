@@ -3,6 +3,7 @@
 此操作用于删除某个Object。
 
 **请求语法**
+
 ```
 DELETE  /ObjectName HTTP/1.1
 Host: BucketName. s.jcloud.com
@@ -17,13 +18,16 @@ Authorization:   signatureValue#请参照“访问控制”
 2.如果Bucket不存在，返回404 Not Found(NoSuchBucket)。
 
 **请求示例**
+
 ```
 DELETE /example.jpg HTTP/1.1
 Host: oss-example.s-bj.jcloud.com
 Date: Tue, 11 Jul 2017 07:37:23   GMT    
 Authorization: jingdong   qbS5QXpLORrvdrmb:Qt+ThnjyLwBb9xMZ8PZG3wsj3qU=
 ```
+
 **返回示例**
+
 ```
 HTTP/1.1 204 No   Content
 Server: nginx

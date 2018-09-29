@@ -24,7 +24,7 @@
 
 例如：http://downloads.oss.cn-north-1.jcloudcs.com/lena.jpg?x-oss-process=img/o
 
-3. 图片处理操作支持顺序队列
+3.图片处理操作支持顺序队列
 
 按顺序将图片处理指令接成处理队列，以“/”分割每个任务名及附属参数，后台按顺序依次执行。
 

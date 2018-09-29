@@ -1,0 +1,22 @@
+swagger: "2.0"
+definitions:
+  updateSubUserInfo:
+    x-jdcloud-module: iam
+    required:
+      - description
+      - phone
+      - email
+      - name
+    properties:
+      description:
+        type: string
+        description: 描述，0~256个字符
+      phone:
+        type: string
+        description: 手机号码，区号-手机号，目前只支持0086-中国手机号码
+      email:
+        type: string
+        description: 邮箱
+      name:
+        type: string
+        description: 修改后的用户名

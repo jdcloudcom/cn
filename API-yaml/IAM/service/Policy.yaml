@@ -1,0 +1,146 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: 策略管理接口
+  description: 策略管理接口
+
+paths:
+  "/policy":
+    ###################### 创建策略 ######################
+    post:
+      description: "创建策略"
+      operationId: createPolicy
+      x-jdcloud-internal: true
+      parameters:
+        - name: createPolicyInfo
+          in: body
+          description: 策略信息
+          required: true
+          schema:
+            $ref: "../model/CreatePolicyInfo.yaml#/definitions/createPolicyInfo"
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                properties:
+                  policy:
+                    $ref: "../model/Policy.yaml#/definitions/policy"
+                    description: 策略信息
+              requestId:
+                type: string
+
+  "/policy/{policyName}":
+    ###################### 修改策略 ######################
+    put:
+      description: "修改策略"
+      operationId: updatePolicy
+      x-jdcloud-internal: true
+      parameters:
+      - name: updatePolicy
+        in: body
+        description: 策略信息
+        required: true
+        schema:
+          $ref: "../model/UpdatePolicyInfo.yaml#/definitions/updatePolicyInfo"
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              requestId:
+                type: string
+
+    ###################### 查询策略详情 ######################
+    get:
+      description: "查询策略详情"
+      operationId: describePolicy
+      x-jdcloud-internal: true
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                properties:
+                  policy:
+                    $ref: "../model/PolicyDetail.yaml#/definitions/policy"
+                    description: 策略信息
+              requestId:
+                type: string
+
+    ###################### 删除策略 ######################
+    delete:
+      description: "删除策略"
+      operationId: deletePolicy
+      x-jdcloud-internal: true
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              requestId:
+                type: string
+
+  "/policies":
+    ###################### 查询策略列表 ######################
+    get:
+      description: "查询策略列表"
+      operationId: describePolicies
+      x-jdcloud-internal: true
+      parameters:
+        - name: pageNumber
+          in: query
+          type: integer
+          default: 1
+          description: 页码，默认1
+          required: false
+        - name: pageSize
+          in: query
+          type: integer
+          default: 50
+          description: 分页大小，默认50，取值范围[10, 100]
+          required: false
+        - name: keyword
+          in: query
+          type: string
+          description: 关键字
+          required: false
+        - name: queryType
+          in: query
+          type: integer
+          default: 0
+          description: 策略类型：0-全部（默认），1-系统策略，2-自定义策略
+          required: false
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                properties:
+                  total:
+                    type: integer
+                    description: 总数
+                  policies:
+                    type: array
+                    items:
+                      $ref: "../model/Policy.yaml#/definitions/policy"
+                    description: 策略列表信息
+              requestId:
+                type: string
+
+#路径通用参数
+parameters:
+  policyName:
+    name: policyName
+    in: path
+    required: true
+    type: string
+    description: 策略名称

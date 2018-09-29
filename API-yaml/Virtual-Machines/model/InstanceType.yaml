@@ -26,3 +26,11 @@ definitions:
         items:
           $ref: "./InstanceTypeState.yaml#/definitions/instanceTypeState"
         description: 规格状态
+      gpu:
+        $ref: "./Gpu.yaml#/definitions/gpu"
+        description: Gpu配置
+      localDisks:
+        type: array
+        items:
+          $ref: "./LocalDisk.yaml#/definitions/localDisk"
+        description: 本地缓存盘配置，目前只有Gpu规格上才有

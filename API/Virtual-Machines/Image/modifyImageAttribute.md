@@ -13,20 +13,18 @@ https://vm.jdcloud-api.com/v1/regions/{regionId}/images/{imageId}:modifyImageAtt
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**imageId**|String|True||镜像ID|
-|**regionId**|String|True||地域ID|
+|**imageId**|String|True| |镜像ID|
+|**regionId**|String|True| |地域ID|
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**description**|String|False||描述，<a href="https://www.jdcloud.com/help/detail/3870/isCatalog/1">参考公共参数规范</a>。|
-|**name**|String|False||名称，<a href="https://www.jdcloud.com/help/detail/3870/isCatalog/1">参考公共参数规范</a>。|
+|**description**|String|False| |描述，<a href="http://docs.jdcloud.com/virtual-machines/api/general_parameters">参考公共参数规范</a>。|
+|**name**|String|False| |名称，<a href="http://docs.jdcloud.com/virtual-machines/api/general_parameters">参考公共参数规范</a>。|
 
 
 ## 返回参数
-|名称|类型|描述|
-|---|---|---|
-
+无
 
 
 ## 返回码

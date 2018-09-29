@@ -28,6 +28,7 @@
 ## 使用VNC登录Linux实例
 VNC登录是京东云为用户提供的一种通过 Web 浏览器远程连接实例的方式。在没有安装远程登陆客户端或者客户端远程登陆无法使用的情况下，用户可以通过 VNC 登陆连接到实例，观察实例状态，并且可通过实例用户进行基本的实例管理操作。
 VNC登陆的场景至少包括以下几种：
+
 * 查看实例的启动进度
 * 无法通过远程登录软件或密钥登录时，通过 VNC 登陆来登录实例。
 
@@ -40,6 +41,7 @@ VNC登陆的场景至少包括以下几种：
 ![](../../../../image/vm/Getting-Start-Linux-Connect-vnc.png)
 
 请注意：
+
 * 同一浏览器下，同一时间只支持使用VNC登录一台实例。
 * 要正常使用VNC登录，建议使用高版本浏览器，如：Chrome，Firefox，IE10及以上版本等。
 * 暂不支持复制粘贴。
@@ -48,9 +50,10 @@ VNC登陆的场景至少包括以下几种：
 ## 本地为Windows，通过远程登录软件使用密码/密钥登录
 您可选择多种远程登录软件登陆京东云Linux实例，如选择使用SSH密钥登录实例，需要在创建实例时选择开启密钥登录功能，并为其绑定一个密钥，请确保已下载所绑定密钥的私钥。有关密钥的创建操作，请参阅[创建SSH密钥](../Operation-Guide/Key-Pair/Create-Keypair.md)。
 
-同时请您查看实例关联[安全组](../Operation-Guide/Security-Group/Overview.md)及所在子网的[网络ACL](../../../Networking/Virtual-Private-Cloud/Introduction/Functions/Network-ACL.md)配置，确保实例22端口已开放。
+同时请您查看实例关联[安全组](http://docs.jdcloud.com/cn/virtual-private-cloud/security-group-features)及所在子网的[网络ACL](http://docs.jdcloud.com/cn/virtual-private-cloud/network-acl-features)配置，确保实例22端口已开放。
 
 本例以 CentOS 7.1 64位系统，Xshell远程登录软件为示范，可按照如下步骤完成登录。
+
 1. 下载并安装远程登录软件
     可使用此地址下载：http://iaas-cns-download.s3.cn-north-1.jcloudcs.com/xshell5_5.0.1332.exe 或自行下载Xshell软件。
     下载后双击xshell5_5.0.1332.exe进行安装。
@@ -65,8 +68,8 @@ VNC登陆的场景至少包括以下几种：
 3. 选择用户身份认证
 	* 密码登录
 		* 方法：选择Password
-		* 用户名：默认用户名为root![](../../../../image/vm/Getting-Start-Linux-Connect-linux-xshell1.png)
-		* 点击确定，连接实例，如下图：
+		* 用户名：默认用户名为root<br>![](../../../../image/vm/Getting-Start-Linux-Connect-linux-xshell1.png)
+		* 点击确定，连接实例，如下图：<br>
 ![](../../../../image/vm/Getting-Start-Linux-Connect-linux-xshell2.png)
 	* 密钥登录
 		*  方法：选择Public Key
@@ -79,16 +82,22 @@ VNC登陆的场景至少包括以下几种：
 ## 本地为Linux/Mac OS，使用密码登录Linux实例
 Linux用户请直接运行以下命令，Mac OS用户请打开系统自带的终端（Terminal）后运行以下命令，随后输入该实例root用户的密码，输入正确即可连接实例。
 
-`ssh root@<实例的公网IP地址>`
+```
+ssh root@<实例的公网IP地址>
+```
 
 ## 本地为Linux/Mac OS，使用密钥登录Linux实例
 Linux用户请直接运行以下命令，Mac OS用户请打开系统自带的终端（Terminal）后运行以下命令，以对私钥文件赋予本人可读的权限：
 
-` chmod 400 <下载到本地的与实例绑定的私钥绝对路径> `
+```
+chmod 400 <下载到本地的与实例绑定的私钥绝对路径>
+```
 
 随后运行以下远程登录命令：
 
-`ssh -i "<下载到本地的与实例绑定的私钥绝对路径>" root@<实例公网IP地址>`
+```
+ssh -i "<下载到本地的与实例绑定的私钥绝对路径>" root@<实例公网IP地址>
+```
 
 ## 相关参考
 
@@ -96,9 +105,9 @@ Linux用户请直接运行以下命令，Mac OS用户请打开系统自带的终
 
 [创建SSH密钥](../Operation-Guide/Key-Pair/Create-Keypair.md)
 
-[安全组](../Operation-Guide/Security-Group/Overview.md)
+[安全组](http://docs.jdcloud.com/cn/virtual-private-cloud/security-group-features)
 
-[网络ACL](../../../Networking/Virtual-Private-Cloud/Introduction/Functions/Network-ACL.md)
+[网络ACL](http://docs.jdcloud.com/cn/virtual-private-cloud/network-acl-features)
 
 
   [1]: ./images/Getting-Start-Linux-Connect-console.png "Getting-Start-Linux-Connect-console.png"

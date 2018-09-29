@@ -12,34 +12,33 @@ https://streambus.jdcloud-api.com/v1/regions/{regionId}/consumerGroup
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**regionId**|String|True||Region ID|
+|**regionId**|String|True| |Region ID|
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**consumerGroupStr**|[ConsumerGroup](##ConsumerGroup)|False||消费组对象|
+|**consumerGroupStr**|ConsumerGroup|False| |消费组对象|
 
-### <a name="ConsumerGroup">ConsumerGroup</a>
+### ConsumerGroup
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**createdTime**|String|False|||
-|**delete**|String|False|||
-|**id**|Integer|False|||
-|**name**|String|False|||
-|**topicId**|Integer|False|||
+|**createdTime**|String|False| | |
+|**delete**|String|False| | |
+|**id**|Integer|False| | |
+|**name**|String|False| | |
+|**topicId**|Integer|False| | |
 
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String||
-|**result**|[Result](##Result)||
+|**requestId**|String| |
+|**result**|Result| |
 
-
-### <a name="Result">Result</a>
+### Result
 |名称|类型|描述|
 |---|---|---|
-|**message**|String||
-|**status**|Boolean||
+|**message**|String| |
+|**status**|Boolean| |
 
 ## 返回码
 |返回码|描述|

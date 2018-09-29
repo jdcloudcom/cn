@@ -1,0 +1,85 @@
+swagger: "2.0"
+definitions:
+  consumeBillQueryResultItem:
+    x-jdcloud-module: billing
+    title: ConsumeBillQueryResultItem
+    type: object
+    properties:
+      billId:
+        type: number
+        description: 账单id
+      pin:
+        type: string
+        description: 用户pin
+      appCode:
+        type: string
+        description: appCode
+      appCodeName:
+        type: string
+        description: appCodeName
+      serviceCode:
+        type: string
+        description: serviceCode
+      serviceCodeName:
+        type: string
+        description: serviceCodeName
+      resourceId:
+        type: string
+        description: 资源id
+      billingType:
+        type: integer
+        description: 计费类型
+      billingTypeName:
+        type: string
+        description: 计费类型描述
+      billStart:
+        type: string
+        description: 账单开始时间
+      billEnd:
+        type: string
+        description: 账单结束时间
+      settleTime:
+        type: string
+        description: 结算时间
+      billTime:
+        type: string
+        description: 账单日期
+      billFee:
+        type: number
+        description: 账单金额
+      totalFee:
+        type: number
+        description: 账单总额
+      cashPayFee:
+        type: number
+        description: 现金支付金额
+      cashCouponPayFee:
+        type: number
+        description: 代金券支付金额
+      balancePayFee:
+        type: number
+        description: 余额支付金额
+      discountFee:
+        type: number
+        description: 折扣金额
+      arrearFee:
+        type: number
+        description: 欠费金额
+      payState:
+        type: integer
+        description: 支付状态
+      createTime:
+        type: string
+        description: 创建时间
+      systemType:
+        type: integer
+        description: 新老计费标识（1:老计费   2：新计费）
+      region:
+        type: string  
+        description: 区域
+      formula:
+        type: string
+        description: 规格
+      formulaStr:
+        type: string
+        description: 规格

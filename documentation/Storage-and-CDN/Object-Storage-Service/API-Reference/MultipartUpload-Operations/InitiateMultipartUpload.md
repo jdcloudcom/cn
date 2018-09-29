@@ -17,6 +17,7 @@
 描述：使用Multipart Upload模式传输数据前，必须先调用该接口初始化一个新的Multipart Upload事件。用户通过该UploadId来进行Multipart Upload相关的操作，包括上传Multipart Upload所属的Part，合并所有Part，终止Multipart Upload，列出已上传的Part等。
 
 **请求语法**
+
 ```
 POST  /ObjectName?uploads HTTP/1.1
 Host: BucketName.s.jcloud.com
@@ -63,7 +64,9 @@ x-jss-storage-class:   STANDARD
 Date: Wed, 12 Jul 2017 07:45:27   GMT  
 Authorization: jingdong qbS5QXpLORrvdrmb:wYoTTKpqU1mZu4Dy3IlTRbCUx0w=   
 ```
+
 **返回示例**
+
 ```
 HTTP/1.1 200 OK
 Server: nginx

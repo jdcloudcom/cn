@@ -1,0 +1,29 @@
+swagger: "2.0"
+definitions:
+  subUser:
+    x-jdcloud-module: iam
+    properties:
+      name:
+        type: string
+        description: 用户名
+      mail:
+        type: string
+        description: 邮件
+      description:
+        type: string
+        description: 描述
+      account:
+        type: string
+        description: 主账号
+      createTime:
+        type: string
+        format: date-time
+        description: 创建时间
+      updateTime:
+        type: string
+        format: date-time
+        description: 更新时间
+      groups:
+        type: array
+        items:
+          $ref: "./SubUserGroup.yaml#/definitions/group"

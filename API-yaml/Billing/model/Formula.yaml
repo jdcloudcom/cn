@@ -1,0 +1,22 @@
+swagger: "2.0"
+definitions:
+  formula:
+    x-jdcloud-module: billing
+    title: Formula
+    type: object
+    x-jdcloud-internal: true
+    properties:
+      key:
+        type: string
+        description: 计费项别名
+      value:
+        type: number
+        description: 用量
+        format: double
+      unit:
+        type: string
+        description: 单位
+      number:
+        type: number
+        description: 计费项数量
+        format: double

@@ -69,6 +69,7 @@ Info 字段是当 appinfo 无法满足服务商特殊登录要求时，可以自
 请求：
 http://www.isvwebsite.com?action=createInstance&email=&expiredOn=2017-01-08+00%3A00%3A00&jdPin=test_jdb22&mobile=&orderBizId=423499&orderId=519801&serviceCode=FW_GOODS-409717&skuId=FW_GOODS-409717-1&template=&token=7e8970385f7f263074a48852aeda12a5&extraInfo={"key1":"1","key1","2"}
 返回：
+```
 {
 
        "instanceId":   "1001",
@@ -94,7 +95,7 @@ http://www.isvwebsite.com?action=createInstance&email=&expiredOn=2017-01-08+00%3
        }
 
 }
-
+```
 4.2 续费：
 4.2.1描述
 
@@ -109,7 +110,7 @@ http://www.isvwebsite.com?action=createInstance&email=&expiredOn=2017-01-08+00%3
 l  请求
 http://www.isvwebsite.com? action=renewInstance&expiredOn=2017-12-06+00%3A00%3A00&instanceId=1002&orderId=520801&token=475f28682b5d0d1af820ffd477c1188f
 2  返回
-{‘success’:true’, ‘authCode:’123456789’, ‘message’:’renew suecess’}       
+`{‘success’:true’, ‘authCode:’123456789’, ‘message’:’renew suecess’}` 
 
 4.3 释放
 4.3.1描述
@@ -122,9 +123,9 @@ http://www.isvwebsite.com? action=renewInstance&expiredOn=2017-12-06+00%3A00%3A0
 4.3.4示例
 l  请求
 
-http://www.isvwebsite.com?   action=releaseInstance&instanceId=424499_520001_FW_GOODS-409717-1&token=cb0a8e6348de9d12e74a085a28bf00fe
+http://www.isvwebsite.com?action=releaseInstance&instanceId=424499_520001_FW_GOODS-409717-1&token=cb0a8e6348de9d12e74a085a28bf00fe
 2  返回
-{‘success’: true,’message’:’release success’}                
+`{‘success’: true,’message’:’release success’} `               
 
 4.4 免登
 4.4.1描述
@@ -136,7 +137,7 @@ http://www.isvwebsite.com?   action=releaseInstance&instanceId=424499_520001_FW_
 
 4.4.3示例
 l  请求
-http://www.isvwebsite.com?token=9560d4d52cab35689fd5d472f28119ab&action= verify&instanceId=1001&timeStamp=2016-12-01+10%3A30%3A01              
+http://www.isvwebsite.com?token=9560d4d52cab35689fd5d472f28119ab&action=verify&instanceId=1001&timeStamp=2016-12-01+10%3A30%3A01              
 
 2  返回
 登陆成功页面
@@ -158,7 +159,7 @@ l  请求
 http://www.isvwebsite.com?action=upgradeInstance&skuId=FW-123-1instanceId=1002&orderId=520801&token=475f28682b5d0d1af820ffd477c1188f&extraInfo={"key1":"1","key1","2"} 
 
 2  返回
-{‘success’:true’, ‘authCode:’123456789’, ‘message’:’renew suecess’}
+`{‘success’:true’, ‘authCode:’123456789’, ‘message’:’renew suecess’}`
 
 4.6 扩容
 4.6.1描述
@@ -174,10 +175,12 @@ http://www.isvwebsite.com?action=upgradeInstance&skuId=FW-123-1instanceId=1002&o
 
 4.6.4示例
 l  请求
-http://www.isvwebsite.com?action=dilateInstance&accountNum=1&instanceId=1002&orderId=520801&token=475f28682b5d0d1af820ffd477c1188f&extraInfo={"key1":"1","key1","2"}        
+```
+http://www.isvwebsite.com?action=dilateInstance&accountNum=1&instanceId=1002&orderId=520801&token=475f28682b5d0d1af820ffd477c1188f&extraInfo={"key1":"1","key1","2"}
+```
 
 2  返回
-{‘success’:true’, ‘authCode:’123456789’, ‘message’:’dilatesuccess’}
+`{‘success’:true’, ‘authCode:’123456789’, ‘message’:’dilatesuccess’}`
 
 4.7过期
 4.7.1描述
@@ -195,14 +198,14 @@ l  请求
 http://www.isvwebsite.com? action=   expiredInstance &instanceId=424499_520001_FW_GOODS-409717-1&token=cb0a8e6348de9d12e74a085a28bf00fe
 
 2  返回
-{‘success’: true,’message’:’ expiredInstance success’}
+`{‘success’: true,’message’:’ expiredInstance success’}`
 
 5.1 描述
 
 为了保证软件类服务自动开通功能接入的正确性，在服务商管理平台搭建了应用接入调试界面。服务商可以在此页面调试以上接口的正确性。
 
 注：调试数据非正式数据，京东云市场不做业务处理。
-
+```
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -250,7 +253,7 @@ public class Md5Util {
     public static void main(String[] args) {
         String md2 = Md5Util.md5Encode("accountNum=1&action=createInstance&email=bujiaban@jd.com&expi
 
-
+```
 
 
 

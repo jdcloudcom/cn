@@ -12,7 +12,7 @@ https://iam.jdcloud-api.com/v1/role/{roleName}
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**roleName**|String|True||角色名称|
+|**roleName**|String|True| |角色名称|
 
 ## 请求参数
 无
@@ -21,15 +21,15 @@ https://iam.jdcloud-api.com/v1/role/{roleName}
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String||
-|**result**|[Result](##Result)||
+|**requestId**|String| |
+|**result**|Result| |
 
 
-### <a name="Result">Result</a>
+### Result
 |名称|类型|描述|
 |---|---|---|
-|**roleInfo**|[RoleInfo](##RoleInfo)|角色信息|
-### <a name="RoleInfo">RoleInfo</a>
+|**roleInfo**|RoleInfo|角色信息|
+### RoleInfo
 |名称|类型|描述|
 |---|---|---|
 |**account**|String|角色所属主账号|

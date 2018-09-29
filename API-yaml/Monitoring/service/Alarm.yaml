@@ -121,7 +121,7 @@ paths:
       x-jdcloud-internal: false
       parameters:
         - type: string
-          description: 待删除的规则id，多个规则之间用"|"间隔
+          description: 待删除的规则id，多个规则之间用"\|"间隔
           name: ids
           in: query
           required: true

@@ -33,7 +33,7 @@ URL（包含权限验证信息），用户使用加密后的 URL 向服务器发
 
 **用户访问加密 URL 构成**
 
-http://DomainName/Filename?auth_key=timestamp-rand-uid-md5hash
+http:// DomainName/Filename?auth_key=timestamp-rand-uid-md5hash
 
 **鉴权字段描述**
 
@@ -58,7 +58,7 @@ http://DomainName/Filename?auth_key=timestamp-rand-uid-md5hash
 
 1.  通过 req_auth 请求对象:
 
-http://[cdn.example.com/sports/football](http://cf.jd.com/cdn.example.com/sports/football)
+http:// cdn.example.com/sports/football
 
 2.  密钥设为：
 
@@ -70,18 +70,18 @@ jdlivekeyexample123 (由用户自行设置)
 
 4.  服务器会构造一个用于计算 Hashvalue 的签名字符串：
 
-/publishDomain/[sports/football](http://cf.jd.com/cdn.example.com/sports/football)-1444435200-0-0-jdlivekeyexample123
+/publishDomain/sports/football-1444435200-0-0-jdlivekeyexample123
 
 5.  服务器会根据该签名字符串计算 HashValue
 
 HashValue=md5sum("/publishDomain
-/[sports/football](http://cf.jd.com/cdn.example.com/sports/football)-1444435200-0-0-jdlivekeyexample123")
+/sports/football-1444435200-0-0-jdlivekeyexample123")
 
 =80cd3862d699b7118eed99103f2a3a4f
 
 6.  请求时 url 为：
 
-http://[cdn.example.com/](http://cdn.example.com/video/standard/1K.html?auth_key=1444435200-0-0-80cd3862d699b7118eed99103f2a3a4f)[sports/football](http://cf.jd.com/cdn.example.com/sports/football)[?auth_key=1444435200-0-0-80cd3862d699b7118eed99103f2a3a4f](http://cdn.example.com/video/standard/1K.html?auth_key=1444435200-0-0-80cd3862d699b7118eed99103f2a3a4f)
+http:// cdn.example.com/sports/football?auth_key=1444435200-0-0-80cd3862d699b7118eed99103f2a3a4f
 
 计算出来的 HashValue 与用户请求中带的 md5hash = 80cd3862d699b711
 

@@ -12,8 +12,8 @@ https://mongodb.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**instanceId**|String|True||Instance ID|
-|**regionId**|String|True||Region ID|
+|**instanceId**|String|True| |Instance ID|
+|**regionId**|String|True| |Region ID|
 
 ## 请求参数
 无
@@ -22,8 +22,7 @@ https://mongodb.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String||
-
+|**requestId**|String| |
 
 
 ## 返回码

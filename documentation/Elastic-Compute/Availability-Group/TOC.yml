@@ -28,7 +28,7 @@
     - name: 修改实例模板
       href: /Operation-Guide/Modify-Instance-Template.md
     - name: 自动伸缩
-      item:
+      items:
       - name: 自动伸缩概述
         href: /Operation-Guide/Auto-Scaling/Auto-Scaling-Overview.md
       - name: 开启自动伸缩

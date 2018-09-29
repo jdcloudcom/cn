@@ -12,29 +12,28 @@ https://xdata.jdcloud-api.com/v1/regions/{regionId}/dwDatabase/{databaseName}
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**databaseName**|String|True||数据库名|
-|**regionId**|String|True||地域ID|
+|**databaseName**|String|True| |数据库名|
+|**regionId**|String|True| |地域ID|
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**instanceName**|String|True||实例名称|
+|**instanceName**|String|True| |实例名称|
 
 
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String||
-|**result**|[Result](##Result)||
+|**requestId**|String| |
+|**result**|Result| |
 
-
-### <a name="Result">Result</a>
+### Result
 |名称|类型|描述|
 |---|---|---|
-|**data**|[DwDatabase](##DwDatabase)||
-|**message**|String||
-|**status**|Boolean||
-### <a name="DwDatabase">DwDatabase</a>
+|**data**|DwDatabase| |
+|**message**|String| |
+|**status**|Boolean| |
+### DwDatabase
 |名称|类型|描述|
 |---|---|---|
 |**category**|String|类别|

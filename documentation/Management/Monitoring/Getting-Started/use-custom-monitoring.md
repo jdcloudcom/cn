@@ -2,7 +2,7 @@
 自定义监控是提供给用户自由定义监控项及报警规则的一项功能。通过此功能，用户可以针对自己关心的业务指标进行监控，将采集到监控数据上报至云监控，由云监控来进行数据的处理，并根据结果进行报警。
 ### 上报监控数据
 自定义监控功能为您提供上报监控数据的接口，方便您将自己采集的时序数据上报到云监控。目前支持OpenAPI的方式进行上报，可上报原始数据和已聚合的统计数据。
-点击查看如何[上报监控数据](https://github.com/jdcloudcom/cn/blob/edit/documentation/Management-and-Monitoring/Cloud-Monitor/Operation-Guide/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%9B%91%E6%8E%A7.md#上报监控数据)。
+点击查看如何[上报监控数据](http://docs.jdcloud.com/cn/monitoring/reporting-monitoring-data)。
 ### 查看监控数据
 **查看命名空间**
 

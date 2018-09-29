@@ -7,7 +7,6 @@ definitions:
       - password
       - phone
       - email
-      - passwordConfirm
       - createAk
     properties:
       name:
@@ -25,9 +24,6 @@ definitions:
       email:
         type: string
         description: 邮箱
-      passwordConfirm:
-        type: string
-        description: 确认密码
       createAk:
         type: boolean
         description: 是否创建accessKey

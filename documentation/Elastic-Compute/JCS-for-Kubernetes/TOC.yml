@@ -1,4 +1,3 @@
-﻿
   name: Kubernetes 集群
   href: 
   items:
@@ -54,6 +53,8 @@
             href: Operation-Guide/NodeGroup/Delete-NodeGroup.md
   - name: 最佳实践
     items:
+     - name: 访问Dashboard
+       href: Best-Practices/Connect-Dashboard.md
      - name: 部署应用
        items:
          -  name: 部署Deployment

@@ -12,8 +12,8 @@ https://rds.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}/whiteLi
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**instanceId**|String|True||RDS 实例ID，唯一标识一个RDS实例|
-|**regionId**|String|True||地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)|
+|**instanceId**|String|True| |RDS 实例ID，唯一标识一个RDS实例|
+|**regionId**|String|True| |地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)|
 
 ## 请求参数
 无
@@ -22,14 +22,13 @@ https://rds.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}/whiteLi
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**result**|[Result](##Result)||
+|**result**|Result| |
 
-
-### <a name="Result">Result</a>
+### Result
 |名称|类型|描述|
 |---|---|---|
-|**whiteLists**|[WhiteList[]](##WhiteList)|白名单列表|
-### <a name="WhiteList">WhiteList</a>
+|**whiteLists**|WhiteList[]|白名单列表|
+### WhiteList
 |名称|类型|描述|
 |---|---|---|
 |**ips**|String|IP或IP段，不同的IP/IP段之间用英文逗号分隔，例如0.0.0.0/0,192.168.0.10|

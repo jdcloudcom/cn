@@ -28,28 +28,16 @@ items:
   - name: 最佳实践
     items:
     - name: 主机安全最近实践
-      href: Best-Practices/Endpoint Security.md
+      href: Best-Practices/Endpoint-Security.md
   - name: 教程
     items:
-    status: 0
-  - name: 问题排查
-    items:
-    - name: 云主机无法连接MongoDB实例？
-      href: Troubleshooting/Connect-Failed.md
-    - name: 云数据库 MongoDB 不支持哪些命令？
-      href: Troubleshooting/Command.md
-    - name: 账号密码正确，连接提示无权限？
-      href: Troubleshooting/Authentication.md        
+    status: 0       
   - name: 常见问题
     href: FAQ/FAQ.md
-  - name: Troubleshooting
+  - name: 问题排查
     href: Troubleshooting/Uninstall-Endpoint-Security.md
   - name: API参考
     href: 
     status: 0
-  - name: SDK参考
-    href:
-  - name: 相关资源
-    items:
-      - name: 文档历史记录
-        href: Related-Resources/Document-History.md
+  - name: 文档历史记录
+    href: Related-Resources/Document-History.md

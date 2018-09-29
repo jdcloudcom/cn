@@ -12,9 +12,9 @@ https://ipanti.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}/webR
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**instanceId**|String|True||实例 ID|
-|**regionId**|String|True||Region ID|
-|**webRuleId**|String|True||网站规则 ID|
+|**instanceId**|String|True| |实例 ID|
+|**regionId**|String|True| |Region ID|
+|**webRuleId**|String|True| |网站规则 ID|
 
 ## 请求参数
 无
@@ -23,15 +23,14 @@ https://ipanti.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}/webR
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String||
-|**result**|[Result](##Result)||
+|**requestId**|String| |
+|**result**|Result| |
 
-
-### <a name="Result">Result</a>
+### Result
 |名称|类型|描述|
 |---|---|---|
-|**data**|[WebRule](##WebRule)||
-### <a name="WebRule">WebRule</a>
+|**data**|WebRule| |
+### WebRule
 |名称|类型|描述|
 |---|---|---|
 |**algorithm**|String|转发规则：wrr->带权重的轮询，rr->不带权重的轮询|
@@ -47,14 +46,14 @@ https://ipanti.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}/webR
 |**httpsRsaKey**|String|证书私钥|
 |**id**|Integer|规则id|
 |**instanceId**|Integer|实例id|
-|**onlineAddr**|String[]||
-|**originAddr**|[OriginAddrItem[]](##OriginAddrItem)||
+|**onlineAddr**|String[]| |
+|**originAddr**|OriginAddrItem[]| |
 |**originDomain**|String|回源域名,originType为CNAME时返回该字段|
 |**originType**|String|回源类型：A或者CNAME|
 |**port**|String|HTTP协议的端口号，如80,81，多个端口号使用逗号分隔|
 |**protocol**|String|协议：HTTP、HTTPS、HTTP_HTTPS|
 |**status**|Integer|0防御状态，1回源状态|
-### <a name="OriginAddrItem">OriginAddrItem</a>
+### OriginAddrItem
 |名称|类型|描述|
 |---|---|---|
 |**inJdCloud**|Boolean|是否为京东云内公网ip|

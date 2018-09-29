@@ -36,9 +36,10 @@ http://opencdn.jcloud.com/api/live/ bandwidth_flow
 
 - ### 请求示例
 
-•        json格式
+* json格式
 
-•        http://opencdn.jcloud.com/api/live/ bandwidth_flow
+http://opencdn.jcloud.com/api/live/ bandwidth_flow
+```
 {
     "username" :" test_user ",
     "signature" :"f7e472560b470a8d1892ea57626390d6",
@@ -46,9 +47,9 @@ http://opencdn.jcloud.com/api/live/ bandwidth_flow
     "start_time" :"2018-06-02 17:15,
     "end_time" :"2018-06-02  17:30"
 }
-
+```
 - ### 返回示例
-
+```
 {
     "username" :" test_user ",
     "signature" :" f7e472560b470a8d1892ea57626390d6",
@@ -94,3 +95,4 @@ http://opencdn.jcloud.com/api/live/ bandwidth_flow
         }
     ]
 }
+```

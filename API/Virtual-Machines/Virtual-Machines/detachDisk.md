@@ -13,20 +13,18 @@ https://vm.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}:detachDi
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**instanceId**|String|True||云主机ID|
-|**regionId**|String|True||地域ID|
+|**instanceId**|String|True| |云主机ID|
+|**regionId**|String|True| |地域ID|
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**diskId**|String|True||云硬盘ID|
-|**force**|Boolean|False|False|强制缷载，默认False。如果此参数传值为True，代表数据盘的IO会被强制断掉。|
+|**diskId**|String|True| |云硬盘ID|
+|**force**|Boolean|False| |强制缷载，默认False。如果此参数传值为True，代表数据盘的IO会被强制断掉。|
 
 
 ## 返回参数
-|名称|类型|描述|
-|---|---|---|
-
+无
 
 
 ## 返回码

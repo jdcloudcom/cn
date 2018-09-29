@@ -12,26 +12,24 @@ https://idata-jmr-api.jcloud.com/v1/regions/{regionId}/tracker/{trackerId}:delet
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**regionId**|String|True||地域ID|
-|**trackerId**|String|True|||
+|**regionId**|String|True| |地域ID|
+|**trackerId**|String|True| | |
 
 ## 请求参数
-|名称|类型|是否必需|默认值|描述|
-|---|---|---|---|---|
+无
 
 
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String||
-|**result**|[Result](##Result)||
+|**requestId**|String| |
+|**result**|Result| |
 
-
-### <a name="Result">Result</a>
+### Result
 |名称|类型|描述|
 |---|---|---|
-|**message**|String||
-|**status**|String||
+|**message**|String| |
+|**status**|String| |
 
 ## 返回码
 |返回码|描述|

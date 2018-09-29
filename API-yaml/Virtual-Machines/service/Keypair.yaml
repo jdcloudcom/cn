@@ -14,14 +14,13 @@ paths:
         创建ssh密钥对。公钥部分存储在京东云，并返回未加密的 PEM 编码的 PKCS#8 格式私钥，您只有一次机会保存您的私钥。请妥善保管。<br>
         若传入已存在的密钥名称，会返回错误。
       operationId: createKeypair
-      x-jdcloud-internal: true
       parameters:
         - name: keyName
           type: string
           in: query
           required: true
           description: |
-            密钥对名称，需要全局唯一。<a href="https://www.jdcloud.com/help/detail/3870/isCatalog/1">参考公共参数规范</a>。
+            密钥对名称，需要全局唯一。只允许数字、大小写字母、下划线“_”及中划线“-”，不超过32个字符。
       responses:
         200:
           description: OK
@@ -58,7 +57,6 @@ paths:
         批量查询密钥对。<br>
         此接口支持分页查询，默认每页20条。
       operationId: describeKeypairs
-      x-jdcloud-internal: true
       parameters:
         - name: pageNumber
           in: query
@@ -111,14 +109,13 @@ paths:
         导入由其他工具生成的密钥对的公钥部分。<br>
         若传入已存在的密钥名称，会返回错误。
       operationId: importKeypair
-      x-jdcloud-internal: true
       parameters:
         - name: keyName
           in: query
           type: string
           required: true
           description: |
-            密钥对名称，需要全局唯一。<a href="https://www.jdcloud.com/help/detail/3870/isCatalog/1">参考公共参数规范</a>。
+            密钥对名称，需要全局唯一。只允许数字、大小写字母、下划线“_”及中划线“-”，不超过32个字符。
         - name: publicKey
           in: query
           type: string
@@ -157,7 +154,6 @@ paths:
       description: |
         删除ssh密钥对。
       operationId: deleteKeypair
-      x-jdcloud-internal: true
       responses:
         200:
           description: OK

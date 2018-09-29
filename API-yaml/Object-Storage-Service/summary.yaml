@@ -2,7 +2,7 @@ swagger: "2.0"                                  # 基于Swagger 2.0版本实现
 info:
   version: "v1"                                 # OpenApi版本号
   title: 对象存储API
-  description: 对象存储API，主要包含查询Bucket列表，创建Bucket, 删除Bucket，查询Bucket是否存在, 更多API见：https://www.jdcloud.com/help/detail/1901/isCatalog/1
+  description: 对象存储API，主要包含查询Bucket列表，创建Bucket, 删除Bucket，查询Bucket是否存在, 更多API见：https://docs.jdcloud.com/en/object-storage-service/compatibility-api-overview
 host: "oss.jdcloud-api.com"                   # 业务线名称作为二级域名
 x-jdcloud-version: "v1"
 x-jdcloud-revision: 0.2.4  #需要和ChangeLog保持一致

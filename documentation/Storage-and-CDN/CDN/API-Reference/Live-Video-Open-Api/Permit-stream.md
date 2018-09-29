@@ -30,21 +30,24 @@ http://opencdn.jcloud.com/api/live/permitStream
 - ### 请求示例
 
 http://opencdn.jcloud.com/api/live/permitStream
+
+```
 {
     "username" :"jd_cdntest",
     "signature" :"914a3f412fd9bc1eec14bb5eb104d253",
     "domain" :"a.live.com",
     "deleteStreams" :[{'app':'App1','stream':'stream1'},{'app':'App2','stream':'stream2'}]
  }
-
+```
  
 
 - ###  返回示例
 
-•        json格式
-
+* json格式
+```
 {
   "status": 0,
   "msg": "成功",
   "data": "a.live.com"
 }
+```

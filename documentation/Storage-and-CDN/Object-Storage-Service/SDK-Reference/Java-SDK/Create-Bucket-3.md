@@ -1,6 +1,7 @@
 # 创建Bucket
 
 您可以使用JingdongStorageService.createBucket创建Bucket。如下代码展示如何新建一个Bucket：
+
 ```
 // endpoint以华北-北京为例，其它region请按实际情况填写  
 String endpoint = "oss.cn-north-1.jcloudcs.com";  
@@ -22,6 +23,7 @@ jss.createBucket(bucketName);
 //关闭jss  
 jss.destroy();
 ```
+
 提示：
 
 * Bucket的命名规范，参见“基本概念”中的命名规范。

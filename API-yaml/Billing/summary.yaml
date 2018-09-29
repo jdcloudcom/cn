@@ -1,0 +1,8 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: 计费
+  description: 计费系统API接口
+host: "billing.jdcloud-api.com"
+x-jdcloud-version: "v1"
+x-jdcloud-revision: "1.0.0"

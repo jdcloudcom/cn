@@ -13,21 +13,20 @@ https://nc.jdcloud-api.com/v1/regions/{regionId}/containers/{containerId}:modify
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**containerId**|String|True||Container ID|
-|**regionId**|String|True||Region ID|
+|**containerId**|String|True| |Container ID|
+|**regionId**|String|True| |Region ID|
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**description**|String|False||容器描述；和description必须要指定一个|
-|**name**|String|False||容器名称|
+|**description**|String|False| |容器描述；和description必须要指定一个|
+|**name**|String|False| |容器名称|
 
 
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String||
-
+|**requestId**|String| |
 
 
 ## 返回码

@@ -41,10 +41,10 @@ definitions:
         items:
           type: string
       downSample:
-        description: 取样频次，某些metric支持设置downSample，通过 <a href="https://www.jdcloud.com/help/detail/2791/isCatalog/1">[查询可用创建监控规则的指标列表]</a> 接口可查看。
+        description: 取样频次，某些metric支持设置downSample，通过 <a href="http://docs.jdcloud.com/monitoring/api/describemetricsforcreatealarm">[查询可用创建监控规则的指标列表]</a> 接口可查看。
         type: string
       metric:
-        description: 取值请查看 <a href="https://www.jdcloud.com/help/detail/2791/isCatalog/1">[查询可用创建监控规则的指标列表]</a> 接口 的metric字段
+        description: 取值请查看 <a href="http://docs.jdcloud.com/monitoring/api/describemetricsforcreatealarm">[查询可用创建监控规则的指标列表]</a> 接口 的metric字段
         type: string
       noticePeriod:
         description: 通知周期 单位：小时
@@ -61,7 +61,7 @@ definitions:
         items:
           type: string
       serviceCode:
-        description: 产品名称，取值请查看 <a href="https://www.jdcloud.com/help/detail/2791/isCatalog/1">[查询可用创建监控规则的指标列表]</a> 接口 的serviceCode字段
+        description: 产品名称，取值请查看 <a href="http://docs.jdcloud.com/monitoring/api/describemetricsforcreatealarm">[查询可用创建监控规则的指标列表]</a> 接口 的serviceCode字段
         type: string
       threshold:
         description: 报警阈值，目前只开放数值类型功能

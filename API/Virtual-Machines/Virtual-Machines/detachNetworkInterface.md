@@ -15,19 +15,17 @@ https://vm.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}:detachNe
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**instanceId**|String|True||云主机ID|
-|**regionId**|String|True||地域ID|
+|**instanceId**|String|True| |云主机ID|
+|**regionId**|String|True| |地域ID|
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**networkInterfaceId**|String|True||弹性网卡ID|
+|**networkInterfaceId**|String|True| |弹性网卡ID|
 
 
 ## 返回参数
-|名称|类型|描述|
-|---|---|---|
-
+无
 
 
 ## 返回码

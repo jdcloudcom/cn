@@ -13,7 +13,6 @@
 | instances | String   | 是           | 支持string或者String[]，多个域名中间采用，号分割，例如["http://www.a.com/text1.css","http://www.a.com/text2.js"]单次刷新最多100个url,5个目录 |
 | type      | String   | 是           | file或者dir，文件为file,目录为dir                            |
 
-## 
 
 ## **3、返回参数** 
 
@@ -23,7 +22,6 @@
 | msg      | 提示信息                                        |
 | taskid   | 任务id,用来查询是否刷新成功的唯一标示，uid 32位 |
 
-##  
 
 ## **4、调用示例**
 

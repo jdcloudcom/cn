@@ -12,28 +12,26 @@ https://idata-jmr-api.jcloud.com/v1/regions/{regionId}/vpcSubnets/{vpcId}:query
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**regionId**|String|True||地域ID|
-|**vpcId**|String|True|||
+|**regionId**|String|True| |地域ID|
+|**vpcId**|String|True| | |
 
 ## 请求参数
-|名称|类型|是否必需|默认值|描述|
-|---|---|---|---|---|
+无
 
 
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String||
-|**result**|[Result](##Result)||
+|**requestId**|String| |
+|**result**|Result| |
 
-
-### <a name="Result">Result</a>
+### Result
 |名称|类型|描述|
 |---|---|---|
-|**data**|[QueryVpcSubnets[]](##QueryVpcSubnets)|VPC子网信息集合|
-|**message**|String||
-|**status**|String||
-### <a name="QueryVpcSubnets">QueryVpcSubnets</a>
+|**data**|QueryVpcSubnets[]|VPC子网信息集合|
+|**message**|String| |
+|**status**|String| |
+### QueryVpcSubnets
 |名称|类型|描述|
 |---|---|---|
 |**vpcSubnetId**|String|VPC 子网id|

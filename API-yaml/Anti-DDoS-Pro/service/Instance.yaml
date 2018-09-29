@@ -184,14 +184,15 @@ paths:
 
   /instances/{instanceId}:rename:
     post:
-      description: "更新实例名称"
+      description: "修改实例名称"
       operationId: modifyInstanceName
       parameters:
-        - name: name
-          in: query
-          description: "新的实例名称"
+        - name: instanceSpec
+          in: body
+          description: "修改实例名称请求参数, 只需提供 InstanceSpec 的 name 字段"
           required: true
-          type: string
+          schema:
+            $ref: "../model/InstanceSpec.yaml#/definitions/InstanceSpec"
       responses:
         200:
           description: OK
@@ -207,19 +208,25 @@ paths:
       description: "设置实例 IP 黑名单"
       operationId: modifyInstanceIpBlackList
       parameters:
-        - name: ipBlackList
+        - name: ipBwListSpec
           in: body
-          description: "IP 黑名单列表"
           required: true
           schema:
-            type: array
-            items:
-              type: string
+            $ref: "../model/IpBwListSpec.yaml#/definitions/IpBwListSpec"
+          description: "设置 IP 黑名单请求"
       responses:
         200:
           description: OK
           schema:
             properties:
+              result:
+                properties:
+                  msgList:
+                    type: array
+                    items:
+                      $ref: "../model/BwRepeatMsg.yaml#/definitions/BwRepeatMsg"
+                  status:
+                    $ref: "../model/Status.yaml#/definitions/Status"
               requestId:
                 type: string
         404:
@@ -250,28 +257,36 @@ paths:
                 type: string
         404:
           description: NOT_FOUND
+
   /instances/{instanceId}:setIpWhiteList:
     post:
       description: "设置实例 IP 白名单"
       operationId: modifyInstanceIpWhiteList
       parameters:
-        - name: ipWhiteList
+        - name: ipBwListSpec
           in: body
-          description: ip白名单列表
           required: true
           schema:
-            type: array
-            items:
-              type: string
+            $ref: "../model/IpBwListSpec.yaml#/definitions/IpBwListSpec"
+          description: "设置 IP 黑名单请求"
       responses:
         200:
           description: OK
           schema:
             properties:
+              result:
+                properties:
+                  msgList:
+                    type: array
+                    items:
+                      $ref: "../model/BwRepeatMsg.yaml#/definitions/BwRepeatMsg"
+                  status:
+                    $ref: "../model/Status.yaml#/definitions/Status"
               requestId:
                 type: string
         404:
           description: NOT_FOUND
+
   /instances/{instanceId}:enableIpWhiteList:
     post:
       description: "启用实例 IP 白名单"
@@ -285,6 +300,7 @@ paths:
                 type: string
         404:
           description: NOT_FOUND
+
   /instances/{instanceId}:disableIpWhiteList:
     post:
       description: "禁用实例 IP 白名单"
@@ -299,10 +315,10 @@ paths:
         404:
           description: NOT_FOUND
 
-  /instances/{instanceId}:enableCcObserverMode:
+  /instances/{instanceId}:enableCCObserverMode:
     post:
       description: "开启实例 CC 防护的观察者模式"
-      operationId: enableCcObserverMode
+      operationId: enableCCObserverMode
       responses:
         200:
           description: OK
@@ -313,10 +329,10 @@ paths:
         404:
           description: NOT_FOUND
 
-  /instances/{instanceId}:disableCcObserverMode:
+  /instances/{instanceId}:disableCCObserverMode:
     post:
       description: "关闭实例 CC 防护的观察者模式"
-      operationId: disableCcObserverMode
+      operationId: disableCCObserverMode
       responses:
         200:
           description: OK
@@ -327,10 +343,10 @@ paths:
         404:
           description: NOT_FOUND
 
-  /instances/{instanceId}:enableCcIpLimit:
+  /instances/{instanceId}:enableCCIpLimit:
     post:
       description: "开启 CC 防护每 IP 的限速"
-      operationId: enableCcIpLimit
+      operationId: enableCCIpLimit
       responses:
         200:
           description: OK
@@ -341,10 +357,10 @@ paths:
         404:
           description: NOT_FOUND
 
-  /instances/{instanceId}:disableCcIpLimit:
+  /instances/{instanceId}:disableCCIpLimit:
     post:
       description: "关闭 CC 防护每 IP 的限速"
-      operationId: disableCcIpLimit
+      operationId: disableCCIpLimit
       responses:
         200:
           description: OK
@@ -355,10 +371,10 @@ paths:
         404:
           description: NOT_FOUND
 
-  /instances/{instanceId}:setCcIpLimit:
+  /instances/{instanceId}:setCCIpLimit:
     post:
       description: "设置实例 CC 防护每 IP 限速"
-      operationId: setCcIpLimit
+      operationId: setCCIpLimit
       parameters:
         - name: cCSpec
           in: body

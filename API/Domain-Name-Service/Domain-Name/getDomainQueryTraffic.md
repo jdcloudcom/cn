@@ -12,25 +12,24 @@ https://clouddnsservice.jdcloud-api.com/v1/regions/{regionId}/domain/{domainId}/
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**domainId**|String|True||域名ID|
-|**regionId**|String|True||实例所属的地域ID|
+|**domainId**|String|True| |域名ID|
+|**regionId**|String|True| |实例所属的地域ID|
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**domainName**|String|True||域名|
-|**end**|String|True||终止时间, UTC时间例如2017-11-10T23:00:00Z|
-|**start**|String|True||起始时间, UTC时间例如2017-11-10T23:00:00Z|
+|**domainName**|String|True| |域名|
+|**end**|String|True| |终止时间, UTC时间例如2017-11-10T23:00:00Z|
+|**start**|String|True| |起始时间, UTC时间例如2017-11-10T23:00:00Z|
 
 
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String||
-|**result**|[Result](##Result)||
+|**requestId**|String| |
+|**result**|Result| |
 
-
-### <a name="Result">Result</a>
+### Result
 |名称|类型|描述|
 |---|---|---|
 |**time**|Integer[]|时间序列|

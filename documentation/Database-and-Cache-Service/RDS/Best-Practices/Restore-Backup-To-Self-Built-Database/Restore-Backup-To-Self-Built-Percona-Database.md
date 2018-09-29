@@ -72,7 +72,7 @@
     mysqld --defaults-file=$HOME/tmp_snapshot/backup-my.cnf --user=mysql --datadir=$HOME/tmp_snapshot --socket=$HOME/tmp_snapshot/mysql.sock &
     ```
 
-9. 登录 MySQL 数据库
+9. 登录 Percona 数据库
 
     ```
     mysql -uroot -p --socket=$HOME/tmp_snapshot/mysql.sock

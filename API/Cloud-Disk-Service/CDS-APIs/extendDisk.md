@@ -14,19 +14,17 @@ https://disk.jdcloud-api.com/v1/regions/{regionId}/disks/{diskId}:extend
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**diskId**|String|True||云硬盘ID|
-|**regionId**|String|True||地域ID|
+|**diskId**|String|True| |云硬盘ID|
+|**regionId**|String|True| |地域ID|
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**diskSizeGB**|Integer|True||扩容后的云硬盘大小，单位为GiB|
+|**diskSizeGB**|Integer|True| |扩容后的云硬盘大小，单位为GiB|
 
 
 ## 返回参数
-|名称|类型|描述|
-|---|---|---|
-
+无
 
 
 ## 返回码

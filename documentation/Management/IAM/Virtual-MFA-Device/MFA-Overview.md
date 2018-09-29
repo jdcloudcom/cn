@@ -6,4 +6,4 @@ MFA (Multi-Factor Authentication) 是一种简单有效的最佳安全实践，�
 # 京东云助手
 京东云助手（微信小程序）是京东云为方便用户提供统一的虚拟MFA设备，我们建议您通过此应用程序绑定您的用户信息，生成动态验证码。
 
-<div align=center><img width = "250" height = "250" src=https://github.com/jdcloudcom/cn/blob/edit/image/IAM/Virtual%20MFA%20device/%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg/></div>
+![](https://github.com/jdcloudcom/cn/blob/edit/image/IAM/Virtual%20MFA%20device/%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg)

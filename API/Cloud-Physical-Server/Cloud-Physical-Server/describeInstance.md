@@ -12,8 +12,8 @@ https://cps.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**instanceId**|String|True||云物理服务器ID|
-|**regionId**|String|True||地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域|
+|**instanceId**|String|True| |云物理服务器ID|
+|**regionId**|String|True| |地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域|
 
 ## 请求参数
 无
@@ -22,20 +22,19 @@ https://cps.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String||
-|**result**|[Result](##Result)||
+|**requestId**|String| |
+|**result**|Result| |
 
-
-### <a name="Result">Result</a>
+### Result
 |名称|类型|描述|
 |---|---|---|
-|**instance**|[Instance](##Instance)||
-### <a name="Instance">Instance</a>
+|**instance**|Instance| |
+### Instance
 |名称|类型|描述|
 |---|---|---|
 |**az**|String|可用区, 如 cn-east-1a|
 |**bandwidth**|Integer|带宽, 单位Mbps|
-|**charge**|[Charge](##Charge)|计费信息|
+|**charge**|Charge|计费信息|
 |**dataRaidType**|String|数据盘RAID类型, 如 NORAID, RAID0, RAID1|
 |**dataRaidTypeId**|String|数据盘RAID类型ID|
 |**description**|String|云物理服务器描述|
@@ -57,7 +56,7 @@ https://cps.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}
 |**subnetId**|String|子网编号|
 |**sysRaidType**|String|系统盘RAID类型, 如 NORAID, RAID0, RAID1|
 |**sysRaidTypeId**|String|系统盘RAID类型ID|
-### <a name="Charge">Charge</a>
+### Charge
 |名称|类型|描述|
 |---|---|---|
 |**chargeExpiredTime**|String|过期时间，预付费资源的到期时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ，后付费资源此字段内容为空|

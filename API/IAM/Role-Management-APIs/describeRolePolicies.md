@@ -12,30 +12,30 @@ https://iam.jdcloud-api.com/v1/role/{roleName}/policies
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**roleName**|String|True||角色名称|
+|**roleName**|String|True| |角色名称|
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**keyword**|String|False||关键字|
-|**pageNumber**|Integer|True||页码|
-|**pageSize**|Integer|True||每页显示数目|
-|**sort**|Integer|True||排序策略,0-按创建时间顺序排序  1-按创建时间倒序|
+|**keyword**|String|False| |关键字|
+|**pageNumber**|Integer|False|1|页码|
+|**pageSize**|Integer|False|50|每页显示数目[10~100] 默认50条|
+|**sort**|Integer|True| |排序策略,0-按创建时间顺序排序  1-按创建时间倒序|
 
 
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String||
-|**result**|[Result](##Result)||
+|**requestId**|String| |
+|**result**|Result| |
 
 
-### <a name="Result">Result</a>
+### Result
 |名称|类型|描述|
 |---|---|---|
-|**policies**|[RolePolicy[]](##RolePolicy)|角色授权列表|
+|**policies**|RolePolicy[]|角色授权列表|
 |**total**|Integer|总数|
-### <a name="RolePolicy">RolePolicy</a>
+### RolePolicy
 |名称|类型|描述|
 |---|---|---|
 |**description**|String|描述|

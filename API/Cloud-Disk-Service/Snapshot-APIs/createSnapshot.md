@@ -18,29 +18,28 @@ https://disk.jdcloud-api.com/v1/regions/{regionId}/snapshots
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**regionId**|String|True||地域ID|
+|**regionId**|String|True| |地域ID|
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**clientToken**|String|True||幂等性校验参数|
-|**snapshotSpec**|[SnapshotSpec](##SnapshotSpec)|True||创建快照规格|
+|**clientToken**|String|True| |幂等性校验参数|
+|**snapshotSpec**|SnapshotSpec|True| |创建快照规格|
 
-### <a name="SnapshotSpec">SnapshotSpec</a>
+### SnapshotSpec
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**description**|String|False||快照描述|
-|**diskId**|String|True||用于创建快照的云盘ID|
-|**name**|String|True||快照名称|
+|**description**|String|False| |快照描述|
+|**diskId**|String|True| |用于创建快照的云盘ID|
+|**name**|String|True| |快照名称|
 
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
 |**requestId**|String|请求ID|
-|**result**|[Result](##Result)|结果集|
+|**result**|Result|结果集|
 
-
-### <a name="Result">Result</a>
+### Result
 |名称|类型|描述|
 |---|---|---|
 |**snapshotId**|String|创建的快照ID|

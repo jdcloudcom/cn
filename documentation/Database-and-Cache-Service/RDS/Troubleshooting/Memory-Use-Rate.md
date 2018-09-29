@@ -1,5 +1,5 @@
 # 内存使用率
-针对云数据库 MySQL/Percona，京东云提供了实例级的内存使用率监控和报警服务，具体的操作步骤请查看 [设置报警规则](待补充)。
+针对云数据库 MySQL/Percona，京东云提供了实例级的内存使用率监控和报警服务，具体的操作步骤请查看 [设置报警规则](../Operation-Guide/Monitor-Alarm/Set-Alarm-Rules.md)。
 
 ## 内存占用
 云数据库 MySQL/Percona 的内存占用主要分为以下两项：

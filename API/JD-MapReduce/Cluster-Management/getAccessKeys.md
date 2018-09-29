@@ -12,7 +12,7 @@ https://idata-jmr-api.jcloud.com/v1/regions/{regionId}/accessKeys
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**regionId**|String|True||地域ID|
+|**regionId**|String|True| |地域ID|
 
 ## 请求参数
 无
@@ -21,17 +21,16 @@ https://idata-jmr-api.jcloud.com/v1/regions/{regionId}/accessKeys
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String||
-|**result**|[Result](##Result)||
+|**requestId**|String| |
+|**result**|Result| |
 
-
-### <a name="Result">Result</a>
+### Result
 |名称|类型|描述|
 |---|---|---|
-|**data**|[UserAccessKey](##UserAccessKey)|用户的AK/SK|
-|**message**|String||
-|**status**|String||
-### <a name="UserAccessKey">UserAccessKey</a>
+|**data**|UserAccessKey|用户的AK/SK|
+|**message**|String| |
+|**status**|String| |
+### UserAccessKey
 |名称|类型|描述|
 |---|---|---|
 |**accessKey**|String|访问密钥，AccessKey用于程序方式调用云服务API|
@@ -44,7 +43,7 @@ https://idata-jmr-api.jcloud.com/v1/regions/{regionId}/accessKeys
 |**modifier**|String|更新操作人|
 |**pin**|String|用户名|
 |**state**|Integer|状态|
-|**yn**|Integer||
+|**yn**|Integer| |
 
 ## 返回码
 |返回码|描述|

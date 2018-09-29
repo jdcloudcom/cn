@@ -1,0 +1,23 @@
+swagger: "2.0"
+definitions:
+  pagination:
+    x-jdcloud-module: billing
+    title: Pagination
+    type: object
+    x-jdcloud-internal: true
+    properties:
+      currPageNo:
+        type: integer
+        description: 当前页
+      numberPages:
+        type: integer
+        description: 页数
+      numberRecords:
+        type: integer
+        description: 每页记录数
+      pageSize:
+        type: integer
+        description: 页面大小
+      startIndex:
+        type: integer
+        description: 起始页

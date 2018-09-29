@@ -7,7 +7,7 @@
 
 ## 支持功能
 
-* [编辑标签](Edit-Tag.md )
+* [编辑标签](Edit-Tag.md)
 * [根据标签筛选云主机](Filter-by-Tag.md)
 
 
@@ -22,7 +22,7 @@
 
 ## 相关参考
 
-[编辑标签](Edit-Tag.md )
+[编辑标签](Edit-Tag.md)
 
 [根据标签筛选云主机](Filter-by-Tag.md)
 

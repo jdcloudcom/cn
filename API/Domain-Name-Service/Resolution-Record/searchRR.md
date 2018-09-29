@@ -12,31 +12,30 @@ https://clouddnsservice.jdcloud-api.com/v1/regions/{regionId}/domain/{domainId}/
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**domainId**|String|True||域名ID|
-|**regionId**|String|True||实例所属的地域ID|
+|**domainId**|String|True| |域名ID|
+|**regionId**|String|True| |实例所属的地域ID|
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**pageNumber**|Integer|False||当前页数，起始值为1，默认为1|
-|**pageSize**|Integer|False||分页查询时设置的每页行数, 默认为10|
+|**pageNumber**|Integer|False| |当前页数，起始值为1，默认为1|
+|**pageSize**|Integer|False| |分页查询时设置的每页行数, 默认为10|
 
 
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
 |**requestId**|String|此次请求的ID|
-|**result**|[Result](##Result)||
+|**result**|Result| |
 
-
-### <a name="Result">Result</a>
+### Result
 |名称|类型|描述|
 |---|---|---|
 |**currentCount**|Integer|当前页解析记录的个数|
-|**dataList**|[RR[]](##RR)|解析记录列表|
+|**dataList**|RR[]|解析记录列表|
 |**totalCount**|Integer|所有解析记录的个数|
 |**totalPage**|Integer|所有解析记录的页数|
-### <a name="RR">RR</a>
+### RR
 |名称|类型|描述|
 |---|---|---|
 |**hostRecord**|String|主机记录|

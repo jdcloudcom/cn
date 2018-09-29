@@ -14,8 +14,8 @@ https://cps.jdcloud-api.com/v1/regions/{regionId}/os/{osTypeId}/softwares
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**osTypeId**|String|True||操作系统系统类型ID，调用接口（describeOS）获取云物理服务器支持的操作系统|
-|**regionId**|String|True||地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域|
+|**osTypeId**|String|True| |操作系统系统类型ID，调用接口（describeOS）获取云物理服务器支持的操作系统|
+|**regionId**|String|True| |地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域|
 
 ## 请求参数
 无
@@ -24,15 +24,14 @@ https://cps.jdcloud-api.com/v1/regions/{regionId}/os/{osTypeId}/softwares
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String||
-|**result**|[Result](##Result)||
+|**requestId**|String| |
+|**result**|Result| |
 
-
-### <a name="Result">Result</a>
+### Result
 |名称|类型|描述|
 |---|---|---|
-|**softwares**|[Software[]](##Software)||
-### <a name="Software">Software</a>
+|**softwares**|Software[]| |
+### Software
 |名称|类型|描述|
 |---|---|---|
 |**description**|String|软件包描述|

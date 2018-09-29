@@ -1,0 +1,26 @@
+swagger: "2.0"
+definitions:
+  APIInfo:
+    x-jdcloud-module: iam
+    properties:
+      accessLevel:
+        type: integer
+        description: 访问级别
+      actionName:
+        type: string
+        description: action name
+      actionType:
+        type: string
+        description: action type
+      resource:
+        type: string
+        description: 资源
+      resourceType:
+        type: string
+        description: 资源类型
+      subResourceType:
+        type: string
+        description: 子资源类型
+      terResourceType:
+        type: string
+        description: 三级资源类型

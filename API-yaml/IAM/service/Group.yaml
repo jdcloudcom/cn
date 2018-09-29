@@ -1,0 +1,214 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: 用户组管理接口
+  description: 用户组管理接口
+
+paths:
+  "/group":
+    ###################### 创建用户组 ######################
+    post:
+      description: "创建用户组"
+      operationId: createGroup
+      x-jdcloud-internal: true
+      parameters:
+        - name: createGroupInfo
+          in: body
+          required: true
+          schema:
+            $ref: "../model/CreateGroupInfo.yaml#/definitions/createGroupInfo"
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                properties:
+                  group:
+                    $ref: "../model/Group.yaml#/definitions/group"
+                    description: 用户组信息
+              requestId:
+                type: string
+
+  "/group/{groupName}":
+    ###################### 修改用户组 ######################
+    put:
+      description: "修改用户组"
+      operationId: updateGroup
+      x-jdcloud-internal: true
+      parameters:
+        - name: modifyGroupInfo
+          in: body
+          required: true
+          schema:
+            $ref: "../model/UpdateGroup.yaml#/definitions/updateGroup"
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              requestId:
+                type: string
+    ###################### 查询用户组详情 ######################
+    get:
+      description: "查询用户组详情"
+      operationId: describeGroup
+      x-jdcloud-internal: true
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                properties:
+                  group:
+                    $ref: "../model/GroupDetail.yaml#/definitions/group"
+                    description: 用户组信息
+              requestId:
+                type: string
+    ###################### 删除用户组 ######################
+    delete:
+      description: "删除用户组"
+      operationId: deleteGroup
+      x-jdcloud-internal: true
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              requestId:
+                type: string
+
+
+  "/groups":
+    ###################### 查询用户组列表 ######################
+    get:
+      description: "查询用户组列表"
+      operationId: describeGroups
+      x-jdcloud-internal: true
+      parameters:
+        - name: pageNumber
+          in: query
+          type: integer
+          default: 1
+          description: 页码，默认1
+          required: false
+        - name: pageSize
+          in: query
+          type: integer
+          default: 50
+          description: 分页大小，默认50，取值范围[10, 100]
+          required: false
+        - name: keyword
+          in: query
+          type: string
+          description: 关键字
+          required: false
+        - name: sort
+          in: query
+          type: integer
+          description: 排序规则：0-创建时间顺序排序，1-创建时间倒序排序
+          required: false
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                properties:
+                  total:
+                    type: integer
+                    description: 总数
+                  groups:
+                    type: array
+                    items:
+                      $ref: "../model/Group.yaml#/definitions/group"
+                    description: 用户组列表信息
+              requestId:
+                type: string
+
+
+  "/group/{groupName}/policies":
+    ###################### 列举用户组的策略 ######################
+    get:
+      description: "列举用户组的策略"
+      operationId: describeAttachedUserPolicies
+      x-jdcloud-internal: true
+      parameters:
+        - name: pageNumber
+          type: integer
+          in: query
+          description: 页码
+          required: true
+        - name: pageSize
+          type: integer
+          in: query
+          description: 每页显示数目
+          required: true
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                properties:
+                  total:
+                    type: integer
+                    description: 总数
+                  policies:
+                    type: array
+                    items:
+                      $ref: "../model/Policy.yaml#/definitions/policy"
+                    description: 策略列表信息
+              requestId:
+                type: string
+
+  "/group/{groupName}/policy/{policyName}":
+    ###################### 为用户组解绑策略 ######################
+    delete:
+      description: "为用户组解绑策略"
+      operationId: detachGroupPolicy
+      x-jdcloud-internal: true
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              requestId:
+                type: string
+
+    ###################### 为用户组绑定策略 ######################
+    post:
+      description: "为用户组绑定策略"
+      operationId: attachGroupPolicy
+      x-jdcloud-internal: true
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              requestId:
+                type: string
+
+#路径通用参数
+parameters:
+  policyName:
+    name: policyName
+    in: path
+    required: true
+    type: string
+    description: 策略名称
+  groupName:
+    name: groupName
+    in: path
+    required: true
+    type: string
+    description: 用户组名称

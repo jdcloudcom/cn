@@ -2,7 +2,7 @@
 
 ## 前置条件
 
-创建高可用组前您需要先完成[创建实例模板](../../Virtual-Machine/Operation-Guide/Instance-Template/Create-Instance-Template.md)。
+创建高可用组前您需要先完成[创建实例模板](../../Virtual-Machines/Operation-Guide/Instance-Template/Create-Instance-Template.md)。
 
 ## 操作步骤
 
@@ -20,4 +20,4 @@
 
 ## 相关参考
 
-[创建实例模板](../../Virtual-Machine/Operation-Guide/Instance-Template/Create-Instance-Template.md)
+[创建实例模板](../../Virtual-Machines/Operation-Guide/Instance-Template/Create-Instance-Template.md)

@@ -12,20 +12,19 @@ https://vpc.jdcloud-api.com/v1/regions/{regionId}/networkAcls/{networkAclId}:dis
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**networkAclId**|String|True||networkAclId ID|
-|**regionId**|String|True||Region ID|
+|**networkAclId**|String|True| |networkAclId ID|
+|**regionId**|String|True| |Region ID|
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**subnetId**|String|True||networkAcl要解绑的子网ID|
+|**subnetId**|String|True| |networkAcl要解绑的子网ID|
 
 
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
 |**requestId**|String|请求ID|
-
 
 
 ## 返回码

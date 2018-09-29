@@ -38,10 +38,6 @@ items:
   items:
     - name: DDoS基础防护+IP高防联动方案
       href: Best-Practices/Linkage-Scheme.md	
-- name: 教程
-  status: 0
-- name: 问题排查
-  href:
 - name: 常见问题
   href: FAQ/FAQ.md
 - name: API参考

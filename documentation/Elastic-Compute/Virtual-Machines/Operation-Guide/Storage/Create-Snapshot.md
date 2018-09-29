@@ -8,7 +8,7 @@
 * 建议您在制作快照前先对云硬盘进行卸载操作，创建快照后再重新挂载至实例，请查阅[卸载云硬盘](Detach-Cloud-Disk.md)、[挂载云硬盘](Attach-Cloud-Disk.md)；
 
 ## 操作步骤
-详细操作步骤请参考云硬盘侧[创建云硬盘快照]()。
+详细操作步骤请参考云硬盘侧[创建云硬盘快照](http://docs.jdcloud.com/cn/cloud-disk-service/create-clouddisk-snapshot)。
  	
  	请注意：第一次创建快照为全量快照所需时间取决于云硬盘容量的大小，云硬盘容量越大耗时越长，还请耐心等待。
  	
@@ -19,4 +19,4 @@
 
 [挂载云硬盘](Attach-Cloud-Disk.md)
 
-[创建云硬盘快照]()
+[创建云硬盘快照](http://docs.jdcloud.com/cn/cloud-disk-service/create-clouddisk-snapshot)

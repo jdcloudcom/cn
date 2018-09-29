@@ -31,11 +31,11 @@
 
 ## **4、调用示例**
 
-- ### **请求地址**
+### **请求地址**
 
 http://opencdn.jcloud.com/api/changeCache/add
 
-- ### **请求示例**
+### **请求示例**
 
 curl请求示例：
 
@@ -43,7 +43,7 @@ curl请求示例：
  curl -H “Content-type: application/json” -X POST -d ‘{“username”:“test_user”,“signature”:“914a3f412fd9bc1eec14bb5eb104d253”,“domain” :“www.a.com”, “weight” :“1”, “ttl” :“7200”, “content” :“.jpg”}’ http://opencdn.jcloud.com/api/changeCache/add
 ```
 
-•        json格式
+* json格式
 
 ```
 http://opencdn.jcloud.com/api/changeCache/add
@@ -58,9 +58,9 @@ http://opencdn.jcloud.com/api/changeCache/add
  }
 ```
 
-- ### **返回示例**
+### **返回示例**
 
-  ### •        json格式
+• json格式
 
 ```
 {

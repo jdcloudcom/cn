@@ -1,11 +1,14 @@
 # Node.js连接
 
 - step1：下载安装Node.js的Redis客户端
-```xml
+
+```
 git clone https://github.com/NodeRedis/node_redisnpm install redis
 ```
+
 - step2：调用示例代码
-<pre><code>
+
+```
 //连接redis
 var redis = require("redis"),
   port = 6379,
@@ -29,4 +32,5 @@ client.get("key", function (err, reply) {
 client.get(new Buffer("key"), function (err, reply) {
     console.log(reply.toString());
 });
-client.quit();</pre></code>
+client.quit();
+```

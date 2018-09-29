@@ -1,13 +1,13 @@
 name: 访问控制
-  href: 
-  items:
-  - name: Overview
+href: 
+items:
+  - name: 接口概览
     href: overview.md
-  - name: Change Log
+  - name: 更新历史
     href: ChangeLog.md
-  - name: Interface List
+  - name: 接口信息
     items:
-      - name:  Policy Management APIs
+      - name: 策略管理接口
         items:
           - name: addPermissionsToSubUser
             href: Policy-Management-APIs/addPermissionsToSubUser.md
@@ -23,7 +23,7 @@ name: 访问控制
             href: Policy-Management-APIs/removePermissionOfSubUser.md
           - name: updatePermission
             href: Policy-Management-APIs/updatePermission.md
-      - name:  User Management APIs
+      - name: 用户管理接口
         items:
           - name: createSubuser
             href: User-Management-APIs/createSubuser.md

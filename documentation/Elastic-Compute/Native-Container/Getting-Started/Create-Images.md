@@ -14,9 +14,11 @@ Docker Hub是Docker的官方镜像仓库，拥有大量高质量镜像，可以�
 [root@docker nginx-dockerfile]# vi Dockerfile
 Dockerfile内容如下：
 FROM nginx
-RUN echo '<h1>Hello, Docker!</h1>' > /usr/share/nginx/html/index.html
+RUN echo ' <h1> Hello, Docker! </h1> ' > /usr/share/nginx/html/index.html
+
 备注：
-       这个Dockerfile包含两条指令：
+       
+   这个Dockerfile包含两条指令：
 
 　　FROM： 必不可少的命令，从某个镜像作为基，以centos为例。如 FROM <image_name> ，或者 FROM <image_name>:<tag>. 如果不加tag，默认为latest。先从本地镜像仓库去搜索基镜像，如过本地没有，在网上docker registry查询。
 
@@ -56,5 +58,3 @@ docker.io/nginx         latest              3f8a4339aadd        2 weeks ago     
 [root@docker nginx-dockerfile]# docker push myname/newnginx
     6.创建容器实例的时候使用该镜像
     创建容器实例的时候，在镜像名称输入myname/newnginx即可。
-
-blob.png

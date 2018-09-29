@@ -16,7 +16,6 @@
 | rsaKey      | String   | 否           | 证书私钥，当httpType为https时必须设置                        |
 | jumpType    | String   | 否           | 设置跳转类型，有三种类型：default、http、https；默认是default，遵循源站，当httpType为https时必须设置 |
 
-## 
 
 ## **3、返回参数**
 
@@ -26,7 +25,6 @@
 | msg      | 提示信息                                                  |
 | data     | 返回数据                                                  |
 
-## 
 
 ## **4、调用示例**
 

@@ -21,4 +21,4 @@
 ## 相关参考
 
 - [创建实例](Create-Instance.md)
-- [计费规则](../../Pricing/Billing-Rules.md)
+- [计费规则](../Pricing/Billing-Rules.md)

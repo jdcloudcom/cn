@@ -1,0 +1,287 @@
+swagger: "2.0"
+info:
+  version: "v1"
+  title: 用户管理接口
+  description: 用户管理接口
+
+paths:
+  "/subUser":
+    ###################### 创建子账号 ######################
+    post:
+      description: "创建子账号"
+      operationId: createSubUser
+      x-jdcloud-internal: true
+      parameters:
+        - name: createSubUserInfo
+          in: body
+          description: 子账号信息
+          required: true
+          schema:
+            $ref: "../model/CreateSubUserInfo.yaml#/definitions/createSubUserInfo"
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                properties:
+                  subUser:
+                    $ref: "../model/CreateSubUserRes.yaml#/definitions/subUser"
+              requestId:
+                type: string
+
+  "/subUser/{subUser}":
+    ###################### 查询子账号信息 ######################
+    get:
+      description: "查询子账号信息"
+      operationId: describeSubUser
+      x-jdcloud-internal: true
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                properties:
+                  subUser:
+                    $ref: "../model/SubUser.yaml#/definitions/subUser"
+              requestId:
+                type: string
+
+    ###################### 删除子账号信息 ######################
+    delete:
+      description: "删除子账号信息"
+      operationId: deleteSubUser
+      x-jdcloud-internal: true
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              requestId:
+                type: string
+
+    ###################### 修改子账号信息 ######################
+    put:
+      description: "修改子账号信息"
+      operationId: updateSubUser
+      x-jdcloud-internal: true
+      parameters:
+        - name: updateSubUserInfo
+          in: body
+          description: 子账号信息
+          required: true
+          schema:
+            $ref: "../model/UpdateSubUserInfo.yaml#/definitions/updateSubUserInfo"
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                properties:
+                  subUser:
+                    $ref: "../model/CreateSubUserRes.yaml#/definitions/subUser"
+              requestId:
+                type: string
+
+  "/subUsers":
+    ###################### 查询所有子账号 ######################
+    get:
+      description: "查询子账号列表"
+      operationId: describeSubUsers
+      x-jdcloud-internal: true
+      parameters:
+        - name: pageNumber
+          in: query
+          type: integer
+          default: 1
+          description: 页码，默认1
+          required: false
+        - name: pageSize
+          in: query
+          type: integer
+          default: 50
+          description: 分页大小，默认50，取值范围[10, 100]
+          required: false
+        - name: keyword
+          in: query
+          type: string
+          description: 关键字
+          required: false
+        - name: sort
+          in: query
+          type: integer
+          description: 排序规则：0-创建时间顺序排序，1-创建时间倒序排序
+          required: false
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  subUsers:
+                    type: array
+                    description: subUser列表
+                    items:
+                      $ref: "../model/SubUser.yaml#/definitions/subUser"
+                  total:
+                    type: integer
+              requestId:
+                type: string
+
+  "/subUser/{subUser}/groups":
+    ###################### 查询子账号所属的所有组 ######################
+    get:
+      description: "查询子账号所属的所有组"
+      operationId: describeSubUserGroups
+      x-jdcloud-internal: true
+      parameters:
+        - name: pageNumber
+          type: integer
+          in: query
+          default: 1
+          description: 页码，默认1
+          required: true
+        - name: pageSize
+          type: integer
+          in: query
+          default: 50
+          description: 每页显示数目,默认50，取值范围[10, 100]
+          required: true
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                properties:
+                  groups:
+                   type: array
+                   items:
+                     $ref: "../model/GroupInfo.yaml#/definitions/groupInfo"
+                  total:
+                    type: integer
+              requestId:
+                  type: string
+
+  "/subUser/{subUser}/group/{groupName}":
+    ###################### 将子账号从组中删除 ######################
+    delete:
+      description: "将子账号从组中删除"
+      operationId: removeSubUserFromGroup
+      x-jdcloud-internal: true
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              requestId:
+                type: string
+
+    ###################### 添加子账号到用户组中 ######################
+    post:
+      description: "添加子账号到用户组中"
+      operationId: addSubUserToGroup
+      x-jdcloud-internal: true
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              requestId:
+                type: string
+
+  "/subUser/{subUser}/policies":
+    ###################### 查询子用户策略列表 ######################
+    get:
+      description: "查询子用户策略列表"
+      operationId: describeSubUserPolicies
+      x-jdcloud-internal: true
+      parameters:
+      - name: pageNumber
+        type: integer
+        in: query
+        description: 页码
+        required: true
+      - name: pageSize
+        type: integer
+        in: query
+        description: 每页显示数目
+        required: true
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                properties:
+                  total:
+                    type: integer
+                    description: 总数
+                  policies:
+                    type: array
+                    items:
+                      $ref: "../model/Policy.yaml#/definitions/policy"
+                    description: 策略列表信息
+              requestId:
+                type: string
+
+  "/subUser/{subUser}/policy/{policyName}":
+    ###################### 为子用户解绑策略 ######################
+    delete:
+      description: "为子用户解绑策略"
+      operationId: detachSubUserPolicy
+      x-jdcloud-internal: true
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              requestId:
+                type: string
+
+    ###################### 为子用户绑定策略 ######################
+    post:
+      description: "为子用户绑定策略"
+      operationId: attachSubUserPolicy
+      x-jdcloud-internal: true
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              requestId:
+                type: string
+
+#路径通用参数
+parameters:
+  subUser:
+    name: subUser
+    in: path
+    required: true
+    type: string
+    description: 子账户用户名
+  policyName:
+    name: policyName
+    in: path
+    required: true
+    type: string
+    description: 策略名称
+  groupName:
+    name: groupName
+    in: path
+    required: true
+    type: string
+    description: 用户组名称

@@ -1,0 +1,47 @@
+swagger: "2.0"
+definitions:
+  consumptionProduct:
+    x-jdcloud-module: billing
+    title: ConsumptionProduct
+    type: object
+    x-jdcloud-internal: true
+    properties:
+      appCode:
+        type: string
+        description: appCode
+      appCodeName:
+        type: string
+        description: appCodeName
+      serviceCode:
+        type: string
+        description: serviceCode
+      serviceCodeName:
+        type: string
+        description: serviceCodeName
+      actualFee:
+        type: number
+        description: 优惠后金额
+      cashPayFee:
+        type: number
+        description: 现金支付
+      balancePayFee:
+        type: number
+        description: 余额支付
+      cashCouponPayFee:
+        type: number
+        description: 代金券支付金额
+      arrearFee:
+        type: number
+        description: 欠费金额
+      productDetails:
+        type: array
+        items:
+          $ref: "../model/Consumption.yaml#/definitions/consumption"
+      productDetailList:
+        type: map
+        properties:
+          key:
+            type: integer
+          values:
+            $ref: "../model/Pagination.yaml#/definitions/pagination"
+  

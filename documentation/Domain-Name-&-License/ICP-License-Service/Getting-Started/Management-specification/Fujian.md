@@ -2,7 +2,8 @@
 
 1. 单位必须以最新的三证合一证件备案
 
-2. 主体负责人和网站负责人需填写法人，若不是法人，提供法人授权委托书（![img](http://cms.jcloud.com/ueditor/dialogs/attachment/fileTypeImages/icon_doc.gif)[福建授权书.doc](https://img1.jcloudcs.com/cms/7374aaf2-dcf6-41fc-99b8-a07636fbf09a20180503112947.doc)）
+2. 主体负责人和网站负责人需填写法人，若不是法人，提供法人授权委托书![image](http://cms.jcloud.com/ueditor/dialogs/attachment/fileTypeImages/icon_doc.gif)
+[福建授权书.doc](https://img1.jcloudcs.com/cms/7374aaf2-dcf6-41fc-99b8-a07636fbf09a20180503112947.doc)
 
 3. 办公电话必须能联系对应负责人，否则备案不予通过
 

@@ -102,11 +102,13 @@
     href:
     status: 0
   - name: 用户协议
+    status: 0
     items:
     - name: 服务条款
       href:
       status: 0
   - name: 相关资源
+    status: 0
     items:
     - name: 文档历史记录
       href:

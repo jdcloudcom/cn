@@ -1,0 +1,61 @@
+swagger: "2.0"
+definitions:
+  resourceAeVo:
+    x-jdcloud-module: billing
+    title: ResourceAeVo
+    type: object
+    x-jdcloud-internal: true
+    properties:
+      id:
+        type: integer
+        description: "自增主键"
+      site:
+        type: integer
+        description: "站点标识1:中国 2:国际"
+      appCode:
+        type: string
+        description: "应用编码"
+      region:
+        type: string
+        description: "地域"
+      serviceCode:
+        type: string
+        description: "服务编码"
+      formula:
+        type: string
+        description: "配置项"
+      pin:
+        type: string
+        description: "用户pin"
+      resourceId:
+        type: string
+        description: "资源ID"
+      billingType:
+        type: integer
+        description: "计费类型"
+      subBillId:
+        type: integer
+        description: "账单ID"
+      state:
+        type: integer
+        description: "状态 0:无 1:正常 2:欠费, 3:因欠费而停机, 4:欠费删除资源, 6:已删除但已不欠费, 7:欠费延期，8:删除并且欠费，9:欠费删除数据，12:已过期, 13:因过期而停机, 14:过期删除资源, 17:过期延期 19:过期删除数据23:管理员停服，24:管理员删除,34:用户删除,35:退款删除"
+      stateTime:
+        type: string
+        description: "首次欠费时间（各欠费状态）或过期时间（各过期状态）"
+      op:
+        type: integer
+        description: "变成此状态的原因.0:无 1:账单欠费, 2:资源过期 ,3:加入、移出白名单 ,4:补扣款成功, 5:规则修改,6:续费 7:管理员操作,8:用户操作"
+      isLastRecord:
+        type: integer
+        description: "是否为最后状态记录"
+      createTime:
+        type: string
+        description: "本条记录生成时刻、进入当前state的时刻"
+      updateTime:
+        type: string
+        description: "修改时间"
+      toDeleteTime:
+        type: string
+        description: "资源预计释放时间"
+      capState:
+        type: integer

@@ -1,2 +1,2 @@
 # 计费规则
-云数据库 RDS 支持两种计费方式：包年包月和按配置，关于计费方式的详细说明，请查看 [计费方式](待补充)
+云数据库 RDS 支持两种计费方式：[包年包月](../../../Finance/Billing/Billing-rule/Subscription.md)和[按配置](../../../Finance/Billing/Billing-rule/Pay-As-You-Go.md)

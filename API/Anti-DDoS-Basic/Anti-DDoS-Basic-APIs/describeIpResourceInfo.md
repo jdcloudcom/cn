@@ -12,8 +12,8 @@ https://baseanti.jdcloud-api.com/v1/regions/{regionId}/ipResources/{ip}
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**ip**|String|True||公网IP地址|
-|**regionId**|String|True||所属地域ID|
+|**ip**|String|True| |公网IP地址|
+|**regionId**|String|True| |所属地域ID|
 
 ## 请求参数
 无
@@ -22,15 +22,14 @@ https://baseanti.jdcloud-api.com/v1/regions/{regionId}/ipResources/{ip}
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String||
-|**result**|[Result](##Result)||
+|**requestId**|String| |
+|**result**|Result| |
 
-
-### <a name="Result">Result</a>
+### Result
 |名称|类型|描述|
 |---|---|---|
-|**data**|[IpResourceInfo](##IpResourceInfo)||
-### <a name="IpResourceInfo">IpResourceInfo</a>
+|**data**|IpResourceInfo| |
+### IpResourceInfo
 |名称|类型|描述|
 |---|---|---|
 |**blackHoleThreshold**|Integer|黑洞阈值，单位bps|

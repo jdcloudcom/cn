@@ -7,10 +7,10 @@ info:
 basePath: /regions/{regionId}
 
 paths:
-  /attacklog:ddos:
+  /attacklog:DDoS:
     get:
       description: "查询 DDos 攻击日志"
-      operationId: describeDDosAttackLogs
+      operationId: describeDDoSAttackLogs
       parameters:
         - name: pageNumber
           in: query
@@ -61,10 +61,10 @@ paths:
                     description: "总页数"
               requestId:
                 type: string
-  /attacklog:cc:
+  /attacklog:CC:
     get:
       description: "查询 CC 攻击日志"
-      operationId: describeCcAttackLogs
+      operationId: describeCCAttackLogs
       parameters:
         - name: pageNumber
           in: query
@@ -116,10 +116,10 @@ paths:
               requestId:
                 type: string
 
-  /attacklog:ccDetail:
+  /attacklog:CCDetail:
     get:
       description: "查询 CC 攻击日志详情"
-      operationId: describeCcAttackLogDetails
+      operationId: describeCCAttackLogDetails
       parameters:
         - name: pageNumber
           in: query
@@ -176,10 +176,10 @@ paths:
               requestId:
                 type: string
 
-  /attacklog:ddos/download:
+  /attacklog:DDoS/download:
     get:
       description: "下载 DDos 攻击日志"
-      operationId: downloadDDosAttackLogs
+      operationId: downloadDDoSAttackLogs
       parameters:
         - name: startTime
           in: query
@@ -202,10 +202,10 @@ paths:
         200:
           description: OK
 
-  /attacklog:cc/download:
+  /attacklog:CC/download:
     get:
       description: "下载 CC 攻击日志"
-      operationId: downloadCcAttackLogs
+      operationId: downloadCCAttackLogs
       parameters:
         - name: startTime
           in: query
@@ -228,10 +228,10 @@ paths:
         200:
           description: OK
 
-  /attacklog:ccDetail/download:
+  /attacklog:CCDetail/download:
     get:
       description: "下载 CC 攻击日志详情"
-      operationId: downloadCcAttackLogDetails
+      operationId: downloadCCAttackLogDetails
       parameters:
         - name: startTime
           in: query

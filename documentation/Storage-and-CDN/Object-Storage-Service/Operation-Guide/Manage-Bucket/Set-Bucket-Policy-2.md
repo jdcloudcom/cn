@@ -11,11 +11,11 @@
 |公有读写|Public-Read-Write|Bucket Owner获得全部可执行的操作权限，其他人获得READ和WRITE权限；所有这些操作产生的费用由该Bucket的Owner承担，请慎用该权限。|
 自定义权限|User-Defined|可对指定用户设置GetObject、PutObject、DeleteObject、ListObjects、DeleteBucket的权限，并可指定该权限可访问的资源，以及指定具有该权限的IP地址和Referer白名单等.|
 
-1. 在控制台创建Bucket时，您需要指定一个Bucket的ACL，效果如下：
+1.在控制台创建Bucket时，您需要指定一个Bucket的ACL，效果如下：
 
 ![创建Bucket-访问权限](https://github.com/jdcloudcom/cn/blob/edit/image/Object-Storage-Service/OSS-030.png)
 
-2. 也可以在已创建好的Bucket中进行修改和高级权限配置(即自定义权限)，进入某个空间的空间管理页面后，点击空间设置->权限设置，效果如下：
+2.也可以在已创建好的Bucket中进行修改和高级权限配置(即自定义权限)，进入某个空间的空间管理页面后，点击空间设置->权限设置，效果如下：
 
 ![权限设置](https://github.com/jdcloudcom/cn/blob/edit/image/Object-Storage-Service/OSS-031.png)
 

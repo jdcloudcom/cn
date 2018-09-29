@@ -1,0 +1,73 @@
+swagger: "2.0"
+definitions:
+  consumeRecord:
+    x-jdcloud-module: billing
+    title: ConsumeRecord
+    type: object
+    properties:
+      id:
+        type: number
+        description: 消费记录数据库唯一id
+      billingRecordId:
+        type: integer
+        description: 消费记录id
+      appCode:
+        type: string
+        description: appCode
+      serviceCode:
+        type: string
+        description: serviceCode
+      region:
+        type: string
+        description: 区域
+      resourceId:
+        type: string
+        description: 资源id
+      pin:
+        type: string
+        description: 用户pin
+      formula:
+        type: string
+        description: 规格
+      billingType:
+        type: integer
+        description: 计费类型
+      priceSnapShot:
+        type: string
+        description: 价格快照
+      startTime:
+        type: string
+        description: 开始时间
+      endTime:
+        type: string
+        description: 结束时间
+      createTime:
+        type: string
+        description: 创建日期
+      billFee:
+        type: number
+        description: 账单金额
+      billFee2:
+        type: number
+        description: 账单金额保留小数点后2位
+      discountFee:
+        type: number
+        description: 折扣金额
+      couponId:
+        type: string
+        description: 优惠券id
+      couponFee:
+        type: number
+        description: 优惠金额
+      transactionNo:
+        type: string
+        description: 交易单号
+      isBillGenerated:
+        type: integer
+        description: 
+      subBillId:
+        type: number
+        description: 子账单id
+      refundNo:
+        type: string
+        description: 退款单号

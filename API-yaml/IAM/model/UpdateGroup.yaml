@@ -1,0 +1,8 @@
+swagger: "2.0"
+definitions:
+  updateGroup:
+    x-jdcloud-module: iam
+    properties:
+      description:
+        type: string
+        description: 用户组描述

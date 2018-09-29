@@ -33,6 +33,6 @@ A：包括并不限于SYN Flood、ACK Flood、TCP Flood、UDP Flood、DNS反射�
 
 # 相关文档
 
-- [什么是基础防护？](https://github.com/jdcloudcom/cn/blob/edit/documentation/Cloud-Security/Basic-Anti-DDoS/Introduction/Overview.md)
-- [基础防护架构](https://github.com/jdcloudcom/cn/blob/edit/documentation/Cloud-Security/Basic-Anti-DDoS/Introduction/Basic-Infrastructure.md)
-- [快速入门](https://github.com/jdcloudcom/cn/blob/edit/documentation/Cloud-Security/Basic-Anti-DDoS/Getting-Started/Basic-Anti-DDos-Started.md)
+- [什么是基础防护？](../Introduction/Product-Overview.md)
+- [基础防护架构](../Introduction/Basic-Infrastructure.md)
+- [快速入门](../Getting-Started/Anti-DDos-Basic-Started.md)

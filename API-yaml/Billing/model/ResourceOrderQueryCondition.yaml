@@ -1,0 +1,120 @@
+swagger: "2.0"
+definitions:
+  resourceOrderQueryCondition:
+    x-jdcloud-module: billing
+    title: ResourceOrderQueryCondition
+    type: object
+    x-jdcloud-internal: true
+    properties:
+      id:
+        type: integer
+        description: "主键id"
+      pin:
+        type: string
+        description: "用户pin"
+      resourceId:
+        type: string
+        description: "资源id"
+      appCode:
+        type: string
+        description: "appCode"
+      serviceCodeList:
+        type: array
+        description: "产品码列表"
+        items:
+          type: string
+      region:
+        type: string
+        description: "地域"
+      networkOperator:
+        type: integer
+        description: "网络类型 0: non-BGP, 1: BGP"
+      billingType:
+        type: integer
+        description: "计费类型 1:按配置 2:按用量 3:包年包月"
+      resourceIdList:
+        type: array
+        description: "resourceIdList"
+        items:
+          type: string
+      expireInDays:
+        type: integer
+        description: ">0: 订单还有几天到期; ==0: 订单已经到期; <0: 不管是否到期"
+      isOnTrial:
+        type: integer
+        description: "isOnTrial"
+      site:
+        type: integer
+        description: "站点信息 0:中国 1:国际"
+      status:
+        type: integer
+        description: "资源状态 1:正常 2:停服 3:删除"
+      billingStatus:
+        type: integer
+        description: "计费状态 0:停止计费 1:计费中"
+      expiringInDays:
+        type: integer
+        description: "1、内部计算，使用getExpiringOrderCount时使用，不用传值 默认为-1mybatis筛选时不会关注 2、selectResourceOrderForTask定时任务查询列表时使用，停服天数，必须大于0"
+      billingTypeList:
+        type: array
+        description: "billingTypeList"
+        items:
+          type: number
+      transactionNos:
+        type: array
+        description: "交易单号列表"
+        items:
+          type: string
+      opTypes:
+        type: array
+        items:
+          type: number
+      startTime:
+        type: string
+        description: "开始时间"
+      endTime:
+        type: string
+        description: "结束时间"
+      serviceCode:
+        type: string
+        description: "服务编码"
+      statusList:
+        type: array
+        description: "statusList"
+        items:
+          type: number
+      excludeResources:
+        type: array
+        description: "excludeResources"
+        items:
+          type: string
+      orderByClaus:
+        type: string
+        description: "orderByClaus"
+      node:
+        type: string
+        description: "专有云节点的code（节点云查询使用）"
+      departmentId:
+        type: integer
+        description: "部门（节点云查询使用）"
+      pinList:
+        type: array
+        items:
+          type: string
+      isSpecial:
+        type: integer
+        description: "是否是专有云 1:是  其他不是"
+      nodeCode:
+        type: string
+        description: "节点信息"
+      timeout:
+        type: integer
+        description: "超时时间，暂时不用"
+      pageIndex:
+        type: integer
+        description: "当前页序号"
+      pageSize:
+        type: integer
+        description: "每页结果数量"
+      offset:
+        type: integer

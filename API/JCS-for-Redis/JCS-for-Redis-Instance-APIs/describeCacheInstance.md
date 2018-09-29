@@ -12,8 +12,8 @@ https://redis.jdcloud-api.com/v1/regions/{regionId}/cacheInstance/{cacheInstance
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**cacheInstanceId**|String|True||缓存Redis实例ID，是访问实例的唯一标识。|
-|**regionId**|String|True||缓存Redis实例所在区域的Region ID。目前缓存Redis有华北、华南、华东区域，对应Region ID为cn-north-1、cn-south-1、cn-east-2|
+|**cacheInstanceId**|String|True| |缓存Redis实例ID，是访问实例的唯一标识。|
+|**regionId**|String|True| |缓存Redis实例所在区域的Region ID。目前缓存Redis有华北、华南、华东区域，对应Region ID为cn-north-1、cn-south-1、cn-east-2|
 
 ## 请求参数
 无
@@ -23,36 +23,36 @@ https://redis.jdcloud-api.com/v1/regions/{regionId}/cacheInstance/{cacheInstance
 |名称|类型|描述|
 |---|---|---|
 |**requestId**|String|本次查询请求的ID|
-|**result**|[Result](##Result)|查询缓存实例列表信息的结果|
+|**result**|Result|查询缓存实例列表信息的结果|
 
-
-### <a name="Result">Result</a>
+### Result
 |名称|类型|描述|
 |---|---|---|
-|**cacheInstance**|[CacheInstance](##CacheInstance)|要查询目标缓存实例的信息|
-### <a name="CacheInstance">CacheInstance</a>
+|**cacheInstance**|CacheInstance|要查询目标缓存实例的信息|
+### CacheInstance
 |名称|类型|描述|
 |---|---|---|
-|**azId**|[AzId](##AzId)|az信息|
+|**auth**|Boolean|是否免密|
+|**azId**|AzId|az信息|
 |**cacheInstanceClass**|String|实例规格代码，参见<a href="https://www.jdcloud.com/help/detail/411/isCatalog/1">实例规格代码</a>|
 |**cacheInstanceDescription**|String|实例描述|
 |**cacheInstanceId**|String|实例ID|
 |**cacheInstanceMemoryMB**|Integer|容量，单位MB|
 |**cacheInstanceName**|String|实例名称|
 |**cacheInstanceStatus**|String|实例状态，running：运行，error：错误，creating：创建中，changing：变配中，deleting：删除中|
-|**charge**|[Charge](##Charge)|计费信息|
+|**charge**|Charge|计费信息|
 |**connectionDomain**|String|访问域名|
 |**createTime**|String|创建时间|
 |**instanceVersion**|String|实例版本|
 |**port**|Integer|端口|
 |**subnetId**|String|所属子网的ID|
 |**vpcId**|String|所属VPC的ID|
-### <a name="AzId">AzId</a>
+### AzId
 |名称|类型|描述|
 |---|---|---|
 |**master**|String|缓存Redis主实例所在区域可用区ID|
 |**slave**|String|缓存Redis从实例所在区域可用区ID|
-### <a name="Charge">Charge</a>
+### Charge
 |名称|类型|描述|
 |---|---|---|
 |**chargeExpiredTime**|String|过期时间，预付费资源的到期时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ，后付费资源此字段内容为空|

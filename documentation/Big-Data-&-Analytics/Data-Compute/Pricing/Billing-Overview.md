@@ -10,4 +10,4 @@
 ## 相关参考
 
 - [计费规则](Billing-Rules.md)
-- [价格总览](Price-Overview.md)
+- [价格总览](Billing-Overview.md)

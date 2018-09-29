@@ -38,7 +38,7 @@ items:
     - name: 概述
       herf: Getting-Started/Getting-Started.md
     - name: 创建API分组
-      herf: Getting-Started/STEP1-Create -APIGroup.md
+      herf: Getting-Started/STEP1-Create-APIGroup.md
     - name: 创建API
       herf: Getting-Started/STEP2-Create-API.md
     - name: 自定义域名

@@ -10,7 +10,7 @@ paths:
     post:
       description: "创建角色"
       operationId: createRole
-      x-jdcloud-internal: false
+      x-jdcloud-internal: true
       parameters:
         - name: createRoleInfo
           in: body
@@ -26,16 +26,18 @@ paths:
             properties:
               requestId:
                 type: string
-              roleInfo:
-                 $ref: "../model/RoleInfo.yaml#/definitions/roleInfo"
-                 description: 角色信息
+              result:
+                properties:
+                  roleInfo:
+                     $ref: "../model/RoleInfo.yaml#/definitions/roleInfo"
+                     description: 角色信息
 
   "/role/{roleName}":
    ###################### 修改角色 ######################
     put:
       description: "修改角色基本信息"
       operationId: updateRole
-      x-jdcloud-internal: false
+      x-jdcloud-internal: true
       parameters:
         - name: updateRoleInfo
           in: body
@@ -56,7 +58,7 @@ paths:
     get:
       description: "查询角色详情"
       operationId: describeRole
-      x-jdcloud-internal: false
+      x-jdcloud-internal: true
       responses:
         200:
           description: OK
@@ -75,7 +77,7 @@ paths:
     delete:
       description: "删除角色"
       operationId: deleteRole
-      x-jdcloud-internal: false
+      x-jdcloud-internal: true
       responses:
         200:
           description: OK
@@ -90,7 +92,7 @@ paths:
     put:
       description: "修改角色内置policy"
       operationId: updateAssumeRolePolicy
-      x-jdcloud-internal: false
+      x-jdcloud-internal: true
       parameters:
         - name: updateAssumeRolePolicyInfo
           in: body
@@ -112,27 +114,29 @@ paths:
     get:
       description: "查询角色列表"
       operationId: describeRoles
-      x-jdcloud-internal: false
+      x-jdcloud-internal: true
       parameters:
         - name: pageNumber
           in: query
           type: integer
           description: 页码
-          required: true
+          required: false
+          default: 1
         - name: pageSize
           in: query
           type: integer
-          description: 每页显示数目
-          required: true
+          description: 每页显示数目[10~100] 默认50条
+          required: false
+          default: 50
         - name: pathPrefix
           in: query
           type: string
           description: path前缀
           required: false
-        - name: roleNamePrefix
+        - name: roleName
           in: query
           type: string
-          description: 角色名称前缀
+          description: 角色名称关键词
           required: false
         - name: sort
           in: query
@@ -158,22 +162,48 @@ paths:
               requestId:
                 type: string
 
-  "/role/{roleName}/policy:attachRolePolicy":
+  "/role/{roleName}/policy/{policyName}":
    ###################### 为角色绑定策略 ######################
     post:
       description: "为角色绑定策略"
       operationId: attachRolePolicy
-      x-jdcloud-internal: false
+      x-jdcloud-internal: true
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              requestId:
+                type: string
+
+   ###################### 为角色解绑策略 ######################
+    delete:
+      description: "为角色绑定策略"
+      operationId: detachRolePolicy
+      x-jdcloud-internal: true
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              requestId:
+                type: string
+
+  "/role/{roleName}/policy:attachRolePolicies":
+   ###################### 为角色批量绑定策略 ######################
+    post:
+      description: "为角色绑定策略"
+      operationId: attachRolePolicies
+      x-jdcloud-internal: true
       parameters:
-        - name: attachRolePolicyInfo
+        - name: attachRolePoliciesInfo
           in: body
-          description: 角色绑定策略信息
+          description: 角色权限信息
           required: true
           schema:
-            properties:
-              policyJrn:
-                type: string
-                description: 策略jrn
+            $ref: "../model/AttachRolePoliciesInfo.yaml#/definitions/attachRolePoliciesInfo"
       responses:
         200:
           description: OK
@@ -188,18 +218,20 @@ paths:
     get:
       description: "查询角色授权策略列表"
       operationId: describeRolePolicies
-      x-jdcloud-internal: false
+      x-jdcloud-internal: true
       parameters:
         - name: pageNumber
           type: integer
           in: query
           description: 页码
-          required: true
+          default: 1
+          required: false
         - name: pageSize
           type: integer
           in: query
-          description: 每页显示数目
-          required: true
+          description: 每页显示数目[10~100] 默认50条
+          default: 50
+          required: false
         - name: keyword
           type: string
           in: query
@@ -226,49 +258,20 @@ paths:
                     items:
                       $ref: "../model/RolePolicy.yaml#/definitions/rolePolicy"
                     description: 角色授权列表
-
               requestId:
                 type: string
-
-
-  "/role/{roleName}/policy:detachRolePolicy":
-   ###################### 为角色解绑策略 ######################
-    post:
-      description: "为角色绑定策略"
-      operationId: detachRolePolicy
-      x-jdcloud-internal: false
-      parameters:
-        - name: detachRolePolicyInfo
-          in: body
-          description: 角色绑定策略信息
-          required: true
-          schema:
-            properties:
-              policyJrn:
-                type: string
-                description: 策略jrn
-      responses:
-        200:
-          description: OK
-          schema:
-            type: object
-            properties:
-              requestId:
-                type: string
-
-
 
 #路径通用参数
 parameters:
-  regionId:
-    name: regionId
-    in: path
-    required: true
-    type: string
-    description: Region ID
   roleName:
     name: roleName
     in: path
     required: true
     type: string
     description: 角色名称
+  policyName:
+    name: policyName
+    in: path
+    required: true
+    type: string
+    description: 策略名称

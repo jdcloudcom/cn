@@ -70,7 +70,7 @@
     - name: 本地防护+高防方案说明
       herf: Best-Practices/Local-Anti-Basic-DDoS-and-Anti-DDoS.md
     - name: IP高防结合应用安全网关方案说明
-      herf: Best-Practices/Scheme-Instructions 
+      herf: Best-Practices/Scheme-Instructions.md 
   - name: 教程
     status: 0    
   - name: 常见问题

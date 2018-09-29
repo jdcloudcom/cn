@@ -3,6 +3,9 @@
 
 ## 通过京东云主机连接 TiDB
 在京东云主机安装 MySQL 客户端后，可进入命令行方式连接 TiDB。 
+
+#
+
 1. 命令格式：mysql -h域名 -P端口 -u用户名-p密码 。
 2. 域名：要访问的实例的域名，域名展示在实例的详情页面。
 3. 端口：端口号展示在实例的详情页。
@@ -11,6 +14,9 @@
 
 ## 使用 MySQL 连接器连接 TiDB  
 官方提供了以下连接器 , TiDB 可以兼容所有这些：
+
+#
+
 - MySQL Connector/C：C 语言的客户端库，是 libmysqlclient 的替代品
 - MySQL Connector/C++：C++ 语言的客户端库
 - MySQL Connector/J：Java 语言的客户端库，基于标准 JDBC 接口
@@ -23,6 +29,9 @@
 如果使用 C 语言程序直接连接 TiDB，可以直接链接 libmysqlclient 库，使用 MySQL 的 C API，这是最主要的一种 C 语言连接方式，被各种客户端和 API 广泛使用，包括 Connector/C。
 
 更多的API：
+
+#
+
 - MySQL PHP API
 - MySQL Perl API
 - MySQL Python API

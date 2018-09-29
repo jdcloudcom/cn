@@ -1,0 +1,12 @@
+swagger: "2.0"
+definitions:
+  BwRepeatMsg:
+    type: object
+    x-jdcloud-module: ipanti
+    properties:
+      black:
+        type: string
+        description: "黑名单重复 IP/IP段"
+      white:
+        type: string
+        description: "白名单重复 IP/IP段"

@@ -1,0 +1,62 @@
+  name: 分布式关系型数据库 DRDS
+  href: 
+  items:
+  - name: 产品简介
+    items:
+      - name: 产品概述
+        href: Introduction/Product-Overview.md
+      - name: 核心概念
+        href: Introduction/Core-Concepts.md
+      - name: 应用场景
+        href: Introduction/Application-Scenarios.md
+      - name: 产品规格
+        href: Introduction/Specifications.md       
+      - name: 公测说明 
+        href: Introduction/Public-Beta-Introduction.md
+  - name: 产品定价
+    items:
+      - name: 计费概述
+        href: Pricing/Billing-Overview.md
+      - name: 计费规则
+        href: Pricing/Billing-Rules.md
+  - name: 操作指南
+    items:
+      - name: 实例管理
+        items:
+          - name: 创建实例
+            href: Operation-Guide/Instance/Create-Instance.md
+          - name: 查看实例
+            href: Operation-Guide/Instance/View-Instance.md
+          - name: 连接实例
+            href: Operation-Guide/Instance/Connect-Instance.md
+          - name: 删除实例
+            href: Operation-Guide/Instance/Delete-Instance.md
+      - name: 账号管理
+        items:
+          - name: 创建账号
+            href: Operation-Guide/Account/Create-Account.md
+          - name: 删除账号
+            href: Operation-Guide/Account/Delete-Account.md
+          - name: 设置权限
+            href: Operation-Guide/Account/Grant-Privilege.md  
+      - name: 数据库管理
+        items:
+          - name: 创建数据库
+            href: Operation-Guide/Database/Create-Database.md        
+          - name: 查看数据库
+            href: Operation-Guide/Database/View-Database.md        
+          - name: 删除数据库
+            href: Operation-Guide/Database/Delete-Database.md        
+      - name: 表管理
+        items:
+          - name: 创建表
+            href: Operation-Guide/Table/Create-Table.md
+          - name: 删除表
+            href: Operation-Guide/Table/Drop-Table.md              
+  - name: 常见问题
+    items:
+    - name: FAQ
+      href: FAQ/FAQ.md
+    - name: 使用限制
+      href: FAQ/Restrictions.md   
+  

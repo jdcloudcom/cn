@@ -5,7 +5,8 @@ API 网关通过 API 调用次数与流量计费。
 
 
 更多详情请参见：
-- [计费方式说明](https://www.jdcloud.com/help/detail/1391/isCatalog/1)
+
+* [计费方式说明](../../../Finance/Billing/Billing-rule/Pay-As-You-Go.md)
 
 
 		

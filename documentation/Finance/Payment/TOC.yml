@@ -1,0 +1,129 @@
+  name: 付款方式
+  href: 
+  items:
+  - name: 产品简介
+    items:
+      - name: 产品概述
+        href: Introduction/Product-Overview.md
+      - name: 核心概念
+        href: Introduction/Core-Concepts.md
+      - name: 基础架构
+        href: Introduction/Basic-Infrastructure.md
+      - name: 产品优势
+        href: Introduction/Benefits.md
+      - name: 产品功能
+        href: Introduction/Features.md
+      - name: 产品规格
+        href: Introduction/Specifications.md
+      - name: 限制说明
+        href: Introduction/Restrictions.md
+      - name: 应用场景 
+        href: Introduction/Application-Scenarios.md    
+  - name: 产品定价
+    items:
+      - name: 计费概述
+        href: Pricing/Billing-Overview.md
+      - name: 计费规则
+        href: Pricing/Billing-Rules.md
+      - name: 价格总览
+        href: Pricing/Price-Overview.md
+      - name: 购买流程
+        href: Pricing/Purchase-Process.md 
+      - name: 续费流程
+        href: Pricing/Renew-Process.md
+  - name: 入门指南
+    items:
+      - name: 创建实例
+        href: Getting-Started/Create-Instance.md
+      - name: 设置白名单
+        href: Getting-Started/Set-Whitelist.md
+      - name: 连接实例
+        href: Getting-Started/Connect-Instance.md
+      - name: 导入数据
+        href: Getting-Started/Import-Data.md
+      - name: 导出数据
+        href: Getting-Started/Export-Data.md
+  - name: 操作指南
+    items:
+      - name: 实例管理
+        items:
+          - name: 变更配置
+            href: Operation-Guide/Instance-Management/Modify-Instance-Spec.md
+          - name: 重启实例
+            href: Operation-Guide/Instance-Management/Restart-Instance.md
+          - name: 续费实例
+            href: Operation-Guide/Instance-Management/Renewal-Instructions.md      
+          - name: 删除实例
+            href: Operation-Guide/Instance-Management/Delete-Instance.md
+      - name: 账号管理
+        items:
+          - name: 创建账号
+            href: Operation-Guide/Account-Management/Create-MongoDB-Account.md
+          - name: 修改密码
+            href: Operation-Guide/Account-Management/Reset-Password.md
+      - name: 备份管理
+        items:
+          - name: 设置自动备份
+            href: Operation-Guide/Backup/Modify-Backup-Policy.md        
+          - name: 手动创建备份
+            href: Operation-Guide/Backup/Create-Backup.md       
+          - name: 下载备份文件
+            href: Operation-Guide/Backup/Download-Bckup.md    
+          - name: 恢复数据
+            href: Operation-Guide/Backup/Restore-Instance.md       
+          - name: 根据备份创建实例
+            href: Operation-Guide/Backup/Create-Instance-by-Backup.md      
+          - name: 根据时间点创建实例          
+            href: Operation-Guide/Backup/Create-Instance-by-Point-in-Time.md      
+      - name: 跨地域备份同步服务
+        items:
+          - name: 创建跨地域备份同步服务
+            href: Operation-Guide/Across-Region-Backup-Sync/Create-Backup-Sync.md  
+          - name: 根据备份数据创建实例
+            href: Operation-Guide/Across-Region-Backup-Sync/Create-Instance-by-Backup-Sync.md
+      - name: 监控报警
+        items:
+          - name: 查看监控信息
+            href: Operation-Guide/Monitoring/Monitoring.md
+          - name: 设置报警规则
+            href: Operation-Guide/Monitoring/Alarm-Rules.md              
+  - name: 最佳实践
+    items:
+    - name: 使用MongoDB的固定集合
+      href: Best-Practices/Capped-Collections.md
+    - name: MongoDB 开启慢日志分析
+      href: Best-Practices/MongoDB-Profile.md
+    - name: 公网连接MongoDB实例
+      href: Best-Practices/Public-Network-Connect-to-MongoDB-Instance.md
+  - name: 教程
+    items:
+    status: 0
+  - name: 问题排查
+    items:
+    - name: 云主机无法连接MongoDB实例？
+      href: Troubleshooting/Connect-Failed.md
+    - name: 云数据库 MongoDB 不支持哪些命令？
+      href: Troubleshooting/Command.md
+    - name: 账号密码正确，连接提示无权限？
+      href: Troubleshooting/Authentication.md        
+  - name: 常见问题
+    href: FAQ/FAQ.md
+  - name: 用户协议
+    status: 0
+    items:
+    - name: 服务条款
+      href: User-Agreements/Product-Terms-of-Service.md           
+      status: 0      
+    - name: SLA
+      href: User-Agreements/SLA.md           
+      status: 0       
+  - name: 相关资源
+    items:
+    - name: 文档历史记录
+      href: Related-Resources/Document-History.md   
+    - name: 备案
+      href: Related-Resources/Filing.md           
+      status: 0        
+    - name: 词汇表
+      href: Related-Resources/Glossary.md           
+      status: 0

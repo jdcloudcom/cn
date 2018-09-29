@@ -1,12 +1,12 @@
 若您是通过京东云完成备案，可通过如下方式申请备案注销
 
-第一步，下载![img](http://cms.jcloud.com/ueditor/dialogs/attachment/fileTypeImages/icon_doc.gif)[京东云备案注销申请表.doc](https://img1.jcloudcs.com/cms/628e41dc-0181-4ee4-9548-6330383a1a1120180416144125.doc)并参考如下要求填写
+第一步，下载[京东云备案注销申请表.doc](https://img1.jcloudcs.com/cms/628e41dc-0181-4ee4-9548-6330383a1a1120180416144125.doc)并参考如下要求填写
 
 注销主体执行结果：被注销备案号下的所有主体信息、网站信息均被清除，无法恢复
 
 注销网站执行结果：被注销网站备案号下的所有网站信息被清除，主体信息保留
 
-工信部查询网址：**www.miitbeian.gov.cn**
+工信部查询网址：[**www.miitbeian.gov.cn**](http://www.miitbeian.gov.cn)
 
 **填表说明：**
 

@@ -3,16 +3,18 @@
 PutBucketReferer操作可以设置一个Bucket的防盗链，referer访问白名单和是否允许referer字段为空的请求访问。
 
 **请求语法**
+
 ```
 PUT /  ?bucketReferer
-& Effect=
-& RefererList =
+&Effect=
+&RefererList =
 &IsAllowNull=
 Date: GMT Date
 Authorization: SignatureValue
 Host: BucketName.s-bj.jcloud.com
 ```
 **请求参数**
+
 |名称|描述|是否必需|
 |-|-|-|
 |Effect|黑白名单设置<br>类型：枚举字符串<br>有效值：DENIED或ALLOW<br>ALLOW：白名单，DENIED：黑名单|是|

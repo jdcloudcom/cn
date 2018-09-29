@@ -70,6 +70,7 @@ items:
   status: 0    
 - name: 常见问题
   href: FAQ/FAQ.md
+  status: 0 
 - name: 相关资源
   items:
     - name: 文档历史记录

@@ -266,6 +266,61 @@ paths:
            description: "SecurityGroup or SecurityGroupRule not found"
         500:
            description: Internal server error
+  
+  "/networkSecurityGroups/{networkSecurityGroupId}:associateSecurityGroup":
+     post:
+       description: "绑定安全组接口"
+       operationId: associateSecurityGroup
+       x-jdcloud-internal: true
+       parameters:
+        - name: networkInterfaceIds
+          in: body
+          required: true
+          description: "安全组要绑定的弹性网卡ID列表，每个弹性网卡最多绑定5个安全组"
+          schema:
+            type: array
+            items:
+              type: string
+       
+       responses:
+         200:
+           description: Successful operation
+           schema:
+             type: object
+             properties:
+               requestId:
+                 description: "请求ID"
+                 type: string
+         400:
+           description: Request parameter x.y.z is 'xxx', expected one of [yyy,zzz]
+         404:
+           description: Resource not found
+
+  "/networkSecurityGroups/{networkSecurityGroupId}:disassociateSecurityGroup":
+     post:
+       description: "解绑安全组接口"
+       operationId: disassociateSecurityGroup
+       x-jdcloud-internal: true
+       parameters:
+        - name: networkInterfaceId
+          in: query
+          required: true
+          type: string
+          description: "安全组要解绑的弹性网卡ID"
+
+       responses:
+         200:
+           description: "Successful operation"
+           schema:
+             type: object
+             properties:
+               requestId:
+                 description: "请求ID"
+                 type: string
+         400:
+           description: Request parameter x.y.z is 'xxx', expected one of [yyy,zzz]
+         404:
+           description: Resource not found
 
 parameters:
   regionId:

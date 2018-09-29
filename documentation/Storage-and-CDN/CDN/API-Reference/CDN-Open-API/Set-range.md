@@ -13,7 +13,6 @@
 | domain    | String   | 是           | 加速域名                                                     |
 | status    | String   | 否           | off 关闭，on 打开,不填则默认为off                            |
 
-## 
 
 ## **3、返回参数**
 
@@ -22,8 +21,7 @@
 | status   | 结果状态，表示接口请求成功与否，成功用0表示，其他表示失败 |
 | msg      | 提示信息                                                  |
 | data     | 返回数据                                                  |
-
-## 
+ 
 
 ## **4、调用示例**
 
@@ -33,7 +31,7 @@ http://opencdn.jcloud.com/api/setRangeArgs
 
 - ### **请求示例**
 
-html http://opencdn.jcloud.com/api/setRangeArgs
+http://opencdn.jcloud.com/api/setRangeArgs
 
  * json格式
 

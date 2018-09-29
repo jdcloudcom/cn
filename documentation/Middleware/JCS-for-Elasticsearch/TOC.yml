@@ -1,0 +1,63 @@
+  name: 云搜索 Elasticsearch
+  href: 
+  items:
+  - name: 产品简介
+    items:
+      - name: 产品概述
+        href: Introduction/Product-Overview.md
+      - name: 核心概念
+        href: Introduction/Core-Concepts.md
+      - name: 基础架构
+        href: Introduction/Basic-Infrastructure.md
+      - name: 产品优势
+        href: Introduction/Benefits.md
+      - name: 产品功能
+        href: Introduction/Features.md
+      - name: 产品规格
+        href: Introduction/Specifications.md
+      - name: 限制说明
+        href: Introduction/Restrictions.md
+      - name: 应用场景 
+        href: Introduction/Applicaton-Scenarios.md    
+  - name: 产品定价
+    items:
+      - name: 计费概述
+        href: Pricing/Billing-Overview.md
+      - name: 计费规则
+        href: Pricing/Billing-Rules.md
+      - name: 价格总览
+        href: Pricing/Price-Overview.md
+      - name: 购买流程
+        href: Pricing/Purchase-Process.md 
+      - name: 续费流程
+        href: Pricing/Renewal-Process.md
+  - name: 入门指南
+    items:
+      - name: 入门指南概述
+        href: Getting-Started/Overview.md
+      - name: 创建ES
+        href: Getting-Started/Create-ES.md
+      - name: 配置ES
+        href: Getting-Started/Configure-ES.md
+      - name: 查看ES
+        href: Getting-Started/View-ES.md
+      - name: 变更ES
+        href: Getting-Started/Change-ES.md
+      - name: 删除ES
+        href: Getting-Started/Delete-ES.md
+  - name: 操作指南
+    items:
+      - name: 访问集群
+        href: Operation-Guide/connect-ES.md
+      - name: 监控集群
+        href: Operation-Guide/Monitoring.md
+      - name: 管理集群
+        href: Operation-Guide/manage-cluster.md        
+  - name: 常见问题
+    href: FAQ/FAQ.md
+  - name: API参考
+    href: API-Reference/API-Reference.md
+  - name: 相关资源
+    items:
+    - name: 文档历史记录
+      href: Related-Resources/Document-History.md 

@@ -3,6 +3,7 @@
 上传一个Part到指定的Multipart Upload中。
 
 **请求语法**
+
 ```
 PUT   /ObjectName?uploadId=UploadId&partNumber=PartNumber HTTP/1.1
 Date: GMT Date
@@ -23,6 +24,7 @@ Host: BucketName.s-bj.jcloud.com
 5. 为了保证数据的传输的正确性，服务端会在Part上传成功后返回实际存储的Part的MD5值，放在响应的header的ETag字段中，用于客户端校验。
 
 **请求示例**
+
 ```
 PUT  /multiSS?uploadId=9B2BF313C3E998E9&partNumber=1 HTTP/1.1
 Date: Wed, 12 Jul 2017   09:22:16 GMT
@@ -31,7 +33,9 @@ Content-Length: 3
 Host: oss-test.s-bj.jcloud.com
 Connection: Keep-Alive
 ```
+
 **返回示例** 
+
 ```
 HTTP/1.1 200 OK
 Server: nginx

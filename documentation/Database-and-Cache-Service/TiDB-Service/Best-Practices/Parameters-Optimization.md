@@ -22,7 +22,7 @@ TiKV 使用了 RocksDB 的 `Column Families` 特性。
 
 ## 参数说明
 
-```toml
+ ``` toml
 # 日志级别，可选值为：trace，debug，info，warn，error，off
 log-level = "info"
 
@@ -95,7 +95,7 @@ region-split-check-diff = "32MB"
 # RocksDB 能够打开的最大文件句柄数。
 # max-open-files = 40960
 
-# RocksDB MANIFEST 文件的大小限制. # 更详细的信息请参考：https://github.com/facebook/rocksdb/wiki/MANIFEST
+# RocksDB MANIFEST 文件的大小限制.# 更详细的信息请参考：https://github.com/facebook/rocksdb/wiki/MANIFEST
 max-manifest-file-size = "20MB"
 
 # RocksDB write-ahead logs 目录。如果机器上有两块盘，可以将 RocksDB 的数据和 WAL 日志放在

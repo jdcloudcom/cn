@@ -4,7 +4,7 @@
   - name: 安全漏洞说明
     items:
       - name: Intel处理器Meltdown和Spectre安全漏洞建议修复方案
-        href: Security-Vulnerability-Instruction/Meltdown-and-Spectre-Security-Vulnerability-Restore-Solution-of-Intel-Processor.md
+        href: Security-Vulnerability-Instruction/Intel-Meltdown-Spectre-Solution.md
       - name: NTP服务和Monlist漏洞
         href: Security-Vulnerability-Instruction/NTP-Monlist-Vulnerability.md
   - name: 安全最佳实践

@@ -31,7 +31,7 @@
 [设备名分配规则](../Operation-Guide/Cloud-Disk/Assign-Device-Name.md)
 
 
-  [1]: https://cns-console
+  [1]: https://cns-console.jdcloud.com/
   [2]: https://console.jdcloud.com/
   [3]: ./images/Operation-Guide-Image-create1.png "Operation-Guide-Image-create1.png"
   [4]: ./images/Operation-Guide-Image-create2.png "Operation-Guide-Image-create2.png"

@@ -12,22 +12,21 @@ https://datastar.cn-south-1.jdcloud-api.com/v1/regions/{regionId}/dmp/getPackage
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**regionId**|String|True||地域ID|
+|**regionId**|String|True| |地域ID|
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**deviceIds**|String|True||MD5（deviceId），多个MD5（deviceId）用英文逗号进行分割，注：MD5结果小写|
+|**deviceIds**|String|True| |MD5（deviceId），多个MD5（deviceId）用英文逗号进行分割，注：MD5结果小写|
 
 
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
 |**requestId**|String|请求ID，每次请求都不一样|
-|**result**|[Result](##Result)||
+|**result**|Result| |
 
-
-### <a name="Result">Result</a>
+### Result
 |名称|类型|描述|
 |---|---|---|
 |**data**|String|Map<String,String>序列化后的字符串，需要再次转换并使用。Key为deviceId，value为人群包Id|

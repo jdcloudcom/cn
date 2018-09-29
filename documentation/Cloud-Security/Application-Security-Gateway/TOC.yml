@@ -12,7 +12,7 @@
       - name: 限制说明
         href: Introduction/Restrictions.md
         name: 产品规格
-        href: Specifications.md  
+        href: Introduction/Specifications.md  
   - name: 产品定价
     items:
       - name: 计费概述

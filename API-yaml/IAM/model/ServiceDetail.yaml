@@ -1,0 +1,22 @@
+swagger: "2.0"
+definitions:
+  serviceDetail:
+    x-jdcloud-module: iam
+    required:
+      - serviceName
+      - apiList
+      - resourceList
+    properties:
+      serviceName:
+        type: string
+        description: 产品线名称
+      apiList:
+        type: array
+        items:
+          $ref: "./APIInfo.yaml#/definitions/APIInfo"
+        description: 策略相关OpenAPI的Action列表
+      resourceList:
+        type: array
+        items:
+          type: string
+        description: 资源列表

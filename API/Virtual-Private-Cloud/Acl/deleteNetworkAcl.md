@@ -12,8 +12,8 @@ https://vpc.jdcloud-api.com/v1/regions/{regionId}/networkAcls/{networkAclId}
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**networkAclId**|String|True||networkAclId ID|
-|**regionId**|String|True||Region ID|
+|**networkAclId**|String|True| |networkAclId ID|
+|**regionId**|String|True| |Region ID|
 
 ## 请求参数
 无
@@ -23,7 +23,6 @@ https://vpc.jdcloud-api.com/v1/regions/{regionId}/networkAcls/{networkAclId}
 |名称|类型|描述|
 |---|---|---|
 |**requestId**|String|请求ID|
-
 
 
 ## 返回码

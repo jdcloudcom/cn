@@ -23,7 +23,7 @@
   - name: 入门指南
     items:
     - name: 创建实例
-      herf: Getting-Started/Product-Introduction/
+      herf: Getting-Started/Create-Instance.md
     - name: 连接实例
       herf: Getting-Started/Connect-Instance.md
     - name: 监控实例
@@ -76,19 +76,3 @@
     herf:
   - name: SDK参考
     herf:
-  - name: 相关资源
-    items:
-    - name: 文档历史记录
-      herf: Related-Resources/Document-History.md
-    - name: 服务条款
-      herf: Related-Resources/Service-Terms.md
-      status: 0
-    - name: SLA
-      herf: Related-Resources/SLA.md
-      status: 0
-    - name: 备案
-      herf: Related-Resources/Filing.md
-      status: 0
-    - name: 词汇表
-      herf: Related-Resources/Glossary.md
-      status: 0

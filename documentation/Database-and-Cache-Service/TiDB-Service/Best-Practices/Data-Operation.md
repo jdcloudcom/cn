@@ -7,8 +7,8 @@ SET @@session.tidb_skip_constraint_check=1;
 
 另外为了提高写入性能，可以对 TiKV 的参数进行调优。
 请特别注意这个参数：
-```
-[raftstore]
+
+```[raftstore]
 # 默认为 true，表示强制将数据刷到磁盘上。如果是非金融安全级别的业务场景，建议设置成 false，
 # 以便获得更高的性能。
 sync-log = true

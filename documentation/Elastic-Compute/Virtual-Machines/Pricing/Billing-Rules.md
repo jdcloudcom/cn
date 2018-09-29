@@ -1,6 +1,6 @@
 # 计费规则
 
-以下说明仅针对实例，若您需要查阅实例关联资源计费规则，请查阅[云硬盘计费文档]()及[弹性公网IP计费文档](../../../Networking/Elastic-IP/Pricing/Billing-Overview.md)，京东云实例针对不同的业务场景需求提供两种计费模式，分别是包年包月计费和按配置计费。
+以下说明仅针对实例，若您需要查阅实例关联资源计费规则，请查阅[云硬盘计费文档](http://docs.jdcloud.com/cn/cloud-disk-service/price-overview)及[弹性公网IP计费文档](../../../Networking/Elastic-IP/Pricing/Billing-Overview.md)，京东云实例针对不同的业务场景需求提供两种计费模式，分别是包年包月计费和按配置计费。
 
 ## 包年包月计费
 
@@ -36,7 +36,7 @@
 * 当您的云主机欠费后，会向您发送资源欠费通知，请您务必注意查看通知并及时充值，以免造成不必要的损失，详细请参考到期&欠费提醒；
 * 从停止服务时刻起您的实例和实例中的数据保留7天，7天后会向您发送资源释通知，资源回收后数据无法找回；
 * 当您补缴欠费金额后，资源将自动恢复使用并重新开始计费。若充值后实例未恢复成运行状态，请您手动[启动实例](../Operation-Guide/Instance/Start-Instance.md)；
-* 如您不想继续使用按配置计费的实例，请及时[删除实例](../Operation-Guide/Instance/Stop-Instance.md)。
+* 如您不想继续使用按配置计费的实例，请及时[删除实例](../Operation-Guide/Instance/Delete-Instance.md)。
 
 
 ## 功能限制
@@ -59,7 +59,7 @@
 * 包年包月计费实例无法转换计费方式成按配置计费
 
 ## 相关参考
-[云硬盘计费文档]()
+[云硬盘计费文档](http://docs.jdcloud.com/cn/cloud-disk-service/price-overview)
 
 [弹性公网IP计费文档](../../../Networking/Elastic-IP/Pricing/Billing-Overview.md)
 

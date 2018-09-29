@@ -1,0 +1,79 @@
+swagger: "2.0"
+definitions:
+  orderPriceDetail:
+    x-jdcloud-module: billing
+    title: OrderPriceDetail
+    type: object
+    x-jdcloud-internal: true
+    properties:
+      price:
+        type: number
+        description: 折扣前总价
+      priceScale4:
+        type: number
+        description: 四位小数价格
+      discount:
+        type: number
+        description: 折扣金额
+      discountedPrice:
+        type: number
+        description: 折扣后订单金额
+      originalPrice:
+        type: number
+        description: 订单原价 包年时 一年原价为12个月价格，totalPrice为10个月价格
+      resourceId:
+        type: string
+        description:  资源id
+      appCode:
+        type: string
+        description: 业务线
+      serviceCode:
+        type: string
+        description: 产品线
+      site:
+        type: integer
+        description: 站点  0:主站  其他:专有云
+      region:
+        type: string
+        description: 地域
+      billingType:
+        type: integer
+        description: 计费类型1:按配置2:按用量3:包年包月
+      timeSpan:
+        type: integer
+        description: 时长
+      timeUnit:
+        type: integer
+        description: 时长类型 1:小时2:天3:月4:年
+      networkOperator:
+        type: integer
+        description: 网络类型 0:non1:非BGP2:BGP
+      formula:
+        type: array
+        items:
+          $ref: "../model/Formula.yaml#/definitions/formula"
+        description: 配置信息
+      favorableInfo:
+        type: string
+        description: FavorableInfo转成json后的字符串
+      priceSnapShot:
+        type: string
+        description: 价格快照
+      pin:
+        type: string
+        description: 用户pin
+      taskId:
+        type: string
+        description: 自然单列表
+      startTime:
+        type: string
+        description: 开始时间
+      endTime:
+        type: string
+        description: 结束时间
+      processType:
+        type: integer
+        description: 变配明细（1-升配补差价，2-降配延时）
+      sourceId:
+        type: string
+        description: 交易单模块sourceId

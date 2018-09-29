@@ -12,8 +12,8 @@ https://iam.jdcloud-api.com/v1/regions/{regionId}/permission/{permissionId}
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**permissionId**|Integer|True||权限id|
-|**regionId**|String|True||Region ID|
+|**permissionId**|Integer|True| |权限id|
+|**regionId**|String|True| |Region ID|
 
 ## 请求参数
 无
@@ -22,15 +22,14 @@ https://iam.jdcloud-api.com/v1/regions/{regionId}/permission/{permissionId}
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String||
-|**result**|[Result](##Result)||
+|**requestId**|String| |
+|**result**|Result| |
 
-
-### <a name="Result">Result</a>
+### Result
 |名称|类型|描述|
 |---|---|---|
-|**permission**|[Permission](##Permission)|权限信息|
-### <a name="Permission">Permission</a>
+|**permission**|Permission|权限信息|
+### Permission
 |名称|类型|描述|
 |---|---|---|
 |**account**|String|主账号pin|
@@ -38,15 +37,15 @@ https://iam.jdcloud-api.com/v1/regions/{regionId}/permission/{permissionId}
 |**description**|String|描述|
 |**id**|Integer|权限id|
 |**name**|String|权限名称|
-|**permissionDetailList**|[PermissionDetail[]](##PermissionDetail)|权限详细信息|
+|**permissionDetailList**|PermissionDetail[]|权限详细信息|
 |**permissionType**|String|权限类型|
 |**version**|String|权限版本号|
-### <a name="PermissionDetail">PermissionDetail</a>
+### PermissionDetail
 |名称|类型|描述|
 |---|---|---|
 |**permission**|String|权限类型，只读-R、删除-D、修改-M|
-|**resource**|[Resource[]](##Resource)|资源信息|
-### <a name="Resource">Resource</a>
+|**resource**|Resource[]|资源信息|
+### Resource
 |名称|类型|描述|
 |---|---|---|
 |**ids**|String[]|资源id集合，传*表示对所有id生效|

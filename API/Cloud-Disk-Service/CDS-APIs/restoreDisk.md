@@ -15,19 +15,17 @@ https://disk.jdcloud-api.com/v1/regions/{regionId}/disks/{diskId}:restore
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**diskId**|String|True||云硬盘ID|
-|**regionId**|String|True||地域ID|
+|**diskId**|String|True| |云硬盘ID|
+|**regionId**|String|True| |地域ID|
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**snapshotId**|String|True||用于恢复云盘的快照ID|
+|**snapshotId**|String|True| |用于恢复云盘的快照ID|
 
 
 ## 返回参数
-|名称|类型|描述|
-|---|---|---|
-
+无
 
 
 ## 返回码

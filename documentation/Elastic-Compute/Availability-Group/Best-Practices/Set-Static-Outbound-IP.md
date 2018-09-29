@@ -33,7 +33,7 @@
 
 **第二步：在子网2内创建NAT实例，并为该实例分配弹性公网IP，该IP即为高可用组内云主机访问公网的固定IP地址。**
 
-创建NAT实例详细步骤可以参照[创建Linux实例](../../Virtual-Machine/Getting-Start-Linux/Create-Instance.md)，只需选择官方镜像中CentOS 7.2 64位 NAT Gateway即可。
+创建NAT实例详细步骤可以参照[创建Linux实例](../../Virtual-Machines/Getting-Start-Linux/Create-Instance.md)，只需选择官方镜像中CentOS 7.2 64位 NAT Gateway即可。
 
 **第三步：配置私有网络路由表，将子网1的公网流量导向NAT实例。**
 
@@ -54,4 +54,4 @@
 
 ## 相关参考
 
-[创建Linux实例](../../Virtual-Machine/Getting-Start-Linux/Create-Instance.md)
+[创建Linux实例](../../Virtual-Machines/Getting-Start-Linux/Create-Instance.md)

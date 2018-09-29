@@ -14,19 +14,17 @@ https://vm.jdcloud-api.com/v1/regions/{regionId}/images/{imageId}:share
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**imageId**|String|True||镜像ID|
-|**regionId**|String|True||地域ID|
+|**imageId**|String|True| |镜像ID|
+|**regionId**|String|True| |地域ID|
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**pins**|String[]|False||需要共享的帐户|
+|**pins**|String[]|False| |需要共享的帐户|
 
 
 ## 返回参数
-|名称|类型|描述|
-|---|---|---|
-
+无
 
 
 ## 返回码

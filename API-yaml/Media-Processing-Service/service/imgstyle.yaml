@@ -27,6 +27,7 @@ paths:
         - ImageStyle
       description: 图片样式列表
       operationId: listImageStyle
+      x-jdcloud-internal: true
       parameters:
         - name: styleName
           in: query
@@ -57,6 +58,7 @@ paths:
         - ImageStyle
       description: 添加图片样式
       operationId: createImageStyle
+      x-jdcloud-internal: true
       parameters:
         - name: imageStyle
           in: body
@@ -88,6 +90,7 @@ paths:
         - ImageStyle
       description: 图片样式详情
       operationId: getImageStyle
+      x-jdcloud-internal: true
       responses:
         '200':
           description: successful operation
@@ -103,6 +106,7 @@ paths:
         - ImageStyle
       description: 删除图片样式
       operationId: deleteImageStyle
+      x-jdcloud-internal: true
       responses:
         '200':
           description: successful operation
@@ -116,6 +120,7 @@ paths:
         - ImageStyle
       description: 修改图片样式
       operationId: updateImageStyle
+      x-jdcloud-internal: true
       parameters:
         - name: imageStyle
           in: body
@@ -138,6 +143,7 @@ paths:
         - ImageStyle
       description: 图片样式总数
       operationId: countImageStyle
+      x-jdcloud-internal: true
       parameters:
         - name: styleName
           in: query

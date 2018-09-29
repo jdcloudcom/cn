@@ -12,7 +12,7 @@ https://xdata.jdcloud-api.com/v1/regions/{regionId}/dwInstance
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**regionId**|String|True||地域ID|
+|**regionId**|String|True| |地域ID|
 
 ## 请求参数
 无
@@ -21,17 +21,16 @@ https://xdata.jdcloud-api.com/v1/regions/{regionId}/dwInstance
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String||
-|**result**|[Result](##Result)||
+|**requestId**|String| |
+|**result**|Result| |
 
-
-### <a name="Result">Result</a>
+### Result
 |名称|类型|描述|
 |---|---|---|
-|**data**|[DwInstance[]](##DwInstance)||
-|**message**|String||
-|**status**|Boolean||
-### <a name="DwInstance">DwInstance</a>
+|**data**|DwInstance[]| |
+|**message**|String| |
+|**status**|Boolean| |
+### DwInstance
 |名称|类型|描述|
 |---|---|---|
 |**area**|String|实例所属区域|

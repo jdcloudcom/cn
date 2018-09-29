@@ -43,7 +43,7 @@ http://opencdn.jcloud.com/api/area_isp_stat
 
 - ### **返回说明**
 
-•        json格式
+• json格式
 
 ```
 {
@@ -71,7 +71,7 @@ SVG_SPEED, // 平均下载速度,单位:KB/s
 
 - ### **返回示例**
 
-•        json格式
+• json格式
 
 ```
 {
@@ -145,8 +145,5 @@ SVG_SPEED, // 平均下载速度,单位:KB/s
                 ]
     ]
 ]
-
 }
 ```
-
- 

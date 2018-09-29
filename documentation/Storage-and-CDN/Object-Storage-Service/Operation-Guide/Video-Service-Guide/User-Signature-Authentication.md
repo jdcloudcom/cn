@@ -45,9 +45,9 @@ StringToSign =HTTP-Verb + "\n"
 
 如x-jss-server-side-encryption:  false转换成：x-jss-server-side-encryption:false
 
-1.将每一个头和内容用\n分隔符分隔拼成最后的CanonicalizedHeaders。
+4.将每一个头和内容用\n分隔符分隔拼成最后的CanonicalizedHeaders。
 
-2.如果没有以x-jss-为前缀的HTTP请求头，则CanonicalizedHeaders为空字符串""。
+5.如果没有以x-jss-为前缀的HTTP请求头，则CanonicalizedHeaders为空字符串""。
 
 注意:
 
@@ -127,7 +127,7 @@ String signature =  new String(Base64.encodeBase64(rawHmac), "UTF-8");
 ```
 
 签名(Signature)计算结果应该为xvj2Iv7WcSwnN26XYnTq/c2YBQs=，因为
-Authorization = “jingdong “ + AccessKey + “:” + Signature所以最后Authorization为 “jingdong qbS5QXpLORrvdrmb: xvj2Iv7WcSwnN26XYnTq/c2YBQs=”然后加上Authorization头来组成最后需要发送的消息：
+Authorization = “jingdong ” + AccessKey + “:” + Signature所以最后Authorization为 “jingdong qbS5QXpLORrvdrmb: xvj2Iv7WcSwnN26XYnTq/c2YBQs=”然后加上Authorization头来组成最后需要发送的消息：
 ```
 PUT /sign.txt   HTTP/1.1
   Content-Type: text/plain
@@ -136,7 +136,7 @@ PUT /sign.txt   HTTP/1.1
   Date: Thu, 13 Jul 2017 02:37:31 GMT
   Authorization: jingdong qbS5QXpLORrvdrmb: xvj2Iv7WcSwnN26XYnTq/c2YBQs=
   Content-Length: 20
-  Host: s-bj.jcloud.com
+  Host: oss.cn-north-1.jcloudcs.com
 ```
 细节分析:
 

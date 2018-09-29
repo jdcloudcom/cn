@@ -7,15 +7,25 @@ Dockerfile内容如下：
 
 
 FROM centos:latest
+
 MAINTAINER jcloud www.jdcloud.com
+
 RUN yum install openssh-server net-tools -y
+
 RUN mkdir /var/run/sshd
+
 RUN echo 'root:jcloudA#699' | chpasswd
+
 RUN sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+
 RUN sed -i '/Port 22/a\Port 4011' /etc/ssh/sshd_config
+
 RUN ssh-keygen -A
+
 EXPOSE 4011
+
 CMD ["/usr/sbin/sshd","-D"]
+
 说明：
 
 　　FROM： 必不可少的命令，从某个镜像作为基，以centos为例。如 FROM <image_name> ，或者 FROM <image_name>:<tag>. 如果不加tag，默认为latest。先从本地镜像仓库去搜索基镜像，如过本地没有，在网上docker registry查询。

@@ -1,0 +1,16 @@
+swagger: "2.0"
+definitions:
+  IpBwListSpec:
+    type: object
+    x-jdcloud-module: ipanti
+    properties:
+      ipList:
+        type: array
+        items:
+          type: string
+        required: true
+        description: "IP 或 IP 段列表"
+      tryFlag:
+        type: boolean
+        required: true
+        description: "false 时强制写入, true 时有重复则不写入"

@@ -2,13 +2,13 @@
 
 ## 1.添加域名
 
-1.1登录视频直播客户控制台，通过左侧菜单栏找到“视频服务”，点击“新版视频直播”子菜单，进入“域名管理”页面，点击“添加域名”
+登录视频直播客户控制台，通过左侧菜单栏找到“视频服务”，点击“视频直播”子菜单，进入“域名管理”页面，点击“添加域名”
 
 ![](https://github.com/jdcloudcom/cn/blob/edit/image/live-video/%E6%8E%A7%E5%88%B6%E5%8F%B0%E5%B7%A6%E8%BE%B9%E8%8F%9C%E5%8D%95%E6%A0%8F.png)
 
 ![](https://github.com/jdcloudcom/cn/blob/edit/image/live-video/%E6%B7%BB%E5%8A%A0%E5%9F%9F%E5%90%8D.jpg)
 
-1.2在弹出的对话框中输入对应信息，点“确定”完成
+在弹出的对话框中输入对应信息，点“确定”完成
 
 ![](https://github.com/jdcloudcom/cn/blob/edit/image/live-video/%E6%96%B0%E5%BB%BA%E5%9F%9F%E5%90%8D%E5%BC%B9%E5%87%BA%E7%AA%97%E5%8F%A3.jpg)
 

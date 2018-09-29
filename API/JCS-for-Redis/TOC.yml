@@ -1,10 +1,10 @@
-﻿  name: 缓存 Redis
-  href: 
-  items:
+name: 云缓存 Redis
+href: 
+items:
   - name: 接口预览
     href: overview.md
   - name: 更新历史
-    href: Changlog.md
+    href: ChangeLog.md
   - name: 接口信息
     items:
       - name: Redis实例API

@@ -12,36 +12,35 @@ https://monitor.jdcloud-api.com/v1/regions/{regionId}/alarmHistory
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**regionId**|String|True||地域ID|
+|**regionId**|String|True| |地域ID|
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**endTime**|String|True||查询数据结束时间，默认当前时间，可以输入long型时间，也可以输入yyyy-MM-dd'T'HH:mm:ssZ类型时间|
-|**id**|String|False||报警规则的Id|
-|**pageNumber**|Integer|False||页码, 默认为1, 取值范围：[1,∞)|
-|**pageSize**|Integer|False||分页大小，默认为20，取值范围：[10,100]|
-|**resourceId**|String|False||资源Id|
-|**serviceCode**|String|False||产品名称|
-|**startTime**|String|True||查询数据开始时间，默认24小时前，可以输入long型时间，也可以输入yyyy-MM-dd'T'HH:mm:ssZ类型时间|
+|**endTime**|String|True| |查询数据结束时间，默认当前时间，可以输入long型时间，也可以输入yyyy-MM-dd'T'HH:mm:ssZ类型时间|
+|**id**|String|False| |报警规则的Id|
+|**pageNumber**|Integer|False| |页码, 默认为1, 取值范围：[1,∞)|
+|**pageSize**|Integer|False| |分页大小，默认为20，取值范围：[10,100]|
+|**resourceId**|String|False| |资源Id|
+|**serviceCode**|String|False| |产品名称|
+|**startTime**|String|True| |查询数据开始时间，默认24小时前，可以输入long型时间，也可以输入yyyy-MM-dd'T'HH:mm:ssZ类型时间|
 
 
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
 |**requestId**|String|请求的标识id|
-|**result**|[Result](##Result)||
+|**result**|Result| |
 
-
-### <a name="Result">Result</a>
+### Result
 |名称|类型|描述|
 |---|---|---|
-|**alarmHistoryList**|[AlarmHistory[]](##AlarmHistory)|报警历史列表|
+|**alarmHistoryList**|AlarmHistory[]|报警历史列表|
 |**numberPages**|Number|总页数|
 |**numberRecords**|Number|总记录数|
 |**pageNumber**|Number|页码|
 |**pageSize**|Number|分页大小|
-### <a name="AlarmHistory">AlarmHistory</a>
+### AlarmHistory
 |名称|类型|描述|
 |---|---|---|
 |**calculation**|String|统计方法：平均值=avg、最大值=max、最小值=min|

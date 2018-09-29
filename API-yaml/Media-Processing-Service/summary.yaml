@@ -5,4 +5,4 @@ info:
   description: 媒体处理相关接口
 host: "mps.jdcloud-api.com"
 x-jdcloud-version: "v1"
-x-jdcloud-revision: "0.3.8"
+x-jdcloud-revision: "0.3.7"

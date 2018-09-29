@@ -12,7 +12,7 @@ https://redis.jdcloud-api.com/v1/regions/{regionId}/quota
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**regionId**|String|True||缓存Redis实例所在区域的Region ID。目前缓存Redis有华北、华南、华东区域，对应Region ID为cn-north-1、cn-south-1、cn-east-2|
+|**regionId**|String|True| |缓存Redis实例所在区域的Region ID。目前缓存Redis有华北、华南、华东区域，对应Region ID为cn-north-1、cn-south-1、cn-east-2|
 
 ## 请求参数
 无
@@ -21,15 +21,14 @@ https://redis.jdcloud-api.com/v1/regions/{regionId}/quota
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String||
-|**result**|[Result](##Result)||
+|**requestId**|String| |
+|**result**|Result| |
 
-
-### <a name="Result">Result</a>
+### Result
 |名称|类型|描述|
 |---|---|---|
-|**quota**|[Quota](##Quota)||
-### <a name="Quota">Quota</a>
+|**quota**|Quota| |
+### Quota
 |名称|类型|描述|
 |---|---|---|
 |**max**|Integer|配额|

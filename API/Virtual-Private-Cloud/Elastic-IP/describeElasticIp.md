@@ -12,8 +12,8 @@ https://vpc.jdcloud-api.com/v1/regions/{regionId}/elasticIps/{elasticIpId}
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**elasticIpId**|String|True||ElasticIp ID|
-|**regionId**|String|True||Region ID|
+|**elasticIpId**|String|True| |ElasticIp ID|
+|**regionId**|String|True| |Region ID|
 
 ## 请求参数
 无
@@ -23,18 +23,17 @@ https://vpc.jdcloud-api.com/v1/regions/{regionId}/elasticIps/{elasticIpId}
 |名称|类型|描述|
 |---|---|---|
 |**requestId**|String|请求ID|
-|**result**|[Result](##Result)|返回结果|
+|**result**|Result|返回结果|
 
-
-### <a name="Result">Result</a>
+### Result
 |名称|类型|描述|
 |---|---|---|
-|**elasticIp**|[ElasticIp](##ElasticIp)|elasticIp资源信息|
-### <a name="ElasticIp">ElasticIp</a>
+|**elasticIp**|ElasticIp|elasticIp资源信息|
+### ElasticIp
 |名称|类型|描述|
 |---|---|---|
 |**bandwidthMbps**|Integer|弹性ip的限速（单位：Mbps)|
-|**charge**|[Charge](##Charge)|计费配置|
+|**charge**|Charge|计费配置|
 |**createdTime**|String|弹性ip创建时间|
 |**elasticIpAddress**|String|弹性IP地址|
 |**elasticIpId**|String|弹性IP的Id|
@@ -43,7 +42,7 @@ https://vpc.jdcloud-api.com/v1/regions/{regionId}/elasticIps/{elasticIpId}
 |**networkInterfaceId**|String|配置弹性网卡Id|
 |**privateIpAddress**|String|私有IP的IPV4地址|
 |**provider**|String|IP服务商，取值为bgp或no_bgp|
-### <a name="Charge">Charge</a>
+### Charge
 |名称|类型|描述|
 |---|---|---|
 |**chargeExpiredTime**|String|过期时间，预付费资源的到期时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ，后付费资源此字段内容为空|

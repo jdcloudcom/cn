@@ -1,0 +1,52 @@
+swagger: "2.0"
+definitions:
+  billQueryCondition:
+    x-jdcloud-module: billing
+    title: BillQueryCondition
+    type: object
+    x-jdcloud-internal: true
+    properties:
+      queryType:
+        type: integer
+        description: "查询类别   1：资源账单   2：消费记录"
+      pin:
+        type: string
+        description: "用户pin"
+      appCode:
+        type: string
+        description: "应用码"
+      serviceCode:
+        type: string
+        description: "服务码"
+      billingType:
+        type: integer
+        description: "付费类型"
+      payType:
+        type: integer
+        description: "付费类型"
+      payState:
+        type: integer
+        description: "付费状态"
+      timeType:
+        type: integer
+        description: "1: 按账期 2：按消费时间"
+      startTime:
+        type: string
+        description: "开始时间"
+      endTime:
+        type: string
+        description: "结束时间"
+      ignoreZero:
+        type: integer
+      resourceId:
+        type: string
+        description: "资源ID"
+      site:
+        type: integer
+        description: "站点"
+      role:
+        type: integer
+        description: "角色"
+      region:
+        type: string
+        description: "区域"

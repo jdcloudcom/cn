@@ -31,11 +31,11 @@
 
 ## **4、调用示例**
 
-- ### **请求地址**
+### **请求地址**
 
 http://opencdn.jcloud.com/api/queryDomainConfigs
 
-- ### **请求示例**
+### **请求示例**
 
 ```
 http://opencdn.jcloud.com/api/queryDomainConfigs
@@ -48,7 +48,7 @@ http://opencdn.jcloud.com/api/queryDomainConfigs
  }
 ```
 
-- ### **返回示例**
+### **返回示例**
 
 •        json格式
 

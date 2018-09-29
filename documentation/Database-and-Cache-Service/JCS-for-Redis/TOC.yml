@@ -66,7 +66,7 @@
   - name: 最佳实践
     items:
     - name: C/C++连接Redis实例
-      href: Best-Practices/CorC++-Connect-to-Redis-Instance.md
+      href: Best-Practices/CorCplusplus-Connect-to-Redis-Instance.md
     - name: Golang连接Redis实例
       href: Best-Practices/Golang-Connect-to-Redis-Instance.md
     - name: Java连接Redis实例
@@ -86,7 +86,7 @@
     items:
     status: 0      
   - name: 常见问题
-    href: FAQ/FAQ.md
+    href: FAQ/FQA.md
   - name: API参考
     href:
   - name: SDK参考
@@ -101,6 +101,7 @@
       href: User-Agreements/SLA.md           
       status: 0       
   - name: 相关资源
+    status: 0       
     items:
     - name: 文档历史记录
       href: Related-Resources/Document-History.md   

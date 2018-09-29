@@ -12,26 +12,25 @@ https://cps.jdcloud-api.com/v1/regions/{regionId}/os
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**regionId**|String|True||地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域|
+|**regionId**|String|True| |地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域|
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**deviceType**|String|True||实例类型，可调用接口（describeDeviceTypes）获取指定地域的实例类型，例如：cps.c.normal|
+|**deviceType**|String|True| |实例类型，可调用接口（describeDeviceTypes）获取指定地域的实例类型，例如：cps.c.normal|
 
 
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String||
-|**result**|[Result](##Result)||
+|**requestId**|String| |
+|**result**|Result| |
 
-
-### <a name="Result">Result</a>
+### Result
 |名称|类型|描述|
 |---|---|---|
-|**oss**|[Os[]](##Os)||
-### <a name="Os">Os</a>
+|**oss**|Os[]| |
+### Os
 |名称|类型|描述|
 |---|---|---|
 |**deviceType**|String|实例类型, 如 cps.c.normal,|

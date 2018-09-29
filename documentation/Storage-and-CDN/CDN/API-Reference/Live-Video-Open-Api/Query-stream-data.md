@@ -39,6 +39,7 @@ http://opencdn.jcloud.com/api/live/queryStreamData
 •        json格式
 
 http://opencdn.jcloud.com/api/live/queryStreamData
+```
 {
     "username" :"test_user",
     "signature" :"3a4eb9fc81c548bf6f2fea1b2b85f1df",
@@ -48,11 +49,12 @@ http://opencdn.jcloud.com/api/live/queryStreamData
     "app":"live",
     "stream":"test"
  }
+```
 
 - ### 返回参数说明
 
 •        json格式
-
+```
 {
     "status": 0,
     "msg": "成功",
@@ -81,11 +83,12 @@ http://opencdn.jcloud.com/api/live/queryStreamData
      ]
     }
    }
+```
 
 - ### 返回示例
 
 •        json格式
-
+```
 {
     "status": 0,
     "msg": "成功",
@@ -114,3 +117,4 @@ http://opencdn.jcloud.com/api/live/queryStreamData
         ]
     }
 }
+```

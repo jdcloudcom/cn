@@ -1,5 +1,5 @@
 # 连接实例
-如果您购买了云数据库 MySQL/Percona 实例，可以通过京东云 DMS 功能连接实例，也支持本地客户端通过外网访问域名远程连接实例，不过通过外网访问域名远程连接实例的时候，请提前做好访问权限控制，保证数据库的安全性。
+如果您购买了云数据库 MySQL/Percona/MariaDB 实例，可以通过京东云 DMS 功能连接实例，也支持本地客户端通过外网访问域名远程连接实例，不过通过外网访问域名远程连接实例的时候，请提前做好访问权限控制，保证数据库的安全性。
 
 ## 通过控制台 DMS 功能连接实例
 1. 登录 [云数据库 RDS 控制台](https://rds-console.jdcloud.com/database)。
@@ -20,14 +20,14 @@
 5. 密码：用户名对应的密码。
 
 ## 通过本地数据库管理软件连接实例
-如果需要本地的数据库管理软件连接云数据库 MySQL/Percona，默认云数据库 MySQL/Percona 不支持外网访问，需要手动开启，具体操作请参见 [开启外网访问](待补充)。
-我们以 Sequel Pro 软件为例，介绍下如何连接云数据库 MySQL/Percona
+如果需要本地的数据库管理软件连接云数据库 MySQL/Percona/MariaDB，默认云数据库 MySQL/Percona/MariaDB 不支持外网访问，需要手动开启，具体操作请参见 [开启外网访问](../../Operation-Guide/Instance/Internet-Access.md)。
+我们以 Sequel Pro 软件为例，介绍下如何连接云数据库 MySQL/Percona/MariaDB
 
 ### 操作步骤
 1. 打开本地的数据库管理软件，具体参数说明如下：
-    * Host：填写云数据库 MySQL/Percona 的外网访问域名。
-    * Username：填写云数据库 MySQL/Percona 的账号。
-    * Password：填写云数据库 MySQL/Percona 的账号对应的密码。
+    * Host：填写云数据库 MySQL/Percona/MariaDB 的外网访问域名。
+    * Username：填写云数据库 MySQL/Percona/MariaDB 的账号。
+    * Password：填写云数据库 MySQL/Percona/MariaDB 的账号对应的密码。
     * Port：默认就是 3306，不需要做任何改动。
 
     ![截图](https://img1.jcloudcs.com/cms/94be7bf2-3a37-4d1d-9add-cb35d27cc7aa20180803100645.jpeg)

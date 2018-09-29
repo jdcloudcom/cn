@@ -22,8 +22,8 @@ v1
 |**deleteAccount**|DELETE|删除数据库账号，账号删除后不可恢复，用户无法再使用该账号登录RDS实例|
 |**deleteAudit**|DELETE|关闭数据库审计。关闭数据库审计后，以前生成的审计结果文件并不会被立即删除。审计结果文件会过期后由系统自动删除，过期时间缺省为6个月<br>\- 仅支持SQL Server|
 |**deleteBackup**|DELETE|删除RDS实例备份，仅允许删除用户生成的备份，系统自动备份不允许删除。|
-|**deleteDatabase**|DELETE|从RDS实例中删除数据库。为便于管理和数据恢复，RDS对用户权限进行了控制，用户仅能通过控制台或本接口删除数据库</br>敏感操作，可开启<a href="https://www.jdcloud.com/help/detail/3786/isCatalog/1">MFA操作保护</a>|
-|**deleteInstance**|DELETE|删除一个RDS实例或者MySQL的只读实例。删除MySQL主实例时，会同时将对应的MySQL只读实例也删除</br>敏感操作，可开启<a href="https://www.jdcloud.com/help/detail/3786/isCatalog/1">MFA操作保护</a>|
+|**deleteDatabase**|DELETE|从RDS实例中删除数据库。为便于管理和数据恢复，RDS对用户权限进行了控制，用户仅能通过控制台或本接口删除数据库</br>敏感操作，可开启<a href="https://docs.jdcloud.com/IAM/Operation\-Protection">MFA操作保护</a>|
+|**deleteInstance**|DELETE|删除一个RDS实例或者MySQL的只读实例。删除MySQL主实例时，会同时将对应的MySQL只读实例也删除</br>敏感操作，可开启<a href="https://docs.jdcloud.com/IAM/Operation\-Protection">MFA操作保护</a>|
 |**describeAccounts**|GET|查看某个RDS实例下所有账号信息，包括账号名称、对各个数据库的访问权限信息等|
 |**describeAudit**|GET|查看当前实例已开启的审计选项。如当前实例未开启审计，则返回空<br>\- 仅支持SQL Server|
 |**describeBackupDownloadURL**|GET|获取整个备份或备份中单个文件的下载链接。<br>\- 当输入参数中有文件名时，获取该文件的下载链接。<br>\- 输入参数中无文件名时，获取整个备份的下载链接。<br>由于备份机制的差异，使用该接口下载备份时，SQL Server必须输入文件名，每个文件逐一下载，不支持下载整个备份。SQL Server备份中的文件名（不包括后缀）即为备份的数据库名。例如文件名为my_test_db.bak，表示该文件是my_test_db数据库的备份。<br>MySQL可下载整个备份集，但不支持单个文件的下载。<br>\- 仅支持SQL Server|

@@ -1,0 +1,34 @@
+swagger: "2.0"
+definitions:
+  orderPrice:
+    x-jdcloud-module: billing
+    title: OrderPrice
+    type: object
+    x-jdcloud-internal: true
+    properties:
+      totalPrice:
+        type: number
+        description: 折扣前总价
+      totalPriceScale4:
+        type: number
+        description: 折扣前总价4位
+      discountedTotalPrice:
+        type: number
+        description: 折扣后订单价格
+      totalDiscount:
+        type: number
+        description: 总折扣金额
+      list:
+        type: array
+        items:
+            $ref: "../model/OrderPriceDetail.yaml#/definitions/orderPriceDetail"
+        description:  计算完价格后的详细订单列表
+      totalOriginalPrice:
+        type: number
+        description: 订单原价 包年时 一年原价为12个月价格，totalPrice为10个月价格
+      favorableInfos:
+        type: integer
+        description: 参与优惠的明细
+      remark:
+        type: integer
+        description: 备注

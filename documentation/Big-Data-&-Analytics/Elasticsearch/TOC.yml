@@ -21,11 +21,6 @@
       herf: Introduction/Application-Scenarios.md        
   - name: 常见问题
     href: FAQ/FAQ.md
-  - name: API参考
-    href: 
-    status: 0
-  - name: SDK参考
-    href:
   - name: 用户协议
     status: 0
     items:

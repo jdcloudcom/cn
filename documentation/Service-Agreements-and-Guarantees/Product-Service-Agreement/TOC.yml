@@ -1,51 +1,55 @@
   name: 产品服务协议
   href: 
   items:
-  - name: 云主机服务条款
+  - name: 云主机服务协议
     href: Cloud-Hosting-Service-Terms.md
   - name: 云主机服务等级协议（SLA）
     href: Cloud-Host-Service-Level-Agreement-SLA.md
-  - name: 原生容器服务条款
+  - name: 原生容器服务协议
     href: Native-Container-Service-Clause.md
   - name: 原生容器等级协议（SLA）
     href: Native-Container-Hierarchy-Protocol-SLA.md
-  - name: Kubernetes集群服务条款
+  - name: Kubernetes集群服务协议
     href: Kubernetes-Cluster-Service-Provision.md
-  - name: 云数据库 RDS 服务条款
+  - name: 容器镜像仓库服务协议
+    href: Container-Registry-Service-Terms.md
+  - name: 云数据库 RDS 服务协议
     href: Cloud-Database-RDS-Service-Clause.md
   - name: 云数据库 RDS 服务等级协议（SLA）
     href: Cloud-Database-RDS-Service-Level-Agreement-SLA.md
-  - name: 对象存储服务条款
+  - name: 对象存储服务协议
     href: Object-Storage-Service-Clause.md
   - name: 对象存储服务等级协议（SLA）
     href: Object-Storage-Service-Level-Agreement-SLA.md 
-  - name: 缓存Redis服务条款
+  - name: 缓存Redis服务协议
     href: Caching-Redis-Service-Clause.md
   - name: 缓存Redis服务等级协议（SLA）
     href: Caching-Redis-Service-Level-Agreement-SLA.md
-  - name: CDN服务条款
+  - name: 缓存 Memcached服务协议
+    href: JCS-for-Memcached-Service-Terms.md
+  - name: CDN服务协议
     href: CDN-Terms-Of-Service.md
   - name: CDN服务等级协议（SLA）
     href: CDN-Service-Level-Agreement-SLA.md
-  - name: 负载均衡服务条款
+  - name: 负载均衡服务协议
     href: Load-Balancing-Service-Clause.md
   - name: 负载均衡服务等级协议（SLA）
     href: Load-Balancing-Service-Level-Protocol-SLA.md
-  - name: 数知服务条款
+  - name: 数知服务协议
     href: Number-Of-Terms-Of-Service.md
   - name: 数知服务等级协议（SLA）
     href: Number-Aware-Service-Level-Agreement-SLA.md
-  - name: 云数据库 MongoDB 服务条款
+  - name: 云数据库 MongoDB 服务协议
     href: Cloud-Database-MongoDB-Service-Cause.md
   - name: 云数据库MongoDB服务等级协议（SLA）
     href: Cloud-Database-MongoDB-Service-Level-Agreement-SLA.md
-  - name: 云主机安全服务条款
+  - name: 云主机安全服务协议
     href: Cloud-Host-Security-Service-Clause.md
-  - name: 云硬盘服务条款
+  - name: 云硬盘服务协议
     href: Cloud-Hard-Disk-Service-Clause.md
-  - name: 公网IP服务条款
+  - name: 公网IP服务协议
     href: Public-Network-IP-Service-Clause.md
-  - name: IP高防服务条款
+  - name: IP高防服务协议
     href: IP-High-Protection-Clause.md
   - name: IP高防服务等级协议（SLA）
     href: IP-High-Level-Of-Service-Agreement-SLA.md
@@ -53,23 +57,25 @@
     href: Flexible-Telescopic-Service-Clause.md
   - name: 视频直播服务条款
     href: Video-Live-Service-Clause.md
-  - name: SSL数字证书服务条款
+  - name: SSL数字证书服务协议
     href: SSL-Digital-Certificate-Service-Clause.md
-  - name: 云解析服务条款
+  - name: 云解析服务协议
     href: Cloud-Parsing-Service-Clause.md
   - name: 分布式数据库TiDB试用服务条款
     href: Distributed-Database-TiDB-Trial-Service-Clause.md
-  - name: 应用安全网关服务条款
+  - name: 应用安全网关服务协议
     href: Application-Of-Secure-Gateway-Service-Clause.md
   - name: 应用安全网关服务等级协议（SLA）
     href: Application-Of-Secure-Gateway-Service-Level-Protocol-SLA.md
-  - name: 云物理服务器服务条款
+  - name: 云物理服务器服务协议
     href: Cloud-Physics-Server-Service-Clause.md
   - name: 云物理服务器服务等级协议（SLA）
     href: Cloud-Physics-Server-Service-Level-Protocol-SLA.md
-  - name: 消息队列 JCQ服务条款
+  - name: 消息队列 JCQ服务协议
     href: Message-Queue-JCQ-Service-Terms.md
   - name: 消息队列 JCQ服务等级协议（SLA）
     href: Message-Queuing-JCQ-Service-Level-Protocol-SLA.md
-  - name: 分布式关系数据库DRDS试用服务条款
+  - name: 分布式关系数据库DRDS试用服务协议
     href: Distributed-Relational-Database-DRDS-Trial-Service-Clause.md
+  - name: 云搜索 Elasticsearch服务协议
+    href: JCS-for-Elasticsearch-Service-Terms.md

@@ -1,0 +1,44 @@
+swagger: "2.0"
+definitions:
+  resourceOrderStatusVo:
+    x-jdcloud-module: billing
+    title: ResourceOrderStatusVo
+    type: object
+    x-jdcloud-internal: true
+    required:
+      - resourceId
+      - pin
+    properties:
+      resourceId:
+        type: string
+        description: "资源id"
+      pin:
+        type: string
+        description: "用户pin"
+      status:
+        type: integer
+        description: "资源状态 1:正常 2:停服 3:删除"
+      billingStatus:
+        type: integer
+        description: "计费状态 0:停止计费 1:计费中"
+      billingType:
+        type: integer
+        description: "计费类型 1:按配置 2:按用量 3:包年包月"
+      endTime:
+        type: string
+        description: "结束时间"
+      chargeMode:
+        type: integer
+        description: "billingType兼容交易系统字段"
+      chargeDuration:
+        type: integer
+        description: "timeSpan兼容交易系统字段"
+      chargeUnit:
+        type: integer
+        description: "timeUnit兼容交易系统字段"
+      site:
+        type: integer
+        description: "站点信息 0:中国 1:国际  10:专有云"
+      operateTime:
+        type: string
+        description: "操作时间"

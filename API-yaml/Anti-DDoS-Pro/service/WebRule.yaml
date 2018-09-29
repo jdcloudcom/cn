@@ -22,6 +22,16 @@ paths:
           type: integer
           required: false
           description: "分页大小, 默认为10, 取值范围[10, 100]"
+        - name: SearchType
+          in: query
+          type: string
+          required: false
+          description: "查询类型名称, domain:源站域名, ip:源站 IP, rawDomain: 域名"
+        - name: SearchValue
+          in: query
+          type: string
+          required: false
+          description: "查询类型值"
       responses:
         200:
           description: OK

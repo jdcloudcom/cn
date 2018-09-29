@@ -38,26 +38,24 @@ http://opencdn.jcloud.com/api/live/forbidStream
 
 http://opencdn.jcloud.com/api/live/forbidStream
 
-json格式
-
+```
 {
     "username" :" test_user ",
     "signature" :"d00f58f89e8cd55dc080aec0d8051845",
     "domain" :"www.a.com",
     "app" :"live",
-
-"stream": "test17",
-
-"type" :2,
+    "stream": "test17",
+    "type" :2,
     "time" :60
  }
-
+```
 - ###  返回示例
 
-•        json格式
-
+* json格式
+```
 {
   "status": 0,
   "msg": "成功",
   "data": "www.a.com "
 }
+```

@@ -1,0 +1,13 @@
+swagger: "2.0"
+definitions:
+  createGroupInfo:
+    x-jdcloud-module: iam
+    required:
+      - name
+    properties:
+      name:
+        type: string
+        description: 用户组名
+      description:
+        type: string
+        description: 用户组描述

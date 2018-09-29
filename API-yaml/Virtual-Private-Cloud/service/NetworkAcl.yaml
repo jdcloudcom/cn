@@ -192,7 +192,7 @@ paths:
         - name: subnetIds
           in: body
           required: true
-          description: "修改networkAcl属性"
+          description: "networkAcl要绑定的子网ID列表, subnet已被其他networkAcl绑定时，自动解绑"
           schema:
             type: array
             items:
@@ -282,7 +282,7 @@ paths:
         - name: ruleIds
           in: body
           required: true
-          description: "修改networkAcl属性"
+          description: "networkAcl规则ID列表"
           schema: 
             type: array
             items:

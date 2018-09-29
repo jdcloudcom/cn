@@ -1,5 +1,5 @@
 # 日志管理
-京东云云数据库 MySQL/Percona 提供了慢日志统计，慢日志明细，您可以根据统计信息进行应用程序的优化。
+京东云云数据库 MySQL/Percona/MariaDB 提供了慢日志统计，慢日志明细，您可以根据统计信息进行应用程序的优化。
 
 ## 操作步骤
 1. 登录 [云数据库 RDS 管理控制台](https://rds-console.jdcloud.com/database) 。    
@@ -9,5 +9,5 @@
 
 |查询项|内容|
 |---|---|
-|慢日志统计|对 1 个月内云数据库 Percona 中执行时间超过 1 秒的 SQL 语句进行统计汇总，给出慢查询日志的分析报告|
-|慢日志明细|记录 1 个月内云数据库 Percona 中执行时间超过 1秒的 SQL 语句；该列表中不提供最近两个小时的慢日志，如需查询请通过云数据库 Percona 库中的 slow_log_view 表查询|
+|慢日志统计|对 1 个月内云数据库 MySQL/Percona/MariaDB 中执行时间超过 1 秒的 SQL 语句进行统计汇总，给出慢查询日志的分析报告|
+|慢日志明细|记录 1 个月内云数据库 MySQL/Percona/MariaDB 中执行时间超过 1秒的 SQL 语句；该列表中不提供最近两个小时的慢日志，如需查询请通过云数据库 MySQL/Percona/MariaDB 库中的 slow_log_view 表查询|

@@ -12,8 +12,8 @@ https://iam.jdcloud-api.com/v1/regions/{regionId}/userAccessKey/{accessKey}
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**accessKey**|String|True||accessKey|
-|**regionId**|String|True||Region ID|
+|**accessKey**|String|True| |accessKey|
+|**regionId**|String|True| |Region ID|
 
 ## 请求参数
 无
@@ -22,8 +22,7 @@ https://iam.jdcloud-api.com/v1/regions/{regionId}/userAccessKey/{accessKey}
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String||
-
+|**requestId**|String| |
 
 
 ## 返回码

@@ -1,17 +1,17 @@
 name: 操作保护
 href: 
 items:
-  - name: Overview
+  - name: 接口概览
     href: overview.md
-  - name: Change Log
+  - name: 更新历史
     href: ChangeLog.md
-  - name: Interface List
+  - name: 接口列表
     items:
-      - name:  Security Token APIs
+      - name:  安全凭证接口
         items:
           - name: getSecurityToken
             href: Security-Token/getSecurityToken.md
-      - name:  Sensitive Operation Configuration APIs
+      - name:  操作保护配置接口
         items:
           - name: getSensitiveOpSetting
             href: Sensitive-Operation-Configuration/getSensitiveOpSetting.md

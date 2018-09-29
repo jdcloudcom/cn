@@ -1,0 +1,29 @@
+swagger: "2.0"
+definitions:
+  consumption:
+    x-jdcloud-module: billing
+    title: Consumption
+    type: object
+    x-jdcloud-internal: true
+    properties:
+      billingType:
+        type: integer
+        description: 计费类型
+      payType:
+        type: integer
+        description: 支付类型
+      actualFee:
+        type: number
+        description: 优惠后金额
+      cashPayFee:
+        type: number
+        description: 现金支付
+      balancePayFee:
+        type: number
+        description: 余额支付
+      cashCouponPayFee:
+        type: number
+        description: 优惠券支付金额
+      arrearFee:
+        type: number
+        description: 欠费金额

@@ -24,7 +24,7 @@
 	2. 选择地域，可通过条件搜索找到需要操作续费的实例；
 	3. 点击【操作】-【更多】中【续费】，即跳转至对应续费页面；<br>
 	![](https://github.com/jdcloudcom/cn/blob/edit/image/vm/renew.png)
-	4. 续费页详细操作详细流程请参参见[续费管理](../../../Finance/renewal%20management/Resource%20renewal.md)。
+	4. 续费页详细操作详细流程请参参见[续费管理](http://docs.jdcloud.com/cn/online-buying/renew-management)。
 
 
 ## 相关参考
@@ -33,7 +33,7 @@
 
 [云主机控制台](https://cns-console.jdcloud.com/host/compute/list)；
 
-[续费管理](../../../Finance/renewal%20management/Resource%20renewal.md)
+[续费管理](http://docs.jdcloud.com/cn/online-buying/renew-management)
 
 
 

@@ -3,6 +3,7 @@
 操作用来上传一个新的Object到指定的Bucket中
 
 **请求语法**
+
 ```
 PUT /ObjectName HTTP/1.1
 Content-Length:ContentLength
@@ -14,6 +15,7 @@ x-jss-storage-class: STANDARD   or REDUCED_REDUNDANCY
 Date: GMT  Date     
 Authorization: signatureValue#请参照"访问控制"
 ```
+
 **请求Header**
 
 |名称|描述|
@@ -42,6 +44,7 @@ Authorization: signatureValue#请参照"访问控制"
 8.如果传入的Object key长度大于1022字节，返回400 Bad Request。错误码：InvalidArgument
 
 **请求示例**
+
 ```
 PUT /example.jpg HTTP/1.1
 Host: oss-example.s-bj.jcloud.com
@@ -53,6 +56,7 @@ Date: Tue, 11 Jul 2017   07:13:32 GMT
 Authorization: jingdong   qbS5QXpLORrvdrmb:cQ63NndHAoEBmjZHehSuNWG/Jns=
 ```
 **返回示例**
+
 ```
 HTTP/1.1 200 OK
 Server: nginx
@@ -64,6 +68,7 @@ ETag:   "6457646542258052f767868fd686d74d"
 X-Trace:   200-1499757212162-0-0-20-50-50
 ```
 **请求示例（未设置Content-Type和Content-MD5）：**
+
 ```
 PUT /example.jpg HTTP/1.1
 Host:   oss-example.s-bj.jcloud.com
@@ -72,6 +77,7 @@ Date: Thu, 13 Jul 2017   02:12:02 GMT
 Authorization: jingdong     qbS5QXpLORrvdrmb:S2ZHyLfdZml/bRjD/TEQ+ftJXBA=
 ```
 **返回示例（未设置Content-Type和Content-MD5）：**
+
 ```
 HTTP/1.1 200 OK
 Server: nginx

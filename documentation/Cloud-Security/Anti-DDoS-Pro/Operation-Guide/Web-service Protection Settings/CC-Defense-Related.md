@@ -2,12 +2,12 @@
 CC防护规则属于网站类防护的规则，需要先切换网站类转发配置。</BR>
 步骤如下：
 - 首先需要登录 [IP高防 控制台](https://ip-anti-console.jdcloud.com/instancelist)。
-- 找到需要配置的实例，单击实例名称，进入**实例详情**页面。
-- 切换到**网站转发配置**
+- 找到需要配置的实例，单击实例名称，进入 **实例详情** 页面。
+- 切换到 **网站转发配置** 
    ![网站转发规则](https://github.com/jdcloudcom/cn/blob/edit/image/Advanced%20Anti-DDoS/web-rule%2002.png)
    
 ### 操作步骤
-1. 单击**防护规则**，展开防护规则配置。
+1. 单击 **防护规则** ，展开防护规则配置。
  ![网站转发规则](https://github.com/jdcloudcom/cn/blob/edit/image/Advanced%20Anti-DDoS/web-rule%2004.png)
 2. 配置全局CC防护策略。
  ![网站转发规则](https://github.com/jdcloudcom/cn/blob/edit/image/Advanced%20Anti-DDoS/CC%20rules%2001.png)

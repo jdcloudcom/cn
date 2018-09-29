@@ -1,0 +1,14 @@
+swagger: "2.0"
+definitions:
+  updatePolicyInfo:
+    x-jdcloud-module: iam
+    required:
+      - version
+      - content
+    properties:
+      description:
+        type: string
+        description: 描述，0~256个字符
+      content:
+        type: string
+        description: 策略信息详情，最多2048个字符

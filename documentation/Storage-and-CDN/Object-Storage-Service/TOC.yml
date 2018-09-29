@@ -42,7 +42,7 @@ items:
       - name: 开通服务
         href: Operation-Guide/Sign-Up-Service-2.md
       - name: 对象存储概览页
-        href: Operation-Guide/Overview-Pag-2.md
+        href: Operation-Guide/Overview-Page-2.md
       - name: 存储空间管理
         items:
            - name: 空间概览
@@ -74,17 +74,17 @@ items:
           - name: 删除文件
             href: Operation-Guide/Manage-Object/Delete-Object.md
           - name: 表单上传
-            href: Operation-Guide/Manage-Object/Post-Object.md                  
+            href: Operation-Guide/Manage-Object/Post-Object-1.md                  
           - name: 用量监控
             href: Operation-Guide/Manage-Object/Usage-Monitoring.md
       - name: 图片处理指南
         items:            
           - name: 介绍
-            href: Operation-Guide/Image-Service-Guide/Introduction.md
+            href: Operation-Guide/Image-Service-Guide/Introduction-1.md
           - name: 图片处理访问规则
             href: Operation-Guide/Image-Service-Guide/Image-Access-Rules.md
           - name: 快速使用图片服务
-            href: Operation-Guide/Image-Service-Guide/Getting-Started.md  
+            href: Operation-Guide/Image-Service-Guide/Getting-Started-1.md  
           - name: 图片缩放
             href: peration-Guide/Image-Service-Guide/Resize-Images.md
           - name: 图片旋转
@@ -112,7 +112,7 @@ items:
           - name: 概述
             href: Operation-Guide/Video-Service-Guide/Video-Service-Guide-Overview.md
           - name: 快速使用视频处理
-            href: Operation-Guide/Video-Service-Guide/Getting-Started.md
+            href: Operation-Guide/Video-Service-Guide/Getting-Started-2.md
           - name: 视频处理签名认证
             href: Operation-Guide/Video-Service-Guide/User-Signature-Authentication.md   
           - name: 创建视频转码任务
@@ -126,7 +126,7 @@ items:
  - name:  新版API（兼容S3）
    items:
       - name: 概述
-        href: API-Reference-S3-Compatible/Introduction.md
+        href: API-Reference-S3-Compatible/Introduction-2.md
       - name: 服务器域名
         href: API-Reference-S3-Compatible/Regions-And-Endpoints.md
       - name: 兼容签名认证
@@ -138,7 +138,7 @@ items:
            - name: 兼容接口概览
              href: API-Reference-S3-Compatible/Compatibility-API/Compatibility-API-overview.md
            - name: Post Object
-             href: API-Reference-S3-Compatible/Compatibility-API/Post-Object.md        
+             href: API-Reference-S3-Compatible/Compatibility-API/Post-Object-2.md        
       - name: 扩展接口
         items:
            - name: Compress Object
@@ -148,7 +148,7 @@ items:
       - name: 兼容工具
         items:
            - name: 概述
-             href: API-Reference-S3-Compatible/Compatibility-Tools/Introduction.md
+             href: API-Reference-S3-Compatible/Compatibility-Tools/Introduction-3.md
            - name: SDK-Python
              href: API-Reference-S3-Compatible/Compatibility-Tools/SDK-Python.md
            - name: SDK-Java
@@ -160,7 +160,7 @@ items:
            - name: SDK-iOS
              href: API-Reference-S3-Compatible/Compatibility-Tools/SDK-iOS.md
            - name: CloudBerry
-             href: API-Reference-S3-Compatible/Compatibility-Tools/CloudBerry.md                
+             href: API-Reference-S3-Compatible/Compatibility-Tools/CloudBerry-1.md                
  - name: 旧版API
    items:
       - name: OSS API 简介
@@ -194,7 +194,7 @@ items:
       - name: 关于Bucket的操作
         items:
            - name: PutBucket
-             href: API-Reference/Bucket-Operations/PutBucket.md
+             href: API-Reference/Bucket-Operations/PutBucket-1.md
            - name: GetBucket
              href: API-Reference/Bucket-Operations/GetBucket.md             
            - name: PutBucketReferer
@@ -202,7 +202,7 @@ items:
            - name: GetBucketReferer
              href: API-Reference/Bucket-Operations/GetBucketReferer.md 
            - name: DeleteBucket
-             href: API-Reference/Bucket-Operations/DeleteBucket.md             
+             href: API-Reference/Bucket-Operations/DeleteBucket-1.md             
       - name: 关于Object的操作
         items:
            - name: PutObject
@@ -246,7 +246,7 @@ items:
            - name: 列举Bucket
              href: SDK-Reference/Java-SDK/List-Buckets-3.md  
            - name: 删除Bucket
-             href:  SDK-Reference/Java-SDK/Delete-Bucket-3.md 
+             href: SDK-Reference/Java-SDK/Delete-Bucket-3.md 
            - name: 简单上传
              href: SDK-Reference/Java-SDK/Simple-Upload-3.md 
            - name: 分片上传
@@ -272,9 +272,9 @@ items:
       - name: 防盗链
         href: Best-Practices/Anti-leech.md         
       - name: 使用CloudBerry管理OSS
-        href: Best-Practices/CloudBerry.md 
+        href: Best-Practices/CloudBerry-2.md 
       - name: 生成预签名URL
-        href: Best-Practices/Signature-In-URL.md
+        href: Best-Practices/Signature-In-URL-1.md
       - name: 跨域访问
         href: Best-Practices/CORS.md
       - name: 数据迁移工具 

@@ -14,7 +14,6 @@
 | start_time | String   | 是           | 时间格式：yyyy-mm-dd hh:mi 参考示例：2016-12-14 07:00        |
 | end_time   | String   | 否           | 不是必填参数，不传默认到当前时间                             |
 
-## 
 
 ## **3、返回参数data中说明**
 
@@ -24,7 +23,6 @@
 | msg      | 提示信息                       |
 | data     | 返回数据                       |
 
-## 
 
 ## **4、调用示例**
 
@@ -34,15 +32,15 @@ http://opencdn.jcloud.com/api/total_data
 
 - ### **请求示例**
 
-```
 http://opencdn.jcloud.com/api/total_data
+
+```
 {
     "username" :"test_user",
     "signature" :"dbc1c1302d0a1baa48a256cbfc840317",
     "domain":"www.a.com,www.b.com",
     "start_time":"2017-12-18 00:00",
-    "end_time":"2017-12-18 23:59"
-   
+    "end_time":"2017-12-18 23:59" 
  }
 ```
 

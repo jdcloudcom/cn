@@ -12,8 +12,8 @@ https://vpc.jdcloud-api.com/v1/regions/{regionId}/networkInterfaces/{networkInte
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**networkInterfaceId**|String|True||networkInterface ID|
-|**regionId**|String|True||Region ID|
+|**networkInterfaceId**|String|True| |networkInterface ID|
+|**regionId**|String|True| |Region ID|
 
 ## 请求参数
 无
@@ -23,14 +23,13 @@ https://vpc.jdcloud-api.com/v1/regions/{regionId}/networkInterfaces/{networkInte
 |名称|类型|描述|
 |---|---|---|
 |**requestId**|String|请求ID|
-|**result**|[Result](##Result)|返回结果|
+|**result**|Result|返回结果|
 
-
-### <a name="Result">Result</a>
+### Result
 |名称|类型|描述|
 |---|---|---|
-|**networkInterface**|[NetworkInterface](##NetworkInterface)|networkInterface资源信息|
-### <a name="NetworkInterface">NetworkInterface</a>
+|**networkInterface**|NetworkInterface|networkInterface资源信息|
+### NetworkInterface
 |名称|类型|描述|
 |---|---|---|
 |**az**|String|可用区名称|
@@ -44,13 +43,13 @@ https://vpc.jdcloud-api.com/v1/regions/{regionId}/networkInterfaces/{networkInte
 |**networkInterfaceId**|String|弹性网卡ID|
 |**networkInterfaceName**|String|弹性网卡名称|
 |**networkSecurityGroupIds**|String[]|安全组ID列表|
-|**primaryIp**|[NetworkInterfacePrivateIp](##NetworkInterfacePrivateIp)|网卡主IP|
+|**primaryIp**|NetworkInterfacePrivateIp|网卡主IP|
 |**role**|String|网卡角色，取值范围：Primary（主网卡）、Secondary（辅助网卡）|
 |**sanityCheck**|Integer|源和目标IP地址校验，取值为0或者1|
-|**secondaryIps**|[NetworkInterfacePrivateIp[]](##NetworkInterfacePrivateIp)|网卡附属IP列表|
+|**secondaryIps**|NetworkInterfacePrivateIp[]|网卡附属IP列表|
 |**subnetId**|String|子网ID|
 |**vpcId**|String|虚拟网络ID|
-### <a name="NetworkInterfacePrivateIp">NetworkInterfacePrivateIp</a>
+### NetworkInterfacePrivateIp
 |名称|类型|描述|
 |---|---|---|
 |**elasticIpAddress**|String|弹性IP实例地址|

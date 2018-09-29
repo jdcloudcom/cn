@@ -21,4 +21,4 @@
 
 ## 相关参考
 
-[创建实例模板](../../Virtual-Machine/Operation-Guide/Instance-Template/Create-Instance-Template.md)
+[创建实例模板](../../Virtual-Machines/Operation-Guide/Instance-Template/Create-Instance-Template.md)

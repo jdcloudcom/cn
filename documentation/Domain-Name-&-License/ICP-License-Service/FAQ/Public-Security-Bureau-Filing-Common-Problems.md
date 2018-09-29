@@ -1,8 +1,8 @@
-依据《计算机信息网络国际联网安全保护管理办法》相关规定，各网站在工信部备案成功后，需在网站开通之日起 30 日内登录 [全国公安机关互联网站安全管理服务平台](http://www.beian.gov.cn/) 提交公安备案申请。
+依据《计算机信息网络国际联网安全保护管理办法》相关规定，各网站在工信部备案成功后，需在网站开通之日起 30 日内登录 [全国公安机关互联网站安全管理服务平台](https://www.beian.gov.cn/) 提交公安备案申请。
 
-了解公安备案操作流程请下载 [互联网站安全服务平台操作指南](http://www.beian.gov.cn/portal/downloadcenter?token=389a313f-53c9-4eb7-8a10-5eeae2f50a73)。
+了解公安备案操作流程请下载 [互联网站安全服务平台操作指南](https://www.beian.gov.cn/portal/downloadcenter?token=389a313f-53c9-4eb7-8a10-5eeae2f50a73)。
 
-公安网站备案 33 项填写样例表请查看 ![img](http://cms.jcloud.com/ueditor/dialogs/attachment/fileTypeImages/icon_xls.gif)[EXCEL模板33项.xls](https://img1.jcloudcs.com/cms/9062610c-a7f6-49fd-b320-fdb93792762720180110170854.xls)
+公安网站备案 33 项填写样例表请查看[EXCEL模板33项.xls](https://img1.jcloudcs.com/cms/9062610c-a7f6-49fd-b320-fdb93792762720180110170854.xls)
 
 ## **常见问题**
 

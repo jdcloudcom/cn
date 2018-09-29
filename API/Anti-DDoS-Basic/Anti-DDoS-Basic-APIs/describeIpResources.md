@@ -12,28 +12,27 @@ https://baseanti.jdcloud-api.com/v1/regions/{regionId}/ipResources
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**ip**|String|True||公网IP地址|
-|**regionId**|String|True||所属地域ID|
+|**ip**|String|True| |公网IP地址|
+|**regionId**|String|True| |所属地域ID|
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**ip**|String|False||IP模糊匹配|
+|**ip**|String|False| |IP模糊匹配|
 
 
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String||
-|**result**|[Result](##Result)||
+|**requestId**|String| |
+|**result**|Result| |
 
-
-### <a name="Result">Result</a>
+### Result
 |名称|类型|描述|
 |---|---|---|
-|**dataList**|[IpResource[]](##IpResource)||
-|**totalCount**|Integer||
-### <a name="IpResource">IpResource</a>
+|**dataList**|IpResource[]| |
+|**totalCount**|Integer| |
+### IpResource
 |名称|类型|描述|
 |---|---|---|
 |**bandwidth**|Integer|带宽上限，单位Mbps|

@@ -10,8 +10,6 @@
 
 ## 相关参考
 
-- [产品优势](../Product-Introduction/Benefits.md)
-- [产品功能](../Product-Introduction/Functions.md)
-- [价格总览](../Pricing/Price-Overview.md)
+- [产品功能](Features.md)
+- [价格总览](../Pricing/Billing-Overview.md)
 - [计费规则](../Pricing/Billing-Rules.md)
-- [创建实例](../Getting-Started/Create-Instance.md)

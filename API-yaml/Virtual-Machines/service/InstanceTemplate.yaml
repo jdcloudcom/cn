@@ -28,11 +28,11 @@ paths:
           in: query
           type: string
           required: true
-          description: 启动模板的名称，<a href="https://www.jdcloud.com/help/detail/3870/isCatalog/1">参考公共参数规范</a>。
+          description: 启动模板的名称，<a href="http://docs.jdcloud.com/virtual-machines/api/general_parameters">参考公共参数规范</a>。
         - name: description
           in: query
           type: string
-          description: 启动模板的描述，<a href="https://www.jdcloud.com/help/detail/3870/isCatalog/1">参考公共参数规范</a>。
+          description: 启动模板的描述，<a href="http://docs.jdcloud.com/virtual-machines/api/general_parameters">参考公共参数规范</a>。
       responses:
         200:
           description: OK
@@ -166,11 +166,11 @@ paths:
         - name: description
           in: query
           type: string
-          description: 模板描述，<a href="https://www.jdcloud.com/help/detail/3870/isCatalog/1">参考公共参数规范</a>。
+          description: 模板描述，<a href="http://docs.jdcloud.com/virtual-machines/api/general_parameters">参考公共参数规范</a>。
         - name: name
           in: query
           type: string
-          description: 模板名称，<a href="https://www.jdcloud.com/help/detail/3870/isCatalog/1">参考公共参数规范</a>。
+          description: 模板名称，<a href="http://docs.jdcloud.com/virtual-machines/api/general_parameters">参考公共参数规范</a>。
       responses:
         200:
           description: OK

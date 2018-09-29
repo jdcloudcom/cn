@@ -12,7 +12,7 @@ https://mongodb.jdcloud-api.com/v1/regions/{regionId}/flavors
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**regionId**|String|True||Region ID|
+|**regionId**|String|True| |Region ID|
 
 ## 请求参数
 无
@@ -21,14 +21,13 @@ https://mongodb.jdcloud-api.com/v1/regions/{regionId}/flavors
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**result**|[Result](##Result)||
+|**result**|Result| |
 
-
-### <a name="Result">Result</a>
+### Result
 |名称|类型|描述|
 |---|---|---|
-|**flavors**|[Flavor[]](##Flavor)||
-### <a name="Flavor">Flavor</a>
+|**flavors**|Flavor[]| |
+### Flavor
 |名称|类型|描述|
 |---|---|---|
 |**cpu**|Integer|CPU核数|

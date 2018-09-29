@@ -1,0 +1,22 @@
+swagger: "2.0"
+definitions:
+  subUser:
+    x-jdcloud-module: iam
+    properties:
+      name:
+        type: string
+        description: 用户名
+      createTime:
+        type: string
+        format: date-time
+        description: 创建时间
+      updateTime:
+        type: string
+        format: date-time
+        description: 更新时间
+
+
+
+
+
+

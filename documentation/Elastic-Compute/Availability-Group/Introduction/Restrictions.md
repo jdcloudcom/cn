@@ -2,7 +2,7 @@
 
 * 单个地域高可用组配额为20，若您需要额外资源请工单申请。
 * 高可用组的可用区属性创建后不允许修改。
-* 高可用组仅支持第二代云主机规格，即创建高可用组时选择的实例模板需配置第二代云主机规格，详细规格可参考[实例规格类型](../../Virtual-Machine/Introduction/Instance-Type-Family.md)。
+* 高可用组仅支持第二代云主机规格，即创建高可用组时选择的实例模板需配置第二代云主机规格，详细规格可参考[实例规格类型](../../Virtual-Machines/Introduction/Instance-Type-Family.md)。
 * 高可用组创建后若需更改实例模板，更改前实例模板所配置私有网络需与更改后实例模板一致。
 * 向高可用组内新增实例即意味着使用高可用组关联的实例模板新建云主机实例，为保证正常新增，您需确保实例模板所关联资源未被删除且为可用状态，否则将导致新增失败。
 * 不支持将已有云主机实例加入至高可用组。
@@ -11,4 +11,4 @@
 
 ## 相关参考
 
-[实例规格类型](../../Virtual-Machine/Introduction/Instance-Type-Family.md)
+[实例规格类型](../../Virtual-Machines/Introduction/Instance-Type-Family.md)

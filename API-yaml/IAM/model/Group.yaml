@@ -1,0 +1,22 @@
+swagger: "2.0"
+definitions:
+  group:
+    x-jdcloud-module: iam
+    properties:
+      groupId:
+        type: string
+        description: 用户组ID
+      name:
+        type: string
+        description: 用户组名
+      jrn:
+        type: string
+        description: jrn描述
+      createTime:
+        type: string
+        format: date-time
+        description: 用户组创建时间
+      updateTime:
+        type: string
+        format: date-time
+        description: 用户组更新时间

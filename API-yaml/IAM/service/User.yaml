@@ -7,28 +7,6 @@ info:
 basePath: /regions/{regionId}
 
 paths:
-  "/subUser":
-    ###################### 创建子账号 ######################
-    post:
-      description: "创建子账号"
-      operationId: createSubuser
-      x-jdcloud-internal: false
-      parameters:
-        - name: createSubUserInfo
-          in: body
-          description: 子账号信息
-          required: true
-          schema:
-            $ref: "../model/CreateSubUserInfo.yaml#/definitions/createSubUserInfo"
-      responses:
-        200:
-          description: OK
-          schema:
-            type: object
-            properties:
-              requestId:
-                type: string
-
   "/userAccessKeys":
     ###################### 获取用户所有AccessKey ######################
     get:

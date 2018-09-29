@@ -1,0 +1,177 @@
+swagger: "2.0"
+info:
+ version: "v1"
+ title: 资源单管理
+ description: 资源单管理
+
+basePath: /regions/{regionId}
+
+schemes:
+ - http
+
+paths:
+  "/sendResourceOrderStatusMessage":
+    ###################### 删除资源接口 ######################
+    post:
+      description: "删除资源"
+      operationId: sendResourceOrderStatusMessage
+      parameters:
+        - name: cmd
+          in: query
+          type: integer
+          required: true
+          description:  "操作类型 4:删除"
+        - name: orderList
+          in: query
+          type: array
+          items:
+            $ref: "../model/ResourceOrderStatusVo.yaml#/definitions/resourceOrderStatusVo"
+          description: "资源单信息"
+        - name: operatorType
+          in: query
+          type: integer
+          required: true
+          description: "操作者类型 0：用户 1：管理员（运营）"
+        - name: operatorName
+          in: query
+          type: string
+          required: true
+          description: "操作人 用户:用户pin 管理员:操作人erp"
+        - name: operateTime
+          in: query
+          type: string
+          required: false
+          description: "操作时间"
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  result:
+                    type: boolean
+                    description: "结果"
+              requestId:
+                type: string
+        404:
+          description: NOT_FOUND
+  "/getResourceOrderByCondition":
+      ###################### 查询资源单信息接口 ######################
+      get:
+        description: "查询资源单信息"
+        operationId: getResourceOrderByCondition
+        x-jdcloud-internal: true
+        parameters:
+          - name: resourceId
+            in: query
+            type: string
+            required: true
+            description:  "资源ID"
+        responses:
+          200:
+            description: OK
+            schema:
+              properties:
+                result:
+                  $ref: "../model/ResourceOrderVo.yaml#/definitions/resourceOrderVo"
+                requestId:
+                  type: string
+          404:
+            description: NOT_FOUND
+  "/queryPageByCondition":
+      ###################### 查询资源单列表接口 ######################
+      post:
+        description: "查询资源单列表"
+        operationId: queryPageByCondition
+        parameters:
+        - name: resourceOrderQueryCondition
+          in: body
+          required: true
+          x-jdcloud-tiered: false
+          schema:
+            $ref: "../model/ResourceOrderQueryCondition.yaml#/definitions/resourceOrderQueryCondition"
+        responses:
+          200:
+            description: OK
+            schema:
+              type: object
+              properties:
+                result:
+                  properties:
+                    pagination:
+                      $ref: "../model/Pagination.yaml#/definitions/pagination"
+                    result:
+                      type: array
+                      items:
+                        $ref: "../model/ResourceOrderVo.yaml#/definitions/resourceOrderVo"
+                requestId:
+                  type: string
+          404:
+            description: NOT_FOUND
+  "/getExpiringOrders":
+      ###################### 查询资源单列表接口，不含已删除资源 ######################
+      post:
+        description: "查询资源单列表接口，不含已删除资源"
+        operationId: getExpiringOrders
+        parameters:
+        - name: resourceOrderQueryCondition
+          in: body
+          required: true
+          x-jdcloud-tiered: false
+          description: ""
+          schema:
+           $ref: "../model/ResourceOrderQueryCondition.yaml#/definitions/resourceOrderQueryCondition"
+        responses:
+          200:
+            description: OK
+            schema:
+              type: object
+              properties:
+                result:
+                  properties:
+                    pagination:
+                      $ref: "../model/Pagination.yaml#/definitions/pagination"
+                    result:
+                      type: array
+                      items:
+                        $ref: "../model/ResourceOrderVo.yaml#/definitions/resourceOrderVo"
+              requestId:
+                  type: string
+          404:
+            description: NOT_FOUND
+  "/queryResourceAeState":
+      ###################### 查询资源状态接口######################
+      get:
+        description: "查询资源状态接口"
+        operationId: queryResourceAeState
+        x-jdcloud-internal: true
+        parameters:
+          - name: resourceId
+            in: query
+            type: string
+            required: true
+            description: "资源ID"
+          - name: billingType
+            in: query
+            type: integer
+            required: false
+            description: "计费类型 1:按配置 2:按用量 3:包年包月 4:一次性"
+        responses:
+          200:
+            description: OK
+            schema:
+              type: object
+              properties:
+                result:
+                  $ref: "../model/ResourceAeVo.yaml#/definitions/resourceAeVo"
+                requestId:
+                  type: string
+          404:
+            description: NOT_FOUND
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string

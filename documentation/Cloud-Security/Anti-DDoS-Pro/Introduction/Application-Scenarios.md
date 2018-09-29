@@ -11,19 +11,19 @@
 
 ## 金融
 满足金融行业的合规性要求；
-保证线上交易的实时性、安全性；
+保证线上交易的实时性、安全性。
 
 ## 政府
 国家政务云建设的安全要求；
-重大会议、活动，敏感时期的安全重保；
+重大会议、活动，敏感时期的安全重保。
 
 ## 其他
 支持网站类业务和非网站类业务配置，适用于京东云内和云外的攻击防护，满足所有对大流量DDoS攻击防御有需求的用户。
 
 ## 相关参考
 
-- [产品优势](../Product-Introduction/Benefits.md)
-- [产品功能](../Product-Introduction/Functions.md)
+- [产品优势](Benefits.md)
+- [产品功能](Features.md)
 - [价格总览](../Pricing/Price-Overview.md)
 - [计费规则](../Pricing/Billing-Rules.md)
 - [创建实例](../Getting-Started/Create-Instance.md)

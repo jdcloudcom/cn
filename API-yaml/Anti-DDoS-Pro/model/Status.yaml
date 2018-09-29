@@ -1,0 +1,15 @@
+swagger: "2.0"
+definitions:
+  Status:
+    type: object
+    x-jdcloud-module: ipanti
+    properties:
+      retcode:
+        type: integer
+        description: "请求结果, 0 表示成功, 非 0 表示失败"
+      code:
+        type: integer
+        description: "请求错误码"
+      msg:
+        type: string
+        description: "请求错误消息"

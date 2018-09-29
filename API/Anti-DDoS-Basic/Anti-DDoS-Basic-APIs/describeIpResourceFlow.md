@@ -12,32 +12,31 @@ https://baseanti.jdcloud-api.com/v1/regions/{regionId}/ipResources/{ip}/monitorF
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**ip**|String|True||公网IP地址|
-|**regionId**|String|True||所属地域ID|
+|**ip**|String|True| |公网IP地址|
+|**regionId**|String|True| |所属地域ID|
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**endTime**|String|False||查询的结束时间，UTC时间，格式：yyyy-MM-dd'T'HH:mm:ssZ|
+|**endTime**|String|False| |查询的结束时间，UTC时间，格式：yyyy-MM-dd'T'HH:mm:ssZ|
 
 
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String||
-|**result**|[Result](##Result)||
+|**requestId**|String| |
+|**result**|Result| |
 
-
-### <a name="Result">Result</a>
+### Result
 |名称|类型|描述|
 |---|---|---|
-|**data**|[IpResourceFlow](##IpResourceFlow)||
-### <a name="IpResourceFlow">IpResourceFlow</a>
+|**data**|IpResourceFlow| |
+### IpResourceFlow
 |名称|类型|描述|
 |---|---|---|
-|**bps**|[IpResourceFlowDetail](##IpResourceFlowDetail)||
-|**pps**|[IpResourceFlowDetail](##IpResourceFlowDetail)||
-### <a name="IpResourceFlowDetail">IpResourceFlowDetail</a>
+|**bps**|IpResourceFlowDetail| |
+|**pps**|IpResourceFlowDetail| |
+### IpResourceFlowDetail
 |名称|类型|描述|
 |---|---|---|
 |**times**|String[]|时间点|

@@ -24,7 +24,7 @@
     - name: 添加网站
       href: Operation-Guide/Add-Web.md
     - name: 接入域名
-      href: Operation-Guide/MongoDB-Profile.md
+      href: Operation-Guide/Access-Domain-Name.md
     - name: 修改域名
       href: Operation-Guide/Modify-Domainname.md
     - name: 防护配置

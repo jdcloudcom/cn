@@ -14,7 +14,5 @@ DDoS基础防护是为京东云用户针对常见的DDoS攻击推出的免费服
 
 ## IP高防服务获取
 
-DDoS基础防护是京东云免费为用户提供的防护服务。如果您需要京东云提供的IP高防服务，需要您根据需要购买京东云IP高防包，购买后您将能够获取京东云为您提
-供的IP高防服务。IP高防购买窗口如下。
-
-IP高防购买窗口，请参见：[IP高防](https://www.jdcloud.com/products/anti-ddos-pro)
+DDoS基础防护是京东云免费为用户提供的防护服务。如果您需要京东云提供的IP高防服务，请购买IP高防。购买窗口如下：
+[IP高防](http://www.jdcloud.com/cn/products/anti-ddos-pro)

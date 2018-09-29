@@ -6,7 +6,6 @@
 |发布日期|特性|描述|
 |-|-|-|
 |2018年7月|支持高可用组|支持通过高可用组提供后端服务|
-
 |2018年7月|支持原生容器|负载均衡支持绑定容器为后端服务进行流量分发|
 |2018年7月|架构优化|分拆监听规则为监听器与后端服务|
 |2018年2月|支持绑定安全组|负载均衡支持绑定安全组功能|
@@ -18,10 +17,10 @@
 
 ## 相关参考
 
-- [产品概述](../Introduction/Overview.md)
+- [产品概述](../Introduction/Product-Overview.md)
 - [核心概念](../Introduction/Core-Concepts.md)
 - [产品优势](../Introduction/Benefits.md)
-- [产品功能](../Introduction/Functions.md)
+- [产品功能](../Introduction/Features.md)
 - [价格总览](../Pricing/Price-Overview.md)
 - [计费规则](../Pricing/Billing-Rules.md)
 - [创建负载均衡实例](../Getting-Started/Create-Instance.md)

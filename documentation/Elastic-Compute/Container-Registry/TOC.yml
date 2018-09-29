@@ -1,0 +1,79 @@
+﻿  name: 容器镜像仓库
+  href: 
+  items:
+  - name: 产品简介
+    items:
+      - name: 容器镜像仓库概述
+        href: Introduction/Product-Overview.md
+      - name: 核心概念
+        href: Introduction/Core-Concepts.md
+      - name: 产品优势
+        href: Introduction/Benefits.md
+      - name: 产品功能
+        href: Introduction/Features.md
+      - name: 限制说明
+        href: Introduction/Restrictions.md
+      - name: 应用场景 
+        href: Introduction/Application-Scenarios.md    
+  - name: 产品定价
+    items:
+      - name: 计费概述
+        href: Pricing/Billing-Overview.md
+      - name: 价格总览
+        href: Pricing/Price-Overview.md
+      - name: 购买流程
+        href: Pricing/Purchase-Process.md
+      - name: 续费流程
+        href: Pricing/Renew-Process.md
+      - name: 计费规则
+        href: Pricing/Billing-Rules.md
+  - name: 入门指南
+    items:
+      - name: 入门指南概述
+        href: Getting-Started/Guide-Overview.md
+      - name: 创建容器镜像
+        href: Getting-Started/Create-Image.md
+  - name: 操作指南
+    items:
+      - name: 注册表
+        items:
+          - name: 注册表概述
+            href: Operation-Guide/Registry/Registry-Overview.md
+          - name: 创建注册表
+            href: Operation-Guide/Registry/Create-Registry.md
+          - name: 删除注册表
+            href: Operation-Guide/Registry/Delete-Registry.md
+      - name: 镜像仓库
+        items:
+         - name: 镜像仓库概述
+           href: Operation-Guide/Repository/Repository-Overview.md
+         - name: 创建镜像仓库
+           href: Operation-Guide/Repository/Create-Repository.md
+         - name: 删除镜像仓库
+           href: Operation-Guide/Repository/Delete-Repository.md
+         - name: 镜像管理
+           href: Operation-Guide/Repository/Manage-Image.md
+      - name: 临时令牌
+        items:
+        - name: 临时令牌概述
+          href: Operation-Guide/Token/Token-Overview.md
+        - name: 创建临时令牌
+          href: Operation-Guide/Token/Create-Token.md
+        - name: 查看临时令牌
+          href: Operation-Guide/Token/Describe-Token.md
+        - name: 删除临时令牌
+          href: Operation-Guide/Token/Delete-Token.md
+      - name: 镜像列表
+        items:
+          - name: 镜像列表概述
+            href: Operation-Guide/Image-List/Image-List-Overview.md
+  - name: 最佳实践
+    items:
+         -  name: 持续部署容器化应用
+            href: Best-Practices/Deploy-Application.md
+  - name: 常见问题  
+    href: Common-Problem.md    
+  - name: 相关资源
+    items:
+    - name: 文档历史记录
+      href: Related-Resources/Release-History.md 

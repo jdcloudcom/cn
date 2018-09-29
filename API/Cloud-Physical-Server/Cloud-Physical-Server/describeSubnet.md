@@ -12,26 +12,25 @@ https://cps.jdcloud-api.com/v1/regions/{regionId}/subnet
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**regionId**|String|True||地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域|
+|**regionId**|String|True| |地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域|
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**az**|String|True||可用区, 如cn-east-1a；可调用接口（describeRegiones）获取云物理服务器在该地域支持的可用区|
+|**az**|String|True| |可用区, 如cn-east-1a；可调用接口（describeRegiones）获取云物理服务器在该地域支持的可用区|
 
 
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String||
-|**result**|[Result](##Result)||
+|**requestId**|String| |
+|**result**|Result| |
 
-
-### <a name="Result">Result</a>
+### Result
 |名称|类型|描述|
 |---|---|---|
-|**subnet**|[Subnet](##Subnet)|子网详细信息|
-### <a name="Subnet">Subnet</a>
+|**subnet**|Subnet|子网详细信息|
+### Subnet
 |名称|类型|描述|
 |---|---|---|
 |**az**|String|可用区, 如cn-east-1a|

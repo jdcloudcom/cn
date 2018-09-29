@@ -108,10 +108,6 @@
       href: Troubleshooting/Authentication.md        
   - name: 常见问题
     href: FAQ/FAQ.md
-  - name: API参考
-    href:
-  - name: SDK参考
-    href:
   - name: 用户协议
     status: 0
     items:

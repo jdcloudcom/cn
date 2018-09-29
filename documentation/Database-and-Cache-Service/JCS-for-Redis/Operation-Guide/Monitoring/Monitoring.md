@@ -1,4 +1,4 @@
-﻿# 性能监控
+# 性能监控
 
 目前提供内存使用量、内存使用率、内网进出流量、QPS、命中率、实例key个数这六种监控类型：
 
@@ -33,4 +33,4 @@
 
 如果想查看更加详细的监控指标数据，请在云监控菜单进行查看
 
-![监控图](https://github.com/jdcloudcom/cn/tree/edit/image/Redis/monitoring.png)
+![监控图](https://github.com/jdcloudcom/cn/blob/master/image/Redis/monitoring.png)

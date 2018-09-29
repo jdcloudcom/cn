@@ -29,7 +29,7 @@ definitions:
         description: 镜像的操作系统类型。取值：windows,linux
       status:
         type: string
-        description: <a href="https://www.jdcloud.com/help/detail/3871/isCatalog/1">参考镜像状态</a>
+        description: <a href="http://docs.jdcloud.com/virtual-machines/api/image_status">参考镜像状态</a>
       createTime:
         type: string
         format: date-time

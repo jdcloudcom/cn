@@ -1,0 +1,13 @@
+swagger: "2.0"
+definitions:
+  gpu:
+    x-jdcloud-module: vm
+    description: 描述实例类型Gpu信息
+    type: object
+    properties:
+      model:
+        type: string
+        description: GPU型号
+      number:
+        type: integer
+        description: GPU数量

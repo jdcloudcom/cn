@@ -14,31 +14,31 @@
 
 跨域资源共享（Cross-Origin Resource Sharing），简称CORS，是HTML5提供的标准跨域解决方案，服务端对于跨域请求的处理流程如下：
 
-1. CORS通过HTTP请求中附带Origin的Header来表明自己来源域，服务器端接收到这个请求之后，首先检查HTTP头部有无Origin字段，如果HTTP头部没有Origin，或者不允许，直接当成普通请求处理，处理结束。
+1.CORS通过HTTP请求中附带Origin的Header来表明自己来源域，服务器端接收到这个请求之后，首先检查HTTP头部有无Origin字段，如果HTTP头部没有Origin，或者不允许，直接当成普通请求处理，处理结束。
 
-2. 如果HTTP头有Origin并且是允许的，服务器在返回的响应中会附带上Access-Control-Allow-Origin这个Header。
+2.如果HTTP头有Origin并且是允许的，服务器在返回的响应中会附带上Access-Control-Allow-Origin这个Header。
 
-3. 浏览器根据是否返回了对应的Header来决定该跨域请求是否成功，如果没有附加对应的Header，浏览器将会拦截该请求；此外，还要判断该请求是一个简单请求还是一个预请求（Preflighted Request），如果不是简单请求，浏览器并不会立即执行对应的请求代码，而是会先发送Preflighted Request（预先验证请求），Preflighted Request是一个OPTION请求，用于询问要被跨域访问的服务器，是否允许当前域名下的页面发送跨域的请求。OPTIONS请求头部中会包含以下头部：Origin、Access-Control-Request-Method、Access-Control-Request-Headers。服务器收到OPTIONS请求后，设置Access-Control-Allow-Origin、Access-Control-Allow-Method、Access-Control-Allow-Headers头部与浏览器沟通来判断是否允许这个请求。如果Preflighted Request验证通过，浏览器才会发送真正的跨域请求。否则，浏览器会拦截接下来的请求。
+3.浏览器根据是否返回了对应的Header来决定该跨域请求是否成功，如果没有附加对应的Header，浏览器将会拦截该请求；此外，还要判断该请求是一个简单请求还是一个预请求（Preflighted Request），如果不是简单请求，浏览器并不会立即执行对应的请求代码，而是会先发送Preflighted Request（预先验证请求），Preflighted Request是一个OPTION请求，用于询问要被跨域访问的服务器，是否允许当前域名下的页面发送跨域的请求。OPTIONS请求头部中会包含以下头部：Origin、Access-Control-Request-Method、Access-Control-Request-Headers。服务器收到OPTIONS请求后，设置Access-Control-Allow-Origin、Access-Control-Allow-Method、Access-Control-Allow-Headers头部与浏览器沟通来判断是否允许这个请求。如果Preflighted Request验证通过，浏览器才会发送真正的跨域请求。否则，浏览器会拦截接下来的请求。
 
-4. 如果服务器允许所有的跨域请求，将Access-Control-Allow-Origin的Header设置为*即可，但不推荐。
+4.如果服务器允许所有的跨域请求，将Access-Control-Allow-Origin的Header设置为*即可，但不推荐。
 
-5. CORS规则匹配成功必须满足三个条件，首先，请求的Origin必须匹配一项AllowedOrigin项，其次，请求的方法（如GET，PUT等）或者OPTIONS请求的Access-Control-Request-Method头对应的方法必须匹配一项AllowedMethod项，最后，OPTIONS请求的Access-Control-Request-Headers头包含的每个Header都必须匹配一项AllowedHeader项。
+5.CORS规则匹配成功必须满足三个条件，首先，请求的Origin必须匹配一项AllowedOrigin项，其次，请求的方法（如GET，PUT等）或者OPTIONS请求的Access-Control-Request-Method头对应的方法必须匹配一项AllowedMethod项，最后，OPTIONS请求的Access-Control-Request-Headers头包含的每个Header都必须匹配一项AllowedHeader项。
 
 ## 细节分析：
 
-1. CORS规则的配置是作用在Bucket级别的，默认Bucket不开启CORS规则，所有的跨域请求的Origin都不被允许；每个Bucket的CORS设定是由多条CORS规则指定的，每个Bucket最多允许10条规则，若是通过自定义XML的方式添加CORS规则，则XML文档最多允许16KB大小。
+1.CORS规则的配置是作用在Bucket级别的，默认Bucket不开启CORS规则，所有的跨域请求的Origin都不被允许；每个Bucket的CORS设定是由多条CORS规则指定的，每个Bucket最多允许10条规则，若是通过自定义XML的方式添加CORS规则，则XML文档最多允许16KB大小。
 
-2. CORS相关的Header附加等都是浏览器自动完成的，用户不需要有任何额外的操作，CORS请求与对象存储的身份验证是完全独立的，即CORS规则仅仅是用来决定是否附加CORS相关的Header的一个规则，是否拦截该请求完全由浏览器决定。
+2.CORS相关的Header附加等都是浏览器自动完成的，用户不需要有任何额外的操作，CORS请求与对象存储的身份验证是完全独立的，即CORS规则仅仅是用来决定是否附加CORS相关的Header的一个规则，是否拦截该请求完全由浏览器决定。
 
-3. 使用跨域请求的时候需要关注浏览器是否开启了Cache功能。当运行在同一个浏览器上分别来源于www.example1.com和www.example2.com 的两个页面都同时请求同一个跨域资源的时候，如果www.example1.com 的请求先到达服务器，服务器将资源带上Access-Control-Allow-Origin的Header为www.example1.com 返回给用户。这个时候www.example2.com 又发起了请求，浏览器会将Cache的上一次请求返回给用户，此时Header的内容和CORS的要求不匹配，就会导致后面的请求失败。
+3.使用跨域请求的时候需要关注浏览器是否开启了Cache功能。当运行在同一个浏览器上分别来源于www.example1.com和www.example2.com 的两个页面都同时请求同一个跨域资源的时候，如果www.example1.com 的请求先到达服务器，服务器将资源带上Access-Control-Allow-Origin的Header为www.example1.com 返回给用户。这个时候www.example2.com 又发起了请求，浏览器会将Cache的上一次请求返回给用户，此时Header的内容和CORS的要求不匹配，就会导致后面的请求失败。
 
 ## 在控制台中设置过程如下：
 
-1. 登入控制台->对象存储->空间管理->进入某个Bucket->空间设置，命名为“跨域访问设置”：
+1.登入控制台->对象存储->空间管理->进入某个Bucket->空间设置，命名为“跨域访问设置”：
 
 ![跨域访问设置](https://github.com/jdcloudcom/cn/blob/edit/image/Object-Storage-Service/OSS-037.png)
 
-2. 点击“跨域访问设置”Tab签之后，下方是CORS规则列表，默认每个Bucket最多支持10条规则。规则列表的各字段说明如下：
+2.点击“跨域访问设置”Tab签之后，下方是CORS规则列表，默认每个Bucket最多支持10条规则。规则列表的各字段说明如下：
 
 a.来源Allowed Origin：允许跨域请求的来源，可以同时指定多个。配置时需带上完整的域信息，例如http://10.100.100.100:8001 或https://www.jcloud.com 。注意， 不要遗漏了协议名http或https，如果端口不是默认的80，还需要带上端口。如果不能确定的域名，可以打开浏览器的调试功能，查看header中的Origin。域名支持通配符*，每个域名中允许最多使用一个*，例如https://*.jcloud.com 。如果来源指定为*，则表示允许所有来源的跨域请求。
 
@@ -50,7 +50,7 @@ d.Exposed Headers：暴露给浏览器的header列表，即用户从应用程序
 
 e.缓存Max Age：浏览器对特定资源的预取请求（OPTIONS请求）返回结果的缓存时间，单位为秒。如果没有特殊情况可以稍大一点，比如60秒。该项是可选配置项。
 
-3. 添加CORS规则：在跨域访问CORS规则列表上方，可通过点击“CORS规则设置”按钮来添加CORS规则，效果如下：
+3.添加CORS规则：在跨域访问CORS规则列表上方，可通过点击“CORS规则设置”按钮来添加CORS规则，效果如下：
 
 ![添加CORS规则](https://github.com/jdcloudcom/cn/blob/edit/image/Object-Storage-Service/OSS-038.png)
 
@@ -64,7 +64,7 @@ c. 对于在多行文本框中，若输入了两行完全一样的内容，如�
 
 d. 域名格式的通配符只支持http://*.example.com ，不支持http://www.abc.*.com 这种格式；对于IP，要支持CIDR格式，支持http://10.110.120.*:8080 ，不支持http://10.110.*.*:8080 这种格式
 
-4. 还可以通过点击“CORS规则编辑器”来自定义CORS规则，效果如下：
+4.还可以通过点击“CORS规则编辑器”来自定义CORS规则，效果如下：
 
 ![CORS规则编辑器](https://github.com/jdcloudcom/cn/blob/edit/image/Object-Storage-Service/OSS-039.png)
 

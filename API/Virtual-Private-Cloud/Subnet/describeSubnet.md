@@ -12,8 +12,8 @@ https://vpc.jdcloud-api.com/v1/regions/{regionId}/subnets/{subnetId}
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**regionId**|String|True||Region ID|
-|**subnetId**|String|True||Subnet ID|
+|**regionId**|String|True| |Region ID|
+|**subnetId**|String|True| |Subnet ID|
 
 ## 请求参数
 无
@@ -23,14 +23,13 @@ https://vpc.jdcloud-api.com/v1/regions/{regionId}/subnets/{subnetId}
 |名称|类型|描述|
 |---|---|---|
 |**requestId**|String|请求ID|
-|**result**|[Result](##Result)|返回结果|
+|**result**|Result|返回结果|
 
-
-### <a name="Result">Result</a>
+### Result
 |名称|类型|描述|
 |---|---|---|
-|**subnet**|[Subnet](##Subnet)|子网资源信息|
-### <a name="Subnet">Subnet</a>
+|**subnet**|Subnet|子网资源信息|
+### Subnet
 |名称|类型|描述|
 |---|---|---|
 |**aclId**|String|子网关联的acl Id|

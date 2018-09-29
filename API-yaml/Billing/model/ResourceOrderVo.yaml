@@ -1,0 +1,144 @@
+swagger: "2.0"
+definitions:
+  resourceOrderVo:
+    x-jdcloud-module: billing
+    title: ResourceOrderVo
+    type: object
+    x-jdcloud-internal: true
+    properties:
+      id:
+        type: integer
+        description: "主键id"
+      transactionNo:
+        type: string
+        description: "交易单唯一标识"
+      resourceId:
+        type: string
+        description: "资源id"
+      billingType:
+        type: integer
+        description: "计费类型 1:按配置 2:按用量 3:包年包月 4:一次性"
+      timeUnit:
+        type: integer
+        description: "时长类型 1:小时 2:天 3:月 4:年"
+      timeSpan:
+        type: integer
+        description: "时长字段，与timeUnit字段构成具体时长"
+      status:
+        type: integer
+        description: "资源状态 1:正常 2:停服 3:删除"
+      billingStatus:
+        type: integer
+        description: "计费状态 0:停止计费 1:计费中"
+      networkOperator:
+        type: integer
+        description: "网络类型0:无 1: non-BGP, 2: BGP"
+      pin:
+         type: string
+         description: "用户pin"
+      appCode:
+         type: string
+         description: "应用码"
+      serviceCode:
+         type: string
+         description: "服务码"
+      site:
+         type: integer
+         description: "站点标识0:中国 1:国际"
+      region:
+         type: string
+         description: "资源区域"
+      formula:
+        type: array
+        items:
+          $ref: "../model/Formula.yaml#/definitions/formula"
+        description: "配置信息"
+      isOnTrial:
+         type: integer
+         description: "否为试用资源 0:非试用 1:试用"
+      startTime:
+         type: string
+         description: "开始时间"
+      endTime:
+         type: string
+         description: "结束时间"
+      createTime:
+         type: string
+         description: "创建时间"
+      payTime:
+         type: string
+         description: "支付时间"
+      formulaStr:
+         type: string
+         description: "formula转换成字符串"
+      chargeMode:
+         type: integer
+         description: "billingType兼容交易系统字段"
+      chargeDuration:
+         type: integer
+         description: "timeSpan兼容交易系统字段"
+      chargeUnit:
+         type: integer
+         description: "timeUnit兼容交易系统字段"
+      aeStatus:
+         type: integer
+         description: "欠费过期状态"
+      releasingTime:
+         type: string
+         description: "欠费、过期资源释放时间"
+      sourceId:
+         type: string
+         description: "交易单模块sourceId 计费不关心"
+      billingStartTime:
+         type: string
+         description: "计费开始时间 续费时本次续费周期开始时间"
+      priceMap:
+         type: map
+         properties:
+           key:
+             type: string
+           value:
+             type: number
+         description: "最新价格map"
+      priceSnapshot:
+         type: string
+         description: "价格快照"
+      price:
+         type: number
+         description: "订单折扣前总价"
+      discountedPrice:
+         type: number
+         description: "折扣后订单价格"
+      expiringDays:
+         type: integer
+         description: "即将到期天数"
+      billingCategoryDescription:
+         type: string
+         description: "计费类型描述 例如:按配置、包年包月"
+      description:
+         type: string
+         description: "计费详情描述 例如:按配置、包年包月（一年）"
+      refundNo:
+         type: string
+         description: "refundNo"
+      billingTypeName:
+         type: string
+         description: "计费类型单号"
+      favorableInfo:
+         type: string
+         description: "促销明细"
+      resourceName:
+         type: string
+         description: "资源名"
+      processType:
+         type: integer
+         description: "变配明细（1-升配，2-降配，3-调整配置,4-续费,5-续费升配,6-续费降配,7-配置转包年包月）"
+      applicant:
+         type: string
+         description: "资源申请人"
+      billingMode:
+         type: integer
+         description: "计费模式  1.停服停止计费  2.关机停止计费"
+      operateTime:
+         type: string
+         description: "启服、停服、停止计费时间"

@@ -2,7 +2,7 @@
 
 ## 前置条件
 
-删除高可用组前，您需要移除或删除高可用组内所有实例，详细操作步骤请参见[删除实例](../../Virtual-Machine/Operation-Guide/Instance/Delete-Instance.md)，[移除实例](../../Virtual-Machine/Operation-Guide/Instance-Template/Create-Instance-Template.md)。
+删除高可用组前，您需要移除或删除高可用组内所有实例，详细操作步骤请参见[删除实例](../../Virtual-Machines/Operation-Guide/Instance/Delete-Instance.md)，[移除实例](../../Virtual-Machine/Operation-Guide/Instance-Template/Create-Instance-Template.md)。
 
 ## 操作步骤
 
@@ -15,6 +15,6 @@
 
 ## 相关参考
 
-[删除实例](../../Virtual-Machine/Operation-Guide/Instance/Delete-Instance.md)
+[删除实例](../../Virtual-Machines/Operation-Guide/Instance/Delete-Instance.md)
 
-[移除实例](../../Virtual-Machine/Operation-Guide/Instance-Template/Create-Instance-Template.md)。
+[移除实例](../../Virtual-Machines/Operation-Guide/Instance-Template/Create-Instance-Template.md)。

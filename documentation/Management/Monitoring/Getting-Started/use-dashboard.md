@@ -11,4 +11,4 @@
 ![](https://raw.githubusercontent.com/jdcloudcom/cn/edit/image/Cloud-Monitor/zuijiashijian/%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B51.2.png)
 ### 查看dashboard监控图表
 进入监控面板详情页，可查看到当前面板配置的全部监控图概览信息。针对单个监控图表，支持时间筛选、放大、下载等操作，可细粒度查看监控数据。
-![](https://raw.githubusercontent.com/jdcloudcom/cn/zhangwenjie30-patch-4/image/Cloud-Monitor/dashboard/%E6%9F%A5%E7%9C%8B%E7%9B%91%E6%8E%A7%E5%9B%BE%E8%A1%A8.png)
+![](https://raw.githubusercontent.com/jdcloudcom/cn/Monitoring-cn/image/Cloud-Monitor/dashboard/DashboardDetails_GetStart.png)

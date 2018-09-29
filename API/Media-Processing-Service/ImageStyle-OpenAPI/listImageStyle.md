@@ -12,36 +12,36 @@ https://mps.jdcloud-api.com/v1/regions/{regionId}/buckets/{bucketName}/imageStyl
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**bucketName**|String|True||Bucket名称|
-|**regionId**|String|True||区域ID|
+|**bucketName**|String|True| |Bucket名称|
+|**regionId**|String|True| |区域ID|
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
 |**pageNumber**|Integer|False|1|数据页码|
 |**pageSize**|Integer|False|10|每页数据的条数|
-|**styleName**|String|False||按样式名称查询|
+|**styleName**|String|False| |按样式名称查询|
 
 
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String||
-|**result**|[Result](##Result)||
+|**requestId**|String| |
+|**result**|Result| |
 
 
-### <a name="Result">Result</a>
+### Result
 |名称|类型|描述|
 |---|---|---|
-|**imageStyleQueryResult**|[ImageStyleQueryResult](##ImageStyleQueryResult)||
-### <a name="ImageStyleQueryResult">ImageStyleQueryResult</a>
+|**imageStyleQueryResult**|ImageStyleQueryResult| |
+### ImageStyleQueryResult
 |名称|类型|描述|
 |---|---|---|
-|**imageStyleList**|[ImageStyle[]](##ImageStyle)|图片样式列表|
+|**imageStyleList**|ImageStyle[]|图片样式列表|
 |**pageNumber**|Integer|数据页码|
 |**pageSize**|Integer|每页数据的条数|
 |**styleName**|String|按样式名称查询|
-### <a name="ImageStyle">ImageStyle</a>
+### ImageStyle
 |名称|类型|描述|
 |---|---|---|
 |**bucketName**|String|所属Bucket|

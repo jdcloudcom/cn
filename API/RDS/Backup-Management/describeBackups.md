@@ -12,33 +12,32 @@ https://rds.jdcloud-api.com/v1/regions/{regionId}/backups
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**regionId**|String|True||地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)|
+|**regionId**|String|True| |地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)|
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**auto**|Integer|False||查询备份类型，0为手动备份，1为自动备份，不传表示全部. <br>**- 测试参数，仅支持SQL Server，后续可能被其他参数取代**|
-|**backupTimeRangeEndFilter**|String|False||返回备份开始时间小于等于该时间的备份列表<br>**- 测试参数，仅支持SQL Server，后续可能被其他参数取代**|
-|**backupTimeRangeStartFilter**|String|False||返回备份开始时间大于该时间的备份列表<br>**- 测试参数，仅支持SQL Server，后续可能被其他参数取代**|
-|**backupTypeFilter**|String|False||返回backupType等于指定值的备份列表。full为全量备份，diff为增量备份<br>**- 测试参数，仅支持SQL Server，后续可能被其他参数取代**|
-|**dbNameFilter**|String|False||返回dbName等于指定值的备份列表，不传或为空返回全部<br>**- 测试参数，仅支持SQL Server，后续可能被其他参数取代**|
-|**instanceId**|String|True||RDS实例ID，唯一标识一个实例|
-|**pageNumber**|Integer|True||显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。|
-|**pageSize**|Integer|True||每页显示的数据条数，默认为10，取值范围：10、20、30、50、100|
+|**auto**|Integer|False| |查询备份类型，0为手动备份，1为自动备份，不传表示全部. <br>**- 测试参数，仅支持SQL Server，后续可能被其他参数取代**|
+|**backupTimeRangeEndFilter**|String|False| |返回备份开始时间小于等于该时间的备份列表<br>**- 测试参数，仅支持SQL Server，后续可能被其他参数取代**|
+|**backupTimeRangeStartFilter**|String|False| |返回备份开始时间大于该时间的备份列表<br>**- 测试参数，仅支持SQL Server，后续可能被其他参数取代**|
+|**backupTypeFilter**|String|False| |返回backupType等于指定值的备份列表。full为全量备份，diff为增量备份<br>**- 测试参数，仅支持SQL Server，后续可能被其他参数取代**|
+|**dbNameFilter**|String|False| |返回dbName等于指定值的备份列表，不传或为空返回全部<br>**- 测试参数，仅支持SQL Server，后续可能被其他参数取代**|
+|**instanceId**|String|True| |RDS实例ID，唯一标识一个实例|
+|**pageNumber**|Integer|True| |显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。|
+|**pageSize**|Integer|True| |每页显示的数据条数，默认为10，取值范围：10、20、30、50、100|
 
 
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**result**|[Result](##Result)||
+|**result**|Result| |
 
-
-### <a name="Result">Result</a>
+### Result
 |名称|类型|描述|
 |---|---|---|
-|**backup**|[Backup[]](##Backup)|备份集合|
+|**backup**|Backup[]|备份集合|
 |**totalCount**|Integer|总记录数|
-### <a name="Backup">Backup</a>
+### Backup
 |名称|类型|描述|
 |---|---|---|
 |**backupEndTime**|String|备份结束时间，格式为：YYYY-MM-DD HH:mm:ss<br>- **SQL Server支持**<br>- **MySQL不支持**|

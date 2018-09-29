@@ -30,10 +30,9 @@ public class S3SdkTest{
     public static void main(String[] args)  {
         final String accessKey = "your accesskey";
         final String secretKey = "your secretkey";
-        final String endpoint = "http://s3.cn-north-1.jcloudcs.com";
+        final String endpoint = "https://s3.cn-north-1.jcloudcs.com";
         System.setProperty(SDKGlobalConfiguration.ENABLE_S3_SIGV4_SYSTEM_PROPERTY, "true");
         ClientConfiguration config = new ClientConfiguration();
-        config.setProtocol(Protocol.HTTP);
  
         AwsClientBuilder.EndpointConfiguration endpointConfig =
                 new AwsClientBuilder.EndpointConfiguration(endpoint, "cn-north-1");
@@ -41,7 +40,7 @@ public class S3SdkTest{
         AWSCredentials awsCredentials = new BasicAWSCredentials(accessKey,secretKey);
         AWSCredentialsProvider awsCredentialsProvider = new AWSStaticCredentialsProvider(awsCredentials);
  
-        AmazonS3 s3  = AmazonS3Client.builder()
+        AmazonS3 s3 = AmazonS3Client.builder()
                 .withEndpointConfiguration(endpointConfig)
                 .withClientConfiguration(config)
                 .withCredentials(awsCredentialsProvider)
@@ -51,3 +50,6 @@ public class S3SdkTest{
     }
 }
 ```
+
+## 示例
+更多Java SDK示例请访问[京东云兼容S3 Java SDK示例](https://github.com/jdcloud-cmw/oss/tree/master/s3-java-sdk)

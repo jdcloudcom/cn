@@ -16,5 +16,5 @@ A：API网关产品在公测期间免费。对于其它相关收费按照相关�
 
 **Q：基于分组的自定义域名最多能绑定几个**
 
-A：目前每个分组最多支持5各自定义域名绑定。[配置自定义域名步骤说明](../Operation-Guide/Create-Domain/Create-Domain.md)
+A：目前每个分组最多支持5个自定义域名绑定。[配置自定义域名步骤说明](../Operation-Guide/Create-Domain/Create-Domain.md)
 

@@ -1,4 +1,4 @@
-# setCcIpLimit
+# setCCIpLimit
 
 
 ## 描述
@@ -8,29 +8,28 @@
 POST
 
 ## 请求地址
-https://ipanti.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}:setCcIpLimit
+https://ipanti.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}:setCCIpLimit
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**instanceId**|String|True||实例 ID|
-|**regionId**|String|True||Region ID|
+|**instanceId**|String|True| |实例 ID|
+|**regionId**|String|True| |Region ID|
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**cCSpec**|[CcIpLimitSpec](##CcIpLimitSpec)|True||CC 参数|
+|**cCSpec**|CcIpLimitSpec|True| |CC 参数|
 
-### <a name="CcIpLimitSpec">CcIpLimitSpec</a>
+### CcIpLimitSpec
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**ccSpeedLimit**|Integer|False||cc防护每ip的限速大小|
-|**ccSpeedPeriod**|Integer|False||cc防护每ip的限速大小的统计周期|
+|**ccSpeedLimit**|Integer|False| |cc防护每ip的限速大小|
+|**ccSpeedPeriod**|Integer|False| |cc防护每ip的限速大小的统计周期|
 
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String||
-
+|**requestId**|String| |
 
 
 ## 返回码

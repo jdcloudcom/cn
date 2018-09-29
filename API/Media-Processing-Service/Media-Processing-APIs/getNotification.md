@@ -2,7 +2,7 @@
 
 
 ## 描述
-获取截图通知
+获取媒体处理通知
 
 ## 请求方式
 GET
@@ -12,7 +12,7 @@ https://mps.jdcloud-api.com/v1/regions/{regionId}/notification
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**regionId**|String|True||region id|
+|**regionId**|String|True| |region id|
 
 ## 请求参数
 无
@@ -21,15 +21,14 @@ https://mps.jdcloud-api.com/v1/regions/{regionId}/notification
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String||
-|**result**|[Result](##Result)||
+|**requestId**|String| |
+|**result**|Result| |
 
-
-### <a name="Result">Result</a>
+### Result
 |名称|类型|描述|
 |---|---|---|
-|**notification**|[Notification](##Notification)||
-### <a name="Notification">Notification</a>
+|**notification**|Notification| |
+### Notification
 |名称|类型|描述|
 |---|---|---|
 |**enabled**|Boolean|是否启用通知|

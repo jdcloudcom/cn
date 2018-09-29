@@ -86,29 +86,5 @@
          href: Operation-Guide/Cloud-Disk-Snapshot/Recover-CloudDisk.md
        - name: 删除快照
          href: Operation-Guide/Cloud-Disk-Snapshot/Deletion-Snapshot.md
-
-
-  - name: 最佳实践
-    items:
-    status: 0
-  - name: 问题排查
-    items:
-    status: 0
   - name: 常见问题
     href: FAQ/FAQ.md
-  - name: API参考
-    href:
-    status: 0
-  - name: SDK参考
-    href:
-    status: 0
-  - name: 用户协议
-    items:
-    - name: 服务条款
-      href:
-      status: 0
-  - name: 相关资源
-    items:
-    - name: 文档历史记录
-      href:
-      status: 0

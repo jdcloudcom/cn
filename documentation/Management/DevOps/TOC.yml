@@ -14,7 +14,7 @@
       - name: 产品功能
         href: Introduction/Features.md
       - name: 产品规格
-        href: Introduction/Specification.md
+        href: Introduction/Specifications.md
       - name: 限制说明
         href: Introduction/Restrictions.md
       - name: 应用场景 
@@ -70,6 +70,7 @@
     - name: 智能监控
       href: Best-Practices/Monitoring.md
   - name: 教程
+    status: 0
     items:
   - name: 问题排查
     items:

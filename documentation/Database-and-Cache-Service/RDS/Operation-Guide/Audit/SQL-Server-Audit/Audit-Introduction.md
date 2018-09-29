@@ -9,7 +9,7 @@
 
 
 ## 审计选项
-于每个审计项的具体说明，可以参考微软相应版本的官方文档：
+于每个审计项的具体说明，可以参考微软相应版本的官方文档：<br>
 - [2008R2](https://docs.microsoft.com/zh-cn/previous-versions/sql/sql-server-2008-r2/cc280663%28v%3dsql.105%29)
 - [2012](https://docs.microsoft.com/zh-cn/previous-versions/sql/sql-server-2012/cc280663%28v%3dsql.110%29)
 - [2014](https://docs.microsoft.com/zh-cn/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions?view=sql-server-2014)

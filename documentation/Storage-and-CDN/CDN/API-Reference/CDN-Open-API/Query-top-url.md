@@ -18,7 +18,6 @@
 | pageNumber | int      | 否           | 查询分页页码，不传默认为1                                    |
 | pageSize   | int      | 否           | 查询分页条数，不传默认100条                                  |
 
- 
 
 ## **3、返回参数**
 
@@ -28,7 +27,6 @@
 | msg      | 提示信息 |
 | data     | 返回数据 |
 
-##  
 
 ## **4、调用示例**
 
@@ -163,7 +161,6 @@ http://opencdn.jcloud.com/api/queryTopUrl
                 "bandwidth": 6121.59,
                 "url": "www.a.com/cdn-mon/monitor.jpg?Mon%20Dec%2018%202017%2000:08:48%20GMT+0800%20(CST)0.12802168394632263"
             }
-           
         ]
     }
 }

@@ -5,9 +5,9 @@
 更多详情请参见：
 
 
-- [后付费计费说明](https://www.jdcloud.com/help/detail/1393/isCatalog/1)。
+* [后付费计费说明](../../../Finance/Billing/Billing-method/Postpay.md)。
 
-- [账单说明](https://www.jdcloud.com/help/detail/1397/isCatalog/1)。	
+* [消费总览](../../../Finance/Billing/Bill/Purchases-overview.md)。	
 
 
 	

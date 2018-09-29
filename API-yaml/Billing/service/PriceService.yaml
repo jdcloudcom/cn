@@ -1,0 +1,142 @@
+swagger: "2.0"
+info:
+ version: "v1"
+ title: 价格计算
+ description: 价格计算
+
+basePath: /regions/{regionId}
+
+schemes:
+ - http
+
+paths:
+  "/calculateTotalPrice":
+    ###################### 查询价格 ######################
+    post:
+      description: "查询计费价格信息"
+      operationId: calculateTotalPrice
+      x-jdcloud-internal: false
+      parameters:
+        - name: cmd
+          in: query
+          type: integer
+          required: true
+          description: 操作类型 1:创建 2:续费 3:升配 4:删除
+        - name: orderList
+          in: query
+          type: array
+          items:
+            $ref: "../model/OrderPriceProtocal.yaml#/definitions/orderPriceProtocol"
+          description: 计算价格的订单
+        - name: operateTime
+          in: query
+          type: string
+          required: false
+          description: 操作时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+        - name: promotionInfo
+          in: query
+          type: string
+          required: false
+          description: 1:折扣（不需要传） 2:免费活动3:付费活动 4:推荐码 5:会员价 [{"promotionType":1,"activityCode":123},{"promotionType":2,"activityCode":}]
+        - name: clientType
+          in: query
+          type: integer
+          required: false
+          description: 客户端：1.PC端；2.移动端；
+        - name: packageCount
+          in: query
+          type: integer
+          required: true
+          description: 批量购买时数量
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                properties:
+                  totalPrice:
+                    type: number
+                    description:  订单折扣前总价
+                  totalPriceScale4:
+                    type: number
+                    description: 订单折扣前总价4位
+                  discountedTotalPrice:
+                    type: number
+                    description: 折扣后订单价格
+                  totalDiscount:
+                    type: number
+                    description: 总折扣金额
+                  list:
+                    type: array
+                    items:
+                      $ref: "../model/OrderPriceDetail.yaml#/definitions/orderPriceDetail"
+                    description: 计算完价格后的详细订单列表
+                  totalOriginalPrice:
+                    type: number
+                    description: 订单原价 包年时 一年原价为12个月价格，totalPrice为10个月价格
+                  favorableInfos:
+                    type: string
+                    description: 参与优惠的明细
+                  remark:
+                    type: string
+                    description: 备注
+                  totalUnitPrice:
+                    type: string
+                    description: 各订单单价总和
+              requestId:
+                type: string
+        404:
+          description: NOT_FOUND
+  "/price/calculateCompensateFeeAndSendCoupons":
+    ###################### 计算赔偿金额并发放代金券 ######################
+    post:
+      description: "计算赔偿金额并发放代金券"
+      operationId: calculateCompensateFeeAndSendCoupons
+      parameters:
+        - name: pin
+          in: query
+          type: string
+          required: true
+          description: "用户pin"
+        - name: resourceIds
+          in: query
+          type: array
+          required: true
+          items:
+            type: string
+          description: "资源ID"
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                properties:
+                  pin:
+                    type: string
+                    description:  "用户pin"
+                  totalCompensateFee:
+                    type: number
+                    description: "计算总价"
+                  resourceList:
+                    type: array
+                    items:
+                      $ref: "../model/OrderCompensateFeeVo.yaml#/definitions/orderCompensateFeeVo"
+                    description: "订单信息"
+              requestId:
+                type: string
+        404:
+          description: NOT_FOUND
+parameters:
+  regionId:
+    name: regionId
+    in: path
+    required: true
+    type: string
+  resourceId:
+    name: resourceId
+    type: string
+    required: true
+    in: path

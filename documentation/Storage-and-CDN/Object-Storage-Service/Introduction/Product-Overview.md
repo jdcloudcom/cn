@@ -17,13 +17,13 @@
 
 [计费规则](../Pricing/Billing-Rules.md) 
 
-[存储基本操作](../Operation-Guide/Sign-Up-Service.md)
+[存储基本操作](../Operation-Guide/Sign-Up-Service-2.md)
 
-[图片处理](../Operation-Guide/Image-Service-Guide/Introduction.md)
+[图片处理](../Operation-Guide/Image-Service-Guide/Introduction-1.md)
 
 [视频处理](../Operation-Guide/Video-Service-Guide/Video-Service-Guide-Overview.md)
 
-[兼容S3 API](../API-Reference-S3-Compatible/Introduction.md)
+[兼容S3 API](../API-Reference-S3-Compatible/Introduction-2.md)
 
 [JAVA SDK](../API-Reference-S3-Compatible/Compatibility-Tools/SDK-Java.md)
 

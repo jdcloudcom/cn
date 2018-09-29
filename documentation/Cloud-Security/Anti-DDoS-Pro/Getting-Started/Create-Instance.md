@@ -5,7 +5,7 @@
 本文介绍通过控制台创建 IP高防 实例。
 
 ## 前提条件
-- 已注册京东云账号，并完成实名认证。如果还没有账号请 [注册](https://accounts.jdcloud.com/p/regPage?source=jdcloud&ReturnUrl=%2f%2fuc.jdcloud.com%2fpassport%2fcomplete%3freturnUrl%3dhttp%3A%2F%2Fuc.jdcloud.com%2Fredirect%2FloginRouter%3FreturnUrl%3Dhttps%253A%252F%252Fwww.jdcloud.com%252Fhelp%252Fdetail%252F734%252FisCatalog%252F1)，或 [实名认证](https://uc.jdcloud.com/account/certify)。
+- 已注册京东云账号，并完成实名认证。如果还没有账号请 [注册](https://accounts.jdcloud.com/p/regPage?source=jdcloud%26ReturnUrl=%2f%2fuc.jdcloud.com%2fpassport%2fcomplete%3freturnUrl%3dhttp%3A%2F%2Fuc.jdcloud.com%2Fredirect%2FloginRouter%3FreturnUrl%3Dhttps%253A%252F%252Fwww.jdcloud.com%252Fhelp%252Fdetail%252F734%252FisCatalog%252F1)，或 [实名认证](https://uc.jdcloud.com/account/certify)。
 - 如需使用弹性防护，请确保您的账户余额（包括代金券）不小于至少支付1天弹性最高套餐费用的金额，以免欠费影响使用
 
 ## 操作步骤
@@ -18,4 +18,4 @@
 购买支付以后，即成功创建一个实例。
 
 ## 相关参考
-- [计费规则](../../Pricing/Billing-Rules.md)
+- [计费规则](../Pricing/Billing-Rules.md)

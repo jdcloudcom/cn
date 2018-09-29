@@ -13,7 +13,7 @@ https://oss.jdcloud-api.com/v1/regions/{regionId}/buckets
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**regionId**|String|True||Region ID，例如：cn-north-1|
+|**regionId**|String|True| |Region ID，例如：cn-north-1|
 
 ## 请求参数
 无
@@ -22,25 +22,24 @@ https://oss.jdcloud-api.com/v1/regions/{regionId}/buckets
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String||
-|**result**|[Result](##Result)||
+|**requestId**|String| |
+|**result**|Result| |
 
-
-### <a name="Result">Result</a>
+### Result
 |名称|类型|描述|
 |---|---|---|
-|**buckets**|[Bucket[]](##Bucket)||
-|**owner**|[User](##User)||
-### <a name="Bucket">Bucket</a>
+|**buckets**|Bucket[]| |
+|**owner**|User| |
+### Bucket
 |名称|类型|描述|
 |---|---|---|
-|**creationDate**|String||
-|**name**|String||
-### <a name="User">User</a>
+|**creationDate**|String| |
+|**name**|String| |
+### User
 |名称|类型|描述|
 |---|---|---|
-|**displayName**|String||
-|**id**|String||
+|**displayName**|String| |
+|**id**|String| |
 
 ## 返回码
 |返回码|描述|

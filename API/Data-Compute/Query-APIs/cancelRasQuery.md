@@ -12,27 +12,26 @@ https://xdata.jdcloud-api.com/v1/regions/{regionId}/dwQuery:cancelRasQuery
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**regionId**|String|True||地域ID|
+|**regionId**|String|True| |地域ID|
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**queryId**|String|True||查询id|
-|**userName**|String|True||用户名称|
+|**queryId**|String|True| |查询id|
+|**userName**|String|True| |用户名称|
 
 
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String||
-|**result**|[Result](##Result)||
+|**requestId**|String| |
+|**result**|Result| |
 
-
-### <a name="Result">Result</a>
+### Result
 |名称|类型|描述|
 |---|---|---|
-|**message**|String||
-|**status**|Boolean||
+|**message**|String| |
+|**status**|Boolean| |
 
 ## 返回码
 |返回码|描述|

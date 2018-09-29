@@ -32,7 +32,7 @@
       - name: 云主机使用弹性公网IP
         items:
           - name: 配置介绍
-            href: Getting-Started/Elastic-IP-with-VM/Configuration-Introduction.md
+            href: Getting-Started/Elastic-IP-with-VM/VM-Configuration-Introduction.md
           - name: 创建云主机
             href: Getting-Started/Elastic-IP-with-VM/Create-VM-Instance.md
           - name: 云主机绑定弹性公网IP
@@ -42,7 +42,7 @@
       - name: 负载均衡使用弹性公网IP
         items:
           - name: 配置介绍
-            href: Getting-Started/Elastic-IP-with-LB/Configuration-Introduction.md
+            href: Getting-Started/Elastic-IP-with-LB/LB-Configuration-Introduction.md
           - name: 创建负载均衡
             href: Getting-Started/Elastic-IP-with-LB/Create-LB-Instance.md
           - name: 负载均衡绑定弹性公网IP
@@ -52,7 +52,7 @@
       - name: 原生容器使用弹性公网IP
         items:
           - name: 配置介绍
-            href: Getting-Started/Elastic-IP-with-Container/Configuration-Introduction.md
+            href: Getting-Started/Elastic-IP-with-Container/Container-Configuration-Introduction.md
           - name: 创建原生容器
             href: Getting-Started/Elastic-IP-with-Container/Create-Container-Instance.md
           - name: 原生容器绑定弹性公网IP

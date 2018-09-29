@@ -12,48 +12,47 @@ https://mongodb.jdcloud-api.com/v1/regions/{regionId}/instances
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**regionId**|String|True||Region ID|
+|**regionId**|String|True| |Region ID|
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**filters**|[Filter[]](##Filter)|False||instanceId - 实例ID, 精确匹配<br>instanceName - 实例名称, 模糊匹配<br>instanceStatus - mongodb状态，精确匹配，支持多个.RUNNING：运行, ERROR：错误 ,BUILDING：创建中, DELETING：删除中, RESTORING：恢复中, RESIZING：变配中<br>chargeMode - 计费类型，精确匹配<br>|
-|**pageNumber**|Integer|False||页码；默认为1，取值范围：[1,∞)|
-|**pageSize**|Integer|False||分页大小；默认为10；取值范围[1, 100]|
-|**sorts**|[Sort[]](##Sort)|False||createTime - 创建时间,asc（正序），desc（倒序）<br>|
+|**filters**|Filter[]|False| |instanceId - 实例ID, 精确匹配<br>instanceName - 实例名称, 模糊匹配<br>instanceStatus - mongodb状态，精确匹配，支持多个.RUNNING：运行, ERROR：错误 ,BUILDING：创建中, DELETING：删除中, RESTORING：恢复中, RESIZING：变配中<br>chargeMode - 计费类型，精确匹配<br>|
+|**pageNumber**|Integer|False| |页码；默认为1，取值范围：[1,∞)|
+|**pageSize**|Integer|False| |分页大小；默认为10；取值范围[1, 100]|
+|**sorts**|Sort[]|False| |createTime - 创建时间,asc（正序），desc（倒序）<br>|
 
-### <a name="Filter">Filter</a>
+### Filter
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**name**|String|True||过滤条件的名称|
-|**operator**|String|False||过滤条件的操作符，默认eq|
-|**values**|String[]|True||过滤条件的值|
-### <a name="Sort">Sort</a>
+|**name**|String|True| |过滤条件的名称|
+|**operator**|String|False| |过滤条件的操作符，默认eq|
+|**values**|String[]|True| |过滤条件的值|
+### Sort
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**direction**|String|False||排序条件的方向|
-|**name**|String|False||排序条件的名称|
+|**direction**|String|False| |排序条件的方向|
+|**name**|String|False| |排序条件的名称|
 
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String||
-|**result**|[Result](##Result)||
+|**requestId**|String| |
+|**result**|Result| |
 
-
-### <a name="Result">Result</a>
+### Result
 |名称|类型|描述|
 |---|---|---|
-|**dbInstances**|[DBInstance[]](##DBInstance)||
-|**pageNumber**|Integer||
-|**totalCount**|Integer||
-### <a name="DBInstance">DBInstance</a>
+|**dbInstances**|DBInstance[]| |
+|**pageNumber**|Integer| |
+|**totalCount**|Integer| |
+### DBInstance
 |名称|类型|描述|
 |---|---|---|
 |**accountName**|String|默认用户名|
 |**azId**|String[]|可取区ID，依次为主、从、隐藏节点所在可用区|
 |**backupRetentionPeriod**|Integer|自动备份保留时间|
-|**charge**|[Charge](##Charge)|计费信息|
+|**charge**|Charge|计费信息|
 |**createTime**|String|创建时间|
 |**dBName**|String|默认库名|
 |**engine**|String|数据库类型|
@@ -73,7 +72,7 @@ https://mongodb.jdcloud-api.com/v1/regions/{regionId}/instances
 |**replicaSetName**|String|副本集名称|
 |**subnetId**|String|子网ID|
 |**vpcId**|String|VPCID|
-### <a name="Charge">Charge</a>
+### Charge
 |名称|类型|描述|
 |---|---|---|
 |**chargeExpiredTime**|String|过期时间，预付费资源的到期时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ，后付费资源此字段内容为空|

@@ -12,33 +12,32 @@ https://rds.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}/perform
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**instanceId**|String|True||RDS 实例ID，唯一标识一个RDS实例|
-|**regionId**|String|True||地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)|
+|**instanceId**|String|True| |RDS 实例ID，唯一标识一个RDS实例|
+|**regionId**|String|True| |地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)|
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**db**|String|False||需要查询的数据库名，多个数据库名之间用英文逗号分隔，默认所有数据库|
-|**pageNumber**|Integer|False||显示数据的页码，默认为1，取值范围：[-1,1000)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。|
-|**pageSize**|Integer|False||每页显示的数据条数，默认为50，取值范围：[1,100]，只能为10的倍数，用于查询列表的接口|
-|**queryType**|String|True||查询类型，不同的查询类型按照相应的字段从高到低返回结果。<br>支持如下类型：<br>Missing：缺失索引<br>Size：索引大小，单位KB<br>Updates：索引更新次数<br>Scans：表扫描次数<br>Used：最少使用<br>|
+|**db**|String|False| |需要查询的数据库名，多个数据库名之间用英文逗号分隔，默认所有数据库|
+|**pageNumber**|Integer|False| |显示数据的页码，默认为1，取值范围：[-1,1000)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。|
+|**pageSize**|Integer|False| |每页显示的数据条数，默认为50，取值范围：[1,100]，只能为10的倍数，用于查询列表的接口|
+|**queryType**|String|True| |查询类型，不同的查询类型按照相应的字段从高到低返回结果。<br>支持如下类型：<br>Missing：缺失索引<br>Size：索引大小，单位KB<br>Updates：索引更新次数<br>Scans：表扫描次数<br>Used：最少使用<br>|
 
 
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**result**|[Result](##Result)||
+|**result**|Result| |
 
-
-### <a name="Result">Result</a>
+### Result
 |名称|类型|描述|
 |---|---|---|
-|**indexPerformanceResult**|[IndexPerformanceResult[]](##IndexPerformanceResult)|当queryType为Missing时，该字段为空<br>当queryType为其他值时，返回IndexPerformanceResult|
-|**missingIndexResult**|[MissingIndexResult[]](##MissingIndexResult)|当queryType为Missing时，返回结果集为MissingIndexResult<br>当queryType为其他值时，该字段为空|
+|**indexPerformanceResult**|IndexPerformanceResult[]|当queryType为Missing时，该字段为空<br>当queryType为其他值时，返回IndexPerformanceResult|
+|**missingIndexResult**|MissingIndexResult[]|当queryType为Missing时，返回结果集为MissingIndexResult<br>当queryType为其他值时，该字段为空|
 |**pageNumber**|Integer|当前数据的页码|
 |**pageSize**|Integer|每页显示的数据条数|
 |**totalCount**|Integer|总记录条数|
-### <a name="IndexPerformanceResult">IndexPerformanceResult</a>
+### IndexPerformanceResult
 |名称|类型|描述|
 |---|---|---|
 |**db**|String|数据库名|
@@ -51,7 +50,7 @@ https://rds.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}/perform
 |**userScans**|Integer|服务器启动以来，累计表扫描次数|
 |**userSeeks**|Integer|服务器启动以来，累计索引搜索次数|
 |**userUpdates**|Integer|服务器启动以来，累计索引更新次数|
-### <a name="MissingIndexResult">MissingIndexResult</a>
+### MissingIndexResult
 |名称|类型|描述|
 |---|---|---|
 |**avgUserImpact**|Number|实现此缺失索引后，用户查询可能获得的平均百分比收益。 该值表示如果实现此缺失索引，则查询成本将按此百分比平均下降。|

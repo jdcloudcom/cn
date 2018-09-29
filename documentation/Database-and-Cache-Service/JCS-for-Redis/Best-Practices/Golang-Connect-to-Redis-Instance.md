@@ -1,10 +1,13 @@
 # Golang连接
 - step1：下载golang的redis客户端
-<pre><code>go get github.com/garyburd/redigo/redis
-</code></pre>
+
+<code>go get github.com/garyburd/redigo/redis</code>
+
+
 - step2：编写测试用例
 
-<pre><code>package main
+```
+package main
  import (
      "fmt"
     "github.com/garyburd/redigo/redis"
@@ -35,4 +38,4 @@ func main() {
     }
     //do other command...
 }
-</code></pre>
+```

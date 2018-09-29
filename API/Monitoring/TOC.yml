@@ -14,21 +14,21 @@ items:
       - name: 云监控规则
         items:
           - name: createAlarm
-            href: Cloud-Monitoring-Rules-APIs/createAlarm.md
+            href: Monitoring-Rules-APIs/createAlarm.md
           - name: deleteAlarms
-            href: Cloud-Monitoring-Rules-APIs/deleteAlarms.md
+            href: Monitoring-Rules-APIs/deleteAlarms.md
           - name: describeAlarmHistory
-            href: Cloud-Monitoring-Rules-APIs/describeAlarmHistory.md
+            href: Monitoring-Rules-APIs/describeAlarmHistory.md
           - name: describeAlarms
-            href: Cloud-Monitoring-Rules-APIs/describeAlarms.md
+            href: Monitoring-Rules-APIs/describeAlarms.md
           - name: describeAlarmsByID
-            href: Cloud-Monitoring-Rules-APIs/describeAlarmsByID.md
+            href: Monitoring-Rules-APIs/describeAlarmsByID.md
           - name: disableAlarm
-            href: Cloud-Monitoring-Rules-APIs/disableAlarm.md
+            href: Monitoring-Rules-APIs/disableAlarm.md
           - name: enableAlarm
-            href: Cloud-Monitoring-Rules-APIs/enableAlarm.md
+            href: Monitoring-Rules-APIs/enableAlarm.md
           - name: updateAlarm
-            href: Cloud-Monitoring-Rules-APIs/updateAlarm.md
+            href: Monitoring-Rules-APIs/updateAlarm.md
       - name: 监控项数据
         items:
           - name: describeMetricData

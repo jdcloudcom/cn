@@ -1,0 +1,48 @@
+swagger: "2.0"
+info:
+  description: 监控数据上报接口
+  title: 监控数据上报接口
+  version: "v1"
+consumes:
+- application/json
+produces:
+- application/json
+############################监控数据上报域名地址映射关系如下##############################
+###########################内部域名：iaas-monitor.hb.jcloud.com 网关地址：monitor.cn-north-1.jdcloud-api.com##############################
+###########################内部域名：iaas-monitor.gz.jcloud.com 网关地址：monitor.cn-south-1.jdcloud-api.com##############################
+########################## 内部域名：iaas-monitor.hd.jcloud.com 网关地址：monitor.cn-east-1.jdcloud-api.com##############################
+########################## 内部域名：iaas-monitorput-sh.jcloud.com 网关地址：monitor.cn-east-2.jdcloud-api.com##############################
+paths:
+  /put:
+    ###################### 上报监控数据 ######################
+    post:
+      description: 监控数据上报。
+      summary: 监控数据上报
+      operationId: put
+      x-jdcloud-internal: true
+      parameters:
+        - name: Body
+          in: body
+          description: "规则参数"
+          x-jdcloud-tiered: false
+          schema:
+            $ref: "../model/Put.yaml#/definitions/putBody"
+      responses:
+        200:
+          description:  OK
+          schema:
+            properties:
+              requestId:
+                type: string
+                description: 请求的标识id
+              result:
+                properties:
+                  failed:
+                    type: integer
+                    description: 失败数量
+                  success:
+                    type: integer
+                    description: 成功数量
+              
+        500:
+          description: "internal server error"

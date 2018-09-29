@@ -12,8 +12,8 @@ https://vpc.jdcloud-api.com/v1/regions/{regionId}/networkSecurityGroups/{network
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**networkSecurityGroupId**|String|True||NetworkSecurityGroup ID|
-|**regionId**|String|True||Region ID|
+|**networkSecurityGroupId**|String|True| |NetworkSecurityGroup ID|
+|**regionId**|String|True| |Region ID|
 
 ## 请求参数
 无
@@ -23,23 +23,22 @@ https://vpc.jdcloud-api.com/v1/regions/{regionId}/networkSecurityGroups/{network
 |名称|类型|描述|
 |---|---|---|
 |**requestId**|String|请求ID|
-|**result**|[Result](##Result)|返回结果|
+|**result**|Result|返回结果|
 
-
-### <a name="Result">Result</a>
+### Result
 |名称|类型|描述|
 |---|---|---|
-|**networkSecurityGroup**|[NetworkSecurityGroup](##NetworkSecurityGroup)|安全组资源信息|
-### <a name="NetworkSecurityGroup">NetworkSecurityGroup</a>
+|**networkSecurityGroup**|NetworkSecurityGroup|安全组资源信息|
+### NetworkSecurityGroup
 |名称|类型|描述|
 |---|---|---|
 |**createdTime**|String|安全组创建时间|
 |**description**|String|安全组描述信息|
 |**networkSecurityGroupId**|String|安全组ID|
 |**networkSecurityGroupName**|String|安全组名称|
-|**securityGroupRules**|[SecurityGroupRule[]](##SecurityGroupRule)|安全组规则信息|
+|**securityGroupRules**|SecurityGroupRule[]|安全组规则信息|
 |**vpcId**|String|安全组所在vpc的Id|
-### <a name="SecurityGroupRule">SecurityGroupRule</a>
+### SecurityGroupRule
 |名称|类型|描述|
 |---|---|---|
 |**addressPrefix**|String|匹配地址前缀|

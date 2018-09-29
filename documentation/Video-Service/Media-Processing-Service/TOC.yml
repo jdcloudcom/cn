@@ -14,19 +14,19 @@ items:
       - name: 开通服务
         href: Getting-Started/Sign-Up-Service.md   
       - name: 创建视频转码工作流
-        href: Getting-Started/Create-Video-Transcoding.md
+        href: Getting-Started/Create-Video-Transcoding-1.md
       - name: 创建视频截图工作流
         href: Getting-Started/Create-Video-Snapshot.md 
  - name: 操作指南
    items:
-      - name:  视频转码
+      - name: 视频转码
         items:
            - name: 转码基本规则
              href: Operation-Guide/Video-Transcoding/Transcoding-Rules.md
            - name: 创建视频转码工作流
-             href: Operation-Guide/Video-Transcoding/Create-Video-Transcoding.md 	  
+             href: Operation-Guide/Video-Transcoding/Create-Video-Transcoding-2.md 	  
       - name: 视频截图
-        href:  Operation-Guide/Video-Snapshot.md
+        href: Operation-Guide/Video-Snapshot.md
       - name: 回调设置
         href: Operation-Guide/Callback.md      
  - name: 相关接口
@@ -34,7 +34,7 @@ items:
       - name: 视频处理签名认证
         href: Video-Transcoding-API/User-Signature-Authentication.md  
       - name: 创建视频转码
-        href: Video-Transcoding-API/Create-Video-Transcoding.md 
+        href: Video-Transcoding-API/Create-Video-Transcoding-3.md 
       - name: 获取视频任务列表
         href: Video-Transcoding-API/Get-Video-Task.md 
       - name: 查询视频任务

@@ -7,10 +7,10 @@ info:
 basePath: /regions/{regionId}
 
 paths:
-  /charts:ddosGraph:
+  /charts:DDoSGraph:
     get:
       description: "DDos 防护流量报表"
-      operationId: ddosGraph
+      operationId: describeDDoSGraph
       parameters:
         - name: startTime
           in: query
@@ -59,7 +59,7 @@ paths:
   /charts:fwdGraph:
     get:
       description: "转发流量报表"
-      operationId: fwdGraph
+      operationId: describeFwdGraph
       parameters:
         - name: startTime
           in: query
@@ -100,10 +100,10 @@ paths:
                     description: "流量单位"
               requestId:
                 type: string
-  /charts:ccGraph:
+  /charts:CCGraph:
     get:
       description: "CC 防护流量报表"
-      operationId: ccGraph
+      operationId: describeCCGraph
       parameters:
         - name: startTime
           in: query

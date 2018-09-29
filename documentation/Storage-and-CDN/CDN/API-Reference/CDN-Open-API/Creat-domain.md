@@ -1,4 +1,4 @@
-## **开通加速域名**
+## **创建加速域名**
 
 ## **1、描述**
 
@@ -32,19 +32,13 @@
 **4、调用示例**
 
 - ### **请求地址**
-
 http://opencdn.jcloud.com/api/createDomain
-
 - ### **请求示例**
-
 curl请求示例：
-
 ```
 curl -H "Content-type: application/json" -X POST -d '{"username":" testuser ","signature":"914a3f412fd9bc1eec14bb5eb104d253","domain" :"www.a.com","type" :"web","sourceType" :"ips","source" :"[{'ip':'1.1.1.1','priority':'master'},{'ip':'2.2.2.2','priority':'master'},{'ip':'3.3.3.3','priority':'slave'}]","backSourceType" :"http","dailyBandWidth" :200}' http://opencdn.jcloud.com/api/createDomain
 ```
-
 •        json格式
-
 ```
 {
     "username" :"testuser",
@@ -57,12 +51,9 @@ curl -H "Content-type: application/json" -X POST -d '{"username":" testuser ","s
     "dailyBandWidth" :200,
  }
 ```
-
 -  **返回示例**
 
   •        json格式
-
-  
 
 ```
 {

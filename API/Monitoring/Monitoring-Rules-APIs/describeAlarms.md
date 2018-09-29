@@ -12,36 +12,35 @@ https://monitor.jdcloud-api.com/v1/regions/{regionId}/alarms
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**regionId**|String|True||地域ID|
+|**regionId**|String|True| |地域ID|
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**enabled**|Integer|False||规则状态：1为启用，0为禁用|
-|**isAlarming**|Integer|False||是否为正在报警的规则，0为忽略，1为是，与 status 同时只能生效一个,isAlarming 优先生效|
-|**pageNumber**|Integer|False||页码, 默认为1, 取值范围：[1,∞)|
-|**pageSize**|Integer|False||分页大小，默认为20，取值范围：[10,100]|
-|**resourceId**|String|False||资源Id|
-|**serviceCode**|String|False||产品名称|
-|**status**|Integer|False||规则报警状态, 1：正常, 2：报警，4：数据不足|
+|**enabled**|Integer|False| |规则状态：1为启用，0为禁用|
+|**isAlarming**|Integer|False| |是否为正在报警的规则，0为忽略，1为是，与 status 同时只能生效一个,isAlarming 优先生效|
+|**pageNumber**|Integer|False| |页码, 默认为1, 取值范围：[1,∞)|
+|**pageSize**|Integer|False| |分页大小，默认为20，取值范围：[10,100]|
+|**resourceId**|String|False| |资源Id|
+|**serviceCode**|String|False| |产品名称|
+|**status**|Integer|False| |规则报警状态, 1：正常, 2：报警，4：数据不足|
 
 
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
 |**requestId**|String|请求的标识id|
-|**result**|[Result](##Result)||
+|**result**|Result| |
 
-
-### <a name="Result">Result</a>
+### Result
 |名称|类型|描述|
 |---|---|---|
-|**alarmList**|[Alarm[]](##Alarm)|规则列表|
+|**alarmList**|Alarm[]|规则列表|
 |**numberPages**|Number|总页数|
 |**numberRecords**|Number|总记录数|
 |**pageNumber**|Number|页码|
 |**pageSize**|Number|分页大小|
-### <a name="Alarm">Alarm</a>
+### Alarm
 |名称|类型|描述|
 |---|---|---|
 |**calculation**|String|统计方法：平均值=avg、最大值=max、最小值=min|

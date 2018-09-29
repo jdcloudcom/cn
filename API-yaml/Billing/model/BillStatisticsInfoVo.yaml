@@ -1,0 +1,29 @@
+swagger: "2.0"
+definitions:
+  billStatisticsInfoVo:
+    x-jdcloud-module: billing
+    title: BillStatisticsInfoVo
+    type: object
+    x-jdcloud-internal: true
+    properties:
+      totalFee:
+        type: number
+        description: "总金额"
+      cashPayFee:
+        type: number
+        description: "现金支付金额"
+      cashCouponPayFee:
+        type: number
+        description: "优惠券支付金额"
+      balancePayFee:
+        type: number
+        description: "余额支付金额"
+      arrearFee:
+        type: number
+        description: "欠费金额"
+      billFee:
+        type: number
+        description: "账单金额"
+      discountFee:
+        type: number
+        description: "折扣金额"

@@ -1,0 +1,88 @@
+swagger: "2.0"
+definitions:
+  resourceBillQueryResultItem:
+    x-jdcloud-module: billing
+    title: ResourceBillQueryResultItem
+    type: object
+    properties:
+      billId:
+        type: number
+        description: 账单id
+      pin:
+        type: string
+        description: 用户pin
+      appCode:
+        type: string
+        description: appCode
+      serviceCode:
+        type: string
+        description: serviceCode
+      serviceCodeName:
+        type: string
+        description: serviceCodeName
+      billingType:
+        type: integer
+        description: 计费类型
+      billingTypeName:
+        type: string
+        description: 计费类型描述
+      resourceId:
+        type: string
+        description: 资源id
+      region:
+        type: string
+        description: 区域
+      regionName:
+        type: string
+        description: 区域名称
+      billStartTime:
+        type: string
+        description: 账单开始时间
+      billEndTime:
+        type: string
+        description: 账单结束时间
+      startTime:
+        type: string
+        description: 开始时间
+      endTime:
+        type: string
+        description: 结束时间
+      totalFee:
+        type: number
+        description: 总金额
+      cashPayFee:
+        type: number
+        description: 现金支付金额
+      cashCouponPayFee:
+        type: number
+        description: 代金券支付金额
+      balancePayFee:
+        type: number
+        description: 余额支付金额
+      arrearFee:
+        type: number
+        description: 欠费金额
+      timeSpan:
+        type: integer
+        description: 时间
+      timeUnit:
+        type: integer
+        description: 时间单位
+      opTypeName:
+        type: string
+        description: 1：新购 2：续费 3：配置变更
+      timeSpanName:
+        type: string
+        description: 时间
+      timeUnitName:
+        type: string
+        description: 时间单位名称 1：小时 2：天 3：月 4：年
+      settleTime:
+        type: string
+        description: 结算日期
+      systemType:
+        type: integer
+        description: 1：老计费 2：新计费
+      resourceName:
+        type: string
+        description: 资源名称

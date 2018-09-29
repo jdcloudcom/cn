@@ -25,4 +25,5 @@ VPC、子网、路由表、安全组、网络ACL均免费，无需用户支付�
 
 使用云主机创建的NAT实例网关目前只收取云主机和公网IP的费用。
 
-详见：[云主机价格](/documentation/Elastic-Compute/Virtual-Machine/Pricing/Price.md)、[公网IP价格](/documentation/Networking/Elastic-IP/Pricing/Price-Overview.md)。
+详见：[云主机价格](/documentation/Elastic-Compute/Virtual-Machines/Pricing/Billing-Overview.md) 、
+[公网IP价格](/documentation/Networking/Elastic-IP/Pricing/Price-Overview.md)。

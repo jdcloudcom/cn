@@ -1,0 +1,35 @@
+swagger: "2.0"
+definitions:
+  orderCompensateFeeVo:
+    x-jdcloud-module: billing
+    title: OrderCompensateFeeVo
+    type: object
+    x-jdcloud-internal: true
+    properties:
+      pin:
+        type: string
+        description: "用户pin"
+      appCode:
+        type: string
+        description: "应用码"
+      serviceCode:
+        type: string
+        description: "服务码"
+      resourceId:
+        type: string
+        description: "资源id"
+      region:
+        type: string
+        description: "资源区域"
+      startTime:
+        type: string
+        description: "开始时间"
+      endTime:
+        type: string
+        description: "结束时间"
+      totalFee:
+        type: number
+        description: "计算总价"
+      billingType:
+        type: integer
+        description: "计费类型 1:按配置 2:按用量 3:包年包月 4:一次性"

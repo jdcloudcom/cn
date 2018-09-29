@@ -9,11 +9,11 @@
 
 可提供DevOps全流程支持，包括CMDB、代码管理、CI/CD、智能监控、运维工具等。
 
-详见[操作指南](https://github.com/jdcloudcom/cn/tree/edit/documentation/Management-and-Monitoring/DevOps/Operation-Guide)
+详见[操作指南](../Operation-Guide/Operation-Instruction.md)
 
 
 **计费**
 
 京东云DevOps支持企业版（SaaS版）计费类型。详细说明请参见：产品定价
 
-详见[产品定价](https://github.com/jdcloudcom/cn/tree/edit/documentation/Management-and-Monitoring/DevOps/Pricing)
+详见[产品定价](../Pricing/Billing-Overview.md)

@@ -12,8 +12,8 @@ IP高防提供大容量的DDoS攻击防护，有效对抗大流量型各种DDoS�
 - 支持TCP、UDP、HTTP、HTTPS协议的转发配置，支持websocket协议，支持多IP回源，支持域名回源。
 
 ### 3、多种防护配置规则
-- 支持IP黑/白名单、URL白名单、CC自动防护及自定义防护的配置，以进行精细化的防护。
-- 支持非标端口接入、HTTP地址强制回源、HTTP访问跳转等网站类高级配置
+- 支持IP黑/白名单、URL白名单、CC自动防护及自定义防护的配置，以进行精细化的防护；
+- 支持非标端口接入、HTTP地址强制回源、HTTP访问跳转等网站类高级配置。
 
 ### 4、灵活的防护计费方案
 - 支持弹性防护，按实际攻击带宽计费，帮您节省费用。
@@ -36,17 +36,4 @@ IP高防提供大容量的DDoS攻击防护，有效对抗大流量型各种DDoS�
 |扫描窥探威胁防护|端口扫描攻击；地址扫描攻击；TRACERT控制报文攻击；IP源站选路选项攻击；IP时间戳选项攻击；IP路由记录选项攻击等|
 |传输层威胁防护|SYN flood攻击；ACK flood攻击；SYN-ACK flood攻击；FIN/RST flood攻击；TCP fragment flood攻击；UDP flood攻击；UDP fragment flood攻击；ICMP flood等|
 |应用型威胁防护|HTTP get /font 攻击；CC 攻击；HTTP slow header/post攻击；HTTPS flood攻击；SSL DoS/DDoS攻击；TCP连接耗尽攻击；Sockstress攻击；TCP重传攻击；TCP空连接攻击；SIP flood等|
-
-
-
-## 相关参考
-
-- [产品概述](../Product-Introduction/Overview.md)
-- [产品规格](../Product-Introduction/Specification.md)
-- [价格总览](../Pricing/Price-Overview.md)
-- [创建实例](../Getting-Started/Create-Instance.md)
-- [变更配置](../Operation-Guide/Instance-Management/Modify-Instance-Spec.md)
-- [数据恢复](../Operation-Guide/Backup/Restore-Instance.md)
-- [设置报警规则](../Operation-Guide/Monitoring/Alarm-Rules.md)
-
 

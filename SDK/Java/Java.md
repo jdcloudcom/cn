@@ -17,7 +17,7 @@
 # SDK使用方法 #
 
 如果您使用Apache Maven来管理Java项目，只需在项目的pom.xml文件加入相应的依赖项即可，如下所示：
-
+```
 <dependency>
     <groupId>com.jdcloud.sdk</groupId>
     <artifactId>core</artifactId>
@@ -29,6 +29,7 @@
     <artifactId>vm</artifactId>
     <version>0.6.1</version>
 </dependency>
+```
 您还可以下载sdk源代码自行使用，源代码地址为：[Java SDK](https://github.com/jdcloud-api/jdcloud-sdk-java)。
 
 SDK使用中的任何问题，欢迎您在Github项目[SDK使用问题反馈页面](https://github.com/jdcloud-api/jdcloud-sdk-java/issues)交流。
@@ -51,6 +52,7 @@ Java SDK的调用主要分为4步：
 
 以下是查询单个云主机实例详情的调用示例
 
+```
 	import com.jdcloud.sdk.JdcloudSdkException;
 	import com.jdcloud.sdk.auth.CredentialsProvider;
 	import com.jdcloud.sdk.auth.StaticCredentialsProvider;
@@ -88,17 +90,15 @@ Java SDK的调用主要分为4步：
 	                System.out.println(response.getRequestId() + " failed: " + response.getError().getMessage());
 	                return;
 	            }
-
 	            DescribeInstanceResult result = response.getResult();
 	            // 5.正常返回了result，使用返回数据后续处理
-            
  	       }catch (JdcloudSdkException jse) {
 	            //调用API失败，错误处理
  	       }
 	    }
 	}
-
+```
 
 如果需要设置额外的header，例如要调用开启了MFA操作保护的接口，需要传递x-jdcloud-security-token，则按照如下方式：
 
-	vmClient.setCustomHeader("x-jdcloud-security-token", "xxxx");
+	 vmClient.setCustomHeader("x-jdcloud-security-token", "xxxx"); 

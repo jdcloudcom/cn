@@ -163,7 +163,7 @@ paths:
       tags:
       - "notification"
       summary: "Get MPS Notification"
-      description: "获取截图通知"
+      description: "获取媒体处理通知"
       operationId: "getNotification"
       responses:
         200:
@@ -301,9 +301,11 @@ definitions:
       destKeyPrefix:
         type: "string"
         description: "目标截图的Key的前缀, '前缀-taskID-%04d(num).(format)', 默认: sourceKey"
+        default: sourceKey
       format:
         type: "string"
         description: "目标截图的格式 default: jpg"
+        default: jpg
         enum:
         - "jpg"
         - "png"
@@ -311,9 +313,11 @@ definitions:
       widthInPixel:
         type: "integer"
         description: "目标截图的宽, 如果视频实际分辨率低于目标分辨率则按照实际分辨率输出 default: 0 代表源视频高 其他[8, 4096]"
+        default: 0
       heightInPixel:
         type: "integer"
         description: "目标截图的高, 如果视频实际分辨率低于目标分辨率则按照实际分辨率输出 default: 0 代表源视频高 其他[8, 4096]"
+        default: 0
       keys:
         type: "array"
         description: "目标截图的Key的集合 (readonly)"
@@ -328,6 +332,7 @@ definitions:
       mode: 
         type: "string"
         description: "截图模式 单张: single 多张: multi 平均: average default: single"
+        default: single
         enum:
         - "single"
         - "multi"
@@ -335,15 +340,19 @@ definitions:
       keyFrame:
         type: "boolean"
         description: "是否开启关键帧截图 default: true"
+        default: true
       startTimeInSecond:
         type: "integer"
         description: "生成截图的开始时间, mode=average 时不可选. default:0"
+        default: 0
       endTimeInSecond:
         type: "integer"
         description: "生成截图的结束时间, mode=single/average时不可选, 且不得小于startTimeInSecond. default:-1(代表视频时长)"
+        default: -1
       count:
         type: "integer"
         description: "截图数量, mode=single时不可选. default:1"
+        default: 1
   ThumbnailTaskID:
     x-jdcloud-module: mps
     type: "object"
@@ -374,6 +383,7 @@ definitions:
       limit:
         type: "integer"
         description: "本次请求返回的任务列表的最大元素个数, 有效值: [1-1000]，默认值: 1000"
+        default: 1000
       nextMarker:
         type: "string"
         description: "获取下一页所需要传递的marker值(此处为taskID), 仅当isTruncated为true时(数据未全部返回)出现 (readonly)"

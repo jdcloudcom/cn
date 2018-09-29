@@ -2,7 +2,8 @@
 - step1：下载php redis客户端 参考地址：https://github.com/phpredis/phpredis
 
 - step2：编写测试用例
-```xml
+
+```
 <?php
   /* 这里替换为连接的实例host和port */
   $host = "jredis-hb1-prod-957e3a3d-0d76-45d4-a896-706173208db2.jmiss.jcloud.com";

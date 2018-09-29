@@ -4,7 +4,7 @@
 
 首先打开软件下载地址，通过下面的链接下载软件，软件分为32位和64位两个版本，请根据需要自己选择合适的版本。
 
-http://www.adobe.com/go/fmle32_win
+<http://www.adobe.com/go/fmle32_win>
 
 <http://www.adobe.com/go/fmle32_mac>
 

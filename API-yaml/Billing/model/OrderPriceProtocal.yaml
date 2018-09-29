@@ -1,0 +1,61 @@
+swagger: "2.0"
+definitions:
+  orderPriceProtocol:
+    x-jdcloud-module: billing
+    title: OrderPriceProtocol
+    type: object
+    x-jdcloud-internal: true
+    properties:
+      resourceId:
+        type: string
+        description: 资源id
+      appCode:
+        type: string
+        description: 业务线
+      serviceCode:
+        type: string
+        description: 产品线
+      site:
+        type: integer
+        description: 站点信息 0：主站  其他：专有云
+      region:
+        type: string
+        description: 地域
+      billingType:
+        type: integer
+        description: 计费类型 1:按配置 2:按用量 3:包年包月
+      timeSpan:
+        type: integer
+        description: 时长
+      timeUnit:
+        type: integer
+        description: 时长类型 0:无(非包年包月) 1:小时 2:天 3:月 4:年
+      networkOperator:
+        type: integer
+        description: 网络类型 0:non 1:非BGP  2:BGP
+      formula:
+        type: array
+        description: 计算公式（配置细项）
+        items:
+            $ref: "../model/Formula.yaml#/definitions/formula"
+      formulaStr:
+         type: string
+         description: 配置细项
+      pin:
+         type: string
+         description: 用户pin
+      count:
+        type: integer
+        description: 具体商品数量，默认为1
+      startTime:
+        type: string
+        description:  订单开始时间
+      taskId:
+        type: string
+        description: 自然单列表
+      sourceId:
+        type: string
+        description: 交易单模块sourceId
+
+
+
