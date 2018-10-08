@@ -53,14 +53,14 @@ items:
       herf: Getting-Started/STEP5-Create-Auth.md
 - name: 操作指南
   items:
-    - name: 创建API
-      items:
-        - name: 创建API
-          herf: Create-API/Create-API.md
     - name: 创建API分组
       items:
         - name: 创建API分组
           herf: Create-APIGroup/Create-APIGroup.md
+     - name: 创建API
+      items:
+        - name: 创建API
+          herf: Create-API/Create-API.md
     - name: API的访问授权
       items:
         - name: API的访问授权
@@ -90,17 +90,6 @@ items:
 - name: 教程
   items:
   status: 0
-- name: 问题排查
-  items:
-  - name: 云主机无法连接MongoDB实例？
-    herf: Troubleshooting/Connect-Failed.md
-    status: 0 
-  - name: 云数据库 MongoDB 不支持哪些命令？
-    herf: Troubleshooting/Command.md
-    status: 0 
-  - name: 账号密码正确，连接提示无权限？
-    herf: Troubleshooting/Authentication.md    
-    status: 0 
 - name: 常见问题
   herf: FAQ/faq.md
 - name: API参考

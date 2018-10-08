@@ -52,7 +52,7 @@ Windows：
 	jdc nc create-containers --input-json  'file://c:/container-spec.json'
    
 
-##启动容器
+## 启动容器
 
 	jdc nc start-container --container-id c-igz8rekh5q
 返回：
@@ -64,7 +64,7 @@ Windows：
 	}
    
 
-##查询容器
+## 查询容器
 
 	jdc nc describe-container --container-id c-igz8rekh5q
 返回： 
@@ -151,9 +151,14 @@ Windows：
     },
     "request_id": "bcajk4jk2vh52d5u8tgejwpjubqhc68s"
 	}
-   
+	
+	
+## 使用filters参数查询容器
 
-##删除容器
+ 	jdc nc describe-containers --filters '[{"name":"name", "operator":"eq", "values":["container-name"]}]'
+  
+
+## 删除容器
 
 	jdc nc delete-container --container-id c-igz8rekh5q
 返回： 
