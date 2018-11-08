@@ -61,8 +61,6 @@ items:
     href: Troubleshooting/Troubleshooting-Instructions.md
 - name: 常见问题
   href: FAQ/FAQ.md
-- name: API参考
-  href: API-Reference/API.md
 - name: SDK参考
   href: SDK-Reference/Overview.md
 - name: 相关资源
