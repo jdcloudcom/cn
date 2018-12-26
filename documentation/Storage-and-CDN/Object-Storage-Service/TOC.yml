@@ -67,6 +67,8 @@ items:
              href: Operation-Guide/Manage-Bucket/Default-Encryption-For-Oss-Buckets-2.md
            - name: 镜像回源设置
              href: Operation-Guide/Manage-Bucket/Manage-Origin-Retrieval-Settings-2.md
+           - name: 边缘存储
+             href: Operation-Guide/Manage-Bucket/edgeStorage.md
       - name: 文件管理
         items:
           - name: 新建文件夹
