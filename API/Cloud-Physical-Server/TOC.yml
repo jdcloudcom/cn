@@ -11,8 +11,6 @@
     items:
       - name: describeOS
         href: Cloud-Physical-Server/describeOS.md
-      - name: describeSoftware
-        href: Cloud-Physical-Server/describeSoftware.md
       - name: describeInstanceName
         href: Cloud-Physical-Server/describeInstanceName.md
       - name: createInstances
