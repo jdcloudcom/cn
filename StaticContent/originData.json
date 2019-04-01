@@ -186,5 +186,29 @@
     {
         "name": "优享礼遇成功页",
         "url": "https://www.jdcloud.com/news/treatmentSuccess"
+    },
+    {
+      "name": "合作伙伴-ISV解决方案计划",
+      "url": "https://www.jdcloud.com/cn/partner/ISV"
+    },
+    {
+      "name": "合作伙伴-渠道分销合作计划",
+      "url": "https://www.jdcloud.com/cn/partner/place"
+    },
+    {
+    "name": "合作伙伴-企业服务商合作计划",
+    "url": "https://www.jdcloud.com/cn/partner/company"
+    },
+    {
+      "name": "合作伙伴-产品合作计划",
+      "url": "https://www.jdcloud.com/cn/partner/product"
+    },
+    {
+      "name": "合作伙伴-申请成为京东云合作伙伴",
+      "url": "https://www.jdcloud.com/cn/partner/reg"
+    },
+    {
+      "name": "合作伙伴-首页v2",
+      "url": "https://www.jdcloud.com/cn/partner/index"
     }
 ]
