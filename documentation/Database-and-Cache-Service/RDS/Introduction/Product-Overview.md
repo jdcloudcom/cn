@@ -36,6 +36,7 @@
 |---|---|---|---|
 |华北-北京|cn-north-1|可用区A|cn-north-1a|
 |华北-北京|cn-north-1|可用区B|cn-north-1b|
+|华北-北京|cn-north-1|可用区B|cn-north-1c|
 |华南-广州|cn-south-1|可用区A|cn-south-1a|
 |华东-上海|cn-east-2|可用区A|cn-east-2a|
 |华东-上海|cn-east-2|可用区B|cn-east-2b|

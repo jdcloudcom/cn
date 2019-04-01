@@ -42,6 +42,8 @@ items:
         href: Live-Video/describeLiveStreamOnlineList.md
       - name: 查看域名下历史推流记录
         href: Live-Video/describeLiveStreamPublishList.md
+      - name: 查询实时流信息
+        href: Live-Video/describeLiveStreamInfo.md
   - name: 状态通知
     items:
       - name: 设置直播流状态通知

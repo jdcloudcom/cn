@@ -10,21 +10,21 @@
 
   Windows客户端：
 
-  外网访问域名：<https://hids.oss.cn-east-1.jcloudcs.com/jcloudhids_v1.0_Installer.exe>
+  外网访问域名：<https://hids.oss.cn-east-1.jcloudcs.com/jcloudhids_V1.0_Installer.exe>
 
   64位Linux客户端：
 
   外网访问域名：<https://hids.oss.cn-east-1.jcloudcs.com/jcloudhids_linux64_V1.0.tar.gz>
 
-  \3. 内网下载地址：
+  3. 内网下载地址：
 
   Windows客户端：
 
-  内网访问域名：<https://hips.jdcloud.com/jcloudhids_v1.0_Installer.exe>
+  内网访问域名：<https://hips.jdcloud.com/jcloudhids_V1.0_Installer.exe>
 
   64位Linux客户端：
 
-  内网访问域名： <https://hips.jdcloud.com/jcloudhids_linux64_v1.0.tar.gz>
+  内网访问域名： <https://hips.jdcloud.com/jcloudhids_linux64_V1.0.tar.gz>
 
   ### 三、Windows系统安装说明
 
@@ -36,7 +36,7 @@
 
   图1
 
-  2 、 双击下载下来的软件。如图2
+  2、双击下载下来的软件。如图2
 
   ![img](https://img1.jcloudcs.com/cms/c9183ecf-3b5b-4f5e-a73c-409335a2c4f820170626123537.png)
 
@@ -82,16 +82,16 @@
 
   ### 四、Linux系统安装说明 
 
-  \1. 软件获取路径：利用wget命令，获取软件。
+  1. 软件获取路径：利用wget命令，获取软件。
       $ wget https://hids.oss.cn-east-1.jcloudcs.com/jcloudhids_linux64_V1.0.tar.gz
 
-  \2. 将下载的文件解压。
+  2. 将下载的文件解压。
       $ tar xvf jcloudhids_linux64_v1.0.tar.gz
-  \3. 进入解压的文件路径：
+  3. 进入解压的文件路径：
       $ cd jcloudhids_linux64_v1.0/
-  \4. 安装程序，用户需要有sudo权限：
+  4. 安装程序，用户需要有sudo权限：
       $ sudo ./install.py
-  \5. 安装完成，如图9：
+  5. 安装完成，如图9：
       $ sudo ./install.py
 
   ![img](https://img1.jcloudcs.com/cms/8c4ba2d2-4f35-40b4-aa31-29d698e2c21820170626124803.png)

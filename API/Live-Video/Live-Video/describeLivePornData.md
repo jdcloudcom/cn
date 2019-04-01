@@ -12,13 +12,13 @@ https://live.jdcloud-api.com/v1/livePornData
 
 
 ## 请求参数
-|名称|类型|是否必需|描述|
-|---|---|---|---|
-|**publishDomain**|String|True|您的推流加速域名|
-|**appName**|String|False|直播流所属应用名称|
-|**streamName**|String|False|直播流名称|
-|**startTime**|String|True|起始时间:<br>  - UTC 时间格式 e.g: 2019-03-12T00:00:00Z<br>|
-|**endTime**|String|False|结束时间:<br>  - UTC 时间格式 e.g: 2019-03-12T00:00:00Z<br>|
+|名称|类型|是否必需|默认值|描述|
+|---|---|---|---|---|
+|**publishDomain**|String|True| |推流域名|
+|**appName**|String|False| |应用名称|
+|**streamName**|String|False| |流名称|
+|**startTime**|String|True| |起始时间<br>- UTC时间<br>  格式:yyyy-MM-dd'T'HH:mm:ss'Z'<br>  示例:2018-10-21T10:00:00Z<br>- 支持最大查询90天以内的数据<br>|
+|**endTime**|String|False| |结束时间:<br>- UTC时间<br>  格式:yyyy-MM-dd'T'HH:mm:ss'Z'<br>  示例:2018-10-21T10:00:00Z<br>- 为空,默认为当前时间<br>|
 
 
 ## 返回参数
@@ -34,11 +34,11 @@ https://live.jdcloud-api.com/v1/livePornData
 ### PornData
 |名称|类型|描述|
 |---|---|---|
-|**publishDomain**|String|查询的推流域名|
-|**appName**|String|查询的应用名称|
-|**streamName**|String|查询的流名|
-|**date**|String|日期:<br>  - yyyyMMdd 示例:20190308<br>|
-|**total**|Integer|单日鉴黄总张数:<br>  - 单位: 张<br>|
+|**publishDomain**|String|推流域名|
+|**appName**|String|应用名称|
+|**streamName**|String|流名称|
+|**date**|String|日期<br>- yyyyMMdd<br>- 示例: 20190308<br>|
+|**total**|Integer|鉴黄张数<br>- 单位: 张<br>|
 
 ## 返回码
 |返回码|描述|
@@ -49,3 +49,35 @@ https://live.jdcloud-api.com/v1/livePornData
 |**404**|Not found|
 |**500**|Internal server error|
 |**503**|Service unavailable|
+
+## 请求示例
+GET
+```
+https://live.jdcloud-api.com/v1/livePornData?publishDomain=push.yourdomain.com&appName=yourapp&streamName=yourstream&startTime=2018-10-21T10:00:00Z
+
+```
+
+## 返回示例
+```
+{
+    "requestId": "bgvmivir54gddpgi764se9f4kfr7ge41", 
+    "result": {
+        "pronDatas": [
+            {
+                "appName": "yourapp", 
+                "date": "20180101", 
+                "publishDomain": "push.yourdomain.com", 
+                "streamName": "yourstream", 
+                "total": 86310
+            }, 
+            {
+                "appName": "yourapp", 
+                "date": "20180102", 
+                "publishDomain": "push.yourdomain.com", 
+                "streamName": "yourstream", 
+                "total": 86310
+            }
+        ]
+    }
+}
+```

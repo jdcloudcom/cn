@@ -26,6 +26,7 @@ items:
   items:
     - name: 计费概述
       href: Pricing/Billing-Overview.md
+      status: 0
     - name: 计费规则
       href: 
       status: 0
@@ -33,20 +34,26 @@ items:
       href: 
       status: 0
     - name: 购买流程
-      href: 
-      status: 0
+      href: Operation-Guide/Apply-SSL-Certificate.md
     - name: 续费流程
       href: 
       status: 0
-- name: 入门指南
-  items:
-    - name: 快速入门指导
-      href: Getting-Started/Getting-Started.md
+    - name: 选择证书
+      href: Operation-Guide/Choose-Your-Certificate.md
 - name: 操作指南
   items:
     - name: 上传SSL证书
-      herf: Operation-Guide/Upload-SSL-Certification.md
+      herf: Operation-Guide/Upload-SSL-Certificate.md
     - name: 管理SSL证书
-      herf: Operation-Guide/manage-SSL-Certification.md
+      herf: Operation-Guide/Manage-SSL-Certificate.md
+    - name: 下载SSL证书
+      herf: Operation-Guide/Download-SSL-Certificate.md 
+    - name: 删除SSL证书
+      herf: Operation-Guide/Delete-SSL-Certificate.md
+    - name: 提交资料-Symantec免费DV证书
+      herf: Operation-Guide/Symantec-DV-Complete.md  
+    - name: 提交资料-GeoTrust付费OV/EV证书
+      herf: Operation-Guide/GeoTrust-OEV-Complete.md
 - name: 常见问题
-  herf: FAQ/FAQ.md   
+  herf: FAQ/FAQ.md  
+ 

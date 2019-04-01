@@ -2,7 +2,9 @@
 
 
 ## 描述
-添加APP转码配置
+添加应用转码配置
+- 添加应用级别的转码模板配置
+
 
 ## 请求方式
 POST
@@ -12,19 +14,12 @@ https://live.jdcloud-api.com/v1/transcodeApps:config
 
 
 ## 请求参数
-|名称|类型|是否必需|描述|
-|---|---|---|---|
-|**publishDomain**|String|True|直播的推流域名|
-|**template**|String|True|转码模版后缀|
-|**appName**|String|True|直播流所属应用名称|
+|名称|类型|是否必需|默认值|描述|
+|---|---|---|---|---|
+|**publishDomain**|String|True| |推流域名|
+|**appName**|String|True| |应用名称|
+|**template**|String|True| |转码模版<br>- 取值范围: 系统标准转码模板, 用户自定义转码模板<br>- 系统标准转码模板<br>  ld (h.264/640*360/15f)<br>  sd (h.264/854*480/24f)<br>  hd (h.264/1280*720/25f)<br>  shd (h.264/1920*1080/30f)<br>|
 
-
-## 示例
-    {
-        "publishDomain": "push.yourdomain.com",
-        "appName": "live",
-        "template": "test-live-video"
-    }
 
 ## 返回参数
 |名称|类型|描述|
@@ -41,3 +36,24 @@ https://live.jdcloud-api.com/v1/transcodeApps:config
 |**404**|Not found|
 |**500**|Internal server error|
 |**503**|Service unavailable|
+
+## 请求示例
+POST
+```
+https://live.jdcloud-api.com/v1/transcodeApps:config
+
+```
+```
+{
+    "appName": "yourapp", 
+    "publishDomain": "push.yourdomain.com", 
+    "template": "shd"
+}
+```
+
+## 返回示例
+```
+{
+    "requestId": "bgvmivir54gddpgi764se9f4kfr7ge41"
+}
+```

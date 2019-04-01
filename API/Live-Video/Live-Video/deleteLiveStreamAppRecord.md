@@ -2,7 +2,9 @@
 
 
 ## 描述
-删除APP录制配置
+删除应用级别录制模板配置
+- 删除应用级别的录制模板配置,重新推流后生效
+
 
 ## 请求方式
 DELETE
@@ -10,11 +12,12 @@ DELETE
 ## 请求地址
 https://live.jdcloud-api.com/v1/recordApps/{publishDomain}/appNames/{appName}/templates/{template}
 
-|名称|类型|是否必需|描述|
-|---|---|---|---|
-|**publishDomain**|String|True|推流加速域名|
-|**appName**|String|True|直播流所属应用名称|
-|**template**|String|True|录制模板自定义名称|
+|名称|类型|是否必需|默认值|描述|
+|---|---|---|---|---|
+|**publishDomain**|String|True| |推流域名|
+|**appName**|String|True| |应用名称|
+|**template**|String|True| |录制模板
+|
 
 ## 请求参数
 无
@@ -35,3 +38,17 @@ https://live.jdcloud-api.com/v1/recordApps/{publishDomain}/appNames/{appName}/te
 |**404**|Not found|
 |**500**|Internal server error|
 |**503**|Service unavailable|
+
+## 请求示例
+DELETE
+```
+https://live.jdcloud-api.com/v1/recordApps/push.yourdomain.com/appNames/yourapp/templates/yourrecordtemplate
+
+```
+
+## 返回示例
+```
+{
+    "requestId": "bgvmivir54gddpgi764se9f4kfr7ge41"
+}
+```

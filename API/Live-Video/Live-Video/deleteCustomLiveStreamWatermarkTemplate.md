@@ -3,6 +3,8 @@
 
 ## 描述
 删除用户自定义水印模板
+- 删除用户自定义水印模板之前必须先删除此模板在各域名、应用、流级别的水印设置
+
 
 ## 请求方式
 DELETE
@@ -10,9 +12,10 @@ DELETE
 ## 请求地址
 https://live.jdcloud-api.com/v1/watermarkCustoms/{template}
 
-|名称|类型|是否必需|描述|
-|---|---|---|---|
-|**template**|String|True|水印模板自定义名称|
+|名称|类型|是否必需|默认值|描述|
+|---|---|---|---|---|
+|**template**|String|True| |水印模板
+|
 
 ## 请求参数
 无
@@ -33,3 +36,17 @@ https://live.jdcloud-api.com/v1/watermarkCustoms/{template}
 |**404**|Not found|
 |**500**|Internal server error|
 |**503**|Service unavailable|
+
+## 请求示例
+DELETE
+```
+https://live.jdcloud-api.com/v1/watermarkCustoms/yourwatermarktemplate
+
+```
+
+## 返回示例
+```
+{
+    "requestId": "bgvmivir54gddpgi764se9f4kfr7ge41"
+}
+```
