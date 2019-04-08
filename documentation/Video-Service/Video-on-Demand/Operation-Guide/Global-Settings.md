@@ -32,21 +32,32 @@
    
 ### 4.2 访问控制
 
-点播产品支持对播放域名安全相关的配置，在域名设置界面，点击想要配置的域名，会进入域名“访问设置”页面
+点播产品支持对播放域名安全相关的配置，在域名设置界面，点击想要配置的域名，会进入域名“访问设置”页面。
+
 ![](https://github.com/jdcloudcom/cn/blob/cn-Video-on-Demand/image/Video-on-Demand/%E5%9F%9F%E5%90%8D%E8%AE%BE%E7%BD%AE-%E8%AE%BF%E9%97%AE%E8%AE%BE%E7%BD%AE%E9%A1%B5%E9%9D%A2.png)
 
 **A.Referer防盗链**
 
-通过配置访问的referer黑白名单来对访问者身份进行识别和过滤，从而限制资源被访问的情况，点击Referer防盗链后面的修改配置选项，在弹出的窗口中进行规则配置
+通过配置访问的referer黑白名单来对访问者身份进行识别和过滤，从而限制资源被访问的情况，点击Referer防盗链后面的修改配置选项，在弹出的窗口中进行规则配置。
+
 ![](https://github.com/jdcloudcom/cn/blob/cn-Video-on-Demand/image/Video-on-Demand/%E8%AE%BF%E9%97%AE%E8%AE%BE%E7%BD%AE-referer%E9%98%B2%E7%9B%97%E9%93%BE%E8%AE%BE%E7%BD%AE.png)
 
 **B.URL鉴权**
 
-1.在开启key防盗链后，原始URL将无法用于播放，请根据产品帮助文档中URL鉴权内容，生成带鉴权的URL进行播放。
+高级防盗链功能，通过设置鉴权KEY对URL进行加密，充分保护源站资源，点击URL鉴权后面的修改配置选项，在弹出的对话框中根据需要进行配置，其中鉴权详细说明可参考4.3中内容，另外开启鉴权功能后需要注意以下两点：
+
+1.在开启key防盗链后，原始URL将无法用于播放，请根据4.3章节中内容详细介绍，生成带鉴权的URL进行播放
+
 2.开启URL鉴权后，hls格式暂时在控制台无法预览播放
 
+![](https://github.com/jdcloudcom/cn/blob/cn-Video-on-Demand/image/Video-on-Demand/%E8%AE%BF%E9%97%AE%E8%AE%BE%E7%BD%AE-URL%E9%89%B4%E6%9D%83.png)
+![](https://github.com/jdcloudcom/cn/blob/cn-Video-on-Demand/image/Video-on-Demand/%E8%AE%BF%E9%97%AE%E8%AE%BE%E7%BD%AE-URL%E9%89%B4%E6%9D%83%E7%94%9F%E6%88%90%E5%99%A8.png)
 
+**C.IP黑名单**
 
+通过黑名单来对访问者身份进行识别和过滤，添加到黑名单的IP，将无法访问当前加速域名。
+
+![](https://github.com/jdcloudcom/cn/blob/cn-Video-on-Demand/image/Video-on-Demand/%E8%AE%BF%E9%97%AE%E8%AE%BE%E7%BD%AE-IP%E9%BB%91%E5%90%8D%E5%8D%95.png)
 
 ### 4.3 URL鉴权说明
 
