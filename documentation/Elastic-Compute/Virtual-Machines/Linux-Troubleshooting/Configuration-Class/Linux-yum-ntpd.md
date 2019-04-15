@@ -1,4 +1,4 @@
-#Linux系统配置yum源和ntpd服务#
+# Linux系统配置yum源和ntpd服务 #
 
 **一.配置yum源：**
 
