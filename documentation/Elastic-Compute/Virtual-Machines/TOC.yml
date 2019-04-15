@@ -253,7 +253,7 @@ items:
                 href: Linux-Troubleshooting/Configuration-Class/Set-ssh-password-free-login-between-cloud-hosts.md
               - name: Ubuntu配置图形界面和vnc
                 href: Linux-Troubleshooting/Configuration-Class/Ubuntu-configuration-graphical-interface-and-vnc.md
-              - name：Linux配置yum和ntp
+              - name：Linux系统配置yum和ntp
                 href：Linux-Troubleshooting/Configuration-Class/Linux-yum-ntpd.md
          - name: Linux开机自启动
            items:
