@@ -119,7 +119,7 @@ pidfile /var/run/ntpd.pid
 
 logfile /var/log/ntp.log
 
- # Access Control Support
+#Access Control Support
 
 restrict default kod nomodify notrap nopeer noquery
 
@@ -127,13 +127,13 @@ restrict -6 default kod nomodify notrap nopeer noquery
 
 restrict 127.0.0.1
 
- # local clock
+#local clock
 
 server 127.127.1.0
 
 fudge 127.127.1.0 stratum 10
 
- # jdcloud ntp server
+#jdcloud ntp server
 
 server ntp.jdcloudcs.com iburst minpoll 4 maxpoll 10
 
