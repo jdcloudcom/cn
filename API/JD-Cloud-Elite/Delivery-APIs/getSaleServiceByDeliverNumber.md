@@ -52,6 +52,19 @@ https://elite.cn-south-1.jdcloud-api.com/v1/regions/{regionId}/getSaleServiceByD
 |**failureDt**|String|服务过期时间，格式：yyyy-MM-dd HH:mm:ss|
 |**extraInfo**|String|商品属性|
 |**remark**|String|交付单备注|
+**orderTotalFee**|String|订单金额|
+|**orderActualFee**|String|订单实付金额|
+|**paymentDt**|String|订单支付时间|
+|**extraChargeInfo**|String|额外计费项信息|
+|**orderItemExtraChargeInfos**|OrderItemExtraChargeInfo[]|额外计费详情信息|
+### OrderItemExtraChargeInfo
+|名称|类型|描述|
+|---|---|---|
+|**name**|String|购买用户pin|
+|**unit**|String|单位|
+|**buyNum**|Integer|购买数量|
+|**sellingPrice**|String|销售价格|
+|**settlementPrice**|String|结算价格|
 
 ## 返回码
 |返回码|描述|
