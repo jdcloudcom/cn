@@ -42,56 +42,7 @@
           - name: describeRegiones
             href: Cloud-Physical-Server/describeRegiones.md
           - name: describeSubnet
-            href: Cloud-Physical-Server/describeSubnet.md
-          - name: associateElasticIp
-            href: Cloud-Physical-Server/associateElasticIp.md
-          - name: disassociateElasticIp
-            href: Cloud-Physical-Server/disassociateElasticIp.md
-      - name: 地域相关接口
-        items:
-          - name: describeRegiones
-            href: Cloud-Physical-Server/describeRegiones.md
-      - name: 弹性公网IP相关接口
-        items:
-          - name: describeElasticIps
-            href: Cloud-Physical-Server/describeElasticIps.md
-          - name: applyElasticIps
-            href: Cloud-Physical-Server/applyElasticIps.md
-          - name: describeElasticIp
-            href: Cloud-Physical-Server/describeElasticIp.md
-          - name: deleteelasticIp
-            href: Cloud-Physical-Server/deleteelasticIp.md
-          - name: modifyElasticIpBandwidth
-            href: Cloud-Physical-Server/modifyElasticIpBandwidth.md
-      - name: 子网相关接口
-        items:
-          - name: describeBasicSubnet
-            href: Cloud-Physical-Server/describeBasicSubnet.md
-          - name: describeSubnets
-            href: Cloud-Physical-Server/describeSubnets.md
-          - name: createSubnet
-            href: Cloud-Physical-Server/createSubnet.md
-          - name: describeSubnet
-            href: Cloud-Physical-Server/describeSubnet.md
-          - name: modifySubnet
-            href: Cloud-Physical-Server/modifySubnet.md
-          - name: deleteSubnet
-            href: Cloud-Physical-Server/deleteSubnet.md
-      - name: 私有网络相关接口
-        items:
-          - name: describeVpc
-            href: Cloud-Physical-Server/describeVpc.md
-          - name: modifyVpc
-            href: Cloud-Physical-Server/modifyVpc.md
-          - name: deleteVpc
-            href: Cloud-Physical-Server/deleteVpc.md
-          - name: describeVpcs
-            href: Cloud-Physical-Server/describeVpcs.md
-          - name: createVpc
-            href: Cloud-Physical-Server/createVpc.md
-        
-      
-      
+            href: Cloud-Physical-Server/describeSubnet.md     
       
       
       
