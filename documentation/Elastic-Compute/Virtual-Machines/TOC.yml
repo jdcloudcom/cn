@@ -421,8 +421,8 @@ items:
             href: Windows-Troubleshooting/Configuration-Class/Windows2008-opens-kernel-dump-configuration.md
           - name: Windows2008设置虚拟内存
             href: Windows-Troubleshooting/Configuration-Class/Windows2008-set-virtual-memory.md
-          - name: Windows2012磁盘分区和格式化
-            href: Windows-Troubleshooting/Configuration-Class/Windows2012-disk-partitioning-and-formatting.md
+          - name: Windows2012&2016磁盘分区和格式化
+            href: Windows-Troubleshooting/Configuration-Class/Windows2012-2016-disk-partitioning-and-formatting.md
           - name: Windows2012安装配置ftp服务
             href: Windows-Troubleshooting/Configuration-Class/Windows2012-installation-and-configuration-ftp-service.md
           - name: Windows2012修改SID
