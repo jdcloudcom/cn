@@ -1,0 +1,130 @@
+  name: 云物理服务器
+  href: 
+  items:
+  - name: 产品简介
+    items:
+      - name: 产品概述
+        href: Introduction/Product-Overview.md
+      - name: 核心概念
+        href: Introduction/Core-Concepts.md
+      - name: 基础架构
+        href: Introduction/Basic-Infrastructure.md
+      - name: 产品优势
+        href: Introduction/Benefits.md
+      - name: 产品功能
+        href: Introduction/Features.md
+      - name: 产品规格
+        href: Introduction/Specifications.md
+      - name: 限制说明
+        href: Introduction/Restrictions.md
+      - name: 应用场景 
+        href: Introduction/Application-Scenarios.md    
+  - name: 产品定价
+    items:
+      - name: 计费概述
+        href: Pricing/Billing-Overview.md
+      - name: 计费规则
+        href: Pricing/Billing-Rules.md
+      - name: 价格总览
+        href: Pricing/Price-Overview.md
+      - name: 购买流程
+        href: Pricing/Purchase-Process.md 
+      - name: 续费流程
+        href: Pricing/Renew-Process.md
+  - name: 入门指南
+    items:
+      - name: 入门指南概述
+        href: Getting-Started/Getting-Started.md
+      - name: 创建云物理服务器
+        href: Getting-Started/Create-Cloud-Physical-Server.md
+      - name: 配置云物理服务器
+        href: Getting-Started/Allocate-Cloud-Physical-Server.md
+      - name: 查看云物理服务器
+        href: Getting-Started/Check-Cloud-Physical-Server.md
+      - name: 删除云物理服务器
+        href: Getting-Started/Delete-Cloud-Physical-Server.md
+  - name: 操作指南
+    items:
+      - name: 使用须知
+        href: Operation-Guide/Terms-and-Conditions.md
+      - name: 网络
+        items:
+          - name: 私有网络
+            href: Operation-Guide/Networking/Virtual-Network-Interface.md
+          - name: 子网
+            href: Operation-Guide/Networking/Subnet.md
+          - name: 弹性公网IP
+            href: Operation-Guide/Networking/Elastic-IP-For-Physical-Cloud.md
+      - name: 防火墙配置说明
+        items:
+          - name: 功能描述
+            href: Operation-Guide/Network-And-Security/Description-Network-And-Security.md
+          - name: 操作步骤
+            href: Operation-Guide/Network-And-Security/Steps-Network-And-Security.md
+      - name: 镜像使用说明
+        items:
+          - name: 功能描述
+            href: Operation-Guide/Image/Description-Image.md
+          - name: 操作步骤
+            href: Operation-Guide/Image/Steps-Image.md
+      - name: 设置RAID级别
+        items:
+          - name: 功能描述
+            href: Operation-Guide/Set-RAID-Level/Description-Set-RAID-Level.md      
+          - name: 操作步骤
+            href: Operation-Guide/Set-RAID-Level/Steps-Set-RAID-Level.md
+      - name: 远程登陆
+        items:
+          - name: 功能描述
+            href: Operation-Guide/Remote-Login/Description-Remote-Login.md
+          - name: 操作步骤
+            href: Operation-Guide/Remote-Login/Steps-Remote-Login.md
+      - name: 云物理服务器生命周期管理
+        items:
+          - name: 功能描述
+            href: Operation-Guide/Cloud-Physical-Server-Life-Cycle-Management/Description-Cloud-Physical-Server-Life-Cycle-Management.md
+          - name: 操作步骤
+            href: Operation-Guide/Cloud-Physical-Server-Life-Cycle-Management/Steps-Cloud-Physical-Server-Life-Cycle-Management.md
+      - name: 重装操作系统
+        items:
+          - name: 功能描述
+            href: Operation-Guide/Reinstall/Description-Reinstall.md
+          - name: 操作步骤
+            href: Operation-Guide/Reinstall/Steps-Reinstall.md
+      - name: 调整公网带宽
+        items:
+          - name: 功能描述
+            href: Operation-Guide/Adjust-Public-Network-Bandwidth/Description-Adjust-Public-Network-Bandwidth.md
+          - name: 操作步骤
+            href: Operation-Guide/Adjust-Public-Network-Bandwidth/Steps-Adjust-Public-Network-Bandwidth.md
+  - name: 最佳实践
+    items:
+    - name: NAT网关网络安全方案
+      href: Best-Practices/NAT-Gateway-Network-Safety.md
+    - name: CPS到VPC专线通信配置方法
+      href: Best-Practices/CPS-VPC-DirectConnection.md 
+  - name: 教程
+    items:
+    status: 0
+  - name: 问题排查
+    items:
+    - name: 创建云物理服务器失败
+      href: Troubleshooting/Create-Cloud-Physical-Server-Failed.md
+    - name: 服务器状态为错误
+      href: Troubleshooting/Server-State-Wrong.md
+  - name: 常见问题
+    href: FAQ/FAQ.md
+  - name: API参考
+    status: 0
+  - name: SDK参考
+    status: 0               
+  - name: 相关资源
+    items:
+    - name: 文档历史记录
+      href: Related-Resources/Document-History.md   
+    - name: 备案
+      href: Related-Resources/Filing.md           
+      status: 0        
+    - name: 词汇表
+      href: Related-Resources/Glossary.md           
+      status: 0
