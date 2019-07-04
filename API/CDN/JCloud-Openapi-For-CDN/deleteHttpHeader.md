@@ -5,7 +5,7 @@
 删除httpHeader
 
 ## 请求方式
-DELETE
+PUT
 
 ## 请求地址
 https://cdn.jdcloud-api.com/v1/domain/{domain}/httpHeader

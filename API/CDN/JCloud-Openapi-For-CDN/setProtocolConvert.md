@@ -19,6 +19,10 @@ https://cdn.jdcloud-api.com/v1/liveDomain/{domain}/protocolConvert
 |---|---|---|---|---|
 |**certificate**|String|False| |https证书,转https格式时必传|
 |**rsaKey**|String|False| |https私钥，转https格式时必传|
+|**certFrom**|String|False| |证书来源有两种类型：default,ssl|
+|**sslCertId**|String|False| |ssl证书id|
+|**syncToSsl**|Boolean|False| |是否同步到ssl,boolean值，取值true或者false|
+|**certName**|String|False| |syncToSsl是true时，certName是必填项|
 |**protocolConverts**|ProtocolConvert[]|False| | |
 
 ### ProtocolConvert

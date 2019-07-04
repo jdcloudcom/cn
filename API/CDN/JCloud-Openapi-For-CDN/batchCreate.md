@@ -14,6 +14,7 @@ https://cdn.jdcloud-api.com/v1/domain:batchCreate
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
+|**x-jdcloud-channel**|String|False|cdn|域名来源cdn/cdn,video视频云|
 |**domains**|String[]|False| | |
 |**sourceType**|String|False| |回源类型只能是[ips,domain,oss]中的一种|
 |**cdnType**|String|False| |点播域名的类型只能是[vod,download,web]中的一种|

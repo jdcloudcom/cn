@@ -28,9 +28,9 @@ https://cdn.jdcloud-api.com/v1/domain/{domain}/userAgentConfig
 |名称|类型|描述|
 |---|---|---|
 |**domain**|String| |
-|**userAgentType**|String| |
-|**userAgentList**|String[]| |
-|**allowNoUserAgentHeader**|String| |
+|**userAgentType**|String|userAgent类型,取值：block（黑名单）,allow（白名单）,默认为block|
+|**userAgentList**|String[]|UA列表|
+|**allowNoUserAgentHeader**|String|是否允许空userAgent访问,默认为“on”|
 
 ## 返回码
 |返回码|描述|

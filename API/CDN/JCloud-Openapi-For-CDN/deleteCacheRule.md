@@ -17,7 +17,7 @@ https://cdn.jdcloud-api.com/v1/domain/{domain}/cacheRule
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**configId**|Long|False| |缓存规则id|
+|**configId**|Long|False| |缓存规则配置ID|
 
 
 ## 返回参数

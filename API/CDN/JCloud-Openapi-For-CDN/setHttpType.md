@@ -21,6 +21,10 @@ https://cdn.jdcloud-api.com/v1/domain/{domain}/httpType
 |**certificate**|String|False| |用户证书,当Type为https时必须设置|
 |**rsaKey**|String|False| |证书私钥|
 |**jumpType**|String|False| |有三种类型：default、http、https|
+|**certFrom**|String|False| |证书来源有两种类型：default,ssl|
+|**sslCertId**|String|False| |ssl证书id|
+|**syncToSsl**|Boolean|False| |是否同步到ssl,boolean值，取值true或者false|
+|**certName**|String|False| |syncToSsl是true时，certName是必填项|
 
 
 ## 返回参数

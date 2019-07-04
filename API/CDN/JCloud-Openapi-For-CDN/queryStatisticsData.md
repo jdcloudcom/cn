@@ -8,7 +8,7 @@
 POST
 
 ## 请求地址
-https://cdn.jdcloud-api.com/v1/statistics
+https://cdn.jdcloud-api.com/v1/vodStatistics
 
 
 ## 请求参数

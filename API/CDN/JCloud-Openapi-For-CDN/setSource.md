@@ -21,8 +21,8 @@ https://cdn.jdcloud-api.com/v1/domain/{domain}/source
 |**backSourceType**|String|False| |回源方式,只能是[https,http]中的一种,默认http|
 |**ipSource**|IpSourceInfo[]|False| | |
 |**domainSource**|DomainSourceInfo[]|False| | |
-|**ossSource**|String|False| | |
-|**defaultSourceHost**|String|False| | |
+|**ossSource**|String|False| |oss回源域名|
+|**defaultSourceHost**|String|False| |默认回源host|
 
 ### DomainSourceInfo
 |名称|类型|是否必需|默认值|描述|

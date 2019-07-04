@@ -8,7 +8,7 @@
 POST
 
 ## 请求地址
-https://cdn.jdcloud-api.com/v1/statistics:groupSum
+https://cdn.jdcloud-api.com/v1/vodStatistics:groupSum
 
 
 ## 请求参数

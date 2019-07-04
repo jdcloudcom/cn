@@ -32,7 +32,7 @@ https://cdn.jdcloud-api.com/v1/domain/{domain}/cacheRule
 ### Result
 |名称|类型|描述|
 |---|---|---|
-|**configId**|Long| |
+|**configId**|Long|缓存规则配置ID|
 
 ## 返回码
 |返回码|描述|

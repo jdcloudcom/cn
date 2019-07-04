@@ -77,6 +77,12 @@ https://cdn.jdcloud-api.com/v1/liveDomain/{domain}
 |**publishNormalTimeout**|String|推流中断超时时间(单位秒)|
 |**notifyCustomUrl**|String|推断流通知Url|
 |**notifyCustomAuthKey**|String|推断流通知key|
+|**certFrom**|String|证书来源有两种类型：default,ssl|
+|**sslCertId**|String|ssl证书id|
+|**certName**|String|证书名称|
+|**certType**|String|证书类型|
+|**sslCertStartTime**|String| |
+|**sslCertEndTime**|String| |
 ### ProtocolConvert
 |名称|类型|描述|
 |---|---|---|
