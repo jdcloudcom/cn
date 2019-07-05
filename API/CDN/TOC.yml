@@ -1,0 +1,175 @@
+name: cdn
+href: 
+items:
+  - name: 接口概览
+    href: overview.md
+  - name: 更新历史
+    href: ChangeLog.md
+  - name: 接口信息
+    items:
+      - name: 创建域名
+        items:
+          - name: createDomain
+            href: JCloud-Openapi-For-CDN/createDomain.md
+          - name: batchCreate
+            href: JCloud-Openapi-For-CDN/batchCreate.md
+          - name: createLiveDomain
+            href: JCloud-Openapi-For-CDN/createLiveDomain.md
+      - name: 域名配置查询
+        items:
+          - name: getDomainDetail
+            href: JCloud-Openapi-For-CDN/getDomainDetail.md
+          - name: getDomainList
+            href: JCloud-Openapi-For-CDN/getDomainList.md
+          - name: getDomainListByFilter
+            href: JCloud-Openapi-For-CDN/getDomainListByFilter.md
+          - name: queryLiveDomainDetail
+            href: JCloud-Openapi-For-CDN/queryLiveDomainDetail.md
+          - name: queryDomainGroupDetail
+            href: JCloud-Openapi-For-CDN/queryDomainGroupDetail.md
+          - name: queryDomainGroupList
+            href: JCloud-Openapi-For-CDN/queryDomainGroupList.md
+          - name: queryDomainsNotInGroup
+            href: JCloud-Openapi-For-CDN/queryDomainsNotInGroup.md
+          - name: queryMonitor
+            href: JCloud-Openapi-For-CDN/queryMonitor.md
+          - name: queryAccesskeyConfig
+            href: JCloud-Openapi-For-CDN/queryAccesskeyConfig.md
+          - name: queryUserAgent
+            href: JCloud-Openapi-For-CDN/queryUserAgent.md
+          - name: queryIpBlackList
+            href: JCloud-Openapi-For-CDN/queryIpBlackList.md
+          - name: queryHttpHeader
+            href: JCloud-Openapi-For-CDN/queryHttpHeader.md
+          - name: queryFollowRedirect
+            href: JCloud-Openapi-For-CDN/queryFollowRedirect.md
+          - name: queryFollowSourceProtocol
+            href: JCloud-Openapi-For-CDN/queryFollowSourceProtocol.md
+          - name: queryDefaultHttpHeaderKey
+            href: JCloud-Openapi-For-CDN/queryDefaultHttpHeaderKey.md
+          - name: queryLiveDomainApps
+            href: JCloud-Openapi-For-CDN/queryLiveDomainApps.md
+          - name: queryPushDomainORAppOrStream
+            href: JCloud-OpenApi-For-CDN/queryPushDomainORAppOrStream.md
+          - name: getSslCertDetail
+            href: SSL-Certificate/getSslCertDetail.md
+          - name: getSslCertList
+            href: SSL-Certificate/getSslCertList.md
+      - name: 域名配置修改
+        items:
+          - name: createDomainGroup
+            href: JCloud-Openapi-For-CDN/createDomainGroup.md
+          - name: batchDeleteDomainGroup
+            href: JCloud-Openapi-For-CDN/batchDeleteDomainGroup.md
+          - name: updateDomainGroup
+            href: JCloud-Openapi-For-CDN/updateDomainGroup.md
+          - name: setSource
+            href: JCloud-Openapi-For-CDN/setSource.md
+          - name: setLiveDomainBackSource
+            href: JCloud-Openapi-For-CDN/setLiveDomainBackSource.md
+          - name: setLiveDomainRefer
+            href: JCloud-Openapi-For-CDN/setLiveDomainRefer.md
+          - name: setLiveDomainIpBlackList
+            href: JCloud-Openapi-For-CDN/setLiveDomainIpBlackList.md
+          - name: operateLiveDomainIpBlackList
+            href: JCloud-Openapi-For-CDN/operateLiveDomainIpBlackList.md
+          - name: setLiveDomainBackSourceHost
+            href: JCloud-Openapi-For-CDN/setLiveDomainBackSourceHost.md
+          - name: setLiveDomainAccessKey
+            href: JCloud-Openapi-For-CDN/setLiveDomainAccessKey.md
+          - name: setMonitor
+            href: JCloud-Openapi-For-CDN/setMonitor.md
+          - name: stopMonitor
+            href: JCloud-Openapi-For-CDN/stopMonitor.md
+          - name: setRefer
+            href: JCloud-Openapi-For-CDN/setRefer.md
+          - name: setAccesskeyConfig
+            href: JCloud-Openapi-For-CDN/setAccesskeyConfig.md
+          - name: setUserAgentConfig
+            href: JCloud-Openapi-For-CDN/setUserAgentConfig.md
+          - name: operateIpBlackList
+            href: JCloud-Openapi-For-CDN/operateIpBlackList.md
+          - name: createCacheRule
+            href: JCloud-Openapi-For-CDN/createCacheRule.md
+          - name: updateCacheRule
+            href: JCloud-OpenApi-For-CDN/updateCacheRule.md
+          - name: deleteCacheRule
+            href: JCloud-OpenApi-For-CDN/deleteCacheRule.md
+          - name: setIgnoreQueryString
+            href: JCloud-OpenApi-For-CDN/setIgnoreQueryString.md
+          - name: setRange
+            href: JCloud-OpenApi-For-CDN/setRange.md
+          - name: setVideoDraft
+            href: JCloud-OpenApi-For-CDN/setVideoDraft.md
+          - name: setHttpHeader
+            href: JCloud-OpenApi-For-CDN/setHttpHeader.md
+          - name: deleteHttpHeader
+            href: JCloud-OpenApi-For-CDN/deleteHttpHeader.md
+          - name: setHttpType
+            href: JCloud-OpenApi-For-CDN/setHttpType.md
+          - name: setFollowRedirect
+            href: JCloud-OpenApi-For-CDN/setFollowRedirect.md
+          - name: setFollowSourceProtocol
+            href: JCloud-OpenApi-For-CDN/setFollowSourceProtocol.md
+          - name: uploadCert
+            href: JCloud-OpenApi-For-CDN/uploadCert.md
+          - name: queryDomainConfig
+            href: JCloud-OpenApi-For-CDN/queryDomainConfig.md
+
+
+      - name: 停止删除域名
+        items:
+          - name: startDomain
+            href: JCloud-OpenApi-For-CDN/startDomain.md
+          - name: stopDomain
+            href: JCloud-OpenApi-For-CDN/stopDomain.md
+          - name: deleteDomain
+            href: JCloud-OpenApi-For-CDN/deleteDomain.md
+
+      - name: 统计数据查询
+        items:
+          - name: queryLiveStatisticsAreaDataGroupBy
+            href: JCloud-OpenApi-For-CDN/queryLiveStatisticsAreaDataGroupBy.md
+          - name: queryLiveStatisticsData
+            href: JCloud-OpenApi-For-CDN/queryLiveStatisticsData.md
+          - name: queryLiveTrafficGroupSum
+            href: JCloud-OpenApi-For-CDN/queryLiveTrafficGroupSum.md
+          - name: queryMixStatisticsData
+            href: JCloud-OpenApi-For-CDN/queryMixStatisticsData.md
+          - name: queryMixStatisticsWithAreaData
+            href: JCloud-OpenApi-For-CDN/queryMixStatisticsWithAreaData.md
+          - name: queryMixTrafficGroupSum
+            href: JCloud-OpenApi-For-CDN/queryMixTrafficGroupSum.md
+          - name: queryStatisticsData
+            href: JCloud-OpenApi-For-CDN/queryStatisticsData.md
+          - name: queryStatisticsDataGroupByArea
+            href: JCloud-OpenApi-For-CDN/queryStatisticsDataGroupByArea.md
+          - name: queryStatisticsDataGroupSum
+            href: JCloud-OpenApi-For-CDN/queryStatisticsDataGroupSum.md
+          - name: queryStatisticsTopIp
+            href: JCloud-OpenApi-For-CDN/queryStatisticsTopIp.md
+          - name: queryStatisticsTopUrl
+            href: JCloud-OpenApi-For-CDN/queryStatisticsTopUrl.md
+          - name: queryDomainLog
+            href: JCloud-OpenApi-For-CDN/queryDomainLog.md
+          - name: queryDomainsLog
+            href: JCloud-OpenApi-For-CDN/queryDomainsLog.md
+          - name: queryAreaIspList
+            href: JCloud-OpenApi-For-CDN/queryAreaIspList.md
+
+
+      - name: 刷新预热权限
+        items:
+          - name: createLiveDomainPrefecthTask
+            href: JCloud-OpenApi-For-CDN/createLiveDomainPrefecthTask.md
+          - name: createRefreshTask
+            href: JCloud-OpenApi-For-CDN/createRefreshTask.md
+          - name: createRefreshTaskForCallback
+            href: JCloud-OpenApi-For-CDN/createRefreshTaskForCallback.md
+          - name: queryRefreshTask
+            href: JCloud-OpenApi-For-CDN/queryRefreshTask.md
+          - name: queryRefreshTaskById
+            href: JCloud-OpenApi-For-CDN/queryRefreshTaskById.md
+          - name: createRefreshTaskForCallbackV2
+            href: JCloud-OpenApi-For-CDN/createRefreshTaskForCallbackV2.md
+    
