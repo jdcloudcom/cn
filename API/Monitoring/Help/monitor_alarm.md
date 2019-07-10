@@ -1,6 +1,75 @@
 注：OpenAPI入门使用请参看[公共说明](http://docs.jdcloud.com/cn/common-declaration/api/introduction)
 
-### 1. createAlarm
+### 1.describeMetricsForCreateAlarm
+
+**查询可用于创建监控报警规则的指标列表** 	
+
+示例请求
+
+```json
+https://monitor.jdcloud-api.com/v1/metricsForCreateAlarm?serviceCode=vm
+```
+
+返回
+
+```json
+{
+    "requestId": "11111",
+    "result": {
+        "serviceCodeList": [
+            {
+                "serviceCode": "vm",
+                "metrics": [
+                    {
+                        "calculateUnit": "%",
+                        "metric": "cpu_util",
+                        "metricName": "CPU使用率",
+                        "serviceCode": "vm",
+                        "downSample": ""
+                    },
+                    {
+                        "calculateUnit": "%",
+                        "metric": "memory.usage",
+                        "metricName": "内存使用率",
+                        "serviceCode": "vm",
+                        "downSample": ""
+                    },
+                    {
+                        "calculateUnit": "Bps",
+                        "metric": "vm.disk.bytes.read",
+                        "metricName": "磁盘读吞吐量",
+                        "serviceCode": "vm",
+                        "downSample": ""
+                    },
+                    {
+                        "calculateUnit": "Bps",
+                        "metric": "vm.disk.bytes.write",
+                        "metricName": "磁盘写吞吐量",
+                        "serviceCode": "vm",
+                        "downSample": ""
+                    },
+                    {
+                        "calculateUnit": "bps",
+                        "metric": "vm.network.bytes.incoming",
+                        "metricName": "网络入速率",
+                        "serviceCode": "vm",
+                        "downSample": ""
+                    },
+                    {
+                        "calculateUnit": "bps",
+                        "metric": "vm.network.bytes.outgoing",
+                        "metricName": "网络出速率",
+                        "serviceCode": "vm",
+                        "downSample": ""
+                    }
+                ]
+            }
+        ]
+    }
+}
+```
+
+### 2. createAlarm
 
 **创建报警规则**
 
@@ -39,7 +108,7 @@ https://monitor.jdcloud-api.com/v1/regions/cn-north-1/alarms
         "operation": "gt",
         "period": 2,
         "resourceIds": [
-            "mysqltag_2"
+            "i_test01"
         ],
         "serviceCode": "vm",
         "tags": {},
@@ -67,7 +136,7 @@ https://monitor.jdcloud-api.com/v1/regions/cn-north-1/alarms
 }
 ```
 
-### 2. deleteAlarms
+### 3. deleteAlarms
 
 **批量删除规则**
 
@@ -93,7 +162,7 @@ https://monitor.jdcloud-api.com/v1/regions/cn-north-1/alarms
 }
 ```
 
-### 3. updateAlarm
+### 4. updateAlarm
 
 **修改已创建的报警规则**
 
@@ -153,7 +222,7 @@ https://monitor.jdcloud-api.com/v1/regions/cn-north-1/alarms/alarm-fczoaanast
 }
 ```
 
-### 4. describeAlarms
+### 5. describeAlarms
 
 查询规则
 
@@ -174,7 +243,7 @@ https://monitor.jdcloud-api.com/v1/regions/cn-north-1/alarms
                 "id": "alarm-jfws97535q",
                 "metric": "cpu_util",
                 "metricName": "cpu使用率",
-                "resourceId": "i-asdasd",
+                "resourceId": "i-test01",
                 "region": "cn-north-1",
                 "serviceCode": "vm",
                 "period": 1,
