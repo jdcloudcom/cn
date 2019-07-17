@@ -12,6 +12,7 @@
 - SQL Server 2012 企业版
 - SQL Server 2014 企业版
 - SQL Server 2016 企业版
+- SQL Server 2017 企业版
 
 ## 注意事项
 1. TDE在实例级别开启后不允许关闭
@@ -24,10 +25,10 @@
 - 加密的数据库备份下载后，需要解密后才能恢复到本地的数据库。 解密的密钥请联系客户获取，后续会提供自助下载功能。
 - 加密的数据库暂不支持跨域备份备份同步
 
-## 操作步骤
+## 1. 开启TDE加密
 1. 登录RDS控制台，点击实例，进入到 **“安全管理”** 页面
 2. 选择 **“TDE透明数据加密”** ，点击开关，开启实例级别的TDE
-3. 对要开启TDE的数据库，执行以下SQL。 以数据库db1为例
+3) 对要开启TDE的数据库，执行以下SQL。 以数据库db1为例
 ```SQL
 USE master
 GO
@@ -52,6 +53,31 @@ GO
 SELECT db_name(database_id) as DatabaseName, * FROM sys.dm_database_encryption_keys
 GO 
 ```
+
+## 2. 下载TDE证书和获取密钥
+数据库开启TDE后，下载到本地的备份无法直接恢复，必须结合TDE证书和密钥才能恢复到本地SQL Server实例中
+
+1. 在控制台开启TDE后，可以下载TDE的证书。证书可以从内网或者公网中下载。
+2. 点击 **“点击复制”** 可以获取密钥
+3. 对要恢复的备份，执行以下SQL
+```SQL
+USE master
+GO
+
+create master key encryption by password = N'xxx';  --xxx 为前面获取的密钥
+GO
+
+
+CREATE CERTIFICATE Mycertificate 
+FROM FILE = N'D:\Database\mycertificate.cer'
+with private key 
+(
+    file = N'D:\Database\mycertificate.pvk' , 
+    decryption by password = N'xxx'
+);                                                -- mycertificate.cer和mycertificate.pvk为前面下载的TDE证书，具体文件名称略有不同
+```
+
+4. 然后执行恢复的SQL语句或者通过SSMS客户端恢复即可
 
 
 

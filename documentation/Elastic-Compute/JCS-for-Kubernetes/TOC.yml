@@ -103,8 +103,6 @@
        href: Best-Practices/Deploy-Helm.md
      - name: 在Kubernetes集群上运行Istio
        href: Best-Practices/Deploy-istio.md
-     - name: 使用对象存储Bucket作为共享存储
-       href: Best-Practices/Oss-s3fs-volume.md
      - name: 部署自定义版本的NVIDIA GPU驱动
        href: Best-Practices/Custom-GPU-driver.md
   - name: 常见问题

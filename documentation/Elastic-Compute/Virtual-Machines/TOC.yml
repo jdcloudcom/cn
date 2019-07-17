@@ -111,6 +111,8 @@ items:
             href: Operation-Guide/Image/Image-Overview.md
           - name: 镜像类型
             href: Operation-Guide/Image/Image-Type.md
+          - name: 官方镜像系统组件
+            href: Operation-Guide/Image/Default-Agent-in-Public-Image.md            
           - name: 制作私有镜像
             href: Operation-Guide/Image/Create-Private-Image.md
           - name: 共享私有镜像

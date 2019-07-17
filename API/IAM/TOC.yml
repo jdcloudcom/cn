@@ -7,23 +7,79 @@ items:
     href: ChangeLog.md
   - name: 接口信息
     items:
-      - name: 策略管理接口
+      - name: 子用户管理接口
         items:
-          - name: addPermissionsToSubUser
+          - name: createSubUser
+            href: SubUser-Management/createSubUser.md
+          - name: describeSubUser
+            href: SubUser-Management/describeSubUser.md
+          - name: updateSubUser
+            href: SubUser-Management/updateSubUser.md
+          - name: deleteSubUser
+            href: SubUser-Management/deleteSubUser.md
+          - name: attachSubUserPolicy
+            href: SubUser-Management/attachSubUserPolicy.md
+          - name: detachSubUserPolicy
+            href: SubUser-Management/detachSubUserPolicy.md
+      - name: 群组管理接口
+        items:
+          - name: createGroup
+            href: User-Group-Management/createGroup.md
+          - name: describeGroup
+            href: User-Group-Management/describeGroup.md
+          - name: updateGroup
+            href: User-Group-Management/updateGroup.md
+          - name: deleteGroup
+            href: User-Group-Management/deleteGroup.md
+          - name: addSubUserToGroup
+            href: User-Group-Management/addSubUserToGroup.md
+          - name: removeSubUserFromGroup
+            href: User-Group-Management/removeSubUserFromGroup.md
+          - name: attachGroupPolicy
+            href: User-Group-Management/attachGroupPolicy.md
+          - name: detachGroupPolicy
+            href: User-Group-Management/detachGroupPolicy.md
+      - name: 角色管理接口
+        items:
+          - name: createRole
+            href: Role-Management/createRole.md
+          - name: describeRole
+            href: Role-Management/describeRole.md
+          - name: updateAssumeRolePolicy
+            href: Role-Management/updateAssumeRolePolicy.md
+          - name: deleteRole
+            href: Role-Management/deleteRole.md
+          - name: attachRolePolicy
+            href: Role-Management/attachRolePolicy.md
+          - name: detachRolePolicy
+            href: Role-Management/detachRolePolicy.md
+      - name: 策略管理接口（新版本）
+        items:
+          - name: createPolicy
+            href: Policy-Management/createPolicy.md
+          - name: describePolicy
+            href: Policy-Management/describePolicy.md
+          - name: updatePolicyDescription
+            href: Policy-Management/updatePolicyDescription.md
+          - name: deletePolicy
+            href: Policy-Management/deletePolicy.md
+      - name: 策略管理接口（老版本即将下线）
+        items:
+          - name: addPermissionsToSubUser（老版本即将下线）
             href: Permission-Management/addPermissionsToSubUser.md
-          - name: createPermission
+          - name: createPermission（老版本即将下线）
             href: Permission-Management/createPermission.md
-          - name: describePermissionDetail
+          - name: describePermissionDetail（老版本即将下线）
             href: Permission-Management/describePermissionDetail.md
-          - name: describePermissions
+          - name: describePermissions（老版本即将下线）
             href: Permission-Management/describePermissions.md
-          - name: describeSubUserPermissions
+          - name: describeSubUserPermissions（老版本即将下线）
             href: Permission-Management/describeSubUserPermissions.md
-          - name: removePermissionOfSubUser
+          - name: removePermissionOfSubUser（老版本即将下线）
             href: Permission-Management/removePermissionOfSubUser.md
-          - name: updatePermission
+          - name: updatePermission（老版本即将下线）
             href: Permission-Management/updatePermission.md
-      - name: 用户管理接口
+      - name: 主账号AKSK管理接口
         items:
           - name: createUserAccessKey
             href: User-Management/createUserAccessKey.md
@@ -35,3 +91,12 @@ items:
             href: User-Management/disabledUserAccessKey.md
           - name: enabledUserAccessKey
             href: User-Management/enabledUserAccessKey.md
+      - name: 子用户AKSK管理接口
+        items:
+          - name: deleteSubUserAccessKey
+            href: SubUser-AccessKey-Management/deleteSubUserAccessKey.md
+          - name: enableSubUserAccessKey
+            href: SubUser-AccessKey-Management/enableSubUserAccessKey.md
+          - name: disableSubUserAccessKey
+            href: SubUser-AccessKey-Management/disableSubUserAccessKey.md
+    

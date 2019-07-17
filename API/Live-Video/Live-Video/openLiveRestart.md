@@ -37,8 +37,8 @@ https://live.jdcloud-api.com/v1/liveRestart:open
 PUT
 ```
 https://live.jdcloud-api.com/v1/liveRestart:open
-
 ```
+
 ```
 {
     "restartDomain": "restart.yourdomain.com"

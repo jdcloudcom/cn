@@ -17,7 +17,11 @@
         items:
           - name: addTemplate
             href: Message-Content-APIs/addTemplate.md
-          - name: queryOneTemplate
-            href: Message-Content-APIs/queryOneTemplate.md
+          - name: queryTemplateById
+            href: Message-Content-APIs/queryTemplateById.md
           - name: queryTemplateList
             href: Message-Content-APIs/queryTemplateList.md
+      - name: 套餐包
+        items:
+          - name: queryPackageRemainder
+            href: Package-APIs/queryPackageRemainder.md

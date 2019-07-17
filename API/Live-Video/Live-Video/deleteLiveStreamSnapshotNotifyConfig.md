@@ -39,7 +39,6 @@ https://live.jdcloud-api.com/v1/snapshotNotifys/{publishDomain}:config
 DELETE
 ```
 https://live.jdcloud-api.com/v1/snapshotNotifys/push.yourdomain.com:config
-
 ```
 
 ## 返回示例

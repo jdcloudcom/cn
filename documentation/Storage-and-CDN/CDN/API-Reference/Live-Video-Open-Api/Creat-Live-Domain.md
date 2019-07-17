@@ -123,7 +123,7 @@ https://opencdn.jcloud.com/api/live/createDomain
 {
     "username":"jcloud_username",
     "signature":"xxxxxxxxx",
-    "siteType":"pull",//混合模式(推拉流模式)
+    "siteType":"pull",//拉流模式
     "domainType":"pull",  //本次添加的域名类型
     "domain":"pullRtmp.ex.com",//本次需要添加的域名
     "protocol":"rtmp",//如果创建的是拉流域名，那么为必须的字段
@@ -154,7 +154,7 @@ https://opencdn.jcloud.com/api/live/createDomain
 {
     "username":"jcloud_username",
     "signature":"xxxxxxxxx",
-    "siteType":"push",//混合模式(推拉流模式)
+    "siteType":"push",//推流模式
     "domainType":"pull",  //本次添加的域名类型
     "domain":"pullHls.ex.com",//本次需要添加的域名
     "protocol":"hls",//如果创建的是拉流域名，那么为必须的字段

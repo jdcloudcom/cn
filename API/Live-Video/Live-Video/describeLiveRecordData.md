@@ -60,7 +60,6 @@ https://live.jdcloud-api.com/v1/liveRecordData
 GET
 ```
 https://live.jdcloud-api.com/v1/liveRecordData?publishDomain=push.yourdomain.com&appName=yourapp&streamName=yourstream&startTime=2018-10-21T10:00:00Z
-
 ```
 
 ## 返回示例

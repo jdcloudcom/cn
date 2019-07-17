@@ -60,7 +60,6 @@ https://live.jdcloud-api.com/v1/describeLiveStreamHistoryUserNum
 GET
 ```
 https://live.jdcloud-api.com/v1/describeLiveStreamHistoryUserNum?domainName=yourdomain&startTime=2018-10-21T10:00:00Z&&endTime=2018-10-22T10:00:00Z
-
 ```
 
 ## 返回示例

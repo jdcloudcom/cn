@@ -64,7 +64,9 @@
           - name: Linux临时配置
             href: Operation-Guide/VM-Configuration/Linux-Temporary-Configuration.md    
           - name: Linux永久配置
-            href: Operation-Guide/VM-Configuration/Linux-Permanent-Configuration.md   
+            href: Operation-Guide/VM-Configuration/Linux-Permanent-Configuration.md
+          - name: 辅助网卡路由配置
+            href: Operation-Guide/VM-Configuration/ENI-Routing-Configuration.md
   - name: 常见问题
     href: FAQ/FAQ.md         
   - name: 相关资源

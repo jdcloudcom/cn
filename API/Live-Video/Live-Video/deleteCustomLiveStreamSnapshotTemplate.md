@@ -40,7 +40,6 @@ https://live.jdcloud-api.com/v1/snapshotCustoms/{template}
 DELETE
 ```
 https://live.jdcloud-api.com/v1/snapshotCustoms/yoursnapshottemplate
-
 ```
 
 ## 返回示例

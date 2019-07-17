@@ -17,14 +17,18 @@ items:
       href: Getting-Started/Getting-Started.md
   - name: 操作指南
     items:
-    - name: 安全状态
-      href: Operation-Guide/Instance-Management/Security-Status.md
+    - name: 威胁概览
+      href: Operation-Guide/Security-Status.md
     - name: 安全配置
-      href: Operation-Guide/Instance-Management/Security-Configuration.md
+      href: Operation-Guide/Security-Configuration.md
     - name: 安全漏洞
-      href: Operation-Guide/Instance-Management/Security-Vulnerability.md    
+      href: Operation-Guide/Security-Vulnerability.md    
     - name: 安全事件
-      href: Operation-Guide/Instance-Management/Security-Incidents.md       
+      href: Operation-Guide/Security-Incidents.md
+    - name: 合规基线
+      href: Operation-Guide/Compliance-Baseline.md         
+    - name: 资产管理
+      href: Operation-Guide/Asset-Management.md   
   - name: 最佳实践
     items:
     - name: 主机安全最近实践

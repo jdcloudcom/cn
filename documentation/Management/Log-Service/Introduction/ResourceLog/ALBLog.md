@@ -5,20 +5,20 @@
 ### 字段说明
 日志字段(7层) | 字段描述 | 字段类型 | 字段值说明
 -- | -- | -- | --
-timestamp  | 时间戳 | string | 精确到毫秒，eg：2018-12-20T02:59:40.001
+timestamp  | 时间戳 | time | 精确到毫秒，eg：2018-12-20T02:59:40.001
 alb_id | 负载均衡ID | string | alb-[0-9][a-z]{10} , eg: alb-gmjnqw8bnh
 client_ip | 客户端ip | string | eg：192.168.10.1
-client_port | 客户端端口 | double | 1-65535，eg：50398
+client_port | 客户端端口 | int | 1-65535，eg：50398
 lb_vip | 负载均衡虚ip（vip） | string | eg：192.168.10.2
-lb_vport | 负载均衡监听端口（vport） | double | 1-65535，eg：8080
+lb_vport | 负载均衡监听端口（vport） | int | 1-65535，eg：8080
 backend_server_ip_port | 后端服务器的ip和端口 | string | eg：192.168.10.1:8080
-request_time | 请求时间 | double | >0，eg：0.006
-backend_connect_time | 连接建立时间 | double | >0，eg：0.001
-backend_response_time | 响应时间 | double | >0，eg：0.006
-status | 状态码 | double | 类似于http code； eg: 200, 404, 503 ....
-backend_server_status | 后端服务器返回状态码 | double | 类似于http code；eg: 200, 404, 503 ....
-request_length | 请求数据长度 | double | >0，eg：80
-bytes_sent | 已发送的数据 | double | >0，eg：197
+request_time | 请求时间 | float | >0，eg：0.006 单位为秒
+backend_connect_time | 连接建立时间 | float | >0，eg：0.001 单位为秒
+backend_response_time | 响应时间 | float | >0，eg：0.006 单位为秒
+status | 状态码 | int | 类似于http code； eg: 200, 404, 503 ....
+backend_server_status | 后端服务器返回状态码 | int | 类似于http code；eg: 200, 404, 503 ....
+request_length | 请求数据长度 | int | >0，eg：80
+bytes_sent | 已发送的数据 | int | >0，eg：197 单位为字节
 scheme | scheme | string | uri scheme 或者 stream 协议；eg: http， https， tcp, udp
 request_method | http method | string | GET, POST, DELETE, PUT , OPTION....
 host | http host | string | 请求行中的host或请求头中的host或者一条与请求匹配的servername，eg: 192.168.2.3

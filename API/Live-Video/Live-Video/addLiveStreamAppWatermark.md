@@ -17,7 +17,7 @@ https://live.jdcloud-api.com/v1/watermarkApps:config
 |---|---|---|---|---|
 |**publishDomain**|String|True| |推流域名|
 |**appName**|String|True| |应用名称|
-|**template**|String|True| |水印模板名称<br>|
+|**template**|String|True| |水印模板名称|
 
 
 ## 返回参数
@@ -40,8 +40,8 @@ https://live.jdcloud-api.com/v1/watermarkApps:config
 POST
 ```
 https://live.jdcloud-api.com/v1/watermarkApps:config
-
 ```
+
 ```
 {
     "appName": "yourapp", 

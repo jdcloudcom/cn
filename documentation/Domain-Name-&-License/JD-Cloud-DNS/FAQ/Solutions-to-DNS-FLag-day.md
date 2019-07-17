@@ -11,7 +11,7 @@
 2. 2月1日起，使用京东云解析DNS服务的域名，在全球任何地区均能正常解析，不受任何影响 
  
 ### 如何测试
-托管在京东云解析DNS的域名，可以使用测试网站[https://dnsflagday.net/index-zh-CN.html] 验证是否符合EDNS标准规范。
+托管在京东云解析DNS的域名，可以使用测试网站[https://dnsflagday.net] 验证是否符合EDNS标准规范。
 
 解析结果有三种：
 

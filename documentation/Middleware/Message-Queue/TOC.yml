@@ -81,10 +81,10 @@
             items:
             - name: 发送消息
               href: Operation-Guide/API-Reference/Interface-Specification/Send-Message-Http.md
-            - name: 确认消息
-              href: Operation-Guide/API-Reference/Interface-Specification/Ack-Message.md
             - name: 消费消息
               href: Operation-Guide/API-Reference/Interface-Specification/Consume-Message.md
+            - name: 确认消息
+              href: Operation-Guide/API-Reference/Interface-Specification/Ack-Message.md
   - name: SDK参考
     items:
       - name: 示例下载

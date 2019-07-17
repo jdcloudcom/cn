@@ -63,7 +63,6 @@ https://live.jdcloud-api.com/v1/watermarkCustoms
 GET
 ```
 https://live.jdcloud-api.com/v1/watermarkCustoms?filters.1.name=template&filters.1.values.1=yourwatermarktemplate
-
 ```
 
 ## 返回示例

@@ -65,7 +65,6 @@ https://live.jdcloud-api.com/v1/snapshotCustoms
 GET
 ```
 https://live.jdcloud-api.com/v1/snapshotCustoms?filters.1.name=template&filters.1.values.1=yoursnapshottemplate
-
 ```
 
 ## 返回示例

@@ -15,8 +15,7 @@ https://live.jdcloud-api.com/v1/recordDomains/{publishDomain}/templates/{templat
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
 |**publishDomain**|String|True| |推流域名|
-|**template**|String|True| |录制模板
-|
+|**template**|String|True| |录制模板|
 
 ## 请求参数
 无
@@ -42,7 +41,6 @@ https://live.jdcloud-api.com/v1/recordDomains/{publishDomain}/templates/{templat
 DELETE
 ```
 https://live.jdcloud-api.com/v1/recordDomains/push.yourdomain.com/templates/yourrecordtemplate
-
 ```
 
 ## 返回示例

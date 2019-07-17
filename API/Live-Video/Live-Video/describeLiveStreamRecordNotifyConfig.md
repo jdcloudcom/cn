@@ -45,7 +45,6 @@ https://live.jdcloud-api.com/v1/recordNotifys/{publishDomain}
 GET
 ```
 https://live.jdcloud-api.com/v1/recordNotifys/push.yourdomain.com
-
 ```
 
 ## 返回示例

@@ -1,0 +1,33 @@
+name: 流水线
+href:
+items:
+  - name: 接口概览
+    href: overview.md
+  - name: 更新历史
+    href: ChangeLog.md
+  - name: 接口信息
+    items:
+      - name: 流水线任务
+        items:
+          - name: createPipeline
+            href: APIs/createPipeline.md
+          - name: deletePipeline
+            href: APIs/deletePipeline.md
+          - name: getPipeline
+            href: APIs/getPipeline.md
+          - name: getPipelineInstance
+            href: APIs/getPipelineInstance.md
+          - name: getPipelineInstances
+            href: APIs/getPipelineInstances.md
+          - name: getPipelineInstancesByUuids
+            href: APIs/getPipelineInstancesByUuids.md
+          - name: getPipelines
+            href: APIs/getPipelines.md
+          - name: manualAction
+            href: APIs/manualAction.md
+          - name: startPipeline
+            href: APIs/startPipeline.md
+          - name: stostopPipelineInstancepBuild
+            href: APIs/stopPipelineInstance.md
+          - name: updatePipeline
+            href: APIs/updatePipeline.md

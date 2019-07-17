@@ -22,10 +22,14 @@ items:
         href: Introduction/Application-Scenarios.md    
  - name: 产品定价
    items:
-      - name: 计费概述
-        href: Pricing/Billing-Overview.md
-      - name: 购买渠道
-        href: Pricing/Purchase-Channel.md
+      - name: 计费规则
+        href: Pricing/Pricing-Rules.md
+      - name: 资源欠费处理规则
+        href: Pricing/Owe-Rules.md
+      - name: 欠费提醒
+        href: Pricing/Owe-Remind.md
+
+        
  - name: 操作指南
    items:
       - name: 文件存储列表

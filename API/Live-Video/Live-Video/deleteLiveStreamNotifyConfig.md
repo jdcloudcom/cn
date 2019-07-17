@@ -38,7 +38,6 @@ https://live.jdcloud-api.com/v1/streamNotifys/{publishDomain}
 DELETE
 ```
 https://live.jdcloud-api.com/v1/streamNotifys/push.yourdomain.com
-
 ```
 
 ## 返回示例

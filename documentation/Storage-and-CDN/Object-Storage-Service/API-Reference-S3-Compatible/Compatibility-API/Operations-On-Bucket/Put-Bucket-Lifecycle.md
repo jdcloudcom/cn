@@ -39,7 +39,9 @@ Filter|定义生命周期管理策略所影响的Object的过滤条件，支持�
 Prefix|通过指定Object的Prefix来定义哪些Object受生命周期管理策略的影响，若定义了\<Prefix\>\</Prefix\>，则视为无前缀匹配的过滤条件。在一个Rule的Filter中仅允许一个Prefix存在。采用utf-8编码下不超过1022个字节。<br>类型：String<br>父标签：Filter|否
 Days|指定符合过滤条件的Object，在上传到Bucket多少天之后做存储类型转换，若在Expiration标签下有Date存在，则不能再指定Days。<br>类型：Positive Integer（正整数）<br>父标签：Expiration|若没有指定Date，则必须
 Date|指定符合过滤条件的Object，在上传到Bucket之后的某个日期做存储类型转换，若在Expiration标签下有Days存在，则不能再指定Date。日期格式必须符合 ISO 8601格式规范，午夜UTC。<br>类型：String<br>父标签：Expiration|若没有指定Days，则必须
-Expiration|指定何时对Object执行过期删除操作。<br>类型：Container<br>子标签：Days、Date<br>父标签：Rule|是
+Expiration|指定何时对Object执行过期删除操作。<br>类型：Container<br>子标签：Days、Date<br>父标签：Rule|否
+AbortIncompleteMultipartUpload|指定何时对未完成的分片上传执行Abort Multipart Upload操作。<br>类型：Container<br>子标签：DaysAfterInitiation<br>父标签：Rule|否
+DaysAfterInitiation|指定OSS执行终止分片上传的时间段（自初始化分片上传后的天数），最大为2147483647<br>类型：Positive Integer<br>父标签：AbortIncompleteMultipartUpload|否
 
 ## 响应
 ### 响应Header

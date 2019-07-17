@@ -49,7 +49,6 @@ https://live.jdcloud-api.com/v1/streams/{publishDomain}/appNames/{appName}/strea
 GET
 ```
 https://live.jdcloud-api.com/v1/streams/push.yourdomain.com/appNames/yourapp/streamNames/yourstream/streamInfo
-
 ```
 
 ## 返回示例

@@ -19,8 +19,8 @@
 		</thead>
 	<tbody>
    	<tr>
-      	<td rowspan="6">中国大陆地域</td>
-      	<td rowspan="2">华北-北京<br>cn-north-1</td>
+      	<td rowspan="8">中国大陆地域</td>
+      	<td rowspan="3">华北-北京<br>cn-north-1</td>
      	<td> 可用区A<br>cn-north-1a</td>
 	   	<td> 北京</td>
    </tr>
@@ -28,15 +28,22 @@
    <tr>
      	<td> 可用区B<br>cn-north-1b</td>
 	   	<td> 北京</td>
+    </tr>
+   <tr>
+     	<td> 可用区C<br>cn-north-1c</td>
+	   	<td> 北京</td>
    </tr>
-    	<tr>
-     	<td rowspan="2">华东-上海<br>cn-east-2</td>
+   <tr>
+     	<td rowspan="3">华东-上海<br>cn-east-2</td>
      	<td>可用区A<br>cn-east-2a</td>
 	   	<td>上海</td>
    </tr>
-      </tr>
     	<tr>
      	<td>可用区B<br>cn-east-2b</td>
+	   	<td>上海</td>
+   </tr>
+  <tr>
+     	<td>可用区C<br>cn-east-2c</td>
 	   	<td>上海</td>
    </tr>
   <tr>

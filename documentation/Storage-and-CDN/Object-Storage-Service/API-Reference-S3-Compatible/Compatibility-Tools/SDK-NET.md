@@ -48,4 +48,20 @@ namespace Amazon.Samples.S3
 }
 ```
 
+## 上传文件
+使用.NET s3Client上传文件。
+```C#
+// Create a PutObject request
+PutObjectRequest request = new PutObjectRequest
+{
+    BucketName = "SampleBucket",
+    Key = "Item1",
+    ContentBody = "This is sample content...",
+    UseChunkEncoding = false
+};
+ 
+// Put object
+PutObjectResponse response = s3Client.PutObject(request);
+```
 
+注：需设置UseChunkEncoding为false，禁用Chunked-Encoding编码

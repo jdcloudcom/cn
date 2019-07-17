@@ -1,0 +1,83 @@
+name: 边缘物理计算服务
+href: 
+items:
+- name: 产品简介
+  items:
+      - name: 产品概述
+        href: Introduction/Product-Overview.md
+      - name: 核心概念
+        href: Introduction/Core-Concepts.md
+      - name: 基础架构
+        href: 
+        status: 0
+      - name: 产品优势
+        href: Introduction/Benefits.md
+      - name: 产品功能
+        href: Introduction/Features.md
+      - name: 产品规格
+        href: Introduction/Specifications.md
+      - name: 限制说明
+        href: 
+        status: 0
+      - name: 应用场景 
+        href: Introduction/Application-Scenarios.md    
+- name: 产品定价
+  items:
+      - name: 计费概述
+        href: Pricing/Billing-Overview.md
+      - name: 计费规则
+        href: 
+        status: 0
+      - name: 价格总览
+        href: 
+        status: 0
+      - name: 购买流程
+        href:
+        status: 0
+      - name: 续费流程
+        href: 
+        status: 0
+- name: 入门指南
+  items:
+      - name: 入门指南概述
+        href: Getting-Started/Overview.md
+- name: 操作指南
+  items:
+      - name: 使用须知
+        href: Operation-Guide/Operation-Instruction/Operation-Instruction.md
+      - name: 资源管理
+        items:
+          - name: 查看概览
+            href: Operation-Guide/Resources-Management/View-Overview.md
+          - name: 查看机柜列表
+            href: Operation-Guide/Resources-Management/View-Cabinet-List.md
+          - name: 查看设备列表
+            href: Operation-Guide/Resources-Management/View-Device-List.md
+          - name: 查看公网IP列表
+            href: Operation-Guide/Resources-Management/View-ipAddress-List.md
+          - name: 查看带宽列表
+            href: Operation-Guide/Resources-Management/View-Bandwidth-List.md
+      - name: 工单管理
+        items:
+          - name: 提交工单
+            href: Operation-Guide/Tickets-Management/submitTicket.md
+          - name: 查看工单列表
+            href: Operation-Guide/Tickets-Management/View-Tickets-List.md
+      - name: 监控报警
+        items:
+          - name: 带宽流量
+            href: Operation-Guide/Monitoring-Alarm/View-Bandwidth-Traffic-List.md
+- name: 最佳实践
+  items:
+  status: 0
+- name: 教程
+  status: 0
+- name: 问题排查
+  status: 0    
+- name: 常见问题
+  href: FAQ/FAQ.md
+  status: 0 
+- name: 相关资源
+  items:
+    - name: 文档历史记录
+      href: Related-Resources/Document-History.md

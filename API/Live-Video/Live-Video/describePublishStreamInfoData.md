@@ -64,7 +64,6 @@ https://live.jdcloud-api.com/v1/describePublishStreamInfoData
 GET
 ```
 https://live.jdcloud-api.com/v1/describePublishStreamInfoData?domainName=yourdomain&appName=yourapp&streamName=yourstream&startTime=2018-10-21T10:00:00Z&&endTime=2018-10-22T10:00:00Z
-
 ```
 
 ## 返回示例

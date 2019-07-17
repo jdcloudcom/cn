@@ -44,7 +44,6 @@ https://live.jdcloud-api.com/v1/livePlayAuthKey
 GET
 ```
 https://live.jdcloud-api.com/v1/livePlayAuthKey?playDomain=play.yourdomain.com
-
 ```
 
 ## 返回示例

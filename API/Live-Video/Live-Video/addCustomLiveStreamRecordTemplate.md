@@ -42,8 +42,8 @@ https://live.jdcloud-api.com/v1/recordCustoms:template
 POST
 ```
 https://live.jdcloud-api.com/v1/recordCustoms:template
-
 ```
+
 ```
 {
     "recordFileType": "mp4;flv", 

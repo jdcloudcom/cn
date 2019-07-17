@@ -14,8 +14,7 @@ https://live.jdcloud-api.com/v1/snapshotApps/{publishDomain}/appNames/{appName}/
 |---|---|---|---|---|
 |**publishDomain**|String|True| |推流域名|
 |**appName**|String|True| |应用名称|
-|**template**|String|True| |截图模板
-|
+|**template**|String|True| |截图模板|
 
 ## 请求参数
 无
@@ -41,7 +40,6 @@ https://live.jdcloud-api.com/v1/snapshotApps/{publishDomain}/appNames/{appName}/
 DELETE
 ```
 https://live.jdcloud-api.com/v1/snapshotApps/push.yourdomain.com/appNames/yourapp/templates/yoursnapshottemplate
-
 ```
 
 ## 返回示例

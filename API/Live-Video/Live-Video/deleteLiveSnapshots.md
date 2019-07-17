@@ -38,7 +38,6 @@ https://live.jdcloud-api.com/v1/snapshots
 DELETE
 ```
 https://live.jdcloud-api.com/v1/snapshots?imgIds=aaa,bbb,ccc
-
 ```
 
 ## 返回示例

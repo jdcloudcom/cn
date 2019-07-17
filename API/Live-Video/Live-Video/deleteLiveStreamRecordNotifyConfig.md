@@ -39,7 +39,6 @@ https://live.jdcloud-api.com/v1/recordNotifys/{publishDomain}
 DELETE
 ```
 https://live.jdcloud-api.com/v1/recordNotifys/push.yourdomain.com
-
 ```
 
 ## 返回示例

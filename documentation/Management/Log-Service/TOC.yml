@@ -31,6 +31,8 @@ items:
           href: Introduction/ResourceLog/ALBLog.md
         - name: MySQL审计日志
           href: Introduction/ResourceLog/MySQLLog.md
+        - name: Kubernetes集群系统日志
+          href: Introduction/ResourceLog/KubernetesLog.md
 - name: 产品定价
   items:
     - name: 计费概述
@@ -61,6 +63,8 @@ items:
           href: Operation-Guide/LogSearch/fullTextSearch.md
         - name: 键值检索
           href: Operation-Guide/LogSearch/KVSearch.md
+    - name: 日志转储
+      href: Operation-Guide/LogTransfer.md
 - name: 最佳实践
   items:
     - name: 应用安全网关日志

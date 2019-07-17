@@ -40,8 +40,8 @@ https://live.jdcloud-api.com/v1/domains:stop
 PUT
 ```
 https://live.jdcloud-api.com/v1/domains:stop
-
 ```
+
 ```
 {
     "publishDomain": "push.yourdomain.com"

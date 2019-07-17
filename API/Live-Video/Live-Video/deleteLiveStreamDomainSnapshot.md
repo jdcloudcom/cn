@@ -41,7 +41,6 @@ https://live.jdcloud-api.com/v1/snapshotDomains/{publishDomain}/templates/{templ
 DELETE
 ```
 https://live.jdcloud-api.com/v1/snapshotDomains/push.yourdomain.com/templates/yoursnapshottemplate
-
 ```
 
 ## 返回示例

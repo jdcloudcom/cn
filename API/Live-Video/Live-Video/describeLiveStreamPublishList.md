@@ -21,8 +21,8 @@ https://live.jdcloud-api.com/v1/streams/{publishDomain}/publishList
 |**pageSize**|Integer|False|10|分页大小<br><br>- 取值范围[10, 100]<br>|
 |**appName**|String|False| |应用名称|
 |**streamName**|String|False| |流名称|
-|**startTime**|String|True| |推流起始时间<br><br>- UTC时间<br>  格式:yyyy-MM-dd'T'HH:mm:ss'Z'<br>  示例:2018-10-21T10:00:00Z<br>- 最大支持最近90天内的流历史查询<br>|
-|**endTime**|String|False|当前时间|推流结束时间<br><br>- UTC时间<br>  格式:yyyy-MM-dd'T'HH:mm:ss'Z'<br>  示例:2018-10-21T10:00:00Z<br>- 最大支持最近90天内的流历史查询<br>- 结束时间为空默认为当前时间<br>|
+|**startTime**|String|True| |推流起始时间<br>- UTC时间<br>  格式:yyyy-MM-dd'T'HH:mm:ss'Z'<br>  示例:2018-10-21T10:00:00Z<br>- 最大支持最近90天内的流历史查询<br>|
+|**endTime**|String|False|当前时间|推流结束时间<br>- UTC时间<br>  格式:yyyy-MM-dd'T'HH:mm:ss'Z'<br>  示例:2018-10-21T10:00:00Z<br>- 最大支持最近90天内的流历史查询<br>- 结束时间为空默认为当前时间<br>|
 
 
 ## 返回参数
@@ -61,7 +61,6 @@ https://live.jdcloud-api.com/v1/streams/{publishDomain}/publishList
 GET
 ```
 https://live.jdcloud-api.com/v1/streams/push.yourdomain.com/onlineList?appName=yourapp&streamName=yourstream&startTime=2015-12-02T01:00:00Z&endTime=2015-12-02T04:00:00Z
-
 ```
 
 ## 返回示例

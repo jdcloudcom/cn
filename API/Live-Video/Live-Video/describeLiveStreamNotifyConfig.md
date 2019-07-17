@@ -44,7 +44,6 @@ https://live.jdcloud-api.com/v1/streamNotifys/{publishDomain}
 GET
 ```
 https://live.jdcloud-api.com/v1/streamNotifys/push.yourdomain.com
-
 ```
 
 ## 返回示例

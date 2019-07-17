@@ -60,3 +60,6 @@
 
 ## 我希望可以在 MySQL 中存储表情相关内容，需要将 character_set_server 设置为 utf8mb4, 是不是只能提工单解决？
 其实 character_set_server 参数的主要作用是通过命令行创建库的时候未指定字符集的情况下，默认会根据 character_set_server 的值来创建；但是京东云云数据库 MySQL 创建库的操作默认只能通过控制台来操作，并且是可以指定字符集为 utf8mb4。有些用户可能会发现即使这样操作了，通过客户端工具连接数据库实例时候看到的数据是乱码的，所以认为是因为 character_set_server 未设置为 utf8mb4 导致的，其实并非如此，这块还涉及到 character_set_client，character_set_connection，character_set_result 等相关字段的设置，***然后这些字段其实是客户端可以手动指定的***，具体可参见官网文档：[Connection Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-connection.html)
+
+## 我通过 SQL 语句查询 MySQL 数据库占用的空间比监控的硬盘空间总使用量小 
+如果您想看数据库实例的本地磁盘占用空间，请以监控里面的硬盘空间总使用量为准，通过 SQL 命令查询的数据库占用空间，由于 MySQL 中的 information_schema.tables 表信息并非是实时更新的，所以统计的结果会不准确的。

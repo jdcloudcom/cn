@@ -36,7 +36,6 @@ API 分组创建完成您就可以创建 API 了，创建 API 是定义 API 请�
 发布过程中，可选择需要发布的环境（测试、预发、线上），选择要发布的版本，配置后端地址，然后点击发布，即可将分组发布到环境中。
 
 
-
 ###  第4步: 给API调用者授权访问
 
 - 授权访问
@@ -49,7 +48,7 @@ API 分组创建完成您就可以创建 API 了，创建 API 是定义 API 请�
 
 ###  第5步: API调用者下载和使用SDK包，进行函数调用
 
-- 快速上手： [快速发布和调用一个API应用](../Getting-Started/example_console.md)
+- 快速上手： [快速发布和调用一个API应用](https://docs.jdcloud.com/cn/api-gateway/example_signaturekey)
 
 
 

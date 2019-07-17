@@ -3,31 +3,41 @@
 ## 1.视频上传
 登录视频点播控制台，点击左侧菜单栏 “视频上传”，进入“文件上传”页面，点击“添加文件”按钮，弹出框中再次点击“添加文件”，即可弹出本地文件浏览窗口，选择文件，点击“开始上传”即可。
 
-![](https://github.com/jdcloudcom/cn/blob/cn-Video-on-Demand/image/Video-on-Demand/%E8%A7%86%E9%A2%91%E4%B8%8A%E4%BC%A01.png)
+![视频上传1.png](../../../../image/Video-on-Demand/视频上传1.png)
 
-![](https://github.com/jdcloudcom/cn/blob/6095a336fd4c1d5c1e448a37e933d569414fe918/image/Video-on-Demand/%E8%A7%86%E9%A2%91%E4%B8%8A%E4%BC%A02.png)
+![视频上传2.png](../../../../image/Video-on-Demand/视频上传2.png)
 
-![](https://github.com/jdcloudcom/cn/blob/6095a336fd4c1d5c1e448a37e933d569414fe918/image/Video-on-Demand/%E8%A7%86%E9%A2%91%E4%B8%8A%E4%BC%A03.png)
+![视频上传3.png](../../../../image/Video-on-Demand/视频上传3.png)
 
-![](https://github.com/jdcloudcom/cn/blob/6095a336fd4c1d5c1e448a37e933d569414fe918/image/Video-on-Demand/%E8%A7%86%E9%A2%91%E4%B8%8A%E4%BC%A04.png)
+![视频上传4.png](../../../../image/Video-on-Demand/视频上传4.png)
 
 ## 2.视频管理
 登录视频点播控制台，点击左侧菜单栏“视频点播”-“视频管理”，进入视频管理页面。点击视频列表中的“管理”，可进入单个视频文件的视频信息页面，此处可以查看和修改文件名称、分类设置、标签及视频介绍，如果您的视频已经进行了转码处理，则此处会自动生成4个截图供您选择做封面使用。
 
-![](https://github.com/jdcloudcom/cn/blob/cn-Video-on-Demand/image/Video-on-Demand/%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE1.jpg)
+![视频播放1.jpg](../../../../image/Video-on-Demand/视频播放1.jpg)
 
-![](https://github.com/jdcloudcom/cn/blob/cn-Video-on-Demand/image/Video-on-Demand/%E8%A7%86%E9%A2%91%E7%AE%A1%E7%90%862.png)
+![视频管理2.png](../../../../image/Video-on-Demand/视频管理2.png)
 
 ## 3.视频分类
 在视频管理列表后点击管理，进入视频信息页，基础信息中，“视频类别”可以下拉修改分类类型。如需新增或者删除视频分类，可以点击“管理分类设置”，进入分类设置子页面 
 
-![](https://github.com/jdcloudcom/cn/blob/6095a336fd4c1d5c1e448a37e933d569414fe918/image/Video-on-Demand/%E8%A7%86%E9%A2%91%E5%88%86%E7%B1%BB2.png)
+![视频分类2.png](../../../../image/Video-on-Demand/视频分类2.png)
 
 点击“新建分类”可在列表中出现“新建分类”字样，点击修改、删除即可完成相应操作。 
 
-![](https://github.com/jdcloudcom/cn/blob/cn-Video-on-Demand/image/Video-on-Demand/%E8%A7%86%E9%A2%91%E5%88%86%E7%B1%BB1.png)
+![视频分类1.png](../../../../image/Video-on-Demand/视频分类1.png)
 
-   
+## 4.视频播放地址   
+
+在视频管理列表中点击“管理”可进入视频详细信息页，点击“视频地址”标签页可查看不同清晰度规格的视频文件播放地址，也可以对某个视频进行预览播放，请注意如果在全局配置的域名设置中开启了鉴权功能，请参考全局配置域名设置中鉴权设置的说明文档按规则生成带鉴权的地址才能播放。
+
+![视频信息-视频地址.png](../../../../image/Video-on-Demand/视频信息-视频地址.png)
+
+## 5.Web播放器代码
+
+在视频管理列表中点击“管理”，进入视频详细信息页，点击“Web播放器代码”标签可查看系统自动生成的Web播放器嵌入代码，可以直接点击“复制”按钮，复制争端代码到开发页面中，完成播放页的快速创建和业务对接。
+
+![视频信息-Web播放器代码.png](../../../../image/Video-on-Demand/视频信息-Web播放器代码.png)
 
     
 

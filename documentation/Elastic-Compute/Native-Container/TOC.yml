@@ -61,6 +61,8 @@
                 href: Operation-Guide/Instance/Start-Instance.md
               - name: 停止实例
                 href: Operation-Guide/Instance/Stop-Instance.md
+              - name: 重置镜像
+                href: Operation-Guide/Instance/Rebuild-Instance.md              
               - name: 删除实例
                 href: Operation-Guide/Instance/Delete-Instance.md
           - name: Pod
@@ -73,7 +75,9 @@
                 href: Operation-Guide/Instance/Start-Pod.md
               - name: 停止Pod
                 href: Operation-Guide/Instance/Stop-Pod.md
-              - name: 删除实例
+              - name: 重置镜像
+                href: Operation-Guide/Instance/Rebuild-Pod.md              
+              - name: 删除Pod
                 href: Operation-Guide/Instance/Delete-Pod.md
           - name: Kubernetes集群创建Pod
             items:

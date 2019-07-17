@@ -41,8 +41,8 @@ https://live.jdcloud-api.com/v1/domains
 POST
 ```
 https://live.jdcloud-api.com/v1/domains
-
 ```
+
 ```
 {
     "playDomain": "play.yourdomain.com", 

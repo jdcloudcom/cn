@@ -1,0 +1,78 @@
+name: 云拨测
+items:
+- name: 产品简介
+  items:
+    - name: 产品概述
+      href: Introduction/Product-Overview.md
+    - name: 核心概念
+      href: Introduction/Core-Concepts.md
+    - name: 产品优势
+      href: Introduction/Benefits.md
+    - name: 限制说明
+      href: Introduction/Restrictions.md
+    - name: 应用场景 
+      href: Introduction/Application-Scenarios.md    
+- name: 产品定价
+  items:
+    - name: 计费概述
+      href: Pricing/Billing-Overview.md
+- name: 入门指南
+  items:
+    - name: 使用站点监控
+      href: Getting-Started/Site-Monitoring.md
+    - name: 使用可用性监控
+      href: Getting-Started/Availability-Monitoring.md
+- name: 操作指南
+  items:
+    - name: 站点监控
+      items:
+        - name: 任务管理
+          href: Operation-Guide/Site-Monitoring/SiteTask-Management.md
+        - name: 查看监控图表
+          href: Operation-Guide/Site-Monitoring/ViewSiteMonitoring.md
+        - name: 报警管理
+          href: Operation-Guide/Site-Monitoring/AlarmRules-site.md
+    - name: 可用性监控
+      items:
+        - name: 安装监控插件
+          href: Operation-Guide/AvailabilityMonitoring/InstallAgent.md
+        - name: 任务管理
+          href: Operation-Guide/AvailabilityMonitoring/AvailTask-Management.md
+        - name: 查看监控图表
+          href: Operation-Guide/AvailabilityMonitoring/ViewAvailMonitoring.md
+        - name: 查看探测详情
+          href: Operation-Guide/AvailabilityMonitoring/ViewDetections.md
+        - name: 报警管理
+          href: Operation-Guide/AvailabilityMonitoring/AlarmRules-usa.md
+    - name: 报警管理
+      items:
+        - name: 全部报警规则
+          href: Operation-Guide/AlarmManagement/AlarmRules.md
+        - name: 全部报警历史
+          href: Operation-Guide/AlarmManagement/Alarms.md
+- name: 最佳实践
+  items:
+    - name: 监控站点质量
+      href: Best-Practices/WebsiteMonitoring.md
+    - name: 监控云数据库RDS
+      href: Best-Practices/RDSMonitoring.md
+- name: 教程
+  items:
+  status: 0
+- name: 问题排查
+  items:
+  status: 0       
+- name: 常见问题
+  href: FAQ/FAQ.md
+- name: 相关资源
+  items:
+    - name: 文档发布历史
+      href: Related-Resources/document-history.md 
+    - name: 服务条款         
+  status: 0      
+- name: SLA         
+  status: 0       
+- name: 备案         
+  status: 0        
+- name: 词汇表          
+  status: 0

@@ -179,6 +179,10 @@
             href: API-Reference/CDN-Open-API/Query-UA.md
           - name: 查询Header
             href: API-Reference/CDN-Open-API/Query-Header.md
+          - name: 查询IP是否为厂商IP
+            href: API-Reference/CDN-Open-API/Query-Include-Node-IP.md
+          - name: 分协议统计流量请求量
+            href: API-Reference/CDN-Open-API/Query-Scheme-Data.md
           - name: 附：提示信息状态码参照表
             href: API-Reference/CDN-Open-API/Status-code-reference-table.md
           - name: 附：地域、运营商简称参照表
@@ -209,5 +213,7 @@
             href: API-Reference/Live-Video-Open-Api/Query-online-Number.md
           - name: 设置推流IP白名单
             href: API-Reference/Live-Video-Open-Api/Set-Push-IP-Whitelist.md
+          - name: 查询流列表
+            href: API-Reference/Live-Video-Open-Api/Query-PublishStream.md
   - name: FAQ
     href: FAQ/FAQ.md

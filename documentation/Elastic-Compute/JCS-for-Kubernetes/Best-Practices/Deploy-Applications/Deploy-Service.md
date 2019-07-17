@@ -10,6 +10,13 @@
 - 一个service port 对应一组负载均衡监听器和后端服务器；
 - 如多组service port关联相同的nodeport，则监听器将关联到相同的后端服务；
 - 京东云应用负载均衡后端服务器和监听器名称最大不超过32字符。service关联创建的后端服务器和监听器名称默认引用service名称和port名称，因此service名称和port名称均不超过14个字符。应用负载均衡器后端服务器和监听器创建参考应用负载均衡器[后端服务管理](https://docs.jdcloud.com/cn/application-load-balancer/backend-management)和[监听器管理](https://docs.jdcloud.com/cn/application-load-balancer/listener-management)。
+- 如需指定LB关联的公网IP带宽，请在service中添加如下annotations：
+
+```
+annotations:
+    service.beta.kubernetes.io/jdcloud-load-balancer-floatingIP-bandwidth: "XX"           #XX请使用期望的公网IP带宽替换，例如20；默认是10M
+
+```
 
 1、创建支持LoadBalance类型的service，命名为myservice.yaml文件定义如下：
 ```

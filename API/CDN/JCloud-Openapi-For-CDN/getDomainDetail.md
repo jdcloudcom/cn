@@ -54,6 +54,12 @@ https://cdn.jdcloud-api.com/v1/domain/{domain}
 |**certificate**|String| |
 |**rsaKey**|String| |
 |**jumpType**|String| |
+|**certFrom**|String| |
+|**sslCertId**|String| |
+|**certName**|String| |
+|**certType**|String| |
+|**sslCertStartTime**|String| |
+|**sslCertEndTime**|String| |
 ### BackSourceInfo
 |名称|类型|描述|
 |---|---|---|

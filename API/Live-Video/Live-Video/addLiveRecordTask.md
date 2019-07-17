@@ -53,27 +53,28 @@ https://live.jdcloud-api.com/v1/records/{publishDomain}/appNames/{appName}/strea
 POST
 ```
 https://live.jdcloud-api.com/records/push.yourdomain.com/appNames/yourapp/streamNames/yourstream/task
+```
+
 
 ```
-```
 {
-    "appName": "yourapp", 
-    "publishDomain": "push.yourdomain.com", 
-    "recordFileType": "mp4;flv", 
-    "recordTimes": [
+    "appName":"yourapp",
+    "publishDomain":"push.yourdomain.com",
+    "recordFileType":"mp4;flv",
+    "recordTimes":[
         {
-            "endTime": "2018-10-21T10:05:00Z", 
-            "startTime": "2018-10-21T10:00:00Z"
-        }, 
+            "endTime":"2018-10-21T10:05:00Z",
+            "startTime":"2018-10-21T10:00:00Z"
+        },
         {
-            "endTime": "2018-10-21T10:15:00Z", 
-            "startTime": "2018-10-21T10:10:00Z"
+            "endTime":"2018-10-21T10:15:00Z",
+            "startTime":"2018-10-21T10:10:00Z"
         }
-    ], 
-    "saveBucket": "yourbucket", 
-    "saveEndpoint": "oss.xxx.com", 
-    "saveObject": "/xxx/xxx/yourobject", 
-    "streamName": "yourstream"
+    ],
+    "saveBucket":"yourbucket",
+    "saveEndpoint":"oss.xxx.com",
+    "saveObject":"/xxx/xxx/yourobject",
+    "streamName":"yourstream"
 }
 ```
 

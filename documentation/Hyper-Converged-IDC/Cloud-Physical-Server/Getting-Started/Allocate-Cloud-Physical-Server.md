@@ -9,11 +9,12 @@
 
 - 选取镜像
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;例如，现阶段支持“标准镜像”和“标准镜像+应用”两种镜像类型。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;例如，现阶段支持“标准镜像类型。
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中“标准镜像”支持CentOS6.6、7.1、7.2和7.5，Ubuntu14.04和16.04；“标准镜像+应用”支持CentOS6.6和CentOS7.2下的Nginx、MySQL和RabbitMQ三个应用。详细情况参见[镜像使用说明](../Operation-Guide/Image/Description-Image.md)。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中“标准镜像”支持CentOS6.6、7.1、7.2和7.5，Ubuntu14.04、16.04和18.04。详细情况参见[镜像使用说明](../Operation-Guide/Image/Description-Image.md)。
 
-![镜像选择](https://github.com/jdcloudcom/cn/blob/edit/image/Hyper-Converged-IDC/Cloud-Physical-Server/cn-Create-3Image.png)
+![镜像选择](../Image/CPS-create-image.png)
+
 
 - 配置存储：
 
@@ -31,9 +32,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **公网带宽** ：
 
-网络类型为基础网络情况下，公网IP、公网带宽和云物理服务器是绑定的。
-
-用户可以在创建云物理服务器时选择购买或不购买公网IP。**但是云物理服务器创建后不可添加公网IP** 。公网IP由系统自动分配，用户不可修改公网IP。在IPV6支持的区域（目前宿迁地域支持公网IPV6），用户可选择是否同时启用公网IPV6。
+用户可以在创建云物理服务器时选择购买或不购买公网IP。选择购买基础网络实例时，公网IP和云物理服务器是绑定的。公网IP由系统自动分配，用户不可修改公网IP,**但是云物理服务器创建后不可添加公网IP** 。选择购买私有网络实例时，若不够买公网IP，可以待实例创建成功后绑定公网IP。
 
 用户可选择1-200Mbps的公网带宽速率，并可在创建后做升配操作。
 具体操作步骤参见[调整公网带宽](../Operation-Guide/Adjust-Public-Network-Bandwidth/Description-Adjust-Public-Network-Bandwidth.md)章节。
@@ -47,7 +46,9 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 主机名为可选项，如果不输入主机名，则默认使用“host-内网IPv4地址第三段-内网IPv4地址第四段”为主机名。
 
-![配置服务器](https://github.com/jdcloudcom/cn/blob/edit/image/Hyper-Converged-IDC/Cloud-Physical-Server/cn-Create-7BasicInformation.png)
+
+![配置服务器](../Image/CPS-create-basicinfo.png)
+
 
 
 - 配置购买时长：
@@ -55,6 +56,6 @@
 
 ![配置购买时长](https://github.com/jdcloudcom/cn/blob/edit/image/Hyper-Converged-IDC/Cloud-Physical-Server/cn-Create-8Quantity.png)
 
-- 点击“立即购买”按钮，跳转到订单确认页
+- 点击**立即购买**按钮，跳转到订单确认页
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;按照京东云统一的订单计费流程支付成功后，跳转回控制台列表页面。

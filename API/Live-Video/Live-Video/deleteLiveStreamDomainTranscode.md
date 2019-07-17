@@ -41,7 +41,6 @@ https://live.jdcloud-api.com/v1/transcodeDomains/{publishDomain}/templates/{temp
 DELETE
 ```
 https://live.jdcloud-api.com/v1/transcodeDomains/push.yourdomain.com/templates/shd:config
-
 ```
 
 ## 返回示例

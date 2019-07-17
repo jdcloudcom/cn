@@ -6,7 +6,7 @@ Bucket 的读权限。子账号是从属于主账号的，并且这些账号下�
 
 **说明**
 
-目前OSS仅支持IAM 中子用户访问，角色将后续支持，使用IAM Policy 对子用户进行权限控制的前提是您必须登录IAM访问控制控制台，新建子用户，并授予其对应访问策略[详见IAM](https://docs.jdcloud.com/cn/iam/core-concepts)。并且OSS本期不支持子账号登录控制台，您的子账号目前仅可通过使用API/SDK完成对OSS的各种操作。
+OSS支持IAM中子用户及角色访问。使用IAM Policy 对子用户进行权限控制的前提是您必须登录IAM访问控制控制台，新建子用户，并授予其对应访问策略[详见IAM](https://docs.jdcloud.com/cn/iam/core-concepts)。并且OSS本期不支持子账号登录控制台，您的子账号目前仅可通过使用API/SDK完成对OSS的各种操作。
 
 如果您有跨账号授权的需求请查看。[基于Bucket policy的访问控制](./Access-Control-Base-On-Bucket-Policy.md)，完成跨账号授权。
 

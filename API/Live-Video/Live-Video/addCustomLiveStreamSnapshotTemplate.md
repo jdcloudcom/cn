@@ -45,17 +45,17 @@ https://live.jdcloud-api.com/v1/snapshotCustoms:template
 POST
 ```
 https://live.jdcloud-api.com/v1/snapshotCustoms:template
+```
 
 ```
-```
 {
-    "fillType": 1, 
-    "format": "jpg", 
-    "saveBucket": "testbucket", 
-    "saveEndpoint": "oss.xxx.com", 
-    "saveMode": 1, 
-    "snapshotInterval": 30, 
-    "template": "mysnapshottemplate"
+    "fillType":1,
+    "format":"jpg",
+    "saveBucket":"testbucket",
+    "saveEndpoint":"oss.xxx.com",
+    "saveMode":1,
+    "snapshotInterval":30,
+    "template":"mysnapshottemplate"
 }
 ```
 

@@ -62,7 +62,6 @@ https://live.jdcloud-api.com/v1/liveTimeshift:configs
 GET
 ```
 https://live.jdcloud-api.com/v1/liveTimeshift:configs?playDomain=play.yourdomain.com
-
 ```
 
 ## 返回示例

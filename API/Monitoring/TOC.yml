@@ -4,7 +4,7 @@ items:
   - name: 接口概览
     href: overview.md
   - name: 更新历史
-    href: changelog.md
+    href: ChangeLog.md
   - name: 接口信息
     items:
       - name: 监控项自定义监控
@@ -41,3 +41,9 @@ items:
             href: Monitoring-Items-APIs/describeMetricsForCreateAlarm.md
           - name: lastDownsample
             href: Monitoring-Items-APIs/lastDownsample.md
+  - name: 使用帮助
+    items:
+      - name: 云监控报警规则示例
+        href: Help/monitor_alarm.md
+      - name: 监控项数据示例
+        href: Help/monitor_metric_data.md            

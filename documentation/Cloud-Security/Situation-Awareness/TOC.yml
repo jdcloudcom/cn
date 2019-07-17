@@ -22,7 +22,9 @@
       - name: 安全大屏
         href: Operation-Guide/Security-Bigscreen.md     
       - name: 资产指纹
-        href: Operation-Guide/Asset-Print.md          
+        href: Operation-Guide/Asset-Print.md   
+      - name: 云产品基线
+        href: Operation-Guide/Cloudbaseline.md      
   - name: 常见问题
     href: FAQ/FAQ.md
   - name: 版本更新

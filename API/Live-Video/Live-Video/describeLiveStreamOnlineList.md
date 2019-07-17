@@ -58,7 +58,6 @@ https://live.jdcloud-api.com/v1/streams/{publishDomain}/onlineList
 GET
 ```
 https://live.jdcloud-api.com/v1/streams/push.yourdomain.com/onlineList
-
 ```
 
 ## 返回示例

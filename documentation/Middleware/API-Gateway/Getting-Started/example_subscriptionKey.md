@@ -28,7 +28,7 @@
 
 ![新建API2](../../../../image/Internet-Middleware/API-Gateway/example_subkey_createAPI_2.png)
 
-（2）导入API：点击导入API，上传符合swagger2.0规范的yaml文件，点击确定，API列表界面会显示yaml文件中设定的API。（[Yaml文件下载地址](https://apigateway.oss.cn-north-1.jcloudcs.com/demo/PetStoreTest_Yaml.zip)）
+（2）导入API：点击导入API，上传符合swagger2.0规范的yaml文件，点击确定，API列表界面会显示yaml文件中设定的API。（[Yaml文件下载地址](https://apigateway.s3.cn-north-1.jdcloud-oss.com/demo/demo_PetStoreTest_Yaml.zip)）
 
 ![导入API1](../../../../image/Internet-Middleware/API-Gateway/example_subkey_createAPI_3.png)
 

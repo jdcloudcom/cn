@@ -27,9 +27,9 @@ https://cdn.jdcloud-api.com/v1/domain/{domain}/ipBlackList
 ### Result
 |名称|类型|描述|
 |---|---|---|
-|**domain**|String| |
-|**ips**|Object[]| |
-|**status**|String| |
+|**domain**|String|域名|
+|**ips**|Object[]|黑名单列表|
+|**status**|String|黑名单状态,on:开启,off:关闭|
 
 ## 返回码
 |返回码|描述|

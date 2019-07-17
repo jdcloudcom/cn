@@ -8,15 +8,16 @@
 POST
 
 ## 请求地址
-https://cdn.jdcloud-api.com/v1/liveDomain/{domain}/ipBlackList:{blackIpsEnable}
+https://cdn.jdcloud-api.com/v1/liveDomain/{domain}/ipBlackList:operate
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**blackIpsEnable**|String|True| | |
 |**domain**|String|True| |用户域名|
 
 ## 请求参数
-无
+|名称|类型|是否必需|默认值|描述|
+|---|---|---|---|---|
+|**blackIpsEnable**|String|False| | |
 
 
 ## 返回参数

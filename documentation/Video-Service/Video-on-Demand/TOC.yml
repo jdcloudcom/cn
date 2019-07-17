@@ -47,6 +47,8 @@ items:
       href: Operation-Guide/Global-Settings.md
     - name: 统计分析
       href: Operation-Guide/Statistical-Analysis.md
+    - name: 访问控制（IAM）
+      href: Operation-Guide/IAM.md     
 - name: 最佳实践
   items:
     - name: 终端格式建议

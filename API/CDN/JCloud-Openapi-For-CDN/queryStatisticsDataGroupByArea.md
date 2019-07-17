@@ -8,7 +8,7 @@
 POST
 
 ## 请求地址
-https://cdn.jdcloud-api.com/v1/statistics:groupByArea
+https://cdn.jdcloud-api.com/v1/vodStatistics:groupByArea
 
 
 ## 请求参数
@@ -49,7 +49,7 @@ https://cdn.jdcloud-api.com/v1/statistics:groupByArea
 |名称|类型|描述|
 |---|---|---|
 |**area**|String| |
-|**ispStat**|Object|查询结果,类型为HashMap<String, Object>|
+|**ispStat**|Object[]| |
 
 ## 返回码
 |返回码|描述|

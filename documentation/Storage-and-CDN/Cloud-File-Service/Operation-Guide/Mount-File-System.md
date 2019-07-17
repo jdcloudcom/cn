@@ -32,19 +32,19 @@ Ubuntu系统运行如下命令：
 
 ![MtIp](../../../../image/Cloud-File-Service/MtIp.png)
 
-如，挂载目标的IP为10.0.0.30，挂载到上一步创建的nfs目录。**注意，因挂载工具默认NFS协议为4.1版本，所以CentOS 7.2及以下版本的挂载命令略有不同：**
+如，挂载目标的目录为10.0.0.30:/cfs，挂载到上一步创建的nfs目录。**注意，因挂载工具默认NFS协议为4.0版本，所以CentOS 7.2及以下版本的挂载命令略有不同：**
 
 **CentOS 6.9至CentOS 7.2版本运行以下命令：**
 
-`sudo mount -t nfs,nfsvers=4.0 10.0.0.30:/ nfs`
+`sudo mount -t nfs,nfsvers=4.0 10.0.0.30:/cfs nfs`
 
 CentOS 7.3及以上版本运行以下命令：
 
-`sudo mount -t nfs 10.0.0.30:/ nfs`
+`sudo mount -t nfs 10.0.0.30:/cfs nfs`
 
 在Ubuntu系统的终端下，运行如下命令：
 
-`mount -t nfs 10.0.0.30:/ nfs`
+`mount -t nfs 10.0.0.30:/cfs nfs`
 
 5.通过运行以下命令，验证是否挂载成功：
 
@@ -58,7 +58,7 @@ CentOS 7.3及以上版本运行以下命令：
 
 1. 云文件服务暂不支持使用传输中的数据加密，即不支持使用以下命令挂载文件系统。
 
-sudo mount -t nfs -o tls 10.0.0.30:/ nfs
+sudo mount -t nfs -o tls 10.0.0.30:/cfs nfs
 
 2. 挂载文件存储时，挂载选项的默认值如下，大多数情况下，请避免修改默认的参数值，以免对性能或稳定性造成影响：
 

@@ -11,3 +11,11 @@
     href: AccessKey-Management.md
   - name: 账号注销
     href: Account-Revocation.md
+  - name: 京东云新账号简介
+    href: What-Is-JDCloud-Account.md
+  - name: 查看账号信息（新版账号适用）
+    href: Check-JDCloud-Account.md
+  - name: 设置登录密码（新版账号适用）
+    href: Set-User-Password.md
+  - name: 修改安全验证手机（新版账号适用）
+    href: Change-JDCloud-Phone-Number.md

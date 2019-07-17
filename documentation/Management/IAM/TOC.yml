@@ -35,6 +35,8 @@ items:
             href: Identity-Management/Sub-User.md
           - name: 群组
             href: Identity-Management/Group.md
+          - name: 角色
+            href: Identity-Management/Role.md
       - name: 策略管理
         items:
           - name: 策略管理

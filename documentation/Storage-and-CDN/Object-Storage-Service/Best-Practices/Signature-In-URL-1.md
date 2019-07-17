@@ -5,8 +5,9 @@
 1.配置依赖
 
 在pom.xml中配置依赖的sdk,如下：
+
 ```
-<dependency>XML
+<dependency>
     <groupId>com.amazonaws</groupId>
     <artifactId>aws-java-sdk</artifactId>
     <version>1.11.490</version>

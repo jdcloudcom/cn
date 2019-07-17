@@ -12,6 +12,7 @@
 * [MySQL 8.0 参数定义](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html)
 * [Percona 5.7 参数定义](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html)
 * [MariaDB 10.2 参数定义](https://mariadb.com/kb/en/library/server-system-variables/)
+* [PostgreSQL 10.6 参数定义](https://www.postgresql.org/docs/10/runtime-config.html)
 
 ## 操作步骤
 1. 登录 [参数组控制台](https://rds-console.jdcloud.com/paramgroup/list)

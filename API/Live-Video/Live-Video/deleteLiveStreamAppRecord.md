@@ -16,8 +16,7 @@ https://live.jdcloud-api.com/v1/recordApps/{publishDomain}/appNames/{appName}/te
 |---|---|---|---|---|
 |**publishDomain**|String|True| |推流域名|
 |**appName**|String|True| |应用名称|
-|**template**|String|True| |录制模板
-|
+|**template**|String|True| |录制模板|
 
 ## 请求参数
 无
@@ -43,7 +42,6 @@ https://live.jdcloud-api.com/v1/recordApps/{publishDomain}/appNames/{appName}/te
 DELETE
 ```
 https://live.jdcloud-api.com/v1/recordApps/push.yourdomain.com/appNames/yourapp/templates/yourrecordtemplate
-
 ```
 
 ## 返回示例

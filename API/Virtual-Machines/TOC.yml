@@ -85,6 +85,20 @@
             href: SSH-Keypair/describeKeypairs.md
           - name: deleteKeypair
             href: SSH-Keypair/deleteKeypair.md
+      - name: 实例模板
+        items:      
+          - name: createInstanceTemplate
+            href: Instance-Template/createInstanceTemplate.md
+          - name: deleteInstanceTemplate
+            href: Instance-Template/deleteInstanceTemplate.md
+          - name: describeInstanceTemplate
+            href: Instance-Template/describeInstanceTemplate.md
+          - name: describeInstanceTemplates
+            href: Instance-Template/describeInstanceTemplates.md
+          - name: updateInstanceTemplate
+            href: Instance-Template/updateInstanceTemplate.md
+          - name: verifyInstanceTemplate
+            href: Instance-Template/verifyInstanceTemplate.md
       - name: 规格类型
         items:
           - name: describeInstanceTypes

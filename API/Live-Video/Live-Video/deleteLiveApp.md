@@ -42,7 +42,6 @@ https://live.jdcloud-api.com/v1/apps/{publishDomain}/appNames/{appName}
 DELETE
 ```
 https://live.jdcloud-api.com/v1/apps/push.yourdomain.com/appNames/yourapp
-
 ```
 
 ## 返回示例

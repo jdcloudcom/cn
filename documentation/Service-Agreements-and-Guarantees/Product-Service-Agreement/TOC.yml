@@ -76,6 +76,12 @@ items:
     href: Cloud-Physics-Server-Service-Level-Protocol-SLA.md
   - name: 物理云公网IP服务协议
     href: Elastic-IP-For-Physical-Cloud-Terms-Of-Service.md
+  - name: 分布式云物理服务器服务条款
+    href: Distributed-Cloud-Physical-Server-Service-Clause.md
+  - name: 分布式云物理服务器服务等级协议（SLA）
+    href: Distributed-Cloud-Physical-Server-SLA.md
+  - name: 边缘云公网IP服务条款
+    href: Elastic-IP-For-Edge-Cloud-Terms-Of-Service.md
   - name: 消息队列 JCQ服务协议
     href: Message-Queue-JCQ-Service-Terms.md
   - name: 消息队列 JCQ服务等级协议（SLA）
@@ -99,7 +105,7 @@ items:
   - name: 云桌面服务条款
     href: Cloud-Desktop-Service-Protocol.md   
   - name: 云桌面服务等级协议（SLA）
-    href: Cloud-Desktop-Service-ProtocolSLA.md
+    href: Cloud-Desktop-Service-Protocol-SLA.md
   - name: 视频点播服务协议 
     href: Video-on-demand-service-protocol.md
   - name: 队列服务服务条款
@@ -114,8 +120,8 @@ items:
     href: IoT-Hub-Protocol-Adaptor.md
   - name: 云文件服务协议
     href: Cloud-File-Service-terms-of-service.md
-  - name: 云文件服务公测试用协议
-    href: Cloud-file-service-public-beta-terms-of-service.md
+  - name: 云文件服务等级服务协议（SLA）
+    href: Cloud-File-Service-Level-Service-Agreement-SLA.md
   - name: 富媒体短信服务条款
     href: Rich-Media-SMS-Terms-Of-Service.md
   - name: 富媒体短信服务等级协议（SLA）

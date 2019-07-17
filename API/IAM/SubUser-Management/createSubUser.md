@@ -19,7 +19,7 @@ https://iam.jdcloud-api.com/v1/subUser
 ### CreateSubUserInfo
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**name**|String|True| |子用户名：支持4-20位的字母，数字以及-和_，以字母开头|
+|**name**|String|True| |子用户名，支持4~20位的字母，数字以及-和_，以字母开头|
 |**description**|String|False| |描述，0~256个字符|
 |**password**|String|True| |按照密码策略设置，默认8~20位，至少包含一个小写字母、大写字母和数字|
 |**phone**|String|True| |手机号码，区号-手机号|

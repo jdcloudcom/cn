@@ -60,7 +60,6 @@ https://live.jdcloud-api.com/v1/apps
 GET
 ```
 https://live.jdcloud-api.com/v1/apps?pageNumber=1&pageSize=10&filters.1.name=publishDomain&filters.1.values.1=push.yourdomain.com
-
 ```
 
 ## 返回示例

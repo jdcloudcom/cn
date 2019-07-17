@@ -49,7 +49,6 @@ https://live.jdcloud-api.com/v1/describeStatisticData:bandwidth
 GET
 ```
 https://live.jdcloud-api.com/v1/describeStatisticData:bandwidth
-
 ```
 ```
 {

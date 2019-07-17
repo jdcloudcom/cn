@@ -24,8 +24,8 @@ https://cdn.jdcloud-api.com/v1/defaultHttpHeaderKey
 ### Result
 |名称|类型|描述|
 |---|---|---|
-|**reqDefaultHttpHeaderKey**|String[]| |
-|**respDefaultHttpHeaderKey**|String[]| |
+|**reqDefaultHttpHeaderKey**|String[]|默认的http请求头|
+|**respDefaultHttpHeaderKey**|String[]|默认的http响应头|
 
 ## 返回码
 |返回码|描述|

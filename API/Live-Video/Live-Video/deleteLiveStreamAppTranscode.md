@@ -43,7 +43,6 @@ https://live.jdcloud-api.com/v1/transcodeApps/{publishDomain}/appNames/{appName}
 DELETE
 ```
 https://live.jdcloud-api.com/v1/transcodeApps/push.yourdomain.com/appNames/yourapp/templates/shd
-
 ```
 
 ## 返回示例

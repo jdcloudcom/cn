@@ -9,6 +9,8 @@ items:
         href: Introduction/Core-Concepts.md
       - name: 产品功能
         href: Introduction/Features.md
+      - name: 存储类型
+        href: Introduction/StorageClass-Overview.md
       - name: 限制说明
         href: Introduction/Restrictions.md 
       - name: 应用场景 
@@ -18,11 +20,13 @@ items:
       - name: 计费概述
         href: Pricing/Billing-Overview.md
       - name: 免费额度
-        href: Pricing/Free-Tier-For-Oss.md         
+        href: Pricing/Free-Tier-For-Oss.md
       - name: 计费规则
         href: Pricing/Billing-Rules.md
       - name: 价格总览
         href: Pricing/Price-Overview.md
+      - name: 计费案例
+        href: Pricing/Billing-Case.md
       - name: 查看账单
         href: Pricing/Check-Bill.md
  - name: 入门指南
@@ -95,6 +99,8 @@ items:
             href: Operation-Guide/Manage-Object/Post-Object-1.md                  
           - name: 用量监控
             href: Operation-Guide/Manage-Object/Usage-Monitoring.md
+          - name: 还原归档对象
+            href: Operation-Guide/Manage-Object/Restore-Glacier-Object.md
       - name: 权限控制
         items:
            - name: 权限控制概述
@@ -258,7 +264,9 @@ items:
               - name: Upload Part
                 href: API-Reference-S3-Compatible/Compatibility-API/Operations-On-Objects/Upload-Part-2.md
               - name: Upload Part Copy	
-                href: API-Reference-S3-Compatible/Compatibility-API/Operations-On-Objects/Upload-Part-Copy-2.md	                                     
+                href: API-Reference-S3-Compatible/Compatibility-API/Operations-On-Objects/Upload-Part-Copy-2.md
+              - name: Post Object Restore
+                href: API-Reference-S3-Compatible/Compatibility-API/Operations-On-Objects/Post-Object-Restore.md
       - name: 错误响应
         href: API-Reference-S3-Compatible/Error-Response-2.md                
       - name: 扩展接口
@@ -410,7 +418,9 @@ items:
             - name: 跨账号授权概述
               href: Best-Practices/Access-Control-And-Permission-Management/Cross-Account-Access-Overview.md
             - name: 授权子账号访问 OSS
-              href: Best-Practices/Access-Control-And-Permission-Management/Authorize-Sub-Account-Access.md            
+              href: Best-Practices/Access-Control-And-Permission-Management/Authorize-Sub-Account-Access.md
+            - name: 使用临时秘钥访问 OSS
+              href: Best-Practices/Access-Control-And-Permission-Management/Authorize-Role-Access.md
       - name: 防盗链
         href: Best-Practices/Anti-leech.md         
       - name: 使用CloudBerry管理OSS

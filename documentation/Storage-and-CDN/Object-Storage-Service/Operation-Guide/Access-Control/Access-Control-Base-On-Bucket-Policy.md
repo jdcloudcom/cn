@@ -13,6 +13,10 @@ Bucket Policy是基于资源的授权策略。访问策略使用基于 JSON 的�
 -   向其他账号的子用户授权访问。
 
     您可以授予其他账号的子用户访问您的OSS资源的权限。
+    
+-   向角色授权访问。
+
+    您可以授予角色访问您的OSS资源的权限。
 
 -   向匿名用户授予带特定条件限制的访问权限。
 
@@ -22,7 +26,7 @@ Bucket Policy是基于资源的授权策略。访问策略使用基于 JSON 的�
 
 #### 存储空间策略语言包含以下基本意义的元素：
 
-* 委托人（principal）：描述策略授权的实体。例如用户，可能是其他合作商（主账号）、子账号、匿名用户等。该元素对于存储空间访问策略有效，对用户访问策略则不应添加。
+* 委托人（principal）：描述策略授权的实体。例如用户，可能是其他合作商（主账号）、子账号、角色、匿名用户等。该元素对于存储空间访问策略有效，对用户访问策略则不应添加。
 * 语句（statement）：描述一条或多条权限的详细信息。该元素包括效力、操作、资源、条件等多个其他元素的权限或权限集合。一条策略有且仅有一个语句元素。
     - 效力（Effect）：描述声明产生的结果是“允许”还是“显式拒绝”，包括 allow 和 deny 两种情况。该元素是必填项。
     - 操作（Action）：描述被允许或拒绝的操作。操作可以是 API或者功能集（一组特定的 API）。该元素是必填项，详见下文【元素用法-Action】。
@@ -38,7 +42,7 @@ Bucket Policy 大小限制为16k。
 
 ### principal
 
-委托人 principal 元素用于指定被允许或拒绝访问资源的用户、账户、服务或其他实体。元素 principal 仅在存储空间中起作用；用户策略中不必指定，因为用户策略直接附加到特定用户。下面是 Bucket Policy 中指定 principal 的示例。
+委托人 principal 元素用于指定被允许或拒绝访问资源的用户、账户、角色或其他实体。元素 principal 仅在存储空间中起作用；用户策略中不必指定，因为用户策略直接附加到特定用户。下面是 Bucket Policy 中指定 principal 的示例。
    
 **说明**
 
@@ -53,25 +57,18 @@ Bucket Policy 大小限制为16k。
     
 ```
     //单个账号
-
     "Principal":{"AWS":"arn:aws:iam::123456789012:root"}
- 
-
     //多个账号
-
     "Principal": {
     "AWS": [
     "arn:aws:iam::123456789012:root",
-    "arn:aws:iam::123456789010"
-    ]
+    "arn:aws:iam::123456789010"]
     }  
-
 ```
     
 2.要授予京东云IAM 子用户权限
 
-  指定IAM 子用户:"AWS": "arn:aws:iam::account-ID:user/user-name"
-  user-name 为您想要授权的子用户用户名
+  指定IAM 子用户:"AWS": "arn:aws:iam::account-ID:user/user-name"，user-name 为您想要授权的子用户用户名。
     
 ```
     //单个IAM 子用户
@@ -80,13 +77,25 @@ Bucket Policy 大小限制为16k。
     "Principal": {
     "AWS": [
         "arn:aws:iam::123456789012:user/user-name-1",
-        "arn:aws:iam::111111111111:user/UserName2"
-     ]
+        "arn:aws:iam::111111111111:user/UserName2"]
     }
-
 ``` 
-    
-3.要授予每个人权限，也称为匿名访问
+
+3.要授予京东云IAM 角色权限
+
+指定IAM角色："AWS":"arn:aws:iam::accountID:role/roleName"，roleName为授权的角色名称。
+```
+    //单个IAM 角色
+    "Principal": { "AWS": "arn:aws:iam::123456789012:role/role-test" }  
+    //多个IAM 角色
+    "Principal": {
+    "AWS": [
+        "arn:aws:iam::123456789012:role/role-test1",
+        "arn:aws:iam::123456789012:role/role-test2"]
+    }
+```
+ 
+4.要授予每个人权限，也称为匿名访问
  
   例如，如果您将存储空间配置为网站，您需要该存储空间中的所有对象都可公开访问，请按照如下方式： 
   示例：

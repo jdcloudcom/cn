@@ -27,6 +27,7 @@
     - 2012：企业版、标准版
     - 2014：企业版、标准版
     - 2016：企业版、标准版、Web版
+    - 2017：企业版
 
 - PostgreSQL
     - 10.6
@@ -40,4 +41,5 @@
 |华南-广州|cn-south-1|可用区A|cn-south-1a|
 |华东-上海|cn-east-2|可用区A|cn-east-2a|
 |华东-上海|cn-east-2|可用区B|cn-east-2b|
+|华东-上海|cn-east-2|可用区C|cn-east-2c|
 |华东-宿迁|cn-east-1|可用区A|cn-east-1a|

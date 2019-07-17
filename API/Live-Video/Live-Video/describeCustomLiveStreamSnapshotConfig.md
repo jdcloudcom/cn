@@ -64,7 +64,6 @@ https://live.jdcloud-api.com/v1/snapshotCustoms:config
 GET
 ```
 https://live.jdcloud-api.com/v1/snapshotCustoms:config?filters.1.name=publishDomain&filters.1.values.1=push.yourdomain.com&filters.2.name=appName&filters.2.values.1=yourapp&filters.3.name=streamName&filters.3.values.1=yourstream
-
 ```
 
 ## 返回示例

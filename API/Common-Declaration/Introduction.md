@@ -51,9 +51,11 @@ cn-south-1 | 华南-广州
 :---|:---|:---
 华北-北京 | 可用区A | cn-north-1a 
 华北-北京 | 可用区B | cn-north-1b  
+华北-北京 | 可用区C | cn-north-1c  
 华东-宿迁 | 可用区A | cn-east-1a 
 华东-上海 | 可用区A | cn-east-2a  
 华东-上海 | 可用区B | cn-east-2b 
+华东-上海 | 可用区C | cn-east-2c
 华南-广州 | 可用区A | cn-south-1a  
    
 

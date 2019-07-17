@@ -68,7 +68,7 @@ Header特别提示:
 |x-amz-credential|字符串|如果使用S3 API，则格式为：<your-access-key-id>/<date>/<region>/s3/aws4_request例子：AKIAIOSFODNN7EXAMPLEYYYYYYYYYYYY/20180601/cn-north-1/s3/aws4_request<br>默认值：无|对于需要签名的请求来说是必须的|
 |x-amz-date|字符串|ISO8601时间格式，例如：20180601T000000Z，policy中x-amz-date属性的值应该与它相同。注意，此时计算签名的时间为20180601<br>默认值：无|对于需要签名的请求来说是必须的|
 |x-amz-signature|字符串|签名字符串<br>默认值：无|对于需要签名的请求来说是必须的|
-|x-amz-storage-class|字符串|Object的存储类型<br> 默认值：STANDARD（标准存储）<br>有效值：STANDARD（标准存储）和REDUCED_REDUNDANCY（低冗余存储）|否|
+|x-amz-storage-class|字符串|Object的存储类型<br> 默认值：STANDARD（标准存储）<br>有效值：STANDARD（标准存储） GLACIER（归档存储）和REDUCED_REDUNDANCY（低冗余存储）|否|
 |file|字符串|文件或文本内容，此属性必须放在form最后，否则file后的属性将被忽略，不支持多个文件同时上传<br>默认值：无|是|
  
 #### 响应

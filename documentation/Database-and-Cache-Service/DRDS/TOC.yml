@@ -64,10 +64,9 @@
               
       - name: 表管理
         items:
-          - name: 创建表
-            href: Operation-Guide/Table/Create-Table.md
-          - name: 删除表
-            href: Operation-Guide/Table/Drop-Table.md              
+          - name: 表DDL语法
+            href: Operation-Guide/Table/Table-DDL.md
+            
   - name: 常见问题
     items:
     - name: FAQ

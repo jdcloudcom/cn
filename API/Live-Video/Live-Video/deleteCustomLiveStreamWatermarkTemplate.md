@@ -15,7 +15,6 @@ https://live.jdcloud-api.com/v1/watermarkCustoms/{template}
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
 |**template**|String|True| |水印模板|
-|
 
 ## 请求参数
 无
@@ -41,7 +40,6 @@ https://live.jdcloud-api.com/v1/watermarkCustoms/{template}
 DELETE
 ```
 https://live.jdcloud-api.com/v1/watermarkCustoms/yourwatermarktemplate
-
 ```
 
 ## 返回示例

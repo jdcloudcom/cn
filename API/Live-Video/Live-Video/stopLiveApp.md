@@ -40,8 +40,8 @@ https://live.jdcloud-api.com/v1/apps:stop
 PUT
 ```
 https://live.jdcloud-api.com/v1/apps:stop
-
 ```
+
 ```
 {
     "appName": "yourapp", 

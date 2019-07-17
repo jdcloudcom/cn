@@ -17,7 +17,7 @@ https://live.jdcloud-api.com/v1/snapshotDomains:template
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
 |**publishDomain**|String|True| |推流域名|
-|**template**|String|True| |截图模板<br>|
+|**template**|String|True| |截图模板|
 
 
 ## 返回参数
@@ -40,8 +40,8 @@ https://live.jdcloud-api.com/v1/snapshotDomains:template
 POST
 ```
 https://live.jdcloud-api.com/v1/snapshotDomains:template
-
 ```
+
 ```
 {
     "publishDomain": "push.yourdomain.com", 

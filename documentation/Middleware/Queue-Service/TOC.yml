@@ -34,7 +34,7 @@
         href: Getting-Started/Getting-Started.md
       - name: 创建资源
         href: Getting-Started/Create-Resource.md
-      - name: 生产和消费消息
+      - name: 发送和接收消息
         href: Getting-Started/Produce-And-Consume-Message.md
   - name: 操作指南
     items:
@@ -56,6 +56,14 @@
             href: Operation-Guide/Monitoring/Monitoring.md
           - name: 设置报警规则
             href: Operation-Guide/Monitoring/Alarm-Rules.md
+      - name: 授权管理
+        items:
+          - name: 权限控制概述
+            href: Operation-Guide/Authorization-Management/Authorization-Overview.md
+          - name: 主账号对IAM子用户的授权
+            href: Operation-Guide/Authorization-Management/Main-Sub-Authorization.md
+          - name: 跨主账号的授权
+            href: Operation-Guide/Authorization-Management/Main-Main-Authorization.md
   - name: 教程
     items:
     status: 0

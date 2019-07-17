@@ -62,7 +62,6 @@ https://live.jdcloud-api.com/v1/recordCustoms:template
 GET
 ```
 https://live.jdcloud-api.com/v1/recordCustoms:template?pageNum=1&pageSize=10&filters.1.name=template&filters.1.values.1=myrecordtemplate
-
 ```
 
 ## 返回示例

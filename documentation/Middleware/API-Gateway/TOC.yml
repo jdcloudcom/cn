@@ -37,8 +37,8 @@ items:
   items:
     - name: 概述
       herf: Getting-Started/Getting-Started.md
-    - name: 在控制台中使用示例构建API
-      herf: Getting-Started/example_console.md
+    - name: 使用签名密钥的方式构建API
+      herf: Getting-Started/example_SignatureKey.md
     - name: 使用Function函数构建API
       herf: Getting-Started/example_function.md
     - name: 使用订阅密钥的方式构建API

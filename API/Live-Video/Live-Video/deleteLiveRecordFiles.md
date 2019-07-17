@@ -38,7 +38,6 @@ https://live.jdcloud-api.com/v1/recordFiles
 DELETE
 ```
 https://live.jdcloud-api.com/v1/recordFiles?fileIds=aaa,bbb,ccc
-
 ```
 
 ## 返回示例

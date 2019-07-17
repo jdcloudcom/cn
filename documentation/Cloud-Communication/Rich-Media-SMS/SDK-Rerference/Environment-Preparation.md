@@ -8,7 +8,7 @@ SDK环境依赖<br>
 
  ```XML
 <dependency>
-   <groupId>com.jdcloud</groupId>
+   <groupId>com.jdcloud.sdk</groupId>
    <artifactId>rms</artifactId>
    <version>x.x.x</version>
    //设置为 Java SDK 的最新版本号

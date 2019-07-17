@@ -79,7 +79,7 @@
             href: Operation-Guide/Remote-Login/Description-Remote-Login.md
           - name: 操作步骤
             href: Operation-Guide/Remote-Login/Steps-Remote-Login.md
-      - name: 云物理服务器生命周期管理
+      - name: 生命周期管理
         items:
           - name: 功能描述
             href: Operation-Guide/Cloud-Physical-Server-Life-Cycle-Management/Description-Cloud-Physical-Server-Life-Cycle-Management.md
@@ -97,6 +97,12 @@
             href: Operation-Guide/Adjust-Public-Network-Bandwidth/Description-Adjust-Public-Network-Bandwidth.md
           - name: 操作步骤
             href: Operation-Guide/Adjust-Public-Network-Bandwidth/Steps-Adjust-Public-Network-Bandwidth.md
+      - name: 监控
+        items:
+          - name: 硬件监控
+            href: Operation-Guide/Monitoring/Hardware-Monitoring.md
+          - name: 性能监控
+            href: Operation-Guide/Monitoring/Monitoring-Overview.md
   - name: 最佳实践
     items:
     - name: NAT网关网络安全方案

@@ -59,6 +59,8 @@
         href: Operation-Guide/Backend-Management.md
       - name: 虚拟服务器组管理
         href: Operation-Guide/TargetGroup-Management.md
+      - name: 配置访问日志
+        href: Operation-Guide/Access-Log.md
       - name: 监控服务
         href: Operation-Guide/Monitoring.md           
   - name: 最佳实践

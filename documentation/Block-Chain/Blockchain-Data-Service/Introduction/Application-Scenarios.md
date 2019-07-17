@@ -5,7 +5,7 @@
 ![scenarios01](../../../../image/Blockchain-Data-Service/scenarios01.png)
 
 ## 金融决策
-通过区块链数据服务实时监控数字货币交易情况，实时了解行情动态，给金融决策提供有效数据支撑。
+通过区块链数据服务实时监控数字货币交易情况，实时了解行情动态，给金融决策提供有力数据支撑。
 
 ![scenarios02](../../../../image/Blockchain-Data-Service/scenarios02.png)
 

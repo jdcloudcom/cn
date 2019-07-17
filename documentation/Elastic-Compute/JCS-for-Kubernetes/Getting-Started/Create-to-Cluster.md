@@ -46,17 +46,23 @@
  ![新建集群增加工作节点组](../../../../image/Elastic-Compute/JCS-for-Kubernetes/新建Kubernetes集群工作节点组.png) 
 
 1. 私有网络：选择部署工作节点组资源的私有网络：
-  * 京东云将在选择的私有网络中新建四个子网，包括工作节点子网、Pod子网、Service子网和Service-LB子网；
+  * 京东云将在选择的私有网络中新建四个子网，包括工作节点子网、Pod子网、Service子网和Service-LB子网，并为每个子网新建一个路由表；
   * 上述私有网络中新建的子网CIDR与私有网络中其他已创建的子网CIDR不能重叠；详情参考[子网配置](https://docs.jdcloud.com/cn/virtual-private-cloud/subnet-configuration)；
   * 工作节点组与管理节点将通过VPC对等连接网络互通，因此已选择的私有网络CIDR与管理节点CIDR不能重叠；详情参考[VPC对等连接](https://docs.jdcloud.com/cn/virtual-private-cloud/vpc-peering-configuration)；
-  * 为了避免因CIDR重叠导致工作节点相关的子网无法创建，建议新建私有网络；
+  * 为了避免因CIDR重叠导致工作节点相关的子网无法创建，建议[新建私有网络](https://docs.jdcloud.com/cn/virtual-private-cloud/vpc-configuration)；
   * 私有网络CIDR取值范围为16 ~ 18。
+  * 创建集群时会对私有网络的相关配额进行校验，请保证私有网络相关配额充足，详情参考[私有网络使用限制](https://docs.jdcloud.com/cn/virtual-private-cloud/restrictions)。
 
 2. 选择工作节点组版本：推荐选择与当前管理节点版本匹配的默认工作节点组版本；点击下拉列表显示当前管理节点版本支持的所有工作节点组版本。
 
-3. 规格：根据具体业务情况选择不同云主机规格类型，支持云主机第二代规格和GPU型实例规格。可参考[实例规格类型](https://docs.jdcloud.com/cn/virtual-machines/instance-type-family)。
+3. 规格：根据具体业务情况选择不同工作节点规格类型，支持云主机第二代规格和GPU型实例规格。可参考[实例规格类型](https://docs.jdcloud.com/cn/virtual-machines/instance-type-family)。
+  * 京东云使用云主机做为集群的工作节点；
+  * 每个工作节点组内的工作节点具有相同的规格类型;
+  * 您可以为集群[添加多个节点组](https://docs.jdcloud.com/cn/jcs-for-kubernetes/create-nodegroup)，每个节点组指定不同的规格类型，以满足不同类型的应用负载对实例规格的需求；
 
-4. 数量：默认数量为3，可根据需求点击增加、减少按键或者直接输入预期节点数量；工作节点最大数量受当前地域云主机配额、工作节点CIDR可分配的内网IP数量限制。
+4. 数量：默认数量为3，可根据需求点击增加、减少按键或者直接输入预期节点数量；工作节点最大数量受当前地域[云主机配额](https://docs.jdcloud.com/cn/virtual-machines/restrictions)、工作节点子网CIDR可分配的内网IP数量限制。
+  * 每增加一个工作节点将在指定地域/可用区内新建一个云主机；
+  * 如需对集群的节点数量进行调整，您可以对指定节点组进行[手动伸缩](https://docs.jdcloud.com/cn/jcs-for-kubernetes/telescopic-nodegroup)或通过[添加工作节点组](https://docs.jdcloud.com/cn/jcs-for-kubernetes/create-nodegroup)、[删除工作节点组](https://docs.jdcloud.com/cn/jcs-for-kubernetes/delete-nodegroup)的方式进行；
 
 5. 名称：默认名称为nodegroup1，名称不可为空，只支持中文、数字、大小写字母、英文下划线“_”及中划线“-”，且不能超过32字符。同一集群下的工作节点组不可重名。
 
