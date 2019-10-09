@@ -7,7 +7,7 @@
 标准存储容量包|用于抵扣标准存储容量费用
 外网下行流量包|用于抵扣外网下行流量费用
 
-OSS的所有计费项说明请参见[计费项说明](../Pricing/Billing-Rules.md)。如需购买资源包，请前往[资源包购买页]()。
+OSS的所有计费项说明请参见[计费项说明](../Pricing/Billing-Rules.md)。如需购买资源包，请前往[资源包购买页](https://common-buy.jdcloud.com/resource/create?serviceCode=ossbag)。
 
 ## 购买须知
 
