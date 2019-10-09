@@ -25,6 +25,8 @@ items:
         href: Pricing/Billing-Rules.md
       - name: 价格总览
         href: Pricing/Price-Overview.md
+      - name: 预付费资源包
+        href: Pricing/Resource-Packages.md
       - name: 计费案例
         href: Pricing/Billing-Case.md
       - name: 查看账单
