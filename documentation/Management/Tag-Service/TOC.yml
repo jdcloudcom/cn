@@ -20,6 +20,8 @@
         href: Operation-Guide/Operating-Tag-List.md
       - name: 标签资源
         href: Operation-Guide/Operating-Tag-Resource.md
+      - name: 费用标签
+        href: Operation-Guide/Cost-Tag.md
       
   - name: 相关文档
     items:
