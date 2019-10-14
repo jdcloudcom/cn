@@ -11,7 +11,7 @@
 
   
 
-## Python2.7安装 ##
+##1. Python2.7安装 ##
 
 官网下载安装：https://www.python.org/downloads
 
@@ -35,7 +35,7 @@ macOS
 	brew install python@2
 
 
-## pip安装 ##
+##2. pip安装 ##
 
 官网安装请参考：https://pip.pypa.io/
 
@@ -51,17 +51,17 @@ https://packaging.python.org/guides/installing-using-linux-tools/#installing-pip
 
 
 
-## CLI安装 ##
+##3. CLI安装 ##
 
 ### Linux & macOS安装 ###
 
-- pip安装（推荐）
+- 方式一：pip安装（推荐）
 
 
 	pip install jdcloud_cli
 
 
-- 源码安装
+- 方式二：源码安装
 
 下载地址：https://github.com/jdcloud-api/jdcloud-cli
 
@@ -97,13 +97,13 @@ https://packaging.python.org/guides/installing-using-linux-tools/#installing-pip
                                                
 
 
-- pip安装
+-方式一： pip安装
 
 
 	pip install jdcloud_cli
 
 
-- 源码安装（不依赖pip）
+-方式二： 源码安装（不依赖pip）
 
 
 	python setup.py install
