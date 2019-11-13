@@ -12,8 +12,8 @@ https://rds.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}/errorLo
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**instanceId**|String|True||RDS 实例ID，唯一标识一个RDS实例|
-|**regionId**|String|True||地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)|
+|**regionId**|String|True| |地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)|
+|**instanceId**|String|True| |RDS 实例ID，唯一标识一个RDS实例|
 
 ## 请求参数
 无
@@ -22,22 +22,21 @@ https://rds.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}/errorLo
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**result**|[Result](##Result)||
-
+|**result**|[Result](#Result)| |
 
 ### <a name="Result">Result</a>
 |名称|类型|描述|
 |---|---|---|
-|**errorLogs**|[ErrorLog[]](##ErrorLog)|错误日志文件的集合|
+|**errorLogs**|[ErrorLog[]](#ErrorLog)|错误日志文件的集合|
 ### <a name="ErrorLog">ErrorLog</a>
 |名称|类型|描述|
 |---|---|---|
-|**internalURL**|String|内网下载链接|
-|**lastUpdateTime**|String|错误日志最后更新时间，格式为：YYYY-MM-DD HH:mm:ss|
 |**name**|String|错误日志文件名称|
-|**publicURL**|String|公网下载链接|
-|**sizeByte**|Integer|错误日志文件大小，单位Byte|
+|**sizeByte**|Long|错误日志文件大小，单位Byte|
+|**lastUpdateTime**|String|错误日志最后更新时间，格式为：YYYY-MM-DD HH:mm:ss|
 |**uploadTime**|String|错误日志上传时间，格式为：YYYY-MM-DD HH:mm:ss|
+|**publicURL**|String|公网下载链接|
+|**internalURL**|String|内网下载链接|
 
 ## 返回码
 |返回码|描述|
