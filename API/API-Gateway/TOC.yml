@@ -1,0 +1,185 @@
+  name: API网关
+  href: 
+  items:
+  - name: 接口概览
+    href: overview.md
+  - name: 更新历史
+    href: ChangeLog.md
+  - name: 接口信息
+    items:
+      - name: API
+        items:
+          - name: checkApiNameExist
+            href: API/checkApiNameExist.md
+          - name: createApis
+            href: API/createApis.md
+          - name: deleteApi
+            href: API/deleteApi.md
+          - name: deleteApiByName
+            href: API/deleteApiByName.md
+          - name: queryApi
+            href: API/queryApi.md
+          - name: queryApis
+            href: API/queryApis.md
+          - name: updateApi
+            href: API/updateApi.md
+          - name: updateApiByName
+            href: API/updateApiByName.md
+      - name: API分组
+        items:
+          - name: checkGroupNameExist
+            href: API-Group/checkGroupNameExist.md
+          - name: createApiGroup
+            href: API-Group/createApiGroup.md
+          - name: deleteApiGroup
+            href: API-Group/deleteApiGroup.md
+          - name: describeApiGroup
+            href: API-Group/describeApiGroup.md
+          - name: describeApiGroups
+            href: API-Group/describeApiGroups.md
+          - name: describeIsDeployApiGroups
+            href: API-Group/describeIsDeployApiGroups.md
+          - name: modifyApiGroupAttribute
+            href: API-Group/modifyApiGroupAttribute.md
+      - name: 密钥管理服务
+        items:      
+          - name: createKey
+            href: Key-Manager-Service/createKey.md
+          - name: queryKeyInfo
+            href: Key-Manager-Service/queryKeyInfo.md
+          - name: queryKeys
+            href: Key-Manager-Service/queryKeys.md
+          - name: resetKey
+            href: Key-Manager-Service/resetKey.md
+          - name: updateKey
+            href: Key-Manager-Service/updateKey.md
+      - name: API调用者密钥
+        items:      
+          - name: bindGroupKey
+            href: API-Gateway-Access-Key/bindGroupKey.md
+          - name: checkKeyExist
+            href: API-Gateway-Access-Key/checkKeyExist.md
+          - name: createAccessKey
+            href: API-Gateway-Access-Key/createAccessKey.md
+          - name: deleteAccessKey
+            href: API-Gateway-Access-Key/deleteAccessKey.md
+          - name: queryAccessKey
+            href: API-Gateway-Access-Key/queryAccessKey.md
+          - name: queryAccessKeys
+            href: API-Gateway-Access-Key/queryAccessKeys.md
+          - name: queryBindGroupKey
+            href: API-Gateway-Access-Key/queryBindGroupKey.md
+          - name: queryKeyGroupList
+            href: API-Gateway-Access-Key/queryKeyGroupList.md
+          - name: updateAccessKey
+            href: API-Gateway-Access-Key/updateAccessKey.md
+      - name: 订阅密钥
+        items:      
+          - name: createSubscriptionKey
+            href: Subscription-key/createSubscriptionKey.md
+          - name: deleteSubscriptionKey
+            href: Subscription-key/deleteSubscriptionKey.md
+          - name: querySubscriptionKey
+            href: Subscription-key/querySubscriptionKey.md
+          - name: querySubscriptionKeys
+            href: Subscription-key/querySubscriptionKeys.md
+          - name: updateSubscriptionKey
+            href: Subscription-key/updateSubscriptionKey.md
+      - name: 京东云用户密钥
+        items:      
+          - name: queryUcAccessKeys
+            href: JD-Cloud-User-Center-Access-Key/queryUcAccessKeys.md
+      - name: 访问授权
+        items:
+          - name: authorizedApiGroupList
+            href: Access-Authorization/authorizedApiGroupList.md
+          - name: bindGroupAuth
+            href: Access-Authorization/bindGroupAuth.md
+          - name: checkAuthExist
+            href: Access-Authorization/checkAuthExist.md
+          - name: createAccessAuth
+            href: Access-Authorization/createAccessAuth.md
+          - name: deleteAccessAuth
+            href: Access-Authorization/deleteAccessAuth.md
+          - name: queryAccessAuth
+            href: Access-Authorization/queryAccessAuth.md
+          - name: queryAccessAuths
+            href: Access-Authorization/queryAccessAuths.md
+          - name: queryAuthGroupList
+            href: Access-Authorization/queryAuthGroupList.md
+          - name: queryBindGroupAuth
+            href: Access-Authorization/queryBindGroupAuth.md
+          - name: updateAccessAuth
+            href: Access-Authorization/updateAccessAuth.md
+      - name: 限流策略
+        items:
+          - name: bindGroupPolicy
+            href: Rate-Limit-Policy/bindGroupPolicy.md       
+          - name: checkPolicyName
+            href: Rate-Limit-Policy/checkPolicyName.md
+          - name: createRateLimitPolicy
+            href: Rate-Limit-Policy/createRateLimitPolicy.md
+          - name: deleteRateLimitPolicy
+            href: Rate-Limit-Policy/deleteRateLimitPolicy.md          
+          - name: queryBindGroupPolicy
+            href: Rate-Limit-Policy/queryBindGroupPolicy.md
+          - name: queryPolicyGroupList
+            href: Rate-Limit-Policy/queryPolicyGroupList.md
+          - name: queryRateLimitPolicies
+            href: Rate-Limit-Policy/queryRateLimitPolicies.md
+          - name: queryRateLimitPolicy
+            href: Rate-Limit-Policy/queryRateLimitPolicy.md
+          - name: updateRateLimitPolicy
+            href: Rate-Limit-Policy/updateRateLimitPolicy.md
+      - name: 自定义域名
+        items:      
+          - name: createUserDomain
+            href: Customized-Domain-Name/createUserDomain.md
+          - name: deleteUserDomain
+            href: Customized-Domain-Name/deleteUserDomain.md
+          - name: queryUserDomains
+            href: Customized-Domain-Name/queryUserDomains.md
+      - name: 后端配置
+        items:      
+          - name: createBackendConfig
+            href: Backend-Configuration/createBackendConfig.md
+          - name: deleteBackendConfig
+            href: Backend-Configuration/deleteBackendConfig.md
+          - name: describeBackendConfig
+            href: Backend-Configuration/describeBackendConfig.md
+          - name: describeBackendConfigs
+            href: Backend-Configuration/describeBackendConfigs.md
+          - name: updateBackendConfig
+            href: Backend-Configuration/updateBackendConfig.md
+      - name: 版本修订
+        items:
+          - name: checkRevisionExist
+            href: Version-Revision/checkRevisionExist.md
+          - name: createRevision
+            href: Version-Revision/createRevision.md
+          - name: deleteRevision
+            href: Version-Revision/deleteRevision.md
+          - name: describeRevisions
+            href: Version-Revision/describeRevisions.md
+          - name: getRevisionIds
+            href: Version-Revision/getRevisionIds.md
+          - name: modifyRevision
+            href: Version-Revision/modifyRevision.md
+          - name: queryRevision
+            href: Version-Revision/queryRevision.md
+      - name: 部署列表
+        items:
+          - name: batchOffline
+            href: Deployment-List/batchOffline.md         
+          - name: deploy
+            href: Deployment-List/deploy.md
+          - name: describeDeployment
+            href: Deployment-List/describeDeployment.md
+          - name: describeDeployments
+            href: Deployment-List/describeDeployments.md
+          - name: offline
+            href: Deployment-List/offline.md
+      - name: 用户信息
+        items:
+          - name: checkPin
+            href: The-User-Information/checkPin.md
