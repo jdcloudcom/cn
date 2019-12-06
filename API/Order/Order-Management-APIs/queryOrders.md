@@ -24,8 +24,8 @@ https://order.jdcloud-api.com/v2/regions/{regionId}/orders
 |---|---|---|---|---|
 |**appCode**|String|False| |业务线|
 |**chargeMode**|String|False| |计费类型(CONFIG-按配置,FLOW-按用量MONTHLY-包年包月,ONCE-按次付费)|
-|**startTime**|Long|False| |查询订单开始时间戳|
-|**endTime**|Long|False| |查询订单结束时间戳|
+|**startTime**|Long|False| |查询订单开始时间戳,（开始时间和结束时间最大跨度为一年，如都不传默认查询为最后一个月）|
+|**endTime**|Long|False| |查询订单结束时间戳,（开始时间和结束时间最大跨度为一年，如都不传默认查询为最后一个月）|
 |**orderType**|String|False| |购买订单类型(NEW-新购,RENEW-续费,RESIZE_FORMULA-配置变更,TEMP_UPGRADE-临时升配)|
 |**pageNumber**|Integer|False| |分页：订单第几页|
 |**pageSize**|Integer|False| |分页：订单条数|
