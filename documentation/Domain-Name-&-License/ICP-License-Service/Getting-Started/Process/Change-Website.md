@@ -82,7 +82,9 @@ d)   负责人着装需要符合当季节（例如：冬天不能穿半袖衣服
 
 如果已经邮寄，状态“已邮寄”，点查看收货地址及快递信息可查看快递公司及快递单号。
 
-![img](https://github.com/jdcloudcom/cn/blob/joytaobao-beian-20200117/image/ICP-License-Service/Change-website-cn-15.jpg) ![img](https://github.com/jdcloudcom/cn/blob/joytaobao-beian-20200117/image/ICP-License-Service/Change-website-cn-16.jpg)
+![img](https://github.com/jdcloudcom/cn/blob/joytaobao-beian-20200117/image/ICP-License-Service/Change-website-cn-15.jpg) 
+
+![img](https://github.com/jdcloudcom/cn/blob/joytaobao-beian-20200117/image/ICP-License-Service/Change-website-cn-16.jpg)
 
 **上传照片及提交管局后页面提示**
 
