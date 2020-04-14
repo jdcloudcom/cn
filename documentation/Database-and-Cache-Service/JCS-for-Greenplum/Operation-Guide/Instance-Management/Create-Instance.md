@@ -13,7 +13,7 @@
 
 2. 在实例列表页面，点击**创建**，进入“创建实例”页面。
 
-   ![11](../../../../../image/JCS-for-Greenplum/jdw-001.png)
+   ![11](../../../../../image/RDS/create-jdw.png)
 
    
 
