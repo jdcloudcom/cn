@@ -52,9 +52,9 @@ items:
     href: JCS-For-InfluxDB-Terms-Of-Service.md
   - name: 云数据库InfluxDB服务等级协议（SLA）
     href: JCS-For-InfluxDB-Level-Agreement-SLA.md
-  - name: 云数据库Greenplum服务条款
+  - name: 数据仓库 JDW服务条款
     href: JCS-For-Greenplum-Terms-Of-Service.md  
-  - name: 云数据库Greenplum服务等级协议（SLA）
+  - name: 数据仓库 JDW服务等级协议（SLA）
     href: JCS-For-Greenplum-Level-Agreement-SLA.md
   - name: 云主机安全服务协议
     href: Cloud-Host-Security-Service-Clause.md
