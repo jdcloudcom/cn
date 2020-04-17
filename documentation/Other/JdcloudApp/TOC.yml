@@ -1,0 +1,39 @@
+name: 京东智联云App
+href: 
+items:
+- name: 产品简介
+  href: Introduction.md
+- name: 通用功能
+  items:
+  - name: 登录注册
+    items: 
+    - name: 账号登录
+      href: login/Login.md
+    - name: 账号注册
+      href: login/Register.md
+    - name: 扫码登录
+      href: login/ScancodeLogin.md
+  - name: 资源运维
+    items: 
+    - name: 资源管理
+      href: resource/Manage.md
+    - name: 监控报警
+      href: resource/Monitor.md
+  - name: 财务服务
+    items: 
+    - name: 余额充值
+      href: finance/Charge.md
+    - name: 资源续费
+      href: finance/Renew.md
+    - name: 订单支付
+      href: finance/Order.md
+  - name: 活动资讯
+    items: 
+    - name: 活动资讯
+      href: activity/Activity.md
+  - name: 服务中心
+    items: 
+    - name: 提交工单
+      href: service/SubmitWorkOrder.md
+- name: 常见问题
+  href: FAQs.md
