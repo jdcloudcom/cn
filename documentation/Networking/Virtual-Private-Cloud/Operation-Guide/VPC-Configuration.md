@@ -16,10 +16,6 @@
 
 7.点击【确定】后即可进入“控制台”查看创建的私有网络；
 
-![](/image/Networking/Virtual-Private-Cloud/Operation-Guide/VPC-Configuration/Step1.png)
-
-![](/image/Networking/Virtual-Private-Cloud/Operation-Guide/VPC-Configuration/Step2.png)
-
 
 
 #### **步骤二、修改VPC名称/描述**
@@ -33,8 +29,6 @@
 #### **步骤三、查看VPC内子网、路由表、网络ACL**
 
 打开控制台，选择 网络 > 私有网络，点击私有网络名称进入私有网络详情页，切换子网、路由表、网络ACL的tab即可查看此私有网络中已经创建的子网、路由表、网络ACL信息。
-
-![](/image/Networking/Virtual-Private-Cloud/Operation-Guide/VPC-Configuration/Step3.png)
 
 
 
