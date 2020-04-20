@@ -47,6 +47,8 @@
     items:
        - name: 私有网络中创建云主机实例
          href: Getting-Started/Create-Virtual-Machine-Instance-In-VPC.md
+       - name: 边缘子网中创建云主机实例
+         href: Getting-Started/Create-Virtual-Machine-Instance-In-Edge-Zone.md
        - name: 标准WEB+APP+DB架构服务部署
          href: Getting-Started/Standard-WEB-APP-DB-Architectural-Service-Deployment.md
        - name: 私有网络中云主机与公网互通
