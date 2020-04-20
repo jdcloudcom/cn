@@ -1,20 +1,20 @@
-## **NATå®žä¾‹ç½‘å…³é…ç½®**
+## **NATÊµÀýÍø¹ØÅäÖÃ**
 
-#### **æ­¥éª¤ä¸€ã€åˆ›å»ºNAT Gatewayçš„äº‘ä¸»æœº**
+#### **²½ÖèÒ»¡¢´´½¨NAT GatewayµÄÔÆÖ÷»ú**
 
-1. è¿›å…¥äº¬ä¸œäº‘æŽ§åˆ¶å°äº‘ä¸»æœºé¡µé¢ï¼Œé€‰æ‹©åˆ›å»ºäº‘ä¸»æœºï¼Œè¿›å…¥äº‘ä¸»æœºçš„åˆ›å»ºæµç¨‹ã€‚
-2. é€‰æ‹©CentOS 7.2 64ä½ NAT Gatewayé•œåƒåŠä¸»æœºå…¶ä»–ç›¸åº”çš„å‚æ•°ï¼Œè¿›è¡Œäº‘ä¸»æœºåˆ›å»ºã€‚
-3. åˆ›å»ºæˆåŠŸï¼Œç›¸å…³ä¿¡æ¯æ›´æ–°ï¼›åˆ›å»ºå¤±è´¥ï¼Œåˆ™å‡ºçŽ°æç¤ºæ¡†ï¼Œå¦‚æžœå¤šæ¬¡ç”³è¯·å¤±è´¥ï¼Œè¯·è”ç³»å®¢æœã€‚
+1. ½øÈë¾©¶«ÖÇÁªÔÆ¿ØÖÆÌ¨ÔÆÖ÷»úÒ³Ãæ£¬Ñ¡Ôñ´´½¨ÔÆÖ÷»ú£¬½øÈëÔÆÖ÷»úµÄ´´½¨Á÷³Ì¡£
+2. Ñ¡ÔñCentOS 7.2 64Î» NAT Gateway¾µÏñ¼°Ö÷»úÆäËûÏàÓ¦µÄ²ÎÊý£¬½øÐÐÔÆÖ÷»ú´´½¨¡£
+3. ´´½¨³É¹¦£¬Ïà¹ØÐÅÏ¢¸üÐÂ£»´´½¨Ê§°Ü£¬Ôò³öÏÖÌáÊ¾¿ò£¬Èç¹û¶à´ÎÉêÇëÊ§°Ü£¬ÇëÁªÏµ¿Í·þ¡£
 
 ![](/image/Networking/Virtual-Private-Cloud/Operation-Guide/NFV-Configuration/NAT-Mirror-Gateway-Configuration/Step1.png)
 
 
 
-#### **æ­¥éª¤äºŒã€é…ç½®è·¯ç”±è¡¨è·¯ç”±è§„åˆ™**
+#### **²½Öè¶þ¡¢ÅäÖÃÂ·ÓÉ±íÂ·ÓÉ¹æÔò**
 
-1. è¿›å…¥äº¬ä¸œäº‘æŽ§åˆ¶å°ç›¸åº”VPCè·¯ç”±è¡¨çš„è¯¦æƒ…é¡µé¢ï¼Œé€‰æ‹©æ–°å»ºè·¯ç”±ç­–ç•¥ã€‚
-2. æ·»åŠ è·¯ç”±ç­–ç•¥ï¼Œç›®çš„ç«¯ä¸ºå…¬ç½‘åœ°å€ï¼Œä¸‹ä¸€è·³ç±»åž‹ä¸ºäº‘ä¸»æœºï¼Œä¸‹ä¸€è·³é€‰æ‹©ä¹‹å‰é€šè¿‡NAT Gatewayé•œåƒåˆ›å»ºçš„äº‘ä¸»æœºã€‚
-3. å°†è¯¥è·¯ç”±è¡¨å…³è”åˆ°æœ‰è®¿é—®Internetçš„éœ€æ±‚çš„å®žä¾‹æ‰€åœ¨çš„å­ç½‘ä¸Šã€‚éœ€è¦æ³¨æ„NAT Instanceä¸èƒ½åœ¨æ­¤å­ç½‘å†…ï¼Œå³å­ç½‘å†…äº‘ä¸»æœºåªèƒ½é€šè¿‡åŒä¸€ç§æœ‰ç½‘ç»œä¸‹ä¸åŒå­ç½‘å†…çš„NAT Instanceè®¿é—®å…¬ç½‘ã€‚
+1. ½øÈë¾©¶«ÖÇÁªÔÆ¿ØÖÆÌ¨ÏàÓ¦VPCÂ·ÓÉ±íµÄÏêÇéÒ³Ãæ£¬Ñ¡ÔñÐÂ½¨Â·ÓÉ²ßÂÔ¡£
+2. Ìí¼ÓÂ·ÓÉ²ßÂÔ£¬Ä¿µÄ¶ËÎª¹«ÍøµØÖ·£¬ÏÂÒ»ÌøÀàÐÍÎªÔÆÖ÷»ú£¬ÏÂÒ»ÌøÑ¡ÔñÖ®Ç°Í¨¹ýNAT Gateway¾µÏñ´´½¨µÄÔÆÖ÷»ú¡£
+3. ½«¸ÃÂ·ÓÉ±í¹ØÁªµ½ÓÐ·ÃÎÊInternetµÄÐèÇóµÄÊµÀýËùÔÚµÄ×ÓÍøÉÏ¡£ÐèÒª×¢ÒâNAT Instance²»ÄÜÔÚ´Ë×ÓÍøÄÚ£¬¼´×ÓÍøÄÚÔÆÖ÷»úÖ»ÄÜÍ¨¹ýÍ¬Ò»Ë½ÓÐÍøÂçÏÂ²»Í¬×ÓÍøÄÚµÄNAT Instance·ÃÎÊ¹«Íø¡£
 
 ![](/image/Networking/Virtual-Private-Cloud/Operation-Guide/NFV-Configuration/NAT-Mirror-Gateway-Configuration/Step2.png)
 
