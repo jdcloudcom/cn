@@ -1,7 +1,7 @@
-## æ··åˆäº‘æ•°æ®é«˜é€Ÿäº’é€š
+## »ìºÏÔÆÊý¾Ý¸ßËÙ»¥Í¨
 
-åœºæ™¯ï¼šç”¨æˆ·å¸Œæœ›å°†åº”ç”¨ã€æ•°æ®åº“ç­‰éƒ¨åˆ†èµ„æºéƒ¨ç½²åœ¨äº‘ç«¯ï¼Œå°†éƒ¨åˆ†æ ¸å¿ƒèµ„æºéƒ¨ç½²åœ¨ä¼ä¸šçš„IDCå†…ï¼Œå¯é€šè¿‡VPNéš§é“æˆ–ä¸“çº¿è¿žæŽ¥äº¬ä¸œäº‘å’Œä¼ä¸šIDCå†…ç½‘ã€‚
+³¡¾°£ºÓÃ»§Ï£Íû½«Ó¦ÓÃ¡¢Êý¾Ý¿âµÈ²¿·Ö×ÊÔ´²¿ÊðÔÚÔÆ¶Ë£¬½«²¿·ÖºËÐÄ×ÊÔ´²¿ÊðÔÚÆóÒµµÄIDCÄÚ£¬¿ÉÍ¨¹ýVPNËíµÀ»ò×¨ÏßÁ¬½Ó¾©¶«ÖÇÁªÔÆºÍÆóÒµIDCÄÚÍø¡£
 
-å»ºè®®é…ç½®ï¼šVPCã€ä¸“çº¿æœåŠ¡ã€VPNã€äº‘ä¸»æœºã€RDS
+½¨ÒéÅäÖÃ£ºVPC¡¢×¨Ïß·þÎñ¡¢VPN¡¢ÔÆÖ÷»ú¡¢RDS
 
 ![](/image/Networking/Virtual-Private-Cloud/Hybrid-Cloud-Data-InterConnect-With-High-Speed.png)
