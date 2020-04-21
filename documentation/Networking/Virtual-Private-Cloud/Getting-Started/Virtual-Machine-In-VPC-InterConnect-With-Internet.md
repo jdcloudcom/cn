@@ -1,45 +1,45 @@
-# **ç§æœ‰ç½‘ç»œä¸­äº‘ä¸»æœºä¸Žå…¬ç½‘äº’é€š**
+# **Ë½ÓÐÍøÂçÖÐÔÆÖ÷»úÓë¹«Íø»¥Í¨**
 
-### **æ¦‚è¿°**
+### **¸ÅÊö**
 
-é€šè¿‡æ­¤æ•™å­¦æ‚¨å¯ä»¥å®Œæˆåœ¨äº¬ä¸œäº‘éƒ¨ç½²ä¸€å°å¯ä»¥ä¸Žå…¬ç½‘äº’é€šçš„äº‘ä¸»æœºï¼Œå¹¶èŽ·å¾—ä»¥ä¸‹èµ„æºï¼š
+Í¨¹ý´Ë½ÌÑ§Äú¿ÉÒÔÍê³ÉÔÚ¾©¶«ÖÇÁªÔÆ²¿ÊðÒ»Ì¨¿ÉÒÔÓë¹«Íø»¥Í¨µÄÔÆÖ÷»ú£¬²¢»ñµÃÒÔÏÂ×ÊÔ´£º
 
-- 1ä¸ªç§æœ‰ç½‘ç»œ
-- 1ä¸ªå­ç½‘
-- 1å°äº‘ä¸»æœº
-- 1ä¸ªå…¬ç½‘IP
+- 1¸öË½ÓÐÍøÂç
+- 1¸ö×ÓÍø
+- 1Ì¨ÔÆÖ÷»ú
+- 1¸ö¹«ÍøIP
 
-## **æ“ä½œæ­¥éª¤**
+## **²Ù×÷²½Öè**
 
-### **ç¬¬ä¸€æ­¥ï¼šåˆ›å»ºç§æœ‰ç½‘ç»œ**
+### **µÚÒ»²½£º´´½¨Ë½ÓÐÍøÂç**
 
-- åœ¨å·¦è¾¹æ é¤å•ä¸­ä¾æ¬¡ç‚¹å‡»ç½‘ç»œ->ç§æœ‰ç½‘ç»œ->ç§æœ‰ç½‘ç»œï¼Œè¿›å…¥ç§æœ‰ç½‘ç»œåˆ—è¡¨é¡µï¼Œç‚¹å‡»åˆ›å»ºï¼Œå¼¹å‡ºåˆ›å»ºé…ç½®çª—å£ã€‚
-- æ ¹æ®éœ€æ±‚é€‰æ‹©çš„åœ°åŸŸï¼Œå¡«å†™åç§°ï¼Œå¡«å†™CIDRï¼Œç‚¹å‡»åˆ›å»ºå³å¯èŽ·å¾—1ä¸ªç§æœ‰ç½‘ç»œã€‚
+- ÔÚ×ó±ßÀ¸²Íµ¥ÖÐÒÀ´Îµã»÷ÍøÂç->Ë½ÓÐÍøÂç->Ë½ÓÐÍøÂç£¬½øÈëË½ÓÐÍøÂçÁÐ±íÒ³£¬µã»÷´´½¨£¬µ¯³ö´´½¨ÅäÖÃ´°¿Ú¡£
+- ¸ù¾ÝÐèÇóÑ¡ÔñµÄµØÓò£¬ÌîÐ´Ãû³Æ£¬ÌîÐ´CIDR£¬µã»÷´´½¨¼´¿É»ñµÃ1¸öË½ÓÐÍøÂç¡£
 
 ![](/image/Networking/Virtual-Private-Cloud/Getting-Started/Virtual-Machine-In-VPC-InterConnect-With-Internet/Step1.png)
 
 
 
-### **ç¬¬äºŒæ­¥ï¼šåˆ›å»ºå­ç½‘**
+### **µÚ¶þ²½£º´´½¨×ÓÍø**
 
-- åœ¨å·¦è¾¹æ é¤å•ä¸­ä¾æ¬¡ç‚¹å‡»ç½‘ç»œ->ç§æœ‰ç½‘ç»œ->å­ç½‘ï¼Œè¿›å…¥å­ç½‘åˆ—è¡¨é¡µï¼Œç‚¹å‡»åˆ›å»ºï¼Œå¼¹å‡ºåˆ›å»ºé…ç½®çª—å£ã€‚
-- æ ¹æ®éœ€æ±‚é€‰æ‹©çš„åœ°åŸŸï¼Œé€‰æ‹©åˆšåˆšåˆ›å»ºçš„ç§æœ‰ç½‘ç»œï¼Œå¡«å†™å­ç½‘åç§°ï¼Œå¡«å†™å­ç½‘CIDRï¼Œé€‰æ‹©å…³è”è·¯ç”±è¡¨ï¼Œç‚¹å‡»åˆ›å»ºå³å¯èŽ·å¾—1ä¸ªå­ç½‘ã€‚
+- ÔÚ×ó±ßÀ¸²Íµ¥ÖÐÒÀ´Îµã»÷ÍøÂç->Ë½ÓÐÍøÂç->×ÓÍø£¬½øÈë×ÓÍøÁÐ±íÒ³£¬µã»÷´´½¨£¬µ¯³ö´´½¨ÅäÖÃ´°¿Ú¡£
+- ¸ù¾ÝÐèÇóÑ¡ÔñµÄµØÓò£¬Ñ¡Ôñ¸Õ¸Õ´´½¨µÄË½ÓÐÍøÂç£¬ÌîÐ´×ÓÍøÃû³Æ£¬ÌîÐ´×ÓÍøCIDR£¬Ñ¡Ôñ¹ØÁªÂ·ÓÉ±í£¬µã»÷´´½¨¼´¿É»ñµÃ1¸ö×ÓÍø¡£
 
 ![](/image/Networking/Virtual-Private-Cloud/Getting-Started/Virtual-Machine-In-VPC-InterConnect-With-Internet/Step2.png)
 
 
 
-### **ç¬¬ä¸‰æ­¥ï¼šåœ¨è¯¥å­ç½‘ä¸­åˆ›å»ºäº‘ä¸»æœº**
+### **µÚÈý²½£ºÔÚ¸Ã×ÓÍøÖÐ´´½¨ÔÆÖ÷»ú**
 
-- åœ¨å·¦è¾¹æ é¤å•ä¸­ä¾æ¬¡ç‚¹å‡»å¼¹æ€§è®¡ç®—->äº‘ä¸»æœº->å®žä¾‹ï¼Œè¿›å…¥å®žä¾‹åˆ—è¡¨é¡µï¼Œç‚¹å‡»åˆ›å»ºï¼Œå¼¹å‡ºåˆ›å»ºé…ç½®çª—å£ã€‚
-- åœ¨å®žä¾‹åˆ›å»ºçš„é…ç½®é¡µæ‰¾åˆ°ç½‘ç»œæ¨¡å—ï¼Œé€‰æ‹©åˆšåˆšåˆ›å»ºçš„ç§æœ‰ç½‘ç»œå’Œå­ç½‘ã€‚
+- ÔÚ×ó±ßÀ¸²Íµ¥ÖÐÒÀ´Îµã»÷µ¯ÐÔ¼ÆËã->ÔÆÖ÷»ú->ÊµÀý£¬½øÈëÊµÀýÁÐ±íÒ³£¬µã»÷´´½¨£¬µ¯³ö´´½¨ÅäÖÃ´°¿Ú¡£
+- ÔÚÊµÀý´´½¨µÄÅäÖÃÒ³ÕÒµ½ÍøÂçÄ£¿é£¬Ñ¡Ôñ¸Õ¸Õ´´½¨µÄË½ÓÐÍøÂçºÍ×ÓÍø¡£
 
 ![](/image/Networking/Virtual-Private-Cloud/Getting-Started/Virtual-Machine-In-VPC-InterConnect-With-Internet/Step3.png)
 
 
 
-### **ç¬¬å››æ­¥ï¼šåˆ›å»ºäº‘ä¸»æœºè¿‡ç¨‹ä¸­çº§è”åˆ›å»ºå…¬ç½‘IP**
+### **µÚËÄ²½£º´´½¨ÔÆÖ÷»ú¹ý³ÌÖÐ¼¶Áª´´½¨¹«ÍøIP**
 
-- åœ¨å®žä¾‹åˆ›å»ºçš„é…ç½®é¡µæ‰¾åˆ°å¸¦å®½æ¨¡å—ï¼Œæ ¹æ®éœ€æ±‚é€‰æ‹©å¸¦å®½è®¡è´¹ç±»åž‹å’Œå¸¦å®½ä¸Šé™ï¼Œå…¶ä½™é…ç½®æ ¹æ®äº‘ä¸»æœºåˆ›å»ºå‘å¯¼å³å¯ï¼Œç‚¹å‡»åˆ›å»ºå³å¯èŽ·å¾—1å°å¯å¤–æŽ¥é€šä¿¡çš„äº‘ä¸»æœºã€‚
+- ÔÚÊµÀý´´½¨µÄÅäÖÃÒ³ÕÒµ½´ø¿íÄ£¿é£¬¸ù¾ÝÐèÇóÑ¡Ôñ´ø¿í¼Æ·ÑÀàÐÍºÍ´ø¿íÉÏÏÞ£¬ÆäÓàÅäÖÃ¸ù¾ÝÔÆÖ÷»ú´´½¨Ïòµ¼¼´¿É£¬µã»÷´´½¨¼´¿É»ñµÃ1Ì¨¿ÉÍâ½ÓÍ¨ÐÅµÄÔÆÖ÷»ú¡£
 
 ![](/image/Networking/Virtual-Private-Cloud/Getting-Started/Virtual-Machine-In-VPC-InterConnect-With-Internet/Step4.png)
