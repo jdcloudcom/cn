@@ -1,30 +1,30 @@
-# äº§å“æ¦‚è¿°
+# ²úÆ·¸ÅÊö
 
-NATç½‘å…³(NAT Gateway)æ˜¯ä¸€æ¬¾æ‰˜ç®¡çš„VPCå…¬ç½‘ç½‘å…³ï¼Œä½œä¸ºVPCç¯å¢ƒä¸‹å…¬ç½‘æµé‡å‡ºå£ï¼Œä¸ºç”¨æˆ·æä¾›æ›´ä¾¿æ·ï¼Œå¯é çš„Internetè®¿é—®ã€‚
+NATÍø¹Ø(NAT Gateway)ÊÇÒ»¿îÍĞ¹ÜµÄVPC¹«ÍøÍø¹Ø£¬×÷ÎªVPC»·¾³ÏÂ¹«ÍøÁ÷Á¿³ö¿Ú£¬ÎªÓÃ»§Ìá¹©¸ü±ã½İ£¬¿É¿¿µÄInternet·ÃÎÊ¡£
 
-ä½œä¸ºäº¬ä¸œäº‘å…¨è‡ªç ”çš„äº§å“ï¼Œå…·å¤‡ä»¥ä¸‹ç‰¹ç‚¹ï¼š
-* å®Œå…¨æ‰˜ç®¡ äº¬ä¸œäº‘å®Œå…¨æ‰˜ç®¡ï¼Œç”¨æˆ·æ— éœ€ç»´æŠ¤
-* é«˜æ€§èƒ½ äº¬ä¸œäº‘è‡ªç ”çš„åˆ†å¸ƒå¼NATç½‘å…³ï¼Œæä¾›æœ€å¤§4Gbpsçš„ååé‡å’Œæœ€å¤§1000ä¸‡å¹¶å‘è¿æ¥æ•°
-* é«˜å¯ç”¨ æä¾›AZçº§åˆ«é«˜å¯ç”¨
-* æŒ‰éœ€è´­ä¹° NATç½‘å…³è§„æ ¼å’Œå…¬ç½‘IPå¸¦å®½å‡å¯ä»¥éšæ—¶è°ƒæ•´ï¼Œè½»æ¾åº”å¯¹ä¸šåŠ¡å˜åŒ–
+×÷Îª¾©¶«ÖÇÁªÔÆÈ«×ÔÑĞµÄ²úÆ·£¬¾ß±¸ÒÔÏÂÌØµã£º
+* ÍêÈ«ÍĞ¹Ü ¾©¶«ÖÇÁªÔÆÍêÈ«ÍĞ¹Ü£¬ÓÃ»§ÎŞĞèÎ¬»¤
+* ¸ßĞÔÄÜ ¾©¶«ÖÇÁªÔÆ×ÔÑĞµÄ·Ö²¼Ê½NATÍø¹Ø£¬Ìá¹©×î´ó4GbpsµÄÍÌÍÂÁ¿ºÍ×î´ó1000Íò²¢·¢Á¬½ÓÊı
+* ¸ß¿ÉÓÃ Ìá¹©AZ¼¶±ğ¸ß¿ÉÓÃ
+* °´Ğè¹ºÂò NATÍø¹Ø¹æ¸ñºÍ¹«ÍøIP´ø¿í¾ù¿ÉÒÔËæÊ±µ÷Õû£¬ÇáËÉÓ¦¶ÔÒµÎñ±ä»¯
 
-## å¸¸ç”¨æ“ä½œ
+## ³£ÓÃ²Ù×÷
 
-- NATç½‘å…³ç®¡ç†
-	- [åˆ›å»ºNATç½‘å…³](../Operation-Guide/Nat-Gateway-Management/Create-Nat-Gateway.md)
-	- [å¯åœNATç½‘å…³](../Operation-Guide/Nat-Gateway-Management/Start-Stop-Nat-Gateway.md)
-	- [è°ƒæ•´NATç½‘å…³è§„æ ¼](../Operation-Guide/Nat-Gateway-Management/Change-Nat-Gateway-Type.md)
-	- [ç¼–è¾‘NATç½‘å…³](../Operation-Guide/Nat-Gateway-Management/Edit-Nat-Gateway.md)
-	- [åˆ é™¤NATç½‘å…³](../Operation-Guide/Nat-Gateway-Management/Delete-Nat-Gateway.md)
+- NATÍø¹Ø¹ÜÀí
+	- [´´½¨NATÍø¹Ø](../Operation-Guide/Nat-Gateway-Management/Create-Nat-Gateway.md)
+	- [ÆôÍ£NATÍø¹Ø](../Operation-Guide/Nat-Gateway-Management/Start-Stop-Nat-Gateway.md)
+	- [µ÷ÕûNATÍø¹Ø¹æ¸ñ](../Operation-Guide/Nat-Gateway-Management/Change-Nat-Gateway-Type.md)
+	- [±à¼­NATÍø¹Ø](../Operation-Guide/Nat-Gateway-Management/Edit-Nat-Gateway.md)
+	- [É¾³ıNATÍø¹Ø](../Operation-Guide/Nat-Gateway-Management/Delete-Nat-Gateway.md)
 	
-- æŸ¥çœ‹NATç½‘å…³ç›‘æ§ä¿¡æ¯
-	- [æŸ¥çœ‹NATç½‘å…³ç›‘æ§ä¿¡æ¯](../Operation-Guide/View-Nat-Gateway-Monitoring/View-Nat-Gateway-Monitoring.md)
+- ²é¿´NATÍø¹Ø¼à¿ØĞÅÏ¢
+	- [²é¿´NATÍø¹Ø¼à¿ØĞÅÏ¢](../Operation-Guide/View-Nat-Gateway-Monitoring/View-Nat-Gateway-Monitoring.md)
 	
-- æŸ¥çœ‹NATç½‘å…³è®¡è´¹ä¿¡æ¯
-	- [æŸ¥çœ‹NATç½‘å…³è®¡è´¹ä¿¡æ¯](../Operation-Guide/View-Nat-Gateway-Billing/View-Nat-Gateway-Billing.md)
+- ²é¿´NATÍø¹Ø¼Æ·ÑĞÅÏ¢
+	- [²é¿´NATÍø¹Ø¼Æ·ÑĞÅÏ¢](../Operation-Guide/View-Nat-Gateway-Billing/View-Nat-Gateway-Billing.md)
   
-## è®¡è´¹
+## ¼Æ·Ñ
 
-NAT ç½‘å…³æœåŠ¡è´¹ç”¨åŒ…å«ä¸¤éƒ¨åˆ†ï¼šç½‘å…³è´¹ç”¨ï¼ˆæŒ‰å°æ—¶è®¡è´¹ï¼‰å’Œè®¿é—® Internetçš„å…¬ç½‘å¸¦å®½è´¹ç”¨ï¼ˆæŒ‰é…ç½®è®¡è´¹ï¼‰ï¼Œè¯¦æƒ…å‚è§[NATç½‘å…³è®¡è´¹æ¦‚è¿°](../Pricing/Billing-Overview.md)
+NAT Íø¹Ø·şÎñ·ÑÓÃ°üº¬Á½²¿·Ö£ºÍø¹Ø·ÑÓÃ£¨°´Ğ¡Ê±¼Æ·Ñ£©ºÍ·ÃÎÊ InternetµÄ¹«Íø´ø¿í·ÑÓÃ£¨°´ÅäÖÃ¼Æ·Ñ£©£¬ÏêÇé²Î¼û[NATÍø¹Ø¼Æ·Ñ¸ÅÊö](../Pricing/Billing-Overview.md)
   
 
