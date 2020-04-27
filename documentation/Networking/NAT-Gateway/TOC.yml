@@ -76,6 +76,8 @@ items:
     items:
     - name: 服务条款
       href: User-Agreements/Product-Terms-of-Service.md         
-  - name: 相关资源
+    - name: SLA
+      href: User-Agreements/SLA.md
+ - name: 相关资源
     items:
     status: 0 
