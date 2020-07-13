@@ -33,8 +33,6 @@
             href: Getting-Started/Data-Migration/Data-Comparison-Description.md
           - name: 结束迁移任务 
             href: Getting-Started/Data-Migration/Stop-Migration-Task.md
-          - name: 支持的数据库类型与版本 
-            href: Getting-Started/Data-Migration/Database-Type-and-Version.md
           - name: 预检查说明 
             href: Getting-Started/Data-Migration/Task-Assessment-Description.md
           - name: JSON方式定义迁移对象 

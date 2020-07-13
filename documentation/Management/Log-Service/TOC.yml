@@ -36,7 +36,9 @@ items:
         - name: 云缓存Redis日志
           href: Introduction/ResourceLog/RedisLog.md
         - name: PostgreSQL日志
-          href: Introduction/ResourceLog//PGLog.md
+          href: Introduction/ResourceLog/PGLog.md
+        - name: JDW数据仓库日志
+          href: Introduction/ResourceLog/JDWLog.md
 - name: 产品定价
   items:
     - name: 计费概述

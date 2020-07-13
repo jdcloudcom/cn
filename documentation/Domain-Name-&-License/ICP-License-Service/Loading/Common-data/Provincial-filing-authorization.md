@@ -16,5 +16,9 @@
 
 [四川授权书.doc](https://img1.jcloudcs.com/cms/8d0e0081-a636-4004-ad9a-04956c1725a120171206193651.doc)
 
-授权书填写盖章完毕后，请以工单形式提交给京东云
+[陕西授权书.doc](https://img1.jcloudcs.com/cms/f477218e-a08b-481a-946d-2f22d9e6ecbd20171206193651.doc)
+
+[重庆授权书.doc](https://img1.jcloudcs.com/cms/f477218e-a08b-481a-946d-2f22d9e6ecbd20171206193651.doc)
+
+#### 授权书填写盖章完毕后，请以工单形式提交给京东云
 

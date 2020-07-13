@@ -9,21 +9,23 @@
 按天计费，计费周期为每天0时-24时，每天6时，进行前一天的账单结算。
 
 + 流量计费：按实际使用的流量计费，单位为GB，每日扣费、按月阶梯，每次计费时，对用户在本次计费周期中产生的流量进行自然月阶梯计费。
-
-| **计费模式** | **计费阶梯**   | **价格（元/GB）** |
-| ------------ | -------------- | ----------------- |
-| 流量         | 0GB-10TB(含)   | 0.35              |
-| 流量         | 10TB-50TB(含)  | 0.32              |
-| 流量         | 50TB-100TB(含) | 0.28              |
-| 流量         | >100TB         | 0.25              |
-
 + 带宽峰值计费：按使用的带宽峰值计费，每5分钟统计一个带宽，每天共统计288个点，每次计费时，对用户在本次计费周期中的带宽最大值(带宽峰值)进行日阶梯计费。
 
-| **计费模式** | **计费阶梯**      | **价格（元/Mbps/天）** |
-| ------------ | ----------------- | ---------------------- |
-| 带宽峰值     | 0-512Mbps(含)     | 1                      |
-| 带宽峰值     | 512Mbps-5Gbps(含) | 0.9                    |
-| 带宽峰值     | >5Gbps            | 0.75                   |
+**国内业务定价表——日流量&日峰值**
+
+<table><tr><td>计费方式</td><td>阶梯值</td><td>下载</td><td>页面/图片</td><td>直播</td><td>点播</td><td>统一售卖价</td></tr><tr><td rowspan="5">日流量（单位：元/GB）</td><td>0GB-10TB(含）</td><td>0.21</td><td>0.23</td><td>0.23</td><td>0.22</td><td>0.23</td></tr><tr><td>10TB-50TB(含）</td><td>0.19</td><td>0.21</td><td>0.21</td><td>0.20</td><td>0.21</td></tr><tr><td>50TB-100TB(含）</td><td>0.17</td><td>0.18</td><td>0.18</td><td>0.17</td><td>0.18</td></tr><tr><td>100TB-1PB(含）</td><td>0.15</td><td>0.16</td><td>0.16</td><td>0.16</td><td>0.16</td></tr><tr><td>大于1PB</td><td>0.15</td><td>0.16</td><td>0.16</td><td>0.16</td><td>0.16</td></tr><tr><td rowspan="5">日峰值带宽（单位：元/Mbps/日）</td><td>0~500Mbps（含）</td><td>0.60</td><td>0.70</td><td>0.70</td><td>0.60</td><td>0.60</td></tr><tr><td>500Mbps-5Gbps（含）</td><td>0.59</td><td>0.63</td><td>0.63</td><td>0.59</td><td>0.59</td></tr><tr><td>5Gbps-20Gbps（含）</td><td>0.49</td><td>0.53</td><td>0.53</td><td>0.51</td><td>0.49</td></tr><tr><td>大于20Gbps</td><td>0.49</td><td>0.53</td><td>0.53</td><td>0.51</td><td>0.49</td></tr></table>
+
+
+**国内业务定价表——动态加速**
+
+<table><tr><td>动态加速</td><td colspan="3">售卖价</td></tr><tr><td>阶梯</td><td>单价（元/万次请求） </td><td>赠送流量（GB/万次请求）</td><td>超流量部分单价（元/GB）</td></tr><tr><td>100万次</td><td>0.15</td><td>0.25</td><td>1</td></tr><tr><td>1000万次</td><td>0.14</td><td>0.25</td><td>1</td></tr><tr><td>1亿次</td><td>0.13</td><td>0.25</td><td>1</td></tr><tr><td>10亿次</td><td>0.12</td><td>0.25</td><td>1</td></tr><tr><td>100亿次</td><td>0.11</td><td>0.25</td><td>1</td></tr></table>说明：请求数包含http和https
+
+<table><tr><td></td><td>售卖价</td></tr><tr><td>静态https请求数（元/万次）</td><td>0.05</td></tr></table>
+
+
+
+**海外报价-区域报价**
+<table><tr><td>计费种类</td><td>使用量阶梯</td><td>北美</td><td>欧洲</td><td>南美</td><td style="width:200px">亚洲（菲律宾、韩国、新加坡、日本）</td><td>中东、非洲</td><td>澳大利亚、印度</td></tr><tr><td rowspan="5">日流量计费(元/GB)</td><td>0GB-10TB（含）</td><td>0.40</td><td>0.40</td><td>1.18</td><td>0.68</td><td>1.18</td><td>1.18</td></tr><tr><td>10TB-50TB（含）</td><td>0.36</td><td>0.36</td><td>1.07</td><td>0.61</td><td>1.07</td><td>1.07</td></tr><tr><td>50TB-100TB（含）</td><td>0.32</td><td>0.32</td><td>0.98</td><td>0.53</td><td>0.98</td><td>0.98</td></tr><tr><td>100TB-1PB（含）</td><td>0.16</td><td>0.16</td><td>0.89</td><td>0.46</td><td>0.89</td><td>0.89</td></tr><tr><td>大于1PB</td><td>0.14</td><td>0.14</td><td>0.81</td><td>0.42</td><td>0.81</td><td>0.81</td></tr><tr><td rowspan="5">日峰值带宽计费(元/Mbps/日)</td><td>0~100Mbps（含）</td><td>1.60</td><td>1.60</td><td>5.66</td><td>3.35</td><td>5.66</td><td>5.66</td></tr><tr><td>100Mbps~500Mbps（含）</td><td>1.57</td><td>1.57</td><td>5.55</td><td>3.28</td><td>5.55</td><td>5.55</td></tr><tr><td>500Mbps-5Gbps（含）</td><td>1.45</td><td>1.45</td><td>5.14</td><td>3.04</td><td>5.14</td><td>5.14</td></tr><tr><td>5Gbps-20Gbps（含）</td><td>1.33</td><td>1.33</td><td>4.72</td><td>2.79</td><td>4.72</td><td>4.72</td></tr><tr><td>大于20Gbps</td><td>1.27</td><td>1.27</td><td>4.49</td><td>2.66</td><td>4.49</td><td>4.49</td></tr></table>
 
 **二、大客户后付费方式**
 

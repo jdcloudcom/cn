@@ -63,7 +63,7 @@
       items:
         - name: 云硬盘扩容概述
           href: Getting-Started/Cloud-Disk/Expand-Filesystem/Cloud-Disk-Expansion-Overview.md
-        - name: 控制台升级容量操作
+        - name: 控制台扩容操作
           href: Getting-Started/Cloud-Disk/Disk-Expand.md
         - name: 扩容文件系统（有分区）
           href: Getting-Started/Cloud-Disk/Expand-Filesystem/Expand-File-System-Multi-Partition.md

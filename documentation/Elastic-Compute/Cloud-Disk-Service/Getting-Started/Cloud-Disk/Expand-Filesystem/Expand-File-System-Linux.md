@@ -1,8 +1,8 @@
-# 扩容文件系统（Linux）
+# 扩容文件系统（Linux无分区）
 
-在云硬盘控制台完成扩容操作并挂载此云硬盘后，需要登录云主机对文件系统进行扩容才可继续使用。在控制台对云硬盘的扩容操作可参见“[云硬盘升级容量](https://docs.jdcloud.com/cn/cloud-disk-service/disk-expand)”
+在云硬盘控制台完成扩容操作并挂载此云硬盘后，需要登录云主机对文件系统进行扩容才可继续使用。在控制台对云硬盘的扩容操作可参见“[控制台扩容操作](https://docs.jdcloud.com/cn/cloud-disk-service/disk-expand)”
 
-如果您的云硬盘有分区，请参照“[扩容文件系统（多分区）](https://docs.jdcloud.com/cn/cloud-disk-service/expand-file-system-multi-partition)”文档进行分区。如果您直接在云硬盘上制作的文件系统，请参照一下步骤进行文件系统扩容。
+如果您的云硬盘有分区，请参照“[扩容文件系统（有分区）](https://docs.jdcloud.com/cn/cloud-disk-service/expand-file-system-multi-partition)”文档进行分区。如果您直接在云硬盘上制作的文件系统，请参照一下步骤进行文件系统扩容。
 
 **注意：扩容之前要备份好数据，可通过创建该云硬盘的快照进行数据备份。避免因误操作等因素导致数据丢失**
 

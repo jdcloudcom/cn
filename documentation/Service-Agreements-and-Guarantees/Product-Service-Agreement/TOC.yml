@@ -60,6 +60,8 @@ items:
     href: Cloud-Host-Security-Service-Clause.md
   - name: 云硬盘服务协议
     href: Cloud-Hard-Disk-Service-Clause.md
+  - name: 云硬盘服务等级协议（SLA）
+    href: Cloud-Hard-Disk-Level-Agreements-SLA.md   
   - name: 弹性公网IP服务协议
     href: Public-Network-IP-Service-Clause.md
   - name: 弹性公网IP服务等级协议（SLA）
