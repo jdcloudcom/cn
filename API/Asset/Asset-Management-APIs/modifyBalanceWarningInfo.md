@@ -17,9 +17,9 @@ https://asset.jcloud.com/v1/regions/{regionId}/assets:modifyBalanceWarningInfo
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**balanceWarningInfoVo**|[BalanceWarningInfoVo](#balancewarninginfovo)|True| | |
+|**balanceWarningInfoVo**|BalanceWarningInfoVo|True| | |
 
-### <div id="BalanceWarningInfoVo">BalanceWarningInfoVo</div>
+### BalanceWarningInfoVo
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
 |**status**|String|False| |余额预警状态:1-启用；2-停用（状态不为空时修改状态）|
@@ -28,10 +28,10 @@ https://asset.jcloud.com/v1/regions/{regionId}/assets:modifyBalanceWarningInfo
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**result**|[Result](#result)| |
+|**result**|Result| |
 |**requestId**|String| |
 
-### <div id="Result">Result</div>
+### Result
 |名称|类型|描述|
 |---|---|---|
 |**status**|Boolean| |
