@@ -10,6 +10,6 @@ items:
     - name:  资金账户相关接口
       items:
         - name: describeAccountAmount
-          href: Asset-Management-API/describeAccountAmount.md 
+          href: Asset-Management-APIs/describeAccountAmount.md
         - name: modifyBalanceWarningInfo
-          href: Asset-Management-API/modifyBalanceWarningInfo.md 
+          href: Asset-Management-APIs/modifyBalanceWarningInfo.md
