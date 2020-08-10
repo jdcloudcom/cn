@@ -49,18 +49,14 @@ items:
       href: Operation-Guide/Statistical-Analysis.md
     - name: 访问控制（IAM）
       href: Operation-Guide/IAM.md
-#- name: 开发指南
-#  items:
-#    - name: 事件回调
-#      items:
-#        - name: 概述
-#          href: Developer-Guide/Callback/Overview.md
-#        - name: 事件说明
-#          items:
-#            - name: 文件上传完成
-#              href: Developer-Guide/Callback/Events/File-Upload-Complete.md
-#            - name: 视频转码完成
-#              href: Developer-Guide/Callback/Events/Stream-Transcode-Complete.md
+- name: 开发指南
+  items:
+    - name: 事件回调
+      items:
+        - name: 文件上传回调
+          href: Developer-Guide/File-Upload-Complete.md
+        - name: 视频转码回调
+          href: Developer-Guide/Stream-Transcode-Complete.md
 - name: 上传SDK
   items:
     - name: AWS原生SDK上传
