@@ -34,9 +34,9 @@ IAM Policy语言包含以下基本意义的元素：
     Policy 需遵循 JSON 语法规范,详细说明请参阅[IAM Policy-策略语法](https://docs.jdcloud.com/cn/iam/elements)。
     
 ### OSS在IAM Policy中用法
-#### 1.指定Action
+1. 指定Action
 
-IAM policy 中 本期Action 支持列表如下：
+IAM policy 中 Action 支持列表如下：
 
 |操作关键字|操作项说明|对应API|操作级别 | 
 |-|-|-|-|
@@ -65,7 +65,7 @@ IAM policy 中 本期Action 支持列表如下：
     
 - 如想授权某一类的 Object 的操作，可以选择这几种的一种或几种。另外，所有的 Action 前面都必须加上前缀“oss:”，如上面例子所示。
 
-#### 1.指定Resource
+2. 指定Resource
 
 对于您的 OSS 资源，在IAM policy中指定方式如下为：
 您不需要指定区域和命名空间，如下所示用"\*"代替，relative-id指定您的OSS资源，可以是存储空间也可是其中一些或某个对象，目前仅支持通配符（\*）。
@@ -89,7 +89,8 @@ jrn:oss:*:*:bucket_name/key_name
 |jrn:oss:*:*:examplebucket*|表示 以examplebucket为前缀的存储存储空间以及其中全部对象|
 
 ### IAM Policy 示例
-#### 1.完全授权的IAM Policy
+1. 完全授权的IAM Policy
+
 完全授权的 IAM Policy表示允许子账号可以对OSS进行任何操作。您可以登录[访问控制控制台-用户管理](https://iam-console.jdcloud.com/subUser/list)直接授权系统策略（JDCloudOSSAdmin）。
 ```
 {
@@ -106,7 +107,8 @@ jrn:oss:*:*:bucket_name/key_name
 }
 ```
 
-#### 2.不限制前缀的只读不写IAM Policy
+2. 不限制前缀的只读不写IAM Policy
+
 
 此Policy表示子用户可对名为app-base-oss的Bucket下所有的Object能够列举与下载。
 
@@ -129,7 +131,8 @@ jrn:oss:*:*:bucket_name/key_name
 }
 ```
 
-#### 3.限制前缀的只读不写IAM Policy
+3. 限制前缀的只读不写IAM Policy
+
 此Policy表示子用户可对名为app-base-oss的Bucket中有前缀 myuser1/的Object能够列举与下载。但无法下载其他前缀的Object。采用此种Policy，可以将不同的子账号控制的应用对应不同的前缀，就可以达到在同一个Bucket中空间隔离的效果。
 ```
 {
@@ -150,7 +153,8 @@ jrn:oss:*:*:bucket_name/key_name
 }
 ```
 
-#### 4.不限制前缀的只写不读IAM Policy
+4. 不限制前缀的只写不读IAM Policy
+
 此Policy表示应用可以对名为app-base-oss的Bucket中完成带有前缀myuser1/的Object进行上传。但无法上传其他前缀的Object。采用此种Policy，如果不同的应用对应不同的前缀，就可以达到在同一个Bucket中空间隔离的效果。
 ```
 {
@@ -168,7 +172,8 @@ jrn:oss:*:*:bucket_name/key_name
     "Version": "3"
 }
 ```
-#### 5.限制前缀的只写不读IAM Policy
+5. 限制前缀的只写不读IAM Policy
+
 此Policy表示应用只可以对名为app-base-oss的Bucket进行上传。
 ```
 {
@@ -187,7 +192,8 @@ jrn:oss:*:*:bucket_name/key_name
 }
 ```
 
-#### 6.不限制前缀的读写IAM Policy
+6. 不限制前缀的读写IAM Policy
+
 此Policy表示应用只可以对名为app-base-oss的Bucket下所有的Object进行列举、下载、上传和删除。
 ```
 {
@@ -210,7 +216,8 @@ jrn:oss:*:*:bucket_name/key_name
     "Version": "3"
 }
 ```
-#### 7.限制前缀的读写IAM Policy
+7. 限制前缀的读写IAM Policy
+
 此Policy表示应用可以对名为app-base-oss的Bucket下带有前缀myuser1/的Object进行列举、下载、上传和删除，但无法对其他前缀的Object进行读写。采用此种Policy，如果不同的子用户对应不同的前缀，就可以达到在同一个Bucket中空间隔离的效果。
 ```
 {
@@ -233,14 +240,3 @@ jrn:oss:*:*:bucket_name/key_name
     "Version": "3"
 }
 ```
-
-
-
-
-    
-
-
-
-
-
-

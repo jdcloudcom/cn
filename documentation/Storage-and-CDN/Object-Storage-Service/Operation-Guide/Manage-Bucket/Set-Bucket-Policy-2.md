@@ -29,8 +29,8 @@
       - （2）Bucket Policy中各个字段的定义如下：
          a. 用户授权：定义了该Bucket Policy所影响到的用户，默认值为 “*”， 语义是对全部用户生效，若需要只针对部分用户生效，请点击“自定义用户”，并在文本框中 输入对应用户的用户ID指定用户时，您无需输入前缀“arn:aws:iam::”，按照如下方式输入：
          1.主账号：AccountID
-         2.子账号 AccountID：username/username。每行一个用户ID，即通过换行符间隔多个AccountID
-         （注：您的AccountID可以到用户管理中去查询）。
+         2.子账号 AccountID：username/<username>。每行一个用户ID，即通过换行符间隔多个AccountID
+         （注：username/<username>中，第一个username是固定字段，第二个<username>需要替换为您的AccountID，AccountID可以到用户管理中去查询）。
          
         b. 涉及操作：定义了对该Bucket可以进行的操作，可进行单选也可进行全选，但至少要勾选一项，每项操作定义如下：
 
@@ -84,13 +84,3 @@ Referer白名单语义解释：
 参考效果如下：
 
 ![Referer白名单](../../../../../image/Object-Storage-Service/OSS-123.png)
-
- 
-
- 
-
- 
-
- 
-
-

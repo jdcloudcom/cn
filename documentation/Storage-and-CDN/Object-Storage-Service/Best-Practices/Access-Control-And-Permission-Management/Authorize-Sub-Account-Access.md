@@ -24,6 +24,7 @@ IAM 详细介绍前往[IAM概述](https://docs.jdcloud.com/cn/iam/product-overvi
  ![IAM子用户](../../../../../image/Object-Storage-Service/OSS-108.png)
  
 2.按照要求填写用户相关信息。
+
 ![IAM子用户](../../../../../image/Object-Storage-Service/OSS-109.png)
 
 - 步骤二：对子账号授予权限
@@ -44,8 +45,10 @@ IAM 详细介绍前往[IAM概述](https://docs.jdcloud.com/cn/iam/product-overvi
 
 本文还通过以下策略示例说明几种典型场景，详情参见[基于IAM Policy的权限控制-IAM Policy 示例](../../Operation-Guide/Access-Control/Access-Control-Base-On-IAM-Policy.md),可以直接复制在自定义策略到编辑器 。
 
-- 步骤三：子账号访问主账号 OSS 资源（本期OSS控制台不支持子账号）
-OSS 访问（API 或 SDK）需要如下资源：AccessKeyId 、AccessKeySecret 。
+- 步骤三：子账号访问主账号 OSS 资源. 
+
+使用授权后的子账号登录控制台，可访问被授权的主账号的 OSS 资源。
+如使用 API 或 SDK 访问，需要如下资源：AccessKeyId 、AccessKeySecret 。
 当使用子账号访问 OSS资源时，需要使用子账号的 AccessKeyId 和 AccessKeySecret，您可以在创建子账号时选择为子账号创建（Access Key）或者登陆访问管理控制台创建子账号的 AccessKeyId(Access Key) 和 AccessKeySecret(Secret Key)。
 
 方法一：创建子账号时选择为创建子账号（Access Key）
@@ -59,17 +62,3 @@ OSS 访问（API 或 SDK）需要如下资源：AccessKeyId 、AccessKeySecret �
 ### 使用Bucket policy 授权子账号
 
 除了IAM policy您也可使用Bucket policy 授权子账号。具体授权步骤请参看[Bucket policy-访问权限设置](../../Operation-Guide/Manage-Bucket/Set-Bucket-Policy-2.md)。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
