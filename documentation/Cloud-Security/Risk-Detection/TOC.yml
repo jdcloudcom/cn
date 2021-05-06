@@ -50,7 +50,9 @@ items:
           - name: 登录风险识别API
             href:  API-Document/RiskDetection/CreditScoreLogin.md
           - name: 营销风险识别API
-            href:  API-Document/RiskDetection/CreditScoreMartketing.md                
+            href:  API-Document/RiskDetection/CreditScoreMartketing.md
+          - name: 订单风险识别API
+            href:  API-Document/RiskDetection/CreditScoreOrder.md   
       - name: 黑白名单设置
         items:
           - name: 添加黑白名单
