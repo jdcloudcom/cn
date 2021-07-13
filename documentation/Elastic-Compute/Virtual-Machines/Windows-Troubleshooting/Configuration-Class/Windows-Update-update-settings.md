@@ -1,17 +1,17 @@
 # Windows Update更新设置
 京东智联云Windows系统服务器默认没有开启Windows Update检查更新，用户可以自行对检查更新做设置，配置的方法如下：
 
-1.点击"开始"-"控制面板"；
+1. 点击"开始"-"控制面板"；
 
-![](https://github.com/jdcloudcom/cn/blob/edit/image/Elastic-Compute/Virtual-Machine/Windows/Windows%20Update%E6%9B%B4%E6%96%B0%E8%AE%BE%E7%BD%AE01.png)
+![](../../../../../image/Elastic-Compute/Virtual-Machine/Windows/Windows%20Update%E6%9B%B4%E6%96%B0%E8%AE%BE%E7%BD%AE01.png)
 
-2.打开控制面板在右上角类别处选择"小图标"，之后打开"Windows Update"，左侧选择"更改设置"；
+2. 打开控制面板在右上角类别处选择"小图标"，之后打开"Windows Update"，左侧选择"更改设置"；
 
-![](https://github.com/jdcloudcom/cn/blob/edit/image/Elastic-Compute/Virtual-Machine/Windows/Windows%20Update%E6%9B%B4%E6%96%B0%E8%AE%BE%E7%BD%AE02.png)
+![](../../../../../image/Elastic-Compute/Virtual-Machine/Windows/Windows%20Update%E6%9B%B4%E6%96%B0%E8%AE%BE%E7%BD%AE02.png)
 
-3.在重要更新框的下拉菜单中可以自行选择更新的方式：
+3. 在重要更新框的下拉菜单中可以自行选择更新的方式：
 
-![](https://github.com/jdcloudcom/cn/blob/edit/image/Elastic-Compute/Virtual-Machine/Windows/Windows%20Update%E6%9B%B4%E6%96%B0%E8%AE%BE%E7%BD%AE03.png)
+![](../../../../../image/Elastic-Compute/Virtual-Machine/Windows/Windows%20Update%E6%9B%B4%E6%96%B0%E8%AE%BE%E7%BD%AE03.png)
 
 **自动安装更新：**
 
