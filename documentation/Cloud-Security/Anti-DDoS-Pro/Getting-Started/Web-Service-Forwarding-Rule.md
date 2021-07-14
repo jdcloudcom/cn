@@ -3,7 +3,7 @@
 网站类是针对网站域名业务进行的防护，支持流量型和应用型的攻击防护，包括CC攻击。
 
 ## 前提条件
-- 已成功购买了IP高防，且计费状态正常。
+- 已成功购买了DDoS IP高防，且计费状态正常。
 
 ## 操作步骤
 1. 选中某个已购买的实例。单击“实例名称”或操作栏的“转发配置”，进入转发配置页面。
@@ -45,18 +45,18 @@
 
 - 转发规则：支持轮询、源IP hash和加权轮询。
 
-- 回源方式：可选择回源IP或回源域名。其中回源IP（云内+云外）支持20个IP地址，回源域名支持1个。源站域名不能和防护域名一样。**注意，源站IP不允许填写内网地址，如源站为港澳台或海外地区，请用户自行确认网络延迟和稳定性是否满足要求，如延迟过高，接入IP高防可能出现超时现象，此场景建议使用京东云SCDN产品海外线路**。
+- 回源方式：可选择回源IP或回源域名。其中回源IP（云内+云外）支持20个IP地址，回源域名支持1个。源站域名不能和防护域名一样。**注意，源站IP不允许填写内网地址，如源站为港澳台或海外地区，请用户自行确认网络延迟和稳定性是否满足要求，如延迟过高，接入DDoS IP高防可能出现超时现象，此场景建议使用京东云SCDN产品海外线路**。
 
 - GEO回源：支持基于地域的访问回源。
 
-- 备用IP：备用IP不是必填项。配置了备用IP，则非DDoS攻击时，开启回源模式，高防cname将指向该IP。建议备用IP为日常对外展示的IP，回源IP为不对外的IP。配置备用IP能保证源站的隐蔽性和高可用性，可参考下面 **产品设计说明** 中的流程图。
+- 备用IP：备用IP不是必填项。配置了备用IP，则非DDoS攻击时，开启回源模式，高防CNAME将指向该IP。建议备用IP为日常对外展示的IP，回源IP为不对外的IP。配置备用IP能保证源站的隐蔽性和高可用性，可参考下面 **产品设计说明** 中的流程图。
 
 ![产品设计说明](https://github.com/jdcloudcom/cn/blob/edit/image/Advanced%20Anti-DDoS/ip-anti-design-cn.png)
 
-4. 网站转发规则创建成功后，在规则列表中，点击复制CNAME，可在DNS中修改解析将流量切到IP高防上，详情参考[更新DNS解析](Update-DNS-Settings.md)
+4. 网站转发规则创建成功后，在规则列表中，点击复制CNAME，可在DNS中修改解析将流量切到DDoS IP高防上，详情参考[更新DNS解析](Update-DNS-Settings.md)
 ![网站转发规则](https://github.com/jdcloudcom/cn/blob/edit/image/Advanced%20Anti-DDoS/web-rule%2011.png)
 
-5. 网站转发规则配置完成后，防护开关默认开启，可点击切换到回源模式，回源模式下，流量不经过IP高防清洗，直接回源源站IP。
+5. 网站转发规则配置完成后，防护开关默认开启，可点击切换到回源模式，回源模式下，流量不经过DDoS IP高防清洗，直接回源源站IP。
 ![网站转发规则](https://github.com/jdcloudcom/cn/blob/edit/image/Advanced%20Anti-DDoS/web-rule%2012.png)
 
 6. 网站转发规则配置中如勾选HTTPS，在规则列表中，需要点击关联SSL数字证书。点击上传按钮，在证书管理界面可选择已上传的证书。如首次上传证书，点击 **管理证书** 按钮跳转SSL数字证书控制台界面上传证书，详情参考[上传SSL证书](https://github.com/jdcloudcom/cn/blob/edit/documentation/Cloud-Security/SSL-Certificate/Operation-Guide/Upload-SSL-Certificate.md)

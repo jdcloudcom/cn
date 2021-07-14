@@ -1,7 +1,7 @@
 # 黑白名单配置
 黑白名单允许您设置访问控制规则，对常见的HTTP字段（如IP、URI、Headers、Cookie）进行条件组合，用来筛选访问请求，并对命中条件的请求设置放行、阻断等匹配动作。</BR>
 配置前，需要定位到网站转发规则处，步骤如下：
-- 首先需要登录 [IP高防 控制台](https://ip-anti-console.jdcloud.com/instancelist)。
+- 首先需要登录 [DDoS IP高防 控制台](https://ip-anti-console.jdcloud.com/instancelist)。
 - 找到需要配置的实例，单击实例名称，进入 **实例详情** 页面。
 - 切换到 **网站转发配置** 
    ![网站转发规则](https://github.com/jdcloudcom/cn/blob/edit/image/Advanced%20Anti-DDoS/web-rule%2009.png)

@@ -4,7 +4,7 @@
 黑名单中的IP（段），访问时将会被直接阻断。
 
 ## 操作步骤
-1. 登录 [IP高防 控制台](https://ip-anti-console.jdcloud.com/instancelist)。
+1. 登录 [DDoS IP高防 控制台](https://ip-anti-console.jdcloud.com/instancelist)。
 2. 在 **实例列表** 页面，选择目标实例，点击 **实例名称** 或 **转发配置**，进入 **实例详情** 页面。
 3. 在 **实例详情** 页面，点击 **IP黑/白名单库**，点击 **添加/编辑** ，即可配置IP黑/白名单规则。IP黑/白名单规则可应用到实例黑白名单配置或网站/非网站转发规则。
 ![](../../../../image/Advanced%20Anti-DDoS/ip-white-black-list-04.png)

@@ -1,4 +1,4 @@
-  name: IP 高防
+  name: DDoS IP 高防
   href:
   items:
   - name: 公告
@@ -85,11 +85,11 @@
       herf: Operation-Guide/Choose-Suitable-Forwarding-Mode.md
   - name: 最佳实践
     items:
-    - name: IP高防结合Web应用防火墙方案说明
+    - name: DDoS IP高防结合Web应用防火墙方案说明
       herf: Best-Practices/Anti-DDoS-Pro-and-WAF.md
     - name: 本地防护+高防方案说明
       herf: Best-Practices/Local-Anti-Basic-DDoS-and-Anti-DDoS.md
-    - name: IP高防结合应用安全网关方案说明
+    - name: DDoS IP高防结合应用安全网关方案说明
       herf: Best-Practices/Scheme-Instructions.md
   - name: 教程
     status: 0

@@ -3,7 +3,7 @@
 
 配置步骤如下：
 
-- 首先需要登录 [IP高防 控制台](https://ip-anti-console.jdcloud.com/instancelist)。
+- 首先需要登录 [DDoS IP高防 控制台](https://ip-anti-console.jdcloud.com/instancelist)。
 - 找到需要配置的实例，单击实例名称，进入 **实例详情** 页面。
 - 切换到 **非网站类转发配置** 
     ![非网站转发规则](../../../../../image/Advanced%20Anti-DDoS/net-service-protection-rule-03.png)

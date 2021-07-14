@@ -1,6 +1,6 @@
 # 计费规则
 
-IP高防支持两种计费类型：
+DDoS IP高防支持两种计费类型：
 
 * 包年包月计费
 * 包年包月+后付费
@@ -10,13 +10,13 @@ IP高防支持两种计费类型：
 ## 包年包月
 ### 介绍
 若您只购买保底防护，则将按包年包月为预付费方式收费。
-这种方式，IP高防只根据您选的套餐，提供固定的防护能力。
+这种方式，DDoS IP高防只根据您选的套餐，提供固定的防护能力。
 
 ### 示例
 弹性防护选择0时，则不开启弹性防护。
 如图所示，用户只购买了BGP线路10G的保底防护，没有开启弹性防护。
-![IP高防保底计费](https://github.com/jdcloudcom/cn/blob/edit/image/Advanced%20Anti-DDoS/billing5.png)
-例：攻击<=10G时，IP高防系统会给予防护。
+![DDoS IP高防保底计费](https://github.com/jdcloudcom/cn/blob/edit/image/Advanced%20Anti-DDoS/billing5.png)
+例：攻击<=10G时，DDoS IP高防系统会给予防护。
     攻击>10G时，该实例已超过保底防护的最大防护峰值。由于未购买弹性防护，该防护IP将被黑洞处理，造成业务影响。
 
 
@@ -33,7 +33,7 @@ IP高防支持两种计费类型：
 ### 示例
 推荐用户采用保底防护加弹性防护的混合计费方式，来对抗DDoS攻击。
 以下图为例：用户采用混合计费的方式，购买了10Gbps一个月的保底防护，同时购买了10Gbps的弹性防护。
-![IP高防弹性计费](https://github.com/jdcloudcom/cn/blob/edit/image/Advanced%20Anti-DDoS/billing6.png)
-攻击不超过10G时，不收取弹性防护的费用。攻击超过10G时，IP高防仍给予攻击防护，最大的防护带宽为20G。按实际超过弹性防护的带宽所在区间，隔天收取费用。
+![DDoS IP高防弹性计费](https://github.com/jdcloudcom/cn/blob/edit/image/Advanced%20Anti-DDoS/billing6.png)
+攻击不超过10G时，不收取弹性防护的费用。攻击超过10G时，DDoS IP高防仍给予攻击防护，最大的防护带宽为20G。按实际超过弹性防护的带宽所在区间，隔天收取费用。
 例：11月10日受到最大攻击峰值为3G的攻击，则按包年包月的计费方式，不额外收取弹性计费费用。
    11月11日受到最大攻击峰值为13G的攻击，则11月12日需要收取弹性区间(0Gbps<弹性峰值≤10Gbps)的费用，1200元。
